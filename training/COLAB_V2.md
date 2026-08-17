@@ -53,10 +53,11 @@ HTTP header and does not save it in the cloned remote URL.
 After cloning and mounting Drive, run:
 
 ```bash
-cd /content/FYP-workspace/FYP/local-slm-lab
+cd /content/local-slm-lab
 python -m pip install -r training/requirements.txt
 python scripts/build-corpus-v2.py
 python scripts/verify-corpus-v2.py
+python -m unittest tests.test_corpus_v2 tests.test_training_helpers -v
 python training/train_lora.py \
   --train corpus-v2/sft/train.jsonl \
   --validation corpus-v2/sft/validation.jsonl \
@@ -80,9 +81,9 @@ selects the highest saved checkpoint.
 An optional portable handoff ZIP can still be created after completion:
 
 ```bash
-cd /content/FYP-workspace/FYP/local-slm-lab
+cd /content/local-slm-lab
 zip -r /content/qwen35-v2-handoff.zip \
-  training-runs/qwen35-08b-lora-v2 \
+  /content/drive/MyDrive/FYP-model-runs/qwen35-08b-lora-v2 \
   corpus-v2/manifest.json \
   training/train_lora.py \
   training/COLAB_V2.md

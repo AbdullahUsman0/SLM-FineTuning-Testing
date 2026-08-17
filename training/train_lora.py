@@ -157,7 +157,9 @@ def main() -> None:
         per_device_train_batch_size=1,
         per_device_eval_batch_size=1,
         gradient_accumulation_steps=16,
-        warmup_ratio=args.warmup_ratio,
+        # Transformers v5 combines warmup steps and ratios in warmup_steps;
+        # a float below 1 is interpreted as a fraction of total training steps.
+        warmup_steps=args.warmup_ratio,
         lr_scheduler_type="cosine",
         max_grad_norm=1.0,
         eval_strategy="epoch",
