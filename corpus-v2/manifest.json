@@ -1,0 +1,60 @@
+{
+  "category_counts": {
+    "ambiguous": 20,
+    "complete": 20,
+    "conflicting": 20,
+    "conversational_intent": 120,
+    "correction": 20,
+    "governance_privacy": 20,
+    "intent_boundary": 20,
+    "missing_required": 20,
+    "multi_series": 20,
+    "probabilistic_covariate": 20,
+    "robustness": 20
+  },
+  "conversational_scenario_count": 120,
+  "corpus_version": "forecasting-llmrei-320-v2",
+  "files": {
+    "corpus-v2.jsonl": {
+      "bytes": 931755,
+      "sha256": "5b49b3b57f15b323c83ba9d0d42475680499bbeb2144fc417485ca6e25329fb7"
+    },
+    "sft/train.jsonl": {
+      "bytes": 1361937,
+      "sha256": "f341e6442268d0d9aec52dad42a187997a96e918f4b7d618f0ca2390ec7a4a1e"
+    },
+    "sft/validation.jsonl": {
+      "bytes": 293702,
+      "sha256": "befa71ec6d8750005e9389231fdf73fd91ac5ebc21bcab07c6702639381e24e3"
+    },
+    "splits/test.jsonl": {
+      "bytes": 140137,
+      "sha256": "2066b1af3007368c1dc82b77cd91a0a4484f5392a6a8141ec4ec3164945753b1"
+    },
+    "splits/train.jsonl": {
+      "bytes": 650403,
+      "sha256": "76e0b56ccca7c7d147be28ad4f22b72339512427791e93e495f59fde48da61d0"
+    },
+    "splits/validation.jsonl": {
+      "bytes": 141215,
+      "sha256": "7b70b353fba52fdc2e7b7db02572e63cf8d3e0a6dcd9e159addef9a0d4e6caea"
+    }
+  },
+  "prompt_profile": "compact_slm_v2",
+  "scenario_count": 320,
+  "schema_version": "1.0.0",
+  "sft_split_counts": {
+    "train": 420,
+    "validation": 90
+  },
+  "sft_task_counts": {
+    "ask": 221,
+    "extract": 289
+  },
+  "split_counts": {
+    "test": 48,
+    "train": 224,
+    "validation": 48
+  },
+  "test_examples_in_sft": 0
+}

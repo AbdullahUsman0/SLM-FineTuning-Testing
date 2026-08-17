@@ -1,0 +1,54 @@
+{
+  "category_counts": {
+    "ambiguous": 20,
+    "complete": 20,
+    "conflicting": 20,
+    "correction": 20,
+    "governance_privacy": 20,
+    "intent_boundary": 20,
+    "missing_required": 20,
+    "multi_series": 20,
+    "probabilistic_covariate": 20,
+    "robustness": 20
+  },
+  "corpus_version": "forecasting-llmrei-200-v1",
+  "domain_disjoint_splits": true,
+  "files": {
+    "corpus-v1.jsonl": {
+      "bytes": 787755,
+      "sha256": "e95a95b55bbb18875f8a397056d18c23c0652bd22c626a8647cb282cdb6513e0"
+    },
+    "sft/train.jsonl": {
+      "bytes": 1714254,
+      "sha256": "40ca18238b1a3888429f6aad3b6dc14a91c41681dac1039af9e85b4fafde5810"
+    },
+    "sft/validation.jsonl": {
+      "bytes": 368910,
+      "sha256": "8b2cc76aa3ed1154678e083f2546fabc8bb5b9a1bda854222fa5f5fddd26a377"
+    },
+    "splits/test.jsonl": {
+      "bytes": 118471,
+      "sha256": "c815ef0ad1a0e983d354a98c1964ddb9b4ebee107d66908b1623d1c08bc14cc1"
+    },
+    "splits/train.jsonl": {
+      "bytes": 549855,
+      "sha256": "340c0a3e96918f1a9deb38b0f95ef883a3bf2a68fa286befec629e126653f47b"
+    },
+    "splits/validation.jsonl": {
+      "bytes": 119429,
+      "sha256": "1f83b98c4b9b15279a2c95682e82a82cbbef73f8fdb0169b5591d9b505eafbc4"
+    }
+  },
+  "scenario_count": 200,
+  "schema_version": "1.0.0",
+  "sft_example_counts": {
+    "train": 266,
+    "validation": 57
+  },
+  "split_counts": {
+    "test": 30,
+    "train": 140,
+    "validation": 30
+  },
+  "test_examples_in_sft": 0
+}

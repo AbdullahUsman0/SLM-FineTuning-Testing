@@ -1,0 +1,51 @@
+[
+  {
+    "case_id": "intent-yes",
+    "messages": ["yes"],
+    "expected_intent": "create_forecast",
+    "expected_final_slots": {"intent": "create_forecast"}
+  },
+  {
+    "case_id": "intent-yeah",
+    "messages": ["yeah"],
+    "expected_intent": "create_forecast",
+    "expected_final_slots": {"intent": "create_forecast"}
+  },
+  {
+    "case_id": "bitcoin-short",
+    "messages": ["I want to forecast Bitcoin prices."],
+    "expected_intent": "create_forecast",
+    "expected_final_slots": {"intent": "create_forecast"}
+  },
+  {
+    "case_id": "roman-urdu-request",
+    "messages": ["Mujhe Bitcoin prices ka forecast banana hai."],
+    "expected_intent": "create_forecast",
+    "expected_final_slots": {"intent": "create_forecast"}
+  },
+  {
+    "case_id": "roman-urdu-yes",
+    "messages": ["haan"],
+    "expected_intent": "create_forecast",
+    "expected_final_slots": {"intent": "create_forecast"}
+  },
+  {
+    "case_id": "negative-intent",
+    "messages": ["No, I do not want a forecast."],
+    "expected_intent": "not_forecasting",
+    "expected_final_slots": {}
+  },
+  {
+    "case_id": "two-turn-bitcoin",
+    "messages": ["yes", "I want to forecast Bitcoin prices."],
+    "expected_intent": "create_forecast",
+    "expected_final_slots": {"intent": "create_forecast"}
+  },
+  {
+    "case_id": "complete-weather",
+    "messages": ["Create a daily forecast of Lahore temperature for the next 7 days from weather.csv."],
+    "expected_intent": "create_forecast",
+    "expected_final_slots": {"intent": "create_forecast"}
+  }
+]
+

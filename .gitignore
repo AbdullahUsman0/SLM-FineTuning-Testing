@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.vendor/
+.peft-deps/
+models/
+runtime/
+training-runs/
+results/*.json
+results/*.csv
+results/*.log
+!results/.gitkeep

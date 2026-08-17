@@ -1,0 +1,5 @@
+{"id":"explicit_bitcoin","prompt":"I want to forecast Bitcoin closing price for the next 7 days using daily data.","must_contain":["bitcoin"],"must_not_contain":["closing prices for the next 7 days"],"max_question_marks":0}
+{"id":"missing_horizon","prompt":"Forecast Lahore temperature using daily observations.","must_contain":["horizon"],"must_not_contain":["current temperature","current weather"],"max_question_marks":1}
+{"id":"missing_target","prompt":"I need a forecast for Pakistan for next month.","must_contain":["what"],"max_question_marks":1,"max_numbered_items":0}
+{"id":"correction","prompt":"Forecast rainfall—sorry, I mean river flow—for the next 3 days.","must_contain":["river flow"],"must_not_contain":["river flow values for the next 3 days"],"max_question_marks":0}
+{"id":"no_invention","prompt":"Help me create a sales forecast.","must_contain":["?"],"max_question_marks":1,"max_numbered_items":0}

@@ -1,0 +1,2 @@
+# Locally verified model files. Model binaries are not committed.
+57D1997790D1744FBA5B40A7317DF71EA5E2ACEE28C47E78F0CCE39C0703F8CF  Qwen3.5-0.8B-Q4_0.gguf

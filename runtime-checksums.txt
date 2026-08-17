@@ -1,0 +1,2 @@
+# Locally verified runtime archives. Runtime binaries are not committed.
+2F7CDE0ED9E76CCAC9F095EDE8C6469DC8690CBDD04D9E0A60179D8FF14B8CFA  llama-b10278-bin-win-cpu-x64.zip
