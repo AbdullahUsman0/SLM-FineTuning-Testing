@@ -1,0 +1,52 @@
+{
+  "corpus_version": "forecasting-llmrei-extraction-1049-v3",
+  "dataset_format": "conversational_prompt_completion",
+  "files": {
+    "corpus-v3.jsonl": {
+      "bytes": 935595,
+      "sha256": "e1e55a640c9d65e7bc3b673550c638311432265e2f04c39a9e550282a380974f"
+    },
+    "sft/train.jsonl": {
+      "bytes": 4640088,
+      "sha256": "f43e88f8c24db0701d3e62df2f7e1a04a8cda93e736809fe24ddecaced833674"
+    },
+    "sft/validation.jsonl": {
+      "bytes": 993494,
+      "sha256": "93c39338ad1f85a003d69a3728de5ecc2f79d29c715085487a2eed6ede3f9bad"
+    },
+    "splits/test.jsonl": {
+      "bytes": 140713,
+      "sha256": "edcccb98704a1654ef6236232c91c97334dba93387767df60dfc1e708c08e0b3"
+    },
+    "splits/train.jsonl": {
+      "bytes": 653091,
+      "sha256": "71f11dc556b313502a5645a1ed7b8bb27daf8f7b10da1cc4b2962b5955d39076"
+    },
+    "splits/validation.jsonl": {
+      "bytes": 141791,
+      "sha256": "6a48945b776d78e480c96e28e6144cc04a9cb4c18bf5d6600a674e34f93c9b4a"
+    }
+  },
+  "loss_scope": "assistant_completion_only",
+  "question_policy": "deterministic_schema_questions_at_runtime",
+  "scenario_count": 320,
+  "schema_version": "1.0.0",
+  "sft_example_count": 1049,
+  "sft_split_counts": {
+    "train": 865,
+    "validation": 184
+  },
+  "sft_variant_counts": {
+    "reviewed_base": 233,
+    "selected_non_answer": 272,
+    "selected_sentence": 272,
+    "selected_short": 272
+  },
+  "split_counts": {
+    "test": 48,
+    "train": 224,
+    "validation": 48
+  },
+  "test_examples_in_sft": 0,
+  "training_task": "structured_extraction_only"
+}

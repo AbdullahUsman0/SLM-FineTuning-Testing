@@ -1,9 +1,9 @@
 # Fine-tuning and A/B evaluation
 
 This experiment uses supervised fine-tuning (SFT) with a LoRA adapter. It does
-not use reinforcement learning yet. Corpus v2 contains 320 scenarios and 510
-SFT examples, including 120 conversational-intent cases. Its 48 held-out
-scenarios never enter training.
+not use reinforcement learning. Corpus v3 contains 320 reviewed scenarios and
+1,049 unique extraction-only prompt/completion examples. Its 48 held-out scenarios never
+enter training.
 
 ## Why not train the downloaded GGUF
 
@@ -23,14 +23,16 @@ Copy this repository to a GPU environment, then run:
 
 ```bash
 python -m pip install -r training/requirements.txt
-python scripts/build-corpus-v2.py
+python scripts/build-corpus-v3.py
+python scripts/verify-corpus-v3.py
 python training/train_lora.py
 ```
 
-The v2 script defaults to `corpus-v2/`, writes a separate
-`training-runs/qwen35-08b-lora-v2/` run, checks every tokenized record before
-training, and stops early when validation loss fails to improve. Exact Colab
-commands are in `training/COLAB_V2.md`.
+The v3 script defaults to `corpus-v3/`, writes a separate
+`training-runs/qwen35-08b-lora-v3/` run, checks every tokenized record before
+training, trains on assistant completion tokens only, and stops early when
+validation loss fails to improve. Exact Colab commands are in
+`training/COLAB_V3.md`.
 
 The run writes the input checksums, versions, seed, hyperparameters, GPU name,
 validation loss, and best adapter under `training-runs/`.
@@ -40,8 +42,13 @@ The completed Colab run is restored under
 epoch-1 `checkpoint-17`, which achieved the best validation loss (`0.227544`).
 See that run's `AUDIT.md` before using or moving its artifacts.
 
-Do not tune against `corpus-v2/splits/test.jsonl`. Make decisions using validation;
+Do not tune against `corpus-v3/splits/test.jsonl`. Make decisions using validation;
 run the test set only for the final candidate.
+
+V1 and v2 are retained as baselines. V3 starts a fresh LoRA adapter from the
+same Qwen base because v2 mixed extraction with question generation and did not
+explicitly limit loss to completion tokens. Runtime question wording remains a
+deterministic schema responsibility; Qwen performs contextual extraction.
 
 ## Apples-to-apples evaluation
 

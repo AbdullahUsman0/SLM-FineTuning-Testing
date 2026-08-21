@@ -26,6 +26,8 @@ def package_versions(names: list[str]) -> dict[str, str]:
 
 
 def to_prompt_completion(example: dict) -> dict:
+    if "prompt" in example and "completion" in example:
+        return {"prompt": example["prompt"], "completion": example["completion"]}
     messages = example["messages"]
     return {"prompt": messages[:-1], "completion": [messages[-1]]}
 
@@ -59,11 +61,11 @@ def latest_checkpoint(output_path: Path) -> Path | None:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", default="Qwen/Qwen3.5-0.8B")
-    parser.add_argument("--train", default="corpus-v2/sft/train.jsonl")
-    parser.add_argument("--validation", default="corpus-v2/sft/validation.jsonl")
-    parser.add_argument("--output", default="training-runs/qwen35-08b-lora-v2")
-    parser.add_argument("--epochs", type=int, default=4)
-    parser.add_argument("--learning-rate", type=float, default=1e-4)
+    parser.add_argument("--train", default="corpus-v3/sft/train.jsonl")
+    parser.add_argument("--validation", default="corpus-v3/sft/validation.jsonl")
+    parser.add_argument("--output", default="training-runs/qwen35-08b-lora-v3")
+    parser.add_argument("--epochs", type=int, default=3)
+    parser.add_argument("--learning-rate", type=float, default=5e-5)
     parser.add_argument(
         "--warmup-ratio",
         type=float,
@@ -124,10 +126,21 @@ def main() -> None:
         "json", data_files={"train": str(train_path), "validation": str(validation_path)}
     )
     processor = AutoProcessor.from_pretrained(args.model)
+    normalized = {}
+    for split in ("train", "validation"):
+        normalized[split] = datasets[split].map(
+            to_prompt_completion,
+            remove_columns=datasets[split].column_names,
+        )
+    datasets = normalized
+
     length_report: dict[str, dict[str, int]] = {}
     overlength: list[str] = []
     for split in ("train", "validation"):
-        lengths = [token_length(processor, row["messages"]) for row in datasets[split]]
+        lengths = [
+            token_length(processor, [*row["prompt"], *row["completion"]])
+            for row in datasets[split]
+        ]
         length_report[split] = {
             "examples": len(lengths),
             "minimum": min(lengths),
@@ -145,9 +158,6 @@ def main() -> None:
             f"Refusing to truncate {len(overlength)} SFT examples above "
             f"max_length={args.max_length}: {preview}"
         )
-
-    remove_columns = datasets["train"].column_names
-    datasets = datasets.map(to_prompt_completion, remove_columns=remove_columns)
 
     use_bf16 = torch.cuda.is_bf16_supported()
     config = SFTConfig(
@@ -172,6 +182,7 @@ def main() -> None:
         seed=args.seed,
         data_seed=args.seed,
         max_length=args.max_length,
+        completion_only_loss=True,
         packing=False,
         gradient_checkpointing=True,
         bf16=use_bf16,
@@ -234,6 +245,7 @@ def main() -> None:
             "greater_is_better": False,
             "early_stopping_patience": args.early_stopping_patience,
             "allow_truncation": args.allow_truncation,
+            "completion_only_loss": True,
             "resume_from_checkpoint": (
                 None if resume_checkpoint is None else str(resume_checkpoint)
             ),

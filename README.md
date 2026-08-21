@@ -23,6 +23,7 @@ local-slm-lab/
   evaluation/cases.jsonl    Small, versioned evaluation set
   corpus/                   Frozen 200-scenario corpus and leakage-safe splits
   corpus-v2/                320-scenario compact-prompt conversational corpus
+  corpus-v3/                Focused extraction-only prompt/completion corpus
   local_slm_lab/            Dependency-free Python client and evaluator
   models/                   Local model files (ignored by Git)
   results/                  Evaluation outputs (ignored by Git)
@@ -106,6 +107,7 @@ implementation. Do not use these comparison cases as fine-tuning examples.
 
 The larger corpora and common structured evaluation harness are documented in
 [`corpus/README.md`](corpus/README.md), [`corpus-v2/README.md`](corpus-v2/README.md),
+[`corpus-v3/README.md`](corpus-v3/README.md),
 and [`TRAINING.md`](TRAINING.md). They use
 the production forecasting schema, extractor contract, and LLMREI-long question
 rules from `../fpy`, while keeping this experiment a separate project.
@@ -114,10 +116,10 @@ The completed Colab LoRA run is stored in the ignored `training-runs/` area.
 Its base/adapter evaluator and interactive questioning tool are separate from
 the production `fpy` application; see `TRAINING.md` for commands and safeguards.
 
-The recommended v2 Colab workflow is available as
-[`notebooks/qwen35_lora_v2_colab.ipynb`](notebooks/qwen35_lora_v2_colab.ipynb):
-GitHub supplies code/data, Drive receives checkpoints, and interrupted free
-Colab sessions automatically resume from the latest checkpoint.
+The recommended v3 Colab workflow is in
+[`training/COLAB_V3.md`](training/COLAB_V3.md): GitHub supplies code/data,
+Drive receives checkpoints, and interrupted free Colab sessions automatically
+resume from the latest checkpoint.
 
 For the current interactive PEFT chat on an 8 GB Windows CPU machine:
 
