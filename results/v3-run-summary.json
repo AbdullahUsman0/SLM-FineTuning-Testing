@@ -1,0 +1,40 @@
+{
+  "stage": "v3",
+  "completed_at": "2026-08-25T00:03:05.043792+00:00",
+  "base_model": "Qwen/Qwen3.5-0.8B",
+  "adapter_sha256": "BD3E6FAE77C3A43C4522335EB9882B3A07AA6B00A8B9862DCB72DD7B28DE85BF",
+  "adapter_size_bytes": 43346432,
+  "final_metrics": {
+    "eval_loss": 0.0013825836358591914,
+    "eval_runtime": 165.5702,
+    "eval_samples_per_second": 1.111,
+    "eval_steps_per_second": 1.111,
+    "eval_entropy": 0.0025839912849060847,
+    "eval_num_tokens": 972440.0,
+    "eval_mean_token_accuracy": 0.9996911381249842,
+    "epoch": 3.0
+  },
+  "gpu": "Tesla T4",
+  "checkpoints": [
+    "checkpoint-110",
+    "checkpoint-165",
+    "checkpoint-55"
+  ],
+  "hyperparameters": {
+    "epochs": 3,
+    "learning_rate": 5e-05,
+    "lora_rank": 16,
+    "lora_alpha": 32,
+    "effective_batch_size": 16,
+    "max_length": 3072,
+    "early_stopping_patience": 1,
+    "completion_only_loss": true
+  },
+  "corpus": {
+    "name": "forecasting-llmrei-extraction-1049-v3",
+    "train_records": 865,
+    "validation_records": 184,
+    "task": "extraction_only"
+  },
+  "push_id": "20260825-223001"
+}

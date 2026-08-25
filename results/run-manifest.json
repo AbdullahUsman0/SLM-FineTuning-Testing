@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-08-24T23:04:05.958547+00:00",
+  "base_model": "Qwen/Qwen3.5-0.8B",
+  "method": "LoRA SFT",
+  "python": "3.13.15",
+  "gpu": "Tesla T4",
+  "cuda": "12.8",
+  "packages": {
+    "torch": "2.11.0+cu128",
+    "transformers": "5.15.0",
+    "datasets": "5.0.1",
+    "accelerate": "1.14.0",
+    "peft": "0.20.0",
+    "trl": "1.9.2"
+  },
+  "inputs": {
+    "train": {
+      "path": "/content/local-slm-lab/corpus-v3/sft/train.jsonl",
+      "sha256": "ccb4b172e382f54388bfc86eead0a2eb163c7c31218088f73faf573279c0b5ee"
+    },
+    "validation": {
+      "path": "/content/local-slm-lab/corpus-v3/sft/validation.jsonl",
+      "sha256": "69a72c386325ff1a4b3769ff90ddbe5649adb6c0bde966b64a5e0bd5c30e0fa5"
+    }
+  },
+  "training": {
+    "epochs": 3,
+    "learning_rate": 5e-05,
+    "warmup_ratio": 0.0,
+    "seed": 42,
+    "max_length": 3072,
+    "effective_batch_size": 16,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "eval_strategy": "epoch",
+    "save_strategy": "epoch",
+    "save_total_limit": null,
+    "load_best_model_at_end": true,
+    "metric_for_best_model": "eval_loss",
+    "greater_is_better": false,
+    "early_stopping_patience": 1,
+    "allow_truncation": false,
+    "completion_only_loss": true,
+    "resume_from_checkpoint": "/content/drive/MyDrive/FYP-model-runs/qwen35-08b-lora-v3/checkpoint-110"
+  },
+  "token_lengths": {
+    "train": {
+      "examples": 865,
+      "minimum": 637,
+      "maximum": 2934,
+      "over_max_length": 0
+    },
+    "validation": {
+      "examples": 184,
+      "minimum": 642,
+      "maximum": 2955,
+      "over_max_length": 0
+    }
+  }
+}
