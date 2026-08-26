@@ -115,18 +115,18 @@ class TransformersPeftProvider:
             import torch
             import transformers
             from peft import PeftModel
-            from transformers import AutoModelForCausalLM, AutoProcessor
+            from transformers import AutoModelForCausalLM, AutoTokenizer
         except ImportError as exc:
             raise RuntimeError(
                 "PEFT inference dependencies are missing. Install "
                 "training/requirements-inference.txt in a dedicated environment."
             ) from exc
 
-        # Use AutoModelForCausalLM first: SFTTrainer (used during LoRA training) loads
-        # with CausalLM semantics, so the adapter weights target the CausalLM architecture.
-        # AutoModelForImageTextToText adds a vision tower and returns pixel_values=None for
-        # text-only inputs, causing AttributeError before generate() is ever called,
-        # which silently suppresses all inference (every call fails with ~4ms latency).
+        # Use AutoModelForCausalLM: SFTTrainer (used during LoRA training) loads with
+        # CausalLM semantics; adapter_config confirms base_model_class is
+        # Qwen3_5ForConditionalGeneration which AutoModelForCausalLM dispatches to.
+        # AutoModelForImageTextToText adds a vision tower and returns pixel_values=None
+        # for text-only inputs, silently breaking inference.
         auto_model = AutoModelForCausalLM
 
         dtype_map = {
@@ -146,7 +146,12 @@ class TransformersPeftProvider:
             raise ValueError("float16 CPU inference is unsupported; use auto, bfloat16, or float32")
 
         self._torch = torch
-        self._processor = AutoProcessor.from_pretrained(self.config.base_model)
+        # Use AutoTokenizer instead of AutoProcessor: the VL processor's
+        # apply_chat_template raises exceptions not caught by `except TypeError`,
+        # preventing generate() from ever being reached (~4ms latency with 0% success).
+        # AutoTokenizer handles apply_chat_template and batch_decode correctly for
+        # text-only inference and supports enable_thinking=False for Qwen3.5.
+        self._processor = AutoTokenizer.from_pretrained(self.config.base_model)
         model_kwargs: dict[str, Any] = {
             "dtype": requested_dtype,
             "low_cpu_mem_usage": True,
