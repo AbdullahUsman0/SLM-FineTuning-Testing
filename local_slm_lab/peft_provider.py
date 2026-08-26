@@ -40,11 +40,11 @@ from local_slm_lab.slm_prompts import (  # noqa: E402
 )
 
 
-RUN_ROOT = PROJECT_ROOT / "training-runs" / "qwen35-08b-lora-v1"
+RUN_ROOT = PROJECT_ROOT / "training-runs" / "qwen35-08b-lora-v3"
 VARIANT_ADAPTERS = {
     "base": None,
     "best": RUN_ROOT / "best-adapter",
-    "final": RUN_ROOT / "checkpoint-68",
+    "final": RUN_ROOT / "checkpoint-165",
 }
 
 SHORT_POSITIVE_INTENT_REPLIES = {

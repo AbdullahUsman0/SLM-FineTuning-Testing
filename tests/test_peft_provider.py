@@ -19,7 +19,7 @@ class PeftArtifactRoutingTests(unittest.TestCase):
 
     def test_best_and_final_are_separate(self):
         self.assertEqual(resolve_adapter_path("best"), RUN_ROOT / "best-adapter")
-        self.assertEqual(resolve_adapter_path("final"), RUN_ROOT / "checkpoint-68")
+        self.assertEqual(resolve_adapter_path("final"), RUN_ROOT / "checkpoint-165")
         self.assertNotEqual(resolve_adapter_path("best"), resolve_adapter_path("final"))
 
     def test_custom_requires_path(self):
@@ -40,6 +40,22 @@ class PeftGuardrailTests(unittest.TestCase):
             TransformersPeftProvider._json_object('```json\n{"question":"What?"}\n```'),
             {"question": "What?"},
         )
+
+    def test_batch_decode_falls_back_to_nested_tokenizer(self):
+        class Tokenizer:
+            def batch_decode(self, token_ids, *, skip_special_tokens):
+                self.call = (token_ids, skip_special_tokens)
+                return ["decoded"]
+
+        class Processor:
+            tokenizer = Tokenizer()
+
+        token_ids = object()
+        self.assertEqual(
+            TransformersPeftProvider._batch_decode(Processor(), token_ids),
+            ["decoded"],
+        )
+        self.assertEqual(Processor.tokenizer.call, (token_ids, True))
         self.assertEqual(
             TransformersPeftProvider._json_object('result: {"question":"What?"} done'),
             {"question": "What?"},
