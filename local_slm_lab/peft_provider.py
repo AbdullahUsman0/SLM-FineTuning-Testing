@@ -226,25 +226,15 @@ class TransformersPeftProvider:
             {"role": "system", "content": system},
             {"role": "user", "content": user},
         ]
-        template_kwargs = {
-            "tokenize": True,
-            "add_generation_prompt": True,
-            "return_dict": True,
-            "return_tensors": "pt",
-        }
         try:
-            inputs = self._processor.apply_chat_template(
-                messages, enable_thinking=False, **template_kwargs
+            text = self._processor.apply_chat_template(
+                messages, tokenize=False, add_generation_prompt=True, enable_thinking=False
             )
         except TypeError:
-            inputs = self._processor.apply_chat_template(messages, **template_kwargs)
-        if not isinstance(inputs, dict):
-            inputs = {"input_ids": inputs}
-        inputs = {
-            key: value.to(self._input_device)
-            for key, value in inputs.items()
-            if value is not None and hasattr(value, "to")
-        }
+            text = self._processor.apply_chat_template(
+                messages, tokenize=False, add_generation_prompt=True
+            )
+        inputs = self._processor(text, return_tensors="pt").to(self._input_device)
         prompt_tokens = inputs["input_ids"].shape[-1]
         with self._torch.inference_mode():
             generated = self._model.generate(
@@ -253,14 +243,14 @@ class TransformersPeftProvider:
                 do_sample=False,
                 use_cache=True,
             )
-        text = self._batch_decode(self._processor, generated[:, prompt_tokens:])[0].strip()
+        output_text = self._batch_decode(self._processor, generated[:, prompt_tokens:])[0].strip()
         try:
-            parsed = self._json_object(text)
+            parsed = self._json_object(output_text)
             result = output_type.model_validate(parsed)
             self._traces.append(
                 {
                     "operation": operation,
-                    "raw_output": safe_provider_value(text),
+                    "raw_output": safe_provider_value(output_text),
                     "parsed": True,
                     "error": None,
                 }
@@ -270,7 +260,7 @@ class TransformersPeftProvider:
             self._traces.append(
                 {
                     "operation": operation,
-                    "raw_output": safe_provider_value(text),
+                    "raw_output": safe_provider_value(output_text),
                     "parsed": False,
                     "error": f"{type(exc).__name__}: {exc}",
                 }
