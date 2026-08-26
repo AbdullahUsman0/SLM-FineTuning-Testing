@@ -230,16 +230,39 @@ class TransformersPeftProvider:
         except json.JSONDecodeError:
             pass
 
+        # Try repairing truncated JSON strings
+        for suffix in ("]}", "}]}", '"]}', '"]}}', "}", '"}', '"]'):
+            try:
+                repaired = json.loads(candidate + suffix)
+                if isinstance(repaired, dict) and ("intent" in repaired or "question" in repaired):
+                    return repaired
+            except json.JSONDecodeError:
+                continue
+
         decoder = json.JSONDecoder()
+        candidates: list[dict[str, Any]] = []
         for index, character in enumerate(candidate):
             if character != "{":
                 continue
             try:
                 value, _ = decoder.raw_decode(candidate[index:])
+                if isinstance(value, dict):
+                    candidates.append(value)
             except json.JSONDecodeError:
-                continue
-            if isinstance(value, dict):
-                return value
+                for suffix in ("]}", "}]}", "}"):
+                    try:
+                        repaired = json.loads(candidate[index:] + suffix)
+                        if isinstance(repaired, dict):
+                            candidates.append(repaired)
+                            break
+                    except json.JSONDecodeError:
+                        continue
+
+        for item in candidates:
+            if "intent" in item or "question" in item:
+                return item
+        if candidates:
+            return candidates[0]
         raise ValueError("no valid JSON object found")
 
     def drain_traces(self) -> list[dict[str, Any]]:
@@ -285,6 +308,7 @@ class TransformersPeftProvider:
                 max_new_tokens=self.config.max_new_tokens,
                 do_sample=False,
                 use_cache=True,
+                repetition_penalty=1.15,
             )
         output_text = self._batch_decode(self._processor, generated[:, prompt_tokens:])[0].strip()
         try:
@@ -473,6 +497,7 @@ class TransformersPeftProvider:
         self, result: ExtractorResult, message: str
     ) -> ExtractorResult:
         cleaned_updates: list[SlotUpdate] = []
+        seen_updates: set[tuple[str, str]] = set()
         msg_lower = message.lower().strip()
 
         for update in result.updates:
@@ -504,6 +529,11 @@ class TransformersPeftProvider:
                     raw_val = dur
                 elif not isinstance(raw_val, dict):
                     continue
+
+            key = (update.slot_id, json.dumps(raw_val, sort_keys=True, default=str))
+            if key in seen_updates:
+                continue
+            seen_updates.add(key)
 
             cleaned_updates.append(
                 update.model_copy(
