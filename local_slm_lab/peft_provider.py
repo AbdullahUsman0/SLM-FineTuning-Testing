@@ -24,10 +24,13 @@ from forecasting_assistant.domain.models import (  # noqa: E402
     QuestionOutput,
     QuestionRequest,
     SlotStatus,
+    SlotState,
     SlotUpdate,
 )
 from forecasting_assistant.domain.schema import ForecastingSchema  # noqa: E402
 from forecasting_assistant.application.clarification import select_next_slot  # noqa: E402
+from forecasting_assistant.application.normalization import normalize_value  # noqa: E402
+from forecasting_assistant.application.validation import validate_slot  # noqa: E402
 from forecasting_assistant.prompts.extractor import safe_provider_value  # noqa: E402
 from local_slm_lab.slm_prompts import (  # noqa: E402
     build_slm_extractor_input,
@@ -49,6 +52,24 @@ SHORT_POSITIVE_INTENT_REPLIES = {
 }
 SHORT_NEGATIVE_INTENT_REPLIES = {
     "no", "nope", "n", "nahi", "nahin", "na", "do not", "dont", "not forecasting"
+}
+
+SHORT_SLOT_NON_ANSWERS = {
+    "",
+    "idk",
+    "i dont know",
+    "i don t know",
+    "i do not know",
+    "not sure",
+    "skip",
+    "unknown",
+}
+SAFE_SHORT_ANSWER_TYPES = {"boolean", "datetime", "duration", "enum", "string", "timezone"}
+LOW_INFORMATION_SLOT_VALUES = {
+    "problem_statement": {"data", "forecast", "forecasting", "predict", "prediction", "time series"},
+    "target_description": {"data", "forecast", "forecasting", "target", "time series", "value"},
+    "business_goal": {"business", "forecasting", "planning", "unknown"},
+    "success_criteria": {"accuracy", "accurate", "good", "unknown"},
 }
 
 
@@ -94,18 +115,19 @@ class TransformersPeftProvider:
             import torch
             import transformers
             from peft import PeftModel
-            from transformers import AutoProcessor
+            from transformers import AutoModelForCausalLM, AutoProcessor
         except ImportError as exc:
             raise RuntimeError(
                 "PEFT inference dependencies are missing. Install "
                 "training/requirements-inference.txt in a dedicated environment."
             ) from exc
 
-        auto_model = getattr(transformers, "AutoModelForImageTextToText", None)
-        if auto_model is None:
-            auto_model = getattr(transformers, "AutoModelForVision2Seq", None)
-        if auto_model is None:
-            raise RuntimeError("Installed Transformers cannot load Qwen3.5 image-text models")
+        # Use AutoModelForCausalLM first: SFTTrainer (used during LoRA training) loads
+        # with CausalLM semantics, so the adapter weights target the CausalLM architecture.
+        # AutoModelForImageTextToText adds a vision tower and returns pixel_values=None for
+        # text-only inputs, causing AttributeError before generate() is ever called,
+        # which silently suppresses all inference (every call fails with ~4ms latency).
+        auto_model = AutoModelForCausalLM
 
         dtype_map = {
             "auto": "auto",
@@ -125,7 +147,10 @@ class TransformersPeftProvider:
 
         self._torch = torch
         self._processor = AutoProcessor.from_pretrained(self.config.base_model)
-        model_kwargs: dict[str, Any] = {"dtype": requested_dtype}
+        model_kwargs: dict[str, Any] = {
+            "dtype": requested_dtype,
+            "low_cpu_mem_usage": True,
+        }
         if target_device == "cuda":
             model_kwargs["device_map"] = "auto"
         try:
@@ -174,6 +199,21 @@ class TransformersPeftProvider:
         self._traces = []
         return traces
 
+    @staticmethod
+    def _batch_decode(processor: Any, token_ids: Any) -> list[str]:
+        """Decode generated ids across processor API variants.
+
+        Some Transformers multimodal processors expose ``batch_decode`` on the
+        processor, while Qwen3.5 processor versions expose it only through the
+        nested tokenizer.
+        """
+        decoder = getattr(processor, "batch_decode", None)
+        if not callable(decoder):
+            decoder = getattr(getattr(processor, "tokenizer", None), "batch_decode", None)
+        if not callable(decoder):
+            raise RuntimeError("Loaded processor does not provide a batch decoder")
+        return decoder(token_ids, skip_special_tokens=True)
+
     def _structured(
         self, operation: str, system: str, user: str, output_type: type[Any]
     ) -> Any:
@@ -195,7 +235,11 @@ class TransformersPeftProvider:
             inputs = self._processor.apply_chat_template(messages, **template_kwargs)
         if not isinstance(inputs, dict):
             inputs = {"input_ids": inputs}
-        inputs = {key: value.to(self._input_device) for key, value in inputs.items()}
+        inputs = {
+            key: value.to(self._input_device)
+            for key, value in inputs.items()
+            if value is not None and hasattr(value, "to")
+        }
         prompt_tokens = inputs["input_ids"].shape[-1]
         with self._torch.inference_mode():
             generated = self._model.generate(
@@ -204,9 +248,7 @@ class TransformersPeftProvider:
                 do_sample=False,
                 use_cache=True,
             )
-        text = self._processor.batch_decode(
-            generated[:, prompt_tokens:], skip_special_tokens=True
-        )[0].strip()
+        text = self._batch_decode(self._processor, generated[:, prompt_tokens:])[0].strip()
         try:
             parsed = self._json_object(text)
             result = output_type.model_validate(parsed)
@@ -264,6 +306,100 @@ class TransformersPeftProvider:
             ],
         )
 
+    def _slot_answer_recovery(
+        self,
+        message: str,
+        state: DialogueState,
+        result: ExtractorResult,
+    ) -> ExtractorResult | None:
+        """Recover a short answer to the one slot the orchestrator just requested.
+
+        This is deliberately narrow: it never guesses a slot, never runs before
+        forecasting intent is established, and rejects values that fail the
+        schema's normal validation.
+        """
+        if state.intent != Intent.CREATE_FORECAST:
+            return None
+
+        stripped = message.strip()
+        normalized_text = re.sub(r"[^a-z0-9]+", " ", stripped.lower()).strip()
+        answer_words = normalized_text.split()
+        if (
+            not stripped
+            or len(stripped) > 120
+            or len(stripped.split()) > 4
+            or "?" in stripped
+            or normalized_text in SHORT_SLOT_NON_ANSWERS
+            or re.search(r"\b(?:ignore|instruction|prompt|system|assistant)\b", normalized_text)
+            or (
+                len(answer_words) > 1
+                and re.search(
+                    r"\b(?:i|we|you|my|our|will|want|need|have|is|are|the|that|this|from)\b",
+                    normalized_text,
+                )
+            )
+        ):
+            return None
+
+        selected = select_next_slot(self.schema, state)
+        if selected is None or selected.slot_id in {"intent", "authentication_reference"}:
+            return None
+        if normalized_text in LOW_INFORMATION_SLOT_VALUES.get(selected.slot_id, set()):
+            return None
+        if any(update.slot_id == selected.slot_id for update in result.updates):
+            return None
+        definition = self.schema.get(selected.slot_id)
+        if definition.value_type not in SAFE_SHORT_ANSWER_TYPES:
+            return None
+
+        normalized_value = normalize_value(definition, stripped)
+        if definition.value_type == "enum" and normalized_value not in definition.allowed_values:
+            return None
+        candidate_state = SlotState(
+            slot_id=selected.slot_id,
+            value=normalized_value,
+            status=SlotStatus.PROVIDED,
+            confidence=1.0,
+            evidence_text=stripped,
+        )
+        if validate_slot(definition, candidate_state):
+            return None
+
+        # A short answer follows one explicit question. Preserve only an intent
+        # update and discard model updates for unrelated slots, which are more
+        # likely copied examples than evidence from this answer.
+        existing = [update for update in result.updates if update.slot_id == "intent"]
+        return result.model_copy(
+            update={
+                "intent": Intent.CREATE_FORECAST,
+                "intent_confidence": max(result.intent_confidence, 0.99),
+                "updates": [
+                    *existing,
+                    SlotUpdate(
+                        slot_id=selected.slot_id,
+                        candidate_value=normalized_value,
+                        status=SlotStatus.PROVIDED,
+                        confidence=1.0,
+                        evidence_text=stripped,
+                    ),
+                ],
+            }
+        )
+
+    @staticmethod
+    def _drop_low_information_updates(result: ExtractorResult) -> ExtractorResult:
+        retained = []
+        for update in result.updates:
+            normalized = re.sub(
+                r"[^a-z0-9]+", " ", str(update.candidate_value).lower()
+            ).strip()
+            if normalized in LOW_INFORMATION_SLOT_VALUES.get(update.slot_id, set()):
+                continue
+            retained.append(update)
+        if len(retained) == len(result.updates):
+            return result
+        return result.model_copy(update={"updates": retained})
+
     async def extract(self, message: str, state: DialogueState) -> ExtractorResult:
         recovery = self._intent_recovery(message, state)
         normalized = re.sub(r"[^a-z0-9]+", " ", message.lower()).strip()
@@ -279,6 +415,27 @@ class TransformersPeftProvider:
                 }
             )
             return recovery
+        if len(message.split()) <= 4 and not re.search(
+            r"\b(?:actually|correction|forecast|instead|predict)\b", normalized
+        ):
+            direct_answer = self._slot_answer_recovery(
+                message,
+                state,
+                ExtractorResult(
+                    intent=state.intent,
+                    intent_confidence=state.slots["intent"].confidence or 0.99,
+                ),
+            )
+            if direct_answer is not None:
+                self._traces.append(
+                    {
+                        "operation": "deterministic_slot",
+                        "raw_output": None,
+                        "parsed": True,
+                        "error": None,
+                    }
+                )
+                return direct_answer
         try:
             result = self._structured(
                 "extract",
@@ -293,6 +450,7 @@ class TransformersPeftProvider:
                 {"operation": "extract_recovery", "raw_output": None, "parsed": True, "error": None}
             )
             return recovery
+        result = self._drop_low_information_updates(result)
         if recovery is not None and result.intent != recovery.intent:
             existing = [update for update in result.updates if update.slot_id != "intent"]
             result = result.model_copy(
@@ -304,6 +462,17 @@ class TransformersPeftProvider:
             )
             self._traces.append(
                 {"operation": "extract_recovery", "raw_output": None, "parsed": True, "error": None}
+            )
+        slot_recovery = self._slot_answer_recovery(message, state, result)
+        if slot_recovery is not None:
+            result = slot_recovery
+            self._traces.append(
+                {
+                    "operation": "deterministic_slot",
+                    "raw_output": None,
+                    "parsed": True,
+                    "error": None,
+                }
             )
         return result
 
