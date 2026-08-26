@@ -1,0 +1,204 @@
+[
+  {
+    "case_id": "guided-wind-turbine",
+    "messages": [
+      "yes",
+      "power_kw",
+      "timestamp_utc",
+      "hourly",
+      "48 hours",
+      "Wind turbine output planning",
+      "upload",
+      "wind turbine power output",
+      "single_series",
+      "grid dispatch",
+      "wind_turbine_readings.csv",
+      "kW",
+      "point",
+      "hourly",
+      "mae",
+      "MAE below 30 kW",
+      "UTC",
+      "csv",
+      "no"
+    ],
+    "expected_intent": "create_forecast",
+    "expected_final_slots": {
+      "intent": "create_forecast",
+      "problem_statement": "Wind turbine output planning",
+      "business_goal": "grid dispatch",
+      "success_criteria": "MAE below 30 kW",
+      "target_column": "power_kw",
+      "target_description": "wind turbine power output",
+      "target_unit": "kW",
+      "time_column": "timestamp_utc",
+      "frequency": {
+        "periods": 1.0,
+        "unit": "hour"
+      },
+      "forecast_horizon": {
+        "periods": 48.0,
+        "unit": "hour"
+      },
+      "dataset_type": "single_series",
+      "source_mode": "upload",
+      "source_reference": "wind_turbine_readings.csv",
+      "file_format": "csv",
+      "forecast_type": "point",
+      "output_granularity": "hourly",
+      "primary_metric": "mae",
+      "contains_sensitive_data": false,
+      "timezone": "UTC"
+    }
+  },
+  {
+    "case_id": "guided-pharmacy-prescriptions",
+    "messages": [
+      "yes",
+      "prescription_count",
+      "service_date",
+      "daily",
+      "14 days",
+      "Pharmacy prescription demand",
+      "upload",
+      "daily pharmacy prescription count",
+      "single_series",
+      "staff scheduling",
+      "pharmacy_prescriptions.csv",
+      "prescriptions",
+      "point",
+      "daily",
+      "mae",
+      "MAE below 12 prescriptions",
+      "csv",
+      "no"
+    ],
+    "expected_intent": "create_forecast",
+    "expected_final_slots": {
+      "intent": "create_forecast",
+      "problem_statement": "Pharmacy prescription demand",
+      "business_goal": "staff scheduling",
+      "success_criteria": "MAE below 12 prescriptions",
+      "target_column": "prescription_count",
+      "target_description": "daily pharmacy prescription count",
+      "target_unit": "prescriptions",
+      "time_column": "service_date",
+      "frequency": {
+        "periods": 1.0,
+        "unit": "day"
+      },
+      "forecast_horizon": {
+        "periods": 14.0,
+        "unit": "day"
+      },
+      "dataset_type": "single_series",
+      "source_mode": "upload",
+      "source_reference": "pharmacy_prescriptions.csv",
+      "file_format": "csv",
+      "forecast_type": "point",
+      "output_granularity": "daily",
+      "primary_metric": "mae",
+      "contains_sensitive_data": false
+    }
+  },
+  {
+    "case_id": "guided-port-containers",
+    "messages": [
+      "yes",
+      "container_arrivals",
+      "week_start",
+      "weekly",
+      "8 weeks",
+      "Port container arrival planning",
+      "upload",
+      "port container arrivals",
+      "single_series",
+      "yard capacity planning",
+      "port_container_arrivals.csv",
+      "containers",
+      "point",
+      "weekly",
+      "mae",
+      "MAE below 40 containers",
+      "csv",
+      "no"
+    ],
+    "expected_intent": "create_forecast",
+    "expected_final_slots": {
+      "intent": "create_forecast",
+      "problem_statement": "Port container arrival planning",
+      "business_goal": "yard capacity planning",
+      "success_criteria": "MAE below 40 containers",
+      "target_column": "container_arrivals",
+      "target_description": "port container arrivals",
+      "target_unit": "containers",
+      "time_column": "week_start",
+      "frequency": {
+        "periods": 1.0,
+        "unit": "week"
+      },
+      "forecast_horizon": {
+        "periods": 8.0,
+        "unit": "week"
+      },
+      "dataset_type": "single_series",
+      "source_mode": "upload",
+      "source_reference": "port_container_arrivals.csv",
+      "file_format": "csv",
+      "forecast_type": "point",
+      "output_granularity": "weekly",
+      "primary_metric": "mae",
+      "contains_sensitive_data": false
+    }
+  },
+  {
+    "case_id": "guided-university-enrollment",
+    "messages": [
+      "yes",
+      "new_enrollments",
+      "month_start",
+      "monthly",
+      "6 months",
+      "University enrollment planning",
+      "upload",
+      "monthly university enrollment",
+      "single_series",
+      "course capacity planning",
+      "university_enrollment.csv",
+      "students",
+      "point",
+      "monthly",
+      "mae",
+      "MAE below 25 students",
+      "csv",
+      "no"
+    ],
+    "expected_intent": "create_forecast",
+    "expected_final_slots": {
+      "intent": "create_forecast",
+      "problem_statement": "University enrollment planning",
+      "business_goal": "course capacity planning",
+      "success_criteria": "MAE below 25 students",
+      "target_column": "new_enrollments",
+      "target_description": "monthly university enrollment",
+      "target_unit": "students",
+      "time_column": "month_start",
+      "frequency": {
+        "periods": 1.0,
+        "unit": "month"
+      },
+      "forecast_horizon": {
+        "periods": 6.0,
+        "unit": "month"
+      },
+      "dataset_type": "single_series",
+      "source_mode": "upload",
+      "source_reference": "university_enrollment.csv",
+      "file_format": "csv",
+      "forecast_type": "point",
+      "output_granularity": "monthly",
+      "primary_metric": "mae",
+      "contains_sensitive_data": false
+    }
+  }
+]

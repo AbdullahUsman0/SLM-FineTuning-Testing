@@ -1,0 +1,46 @@
+[
+  {
+    "case_id": "guided-bitcoin-complete",
+    "messages": [
+      "yes",
+      "btc_usd_close",
+      "date",
+      "daily",
+      "7 days",
+      "Bitcoin price prediction",
+      "upload",
+      "Bitcoin closing price",
+      "single_series",
+      "risk monitoring",
+      "bitcoin_prices.csv",
+      "USD",
+      "point",
+      "daily",
+      "mae",
+      "MAE below 1500 USD",
+      "csv",
+      "no"
+    ],
+    "expected_intent": "create_forecast",
+    "expected_final_slots": {
+      "intent": "create_forecast",
+      "problem_statement": "Bitcoin price prediction",
+      "business_goal": "risk monitoring",
+      "success_criteria": "MAE below 1500 USD",
+      "target_column": "btc_usd_close",
+      "target_description": "Bitcoin closing price",
+      "target_unit": "USD",
+      "time_column": "date",
+      "frequency": {"periods": 1.0, "unit": "day"},
+      "forecast_horizon": {"periods": 7.0, "unit": "day"},
+      "dataset_type": "single_series",
+      "source_mode": "upload",
+      "source_reference": "bitcoin_prices.csv",
+      "file_format": "csv",
+      "forecast_type": "point",
+      "output_granularity": "daily",
+      "primary_metric": "mae",
+      "contains_sensitive_data": false
+    }
+  }
+]
