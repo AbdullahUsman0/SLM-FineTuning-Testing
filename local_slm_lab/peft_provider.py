@@ -72,6 +72,49 @@ LOW_INFORMATION_SLOT_VALUES = {
     "success_criteria": {"accuracy", "accurate", "good", "unknown"},
 }
 
+_DURATION_UNITS = {
+    "second": "second",
+    "seconds": "second",
+    "secondly": "second",
+    "minute": "minute",
+    "minutes": "minute",
+    "minutely": "minute",
+    "hour": "hour",
+    "hours": "hour",
+    "hourly": "hour",
+    "day": "day",
+    "days": "day",
+    "daily": "day",
+    "week": "week",
+    "weeks": "week",
+    "weekly": "week",
+    "month": "month",
+    "months": "month",
+    "monthly": "month",
+    "quarter": "quarter",
+    "quarters": "quarter",
+    "quarterly": "quarter",
+    "year": "year",
+    "years": "year",
+    "yearly": "year",
+}
+_DURATION_TEXT_PATTERN = re.compile(
+    r"\s*(?:(?:for|over)\s+)?(?:(?:the\s+)?(?:next|following)\s+)?"
+    r"(?:(?P<number>\d+(?:\.\d+)?)|(?:a|an|one))?\s*(?P<unit>[a-zA-Z]+)\s*",
+    re.IGNORECASE,
+)
+PROMPT_LEAK_TERMS = (
+    "confirmed_slots",
+    "unsupported_claims",
+    "candidate_value",
+    "slot_id",
+    "evidence_text",
+    "system:",
+    "user:",
+    "assistant:",
+    "json",
+)
+
 
 @dataclass(frozen=True)
 class PeftInferenceConfig:
@@ -382,6 +425,98 @@ class TransformersPeftProvider:
         )
 
     @staticmethod
+    def _parse_duration_candidate(raw_val: Any, evidence: str, message: str) -> dict[str, Any] | None:
+        if isinstance(raw_val, dict):
+            periods = raw_val.get("periods", 1)
+            unit = raw_val.get("unit", "month")
+            try:
+                p_float = float(periods)
+                p_clean = int(p_float) if p_float.is_integer() else p_float
+            except (ValueError, TypeError):
+                p_clean = 1
+            unit_clean = _DURATION_UNITS.get(str(unit).lower(), str(unit).lower())
+            return {"periods": p_clean, "unit": unit_clean}
+
+        if isinstance(raw_val, str):
+            candidate_str = raw_val.strip()
+            if candidate_str.startswith("{") and candidate_str.endswith("}"):
+                try:
+                    parsed_dict = json.loads(candidate_str)
+                    if isinstance(parsed_dict, dict):
+                        return TransformersPeftProvider._parse_duration_candidate(parsed_dict, evidence, message)
+                except json.JSONDecodeError:
+                    pass
+
+        text_to_search = f"{evidence} {message}"
+        dur_match = _DURATION_TEXT_PATTERN.search(text_to_search)
+        if dur_match:
+            unit = _DURATION_UNITS.get(dur_match.group("unit").lower())
+            if unit:
+                try:
+                    num = float(raw_val) if str(raw_val).isdigit() or isinstance(raw_val, (int, float)) else float(dur_match.group("number") or 1)
+                    p_clean = int(num) if num.is_integer() else num
+                    return {"periods": p_clean, "unit": unit}
+                except (ValueError, TypeError):
+                    pass
+
+        for text in (str(raw_val), evidence, message):
+            match = _DURATION_TEXT_PATTERN.fullmatch(str(text).strip())
+            if match is not None:
+                unit = _DURATION_UNITS.get(match.group("unit").lower())
+                if unit is not None:
+                    p = float(match.group("number") or 1)
+                    p_clean = int(p) if p.is_integer() else p
+                    return {"periods": p_clean, "unit": unit}
+        return None
+
+    def _clean_and_normalize_updates(
+        self, result: ExtractorResult, message: str
+    ) -> ExtractorResult:
+        cleaned_updates: list[SlotUpdate] = []
+        msg_lower = message.lower().strip()
+
+        for update in result.updates:
+            try:
+                slot_def = self.schema.get(update.slot_id)
+            except KeyError:
+                continue
+
+            raw_val = update.candidate_value
+            if isinstance(raw_val, str) and raw_val.strip().startswith("{") and raw_val.strip().endswith("}"):
+                try:
+                    parsed = json.loads(raw_val.strip())
+                    if isinstance(parsed, dict):
+                        raw_val = parsed
+                except json.JSONDecodeError:
+                    pass
+
+            evidence = str(update.evidence_text or "").strip()
+            has_prompt_leak = any(leak in evidence.lower() for leak in PROMPT_LEAK_TERMS)
+
+            if has_prompt_leak or (len(evidence) > 2 and evidence.lower() not in msg_lower):
+                if len(msg_lower) <= 3 and msg_lower not in str(raw_val).lower():
+                    continue
+                evidence = message.strip()
+
+            if slot_def.value_type == "duration":
+                dur = self._parse_duration_candidate(raw_val, evidence, message)
+                if dur is not None:
+                    raw_val = dur
+                elif not isinstance(raw_val, dict):
+                    continue
+
+            cleaned_updates.append(
+                update.model_copy(
+                    update={
+                        "candidate_value": raw_val,
+                        "evidence_text": evidence,
+                    }
+                )
+            )
+
+        return result.model_copy(update={"updates": cleaned_updates})
+
+    @staticmethod
     def _drop_low_information_updates(result: ExtractorResult) -> ExtractorResult:
         retained = []
         for update in result.updates:
@@ -446,6 +581,7 @@ class TransformersPeftProvider:
             )
             return recovery
         result = self._drop_low_information_updates(result)
+        result = self._clean_and_normalize_updates(result, message)
         if recovery is not None and result.intent != recovery.intent:
             existing = [update for update in result.updates if update.slot_id != "intent"]
             result = result.model_copy(

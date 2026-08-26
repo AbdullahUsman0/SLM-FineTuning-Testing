@@ -90,6 +90,56 @@ class PeftGuardrailTests(unittest.TestCase):
         self.assertLessEqual(len(payload["slot_definitions"]), 24)
         self.assertLess(len(payload["slot_definitions"]), len(self.schema.slots))
 
+    def test_duration_normalization_from_scalar_and_evidence(self):
+        dur = TransformersPeftProvider._parse_duration_candidate(
+            "6", "next 6 months", "I want to forecast monthly sales for the next 6 months"
+        )
+        self.assertEqual(dur, {"periods": 6, "unit": "month"})
+
+    def test_duration_normalization_from_nested_json(self):
+        dur = TransformersPeftProvider._parse_duration_candidate(
+            '{"periods": 6.0, "unit": "month"}', "", ""
+        )
+        self.assertEqual(dur, {"periods": 6, "unit": "month"})
+
+    def test_clean_and_normalize_updates_filters_prompt_leak_evidence(self):
+        from forecasting_assistant.domain.models import ExtractorResult, SlotUpdate, SlotStatus
+        raw_res = ExtractorResult(
+            intent=Intent.CREATE_FORECAST,
+            intent_confidence=1.0,
+            updates=[
+                SlotUpdate(
+                    slot_id="forecast_horizon",
+                    candidate_value="6",
+                    status=SlotStatus.PROVIDED,
+                    confidence=1.0,
+                    evidence_text="next 6 months",
+                ),
+                SlotUpdate(
+                    slot_id="frequency",
+                    candidate_value='{"periods": 6.0, "unit": "month"}',
+                    status=SlotStatus.PROVIDED,
+                    confidence=1.0,
+                    evidence_text='confirmed_slots: ["frequency"]',
+                ),
+            ],
+        )
+        cleaned = self.provider._clean_and_normalize_updates(
+            raw_res, "I want to forecast monthly sales for the next 6 months"
+        )
+        self.assertEqual(
+            cleaned.updates[0].candidate_value,
+            {"periods": 6, "unit": "month"}
+        )
+        self.assertEqual(
+            cleaned.updates[1].candidate_value,
+            {"periods": 6, "unit": "month"}
+        )
+        self.assertEqual(
+            cleaned.updates[1].evidence_text,
+            "I want to forecast monthly sales for the next 6 months"
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
