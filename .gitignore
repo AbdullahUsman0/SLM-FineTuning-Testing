@@ -3,11 +3,17 @@ __pycache__/
 .pytest_cache/
 .venv/
 .vendor/
+.openai-deps/
 .peft-deps/
+.cache/
+corpus-v4/
 models/
 runtime/
 training-runs/
 results/*.json
 results/*.csv
 results/*.log
+results/**/*.json
+results/**/*.csv
+results/**/*.log
 !results/.gitkeep
