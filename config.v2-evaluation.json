@@ -1,0 +1,7 @@
+{
+  "base_url": "http://127.0.0.1:8081/v1",
+  "model": "local-qwen-v2",
+  "temperature": 0.0,
+  "max_tokens": 1024,
+  "timeout_seconds": 600
+}

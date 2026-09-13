@@ -10,7 +10,7 @@ from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 FPY_SRC = PROJECT_ROOT.parent / "fpy" / "src"
-VENDOR = PROJECT_ROOT / ".vendor"
+OPENAI_DEPS = PROJECT_ROOT / ".openai-deps"
 for path in (PROJECT_ROOT, FPY_SRC):
     if str(path) not in sys.path:
         sys.path.insert(0, str(path))
@@ -19,6 +19,7 @@ from forecasting_assistant.domain.schema import load_schema  # noqa: E402
 from local_slm_lab.client import LocalModelConfig  # noqa: E402
 from local_slm_lab.component_eval import evaluate, load_jsonl, write_report  # noqa: E402
 from local_slm_lab.providers import (  # noqa: E402
+    LocalFineTunedProvider,
     LocalStructuredProvider,
     OpenAIProductionProvider,
     read_openai_credentials,
@@ -27,25 +28,36 @@ from local_slm_lab.providers import (  # noqa: E402
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--provider", choices=("local", "openai"), required=True)
+    parser.add_argument("--provider", choices=("local", "local-sft", "openai"), required=True)
     parser.add_argument("--cases", default="corpus/splits/test.jsonl")
     parser.add_argument("--config", default="config.evaluation.json")
     parser.add_argument("--env-file", default="../fpy/.env")
     parser.add_argument("--limit", type=int, help="Smoke-test only; omit for final reports")
+    parser.add_argument("--offset", type=int, default=0, help="Skip scenarios for targeted tests")
+    parser.add_argument(
+        "--indices",
+        help="Comma-separated zero-based scenario indices for a stratified evaluation",
+    )
     parser.add_argument("--output", required=True)
     args = parser.parse_args()
 
     schema = load_schema()
     scenarios = load_jsonl(PROJECT_ROOT / args.cases)
+    if args.indices:
+        selected_indices = [int(value.strip()) for value in args.indices.split(",")]
+        scenarios = [scenarios[index] for index in selected_indices]
+    else:
+        scenarios = scenarios[args.offset :]
     if args.limit is not None:
         scenarios = scenarios[: args.limit]
-    if args.provider == "local":
-        provider = LocalStructuredProvider(
+    if args.provider in {"local", "local-sft"}:
+        provider_class = LocalFineTunedProvider if args.provider == "local-sft" else LocalStructuredProvider
+        provider = provider_class(
             LocalModelConfig.from_file(PROJECT_ROOT / args.config), schema
         )
     else:
-        if str(VENDOR) not in sys.path:
-            sys.path.insert(0, str(VENDOR))
+        if str(OPENAI_DEPS) not in sys.path:
+            sys.path.insert(0, str(OPENAI_DEPS))
         api_key, model = read_openai_credentials((PROJECT_ROOT / args.env_file).resolve())
         provider = OpenAIProductionProvider(api_key, model, schema)
 

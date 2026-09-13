@@ -17,6 +17,7 @@ if str(FPY_SRC) not in sys.path:
 
 from forecasting_assistant.domain.models import Intent, SlotStatus
 from forecasting_assistant.domain.schema import ForecastingSchema
+from forecasting_assistant.application.orchestrator import ElicitationEngine
 from local_slm_lab.memory_repository import MemoryRepository
 from local_slm_lab.slm_engine import LocalSLMElicitationEngine
 
@@ -29,15 +30,58 @@ def _mentioned_count(state) -> int:
     return sum(slot.status != SlotStatus.UNMENTIONED for slot in state.slots.values())
 
 
+def _canonical_value(value: Any) -> str:
+    return json.dumps(value, sort_keys=True, ensure_ascii=False, separators=(",", ":"))
+
+
+def _slot_pairs(values: dict[str, Any]) -> set[tuple[str, str]]:
+    return {(slot_id, _canonical_value(value)) for slot_id, value in values.items()}
+
+
 def score_conversations(records: list[dict[str, Any]]) -> dict[str, Any]:
     turns = [turn for record in records for turn in record["turns"]]
+    all_trace_items = [trace for turn in turns for trace in turn.get("traces", [])]
     trace_items = [
         trace
-        for turn in turns
-        for trace in turn.get("traces", [])
+        for trace in all_trace_items
         if trace.get("operation") in {"extract", "ask"}
     ]
+    deterministic_turns = sum(
+        any(
+            trace.get("operation") in {"deterministic_intent", "deterministic_slot"}
+            for trace in turn.get("traces", [])
+        )
+        for turn in turns
+    )
     repeat_denominator = sum(max(0, len(record["turns"]) - 1) for record in records)
+    expected_pairs = set()
+    predicted_pairs = set()
+    expected_slot_ids = set()
+    predicted_slot_ids = set()
+    for index, record in enumerate(records):
+        expected = record.get("expected_final_slots", {})
+        predicted = record.get("final_slots", {})
+        expected_pairs.update((index, *pair) for pair in _slot_pairs(expected))
+        predicted_pairs.update((index, *pair) for pair in _slot_pairs(predicted))
+        expected_slot_ids.update((index, slot_id) for slot_id in expected)
+        predicted_slot_ids.update((index, slot_id) for slot_id in predicted)
+
+    pair_tp = len(expected_pairs & predicted_pairs)
+    pair_precision = pair_tp / len(predicted_pairs) if predicted_pairs else 0.0
+    pair_recall = pair_tp / len(expected_pairs) if expected_pairs else 0.0
+    pair_f1 = (
+        2 * pair_precision * pair_recall / (pair_precision + pair_recall)
+        if pair_precision + pair_recall
+        else 0.0
+    )
+    slot_id_tp = len(expected_slot_ids & predicted_slot_ids)
+    slot_id_precision = slot_id_tp / len(predicted_slot_ids) if predicted_slot_ids else 0.0
+    slot_id_recall = slot_id_tp / len(expected_slot_ids) if expected_slot_ids else 0.0
+    slot_id_f1 = (
+        2 * slot_id_precision * slot_id_recall / (slot_id_precision + slot_id_recall)
+        if slot_id_precision + slot_id_recall
+        else 0.0
+    )
     return {
         "case_success_rate": round(
             sum(record["success"] for record in records) / len(records), 4
@@ -49,8 +93,34 @@ def score_conversations(records: list[dict[str, Any]]) -> dict[str, Any]:
         )
         if records
         else 0.0,
+        "exact_final_state_accuracy": round(
+            sum(record.get("slots_exact", False) for record in records) / len(records), 4
+        )
+        if records
+        else 0.0,
+        "slot_micro_precision": round(pair_precision, 4),
+        "slot_micro_recall": round(pair_recall, 4),
+        "slot_micro_f1": round(pair_f1, 4),
+        "slot_id_micro_precision": round(slot_id_precision, 4),
+        "slot_id_micro_recall": round(slot_id_recall, 4),
+        "slot_id_micro_f1": round(slot_id_f1, 4),
+        "unexpected_slot_inference_rate": round(
+            len(predicted_slot_ids - expected_slot_ids) / len(predicted_slot_ids), 4
+        )
+        if predicted_slot_ids
+        else 0.0,
+        "assistant_safety_rate": round(
+            sum(record.get("assistant_safe", True) for record in records) / len(records), 4
+        )
+        if records
+        else 0.0,
         "state_progression_rate": round(
             sum(turn["state_progressed"] for turn in turns) / len(turns), 4
+        )
+        if turns
+        else 0.0,
+        "stalled_turn_rate": round(
+            sum(not turn["state_progressed"] for turn in turns) / len(turns), 4
         )
         if turns
         else 0.0,
@@ -64,6 +134,10 @@ def score_conversations(records: list[dict[str, Any]]) -> dict[str, Any]:
             sum(trace.get("parsed", False) for trace in trace_items) / len(trace_items), 4
         )
         if trace_items
+        else None,
+        "structured_model_calls": len(trace_items),
+        "deterministic_turn_rate": round(deterministic_turns / len(turns), 4)
+        if turns
         else 0.0,
         "average_turns": round(statistics.fmean(len(record["turns"]) for record in records), 2)
         if records
@@ -77,11 +151,12 @@ async def evaluate_conversations(
     provider,
     cases: list[dict[str, Any]],
     schema: ForecastingSchema,
+    engine_class: type[ElicitationEngine] = LocalSLMElicitationEngine,
 ) -> dict[str, Any]:
     records: list[dict[str, Any]] = []
     for case in cases:
         repository = MemoryRepository()
-        engine = LocalSLMElicitationEngine(schema, provider, repository)
+        engine = engine_class(schema, provider, repository)
         dialogue = engine.start_dialogue()
         turns: list[dict[str, Any]] = []
         previous_question: str | None = None
@@ -117,7 +192,10 @@ async def evaluate_conversations(
         expected_intent = Intent(case["expected_intent"])
         expected_slots = case.get("expected_final_slots", {})
         intent_correct = final_state.intent == expected_intent
-        slots_correct = all(final_slots.get(key) == value for key, value in expected_slots.items())
+        slots_exact = final_slots == expected_slots
+        forbidden_terms = [term.lower() for term in case.get("forbidden_assistant_terms", [])]
+        assistant_text = "\n".join(turn["assistant"] for turn in turns).lower()
+        assistant_safe = not any(term in assistant_text for term in forbidden_terms)
         records.append(
             {
                 "case_id": case["case_id"],
@@ -126,8 +204,11 @@ async def evaluate_conversations(
                 "intent_correct": intent_correct,
                 "expected_final_slots": expected_slots,
                 "final_slots": final_slots,
-                "slots_correct": slots_correct,
-                "success": intent_correct and slots_correct,
+                "slots_correct": slots_exact,
+                "slots_exact": slots_exact,
+                "assistant_safe": assistant_safe,
+                "forbidden_assistant_terms": case.get("forbidden_assistant_terms", []),
+                "success": intent_correct and slots_exact and assistant_safe,
                 "turns": turns,
             }
         )

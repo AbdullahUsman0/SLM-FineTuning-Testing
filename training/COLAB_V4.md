@@ -4,7 +4,10 @@ Use GitHub for code and the versioned corpus. Write checkpoints directly to
 Google Drive so a free Colab runtime can disconnect without losing completed
 epochs.
 
-Select **Runtime > Change runtime type > T4 GPU**, then run this setup cell:
+Select **Runtime > Change runtime type > T4 GPU**. Add an `OPENAI_API_KEY`
+secret via the Secrets (🔑) panel first — the setup cell rebuilds corpus v4,
+which calls OpenAI for paraphrases (cached under `.cache/`). Never paste the
+key into a cell or commit it. Then run this setup cell:
 
 ```python
 import subprocess
@@ -66,6 +69,12 @@ command = [
 print("Starting or resuming:", " ".join(command))
 subprocess.run(command, cwd=PROJECT_DIR, check=True)
 ```
+
+**Timing:** epoch 1 measured **4h39m** on a T4, so 3 epochs (~13.5h) exceed the
+free Colab session limit. If the session dies mid-run, just re-run this cell —
+`--resume-from-checkpoint auto` continues from the highest checkpoint on Drive.
+Early-stopping patience 1 may also finish the run before epoch 3. For a
+guaranteed single-session run, change `--epochs` to `2` (~9.5h).
 
 v4 is a fresh LoRA adapter on the same `Qwen/Qwen3.5-0.8B` base. It uses the
 augmented corpus with 10 new domains, OpenAI paraphrases, multi-slot answer

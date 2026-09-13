@@ -2,7 +2,12 @@ import unittest
 from uuid import UUID
 
 from local_slm_lab.slm_engine import LocalSLMElicitationEngine
-from forecasting_assistant.domain.models import DialogueState, ForecastingSpecification
+from forecasting_assistant.domain.models import (
+    DialogueState,
+    ExtractorResult,
+    ForecastingSpecification,
+    Intent,
+)
 from forecasting_assistant.domain.schema import load_schema
 
 
@@ -33,7 +38,29 @@ class FailingProvider:
         raise RuntimeError("invalid JSON")
 
 
+class RepeatedIntentProvider:
+    async def extract(self, message, state):
+        return ExtractorResult(
+            intent=Intent.CREATE_FORECAST,
+            intent_confidence=1.0,
+            updates=[],
+        )
+
+    async def ask(self, request):
+        raise AssertionError("local engine should use the schema question")
+
+
 class RepeatProtectionTests(unittest.IsolatedAsyncioTestCase):
+    async def test_local_engine_uses_schema_question_without_model_generation(self):
+        repository = MemoryRepository()
+        engine = LocalSLMElicitationEngine(load_schema(), FailingProvider(), repository)
+        state = engine.start_dialogue()
+        request = engine._question_request(state, "intent", "missing")
+
+        question = await engine._ask(request)
+
+        self.assertEqual(question, "Do you want the system to create a time-series forecast?")
+
     async def test_identical_question_is_replaced_on_second_turn(self):
         repository = MemoryRepository()
         engine = LocalSLMElicitationEngine(load_schema(), FailingProvider(), repository)
@@ -47,6 +74,18 @@ class RepeatProtectionTests(unittest.IsolatedAsyncioTestCase):
         self.assertTrue(
             any(event == "repeated_question_prevented" for event, _ in repository.events)
         )
+
+    async def test_unchanged_intent_keeps_original_evidence(self):
+        repository = MemoryRepository()
+        engine = LocalSLMElicitationEngine(load_schema(), RepeatedIntentProvider(), repository)
+        dialogue = engine.start_dialogue()
+
+        first = await engine.handle_user_message(dialogue.dialogue_id, "yes")
+        second = await engine.handle_user_message(dialogue.dialogue_id, "uploaded")
+
+        self.assertEqual(first.state.slots["intent"].evidence_text, "yes")
+        self.assertEqual(second.state.slots["intent"].evidence_text, "yes")
+        self.assertEqual(second.state.slots["intent"].source_turn, 1)
 
 
 if __name__ == "__main__":

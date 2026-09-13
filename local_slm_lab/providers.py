@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import asyncio
 import json
+import re
 import sys
 from pathlib import Path
 from typing import Any
@@ -22,10 +23,25 @@ from forecasting_assistant.domain.models import (
     QuestionRequest,
 )
 from forecasting_assistant.domain.schema import ForecastingSchema
-from forecasting_assistant.prompts.extractor import build_extractor_input, build_extractor_instructions
+from forecasting_assistant.prompts.extractor import (
+    build_extractor_input,
+    build_extractor_instructions,
+    safe_provider_value,
+)
 from forecasting_assistant.prompts.llmrei_long import build_question_input, build_question_instructions
 
-from .client import LocalModelConfig
+from .client import LocalModelConfig, chat_completion
+from .peft_provider import (
+    SHORT_NEGATIVE_INTENT_REPLIES,
+    SHORT_POSITIVE_INTENT_REPLIES,
+    TransformersPeftProvider,
+)
+from .slm_prompts import (
+    build_slm_extractor_input,
+    build_slm_extractor_instructions,
+    build_slm_question_input,
+    build_slm_question_instructions,
+)
 
 
 class LocalStructuredProvider:
@@ -83,6 +99,157 @@ class LocalStructuredProvider:
             self._complete,
             build_question_instructions(),
             build_question_input(request_value),
+            QuestionOutput,
+        )
+
+
+class LocalFineTunedProvider(LocalStructuredProvider):
+    """Run a fine-tuned GGUF LoRA through the prompts used during SFT.
+
+    The HTTP transport remains llama.cpp's OpenAI-compatible endpoint, while
+    extraction, question generation, and deterministic intent recovery match
+    ``TransformersPeftProvider``. This keeps GGUF and native-PEFT evaluation
+    behavior comparable without loading the full Transformers model on Windows.
+    """
+
+    name = "local_llama_cpp_sft"
+
+    def __init__(self, config: LocalModelConfig, schema: ForecastingSchema) -> None:
+        super().__init__(config, schema)
+        self._traces: list[dict[str, Any]] = []
+
+    _intent_recovery = TransformersPeftProvider._intent_recovery
+    _slot_answer_recovery = TransformersPeftProvider._slot_answer_recovery
+    _drop_low_information_updates = staticmethod(
+        TransformersPeftProvider._drop_low_information_updates
+    )
+
+    def drain_traces(self) -> list[dict[str, Any]]:
+        traces = self._traces
+        self._traces = []
+        return traces
+
+    def _structured(
+        self, operation: str, system: str, user: str, output_type: type[Any]
+    ) -> Any:
+        try:
+            text = self._raw_completion(system, user)
+            parsed = TransformersPeftProvider._json_object(text)
+            result = output_type.model_validate(parsed)
+        except Exception as exc:
+            self._traces.append(
+                {
+                    "operation": operation,
+                    "raw_output": safe_provider_value(locals().get("text")),
+                    "parsed": False,
+                    "error": f"{type(exc).__name__}: {exc}",
+                }
+            )
+            raise RuntimeError(
+                f"fine-tuned local model returned invalid {output_type.__name__} JSON"
+            ) from exc
+        self._traces.append(
+            {
+                "operation": operation,
+                "raw_output": safe_provider_value(text),
+                "parsed": True,
+                "error": None,
+            }
+        )
+        return result
+
+    def _raw_completion(self, system: str, user: str) -> str:
+        return chat_completion(
+            [
+                {"role": "system", "content": system},
+                {"role": "user", "content": user},
+            ],
+            self.config,
+        )
+
+    async def extract(self, message: str, state: DialogueState) -> ExtractorResult:
+        recovery = self._intent_recovery(message, state)
+        normalized = re.sub(r"[^a-z0-9]+", " ", message.lower()).strip()
+        if recovery is not None and normalized in (
+            SHORT_POSITIVE_INTENT_REPLIES | SHORT_NEGATIVE_INTENT_REPLIES
+        ):
+            self._traces.append(
+                {
+                    "operation": "deterministic_intent",
+                    "raw_output": None,
+                    "parsed": True,
+                    "error": None,
+                }
+            )
+            return recovery
+        if len(message.split()) <= 4 and not re.search(
+            r"\b(?:actually|correction|forecast|instead|predict)\b", normalized
+        ):
+            direct_answer = self._slot_answer_recovery(
+                message,
+                state,
+                ExtractorResult(
+                    intent=state.intent,
+                    intent_confidence=state.slots["intent"].confidence or 0.99,
+                ),
+            )
+            if direct_answer is not None:
+                self._traces.append(
+                    {
+                        "operation": "deterministic_slot",
+                        "raw_output": None,
+                        "parsed": True,
+                        "error": None,
+                    }
+                )
+                return direct_answer
+        try:
+            result = await asyncio.to_thread(
+                self._structured,
+                "extract",
+                build_slm_extractor_instructions(),
+                build_slm_extractor_input(message, state, self.schema),
+                ExtractorResult,
+            )
+        except RuntimeError:
+            if recovery is None:
+                raise
+            self._traces.append(
+                {"operation": "extract_recovery", "raw_output": None, "parsed": True, "error": None}
+            )
+            return recovery
+        result = self._drop_low_information_updates(result)
+        if recovery is not None and result.intent != recovery.intent:
+            existing = [update for update in result.updates if update.slot_id != "intent"]
+            result = result.model_copy(
+                update={
+                    "intent": recovery.intent,
+                    "intent_confidence": 1.0,
+                    "updates": [*recovery.updates, *existing],
+                }
+            )
+            self._traces.append(
+                {"operation": "extract_recovery", "raw_output": None, "parsed": True, "error": None}
+            )
+        slot_recovery = self._slot_answer_recovery(message, state, result)
+        if slot_recovery is not None:
+            result = slot_recovery
+            self._traces.append(
+                {
+                    "operation": "deterministic_slot",
+                    "raw_output": None,
+                    "parsed": True,
+                    "error": None,
+                }
+            )
+        return result
+
+    async def ask(self, request_value: QuestionRequest) -> QuestionOutput:
+        return await asyncio.to_thread(
+            self._structured,
+            "ask",
+            build_slm_question_instructions(),
+            build_slm_question_input(request_value),
             QuestionOutput,
         )
 

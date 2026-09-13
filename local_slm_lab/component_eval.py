@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import math
+import re
 import statistics
 import sys
 from collections import Counter
@@ -50,7 +51,7 @@ class CallRecord:
     predicted: dict[str, Any] | None
     latency_ms: float
     error: str | None
-    checks: dict[str, bool]
+    checks: dict[str, Any]
 
 
 def load_jsonl(path: Path) -> list[dict[str, Any]]:
@@ -79,7 +80,11 @@ def question_request(scenario: dict[str, Any], schema: ForecastingSchema) -> Que
         reason="missing or unclear requirement",
         slot_description=definition.description,
         current_state=SlotState(slot_id=slot_id),
-        confirmed_context={},
+        confirmed_context={
+            key: value
+            for key, value in scenario.get("gold_final_slots", {}).items()
+            if key != slot_id
+        },
         static_question=definition.static_question,
         allowed_values=definition.allowed_values,
         other_active_slot_ids=tuple(
@@ -108,6 +113,63 @@ def _updates(result: dict[str, Any]) -> set[tuple[str, str, str]]:
     }
 
 
+def _updates_by_slot(result: dict[str, Any]) -> dict[str, tuple[str, str]]:
+    return {
+        update["slot_id"]: (
+            _canonical_value(update.get("candidate_value")),
+            update["status"],
+        )
+        for update in result.get("updates", [])
+    }
+
+
+QUESTION_STOPWORDS = {
+    "a",
+    "about",
+    "and",
+    "are",
+    "be",
+    "each",
+    "for",
+    "how",
+    "in",
+    "is",
+    "of",
+    "or",
+    "the",
+    "to",
+    "what",
+    "when",
+    "which",
+    "will",
+}
+
+
+def _normalized_text(value: str) -> str:
+    return " ".join(re.findall(r"[a-z0-9]+", value.lower()))
+
+
+def _content_tokens(value: str) -> set[str]:
+    return {
+        token
+        for token in _normalized_text(value).split()
+        if token not in QUESTION_STOPWORDS
+    }
+
+
+def _token_f1(expected: str, predicted: str) -> float:
+    expected_tokens = _content_tokens(expected)
+    predicted_tokens = _content_tokens(predicted)
+    if not expected_tokens and not predicted_tokens:
+        return 1.0
+    if not expected_tokens or not predicted_tokens:
+        return 0.0
+    overlap = len(expected_tokens & predicted_tokens)
+    precision = overlap / len(predicted_tokens)
+    recall = overlap / len(expected_tokens)
+    return round(2 * precision * recall / (precision + recall), 4) if overlap else 0.0
+
+
 def _percentile(values: list[float], fraction: float) -> float:
     if not values:
         return 0.0
@@ -127,17 +189,38 @@ def score_records(records: list[CallRecord]) -> dict[str, Any]:
     latencies = [record.latency_ms for record in records]
 
     true_positive = false_positive = false_negative = 0
+    slot_id_true_positive = slot_id_false_positive = slot_id_false_negative = 0
     intent_correct = joint_correct = correction_correct = 0
     forbidden_total = forbidden_inferred = 0
+    expected_nonempty = collapsed_to_empty = 0
+    matched_slot_values = matched_slot_values_correct = 0
     for record in extraction:
-        if record.predicted is None:
-            false_negative += len(_updates(record.expected))
-            continue
         expected_updates = _updates(record.expected)
+        expected_by_slot = _updates_by_slot(record.expected)
+        if expected_updates:
+            expected_nonempty += 1
+        if record.predicted is None:
+            false_negative += len(expected_updates)
+            slot_id_false_negative += len(expected_by_slot)
+            collapsed_to_empty += int(bool(expected_updates))
+            continue
         predicted_updates = _updates(record.predicted)
+        predicted_by_slot = _updates_by_slot(record.predicted)
         true_positive += len(expected_updates & predicted_updates)
         false_positive += len(predicted_updates - expected_updates)
         false_negative += len(expected_updates - predicted_updates)
+        expected_slot_ids = set(expected_by_slot)
+        predicted_slot_ids = set(predicted_by_slot)
+        slot_id_true_positive += len(expected_slot_ids & predicted_slot_ids)
+        slot_id_false_positive += len(predicted_slot_ids - expected_slot_ids)
+        slot_id_false_negative += len(expected_slot_ids - predicted_slot_ids)
+        common_slot_ids = expected_slot_ids & predicted_slot_ids
+        matched_slot_values += len(common_slot_ids)
+        matched_slot_values_correct += sum(
+            predicted_by_slot[slot_id] == expected_by_slot[slot_id]
+            for slot_id in common_slot_ids
+        )
+        collapsed_to_empty += int(bool(expected_updates) and not predicted_updates)
         intent_correct += int(record.checks["intent"])
         joint_correct += int(record.checks["joint_extraction"])
         correction_correct += int(record.checks["correction"])
@@ -147,6 +230,24 @@ def score_records(records: list[CallRecord]) -> dict[str, Any]:
     precision = _safe_rate(true_positive, true_positive + false_positive)
     recall = _safe_rate(true_positive, true_positive + false_negative)
     f1 = round(2 * precision * recall / (precision + recall), 4) if precision + recall else 0.0
+    slot_id_precision = _safe_rate(
+        slot_id_true_positive, slot_id_true_positive + slot_id_false_positive
+    )
+    slot_id_recall = _safe_rate(
+        slot_id_true_positive, slot_id_true_positive + slot_id_false_negative
+    )
+    slot_id_f1 = (
+        round(
+            2 * slot_id_precision * slot_id_recall / (slot_id_precision + slot_id_recall),
+            4,
+        )
+        if slot_id_precision + slot_id_recall
+        else 0.0
+    )
+    question_token_scores = [
+        float(record.checks.get("question_content_token_f1", 0.0))
+        for record in questions
+    ]
     return {
         "provider_success_rate": _safe_rate(len(successful), len(records)),
         "structured_output_validity_rate": _safe_rate(len(successful), len(records)),
@@ -155,6 +256,16 @@ def score_records(records: list[CallRecord]) -> dict[str, Any]:
         "slot_micro_precision": precision,
         "slot_micro_recall": recall,
         "slot_micro_f1": f1,
+        "slot_id_micro_precision": slot_id_precision,
+        "slot_id_micro_recall": slot_id_recall,
+        "slot_id_micro_f1": slot_id_f1,
+        "matched_slot_value_accuracy": _safe_rate(
+            matched_slot_values_correct, matched_slot_values
+        ),
+        "nonempty_update_accuracy": _safe_rate(
+            expected_nonempty - collapsed_to_empty, expected_nonempty
+        ),
+        "empty_update_collapse_rate": _safe_rate(collapsed_to_empty, expected_nonempty),
         "joint_extraction_accuracy": _safe_rate(joint_correct, len(extraction)),
         "correction_detection_accuracy": _safe_rate(correction_correct, len(extraction)),
         "forbidden_slot_inference_rate": _safe_rate(forbidden_inferred, forbidden_total),
@@ -169,6 +280,19 @@ def score_records(records: list[CallRecord]) -> dict[str, Any]:
         "question_slot_relevance": _safe_rate(
             sum(record.checks.get("slot_relevance", False) for record in questions),
             len(questions),
+        ),
+        "question_exact_match_accuracy": _safe_rate(
+            sum(record.checks.get("question_exact_match", False) for record in questions),
+            len(questions),
+        ),
+        "question_content_accuracy": _safe_rate(
+            sum(record.checks.get("question_content_match", False) for record in questions),
+            len(questions),
+        ),
+        "question_content_token_f1": (
+            round(statistics.fmean(question_token_scores), 4)
+            if question_token_scores
+            else 0.0
         ),
         "latency_ms": {
             "mean": round(statistics.fmean(latencies), 1) if latencies else 0.0,
@@ -194,7 +318,9 @@ def _extraction_checks(
     }
 
 
-def _question_checks(output: QuestionOutput, request: QuestionRequest) -> dict[str, bool]:
+def _question_checks(
+    output: QuestionOutput, request: QuestionRequest, ideal_question: str
+) -> dict[str, Any]:
     question = output.question.strip()
     expected_terms = {
         word.lower()
@@ -207,10 +333,15 @@ def _question_checks(output: QuestionOutput, request: QuestionRequest) -> dict[s
         if len(word.strip("?.,")) >= 4
     }
     normalized = {word.lower().strip("?.,") for word in question.split()}
+    content_token_f1 = _token_f1(ideal_question, question)
     return {
         "question_contract": validate_question(output, request),
         "one_question": question.count("?") == 1 and question.endswith("?"),
         "slot_relevance": bool(normalized & (expected_terms | static_terms)),
+        "question_exact_match": _normalized_text(question)
+        == _normalized_text(ideal_question),
+        "question_content_match": content_token_f1 >= 0.75,
+        "question_content_token_f1": content_token_f1,
     }
 
 
@@ -263,7 +394,7 @@ async def evaluate(
             try:
                 output = await provider.ask(request)
                 predicted = output.model_dump(mode="json")
-                checks = _question_checks(output, request)
+                checks = _question_checks(output, request, scenario["ideal_question"])
             except Exception as exc:  # provider errors are part of evaluation
                 error = f"{type(exc).__name__}: {exc}"
                 checks = {}
@@ -283,12 +414,17 @@ async def evaluate(
             )
 
     category_counts = Counter(record.category for record in records)
+    category_metrics = {
+        category: score_records([record for record in records if record.category == category])
+        for category in sorted(category_counts)
+    }
     return {
         "created_at": datetime.now(UTC).isoformat(),
         "provider": provider.name,
         "model": provider.model,
         "scenario_count": len(scenarios),
         "category_call_counts": dict(sorted(category_counts.items())),
+        "category_metrics": category_metrics,
         "metrics": score_records(records),
         "records": [asdict(record) for record in records],
     }
