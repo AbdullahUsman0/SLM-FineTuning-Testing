@@ -42,6 +42,13 @@ class V5NotebookTests(unittest.TestCase):
         self.assertNotIn("'--corpus'", code)
         self.assertNotIn("'--sealed-output'", code)
 
+    def test_preflight_counts_tokens_from_transformers_mapping_results(self):
+        code = self.code['verify-and-pilot-inputs']
+        self.assertIn('isinstance(tokenized, Mapping)', code)
+        self.assertIn("tokenized = tokenized['input_ids']", code)
+        self.assertIn('isinstance(tokenized[0], list)', code)
+        self.assertIn('lengths.append(len(tokenized))', code)
+
     def test_api_secret_is_ephemeral_and_cost_gated(self):
         code = self.code['openai-validation-opt-in']
         self.assertIn("userdata.get('OPENAI_API_KEY')", code)
