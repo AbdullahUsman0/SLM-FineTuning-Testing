@@ -1,5 +1,6 @@
 import json
 import unittest
+from unittest.mock import patch
 
 from local_slm_lab.corpus_v4 import (
     build_corpus_v4,
@@ -12,7 +13,13 @@ class CorpusV4Tests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.corpus = build_corpus_v4()
-        cls.sft = build_sft_examples_v4(cls.corpus)
+        # Corpus structure is an offline invariant. Live paraphrasing belongs in
+        # the artifact build, where its API output is cached and reviewed.
+        def paraphrases(message, n=3):
+            return [f"{message} (variant {index})" for index in range(1, n + 1)]
+
+        with patch("local_slm_lab.corpus_v4.get_paraphrases", side_effect=paraphrases):
+            cls.sft = build_sft_examples_v4(cls.corpus)
 
     def test_v4_is_extraction_only_prompt_completion(self):
         validate_corpus_v4(self.corpus, self.sft)

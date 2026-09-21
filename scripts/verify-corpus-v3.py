@@ -19,8 +19,16 @@ def read_jsonl(path: Path) -> list[dict]:
     return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line]
 
 
-def sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+def matches_manifest_hash(data: bytes, expected: str) -> bool:
+    """Accept the same JSONL bytes with LF or CRLF line endings.
+
+    The v3 manifest was written on Windows with CRLF hashes, while Git stores
+    normalized LF blobs. Both forms contain the same JSONL records.
+    """
+    if hashlib.sha256(data).hexdigest().lower() == expected.lower():
+        return True
+    normalized = data.replace(b"\r\n", b"\n").replace(b"\n", b"\r\n")
+    return hashlib.sha256(normalized).hexdigest().lower() == expected.lower()
 
 
 def main() -> None:
@@ -30,8 +38,9 @@ def main() -> None:
         path = corpus_root / relative
         if not path.is_file():
             raise SystemExit(f"Missing corpus artifact: {path}")
-        actual = sha256(path)
-        if actual.lower() != expected["sha256"].lower():
+        data = path.read_bytes()
+        actual = hashlib.sha256(data).hexdigest()
+        if not matches_manifest_hash(data, expected["sha256"]):
             raise SystemExit(
                 f"Checksum mismatch for {relative}: expected {expected['sha256']}, got {actual}"
             )
