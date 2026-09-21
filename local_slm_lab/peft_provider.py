@@ -124,6 +124,7 @@ class PeftInferenceConfig:
     device: str = "auto"
     dtype: str = "bfloat16"
     max_new_tokens: int = 1024
+    revision: str | None = None
 
 
 def resolve_adapter_path(variant: str, custom_path: str | Path | None = None) -> Path | None:
@@ -194,10 +195,13 @@ class TransformersPeftProvider:
         # preventing generate() from ever being reached (~4ms latency with 0% success).
         # AutoTokenizer handles apply_chat_template and batch_decode correctly for
         # text-only inference and supports enable_thinking=False for Qwen3.5.
-        self._processor = AutoTokenizer.from_pretrained(self.config.base_model)
+        self._processor = AutoTokenizer.from_pretrained(
+            self.config.base_model, revision=self.config.revision
+        )
         model_kwargs: dict[str, Any] = {
             "dtype": requested_dtype,
             "low_cpu_mem_usage": True,
+            "revision": self.config.revision,
         }
         if target_device == "cuda":
             model_kwargs["device_map"] = "auto"

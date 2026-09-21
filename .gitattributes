@@ -1,0 +1,6 @@
+/corpus-v5/** -text
+/local_slm_lab/v5_*.py text eol=lf
+/local_slm_lab/corpus_v5.py text eol=lf
+/scripts/*v5*.py text eol=lf
+/training/v5-*.json text eol=lf
+/notebooks/Qwen_2B_LoRA_v5_Grounded_Colab.ipynb text eol=lf

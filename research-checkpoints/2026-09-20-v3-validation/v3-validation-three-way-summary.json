@@ -1,0 +1,72 @@
+{
+  "scenario_count": 48,
+  "same_order_and_gold_verified": true,
+  "bootstrap_resamples": 10000,
+  "bootstrap_seed": 42,
+  "variants": {
+    "stock_2b": {
+      "model": "local-qwen35-2b-base",
+      "non_intent_true_positive": 9,
+      "non_intent_false_positive": 9,
+      "non_intent_false_negative": 225,
+      "non_intent_gold_count": 234,
+      "non_intent_precision": 0.5,
+      "non_intent_recall": 0.038461538461538464,
+      "non_intent_f1": 0.07142857142857142,
+      "slot_micro_f1_including_intent": 0.2412,
+      "intent_accuracy": 0.9608,
+      "provider_success_rate": 1.0,
+      "forbidden_slot_inference_rate": 0.0,
+      "question_contract_accuracy": 0.8462,
+      "call_errors": 0
+    },
+    "v3_2b_lora": {
+      "model": "Qwen/Qwen3.5-2B::/content/drive/MyDrive/FYP-model-runs/qwen35-2b-lora-v3-repro-20260918/best-adapter",
+      "non_intent_true_positive": 12,
+      "non_intent_false_positive": 10,
+      "non_intent_false_negative": 222,
+      "non_intent_gold_count": 234,
+      "non_intent_precision": 0.5454545454545454,
+      "non_intent_recall": 0.05128205128205128,
+      "non_intent_f1": 0.09375,
+      "slot_micro_f1_including_intent": 0.3032,
+      "intent_accuracy": 0.902,
+      "provider_success_rate": 0.9667,
+      "forbidden_slot_inference_rate": 0.0,
+      "question_contract_accuracy": 0.9231,
+      "call_errors": 3
+    },
+    "openai_gpt5mini": {
+      "model": "gpt-5-mini-2025-08-07",
+      "non_intent_true_positive": 75,
+      "non_intent_false_positive": 131,
+      "non_intent_false_negative": 159,
+      "non_intent_gold_count": 234,
+      "non_intent_precision": 0.3640776699029126,
+      "non_intent_recall": 0.32051282051282054,
+      "non_intent_f1": 0.3409090909090909,
+      "slot_micro_f1_including_intent": 0.3875,
+      "intent_accuracy": 0.902,
+      "provider_success_rate": 1.0,
+      "forbidden_slot_inference_rate": 0.1795,
+      "question_contract_accuracy": 0.641,
+      "call_errors": 0
+    }
+  },
+  "differences": {
+    "openai_gpt5mini_minus_v3_2b_lora": {
+      "non_intent_f1_delta": 0.24715909090909088,
+      "ci_95_percentile": [
+        0.16857747204891665,
+        0.33832976445396146
+      ]
+    },
+    "openai_gpt5mini_minus_stock_2b": {
+      "non_intent_f1_delta": 0.26948051948051943,
+      "ci_95_percentile": [
+        0.19254765433800974,
+        0.3461050852232709
+      ]
+    }
+  }
+}

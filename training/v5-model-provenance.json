@@ -1,0 +1,15 @@
+{
+  "model_id": "Qwen/Qwen3.5-2B",
+  "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "license": "Apache-2.0",
+  "metadata_source": "https://huggingface.co/api/models/Qwen/Qwen3.5-2B/revision/15852e8c16360a2fea060d615a32b45270f8a8fc?blobs=true",
+  "recorded_date_utc": "2026-09-19",
+  "hash_status": "publisher_lfs_metadata; notebook verifies downloaded bytes before training",
+  "weights": [
+    {
+      "file": "model.safetensors-00001-of-00001.safetensors",
+      "size_bytes": 4548221488,
+      "sha256": "aa33250c4fc64891ddfaba3a314fd9542ea371843c387178b425fbcc5ed680b1"
+    }
+  ]
+}
