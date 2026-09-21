@@ -1,0 +1,16 @@
+{
+  "eval_loss": 0.12301614135503769,
+  "eval_runtime": 60.2963,
+  "eval_samples_per_second": 0.265,
+  "eval_steps_per_second": 0.265,
+  "eval_entropy": 0.12313271686434746,
+  "eval_num_tokens": 64475.0,
+  "eval_mean_token_accuracy": 0.9663136638700962,
+  "epoch": 1.0,
+  "adapter_selection": {
+    "best-adapter": "loss-best only (minimum validation eval_loss)",
+    "task_winner_selected": false,
+    "behavioral_selection": "pending; compare all retained epoch checkpoints separately",
+    "loss_best_checkpoint": "/content/gate-a0020e7/pilot/checkpoint-2"
+  }
+}

@@ -1,0 +1,5258 @@
+{
+  "report_version": "v5-raw-exact-1",
+  "status": "complete",
+  "started_at": "2026-09-21T18:53:34.992293+00:00",
+  "finished_at": "2026-09-21T18:55:15.680426+00:00",
+  "protocol": {
+    "extraction_context": "teacher_forced_gold_reducer_replay_with_explicit_context_overlays",
+    "last_assistant_question": "explicit turn/scenario question; never predicted",
+    "question_context": "oracle_gold_final_slots_excluding_requested_slot",
+    "inclusive_f1": "exact update tuples including intent slot; top-level intent scored separately",
+    "canonical_value": "decode candidate_value JSON text once, preserve types and list order",
+    "invalid_prediction": "zero TP, all gold FN, structurally readable emitted tuples FP",
+    "zero_denominator": "P/R/F1=0; other rates=null; empty-gold scenarios disclosed separately",
+    "transition": "same pinned reducer on gold/prediction; intent and all slot values/status/confirmation/errors",
+    "question_contract": "pinned fpy validator, not semantic answer quality",
+    "correction_tuple_accuracy": "gold explicit-correction calls; flag true and all nonintent update tuples exact",
+    "empty_update_collapse": "nonempty-gold extraction calls with failed/invalid or empty output; successful-empty also reported",
+    "variant_context": "declared parent branches replay independently; unbranched turns replay sequentially"
+  },
+  "metadata": {
+    "input": {
+      "path": "/content/gate-a0020e7/one-scenario.jsonl",
+      "sha256": "28577fb3ccd8a2f208f0a2d70a954c3a9af673d51b1295003fc9df7825abb382",
+      "split": "dev",
+      "selection_manifest_sha256": null,
+      "candidate_id": null
+    },
+    "settings": {
+      "provider": "lora",
+      "model": "Qwen/Qwen3.5-2B",
+      "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+      "adapter": "/content/gate-a0020e7/pilot/best-adapter",
+      "adapter_sha256": {
+        "adapter_model.safetensors": "f649f4ee6178b15c2383f476b73b8ec13bbb1b2024966d425520f6b3c08ab7fe",
+        "adapter_config.json": "0247e98fe772142aba223aaee17161a3c5ab08626fb7458311e5237a4ca46466"
+      },
+      "dtype": "float16",
+      "device": "cuda",
+      "max_new_tokens": 3072,
+      "decoding": {
+        "do_sample": false,
+        "num_beams": 1,
+        "repetition_penalty": 1.0,
+        "enable_thinking": false,
+        "max_new_tokens": 3072,
+        "recovery": false,
+        "guardrails": false
+      },
+      "prompt_sha256": "bd236f667cfa4f6f5d2f599cf3e7a40954f86de35647b8b4ad5ee7544883bf07",
+      "scorer_sha256": "cf390476b4118ad51eaa999fed1918ccd24aace48022c2cfd873d572f9fb7d9a",
+      "dependency_sha256": "e7a988761899241b724361be0aabadf912718aca82f4f4ef8e555329fc81980e"
+    },
+    "settings_sha256": "27a6bf86861fa552224291fcf5143cc55e818ac0c7840351bf8b5a12a3b07d0d",
+    "provenance": {
+      "fpy_revision": "04d52c015d1e3ecdefe92b87116f209361509b4b",
+      "dependency_files": {
+        "src/forecasting_assistant/__init__.py": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed",
+        "src/forecasting_assistant/application/clarification.py": "f7ea65503037453d4a8df20d2138a53e0b9fe5f00c6dfd735ad796d52ddb3639",
+        "src/forecasting_assistant/application/dataset_discovery.py": "ec8ad56016fd84fc1420790a2b2d1bcf5456cea812067fffe340f9dfc0e48119",
+        "src/forecasting_assistant/application/dataset_query.py": "4d799b31c7bd904f02722a077a922f8fa50b4de444c224bf70c69ffa0d471047",
+        "src/forecasting_assistant/application/dataset_ranking.py": "e08112e8fe75346c762fe6566718712463a5e0ce05c9c30d792882c41e58cae5",
+        "src/forecasting_assistant/application/dataset_validation.py": "6c22d4ba221eb29ebbc56cc2feb56a511a8ce8f13f7da6250ffabaa348b919d2",
+        "src/forecasting_assistant/application/normalization.py": "f9f7f907bbbcc401a014aaf7d2cc2e835d06df3e0690ea354749c66c3616a1bd",
+        "src/forecasting_assistant/application/orchestrator.py": "dfe4e680522eb8c0ae528839ab4f7d10800cd394943a0d456caeae6b3f93cbb5",
+        "src/forecasting_assistant/application/state_reducer.py": "33931ff7007cadfdb09ffd3215d0ed0cbd2ac44c1bcf7fea4d1ebcd1f3f71d0c",
+        "src/forecasting_assistant/application/validation.py": "d0752388b2eb1a9df0286ab0ba52e86d04e5f5175821655a1afdc295d811787f",
+        "src/forecasting_assistant/config.py": "48c6f43ccdb1b9c9d18ccd0b26c8154fcdc4251ca5da20f6b039a2779944e9fa",
+        "src/forecasting_assistant/domain/conditions.py": "8b794cf7860586a3eedd90fb52805d78b4a34286bed3ef67ccd0407b8cd4f5bb",
+        "src/forecasting_assistant/domain/datasets.py": "53b6372fce1f273ab160b9e9100844016d50793448ddbb70aef7eeeea119e780",
+        "src/forecasting_assistant/domain/models.py": "53d012756eec7aeb88045e18e8422bee97c7bb645ff55d37ea86e5db2397aeff",
+        "src/forecasting_assistant/domain/schema.py": "13da85fb0ca6280203b90a4577e471940f4bef81cff575e8e730a7b31787ef74",
+        "src/forecasting_assistant/infrastructure/datasets/__init__.py": "a0fc8d0ac2f163497ac1720ba183f20c300c0f3d27bc9a91749c8b21b1070891",
+        "src/forecasting_assistant/infrastructure/datasets/adapters.py": "efec49b16e7d5d1f688eac54be391f0c9f161648adf0d9975d92720538e76fb9",
+        "src/forecasting_assistant/infrastructure/datasets/http.py": "ac23a98ba99ee37a7504f82effe5d67dad31402c69af2063f73bcecc62c8fcf1",
+        "src/forecasting_assistant/infrastructure/datasets/object_store.py": "d52077719cc618665c31822f5c1ddb287119c7c95c91356eb413ec82ed57cd35",
+        "src/forecasting_assistant/infrastructure/datasets/protocol.py": "4adc3301f682196424b6d767374ad2355880599e938bf7959d5bc5aa9c7dfde6",
+        "src/forecasting_assistant/infrastructure/datasets/registry.py": "23aa241d611c0702575bc57b05427b1eca18dc0d5334f010c06411d0d44a2fa4",
+        "src/forecasting_assistant/infrastructure/datasets/sqlite_repository.py": "b3b245e2a80f532837771f3f9fb958c635f236cc85eeaff2e1a128d9d4f203ce",
+        "src/forecasting_assistant/infrastructure/llm/openai_responses.py": "2805183d2fb2731be07baa877150c6f0c10aaa0fa9baa99c5a8496cb5e22c24d",
+        "src/forecasting_assistant/infrastructure/llm/protocol.py": "3a148bb3dcf98382aa01831736f1b68405b84d431eba4a2fa1137d6c2c20d067",
+        "src/forecasting_assistant/infrastructure/persistence/protocol.py": "1b6b49848a6109b2cf31cccb6b5252d9c47899d663df7a8b8dd9a0f5e015b769",
+        "src/forecasting_assistant/infrastructure/persistence/sqlite_repository.py": "b26662ebd3fc0ad85cc32b4bb34146b4a55f9d3a8a0b543e7c315faa537edc12",
+        "src/forecasting_assistant/interfaces/__init__.py": "75b0b970e06232b20d47f0fe12c2afe6a2a1e81a85dcde97bdab74fa47978cf5",
+        "src/forecasting_assistant/interfaces/cli.py": "ee6b0090c65cf848892c1be3861b861af6552b06c6a4c5e838d46611e480f0d2",
+        "src/forecasting_assistant/interfaces/web.py": "8c98a6ad19ab804365fc79a0d79a1f3cac0856a6a26433cbb3644df5d307d900",
+        "src/forecasting_assistant/prompts/extractor.py": "880e1bb086f6cb65bdab5011627d3728ab7bedc076d033e59a365aaacbacd924",
+        "src/forecasting_assistant/prompts/llmrei_long.py": "248b5ef6ae9f01b429b2e7bbcf8ba0ed73f4aaba01006d9212c4ef6a64247ce2"
+      },
+      "dependency_sha256": "e7a988761899241b724361be0aabadf912718aca82f4f4ef8e555329fc81980e",
+      "local_files": {
+        "local_slm_lab/v5_eval.py": "cf390476b4118ad51eaa999fed1918ccd24aace48022c2cfd873d572f9fb7d9a",
+        "local_slm_lab/peft_provider.py": "42eaf82d6b4031b59bda7ec08a1722dc57de6f11984600b45f260b28a73aee33",
+        "local_slm_lab/providers.py": "17994a0e4a64198719b989f194587ef976e75dc6c06d6f30d529ae9e056f1ccc",
+        "local_slm_lab/slm_prompts.py": "87eb7975d4f37d4f535a1b5d3ceeb5a0c82e924b2f186ebee698a83874c7b829",
+        "local_slm_lab/v5_prompts.py": "2c8dadba7acb35bb8e57c666ea8c82024f6aaf2c6571183fbca07c070bab0947",
+        "local_slm_lab/v5_provider.py": "42a347a7af182975a736242e1ea649d565864e4d94a6c171d1c6b745078a3230",
+        "scripts/evaluate-v5.py": "79a02607b73eea8201656222fae654968830ef262dbe92f0c357194783a1be8f"
+      },
+      "prompt_files": {
+        "v5_prompts.py": "2c8dadba7acb35bb8e57c666ea8c82024f6aaf2c6571183fbca07c070bab0947",
+        "slm_prompts.py": "87eb7975d4f37d4f535a1b5d3ceeb5a0c82e924b2f186ebee698a83874c7b829"
+      },
+      "prompt_sha256": "bd236f667cfa4f6f5d2f599cf3e7a40954f86de35647b8b4ad5ee7544883bf07",
+      "scorer_sha256": "cf390476b4118ad51eaa999fed1918ccd24aace48022c2cfd873d572f9fb7d9a",
+      "versions": {
+        "pydantic": "2.13.5",
+        "numpy": "2.1.3",
+        "torch": "2.11.0+cu128",
+        "transformers": "5.15.0",
+        "peft": "0.20.0",
+        "openai": "2.54.0",
+        "tokenizers": "0.22.2",
+        "safetensors": "0.8.0",
+        "accelerate": "1.14.0"
+      },
+      "hardware": {
+        "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+        "machine": "x86_64",
+        "processor": "x86_64",
+        "cpu_count": 2,
+        "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]"
+      },
+      "repository_revision": "a0020e7d5301fb6a93bd5ce0f1c23299103cffda"
+    },
+    "runner_sha256": "79a02607b73eea8201656222fae654968830ef262dbe92f0c357194783a1be8f",
+    "schema_sha256": "6e3534f1db7043b62e9604dafd466c4b3d049ad57fd5da7c0d53a1883403a5a3",
+    "instrumentation": {
+      "raw_response_usage_instrumented": true,
+      "monetary_cost": "not_applicable"
+    },
+    "runtime": {
+      "actual_device": "cuda:0",
+      "actual_dtype": "torch.float16",
+      "resolved_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+      "chat_template_sha256": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+      "generation_config": {
+        "max_length": null,
+        "max_new_tokens": null,
+        "min_length": null,
+        "min_new_tokens": null,
+        "early_stopping": null,
+        "max_time": null,
+        "stop_strings": null,
+        "do_sample": null,
+        "num_beams": null,
+        "use_mtp": null,
+        "use_cache": true,
+        "cache_implementation": null,
+        "cache_config": null,
+        "max_cache_len": null,
+        "temperature": null,
+        "top_k": null,
+        "top_p": null,
+        "min_p": null,
+        "top_h": null,
+        "typical_p": null,
+        "epsilon_cutoff": null,
+        "eta_cutoff": null,
+        "repetition_penalty": null,
+        "encoder_repetition_penalty": null,
+        "length_penalty": null,
+        "no_repeat_ngram_size": null,
+        "bad_words_ids": null,
+        "renormalize_logits": null,
+        "forced_bos_token_id": null,
+        "forced_eos_token_id": null,
+        "remove_invalid_values": null,
+        "exponential_decay_length_penalty": null,
+        "suppress_tokens": null,
+        "begin_suppress_tokens": null,
+        "sequence_bias": null,
+        "token_healing": null,
+        "guidance_scale": null,
+        "watermarking_config": null,
+        "num_return_sequences": null,
+        "output_attentions": null,
+        "output_hidden_states": null,
+        "output_scores": null,
+        "output_logits": null,
+        "return_dict_in_generate": null,
+        "pad_token_id": null,
+        "bos_token_id": null,
+        "eos_token_id": 248044,
+        "encoder_no_repeat_ngram_size": null,
+        "decoder_start_token_id": null,
+        "is_assistant": null,
+        "num_assistant_tokens": null,
+        "num_assistant_tokens_schedule": null,
+        "assistant_confidence_threshold": null,
+        "prompt_lookup_num_tokens": null,
+        "max_matching_ngram_size": null,
+        "assistant_early_exit": null,
+        "assistant_lookbehind": null,
+        "target_lookbehind": null,
+        "assistant_ensemble_weight": null,
+        "speculation_type": null,
+        "compile_config": null,
+        "disable_compile": null,
+        "continuous_batching_config": null,
+        "low_memory": null,
+        "penalty_alpha": null,
+        "dola_layers": null,
+        "diversity_penalty": null,
+        "num_beam_groups": null,
+        "constraints": null,
+        "force_words_ids": null,
+        "prefill_chunk_size": null,
+        "_from_model_config": true,
+        "transformers_version": "5.15.0"
+      },
+      "cuda_version": "12.8",
+      "gpu_names": [
+        "Tesla T4"
+      ],
+      "device_map": {}
+    },
+    "model_artifacts": {
+      "model_id": "Qwen/Qwen3.5-2B",
+      "requested_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+      "resolved_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+      "snapshot_files": {
+        "config.json": "ed1c1723241f23f7f4e23430759cbd7dcfb4103cbdfe052bfe7626b57c2615b4",
+        "model.safetensors-00001-of-00001.safetensors": "aa33250c4fc64891ddfaba3a314fd9542ea371843c387178b425fbcc5ed680b1",
+        "model.safetensors.index.json": "aca8afed9da75b0f050b408d270766fd77627f1af401e240f61c3b47d0db02f9",
+        "tokenizer.json": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+        "tokenizer_config.json": "49e2b6e395f959f077f1e992b338919c0d4a9732fc6e613995e06557f843500c",
+        "vocab.json": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+      },
+      "snapshot_sha256": "90d3cdf48e4a79c59ea581485b73ebd7afea4a06a060a5febdae211cda35acf7",
+      "hash_availability": "observed_snapshot"
+    }
+  },
+  "scenario_count": 1,
+  "scenario_ids": [
+    "v5-20260919-r1/inventory/052"
+  ],
+  "metrics": {
+    "inclusive": {
+      "tp": 0,
+      "fp": 17,
+      "fn": 24,
+      "support": 24,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "nonintent": {
+      "tp": 0,
+      "fp": 16,
+      "fn": 21,
+      "support": 21,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "per_slot": {
+      "acceptable_error": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "aggregation_level": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "aggregation_method": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "allow_negative_values": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "authentication_reference": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "backtest_folds": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "baseline_model": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "business_days_only": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "business_goal": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "calendar_type": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "contains_sensitive_data": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 3,
+        "support": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "covariate_availability": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "data_cutoff": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "dataset_type": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "decision_supported": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "destination": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 3,
+        "support": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "duplicate_policy": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "expected_history_length": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "explainability_level": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "external_covariate_sources": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "file_format": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "forecast_horizon": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "forecast_start": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "forecast_type": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "frequency": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "geography": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "hierarchy_columns": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "history_end": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "history_start": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "holidays": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "human_approval_required": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "inference_mode": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "intent": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 3,
+        "support": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "invalid_value_policy": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "known_future_covariates": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "known_regime_changes": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "known_seasonality": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "latency_requirement": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "lead_time": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "license": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 3,
+        "support": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "minimum_coverage": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "minimum_training_points": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "missing_target_policy": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "missing_timestamp_policy": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "outlier_policy": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "output_format": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 3,
+        "support": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "output_granularity": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "past_covariates": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "prediction_frequency": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "prediction_interval_levels": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "primary_metric": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "privacy_constraints": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 3,
+        "support": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "problem_statement": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 3,
+        "support": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "provenance_required": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "quantiles": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "refresh_frequency": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "retraining_frequency": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "rounding_rule": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "scenario_forecasts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "scope_filters": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "seasonal_periods": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "secondary_metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "series_id_columns": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "sheet_or_table": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "source_mode": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "source_provider": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "source_reference": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 3,
+        "support": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "special_events": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "stakeholder_role": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "static_features": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "success_criteria": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "target_bounds": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "target_column": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "target_description": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "target_unit": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "test_window": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "time_column": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "timezone": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "validation_strategy": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "scenario_all_gold_nonintent": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0
+    },
+    "scenario_all_gold_nonintent_nonempty": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0
+    },
+    "scenario_exact_nonintent": {
+      "numerator": 0,
+      "denominator": 1,
+      "rate": 0.0
+    },
+    "empty_gold_nonintent_scenarios": 0,
+    "intent_accuracy": {
+      "numerator": 0,
+      "denominator": 3,
+      "rate": 0.0
+    },
+    "correction_flag_accuracy": {
+      "numerator": 0,
+      "denominator": 3,
+      "rate": 0.0
+    },
+    "correction_tuple_accuracy": {
+      "numerator": 0,
+      "denominator": 0,
+      "rate": null
+    },
+    "reducer_transition_accuracy": {
+      "numerator": 0,
+      "denominator": 3,
+      "rate": 0.0
+    },
+    "forbidden_call_rate": {
+      "numerator": 3,
+      "denominator": 3,
+      "rate": 1.0
+    },
+    "forbidden_slot_rate": {
+      "numerator": 5,
+      "denominator": 213,
+      "rate": 0.023474178403755867
+    },
+    "forbidden_call_rate_conditional_success": {
+      "numerator": 0,
+      "denominator": 0,
+      "rate": null
+    },
+    "forbidden_failed_calls": 3,
+    "hallucinated_slot_call_rate": {
+      "numerator": 3,
+      "denominator": 3,
+      "rate": 1.0
+    },
+    "hallucinated_slot_call_rate_conditional_success": {
+      "numerator": 0,
+      "denominator": 0,
+      "rate": null
+    },
+    "hallucinated_slot_count": 5,
+    "empty_update_collapse": {
+      "numerator": 3,
+      "denominator": 3,
+      "rate": 1.0
+    },
+    "successful_empty_update_collapse": {
+      "numerator": 0,
+      "denominator": 3,
+      "rate": 0.0
+    },
+    "duplicate_prediction_calls": 0,
+    "provider_success": {
+      "numerator": 1,
+      "denominator": 4,
+      "rate": 0.25
+    },
+    "question_contract": {
+      "numerator": 1,
+      "denominator": 1,
+      "rate": 1.0
+    },
+    "question_exact_match": {
+      "numerator": 1,
+      "denominator": 1,
+      "rate": 1.0
+    },
+    "calls": {
+      "total": 4,
+      "extract": 3,
+      "ask": 1
+    },
+    "latency_ms": {
+      "mean": 25165.90907949967,
+      "p50": 8365.62664199937,
+      "p95": 54381.132599999546
+    },
+    "raw_json_valid": {
+      "numerator": 4,
+      "denominator": 4,
+      "rate": 1.0,
+      "measured_calls": 4,
+      "unavailable_calls": 0,
+      "measured_rate": 1.0
+    },
+    "raw_schema_valid": {
+      "numerator": 1,
+      "denominator": 4,
+      "rate": 0.25,
+      "measured_calls": 4,
+      "unavailable_calls": 0,
+      "measured_rate": 0.25
+    },
+    "tokens": {
+      "prompt_tokens": {
+        "total_observed": 7017,
+        "measured_calls": 4,
+        "unavailable_calls": 0
+      },
+      "completion_tokens": {
+        "total_observed": 1122,
+        "measured_calls": 4,
+        "unavailable_calls": 0
+      }
+    },
+    "forbidden_interpretation": "observed forbidden emissions only; failed/unparseable calls are NOT certified safe"
+  },
+  "category_metrics": {
+    "medium": {
+      "inclusive": {
+        "tp": 0,
+        "fp": 17,
+        "fn": 24,
+        "support": 24,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "nonintent": {
+        "tp": 0,
+        "fp": 16,
+        "fn": 21,
+        "support": 21,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "per_slot": {
+        "business_goal": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "contains_sensitive_data": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 3,
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "destination": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 3,
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "intent": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 3,
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "license": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 3,
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "output_format": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 3,
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "output_granularity": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "privacy_constraints": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 3,
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "problem_statement": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 3,
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "source_reference": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 3,
+          "support": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "success_criteria": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "target_column": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "support": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "scenario_all_gold_nonintent": {
+        "numerator": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "scenario_all_gold_nonintent_nonempty": {
+        "numerator": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "scenario_exact_nonintent": {
+        "numerator": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "empty_gold_nonintent_scenarios": 0,
+      "intent_accuracy": {
+        "numerator": 0,
+        "denominator": 3,
+        "rate": 0.0
+      },
+      "correction_flag_accuracy": {
+        "numerator": 0,
+        "denominator": 3,
+        "rate": 0.0
+      },
+      "correction_tuple_accuracy": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "reducer_transition_accuracy": {
+        "numerator": 0,
+        "denominator": 3,
+        "rate": 0.0
+      },
+      "forbidden_call_rate": {
+        "numerator": 3,
+        "denominator": 3,
+        "rate": 1.0
+      },
+      "forbidden_slot_rate": {
+        "numerator": 5,
+        "denominator": 213,
+        "rate": 0.023474178403755867
+      },
+      "forbidden_call_rate_conditional_success": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "forbidden_failed_calls": 3,
+      "hallucinated_slot_call_rate": {
+        "numerator": 3,
+        "denominator": 3,
+        "rate": 1.0
+      },
+      "hallucinated_slot_call_rate_conditional_success": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "hallucinated_slot_count": 5,
+      "empty_update_collapse": {
+        "numerator": 3,
+        "denominator": 3,
+        "rate": 1.0
+      },
+      "successful_empty_update_collapse": {
+        "numerator": 0,
+        "denominator": 3,
+        "rate": 0.0
+      },
+      "duplicate_prediction_calls": 0,
+      "provider_success": {
+        "numerator": 1,
+        "denominator": 4,
+        "rate": 0.25
+      },
+      "question_contract": {
+        "numerator": 1,
+        "denominator": 1,
+        "rate": 1.0
+      },
+      "question_exact_match": {
+        "numerator": 1,
+        "denominator": 1,
+        "rate": 1.0
+      },
+      "calls": {
+        "total": 4,
+        "extract": 3,
+        "ask": 1
+      },
+      "latency_ms": {
+        "mean": 25165.90907949967,
+        "p50": 8365.62664199937,
+        "p95": 54381.132599999546
+      },
+      "raw_json_valid": {
+        "numerator": 4,
+        "denominator": 4,
+        "rate": 1.0,
+        "measured_calls": 4,
+        "unavailable_calls": 0,
+        "measured_rate": 1.0
+      },
+      "raw_schema_valid": {
+        "numerator": 1,
+        "denominator": 4,
+        "rate": 0.25,
+        "measured_calls": 4,
+        "unavailable_calls": 0,
+        "measured_rate": 0.25
+      },
+      "tokens": {
+        "prompt_tokens": {
+          "total_observed": 7017,
+          "measured_calls": 4,
+          "unavailable_calls": 0
+        },
+        "completion_tokens": {
+          "total_observed": 1122,
+          "measured_calls": 4,
+          "unavailable_calls": 0
+        }
+      },
+      "forbidden_interpretation": "observed forbidden emissions only; failed/unparseable calls are NOT certified safe"
+    }
+  },
+  "records": [
+    {
+      "key": [
+        "v5-20260919-r1/inventory/052",
+        "extract",
+        1
+      ],
+      "scenario_id": "v5-20260919-r1/inventory/052",
+      "cluster_id": "v5-20260919-r1/inventory/052",
+      "category": "medium",
+      "task": "extract",
+      "expected": {
+        "intent": "create_forecast",
+        "intent_confidence": 1.0,
+        "updates": [
+          {
+            "slot_id": "intent",
+            "candidate_value": "create_forecast",
+            "status": "provided",
+            "confidence": 1.0,
+            "evidence_text": "Please create a time-series forecast."
+          },
+          {
+            "slot_id": "source_reference",
+            "candidate_value": "fictional-api://inventory/53",
+            "status": "provided",
+            "confidence": 1.0,
+            "evidence_text": "The non-secret source identifier is \"fictional-api://inventory/53\"."
+          },
+          {
+            "slot_id": "problem_statement",
+            "candidate_value": "Predict stock withdrawals for Cedar facility 53; retain zero days",
+            "status": "provided",
+            "confidence": 1.0,
+            "evidence_text": "The prediction task is \"Predict stock withdrawals for Cedar facility 53; retain zero days\"."
+          },
+          {
+            "slot_id": "output_format",
+            "candidate_value": "csv",
+            "status": "provided",
+            "confidence": 1.0,
+            "evidence_text": "Serialize the results as \"csv\"."
+          },
+          {
+            "slot_id": "destination",
+            "candidate_value": "fictional://planning/inventory/53",
+            "status": "provided",
+            "confidence": 1.0,
+            "evidence_text": "Deliver completed forecasts to \"fictional://planning/inventory/53\"."
+          },
+          {
+            "slot_id": "contains_sensitive_data",
+            "candidate_value": false,
+            "status": "provided",
+            "confidence": 1.0,
+            "evidence_text": "The source contains no personal, confidential, or regulated data."
+          },
+          {
+            "slot_id": "privacy_constraints",
+            "candidate_value": [
+              "role-based access",
+              "no external sharing"
+            ],
+            "status": "provided",
+            "confidence": 1.0,
+            "evidence_text": "Enforce these privacy restrictions: [\"role-based access\", \"no external sharing\"]."
+          },
+          {
+            "slot_id": "license",
+            "candidate_value": "fictional research-only license",
+            "status": "provided",
+            "confidence": 1.0,
+            "evidence_text": "The source data usage license is \"fictional research-only license\"."
+          }
+        ],
+        "correction_detected": false,
+        "unsupported_claims": []
+      },
+      "forbidden_slots": [
+        "acceptable_error",
+        "aggregation_level",
+        "aggregation_method",
+        "allow_negative_values",
+        "authentication_reference",
+        "backtest_folds",
+        "baseline_model",
+        "business_days_only",
+        "business_goal",
+        "calendar_type",
+        "covariate_availability",
+        "data_cutoff",
+        "dataset_type",
+        "decision_supported",
+        "duplicate_policy",
+        "expected_history_length",
+        "explainability_level",
+        "external_covariate_sources",
+        "file_format",
+        "forecast_horizon",
+        "forecast_start",
+        "forecast_type",
+        "frequency",
+        "geography",
+        "hierarchy_columns",
+        "history_end",
+        "history_start",
+        "holidays",
+        "human_approval_required",
+        "inference_mode",
+        "invalid_value_policy",
+        "known_future_covariates",
+        "known_regime_changes",
+        "known_seasonality",
+        "latency_requirement",
+        "lead_time",
+        "minimum_coverage",
+        "minimum_training_points",
+        "missing_target_policy",
+        "missing_timestamp_policy",
+        "outlier_policy",
+        "output_granularity",
+        "past_covariates",
+        "prediction_frequency",
+        "prediction_interval_levels",
+        "primary_metric",
+        "provenance_required",
+        "quantiles",
+        "refresh_frequency",
+        "retraining_frequency",
+        "rounding_rule",
+        "scenario_forecasts",
+        "scope_filters",
+        "seasonal_periods",
+        "secondary_metrics",
+        "series_id_columns",
+        "sheet_or_table",
+        "source_mode",
+        "source_provider",
+        "special_events",
+        "stakeholder_role",
+        "static_features",
+        "success_criteria",
+        "target_bounds",
+        "target_column",
+        "target_description",
+        "target_unit",
+        "test_window",
+        "time_column",
+        "timezone",
+        "validation_strategy"
+      ],
+      "context": {
+        "message": "Please create a time-series forecast. The non-secret source identifier is \"fictional-api://inventory/53\". The prediction task is \"Predict stock withdrawals for Cedar facility 53; retain zero days\". Serialize the results as \"csv\". Deliver completed forecasts to \"fictional://planning/inventory/53\". The source contains no personal, confidential, or regulated data. Enforce these privacy restrictions: [\"role-based access\", \"no external sharing\"]. The source data usage license is \"fictional research-only license\".",
+        "state": {
+          "intent": "ambiguous",
+          "slots": {
+            "acceptable_error": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "aggregation_level": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "aggregation_method": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "allow_negative_values": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "authentication_reference": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "backtest_folds": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "baseline_model": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "business_days_only": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "business_goal": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "calendar_type": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "contains_sensitive_data": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "covariate_availability": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "data_cutoff": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "dataset_type": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "decision_supported": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "destination": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "duplicate_policy": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "expected_history_length": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "explainability_level": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "external_covariate_sources": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "file_format": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "forecast_horizon": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "forecast_start": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "forecast_type": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "frequency": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "geography": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "hierarchy_columns": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "history_end": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "history_start": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "holidays": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "human_approval_required": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "inference_mode": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "intent": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "invalid_value_policy": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "known_future_covariates": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "known_regime_changes": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "known_seasonality": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "latency_requirement": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "lead_time": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "license": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "minimum_coverage": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "minimum_training_points": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "missing_target_policy": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "missing_timestamp_policy": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "outlier_policy": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "output_format": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "output_granularity": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "past_covariates": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "prediction_frequency": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "prediction_interval_levels": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "primary_metric": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "privacy_constraints": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "problem_statement": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "provenance_required": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "quantiles": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "refresh_frequency": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "retraining_frequency": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "rounding_rule": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "scenario_forecasts": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "scope_filters": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "seasonal_periods": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "secondary_metrics": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "series_id_columns": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "sheet_or_table": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "source_mode": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "source_provider": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "source_reference": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "special_events": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "stakeholder_role": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "static_features": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "success_criteria": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "target_bounds": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "target_column": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "target_description": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "target_unit": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "test_window": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "time_column": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "timezone": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "validation_strategy": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            }
+          },
+          "turns": []
+        }
+      },
+      "context_sha256": "d79672c7469ebbd1f7fbb7229d70af1cac84482506f259cdfe8e88c8d0f44158",
+      "gold_sha256": "8ea079d1ddb164c97c574f7560daa8950dd1ebaebc311c3f3cdabb59393dacdf",
+      "predicted": null,
+      "provider_success": false,
+      "error": {
+        "type": "RuntimeError"
+      },
+      "transition_correct": false,
+      "started_at": "2026-09-21T18:53:34.992757+00:00",
+      "gold_after": {
+        "intent": "create_forecast",
+        "slots": {
+          "acceptable_error": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "aggregation_level": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "aggregation_method": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "allow_negative_values": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "authentication_reference": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "backtest_folds": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "baseline_model": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "business_days_only": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "business_goal": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "calendar_type": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "contains_sensitive_data": {
+            "value": false,
+            "status": "provided",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "covariate_availability": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "data_cutoff": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "dataset_type": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "decision_supported": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "destination": {
+            "value": "fictional://planning/inventory/53",
+            "status": "provided",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "duplicate_policy": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "expected_history_length": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "explainability_level": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "external_covariate_sources": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "file_format": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "forecast_horizon": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "forecast_start": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "forecast_type": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "frequency": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "geography": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "hierarchy_columns": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "history_end": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "history_start": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "holidays": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "human_approval_required": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "inference_mode": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "intent": {
+            "value": "create_forecast",
+            "status": "provided",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "invalid_value_policy": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "known_future_covariates": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "known_regime_changes": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "known_seasonality": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "latency_requirement": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "lead_time": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "license": {
+            "value": "fictional research-only license",
+            "status": "provided",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "minimum_coverage": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "minimum_training_points": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "missing_target_policy": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "missing_timestamp_policy": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "outlier_policy": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "output_format": {
+            "value": "csv",
+            "status": "provided",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "output_granularity": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "past_covariates": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "prediction_frequency": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "prediction_interval_levels": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "primary_metric": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "privacy_constraints": {
+            "value": [
+              "role-based access",
+              "no external sharing"
+            ],
+            "status": "provided",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "problem_statement": {
+            "value": "Predict stock withdrawals for Cedar facility 53; retain zero days",
+            "status": "provided",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "provenance_required": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "quantiles": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "refresh_frequency": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "retraining_frequency": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "rounding_rule": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "scenario_forecasts": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "scope_filters": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "seasonal_periods": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "secondary_metrics": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "series_id_columns": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "sheet_or_table": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "source_mode": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "source_provider": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "source_reference": {
+            "value": "fictional-api://inventory/53",
+            "status": "provided",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "special_events": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "stakeholder_role": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "static_features": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "success_criteria": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "target_bounds": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "target_column": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "target_description": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "target_unit": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "test_window": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "time_column": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "timezone": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "validation_strategy": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          }
+        },
+        "turns": []
+      },
+      "latency_ms": 36059.576421999736,
+      "finished_at": "2026-09-21T18:54:11.052362+00:00",
+      "traces": [
+        {
+          "operation": "extract",
+          "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"problem_statement\", \"candidate_value\": \"Predict stock withdrawals for Cedar facility 53\", \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"The non-secret source identifier is \\\"fictional-api://inventory/53\\\". The prediction task is \\\"Predict stock withdrawals for Cedar facility 53; retain zero days\\\".\"}, {\"slot_id\": \"business_goal\", \"candidate_value\": \"zero days\", \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"The prediction task is \\\"Predict stock withdrawals for Cedar facility 53; retain zero days\\\".\"}, {\"slot_id\": \"target_column\", \"candidate_value\": \"csv\", \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"Serialize the results as \\\"csv\\\".\"}, {\"slot_id\": \"destination\", \"candidate_value\": \"fictional://planning/inventory/53\", \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"Deliver completed forecasts to \\\"fictional://planning/inventory/53\\\".\"}, {\"slot_id\": \"privacy_constraints\", \"candidate_value\": [\"role-based access\", \"no external sharing\"], \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"Enforce these privacy restrictions: [\\\"role-based access\\\", \\\"no external sharing\\\"].\"}, {\"slot_id\": \"license\", \"candidate_value\": \"fictional research-only license\", \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"The source data usage license is \\\"fictional research-only license\\\".\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+          "raw_json_valid": true,
+          "raw_schema_valid": false,
+          "prompt_tokens": 2232,
+          "completion_tokens": 396,
+          "parsed": false,
+          "error": "provider_trace_error"
+        }
+      ],
+      "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"problem_statement\", \"candidate_value\": \"Predict stock withdrawals for Cedar facility 53\", \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"The non-secret source identifier is \\\"fictional-api://inventory/53\\\". The prediction task is \\\"Predict stock withdrawals for Cedar facility 53; retain zero days\\\".\"}, {\"slot_id\": \"business_goal\", \"candidate_value\": \"zero days\", \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"The prediction task is \\\"Predict stock withdrawals for Cedar facility 53; retain zero days\\\".\"}, {\"slot_id\": \"target_column\", \"candidate_value\": \"csv\", \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"Serialize the results as \\\"csv\\\".\"}, {\"slot_id\": \"destination\", \"candidate_value\": \"fictional://planning/inventory/53\", \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"Deliver completed forecasts to \\\"fictional://planning/inventory/53\\\".\"}, {\"slot_id\": \"privacy_constraints\", \"candidate_value\": [\"role-based access\", \"no external sharing\"], \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"Enforce these privacy restrictions: [\\\"role-based access\\\", \\\"no external sharing\\\"].\"}, {\"slot_id\": \"license\", \"candidate_value\": \"fictional research-only license\", \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"The source data usage license is \\\"fictional research-only license\\\".\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+      "raw_json_valid": true,
+      "raw_schema_valid": false,
+      "raw_value": {
+        "intent": "create_forecast",
+        "intent_confidence": 1.0,
+        "updates": [
+          {
+            "slot_id": "problem_statement",
+            "candidate_value": "Predict stock withdrawals for Cedar facility 53",
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "The non-secret source identifier is \"fictional-api://inventory/53\". The prediction task is \"Predict stock withdrawals for Cedar facility 53; retain zero days\"."
+          },
+          {
+            "slot_id": "business_goal",
+            "candidate_value": "zero days",
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "The prediction task is \"Predict stock withdrawals for Cedar facility 53; retain zero days\"."
+          },
+          {
+            "slot_id": "target_column",
+            "candidate_value": "csv",
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "Serialize the results as \"csv\"."
+          },
+          {
+            "slot_id": "destination",
+            "candidate_value": "fictional://planning/inventory/53",
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "Deliver completed forecasts to \"fictional://planning/inventory/53\"."
+          },
+          {
+            "slot_id": "privacy_constraints",
+            "candidate_value": [
+              "role-based access",
+              "no external sharing"
+            ],
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "Enforce these privacy restrictions: [\"role-based access\", \"no external sharing\"]."
+          },
+          {
+            "slot_id": "license",
+            "candidate_value": "fictional research-only license",
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "The source data usage license is \"fictional research-only license\"."
+          }
+        ],
+        "correction_detected": false,
+        "unsupported_claims": []
+      },
+      "prompt_tokens": 2232,
+      "completion_tokens": 396,
+      "trace_contract_valid": true,
+      "emitted": {
+        "updates": [
+          {
+            "slot_id": "problem_statement",
+            "candidate_value": "Predict stock withdrawals for Cedar facility 53",
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "The non-secret source identifier is \"fictional-api://inventory/53\". The prediction task is \"Predict stock withdrawals for Cedar facility 53; retain zero days\"."
+          },
+          {
+            "slot_id": "business_goal",
+            "candidate_value": "zero days",
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "The prediction task is \"Predict stock withdrawals for Cedar facility 53; retain zero days\"."
+          },
+          {
+            "slot_id": "target_column",
+            "candidate_value": "csv",
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "Serialize the results as \"csv\"."
+          },
+          {
+            "slot_id": "destination",
+            "candidate_value": "fictional://planning/inventory/53",
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "Deliver completed forecasts to \"fictional://planning/inventory/53\"."
+          },
+          {
+            "slot_id": "privacy_constraints",
+            "candidate_value": [
+              "role-based access",
+              "no external sharing"
+            ],
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "Enforce these privacy restrictions: [\"role-based access\", \"no external sharing\"]."
+          },
+          {
+            "slot_id": "license",
+            "candidate_value": "fictional research-only license",
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "The source data usage license is \"fictional research-only license\"."
+          }
+        ]
+      },
+      "duplicate_slot_ids": false,
+      "prediction_valid": false
+    },
+    {
+      "key": [
+        "v5-20260919-r1/inventory/052",
+        "extract",
+        2
+      ],
+      "scenario_id": "v5-20260919-r1/inventory/052",
+      "cluster_id": "v5-20260919-r1/inventory/052",
+      "category": "medium",
+      "task": "extract",
+      "expected": {
+        "intent": "create_forecast",
+        "intent_confidence": 1.0,
+        "updates": [
+          {
+            "slot_id": "license",
+            "candidate_value": "fictional research-only license",
+            "status": "provided",
+            "confidence": 1.0,
+            "evidence_text": "For this request: the source data usage license is \"fictional research-only license\"."
+          },
+          {
+            "slot_id": "privacy_constraints",
+            "candidate_value": [
+              "role-based access",
+              "no external sharing"
+            ],
+            "status": "provided",
+            "confidence": 1.0,
+            "evidence_text": "For this request: enforce these privacy restrictions: [\"role-based access\", \"no external sharing\"]."
+          },
+          {
+            "slot_id": "contains_sensitive_data",
+            "candidate_value": false,
+            "status": "provided",
+            "confidence": 1.0,
+            "evidence_text": "For this request: the source contains no personal, confidential, or regulated data."
+          },
+          {
+            "slot_id": "destination",
+            "candidate_value": "fictional://planning/inventory/53",
+            "status": "provided",
+            "confidence": 1.0,
+            "evidence_text": "For this request: deliver completed forecasts to \"fictional://planning/inventory/53\"."
+          },
+          {
+            "slot_id": "output_format",
+            "candidate_value": "csv",
+            "status": "provided",
+            "confidence": 1.0,
+            "evidence_text": "For this request: serialize the results as \"csv\"."
+          },
+          {
+            "slot_id": "problem_statement",
+            "candidate_value": "Predict stock withdrawals for Cedar facility 53; retain zero days",
+            "status": "provided",
+            "confidence": 1.0,
+            "evidence_text": "For this request: the prediction task is \"Predict stock withdrawals for Cedar facility 53; retain zero days\"."
+          },
+          {
+            "slot_id": "source_reference",
+            "candidate_value": "fictional-api://inventory/53",
+            "status": "provided",
+            "confidence": 1.0,
+            "evidence_text": "For this request: the non-secret source identifier is \"fictional-api://inventory/53\"."
+          },
+          {
+            "slot_id": "intent",
+            "candidate_value": "create_forecast",
+            "status": "provided",
+            "confidence": 1.0,
+            "evidence_text": "For this request: please create a time-series forecast."
+          }
+        ],
+        "correction_detected": false,
+        "unsupported_claims": []
+      },
+      "forbidden_slots": [
+        "acceptable_error",
+        "aggregation_level",
+        "aggregation_method",
+        "allow_negative_values",
+        "authentication_reference",
+        "backtest_folds",
+        "baseline_model",
+        "business_days_only",
+        "business_goal",
+        "calendar_type",
+        "covariate_availability",
+        "data_cutoff",
+        "dataset_type",
+        "decision_supported",
+        "duplicate_policy",
+        "expected_history_length",
+        "explainability_level",
+        "external_covariate_sources",
+        "file_format",
+        "forecast_horizon",
+        "forecast_start",
+        "forecast_type",
+        "frequency",
+        "geography",
+        "hierarchy_columns",
+        "history_end",
+        "history_start",
+        "holidays",
+        "human_approval_required",
+        "inference_mode",
+        "invalid_value_policy",
+        "known_future_covariates",
+        "known_regime_changes",
+        "known_seasonality",
+        "latency_requirement",
+        "lead_time",
+        "minimum_coverage",
+        "minimum_training_points",
+        "missing_target_policy",
+        "missing_timestamp_policy",
+        "outlier_policy",
+        "output_granularity",
+        "past_covariates",
+        "prediction_frequency",
+        "prediction_interval_levels",
+        "primary_metric",
+        "provenance_required",
+        "quantiles",
+        "refresh_frequency",
+        "retraining_frequency",
+        "rounding_rule",
+        "scenario_forecasts",
+        "scope_filters",
+        "seasonal_periods",
+        "secondary_metrics",
+        "series_id_columns",
+        "sheet_or_table",
+        "source_mode",
+        "source_provider",
+        "special_events",
+        "stakeholder_role",
+        "static_features",
+        "success_criteria",
+        "target_bounds",
+        "target_column",
+        "target_description",
+        "target_unit",
+        "test_window",
+        "time_column",
+        "timezone",
+        "validation_strategy"
+      ],
+      "context": {
+        "message": "For this request: the source data usage license is \"fictional research-only license\". For this request: enforce these privacy restrictions: [\"role-based access\", \"no external sharing\"]. For this request: the source contains no personal, confidential, or regulated data. For this request: deliver completed forecasts to \"fictional://planning/inventory/53\". For this request: serialize the results as \"csv\". For this request: the prediction task is \"Predict stock withdrawals for Cedar facility 53; retain zero days\". For this request: the non-secret source identifier is \"fictional-api://inventory/53\". For this request: please create a time-series forecast.",
+        "state": {
+          "intent": "ambiguous",
+          "slots": {
+            "acceptable_error": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "aggregation_level": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "aggregation_method": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "allow_negative_values": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "authentication_reference": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "backtest_folds": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "baseline_model": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "business_days_only": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "business_goal": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "calendar_type": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "contains_sensitive_data": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "covariate_availability": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "data_cutoff": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "dataset_type": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "decision_supported": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "destination": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "duplicate_policy": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "expected_history_length": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "explainability_level": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "external_covariate_sources": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "file_format": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "forecast_horizon": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "forecast_start": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "forecast_type": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "frequency": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "geography": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "hierarchy_columns": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "history_end": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "history_start": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "holidays": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "human_approval_required": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "inference_mode": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "intent": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "invalid_value_policy": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "known_future_covariates": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "known_regime_changes": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "known_seasonality": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "latency_requirement": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "lead_time": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "license": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "minimum_coverage": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "minimum_training_points": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "missing_target_policy": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "missing_timestamp_policy": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "outlier_policy": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "output_format": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "output_granularity": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "past_covariates": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "prediction_frequency": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "prediction_interval_levels": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "primary_metric": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "privacy_constraints": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "problem_statement": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "provenance_required": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "quantiles": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "refresh_frequency": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "retraining_frequency": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "rounding_rule": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "scenario_forecasts": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "scope_filters": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "seasonal_periods": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "secondary_metrics": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "series_id_columns": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "sheet_or_table": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "source_mode": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "source_provider": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "source_reference": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "special_events": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "stakeholder_role": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "static_features": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "success_criteria": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "target_bounds": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "target_column": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "target_description": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "target_unit": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "test_window": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "time_column": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "timezone": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "validation_strategy": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            }
+          },
+          "turns": []
+        }
+      },
+      "context_sha256": "39f7a371c82043fd11a16a96269765ea854fa6e66fe25e33cf519e03845df60f",
+      "gold_sha256": "229f44901c3d1d1415d3b2707c768c5f82de96b9ebc325bce4b46863901f4afb",
+      "predicted": null,
+      "provider_success": false,
+      "error": {
+        "type": "RuntimeError"
+      },
+      "transition_correct": false,
+      "started_at": "2026-09-21T18:54:11.059268+00:00",
+      "gold_after": {
+        "intent": "create_forecast",
+        "slots": {
+          "acceptable_error": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "aggregation_level": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "aggregation_method": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "allow_negative_values": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "authentication_reference": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "backtest_folds": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "baseline_model": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "business_days_only": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "business_goal": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "calendar_type": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "contains_sensitive_data": {
+            "value": false,
+            "status": "provided",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "covariate_availability": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "data_cutoff": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "dataset_type": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "decision_supported": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "destination": {
+            "value": "fictional://planning/inventory/53",
+            "status": "provided",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "duplicate_policy": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "expected_history_length": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "explainability_level": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "external_covariate_sources": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "file_format": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "forecast_horizon": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "forecast_start": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "forecast_type": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "frequency": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "geography": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "hierarchy_columns": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "history_end": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "history_start": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "holidays": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "human_approval_required": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "inference_mode": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "intent": {
+            "value": "create_forecast",
+            "status": "provided",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "invalid_value_policy": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "known_future_covariates": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "known_regime_changes": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "known_seasonality": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "latency_requirement": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "lead_time": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "license": {
+            "value": "fictional research-only license",
+            "status": "provided",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "minimum_coverage": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "minimum_training_points": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "missing_target_policy": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "missing_timestamp_policy": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "outlier_policy": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "output_format": {
+            "value": "csv",
+            "status": "provided",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "output_granularity": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "past_covariates": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "prediction_frequency": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "prediction_interval_levels": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "primary_metric": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "privacy_constraints": {
+            "value": [
+              "role-based access",
+              "no external sharing"
+            ],
+            "status": "provided",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "problem_statement": {
+            "value": "Predict stock withdrawals for Cedar facility 53; retain zero days",
+            "status": "provided",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "provenance_required": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "quantiles": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "refresh_frequency": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "retraining_frequency": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "rounding_rule": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "scenario_forecasts": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "scope_filters": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "seasonal_periods": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "secondary_metrics": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "series_id_columns": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "sheet_or_table": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "source_mode": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "source_provider": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "source_reference": {
+            "value": "fictional-api://inventory/53",
+            "status": "provided",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "special_events": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "stakeholder_role": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "static_features": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "success_criteria": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "target_bounds": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "target_column": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "target_description": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "target_unit": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "test_window": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "time_column": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "timezone": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "validation_strategy": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          }
+        },
+        "turns": []
+      },
+      "latency_ms": 8365.62664199937,
+      "finished_at": "2026-09-21T18:54:19.424920+00:00",
+      "traces": [
+        {
+          "operation": "extract",
+          "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_column\", \"candidate_value\": \"stock_withdrawals\", \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"Predict stock withdrawals for Cedar facility 53\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+          "raw_json_valid": true,
+          "raw_schema_valid": false,
+          "prompt_tokens": 2263,
+          "completion_tokens": 87,
+          "parsed": false,
+          "error": "provider_trace_error"
+        }
+      ],
+      "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_column\", \"candidate_value\": \"stock_withdrawals\", \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"Predict stock withdrawals for Cedar facility 53\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+      "raw_json_valid": true,
+      "raw_schema_valid": false,
+      "raw_value": {
+        "intent": "create_forecast",
+        "intent_confidence": 1.0,
+        "updates": [
+          {
+            "slot_id": "target_column",
+            "candidate_value": "stock_withdrawals",
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "Predict stock withdrawals for Cedar facility 53"
+          }
+        ],
+        "correction_detected": false,
+        "unsupported_claims": []
+      },
+      "prompt_tokens": 2263,
+      "completion_tokens": 87,
+      "trace_contract_valid": true,
+      "emitted": {
+        "updates": [
+          {
+            "slot_id": "target_column",
+            "candidate_value": "stock_withdrawals",
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "Predict stock withdrawals for Cedar facility 53"
+          }
+        ]
+      },
+      "duplicate_slot_ids": false,
+      "prediction_valid": false
+    },
+    {
+      "key": [
+        "v5-20260919-r1/inventory/052",
+        "extract",
+        3
+      ],
+      "scenario_id": "v5-20260919-r1/inventory/052",
+      "cluster_id": "v5-20260919-r1/inventory/052",
+      "category": "medium",
+      "task": "extract",
+      "expected": {
+        "intent": "create_forecast",
+        "intent_confidence": 1.0,
+        "updates": [
+          {
+            "slot_id": "source_reference",
+            "candidate_value": "fictional-api://inventory/53",
+            "status": "provided",
+            "confidence": 1.0,
+            "evidence_text": "Please record this requirement: the non-secret source identifier is \"fictional-api://inventory/53\"."
+          },
+          {
+            "slot_id": "problem_statement",
+            "candidate_value": "Predict stock withdrawals for Cedar facility 53; retain zero days",
+            "status": "provided",
+            "confidence": 1.0,
+            "evidence_text": "Please record this requirement: the prediction task is \"Predict stock withdrawals for Cedar facility 53; retain zero days\"."
+          },
+          {
+            "slot_id": "output_format",
+            "candidate_value": "csv",
+            "status": "provided",
+            "confidence": 1.0,
+            "evidence_text": "Please record this requirement: serialize the results as \"csv\"."
+          },
+          {
+            "slot_id": "destination",
+            "candidate_value": "fictional://planning/inventory/53",
+            "status": "provided",
+            "confidence": 1.0,
+            "evidence_text": "Please record this requirement: deliver completed forecasts to \"fictional://planning/inventory/53\"."
+          },
+          {
+            "slot_id": "contains_sensitive_data",
+            "candidate_value": false,
+            "status": "provided",
+            "confidence": 1.0,
+            "evidence_text": "Please record this requirement: the source contains no personal, confidential, or regulated data."
+          },
+          {
+            "slot_id": "privacy_constraints",
+            "candidate_value": [
+              "role-based access",
+              "no external sharing"
+            ],
+            "status": "provided",
+            "confidence": 1.0,
+            "evidence_text": "Please record this requirement: enforce these privacy restrictions: [\"role-based access\", \"no external sharing\"]."
+          },
+          {
+            "slot_id": "license",
+            "candidate_value": "fictional research-only license",
+            "status": "provided",
+            "confidence": 1.0,
+            "evidence_text": "Please record this requirement: the source data usage license is \"fictional research-only license\"."
+          },
+          {
+            "slot_id": "intent",
+            "candidate_value": "create_forecast",
+            "status": "provided",
+            "confidence": 1.0,
+            "evidence_text": "Please record this requirement: please create a time-series forecast."
+          }
+        ],
+        "correction_detected": false,
+        "unsupported_claims": []
+      },
+      "forbidden_slots": [
+        "acceptable_error",
+        "aggregation_level",
+        "aggregation_method",
+        "allow_negative_values",
+        "authentication_reference",
+        "backtest_folds",
+        "baseline_model",
+        "business_days_only",
+        "business_goal",
+        "calendar_type",
+        "covariate_availability",
+        "data_cutoff",
+        "dataset_type",
+        "decision_supported",
+        "duplicate_policy",
+        "expected_history_length",
+        "explainability_level",
+        "external_covariate_sources",
+        "file_format",
+        "forecast_horizon",
+        "forecast_start",
+        "forecast_type",
+        "frequency",
+        "geography",
+        "hierarchy_columns",
+        "history_end",
+        "history_start",
+        "holidays",
+        "human_approval_required",
+        "inference_mode",
+        "invalid_value_policy",
+        "known_future_covariates",
+        "known_regime_changes",
+        "known_seasonality",
+        "latency_requirement",
+        "lead_time",
+        "minimum_coverage",
+        "minimum_training_points",
+        "missing_target_policy",
+        "missing_timestamp_policy",
+        "outlier_policy",
+        "output_granularity",
+        "past_covariates",
+        "prediction_frequency",
+        "prediction_interval_levels",
+        "primary_metric",
+        "provenance_required",
+        "quantiles",
+        "refresh_frequency",
+        "retraining_frequency",
+        "rounding_rule",
+        "scenario_forecasts",
+        "scope_filters",
+        "seasonal_periods",
+        "secondary_metrics",
+        "series_id_columns",
+        "sheet_or_table",
+        "source_mode",
+        "source_provider",
+        "special_events",
+        "stakeholder_role",
+        "static_features",
+        "success_criteria",
+        "target_bounds",
+        "target_column",
+        "target_description",
+        "target_unit",
+        "test_window",
+        "time_column",
+        "timezone",
+        "validation_strategy"
+      ],
+      "context": {
+        "message": "Please record this requirement: the non-secret source identifier is \"fictional-api://inventory/53\". Please record this requirement: the prediction task is \"Predict stock withdrawals for Cedar facility 53; retain zero days\". Please record this requirement: serialize the results as \"csv\". Please record this requirement: deliver completed forecasts to \"fictional://planning/inventory/53\". Please record this requirement: the source contains no personal, confidential, or regulated data. Please record this requirement: enforce these privacy restrictions: [\"role-based access\", \"no external sharing\"]. Please record this requirement: the source data usage license is \"fictional research-only license\". Please record this requirement: please create a time-series forecast.",
+        "state": {
+          "intent": "ambiguous",
+          "slots": {
+            "acceptable_error": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "aggregation_level": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "aggregation_method": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "allow_negative_values": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "authentication_reference": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "backtest_folds": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "baseline_model": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "business_days_only": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "business_goal": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "calendar_type": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "contains_sensitive_data": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "covariate_availability": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "data_cutoff": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "dataset_type": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "decision_supported": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "destination": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "duplicate_policy": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "expected_history_length": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "explainability_level": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "external_covariate_sources": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "file_format": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "forecast_horizon": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "forecast_start": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "forecast_type": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "frequency": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "geography": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "hierarchy_columns": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "history_end": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "history_start": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "holidays": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "human_approval_required": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "inference_mode": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "intent": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "invalid_value_policy": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "known_future_covariates": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "known_regime_changes": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "known_seasonality": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "latency_requirement": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "lead_time": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "license": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "minimum_coverage": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "minimum_training_points": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "missing_target_policy": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "missing_timestamp_policy": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "outlier_policy": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "output_format": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "output_granularity": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "past_covariates": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "prediction_frequency": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "prediction_interval_levels": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "primary_metric": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "privacy_constraints": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "problem_statement": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "provenance_required": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "quantiles": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "refresh_frequency": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "retraining_frequency": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "rounding_rule": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "scenario_forecasts": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "scope_filters": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "seasonal_periods": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "secondary_metrics": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "series_id_columns": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "sheet_or_table": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "source_mode": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "source_provider": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "source_reference": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "special_events": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "stakeholder_role": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "static_features": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "success_criteria": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "target_bounds": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "target_column": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "target_description": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "target_unit": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "test_window": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "time_column": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "timezone": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            },
+            "validation_strategy": {
+              "value": null,
+              "status": "unmentioned",
+              "confirmed_by_user": false,
+              "validation_errors": []
+            }
+          },
+          "turns": []
+        }
+      },
+      "context_sha256": "3e3999c4b59d142d85f719a4a4b5f357ed959e1a4a69555a068752b9edecb4d6",
+      "gold_sha256": "fd7cff8a182207f7a608b08c9da595a36e07a093da9954b0bf96b50fa8b42fd5",
+      "predicted": null,
+      "provider_success": false,
+      "error": {
+        "type": "RuntimeError"
+      },
+      "transition_correct": false,
+      "started_at": "2026-09-21T18:54:19.429370+00:00",
+      "gold_after": {
+        "intent": "create_forecast",
+        "slots": {
+          "acceptable_error": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "aggregation_level": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "aggregation_method": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "allow_negative_values": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "authentication_reference": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "backtest_folds": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "baseline_model": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "business_days_only": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "business_goal": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "calendar_type": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "contains_sensitive_data": {
+            "value": false,
+            "status": "provided",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "covariate_availability": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "data_cutoff": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "dataset_type": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "decision_supported": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "destination": {
+            "value": "fictional://planning/inventory/53",
+            "status": "provided",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "duplicate_policy": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "expected_history_length": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "explainability_level": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "external_covariate_sources": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "file_format": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "forecast_horizon": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "forecast_start": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "forecast_type": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "frequency": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "geography": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "hierarchy_columns": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "history_end": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "history_start": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "holidays": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "human_approval_required": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "inference_mode": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "intent": {
+            "value": "create_forecast",
+            "status": "provided",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "invalid_value_policy": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "known_future_covariates": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "known_regime_changes": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "known_seasonality": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "latency_requirement": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "lead_time": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "license": {
+            "value": "fictional research-only license",
+            "status": "provided",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "minimum_coverage": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "minimum_training_points": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "missing_target_policy": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "missing_timestamp_policy": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "outlier_policy": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "output_format": {
+            "value": "csv",
+            "status": "provided",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "output_granularity": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "past_covariates": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "prediction_frequency": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "prediction_interval_levels": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "primary_metric": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "privacy_constraints": {
+            "value": [
+              "role-based access",
+              "no external sharing"
+            ],
+            "status": "provided",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "problem_statement": {
+            "value": "Predict stock withdrawals for Cedar facility 53; retain zero days",
+            "status": "provided",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "provenance_required": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "quantiles": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "refresh_frequency": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "retraining_frequency": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "rounding_rule": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "scenario_forecasts": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "scope_filters": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "seasonal_periods": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "secondary_metrics": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "series_id_columns": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "sheet_or_table": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "source_mode": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "source_provider": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "source_reference": {
+            "value": "fictional-api://inventory/53",
+            "status": "provided",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "special_events": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "stakeholder_role": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "static_features": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "success_criteria": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "target_bounds": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "target_column": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "target_description": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "target_unit": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "test_window": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "time_column": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "timezone": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          },
+          "validation_strategy": {
+            "value": null,
+            "status": "unmentioned",
+            "confirmed_by_user": false,
+            "validation_errors": []
+          }
+        },
+        "turns": []
+      },
+      "latency_ms": 54381.132599999546,
+      "finished_at": "2026-09-21T18:55:13.810524+00:00",
+      "traces": [
+        {
+          "operation": "extract",
+          "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"Please record this requirement: please create a time-series forecast.\"}, {\"slot_id\": \"problem_statement\", \"candidate_value\": \"Predict stock withdrawals for Cedar facility 53; retain zero days\", \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"Please record this requirement: the prediction task is \\\"Predict stock withdrawals for Cedar facility 53; retain zero days\\\".\"}, {\"slot_id\": \"success_criteria\", \"candidate_value\": \"serialize the results as \\\"csv\\\"\", \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"Please record this requirement: serialize the results as \\\"csv\\\".\"}, {\"slot_id\": \"destination\", \"candidate_value\": \"fictional://planning/inventory/53\", \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"Please record this requirement: deliver completed forecasts to \\\"fictional://planning/inventory/53\\\".\"}, {\"slot_id\": \"source_reference\", \"candidate_value\": \"\\\"fictional-api://inventory/53\\\"\", \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"Please record this requirement: the non-secret source identifier is \\\"fictional-api://inventory/53\\\".\"}, {\"slot_id\": \"license\", \"candidate_value\": \"\\\"fictional research-only license\\\"\", \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"Please record this requirement: the source data usage license is \\\"fictional research-only license\\\".\"}, {\"slot_id\": \"privacy_constraints\", \"candidate_value\": [\"role-based access\", \"no external sharing\"], \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"Please record this requirement: enforce these privacy restrictions: [\\\"role-based access\\\", \\\"no external sharing\\\"].\"}, {\"slot_id\": \"contains_sensitive_data\", \"candidate_value\": false, \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"Please record this requirement: the source contains no personal, confidential, or regulated data.\"}, {\"slot_id\": \"output_format\", \"candidate_value\": \"csv\", \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"Please record this requirement: serialize the results as \\\"csv\\\".\"}, {\"slot_id\": \"output_granularity\", \"candidate_value\": \"time-series\", \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"Please record this requirement: please create a time-series forecast.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+          "raw_json_valid": true,
+          "raw_schema_valid": false,
+          "prompt_tokens": 2271,
+          "completion_tokens": 621,
+          "parsed": false,
+          "error": "provider_trace_error"
+        }
+      ],
+      "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"Please record this requirement: please create a time-series forecast.\"}, {\"slot_id\": \"problem_statement\", \"candidate_value\": \"Predict stock withdrawals for Cedar facility 53; retain zero days\", \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"Please record this requirement: the prediction task is \\\"Predict stock withdrawals for Cedar facility 53; retain zero days\\\".\"}, {\"slot_id\": \"success_criteria\", \"candidate_value\": \"serialize the results as \\\"csv\\\"\", \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"Please record this requirement: serialize the results as \\\"csv\\\".\"}, {\"slot_id\": \"destination\", \"candidate_value\": \"fictional://planning/inventory/53\", \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"Please record this requirement: deliver completed forecasts to \\\"fictional://planning/inventory/53\\\".\"}, {\"slot_id\": \"source_reference\", \"candidate_value\": \"\\\"fictional-api://inventory/53\\\"\", \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"Please record this requirement: the non-secret source identifier is \\\"fictional-api://inventory/53\\\".\"}, {\"slot_id\": \"license\", \"candidate_value\": \"\\\"fictional research-only license\\\"\", \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"Please record this requirement: the source data usage license is \\\"fictional research-only license\\\".\"}, {\"slot_id\": \"privacy_constraints\", \"candidate_value\": [\"role-based access\", \"no external sharing\"], \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"Please record this requirement: enforce these privacy restrictions: [\\\"role-based access\\\", \\\"no external sharing\\\"].\"}, {\"slot_id\": \"contains_sensitive_data\", \"candidate_value\": false, \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"Please record this requirement: the source contains no personal, confidential, or regulated data.\"}, {\"slot_id\": \"output_format\", \"candidate_value\": \"csv\", \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"Please record this requirement: serialize the results as \\\"csv\\\".\"}, {\"slot_id\": \"output_granularity\", \"candidate_value\": \"time-series\", \"status\": \"confirmed\", \"confidence\": 1.0, \"evidence_text\": \"Please record this requirement: please create a time-series forecast.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+      "raw_json_valid": true,
+      "raw_schema_valid": false,
+      "raw_value": {
+        "intent": "create_forecast",
+        "intent_confidence": 1.0,
+        "updates": [
+          {
+            "slot_id": "intent",
+            "candidate_value": "create_forecast",
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "Please record this requirement: please create a time-series forecast."
+          },
+          {
+            "slot_id": "problem_statement",
+            "candidate_value": "Predict stock withdrawals for Cedar facility 53; retain zero days",
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "Please record this requirement: the prediction task is \"Predict stock withdrawals for Cedar facility 53; retain zero days\"."
+          },
+          {
+            "slot_id": "success_criteria",
+            "candidate_value": "serialize the results as \"csv\"",
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "Please record this requirement: serialize the results as \"csv\"."
+          },
+          {
+            "slot_id": "destination",
+            "candidate_value": "fictional://planning/inventory/53",
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "Please record this requirement: deliver completed forecasts to \"fictional://planning/inventory/53\"."
+          },
+          {
+            "slot_id": "source_reference",
+            "candidate_value": "\"fictional-api://inventory/53\"",
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "Please record this requirement: the non-secret source identifier is \"fictional-api://inventory/53\"."
+          },
+          {
+            "slot_id": "license",
+            "candidate_value": "\"fictional research-only license\"",
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "Please record this requirement: the source data usage license is \"fictional research-only license\"."
+          },
+          {
+            "slot_id": "privacy_constraints",
+            "candidate_value": [
+              "role-based access",
+              "no external sharing"
+            ],
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "Please record this requirement: enforce these privacy restrictions: [\"role-based access\", \"no external sharing\"]."
+          },
+          {
+            "slot_id": "contains_sensitive_data",
+            "candidate_value": false,
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "Please record this requirement: the source contains no personal, confidential, or regulated data."
+          },
+          {
+            "slot_id": "output_format",
+            "candidate_value": "csv",
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "Please record this requirement: serialize the results as \"csv\"."
+          },
+          {
+            "slot_id": "output_granularity",
+            "candidate_value": "time-series",
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "Please record this requirement: please create a time-series forecast."
+          }
+        ],
+        "correction_detected": false,
+        "unsupported_claims": []
+      },
+      "prompt_tokens": 2271,
+      "completion_tokens": 621,
+      "trace_contract_valid": true,
+      "emitted": {
+        "updates": [
+          {
+            "slot_id": "intent",
+            "candidate_value": "create_forecast",
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "Please record this requirement: please create a time-series forecast."
+          },
+          {
+            "slot_id": "problem_statement",
+            "candidate_value": "Predict stock withdrawals for Cedar facility 53; retain zero days",
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "Please record this requirement: the prediction task is \"Predict stock withdrawals for Cedar facility 53; retain zero days\"."
+          },
+          {
+            "slot_id": "success_criteria",
+            "candidate_value": "serialize the results as \"csv\"",
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "Please record this requirement: serialize the results as \"csv\"."
+          },
+          {
+            "slot_id": "destination",
+            "candidate_value": "fictional://planning/inventory/53",
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "Please record this requirement: deliver completed forecasts to \"fictional://planning/inventory/53\"."
+          },
+          {
+            "slot_id": "source_reference",
+            "candidate_value": "fictional-api://inventory/53",
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "Please record this requirement: the non-secret source identifier is \"fictional-api://inventory/53\"."
+          },
+          {
+            "slot_id": "license",
+            "candidate_value": "fictional research-only license",
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "Please record this requirement: the source data usage license is \"fictional research-only license\"."
+          },
+          {
+            "slot_id": "privacy_constraints",
+            "candidate_value": [
+              "role-based access",
+              "no external sharing"
+            ],
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "Please record this requirement: enforce these privacy restrictions: [\"role-based access\", \"no external sharing\"]."
+          },
+          {
+            "slot_id": "contains_sensitive_data",
+            "candidate_value": false,
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "Please record this requirement: the source contains no personal, confidential, or regulated data."
+          },
+          {
+            "slot_id": "output_format",
+            "candidate_value": "csv",
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "Please record this requirement: serialize the results as \"csv\"."
+          },
+          {
+            "slot_id": "output_granularity",
+            "candidate_value": "time-series",
+            "status": "confirmed",
+            "confidence": 1.0,
+            "evidence_text": "Please record this requirement: please create a time-series forecast."
+          }
+        ]
+      },
+      "duplicate_slot_ids": false,
+      "prediction_valid": false
+    },
+    {
+      "key": [
+        "v5-20260919-r1/inventory/052",
+        "ask",
+        "0"
+      ],
+      "scenario_id": "v5-20260919-r1/inventory/052",
+      "cluster_id": "v5-20260919-r1/inventory/052",
+      "category": "medium",
+      "task": "ask",
+      "expected": {
+        "slot_id": "business_goal",
+        "question": "What business or operational goal will this forecast support?"
+      },
+      "forbidden_slots": [],
+      "context": {
+        "slot_id": "business_goal",
+        "reason": "missing or unclear requirement",
+        "slot_description": "Why the forecast is needed.",
+        "current_state": {
+          "slot_id": "business_goal",
+          "value": null,
+          "status": "unmentioned",
+          "confidence": null,
+          "evidence_text": null,
+          "source_turn": null,
+          "validation_errors": [],
+          "confirmed_by_user": false,
+          "updated_at": "2026-09-21T18:53:01.009694Z"
+        },
+        "confirmed_context": {
+          "contains_sensitive_data": false,
+          "destination": "fictional://planning/inventory/53",
+          "intent": "create_forecast",
+          "license": "fictional research-only license",
+          "output_format": "csv",
+          "privacy_constraints": [
+            "role-based access",
+            "no external sharing"
+          ],
+          "problem_statement": "Predict stock withdrawals for Cedar facility 53; retain zero days",
+          "source_reference": "fictional-api://inventory/53"
+        },
+        "static_question": "What business or operational goal will this forecast support?",
+        "allowed_values": [],
+        "other_active_slot_ids": [
+          "intent",
+          "problem_statement",
+          "stakeholder_role",
+          "decision_supported",
+          "success_criteria",
+          "target_column",
+          "target_description",
+          "target_unit",
+          "target_bounds",
+          "allow_negative_values",
+          "aggregation_method",
+          "time_column",
+          "frequency",
+          "timezone",
+          "calendar_type",
+          "forecast_horizon",
+          "forecast_start",
+          "data_cutoff",
+          "lead_time",
+          "dataset_type",
+          "series_id_columns",
+          "hierarchy_columns",
+          "aggregation_level",
+          "scope_filters",
+          "geography",
+          "source_mode",
+          "source_reference",
+          "source_provider",
+          "file_format",
+          "sheet_or_table",
+          "authentication_reference",
+          "refresh_frequency",
+          "history_start",
+          "history_end",
+          "expected_history_length",
+          "minimum_training_points",
+          "known_regime_changes",
+          "missing_timestamp_policy",
+          "missing_target_policy",
+          "duplicate_policy",
+          "outlier_policy",
+          "invalid_value_policy",
+          "minimum_coverage",
+          "known_seasonality",
+          "seasonal_periods",
+          "business_days_only",
+          "holidays",
+          "special_events",
+          "past_covariates",
+          "known_future_covariates",
+          "static_features",
+          "covariate_availability",
+          "external_covariate_sources",
+          "forecast_type",
+          "prediction_interval_levels",
+          "quantiles",
+          "scenario_forecasts",
+          "rounding_rule",
+          "output_granularity",
+          "primary_metric",
+          "secondary_metrics",
+          "validation_strategy",
+          "backtest_folds",
+          "test_window",
+          "baseline_model",
+          "acceptable_error",
+          "inference_mode",
+          "prediction_frequency",
+          "retraining_frequency",
+          "latency_requirement",
+          "output_format",
+          "destination",
+          "contains_sensitive_data",
+          "privacy_constraints",
+          "license",
+          "provenance_required",
+          "explainability_level",
+          "human_approval_required"
+        ]
+      },
+      "context_sha256": "17b5e448b12e9a7640b7b96b630c2114aeea6e40f4bcf5be0ace5899acf91051",
+      "gold_sha256": "e43347dc995bfaadf5d37cb85b07b9f1fd08b1634f53742afe1123bda40d9b9d",
+      "predicted": {
+        "question": "What business or operational goal will this forecast support?"
+      },
+      "provider_success": true,
+      "error": null,
+      "transition_correct": false,
+      "started_at": "2026-09-21T18:55:13.814697+00:00",
+      "latency_ms": 1857.3006540000279,
+      "finished_at": "2026-09-21T18:55:15.672016+00:00",
+      "traces": [
+        {
+          "operation": "ask",
+          "raw_output": "{\"question\": \"What business or operational goal will this forecast support?\"}",
+          "raw_json_valid": true,
+          "raw_schema_valid": true,
+          "prompt_tokens": 251,
+          "completion_tokens": 18,
+          "parsed": true,
+          "error": null
+        }
+      ],
+      "raw_output": "{\"question\": \"What business or operational goal will this forecast support?\"}",
+      "raw_json_valid": true,
+      "raw_schema_valid": true,
+      "raw_value": {
+        "question": "What business or operational goal will this forecast support?"
+      },
+      "prompt_tokens": 251,
+      "completion_tokens": 18,
+      "trace_contract_valid": true,
+      "emitted": {
+        "question": "What business or operational goal will this forecast support?"
+      },
+      "duplicate_slot_ids": false,
+      "prediction_valid": true,
+      "question_contract": true,
+      "question_exact_match": true
+    }
+  ],
+  "call_journal": "/content/gate-a0020e7/diag-lora.json.calls.jsonl",
+  "call_journal_sha256": "60486e118254aedb330f5baf54a1ecc714faaed6e19035b774a24cefb5bde1b4"
+}

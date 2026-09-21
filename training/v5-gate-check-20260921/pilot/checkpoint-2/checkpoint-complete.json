@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "complete": true,
+  "global_step": 2,
+  "run_fingerprint": "9b68bbb703b5f64c3a02335700aa8535b2be1c6d87324c0449fa08f132ec70b6",
+  "world_size": 1,
+  "requires_scaler": false,
+  "sha256": {
+    "README.md": "4351e9c7eeac74e8c222cc76e0cfbccd749a29ea3dc1075d0fdc71382030392f",
+    "adapter_config.json": "0247e98fe772142aba223aaee17161a3c5ab08626fb7458311e5237a4ca46466",
+    "adapter_model.safetensors": "f649f4ee6178b15c2383f476b73b8ec13bbb1b2024966d425520f6b3c08ab7fe",
+    "chat_template.jinja": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+    "optimizer.pt": "98e04aff2c82ca9542e58bfd09f1478e5663f70512fcc6c2da8a829976784b62",
+    "rng_state.pth": "29c7ee0c86e47b02261698677ecea69b80bf64976ae156f5a135692ff5cb2af1",
+    "scheduler.pt": "ec654977c2eab1f51ba032a5144d98f89e9231e702e15a888cfd81977a4cca90",
+    "tokenizer.json": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+    "tokenizer_config.json": "9cf04fffe3d8c3b85e439fb35c7acad0761ab51c422a8c4256d9f887c3a0be7d",
+    "trainer_state.json": "da32053e591ce690734d7f69a92dd15102e57fb43a7c85f85d7b676339a844aa",
+    "training_args.bin": "55c0d7ffcaa581fb55dbf01048a06c00c4cba4f8e697e93203c0eb733253e6bf"
+  },
+  "completed_at": "2026-09-21T18:43:43.949391+00:00"
+}

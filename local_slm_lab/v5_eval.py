@@ -16,7 +16,7 @@ import re
 import subprocess
 import sys
 from collections import Counter, defaultdict
-from datetime import datetime, timezone
+from datetime import date, datetime, time, timezone
 from pathlib import Path
 from time import perf_counter
 from typing import Any, Callable
@@ -239,10 +239,18 @@ def _overlay(state: DialogueState, values: dict) -> None:
             state.intent = Intent(value)
 
 
+def _snapshot_value(value: Any) -> Any:
+    # datetime slots normalize to Python datetime/date objects; emit the same
+    # ISO 8601 text pydantic mode="json" and now() use so records stay serializable.
+    if isinstance(value, (datetime, date, time)):
+        return value.isoformat()
+    return value
+
+
 def state_snapshot(state: DialogueState) -> dict:
     return {
         "intent": state.intent.value,
-        "slots": {key: {"value": value.value, "status": value.status.value,
+        "slots": {key: {"value": _snapshot_value(value.value), "status": value.status.value,
                         "confirmed_by_user": value.confirmed_by_user,
                         "validation_errors": value.validation_errors}
                   for key, value in sorted(state.slots.items())},

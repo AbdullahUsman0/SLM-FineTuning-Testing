@@ -1,0 +1,7 @@
+{
+  "repository_commit": "a0020e7d5301fb6a93bd5ce0f1c23299103cffda",
+  "fpy_commit": "04d52c015d1e3ecdefe92b87116f209361509b4b",
+  "model": "Qwen/Qwen3.5-2B",
+  "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "license": "Apache-2.0"
+}

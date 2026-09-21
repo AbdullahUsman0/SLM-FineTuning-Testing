@@ -1,0 +1,18 @@
+{
+  "corpus_manifest_sha256": "7e3c6f83bd39a73a386dbbf5e2a7932c45b68af46eaf6641e56474f2cc9dd021",
+  "splits": {
+    "train": {
+      "examples": 4435,
+      "minimum_tokens": 198,
+      "maximum_tokens": 3529,
+      "mean_tokens": 2051.2381059751974
+    },
+    "validation": {
+      "examples": 948,
+      "minimum_tokens": 198,
+      "maximum_tokens": 3460,
+      "mean_tokens": 2051.0073839662446
+    }
+  },
+  "max_length": 3584
+}
