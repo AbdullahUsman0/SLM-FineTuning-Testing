@@ -1,0 +1,25 @@
+{
+  "recorded_at_utc": "2026-09-21T15:55:23.244885+00:00",
+  "notebook_source": "https://colab.research.google.com/github/AbdullahUsman0/SLM-FineTuning-Testing/blob/experiment/v5-grounded-20260919/notebooks/Qwen_2B_LoRA_v5_Grounded_Colab.ipynb",
+  "repository_commit_available": "c6ada2b",
+  "python": "3.13.15",
+  "gpu": "Tesla T4",
+  "vram_bytes": 15637086208,
+  "cuda": "12.8",
+  "packages_before_setup": {
+    "torch": "2.11.0+cu128",
+    "transformers": "5.16.1",
+    "datasets": "4.8.5",
+    "accelerate": "1.14.0",
+    "peft": "0.20.0",
+    "trl": "missing",
+    "pydantic": "2.13.5",
+    "openai": "2.54.0"
+  },
+  "runtime_free_bytes": 70056038400,
+  "drive_mount_free_bytes": 66553233408,
+  "drive_mount": "success: /content/drive",
+  "training_started": false,
+  "gpu_training_seconds": 0,
+  "note": "Inventory cell only. Source checkout, dependency installation, weight verification, corpus preflight and pilot were not yet run."
+}
