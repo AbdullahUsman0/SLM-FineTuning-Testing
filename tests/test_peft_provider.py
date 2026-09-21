@@ -1,11 +1,17 @@
 import unittest
 import json
+import tempfile
+import warnings
 from pathlib import Path
+from types import SimpleNamespace
 
 from local_slm_lab.peft_provider import (
     RUN_ROOT,
     TransformersPeftProvider,
+    adapter_model_class_name,
+    load_peft_adapter,
     resolve_adapter_path,
+    select_model_class,
 )
 from local_slm_lab.slm_prompts import build_slm_extractor_input
 
@@ -27,6 +33,44 @@ class PeftArtifactRoutingTests(unittest.TestCase):
             resolve_adapter_path("custom")
         custom = resolve_adapter_path("custom", Path("adapter"))
         self.assertTrue(custom.is_absolute())
+
+    def test_adapter_model_class_is_read_from_peft_metadata(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory)
+            (path / "adapter_config.json").write_text(json.dumps({
+                "auto_mapping": {
+                    "base_model_class": "Qwen3_5ForConditionalGeneration",
+                    "parent_library": "transformers.models.qwen3_5.modeling_qwen3_5",
+                }
+            }), encoding="utf-8")
+            self.assertEqual(
+                adapter_model_class_name(path), "Qwen3_5ForConditionalGeneration"
+            )
+
+    def test_model_class_selection_rejects_training_architecture_drift(self):
+        module = SimpleNamespace(Qwen3_5ForConditionalGeneration=object())
+        with self.assertRaisesRegex(ValueError, "does not match"):
+            select_model_class(
+                module, ["Qwen3_5ForConditionalGeneration"], "Qwen3_5ForCausalLM"
+            )
+
+    def test_model_class_selection_uses_recorded_architecture(self):
+        expected = object()
+        module = SimpleNamespace(Qwen3_5ForConditionalGeneration=expected)
+        self.assertIs(
+            select_model_class(module, ["Qwen3_5ForConditionalGeneration"], None),
+            expected,
+        )
+
+    def test_adapter_load_rejects_peft_missing_key_warning(self):
+        class FakePeftModel:
+            @staticmethod
+            def from_pretrained(base, path):
+                warnings.warn("Found missing adapter keys while loading the checkpoint")
+                return object()
+
+        with self.assertRaisesRegex(RuntimeError, "did not load"):
+            load_peft_adapter(FakePeftModel, object(), Path("adapter"))
 
 
 class PeftGuardrailTests(unittest.TestCase):

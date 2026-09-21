@@ -6,6 +6,7 @@ import json
 import os
 import re
 import sys
+import warnings
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -137,6 +138,61 @@ def resolve_adapter_path(variant: str, custom_path: str | Path | None = None) ->
     return VARIANT_ADAPTERS[variant]
 
 
+def adapter_model_class_name(adapter_path: Path | None) -> str | None:
+    """Return PEFT's recorded training model class without importing arbitrary code."""
+    if adapter_path is None:
+        return None
+    try:
+        config = json.loads((adapter_path / "adapter_config.json").read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise ValueError(f"Missing or invalid adapter config: {adapter_path}") from exc
+    mapping = config.get("auto_mapping")
+    if mapping is None:
+        return None
+    if not isinstance(mapping, dict):
+        raise ValueError("Invalid adapter auto_mapping")
+    name = mapping.get("base_model_class")
+    if not isinstance(name, str) or not re.fullmatch(r"[A-Za-z_][A-Za-z0-9_]*", name):
+        raise ValueError("Invalid adapter base_model_class")
+    return name
+
+
+def select_model_class(transformers_module, architectures, adapter_class_name: str | None):
+    """Use the architecture that PEFT trained against, and reject class drift."""
+    recorded = [name for name in (architectures or []) if isinstance(name, str)]
+    if adapter_class_name and recorded and adapter_class_name not in recorded:
+        raise ValueError(
+            f"Adapter model class {adapter_class_name} does not match base architecture(s): "
+            + ", ".join(recorded)
+        )
+    class_name = adapter_class_name or (recorded[0] if recorded else None)
+    if class_name:
+        model_class = getattr(transformers_module, class_name, None)
+        if model_class is None:
+            raise RuntimeError(f"Transformers does not provide recorded model class: {class_name}")
+        return model_class
+    return transformers_module.AutoModelForCausalLM
+
+
+def load_peft_adapter(peft_model_class, base_model, adapter_path: Path):
+    """Load an adapter and turn PEFT's silent missing-key failure into an error."""
+    with warnings.catch_warnings(record=True) as caught:
+        warnings.simplefilter("always")
+        model = peft_model_class.from_pretrained(base_model, str(adapter_path))
+    missing = [
+        str(item.message) for item in caught
+        if "missing adapter keys" in str(item.message).lower()
+    ]
+    if missing:
+        raise RuntimeError(
+            "LoRA adapter did not load into the selected base-model architecture: "
+            + missing[0]
+        )
+    for item in caught:
+        warnings.warn(str(item.message), item.category, stacklevel=2)
+    return model
+
+
 class TransformersPeftProvider:
     """Run the same structured contracts through the HF base model or a LoRA adapter."""
 
@@ -159,19 +215,12 @@ class TransformersPeftProvider:
             import torch
             import transformers
             from peft import PeftModel
-            from transformers import AutoModelForCausalLM, AutoTokenizer
+            from transformers import AutoConfig, AutoTokenizer
         except ImportError as exc:
             raise RuntimeError(
                 "PEFT inference dependencies are missing. Install "
                 "training/requirements-inference.txt in a dedicated environment."
             ) from exc
-
-        # Use AutoModelForCausalLM: SFTTrainer (used during LoRA training) loads with
-        # CausalLM semantics; adapter_config confirms base_model_class is
-        # Qwen3_5ForConditionalGeneration which AutoModelForCausalLM dispatches to.
-        # AutoModelForImageTextToText adds a vision tower and returns pixel_values=None
-        # for text-only inputs, silently breaking inference.
-        auto_model = AutoModelForCausalLM
 
         dtype_map = {
             "auto": "auto",
@@ -198,6 +247,13 @@ class TransformersPeftProvider:
         self._processor = AutoTokenizer.from_pretrained(
             self.config.base_model, revision=self.config.revision
         )
+        base_config = AutoConfig.from_pretrained(
+            self.config.base_model, revision=self.config.revision
+        )
+        adapter_class = adapter_model_class_name(self.adapter_path)
+        model_class = select_model_class(
+            transformers, getattr(base_config, "architectures", None), adapter_class
+        )
         model_kwargs: dict[str, Any] = {
             "dtype": requested_dtype,
             "low_cpu_mem_usage": True,
@@ -206,7 +262,7 @@ class TransformersPeftProvider:
         if target_device == "cuda":
             model_kwargs["device_map"] = "auto"
         try:
-            self._model = auto_model.from_pretrained(self.config.base_model, **model_kwargs)
+            self._model = model_class.from_pretrained(self.config.base_model, **model_kwargs)
         except OSError as exc:
             if getattr(exc, "winerror", None) == 1455 or "paging file is too small" in str(exc).lower():
                 raise RuntimeError(
@@ -215,7 +271,7 @@ class TransformersPeftProvider:
                 ) from exc
             raise
         if self.adapter_path is not None:
-            self._model = PeftModel.from_pretrained(self._model, str(self.adapter_path))
+            self._model = load_peft_adapter(PeftModel, self._model, self.adapter_path)
         if target_device != "cuda":
             self._model.to(target_device)
         self._model.eval()
