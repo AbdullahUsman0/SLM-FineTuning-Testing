@@ -36,6 +36,12 @@ class V5NotebookTests(unittest.TestCase):
         self.assertIn('human-review-approval.json', self.code['full-train-reviewed'])
         self.assertIn('corpus_manifest_sha256', self.code['full-train-reviewed'])
 
+    def test_preflight_uses_public_corpus_verifier_cli(self):
+        code = self.code['verify-and-pilot-inputs']
+        self.assertIn("'--output'", code)
+        self.assertNotIn("'--corpus'", code)
+        self.assertNotIn("'--sealed-output'", code)
+
     def test_api_secret_is_ephemeral_and_cost_gated(self):
         code = self.code['openai-validation-opt-in']
         self.assertIn("userdata.get('OPENAI_API_KEY')", code)

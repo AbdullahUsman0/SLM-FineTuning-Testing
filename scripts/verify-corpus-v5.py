@@ -12,7 +12,10 @@ from local_slm_lab.corpus_v5 import verify_artifacts
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", required=True, type=Path)
-    parser.add_argument("--sealed-output", required=True, type=Path)
+    parser.add_argument(
+        "--sealed-output", type=Path,
+        help="Optional ignored final-label root. Omit in Colab to verify only tracked development files.",
+    )
     args = parser.parse_args()
     try:
         result = verify_artifacts(args.output, args.sealed_output)

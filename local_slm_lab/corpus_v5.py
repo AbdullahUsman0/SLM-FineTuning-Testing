@@ -777,21 +777,26 @@ def dependency_record() -> dict:
     return {"commit": commit, "files": records}
 
 
-def verify_artifacts(output: Path, sealed_output: Path) -> dict:
-    """Never parses sealed labels: only streams their bytes for SHA256."""
-    output, sealed_output = output.resolve(), sealed_output.resolve()
+def verify_artifacts(output: Path, sealed_output: Path | None = None) -> dict:
+    """Verify public artifacts and, when available, hash sealed files without parsing them."""
+    output = output.resolve()
+    sealed_output = sealed_output.resolve() if sealed_output is not None else None
     manifest = json.loads((output / "manifest.json").read_bytes())
     manifest_hash = json.loads((output / "manifest.sha256.json").read_bytes())["manifest.json"]
     if file_record(output / "manifest.json") != manifest_hash:
         raise ValueError("frozen manifest hash/size mismatch")
     if manifest["build_status"] != "complete_pending_human":
         raise ValueError("incomplete corpus")
-    if {p.relative_to(sealed_output).as_posix() for p in sealed_output.rglob("*") if p.is_file()} != set(manifest["sealed_files"]):
-        raise ValueError("unexpected sealed artifact inventory")
+    if sealed_output is not None:
+        if {p.relative_to(sealed_output).as_posix() for p in sealed_output.rglob("*") if p.is_file()} != set(manifest["sealed_files"]):
+            raise ValueError("unexpected sealed artifact inventory")
     expected_public = set(manifest["files"]) | {"manifest.json", "manifest.sha256.json"}
     if {p.relative_to(output).as_posix() for p in output.rglob("*") if p.is_file()} != expected_public:
         raise ValueError("unexpected public artifact inventory")
-    for root, entries in ((output, manifest["files"]), (sealed_output, manifest["sealed_files"])):
+    roots = [(output, manifest["files"])]
+    if sealed_output is not None:
+        roots.append((sealed_output, manifest["sealed_files"]))
+    for root, entries in roots:
         for name, expected in entries.items():
             path = (root / name).resolve()
             if not path.is_relative_to(root) or file_record(path) != expected:
@@ -813,7 +818,10 @@ def verify_artifacts(output: Path, sealed_output: Path) -> dict:
     smoke = [json.loads(line) for line in (output / "splits/smoke.jsonl").read_bytes().splitlines()]
     if not {s["scenario_id"] for s in smoke} <= validation_ids:
         raise ValueError("smoke is not a validation subset")
-    return {"status": "verified_development_and_all_file_hashes", "sealed_labels_parsed": False,
+    return {"status": ("verified_development_and_all_file_hashes" if sealed_output is not None
+                       else "verified_development_and_public_file_hashes"),
+            "sealed_file_hashes_verified": sealed_output is not None,
+            "sealed_labels_parsed": False,
             "development_scenarios": len(scenarios), "dedup": dedup}
 
 

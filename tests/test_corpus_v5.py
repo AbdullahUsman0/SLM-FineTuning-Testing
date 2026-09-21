@@ -242,6 +242,11 @@ class CorpusV5ArtifactTests(unittest.TestCase):
                 data.decode("utf-8")
             result = v5.verify_artifacts(public, sealed)
             self.assertFalse(result["sealed_labels_parsed"])
+            self.assertTrue(result["sealed_file_hashes_verified"])
+            public_only = v5.verify_artifacts(public)
+            self.assertEqual(public_only["status"], "verified_development_and_public_file_hashes")
+            self.assertFalse(public_only["sealed_file_hashes_verified"])
+            self.assertFalse(public_only["sealed_labels_parsed"])
             frozen_hash = v5._sha256(public / "manifest.json")
             with self.assertRaises(FileExistsError):
                 v5.write_artifacts(public, sealed, per_domain=5, check_dependency=False)
