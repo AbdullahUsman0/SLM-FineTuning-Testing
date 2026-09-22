@@ -151,9 +151,26 @@ Consequences for the gate:
   which were extracted to this archive before the recycle.
 - Stage D (matched development smoke comparison) is **NOT completed**. The
   harness defect that blocked it was found, fixed, and regression-tested
-  (161 pass), and the fix is in the local repo
+  (161 pass). The fix is committed and pushed to
+  `origin/experiment/v5-grounded-20260919` as commit `8490d23`
   (`local_slm_lab/v5_eval.py`, SHA-256 `7c41e8ce...`), but a full clean
   base+LoRA smoke comparison still has to be run.
+- Handover (user runs Stage B+D in a normal browser where Drive mounts):
+  `notebooks/Qwen_2B_LoRA_v5_Grounded_Colab.ipynb` is ready and needs no
+  edits. Its `pinned-source` cell fetches `origin/experiment/v5-grounded-20260919`
+  and checks out `FETCH_HEAD` (now `8490d23`, i.e. the fixed harness); its
+  `pilot-behavior` cell IS the Stage D matched smoke (base + lora over
+  `corpus-v5/v5-20260919-r1/splits/smoke.jsonl`, cuda/float16/3072), writing
+  `pilot-base-smoke.json` / `pilot-lora-smoke.json` to Drive and preserving any
+  existing report. All Stage D inputs were verified committed at `8490d23`:
+  `smoke.jsonl` (24 scenarios), the SFT train/validation splits, `manifest.json`,
+  `v5-model-provenance.json`, `requirements.txt`, and every entrypoint
+  (`verify-corpus-v5.py`, `train_lora.py`, `evaluate-v5.py`, `compare-v5.py`,
+  `v5_eval.py`). Caveat: `source-lock.json` is only written when absent, so if a
+  stale lock pinning `a0020e7` exists in the Drive RUN folder it must be deleted
+  (or the RUN folder renamed in every cell) to avoid re-checking-out the
+  unfixed commit. The gate check established that folder never persisted, so a
+  fresh run pins `8490d23`.
 - Finishing Stage D requires re-establishing a Colab GPU session and repeating
   Stage A+B (clone pinned repo/`fpy`, install deps, re-download + hash-verify
   base weights, regenerate corpus, re-train the one-epoch pilot adapter) before
