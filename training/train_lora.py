@@ -292,7 +292,8 @@ def resolve_resume(output_path: Path, requested: str | None) -> Path | None:
 
 
 def training_settings(args, revision: str, dtype: str) -> dict:
-    return {
+    frequent_checkpoints = args.save_steps is not None
+    settings = {
         "num_train_epochs": args.epochs,
         "learning_rate": args.learning_rate,
         "per_device_train_batch_size": 1,
@@ -309,11 +310,14 @@ def training_settings(args, revision: str, dtype: str) -> dict:
         "lr_scheduler_kwargs": {},
         "max_grad_norm": 1.0,
         "eval_strategy": "epoch",
-        "save_strategy": "epoch",
+        "save_strategy": "steps" if frequent_checkpoints else "epoch",
         "save_total_limit": None,
         "save_only_model": False,
         "logging_steps": 5,
-        "load_best_model_at_end": True,
+        # Transformers requires matching eval/save strategies when this is true.
+        # Frequent durability checkpoints therefore keep epoch evaluation but
+        # save the final adapter instead of implicitly selecting by eval loss.
+        "load_best_model_at_end": not frequent_checkpoints,
         "metric_for_best_model": "eval_loss",
         "greater_is_better": False,
         "restore_callback_states_from_checkpoint": True,
@@ -332,6 +336,9 @@ def training_settings(args, revision: str, dtype: str) -> dict:
         "report_to": "none",
         "model_init_kwargs": {"revision": revision, "dtype": dtype},
     }
+    if frequent_checkpoints:
+        settings["save_steps"] = args.save_steps
+    return settings
 
 
 def build_manifest(args, revision: str, tokenizer, settings: dict, inputs: dict, runtime: dict) -> dict:
@@ -352,6 +359,7 @@ def build_manifest(args, revision: str, tokenizer, settings: dict, inputs: dict,
         "effective_batch_size": runtime["effective_batch_size"],
         "packages": runtime["packages"],
     }
+    frequent_checkpoints = settings["save_strategy"] == "steps"
     return {
         "schema_version": 1,
         "created_at": datetime.now(UTC).isoformat(),
@@ -360,9 +368,13 @@ def build_manifest(args, revision: str, tokenizer, settings: dict, inputs: dict,
         "inputs": inputs,
         "runtime": runtime,
         "adapter_selection": {
-            "best-adapter": "loss-best only (minimum validation eval_loss)",
+            "best-adapter": (
+                "final-step adapter; frequent durability checkpoints retained for later behavioral selection"
+                if frequent_checkpoints else
+                "loss-best only (minimum validation eval_loss)"
+            ),
             "task_winner_selected": False,
-            "behavioral_selection": "pending; compare all retained epoch checkpoints separately",
+            "behavioral_selection": "pending; compare all retained checkpoints separately",
         },
     }
 
@@ -407,6 +419,13 @@ def parse_args(argv=None):
     parser.add_argument("--learning-rate", type=float, default=5e-5)
     parser.add_argument("--warmup-ratio", type=float, default=0.0)
     parser.add_argument("--save-total-limit", type=int, default=None, help="Deprecated: only 0 (unlimited) is accepted; all epochs are retained.")
+    parser.add_argument(
+        "--save-steps", type=int, default=None,
+        help=(
+            "Save a complete resumable checkpoint every N optimizer steps. "
+            "This disables automatic loss-best loading while preserving epoch evaluation."
+        ),
+    )
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--max-length", type=int, default=3072)
     parser.add_argument("--early-stopping-patience", type=int, default=1, help="Rounds without loss improvement; 0 disables early stopping.")
@@ -415,6 +434,8 @@ def parse_args(argv=None):
     args = parser.parse_args(argv)
     if args.save_total_limit not in (None, 0):
         parser.error("All epoch checkpoints must be retained; omit --save-total-limit")
+    if args.save_steps is not None and args.save_steps < 1:
+        parser.error("--save-steps must be a positive integer")
     if args.early_stopping_patience < 0:
         parser.error("--early-stopping-patience must be >= 0")
     if args.epochs < 1 or args.max_length < 1 or not args.learning_rate > 0:
@@ -554,7 +575,8 @@ def main() -> None:
         write_json(output_path / "best-adapter" / "selection.json", selection)
         write_json(output_path / "evaluation.json", {**metrics, "adapter_selection": selection})
         append_event(output_path, "run_finished", metrics=metrics, selection=selection)
-        print(f"Saved loss-best ONLY adapter to {output_path}; behavioral selection remains pending.")
+        basis = "loss-best" if config.load_best_model_at_end else "final-step"
+        print(f"Saved {basis} adapter to {output_path}; behavioral selection remains pending.")
 
 
 if __name__ == "__main__":
