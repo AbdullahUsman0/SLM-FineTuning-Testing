@@ -1,0 +1,19 @@
+{
+  "json_schema_dialect": "2020-12",
+  "pydantic_version": "2.13.5",
+  "models": [
+    "ExtractorResult",
+    "QuestionOutput"
+  ],
+  "slot_count": 79,
+  "files": {
+    "extractor-result.schema.json": {
+      "bytes": 5078,
+      "sha256": "93bfe76e70e824f6ca24101c92bdb5c6ff57eae2d89b9e31f658ed207cb5f9ef"
+    },
+    "question-output.schema.json": {
+      "bytes": 400,
+      "sha256": "1ef8d3a2c1d6913d891530b56ff621fbf93c5ba4f93695f4b3acee3207a8eea4"
+    }
+  }
+}
