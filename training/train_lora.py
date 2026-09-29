@@ -391,6 +391,7 @@ def make_callbacks(callback_base, early_stopping_class, patience: int, fingerpri
                     path, fingerprint, world_size=args.world_size, requires_scaler=args.fp16,
                 )
                 append_event(Path(args.output_dir), "checkpoint_complete", checkpoint=str(path))
+                print(f"Checkpoint complete and hash-verified: {path}", flush=True)
             synchronize()
             return control
 
@@ -431,11 +432,20 @@ def parse_args(argv=None):
     parser.add_argument("--early-stopping-patience", type=int, default=1, help="Rounds without loss improvement; 0 disables early stopping.")
     parser.add_argument("--allow-truncation", action="store_true", help="Allow examples over max-length; disabled by default to protect labels.")
     parser.add_argument("--resume-from-checkpoint", help="Checkpoint path, or 'auto' for the latest hash-verified complete checkpoint.")
+    parser.add_argument(
+        "--minimum-resume-step", type=int, default=0,
+        help=(
+            "Safety floor for transferred runs. A positive value refuses to train unless "
+            "a verified checkpoint at or above this optimizer step is selected."
+        ),
+    )
     args = parser.parse_args(argv)
     if args.save_total_limit not in (None, 0):
         parser.error("All epoch checkpoints must be retained; omit --save-total-limit")
     if args.save_steps is not None and args.save_steps < 1:
         parser.error("--save-steps must be a positive integer")
+    if args.minimum_resume_step < 0:
+        parser.error("--minimum-resume-step must be >= 0")
     if args.early_stopping_patience < 0:
         parser.error("--early-stopping-patience must be >= 0")
     if args.epochs < 1 or args.max_length < 1 or not args.learning_rate > 0:
@@ -452,6 +462,24 @@ def main() -> None:
     validation_path = (project_root / args.validation).resolve()
     output_path = (project_root / args.output).resolve()
     resume_checkpoint = resolve_resume(output_path, args.resume_from_checkpoint)
+    if args.minimum_resume_step:
+        if resume_checkpoint is None:
+            raise ValueError(
+                f"Expected a resumable checkpoint at step >= {args.minimum_resume_step}, "
+                "but the output directory has no verified checkpoint"
+            )
+        selected_step = checkpoint_step(resume_checkpoint)
+        if selected_step < args.minimum_resume_step:
+            raise ValueError(
+                f"Latest verified checkpoint is step {selected_step}, below required "
+                f"step {args.minimum_resume_step}"
+            )
+    print(
+        "Resume decision: "
+        + (f"verified {resume_checkpoint} (step {checkpoint_step(resume_checkpoint)})"
+           if resume_checkpoint else "fresh start at step 0"),
+        flush=True,
+    )
     saved = load_manifest(output_path) if resume_checkpoint else None
 
     import torch

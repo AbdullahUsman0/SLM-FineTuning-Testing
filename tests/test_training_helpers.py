@@ -378,10 +378,14 @@ class TrainingHelperTests(unittest.TestCase):
         self.assertTrue(training_settings(args, REVISION, "float16")["fp16"])
 
     def test_frequent_checkpoint_mode_is_resumable_without_loss_best_loading(self):
-        args = parse_args(["--save-steps", "25", "--early-stopping-patience", "0"])
+        args = parse_args([
+            "--save-steps", "25", "--early-stopping-patience", "0",
+            "--minimum-resume-step", "20",
+        ])
         settings = training_settings(args, REVISION, "float16")
         self.assertEqual(settings["save_strategy"], "steps")
         self.assertEqual(settings["save_steps"], 25)
+        self.assertEqual(args.minimum_resume_step, 20)
         self.assertEqual(settings["eval_strategy"], "epoch")
         self.assertFalse(settings["load_best_model_at_end"])
         manifest = manifest_fixture(["--save-steps", "25", "--early-stopping-patience", "0"])
@@ -397,7 +401,8 @@ class TrainingHelperTests(unittest.TestCase):
     def test_invalid_patience_pruning_or_warmup_rejected_before_training_imports(self):
         for argv in (
             ["--early-stopping-patience", "-1"], ["--save-total-limit", "1"],
-            ["--save-steps", "0"], ["--warmup-ratio", "1"],
+            ["--save-steps", "0"], ["--minimum-resume-step", "-1"],
+            ["--warmup-ratio", "1"],
         ):
             with self.subTest(argv=argv), redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
                 parse_args(argv)
