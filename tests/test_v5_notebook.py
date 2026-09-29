@@ -57,5 +57,50 @@ class V5NotebookTests(unittest.TestCase):
         self.assertNotIn('.env', code.replace('os.environ', 'environment'))
 
 
+class V5PortableNotebookTests(unittest.TestCase):
+    def setUp(self):
+        path = Path(__file__).resolve().parents[1] / 'notebooks/Qwen_2B_LoRA_v5_Portable_10Step_Colab.ipynb'
+        self.notebook = json.loads(path.read_text(encoding='utf-8'))
+        self.code = {cell['id']: ''.join(cell['source']) for cell in self.notebook['cells'] if cell['cell_type'] == 'code'}
+
+    def test_all_cells_compile_without_stored_outputs(self):
+        for cell in self.notebook['cells']:
+            if cell['cell_type'] == 'code':
+                compile(''.join(cell['source']), cell['id'], 'exec')
+                self.assertEqual(cell['outputs'], [])
+                self.assertIsNone(cell['execution_count'])
+
+    def test_training_saves_every_ten_steps_and_guards_resume_floor(self):
+        config = self.code['portable-config']
+        train = self.code['portable-train']
+        self.assertIn('CHECKPOINT_INTERVAL = 10', config)
+        self.assertIn('MINIMUM_RESUME_STEP = 0', config)
+        self.assertIn("'--save-steps', str(CHECKPOINT_INTERVAL)", train)
+        self.assertIn("'--minimum-resume-step', str(MINIMUM_RESUME_STEP)", train)
+        self.assertIn("'--resume-from-checkpoint', 'auto'", train)
+        self.assertNotIn('output.mkdir', train)
+
+    def test_transfer_bundle_is_verified_before_import(self):
+        code = self.code['portable-import']
+        self.assertIn("member.issym() or member.islnk()", code)
+        self.assertIn("str(target).startswith(str(staging.resolve()) + os.sep)", code)
+        self.assertIn("transfer-manifest.json", code)
+        self.assertIn("sha256(path) == expected['sha256']", code)
+        self.assertIn("Import destination must be empty", code)
+
+    def test_export_includes_exact_resume_state_and_receipt_hash(self):
+        code = self.code['portable-export']
+        for filename in ['optimizer.pt', 'scheduler.pt', 'trainer_state.json', 'rng_state.pth', 'checkpoint-complete.json']:
+            self.assertIn(filename, code)
+        self.assertIn("'sha256': sha256(bundle)", code)
+        self.assertIn("transfer-manifest.json", code)
+
+    def test_notebook_pins_resume_guard_commit_and_avoids_final_set(self):
+        all_code = '\n'.join(self.code.values())
+        self.assertIn('7469e8b516474d684f5859f1e9a6a09078af944b', self.code['portable-config'])
+        self.assertNotIn('splits/final.jsonl', all_code)
+        self.assertNotIn('sft/final.jsonl', all_code)
+
+
 if __name__ == '__main__':
     unittest.main()
