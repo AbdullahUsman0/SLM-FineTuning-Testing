@@ -78,6 +78,14 @@ def absolute(path: Path) -> Path:
     return (ROOT / path).resolve() if not path.is_absolute() else path.resolve()
 
 
+def portable_path(path: Path) -> str:
+    path = path.resolve()
+    try:
+        return path.relative_to(ROOT).as_posix()
+    except ValueError:
+        return str(path)
+
+
 def write_json(path: Path, value: Any) -> None:
     with path.open("x", encoding="utf-8") as handle:
         json.dump(value, handle, ensure_ascii=False, indent=2, sort_keys=True, allow_nan=False)
@@ -102,7 +110,7 @@ def verified_schemas(directory: Path) -> dict[str, Any]:
             raise ValueError(f"schema manifest mismatch: {name}")
         observed[name] = actual
     return {
-        "directory": str(directory),
+        "directory": portable_path(directory),
         "manifest_sha256": sha256(manifest_path),
         "json_schema_dialect": manifest.get("json_schema_dialect"),
         "pydantic_version_at_export": manifest.get("pydantic_version"),
@@ -112,26 +120,21 @@ def verified_schemas(directory: Path) -> dict[str, Any]:
 
 
 def frozen_record(index: int, call: dict[str, Any]) -> dict[str, Any]:
-    record = {
+    gold_payload = {
+        "expected": call["expected"],
+        "forbidden_slots": call["forbidden_slots"],
+        "gold_after": call.get("gold_after"),
+    }
+    return {
         "ordinal": index,
         "key": call["key"],
         "scenario_id": call["scenario_id"],
         "cluster_id": call["cluster_id"],
         "category": call["category"],
         "task": call["task"],
-        "context": call["context"],
-        "expected": call["expected"],
-        "forbidden_slots": call["forbidden_slots"],
+        "context_sha256": digest(call["context"]),
+        "gold_sha256": digest(gold_payload),
     }
-    if call["task"] == "extract":
-        record["gold_after"] = call["gold_after"]
-    record["context_sha256"] = digest(record["context"])
-    record["gold_sha256"] = digest({
-        "expected": record["expected"],
-        "forbidden_slots": record["forbidden_slots"],
-        "gold_after": record.get("gold_after"),
-    })
-    return record
 
 
 def repository_state() -> dict[str, Any]:
@@ -146,6 +149,7 @@ def prepare(cases_path: Path, schemas_path: Path, output: Path) -> dict[str, Any
         raise FileExistsError(f"output already exists: {output}")
 
     scenarios, input_metadata = load_cases(cases_path, split="validation")
+    input_metadata["path"] = portable_path(cases_path)
     schema = load_schema()
     calls = build_call_plan(scenarios, schema)
     frozen = [frozen_record(index, call) for index, call in enumerate(calls)]

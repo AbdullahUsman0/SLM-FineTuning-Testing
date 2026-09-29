@@ -43,6 +43,8 @@ class StructuredOutputStudyTests(unittest.TestCase):
         self.assertEqual(first, second)
         self.assertEqual(len(first["context_sha256"]), 64)
         self.assertEqual(len(first["gold_sha256"]), 64)
+        self.assertNotIn("context", first)
+        self.assertNotIn("expected", first)
         changed = dict(call, gold_after={"intent": "unsupported", "slots": {}, "turns": []})
         self.assertNotEqual(first["gold_sha256"], self.study.frozen_record(0, changed)["gold_sha256"])
 
