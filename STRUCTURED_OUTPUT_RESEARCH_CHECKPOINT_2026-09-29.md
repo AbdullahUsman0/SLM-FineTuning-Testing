@@ -91,9 +91,30 @@ Each report retains raw text, parsed output, validation status, attempt details,
 - Paired comparison: `scripts/compare-structured-output.py`
 - Colab runner: `notebooks/Qwen_2B_v5_Structured_Output_Research_Colab.ipynb`
 
+## Verified implementation result
+
+The zero-model rule arm was executed end to end on the complete frozen validation
+cohort with the pinned `fpy` dependency. It completed all 231 scenarios and 948
+calls, then returned the same completed report immediately on resume. This is an
+implementation check and a measured baseline floor, not evidence about the
+fine-tuned model.
+
+- non-intent exact slot micro F1: `0.1763046544428773`;
+- precision / recall: `0.6377551020408163` / `0.10229132569558101`;
+- JSON-valid and schema-valid: `948/948`;
+- wrong-but-schema-valid: `603/948` (`0.6360759493670886`);
+- model calls: `0`;
+- full report SHA-256: `9fcb4c7e3a984653ec25a57573cee641dfe8cfefc08713258185af86ba469f7d`;
+- run fingerprint: `8bad7218e01fb42f4b63224fc65a61fb4153de96e08e96bf8b29cf12cdfc5221`.
+
+The clean pinned offline suite passes 190 tests. The full rule report remains a
+local verification artifact because it is about 41 MB; the Colab notebook will
+write the durable study copy beside the selected adapter in Drive.
+
 ## Empirical work that remains
 
-The implementation is complete, but no quality claim is made before measurements. After training:
+The implementation is complete, but no model-quality claim is made before the
+adapter measurements. After training:
 
 1. Freeze the selected adapter and its hashes.
 2. Run smoke B, A, C, E.
