@@ -1,3 +1,4 @@
+import asyncio
 import importlib.util
 import json
 import tempfile
@@ -49,6 +50,25 @@ class StructuredOutputRunnerTests(unittest.TestCase):
         with patch.dict("os.environ", {"OPENAI_API_KEY": "unused"}, clear=True):
             with self.assertRaises(PermissionError):
                 self.runner.create_provider(args, object(), {})
+
+    def test_warmup_accepts_validation_labelled_smoke_sample(self):
+        class Provider:
+            async def extract(self, message, state):
+                return {"updates": [], "correction_detected": False}
+
+            async def ask(self, request):
+                return {"question": "Which value should be used?"}
+
+            def drain_traces(self):
+                return []
+
+        result = asyncio.run(self.runner.warmup(
+            Provider(),
+            self.runner.load_schema(),
+            ROOT / "corpus-v5/v5-20260919-r1/splits/smoke.jsonl",
+        ))
+        self.assertTrue(result["completed"])
+        self.assertGreaterEqual(result["calls"], 1)
 
     def test_frozen_study_rejects_changed_context(self):
         call = {"key": ["s", "extract", 1], "scenario_id": "s", "cluster_id": "s",

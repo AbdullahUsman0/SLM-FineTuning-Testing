@@ -185,7 +185,9 @@ def settings(args: argparse.Namespace, audit: dict, schema_metadata: dict) -> di
 
 
 async def warmup(provider, schema, path: Path) -> dict:
-    cases, metadata = load_cases(absolute(path), split="smoke")
+    # smoke.jsonl is a deterministic sample of the validation cohort and keeps
+    # each scenario's original `split: validation` provenance label.
+    cases, metadata = load_cases(absolute(path), split="validation")
     plan = build_call_plan(cases[:1], schema)
     selected = []
     extraction = next(call for call in plan if call["task"] == "extract")
