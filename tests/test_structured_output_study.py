@@ -24,7 +24,7 @@ class StructuredOutputStudyTests(unittest.TestCase):
 
     def test_declares_the_three_primary_arms_without_relabeling_pydantic(self):
         arms = self.study.ARMS
-        self.assertEqual(set(arms), {"A", "B", "C"})
+        self.assertEqual(set(arms), {"A", "B", "C", "D", "E", "F"})
         self.assertEqual(arms["A"]["retries"], 0)
         self.assertEqual(arms["B"]["retries"], 1)
         self.assertIn("JSON Schema", arms["C"]["validation"])

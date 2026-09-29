@@ -309,7 +309,8 @@ def build_call_plan(scenarios: list[dict], schema=None) -> list[dict]:
             definition = schema.get(slot_id)
             request = QuestionRequest(
                 slot_id=slot_id, reason=question.get("reason", "missing or unclear requirement"),
-                slot_description=definition.description, current_state=SlotState(slot_id=slot_id),
+                slot_description=definition.description,
+                current_state=SlotState(slot_id=slot_id, updated_at=datetime(1970, 1, 1, tzinfo=timezone.utc)),
                 confirmed_context={k: v for k, v in scenario.get("gold_final_slots", {}).items() if k != slot_id},
                 static_question=definition.static_question, allowed_values=definition.allowed_values,
                 other_active_slot_ids=tuple(s.slot_id for s in schema.slots if s.slot_id != slot_id),
@@ -326,18 +327,36 @@ def _trace(provider: Any, task: str) -> dict:
     clean = []
     for trace in traces:
         clean.append({k: trace.get(k) for k in (
-            "operation", "raw_output", "raw_json_valid", "raw_schema_valid", "prompt_tokens", "completion_tokens", "parsed"
+            "operation", "raw_output", "raw_json_valid", "raw_schema_valid", "prompt_tokens", "completion_tokens", "parsed",
+            "model_calls", "retry_count", "retry_success", "first_pass_raw_output", "first_pass_json_valid",
+            "first_pass_schema_valid", "constraint_backend", "schema_compile_ms", "strategy", "rule_covered_slots",
         )})
+        attempts = []
+        for attempt in trace.get("attempts", []):
+            attempts.append({k: attempt.get(k) for k in (
+                "raw_output", "raw_json_valid", "raw_schema_valid", "parsed", "prompt_tokens",
+                "completion_tokens", "hit_generation_limit", "latency_ms", "slot_id",
+            )} | {"error": "provider_trace_error" if attempt.get("error") else None})
+        clean[-1]["attempts"] = attempts
         # Do not trust historical/provider error strings to be secret-free.
         clean[-1]["error"] = "provider_trace_error" if trace.get("error") else None
     relevant = [t for t in clean if t["operation"] == task]
     selected = relevant[-1] if len(relevant) == 1 else {}
     raw = selected.get("raw_output")
     syntax, schema, value = raw_validity(raw, task)
+    details = {k: selected.get(k) for k in (
+        "model_calls", "retry_count", "retry_success", "first_pass_raw_output", "first_pass_json_valid",
+        "first_pass_schema_valid", "constraint_backend", "schema_compile_ms", "strategy", "rule_covered_slots",
+    )}
+    details["attempts"] = selected.get("attempts", [])
+    if raw is not None and details["first_pass_json_valid"] is None:
+        details["first_pass_json_valid"] = syntax
+    if raw is not None and details["first_pass_schema_valid"] is None:
+        details["first_pass_schema_valid"] = schema
     return {"traces": clean, "raw_output": raw, "raw_json_valid": syntax,
             "raw_schema_valid": schema, "raw_value": value,
             "prompt_tokens": selected.get("prompt_tokens"), "completion_tokens": selected.get("completion_tokens"),
-            "trace_contract_valid": len(relevant) == 1 and len(clean) == 1 if traces else None}
+            "trace_contract_valid": len(relevant) == 1 and len(clean) == 1 if traces else None, **details}
 
 
 async def evaluate(provider: Any, scenarios: list[dict], *, schema=None,
@@ -403,11 +422,12 @@ async def evaluate(provider: Any, scenarios: list[dict], *, schema=None,
         records.append(record)
         if on_record:
             on_record(record)
+    slot_ids = [s.slot_id for s in schema.slots]
     return {"report_version": SCORER_VERSION, "status": "complete", "started_at": started_at, "finished_at": now(),
             "protocol": PROTOCOL, "metadata": metadata or {}, "scenario_count": len(scenarios),
             "scenario_ids": [s.get("scenario_id", s.get("id")) for s in scenarios],
-            "metrics": score_records(records, [s.slot_id for s in schema.slots]),
-            "category_metrics": {category: score_records([r for r in records if r["category"] == category])
+            "metrics": score_records(records, slot_ids),
+            "category_metrics": {category: score_records([r for r in records if r["category"] == category], slot_ids)
                                  for category in sorted({r["category"] for r in records})}, "records": records}
 
 
@@ -478,8 +498,12 @@ def score_records(records: list[dict], slot_ids=()) -> dict:
     def forbidden_count(r):
         return len(observed_ids(r) & set(r.get("forbidden_slots", [])))
     hallucinated = [len(observed_ids(r) - set(_slot_ids(r["expected"]))) for r in extraction]
+    known_slots = set(slot_ids)
+    unknown = [len(observed_ids(r) - known_slots) for r in extraction]
     nonempty = [r for r in extraction if tuples(r["expected"])]
     latencies = sorted(r["latency_ms"] for r in records)
+    total_latency_seconds = sum(latencies) / 1000
+    observed_completion_tokens = sum(r.get("completion_tokens") or 0 for r in records)
     metrics = {label: prf(*values) for label, values in total.items()}
     metrics.update({
         "per_slot": {slot: prf(*values) for slot, values in sorted(by_slot.items())},
@@ -500,6 +524,8 @@ def score_records(records: list[dict], slot_ids=()) -> dict:
             sum(bool(observed_ids(r) - set(_slot_ids(r["expected"]))) for r in extraction if r["provider_success"]),
             sum(r["provider_success"] for r in extraction)),
         "hallucinated_slot_count": sum(hallucinated),
+        "unknown_slot_call_rate": rate(sum(bool(n) for n in unknown), len(extraction)),
+        "unknown_slot_count": sum(unknown),
         "empty_update_collapse": rate(sum(not good(r) or not tuples(r.get("emitted")) for r in nonempty), len(nonempty)),
         "successful_empty_update_collapse": rate(sum(good(r) and not tuples(r.get("emitted")) for r in nonempty), len(nonempty)),
         "duplicate_prediction_calls": sum(r.get("duplicate_slot_ids", False) for r in extraction),
@@ -507,15 +533,33 @@ def score_records(records: list[dict], slot_ids=()) -> dict:
         "question_contract": rate(sum(r.get("question_contract", False) for r in questions), len(questions)),
         "question_exact_match": rate(sum(r.get("question_exact_match", False) for r in questions), len(questions)),
         "calls": {"total": len(records), "extract": len(extraction), "ask": len(questions)},
+        "model_calls": {"total": sum(r.get("model_calls") if r.get("model_calls") is not None else 1 for r in records),
+                        "zero_call_records": sum(r.get("model_calls") == 0 for r in records)},
+        "retry_rate": rate(sum((r.get("retry_count") or 0) > 0 for r in records), len(records)),
+        "retry_success_rate": rate(sum(r.get("retry_success") is True for r in records),
+                                   sum((r.get("retry_count") or 0) > 0 for r in records)),
         "latency_ms": {"mean": sum(latencies) / len(latencies) if latencies else None,
                        "p50": latencies[(len(latencies) - 1) // 2] if latencies else None,
                        "p95": latencies[max(0, (95 * len(latencies) + 99) // 100 - 1)] if latencies else None},
+        "observed_completion_tokens_per_second": (
+            observed_completion_tokens / total_latency_seconds if total_latency_seconds else None
+        ),
     })
     for field in ("raw_json_valid", "raw_schema_valid"):
         measured = [r for r in records if r.get(field) is not None]
         metrics[field] = dict(rate(sum(r.get(field) is True for r in records), len(records)),
                               measured_calls=len(measured), unavailable_calls=len(records) - len(measured),
-                              measured_rate=sum(r[field] is True for r in measured) / len(measured) if measured else None)
+                               measured_rate=sum(r[field] is True for r in measured) / len(measured) if measured else None)
+    for field in ("first_pass_json_valid", "first_pass_schema_valid"):
+        measured = [r for r in records if r.get(field) is not None]
+        metrics[field] = dict(rate(sum(r.get(field) is True for r in measured), len(measured)),
+                              measured_calls=len(measured), unavailable_calls=len(records) - len(measured))
+    schema_valid = [r for r in records if r.get("raw_schema_valid") is True]
+    def semantic_exact(r):
+        if r["task"] == "extract":
+            return good(r) and confusion(r)[1:] == (0, 0)
+        return bool(r.get("question_exact_match"))
+    metrics["wrong_valid_schema_rate"] = rate(sum(not semantic_exact(r) for r in schema_valid), len(schema_valid))
     metrics["tokens"] = {field: {"total_observed": sum(r.get(field) or 0 for r in records),
                                  "measured_calls": sum(r.get(field) is not None for r in records),
                                  "unavailable_calls": sum(r.get(field) is None for r in records)}

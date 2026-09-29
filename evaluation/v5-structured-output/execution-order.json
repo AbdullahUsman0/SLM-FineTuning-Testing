@@ -1,0 +1,17 @@
+{
+  "version": "v5-structured-output-order-1",
+  "randomization": {
+    "algorithm": "Python random.Random(seed).shuffle",
+    "seed": 42,
+    "input": ["A", "B", "C"],
+    "output": ["B", "A", "C"]
+  },
+  "warmup": "one extraction and one question from the frozen smoke cohort before each validation session",
+  "primary_arms": ["B", "A", "C"],
+  "secondary_arms": ["E", "D", "F"],
+  "notes": {
+    "D": "Run only after accepting approximately 79 model calls per extraction turn.",
+    "F": "Run only after paid-cost approval with a fresh environment-only API key.",
+    "runtime": "Arms A-C must use the same adapter, model revision, dtype, device class, token limit, and prompt hash."
+  }
+}

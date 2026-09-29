@@ -34,7 +34,7 @@ from local_slm_lab.v5_eval import (
     sha256,
 )
 
-STUDY_VERSION = "v5-structured-output-1"
+STUDY_VERSION = "v5-structured-output-2"
 ARMS = {
     "A": {
         "name": "prompt_json_pydantic_no_retry",
@@ -48,14 +48,35 @@ ARMS = {
         "generation": "same first attempt as A",
         "validation": "strict JSON parser then Pydantic; compact validation feedback",
         "retries": 1,
-        "implementation_status": "planned_step_2",
+        "implementation_status": "implemented",
     },
     "C": {
         "name": "json_schema_constrained_pydantic",
         "generation": "same model, adapter, prompt, greedy decoding and token limit as A with grammar enforcement",
         "validation": "exported strict JSON Schema during decoding, then local Pydantic",
         "retries": 0,
-        "implementation_status": "planned_step_3_backend_benchmark_required",
+        "implementation_status": "implemented_xgrammar_0.2.7",
+    },
+    "D": {
+        "name": "slot_wise_qa",
+        "generation": "one control probe and one binary extraction probe per non-intent slot",
+        "validation": "Pydantic per probe, then Pydantic combined result",
+        "retries": 0,
+        "implementation_status": "implemented_high_call_count_gate",
+    },
+    "E": {
+        "name": "deterministic_rules",
+        "generation": "no model; conservative regex and dictionaries with declared partial coverage",
+        "validation": "typed values, Pydantic result, and normal state reducer",
+        "retries": 0,
+        "implementation_status": "implemented",
+    },
+    "F": {
+        "name": "openai_structured_outputs",
+        "generation": "explicit external model snapshot with strict JSON Schema response format",
+        "validation": "provider schema enforcement followed by local strict parser and Pydantic",
+        "retries": 0,
+        "implementation_status": "implemented_paid_gate",
     },
 }
 

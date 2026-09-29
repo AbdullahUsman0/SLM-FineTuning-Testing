@@ -1,0 +1,7 @@
+-r requirements-inference.txt
+
+# Research-only structured generation backend, pinned to the tested API.
+xgrammar==0.2.7
+
+# Matches the recorded v5 Colab environment and Responses Structured Outputs client.
+openai==2.54.0

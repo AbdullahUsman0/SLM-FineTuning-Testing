@@ -260,6 +260,14 @@ class V5ContextTests(unittest.TestCase):
         self.assertIn("oracle", result["protocol"]["question_context"])
         self.assertEqual(result["metrics"]["empty_update_collapse"]["denominator"], 1)
 
+    def test_question_call_plan_hash_is_time_independent(self):
+        case = scenario()
+        case["question_cases"] = [{"slot_id": "target_unit", "ideal_question": "What unit is the target measured in?"}]
+        first = v5.build_call_plan([case])[-1]["context"]
+        second = v5.build_call_plan([case])[-1]["context"]
+        self.assertEqual(first, second)
+        self.assertEqual(first["current_state"]["updated_at"], "1970-01-01T00:00:00Z")
+
     def test_duplicate_scenarios_and_turn_ids_fail(self):
         with self.assertRaises(ValueError):
             v5.build_call_plan([scenario(), scenario()])

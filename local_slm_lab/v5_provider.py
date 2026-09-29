@@ -62,6 +62,37 @@ class V5TransformersProvider(TransformersPeftProvider):
             self._processor.get_chat_template().encode("utf-8")
         ).hexdigest()
 
+    def _generate_raw(
+        self,
+        system: str,
+        user: str,
+        *,
+        logits_processor: list[Any] | None = None,
+    ) -> tuple[str, int, int, bool]:
+        """Run the pinned greedy generation path shared by research arms A-C."""
+        text = self._processor.apply_chat_template(
+            [{"role": "system", "content": system}, {"role": "user", "content": user}],
+            tokenize=False,
+            add_generation_prompt=True,
+            enable_thinking=False,
+        )
+        inputs = self._processor(text, return_tensors="pt", add_special_tokens=False).to(self._input_device)
+        prompt_tokens = inputs["input_ids"].shape[-1]
+        generation = {
+            "max_new_tokens": self.config.max_new_tokens,
+            "do_sample": False,
+            "use_cache": True,
+            "repetition_penalty": 1.0,
+        }
+        if logits_processor is not None:
+            generation["logits_processor"] = logits_processor
+        self._torch.manual_seed(42)
+        with self._torch.inference_mode():
+            generated = self._model.generate(**inputs, **generation)
+        completion_tokens = generated.shape[-1] - prompt_tokens
+        raw = self._batch_decode(self._processor, generated[:, prompt_tokens:])[0].strip()
+        return raw, prompt_tokens, completion_tokens, completion_tokens == self.config.max_new_tokens
+
     def _structured(self, operation: str, system: str, user: str, output_type: type) -> Any:
         trace = {
             "operation": operation,
@@ -75,27 +106,10 @@ class V5TransformersProvider(TransformersPeftProvider):
             "recovery_applied": False,
         }
         try:
-            text = self._processor.apply_chat_template(
-                [{"role": "system", "content": system}, {"role": "user", "content": user}],
-                tokenize=False,
-                add_generation_prompt=True,
-                enable_thinking=False,
-            )
-            inputs = self._processor(text, return_tensors="pt", add_special_tokens=False).to(self._input_device)
-            prompt_tokens = inputs["input_ids"].shape[-1]
+            raw, prompt_tokens, completion_tokens, hit_limit = self._generate_raw(system, user)
             trace["prompt_tokens"] = prompt_tokens
-            self._torch.manual_seed(42)
-            with self._torch.inference_mode():
-                generated = self._model.generate(
-                    **inputs,
-                    max_new_tokens=self.config.max_new_tokens,
-                    do_sample=False,
-                    use_cache=True,
-                    repetition_penalty=1.0,
-                )
-            trace["completion_tokens"] = generated.shape[-1] - prompt_tokens
-            trace["hit_generation_limit"] = trace["completion_tokens"] == self.config.max_new_tokens
-            raw = self._batch_decode(self._processor, generated[:, prompt_tokens:])[0].strip()
+            trace["completion_tokens"] = completion_tokens
+            trace["hit_generation_limit"] = hit_limit
             trace["raw_output"] = safe_provider_value(raw)
             trace["raw_json_valid"] = False
             trace["raw_schema_valid"] = False
