@@ -8,7 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "notebooks/Qwen_2B_v5_Structured_Output_Research_Colab.ipynb"
-SOURCE_COMMIT = "774ba274c54e9a0a36a8648160a15e15a15bb002"
+SOURCE_COMMIT = "a86313e5ff207ed5345027a4db3d2120e166f295"
 FPY_COMMIT = "04d52c015d1e3ecdefe92b87116f209361509b4b"
 
 
@@ -50,7 +50,7 @@ STUDY_DIR.mkdir(parents=True, exist_ok=True)
 
 PROJECT = Path('/content/SLM-FineTuning-Testing')
 FPY = Path('/content/fpy')
-SOURCE_COMMIT = '774ba274c54e9a0a36a8648160a15e15a15bb002'
+SOURCE_COMMIT = 'a86313e5ff207ed5345027a4db3d2120e166f295'
 FPY_COMMIT = '04d52c015d1e3ecdefe92b87116f209361509b4b'
 MODEL = 'Qwen/Qwen3.5-2B'
 MODEL_REVISION = '15852e8c16360a2fea060d615a32b45270f8a8fc'
