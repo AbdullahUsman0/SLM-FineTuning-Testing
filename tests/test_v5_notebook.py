@@ -119,7 +119,7 @@ class V5StructuredOutputNotebookTests(unittest.TestCase):
 
     def test_pins_implementation_and_dependency_commits(self):
         config = self.code['research-config']
-        self.assertIn('774ba274c54e9a0a36a8648160a15e15a15bb002', config)
+        self.assertIn('a86313e5ff207ed5345027a4db3d2120e166f295', config)
         self.assertIn('04d52c015d1e3ecdefe92b87116f209361509b4b', config)
         self.assertIn('15852e8c16360a2fea060d615a32b45270f8a8fc', config)
         self.assertIn('https://github.com/int-abd-5/fpy.git', self.code['research-source'])
