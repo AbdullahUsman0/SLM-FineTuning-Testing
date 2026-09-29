@@ -83,8 +83,8 @@ try:
     gpu = subprocess.check_output(
         ['nvidia-smi', '--query-gpu=name,memory.total', '--format=csv,noheader'], text=True
     ).strip()
-except Exception as exc:
-    raise RuntimeError('Select a CUDA GPU runtime before continuing.') from exc
+except Exception:
+    gpu = 'not available (transfer/export is still available; training requires CUDA)'
 print('GPU:', gpu)
 print('Run:', RUN)
 print('Checkpoint interval:', CHECKPOINT_INTERVAL)
@@ -192,6 +192,16 @@ print('RESUME DECISION:', f'{selected} (step {checkpoint_step(selected)})' if se
     train_cell["id"] = "portable-train"
     train_text = "".join(train_cell["source"])
     train_text = train_text.replace("output.mkdir(exist_ok=True)\n", "")
+    train_text = train_text.replace(
+        "output = RUN / 'full'\n",
+        "gpu_check = subprocess.run(\n"
+        "    ['nvidia-smi'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=False\n"
+        ")\n"
+        "if gpu_check.returncode != 0:\n"
+        "    raise RuntimeError('Training requires a CUDA GPU runtime. Transfer/export cells can run on CPU.')\n\n"
+        "output = RUN / 'full'\n",
+        1,
+    )
     train_text = train_text.replace("'--save-steps', '25',", "'--save-steps', str(CHECKPOINT_INTERVAL),")
     train_text = train_text.replace(
         "'--resume-from-checkpoint', 'auto',",

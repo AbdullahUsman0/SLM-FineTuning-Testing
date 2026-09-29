@@ -79,6 +79,8 @@ class V5PortableNotebookTests(unittest.TestCase):
         self.assertIn("'--minimum-resume-step', str(MINIMUM_RESUME_STEP)", train)
         self.assertIn("'--resume-from-checkpoint', 'auto'", train)
         self.assertNotIn('output.mkdir', train)
+        self.assertNotIn("raise RuntimeError('Select a CUDA GPU runtime", config)
+        self.assertIn('Training requires a CUDA GPU runtime', train)
 
     def test_transfer_bundle_is_verified_before_import(self):
         code = self.code['portable-import']
