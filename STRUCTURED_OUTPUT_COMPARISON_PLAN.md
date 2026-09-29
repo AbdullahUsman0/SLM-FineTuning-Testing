@@ -2,6 +2,8 @@
 
 Date: 2026-09-28
 
+Implementation status (2026-09-29): **complete and awaiting the frozen final 2B adapter for measurements**. Arms A-F, the deterministic v2 validation cohort, smoke and resumable validation runners, paired comparison, strict schemas, cost/workload gates, and the post-training Colab notebook are committed. See `evaluation/v5-structured-output/README.md` and `STRUCTURED_OUTPUT_RESEARCH_CHECKPOINT_2026-09-29.md`.
+
 ## Decision
 
 JSON and Pydantic are not competing output formats.
@@ -149,4 +151,3 @@ Suggested methods wording:
 Suggested novelty wording:
 
 > We study evidence-grounded, incremental requirements extraction for time-series forecasting with a locally deployable 2B language model and a 79-slot lifecycle schema. The evaluation covers dense multi-slot turns, corrections, conflicts, abstention, forbidden inference, state transitions, and structured-output reliability.
-

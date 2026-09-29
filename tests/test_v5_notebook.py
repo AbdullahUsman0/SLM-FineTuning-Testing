@@ -104,5 +104,42 @@ class V5PortableNotebookTests(unittest.TestCase):
         self.assertNotIn('sft/final.jsonl', all_code)
 
 
+class V5StructuredOutputNotebookTests(unittest.TestCase):
+    def setUp(self):
+        path = Path(__file__).resolve().parents[1] / 'notebooks/Qwen_2B_v5_Structured_Output_Research_Colab.ipynb'
+        self.notebook = json.loads(path.read_text(encoding='utf-8'))
+        self.code = {cell['id']: ''.join(cell['source']) for cell in self.notebook['cells'] if cell['cell_type'] == 'code'}
+
+    def test_all_code_cells_compile_cleanly(self):
+        for cell in self.notebook['cells']:
+            if cell['cell_type'] == 'code':
+                compile(''.join(cell['source']), cell['id'], 'exec')
+                self.assertEqual(cell['outputs'], [])
+                self.assertIsNone(cell['execution_count'])
+
+    def test_pins_implementation_and_dependency_commits(self):
+        config = self.code['research-config']
+        self.assertIn('774ba274c54e9a0a36a8648160a15e15a15bb002', config)
+        self.assertIn('04d52c015d1e3ecdefe92b87116f209361509b4b', config)
+        self.assertIn('15852e8c16360a2fea060d615a32b45270f8a8fc', config)
+        self.assertIn('https://github.com/int-abd-5/fpy.git', self.code['research-source'])
+
+    def test_expensive_arms_are_disabled_and_paid_key_is_ephemeral(self):
+        config = self.code['research-config']
+        paid = self.code['research-validation-f']
+        self.assertIn('RUN_SLOT_WISE_D = False', config)
+        self.assertIn('RUN_OPENAI_F = False', config)
+        self.assertIn("userdata.get('OPENAI_API_KEY')", paid)
+        self.assertIn("env.pop('OPENAI_API_KEY', None)", paid)
+        self.assertNotIn('.env', '\n'.join(self.code.values()).replace('os.environ', 'environment'))
+
+    def test_validation_is_resumable_and_final_is_absent(self):
+        all_code = '\n'.join(self.code.values())
+        self.assertIn('evaluate-structured-output-resumable.py', self.code['research-helpers'])
+        self.assertIn("for arm in ('B', 'A', 'C', 'E')", self.code['research-smoke'])
+        self.assertNotIn('final.jsonl', all_code)
+        self.assertNotIn('splits/final', all_code)
+
+
 if __name__ == '__main__':
     unittest.main()
