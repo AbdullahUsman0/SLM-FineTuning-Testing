@@ -147,6 +147,7 @@ def prepare(cases_path: Path, schemas_path: Path, output: Path) -> dict[str, Any
     cases_path, schemas_path, output = map(absolute, (cases_path, schemas_path, output))
     if output.exists():
         raise FileExistsError(f"output already exists: {output}")
+    source_repository = repository_state()
 
     scenarios, input_metadata = load_cases(cases_path, split="validation")
     input_metadata["path"] = portable_path(cases_path)
@@ -202,7 +203,7 @@ def prepare(cases_path: Path, schemas_path: Path, output: Path) -> dict[str, Any
                 "sealed_final_used": False,
             },
             "software": {
-                "repository": repository_state(),
+                "repository": source_repository,
                 "preparer_sha256": sha256(Path(__file__)),
                 "scorer_version": SCORER_VERSION,
                 "scorer_sha256": provider_provenance["scorer_sha256"],

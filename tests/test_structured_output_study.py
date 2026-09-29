@@ -64,7 +64,8 @@ class StructuredOutputStudyTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             output = Path(directory) / "already-there"
             output.mkdir()
-            with patch.object(self.study, "load_cases", side_effect=AssertionError("must not load")):
+            with patch.object(self.study, "repository_state", side_effect=AssertionError("must not inspect")), \
+                 patch.object(self.study, "load_cases", side_effect=AssertionError("must not load")):
                 with self.assertRaises(FileExistsError):
                     self.study.prepare(Path("cases"), Path("schemas"), output)
 
