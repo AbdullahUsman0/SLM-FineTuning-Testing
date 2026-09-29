@@ -1,0 +1,130 @@
+{
+  "arms": {
+    "A": {
+      "generation": "greedy prompt-only JSON",
+      "implementation_status": "available_in_evaluate_v5",
+      "name": "prompt_json_pydantic_no_retry",
+      "retries": 0,
+      "validation": "strict JSON parser then Pydantic"
+    },
+    "B": {
+      "generation": "same first attempt as A",
+      "implementation_status": "implemented",
+      "name": "prompt_json_pydantic_one_retry",
+      "retries": 1,
+      "validation": "strict JSON parser then Pydantic; compact validation feedback"
+    },
+    "C": {
+      "generation": "same model, adapter, prompt, greedy decoding and token limit as A with grammar enforcement",
+      "implementation_status": "implemented_xgrammar_0.2.7",
+      "name": "json_schema_constrained_pydantic",
+      "retries": 0,
+      "validation": "exported strict JSON Schema during decoding, then local Pydantic"
+    },
+    "D": {
+      "generation": "one control probe and one binary extraction probe per non-intent slot",
+      "implementation_status": "implemented_high_call_count_gate",
+      "name": "slot_wise_qa",
+      "retries": 0,
+      "validation": "Pydantic per probe, then Pydantic combined result"
+    },
+    "E": {
+      "generation": "no model; conservative regex and dictionaries with declared partial coverage",
+      "implementation_status": "implemented",
+      "name": "deterministic_rules",
+      "retries": 0,
+      "validation": "typed values, Pydantic result, and normal state reducer"
+    },
+    "F": {
+      "generation": "explicit external model snapshot with strict JSON Schema response format",
+      "implementation_status": "implemented_paid_gate",
+      "name": "openai_structured_outputs",
+      "retries": 0,
+      "validation": "provider schema enforcement followed by local strict parser and Pydantic"
+    }
+  },
+  "call_plan": {
+    "call_count": 948,
+    "category_counts": {
+      "abstention": 48,
+      "confirmed_conflict": 75,
+      "correction": 45,
+      "dense": 176,
+      "medium": 504,
+      "selected_short": 100
+    },
+    "cluster_count": 231,
+    "file": "call-plan.jsonl",
+    "ordered_context_gold_sha256": "841ab1ccc6a5b951f81bab22730a6937b79ec5fefbbd2c3ee938b498b7d145a4",
+    "ordered_keys_sha256": "2aed53cfbaf77b7b77091cd42580e56a6da597b01120992b28f9bd2c5e7127fd",
+    "scenario_count": 231,
+    "sha256": "7ce103ded235c5c9558868c9b99bf1519552fadbdcb50c25d4dd73cef19a9069",
+    "task_counts": {
+      "ask": 231,
+      "extract": 717
+    }
+  },
+  "comparison_contract": {
+    "paired_cluster_bootstrap": {
+      "samples": 10000,
+      "seed": 42,
+      "unit": "source scenario cluster"
+    },
+    "primary_metric": "non-intent exact slot micro F1",
+    "raw_text_retained_before_parsing": true,
+    "same_first_attempt_for_A_and_B": true,
+    "sealed_final_used": false,
+    "semantic_validation_after_generation_in_all_arms": true
+  },
+  "created_at_utc": "2026-09-29T23:17:35.857356+00:00",
+  "forecasting_schema_sha256": "6e3534f1db7043b62e9604dafd466c4b3d049ad57fd5da7c0d53a1883403a5a3",
+  "input": {
+    "candidate_id": null,
+    "path": "corpus-v5/v5-20260919-r1/splits/validation.jsonl",
+    "selection_manifest_sha256": null,
+    "sha256": "a98327f81de8379db36d3a71e6f7bc4bde2263d54356d8e48d47e6194beade72",
+    "split": "validation"
+  },
+  "schema": {
+    "directory": "evaluation/v5-structured-output/schemas",
+    "files": {
+      "extractor-result.schema.json": {
+        "bytes": 5078,
+        "sha256": "93bfe76e70e824f6ca24101c92bdb5c6ff57eae2d89b9e31f658ed207cb5f9ef"
+      },
+      "question-output.schema.json": {
+        "bytes": 400,
+        "sha256": "1ef8d3a2c1d6913d891530b56ff621fbf93c5ba4f93695f4b3acee3207a8eea4"
+      }
+    },
+    "json_schema_dialect": "2020-12",
+    "manifest_sha256": "3eb158b7f8d17de82ac0e1cff9fabb875046738461653c5b4f1de470255b6c52",
+    "pydantic_version_at_export": "2.13.5",
+    "slot_count": 79
+  },
+  "software": {
+    "dependency_sha256": "bc56f5ab38f877f3645372c0a9cc013900de8008aeef2f6d3ca140594703b3ba",
+    "fpy_revision": "04d52c015d1e3ecdefe92b87116f209361509b4b",
+    "preparer_sha256": "10a1f4863e433e7a30d5001c2a9bf921d39da222cb47163e7ccf9d5a612ee6f6",
+    "prompt_sha256": "f393d035f74768398e594fd90eb4df244f6786f1e32d992db520af7f282f34b0",
+    "repository": {
+      "dirty": false,
+      "revision": "5fd896ab77810872ce044062e53a4008662bf25d"
+    },
+    "scorer_sha256": "1e25f8908dc47f350260a68f6be5e1cea9189368342316c78ab4b721fe4f28da",
+    "scorer_version": "v5-raw-exact-1",
+    "versions": {
+      "accelerate": null,
+      "numpy": "2.3.5",
+      "openai": null,
+      "peft": null,
+      "pydantic": "2.13.5",
+      "safetensors": null,
+      "tokenizers": null,
+      "torch": null,
+      "transformers": null
+    }
+  },
+  "status": "prepared_validation_only",
+  "study_version": "v5-structured-output-2"
+}
