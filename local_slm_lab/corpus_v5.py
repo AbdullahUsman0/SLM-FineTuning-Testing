@@ -484,9 +484,10 @@ def canonical_check(slot_id: str, value: Any, schema) -> None:
         raise ValueError(f"invalid canonical value for {slot_id}")
 
 
-def validate_scenario(scenario: dict, schema=None) -> None:
+def validate_scenario(scenario: dict, schema=None, *, renderer=None) -> None:
     """Validate without printing source facts or labels (also used for final)."""
     schema = schema or load_schema()
+    renderer = renderer or render_turn
     sid = scenario["scenario_id"]
     if scenario["schema_version"] != schema.version or scenario["source_fact_id"] != f"{sid}/fact-table":
         raise ValueError("schema or source identity mismatch")
@@ -515,7 +516,7 @@ def validate_scenario(scenario: dict, schema=None) -> None:
             context = {}
         if turn["context_slots"] != context:
             raise ValueError("context/fact mismatch")
-        expected_message, expected_spans = render_turn(selected_facts, variant=turn["variant"], family=scenario["template_family"],
+        expected_message, expected_spans = renderer(selected_facts, variant=turn["variant"], family=scenario["template_family"],
             category=turn["render_category"], selected_slot=turn["selected_slot"], boundary=turn["boundary"])
         if turn["message"] != expected_message or turn["evidence_spans"] != expected_spans:
             raise ValueError("evidence/text/atom mismatch (including polarity or numbers)")
