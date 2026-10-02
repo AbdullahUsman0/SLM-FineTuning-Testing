@@ -1,6 +1,6 @@
 # Weather and economics v6 candidate
 
-The first candidate is `v6-20261002-r2`: 2,000 source scenarios, 8,320 SFT
+The first candidate is `v6-20261002-r3`: 2,000 source scenarios, 8,320 SFT
 examples, 20 subdomains, and the unchanged pinned 79-slot schema.
 
 Agreed mixture: 600 weather scenarios, 1,200 economics scenarios, and 200
@@ -8,7 +8,7 @@ weather–economics combined scenarios. Entity-group splits are 1,400 / 300 / 30
 training / validation / final. Final labels are absent from this public package.
 
 Read [the protocol](../V6_WEATHER_ECONOMICS_PLAN.md) and the generated
-[review sample](reviews/v6-20261002-r2-sample.md).
+[review sample](reviews/v6-20261002-r3-sample.md).
 The candidate is **machine validated, human review pending, untrained**.
 v5's prior user-confirmed review does not constitute review of these new cases.
 
@@ -32,7 +32,7 @@ There are 78 positive slots; `authentication_reference` is excluded because the
 prompt redacts secret references. All required slots have positive coverage.
 
 ```text
-python scripts/verify-corpus-v6.py --output corpus-v6/v6-20261002-r2
+python scripts/verify-corpus-v6.py --output corpus-v6/v6-20261002-r3
 ```
 
 To rebuild a **new** immutable revision, with the pinned sibling fpy checkout:

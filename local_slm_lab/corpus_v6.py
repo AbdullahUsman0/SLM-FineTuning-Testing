@@ -22,7 +22,7 @@ from forecasting_assistant.application.clarification import select_next_slot
 from forecasting_assistant.application.state_reducer import apply_extraction
 from forecasting_assistant.domain.models import ExtractorResult
 
-VERSION = "v6-20261002-r2"
+VERSION = "v6-20261002-r3"
 SEED = "v6-weather-economics-1"
 TEMPLATES = {
     "train": ("direct", "planning_note", "email", "requirements_meeting"),
@@ -102,7 +102,7 @@ PROFILES = (
         ("wheat cash price", "USD per metric tonne", "wheat_cash"),
         ("natural-gas front-month settlement price", "USD per MMBtu", "gas_settlement"))),
     ("crypto_spot", "economics", "digital-asset research analyst", "calendar", "hour", (
-        ("BTC/USD spot closing price on a 24/7 UTC series", "USD per BTC", "btc_usd_close"),
+        ("BTC/USD spot closing price", "USD per BTC", "btc_usd_close"),
         ("ETH/USD spot traded volume in base asset units", "ETH", "eth_volume"),
         ("BTC/USD hourly log return", "percent", "btc_log_return"),
         ("digital-asset market capitalization", "millions of USD", "crypto_market_cap"))),
@@ -286,6 +286,8 @@ def render_turn(facts, *, variant, family, category, selected_slot=None, boundar
             "privacy": ("I cannot provide the access policy or credentials; do not invent them.", "Access details are unknown. Ask the owner for an authorized reference.", "I have no approved access reference or privacy policy yet."),
         }
         parts.append(PREFIX[family][variant] + options[boundary][variant])
+    if parts and category!="abstention":
+        parts[0]=PREFIX[family][variant]+parts[0]
     ordered = list(facts)
     if variant == 1:
         ordered.reverse()
@@ -305,7 +307,7 @@ def render_turn(facts, *, variant, family, category, selected_slot=None, boundar
             # Bare string values are natural exact text; list/object values retain
             # explicit JSON so the requested structure is unambiguous.
             text = fmt.format(v=value if isinstance(value,str) else base.surface(value))
-        text = PREFIX[family][variant] + text + "."
+        text = (PREFIX[family][variant] if not parts else "") + text + "."
         start = len(" ".join(parts)) + bool(parts)
         parts.append(text)
         spans.append({"source_fact_id":fact["source_fact_id"], "slot_id":slot,
@@ -342,7 +344,10 @@ def build_scenario(row, version, schema=None):
         n = 3+i%6 if category=="medium" else 9+i%6
         # A domain-rich core alternates with full lifecycle coverage. Dense
         # requests always specify target, units, frequency, and horizon together.
-        slots = list(CORE[:4])+["business_goal"] if category=="dense" else ["target_description",CORE[1+i%6],"business_goal"]
+        slots = (list(CORE[:4])+["business_goal"] if category=="dense" else
+                 list(dict.fromkeys(["target_description","frequency",CORE[1+i%6],"business_goal"])))
+        if values["target_unit"].casefold() in values["target_description"].casefold() and "target_unit" not in slots:
+            slots.append("target_unit")
         if row["domain_family"]=="combined":
             slots.extend(["past_covariates","external_covariate_sources"])
         offset=(i*11+list(PROFILE).index(row["domain"])*17)%len(eligible)
@@ -370,7 +375,9 @@ def build_scenario(row, version, schema=None):
             "kilometres per hour":"metres per second","hectopascals":"kilopascals"}
         if corrected=="target_unit" and values[corrected] not in unit_changes:
             corrected="source_reference"
-        prior_slots=list(dict.fromkeys(["intent","target_description","business_goal",corrected]))
+        prior_slots=list(dict.fromkeys(["intent","target_description","frequency","business_goal",corrected]))
+        if values["target_unit"].casefold() in values["target_description"].casefold() and "target_unit" not in prior_slots:
+            prior_slots.append("target_unit")
         prior=[base.atom(sid,"t1",s,values[s]) for s in prior_slots]
         context={f["slot_id"]:f["value"] for f in prior}
         if corrected in {"forecast_horizon","frequency"}:
@@ -378,7 +385,10 @@ def build_scenario(row, version, schema=None):
         elif corrected=="target_unit":
             values[corrected]=unit_changes[values[corrected]]
         elif corrected=="target_description":
-            values[corrected]=source_values({**row,"target_variant":(i+1)%len(PROFILE[row['domain']][-1])},schema)[corrected]
+            alternatives=[source_values({**row,"target_variant":j},schema) for j in range(len(PROFILE[row['domain']][-1]))]
+            compatible=[v for v in alternatives if v[corrected]!=values[corrected] and
+                        v["target_unit"]==values["target_unit"] and v["frequency"]==values["frequency"]]
+            values[corrected]=(compatible[0][corrected] if compatible else values[corrected]+" at the revised synthetic measurement scope")
         elif corrected=="calendar_type":
             values[corrected]="custom" if values[corrected]!="custom" else "calendar"
         elif corrected=="source_reference":
