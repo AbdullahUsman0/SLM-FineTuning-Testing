@@ -119,6 +119,20 @@ class CorpusV6Tests(unittest.TestCase):
                 self.assertFalse(result["final_labels_parsed"])
                 self.assertTrue(result["sealed_hashes_checked"])
                 self.assertFalse(manifest["trainable"])
+                spec=importlib.util.spec_from_file_location("v6_prepare_roundtrip",v6.PROJECT_ROOT/"scripts/prepare-v6-training.py")
+                prepare=importlib.util.module_from_spec(spec); spec.loader.exec_module(prepare)
+                approval=Path(d)/"approval.json"
+                approval.write_text(json.dumps({"corpus_manifest_sha256":v6.base.file_record(public/"manifest.json")["sha256"],
+                    "reviewer":"miniature fixture reviewer","reviewed_at_utc":"2026-10-02T00:00:00Z",
+                    "review_ledger_sha256":"a"*64,"training_labels_approved":True,"validation_labels_approved":True,
+                    "overlap_review_complete":True,"final_labels_used_for_training_or_selection":False}))
+                inputs=Path(d)/"prepared-inputs"
+                lock=prepare.prepare(public,inputs,approval)
+                self.assertFalse(lock["final_labels_accessed"])
+                self.assertEqual(lock["files"]["train.jsonl"]["sha256"],manifest["files"]["sft/train.jsonl.gz"]["uncompressed_sha256"])
+                self.assertFalse((inputs/"final.jsonl").exists())
+                with self.assertRaises(FileExistsError):
+                    prepare.prepare(public,inputs,approval)
                 path=public/"sft/train.jsonl.gz"
                 payload=path.read_bytes(); path.write_bytes(payload+b"x")
                 with self.assertRaisesRegex(ValueError,"hash/size"):
