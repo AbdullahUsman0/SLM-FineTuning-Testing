@@ -1,0 +1,182 @@
+{
+  "status": "passed",
+  "pins": {
+    "repo": "b0a3a74f299aa6ecf0d3d30c4623136e4c89b306",
+    "fpy": "04d52c015d1e3ecdefe92b87116f209361509b4b"
+  },
+  "run": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v5-anydesk-20261001T141017Z",
+  "train_run": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v5-anydesk-20261001T141017Z",
+  "manifest_sha256": "0ca890459933b589aa0c5a866e890324c8f4467bbe08ad20cfa335ece48cecc1",
+  "run_fingerprint": "e1a8a53f78f8168fe7f9bd5f0682875d6853ef7f48aac9890421555d851c2088",
+  "input_hashes": {
+    "train": "973de971595ec388a4d9efeb795d89bec547791831697a779898661b234d820a",
+    "validation": "67b168991e5d4bc64375615084bdb927fc15c204356844a82ae5e651ed173f8d"
+  },
+  "checkpoint_steps": [
+    10,
+    20,
+    30,
+    40,
+    50,
+    60,
+    70,
+    80,
+    90,
+    100,
+    110,
+    120,
+    130,
+    140,
+    150,
+    160,
+    170,
+    180,
+    190,
+    200,
+    210,
+    220,
+    230,
+    240,
+    250,
+    260,
+    270,
+    280,
+    290,
+    300,
+    310,
+    320,
+    330,
+    340,
+    350,
+    360,
+    370,
+    380,
+    390,
+    400,
+    410,
+    420,
+    430,
+    440,
+    450,
+    460,
+    470,
+    480,
+    490,
+    500,
+    510,
+    520,
+    530,
+    540,
+    550,
+    556
+  ],
+  "final_step": 556,
+  "final_epoch": 2.0,
+  "adapter_files": {
+    "adapter_model.safetensors": {
+      "bytes": 67332688,
+      "sha256": "e97f5e9808713a1daaaa105b3251b96f2f273834eca0e4e6da53989c652d7080"
+    },
+    "adapter_config.json": {
+      "bytes": 1413,
+      "sha256": "fd6f87135e9a032d0bdbeed093a379d5f3871d4796888df27dcacb032be3ac50"
+    }
+  },
+  "core_adapter_bytes": 67334101,
+  "adapter_tensor_count": 372,
+  "nonzero_adapter_tensors": 372,
+  "final_adapter_matches_checkpoint_556": true,
+  "adapter_directory_bytes": 87343831,
+  "original_started_utc": "2026-10-01T14:20:07.614113+00:00",
+  "completed_utc": "2026-10-02T08:39:16.300720+00:00",
+  "wall_elapsed_seconds_including_interruptions": 65948.686607,
+  "trainer_elapsed_seconds_by_attempt_approximate": [
+    5976,
+    15414,
+    11213
+  ],
+  "total_trainer_elapsed_seconds_approximate": 32603,
+  "timing_basis": "Sum of final tqdm elapsed times for each attempt; includes epoch validation and replayed steps, excludes standalone final evaluation",
+  "final_training_metrics": {
+    "train_runtime": "1.121e+04",
+    "train_samples_per_second": "0.791",
+    "train_steps_per_second": "0.05",
+    "train_loss": "6.567e-06",
+    "epoch": "2"
+  },
+  "final_evaluation": {
+    "eval_loss": 3.3780084777390584e-05,
+    "eval_runtime": 701.0396,
+    "eval_samples_per_second": 1.352,
+    "eval_steps_per_second": 1.352,
+    "eval_entropy": 0.00021484402312716875,
+    "eval_num_tokens": 6106544.0,
+    "eval_mean_token_accuracy": 0.9999938692724655,
+    "epoch": 2.0,
+    "adapter_selection": {
+      "best-adapter": "final-step adapter; frequent durability checkpoints retained for later behavioral selection",
+      "task_winner_selected": false,
+      "behavioral_selection": "pending; compare all retained checkpoints separately",
+      "loss_best_checkpoint": null
+    }
+  },
+  "last_logged_training_window": {
+    "entropy": 0.0002151241130377457,
+    "epoch": 1.9993235625704622,
+    "grad_norm": 0.0002627828798722476,
+    "learning_rate": 1.5963037898913958e-09,
+    "loss": 1.9928252731915565e-05,
+    "mean_token_accuracy": 1.0,
+    "num_tokens": 6100056.0,
+    "step": 555
+  },
+  "training_loss_accounting_note": "Transformers 5.15 resets the accumulated loss on resume and divides by the restored total global step. Its final train_loss is not an uninterrupted two-epoch mean; report the last logged training window separately.",
+  "epoch_validation_metrics": [
+    {
+      "epoch": 1.0,
+      "eval_entropy": 0.00027162107224146985,
+      "eval_loss": 4.29264509875793e-05,
+      "eval_mean_token_accuracy": 0.9999938692724655,
+      "eval_num_tokens": 5748464.0,
+      "eval_runtime": 672.4352,
+      "eval_samples_per_second": 1.41,
+      "eval_steps_per_second": 1.41,
+      "step": 278
+    },
+    {
+      "eval_loss": "3.378e-05",
+      "eval_runtime": "714.4",
+      "eval_samples_per_second": "1.327",
+      "eval_steps_per_second": "1.327",
+      "eval_entropy": "0.0002148",
+      "eval_num_tokens": "6.107e+06",
+      "eval_mean_token_accuracy": "1",
+      "epoch": "2"
+    }
+  ],
+  "smoke": {
+    "status": "passed",
+    "input": "I want to forecast daily electricity demand for the next 7 days using a CSV file.",
+    "output": {
+      "intent": "create_forecast",
+      "intent_confidence": 1.0,
+      "updates": [
+        {
+          "slot_id": "forecast_horizon",
+          "candidate_value": {
+            "periods": 7,
+            "unit": "day"
+          },
+          "status": "provided",
+          "confidence": 1.0,
+          "evidence_text": "I want to forecast daily electricity demand for the next 7 days"
+        }
+      ],
+      "correction_detected": false,
+      "unsupported_claims": []
+    },
+    "model_class": "PeftModel",
+    "device": "cuda:0",
+    "purpose": "Adapter loading and single synthetic response only; not task-quality evaluation."
+  }
+}
