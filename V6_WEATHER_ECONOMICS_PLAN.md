@@ -65,6 +65,9 @@ Use 70/15/15 per subdomain: 1,400 training, 300 validation and 300 final scenari
 Training, validation and final each use disjoint named template-family pools.
 Actual lexical clauses and the application schema remain shared: the template
 family holdout is not proof of linguistic independence.
+Entity holdout refers to fictional observation scopes. Public target definitions
+and common instrument names such as BTC/USD and EUR/USD recur across splits;
+this revision does not establish transfer to unseen real instruments or countries.
 
 Final labels live in ignored training-runs/v6-sealed/v6-20261002-r4, absent from
 GitHub. The seal is procedural. The public deterministic builder could regenerate

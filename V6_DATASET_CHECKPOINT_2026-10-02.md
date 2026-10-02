@@ -41,6 +41,8 @@ There are zero exact/normalized full model-input duplicates, zero entity groups
 crossing splits and zero named template families crossing splits. An exhaustive
 representative cross-split Jaccard audit flagged **10,219 pairs**, all unresolved.
 This is not a zero semantic leakage claim. Clauses and schema wording are shared.
+Entity groups are fictional scopes; common target/instrument definitions recur
+across splits. Do not claim unseen real-instrument or country transfer from this split.
 
 ## Provenance and files
 
