@@ -1,4 +1,7 @@
 /corpus-v5/** -text
+/corpus-v6/** -text
+/local_slm_lab/corpus_v6.py text eol=lf
+/scripts/*v6*.py text eol=lf
 /local_slm_lab/v5_*.py text eol=lf
 /local_slm_lab/corpus_v5.py text eol=lf
 /scripts/*v5*.py text eol=lf
