@@ -22,7 +22,7 @@ from forecasting_assistant.application.clarification import select_next_slot
 from forecasting_assistant.application.state_reducer import apply_extraction
 from forecasting_assistant.domain.models import ExtractorResult
 
-VERSION = "v6-20261002-r3"
+VERSION = "v6-20261002-r4"
 SEED = "v6-weather-economics-1"
 TEMPLATES = {
     "train": ("direct", "planning_note", "email", "requirements_meeting"),
@@ -186,6 +186,8 @@ def source_values(row, schema=None):
     freq_unit = ("hour" if description.startswith("hourly") else "day" if description.startswith("daily")
                  else "week" if description.startswith("weekly") else "month" if "industrial production" in description else default_unit)
     negative = any(term in description for term in ("temperature", "dew point", "growth", "change", "return", "spread", "balance", "cash flow", "funding rate", "basis", "spot price with"))
+    if column in {"cpi_yoy","core_cpi_mom_sa","policy_rate","yield_10y"}:
+        negative=True
     if domain == "precipitation" or domain == "wind":
         negative = False
     bounds = {"min": -100 if negative else 0, "max": 1000000}
@@ -195,6 +197,22 @@ def source_values(row, schema=None):
         bounds = {"min": 0, "max": 1}
     if "wind direction" in description:
         bounds = {"min": 0, "max": 360}
+    weather_bounds={
+        "tmax_c":(-100,70),"tmin_c":(-100,70),"temp_c":(-100,70),"dewpoint_c":(-100,70),
+        "tmean_f":(-148,158),"rain_mm":(0,2000),"hourly_rain_mm":(0,1000),
+        "weekly_precip_mm":(0,4000),"snow_cm":(0,500),"wind_ms":(0,100),"gust_ms":(0,150),
+        "wind_kmh":(0,360),"rh_pct":(0,100),"daily_rh_pct":(0,100),"pressure_hpa":(800,1100),
+        "ghi_wm2":(0,1600),"dni_wm2":(0,1600),"cloud_pct":(0,100),"sunshine_hours":(0,24),
+        "frost_days":(0,7),"unemployment_pct":(0,100),"participation_pct":(0,100),"vacancy_pct":(0,100),
+    }
+    if column in weather_bounds:
+        low,high=weather_bounds[column]; bounds={"min":low,"max":high}
+    if domain=="weather_energy":
+        weather_driver=("observed_temperature","observed_temperature","observed_heating_degree_days","observed_irradiance")[i%4]
+    elif domain=="weather_agriculture":
+        weather_driver=("observed_precipitation","observed_rainfall","observed_temperature","observed_soil_moisture")[i%4]
+    else:
+        weather_driver=None
     values.update({
         "target_description": f"{description} for {entity}", "target_column": column,
         "target_unit": unit, "target_bounds": bounds, "allow_negative_values": negative,
@@ -221,10 +239,10 @@ def source_values(row, schema=None):
         "known_seasonality": bool(i%2), "seasonal_periods": [24,168] if freq_unit=='hour' else [12] if freq_unit=='month' else [4] if freq_unit=='quarter' else [7,365],
         "holidays": ["synthetic market closure"] if calendar=='trading' else ["synthetic reporting holiday"],
         "special_events": [{"date": "2026-10-05", "name": "synthetic weather alert" if family=='weather' else "synthetic scheduled data release"}],
-        "past_covariates": ["observed_temperature"] if family=='combined' else ["lagged_target"],
+        "past_covariates": [weather_driver] if family=='combined' else ["lagged_target"],
         "known_future_covariates": ["announced_calendar_event"], "static_features": ["scope_elevation"] if family=='weather' else ["scope_sector"],
         "covariate_availability": [{"name":"announced_calendar_event", "available":"announced before cutoff"}],
-        "external_covariate_sources": [{"name":"observed_temperature", "source":"synthetic_station_archive"}] if family=='combined' else [{"name":"announced_calendar_event", "source":"synthetic_calendar"}],
+        "external_covariate_sources": [{"name":weather_driver, "source":"synthetic_station_archive"}] if family=='combined' else [{"name":"announced_calendar_event", "source":"synthetic_calendar"}],
         "scenario_forecasts": [{"name":"stress", "description":"synthetic extreme-weather scenario" if family=='combined' else "synthetic planning sensitivity"}],
         "output_granularity": f"{freq_unit}ly per scope" if freq_unit in {'hour','month'} else f"one row per {freq_unit} per scope",
         "privacy_constraints": ["synthetic data only", "no external redistribution"],

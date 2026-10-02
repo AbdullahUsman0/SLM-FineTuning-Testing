@@ -59,8 +59,13 @@ class CorpusV6Tests(unittest.TestCase):
             if row["domain"]=="temperature":
                 self.assertTrue(values["allow_negative_values"])
                 self.assertLess(values["target_bounds"]["min"],0)
+                self.assertLess(values["target_bounds"]["max"],200)
             if row["domain"]=="precipitation":
                 self.assertFalse(values["allow_negative_values"])
+            if row["domain"]=="inflation_prices" and row["index"]%4 in {1,2}:
+                self.assertTrue(values["allow_negative_values"])
+            if row["domain_family"]=="combined":
+                self.assertEqual(values["past_covariates"][0],values["external_covariate_sources"][0]["name"])
             for slot,value in values.items():
                 v6.base.canonical_check(slot,value,self.schema)
 

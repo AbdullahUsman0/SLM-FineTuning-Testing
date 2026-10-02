@@ -66,7 +66,7 @@ Training, validation and final each use disjoint named template-family pools.
 Actual lexical clauses and the application schema remain shared: the template
 family holdout is not proof of linguistic independence.
 
-Final labels live in ignored training-runs/v6-sealed/v6-20261002-r3, absent from
+Final labels live in ignored training-runs/v6-sealed/v6-20261002-r4, absent from
 GitHub. The seal is procedural. The public deterministic builder could regenerate
 them, so independent evaluation still requires a separate final custodian.
 The verifier hashes final bytes only when explicitly given the sealed path and
@@ -88,7 +88,7 @@ No zero-leakage claim is made while those flags are unresolved.
    Lexical overlap alone is not automatically semantic leakage.
 4. Add independently authored human requests, especially short colloquial requests,
    unquoted values, ambiguity, implied corrections, distractor numbers and negation.
-   Rebuild as a new immutable revision after edits; do not mutate the frozen r3.
+   Rebuild as a new immutable revision after edits; do not mutate the frozen r4.
 5. Add controlled contrast sets for macro release vintages and corporate-action
    handling in a later revision if they become central claims. Do not imply that
    free-text target alternatives cover every economic index or release policy.
@@ -106,8 +106,8 @@ training/validation SFT plus development component cases to a new input folder.
 After review, run:
 
 ```text
-python scripts/verify-corpus-v6.py --output corpus-v6/v6-20261002-r3
-python scripts/prepare-v6-training.py --corpus corpus-v6/v6-20261002-r3 --output <NEW_RUN>/inputs --review-approval <REVIEW_APPROVAL.json>
+python scripts/verify-corpus-v6.py --output corpus-v6/v6-20261002-r4
+python scripts/prepare-v6-training.py --corpus corpus-v6/v6-20261002-r4 --output <NEW_RUN>/inputs --review-approval <REVIEW_APPROVAL.json>
 ```
 
 The approval must match manifest SHA-256 and include reviewer, timestamp, ledger
