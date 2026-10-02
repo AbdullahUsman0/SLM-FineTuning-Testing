@@ -22,7 +22,7 @@ from forecasting_assistant.application.clarification import select_next_slot
 from forecasting_assistant.application.state_reducer import apply_extraction
 from forecasting_assistant.domain.models import ExtractorResult
 
-VERSION = "v6-20261002-r1"
+VERSION = "v6-20261002-r2"
 SEED = "v6-weather-economics-1"
 TEMPLATES = {
     "train": ("direct", "planning_note", "email", "requirements_meeting"),
@@ -429,7 +429,7 @@ def build_scenario(row, version, schema=None):
     mentioned={f["slot_id"] for f in facts+prior}
     return {"scenario_id":sid,"source_fact_id":f"{sid}/fact-table","corpus_version":version,
         "schema_version":schema.version,"split":row["split"],"domain":row["domain"],
-        "domain_family":row["domain_family"],"entity_group":row["entity_group"],"category":category,
+        "domain_family":row["domain_family"],"entity_group":row["entity_group"],"cluster_id":row["entity_group"],"category":category,
         "template_family":row["template_family"],"language":"en","origin":"fictional_synthetic_fact_table",
         "reviewer_status":base.REVIEW_STATUS,"parent_id":None,"turns":turns,"source_facts":prior+facts+context_facts,
         "gold_intent":last["gold_extraction"]["intent"],"gold_final_slots":gold,
@@ -453,6 +453,8 @@ def sft_examples(scenario,schema=None):
 def validate_scenario(scenario,schema=None):
     if scenario["domain"] not in PROFILE or scenario["domain_family"]!=PROFILE[scenario["domain"]][1]:
         raise ValueError("domain taxonomy mismatch")
+    if scenario.get("cluster_id")!=scenario["entity_group"]:
+        raise ValueError("bootstrap cluster must match the held-together entity group")
     base.validate_scenario(scenario,schema,renderer=partial(render_turn,domain=scenario["domain"]))
 
 

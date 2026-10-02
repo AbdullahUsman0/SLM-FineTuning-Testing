@@ -36,6 +36,7 @@ class CorpusV6Tests(unittest.TestCase):
         self.assertEqual(len(self.schema.slots),79)
         self.assertEqual(v6.validate_collection(self.cases,self.plan)["exact_model_input_duplicates"],0)
         for case in self.cases:
+            self.assertEqual(case["cluster_id"],case["entity_group"])
             self.assertNotEqual(case["reviewer_status"],"human_accepted")
             examples=list(v6.sft_examples(case))
             self.assertEqual(len(examples),len(case["turns"])+1)
