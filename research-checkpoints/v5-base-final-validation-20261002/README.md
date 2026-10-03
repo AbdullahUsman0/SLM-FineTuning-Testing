@@ -1,6 +1,7 @@
 # V5 training audit and matched base versus final-adapter validation
 
-Status: validation is running; behavioral results are pending.
+Status: validation is complete. Read the [comparison and study files](results/README.md)
+and [interpretation of the results](ANALYSIS.md).
 
 The completed training run reached optimizer step 556 and epoch 2.0. Its final
 adapter matches checkpoint 556 exactly; all 56 retained checkpoints passed the

@@ -15,7 +15,7 @@ class ValidationPackageTests(unittest.TestCase):
         spec = importlib.util.spec_from_file_location('package_test', ROOT / 'scripts/package-base-final-validation.py')
         package = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(package)
-        from local_slm_lab.v5_eval import evaluate, load_cases, load_schema, sha256
+        from local_slm_lab.v5_eval import evaluate, load_cases, load_schema, sha256, score_records
 
         class Provider:
             async def extract(self, message, state):
@@ -40,6 +40,9 @@ class ValidationPackageTests(unittest.TestCase):
             package.write_json(training / 'completion-audit.json', {'status': 'passed'})
             (training / 'TRAINING_COMPLETION_SUMMARY.md').write_text('Test summary', encoding='utf-8')
             candidate = copy.deepcopy(base)
+            base['records'][0]['emitted'] = {'updates': [{'slot_id': 'holdout_window',
+                'candidate_value': 5, 'status': 'provided'}]}
+            base['metrics'] = score_records(base['records'], [s.slot_id for s in load_schema().slots])
             candidate['metadata']['settings']['provider'] = 'lora'
             candidate['metadata']['settings']['adapter_sha256'] = {p.name: sha256(p) for p in adapter.iterdir()}
             for name, report in (('base', base), ('lora', candidate)):
@@ -47,6 +50,8 @@ class ValidationPackageTests(unittest.TestCase):
                 package.write_json(root / name / 'combined-report.json', report)
             comparison = package.package(root, training, root / 'published')
             self.assertEqual(comparison['runtime_differences'], [])
+            csv_text = (root / 'published/per-slot.csv').read_text(encoding='utf-8')
+            self.assertIn('holdout_window,0.0,0.0,0.0,0.0,0.0,0.0', csv_text)
             self.assertEqual(comparison['nonintent']['delta'], 0)
             with gzip.open(root / 'published/lora-validation.json.gz', 'rt', encoding='utf-8') as handle:
                 self.assertEqual(json.load(handle)['records'], candidate['records'])

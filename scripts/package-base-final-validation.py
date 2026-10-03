@@ -11,11 +11,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from local_slm_lab.v5_eval import paired_bootstrap, sha256, strict_json, confusion
+from local_slm_lab.v5_eval import paired_bootstrap, sha256, strict_json, confusion, prf
 
 
 def write_json(path, value):
-    path.write_text(json.dumps(value, indent=2, ensure_ascii=False, allow_nan=False) + '\n', encoding='utf-8')
+    path.write_text(json.dumps(value, indent=2, ensure_ascii=False, allow_nan=False) + '\n', encoding='utf-8', newline='\n')
 
 
 def package(run_root, training_run, output):
@@ -58,17 +58,22 @@ def package(run_root, training_run, output):
         write_json(output / f'{name}-metrics.json', {'metrics': report['metrics'],
                    'category_metrics': report['category_metrics'], 'metadata': report['metadata']})
     write_json(output / 'comparison.json', comparison)
-    shutil.copyfile(training_run / 'TRAINING_COMPLETION_SUMMARY.md', output / 'training-summary.md')
-    shutil.copyfile(training_run / 'completion-audit.json', output / 'training-audit.json')
+    for source, name in (('TRAINING_COMPLETION_SUMMARY.md', 'training-summary.md'),
+                         ('completion-audit.json', 'training-audit.json')):
+        (output / name).write_text((training_run / source).read_text(encoding='utf-8'),
+                                  encoding='utf-8', newline='\n')
     with (output / 'per-slot.csv').open('w', newline='', encoding='utf-8') as handle:
-        writer = csv.writer(handle)
+        writer = csv.writer(handle, lineterminator='\n')
         writer.writerow(['slot', 'base_precision', 'base_recall', 'base_f1', 'adapter_precision', 'adapter_recall', 'adapter_f1'])
-        for slot, values in reports['base']['metrics']['per_slot'].items():
-            candidate = reports['lora']['metrics']['per_slot'][slot]
+        base_slots = reports['base']['metrics']['per_slot']
+        adapter_slots = reports['lora']['metrics']['per_slot']
+        for slot in sorted(set(base_slots) | set(adapter_slots)):
+            values = base_slots.get(slot, prf(0, 0, 0))
+            candidate = adapter_slots.get(slot, prf(0, 0, 0))
             writer.writerow([slot] + [values[key] for key in ('precision', 'recall', 'f1')]
                             + [candidate[key] for key in ('precision', 'recall', 'f1')])
     with (output / 'paired-extraction-errors.csv').open('w', newline='', encoding='utf-8') as handle:
-        writer = csv.writer(handle)
+        writer = csv.writer(handle, lineterminator='\n')
         writer.writerow(['scenario', 'category', 'call_key', 'message', 'gold', 'base_output', 'adapter_output',
                          'base_tp_fp_fn', 'adapter_tp_fp_fn', 'base_success', 'adapter_success'])
         right = {tuple(record['key']): record for record in reports['lora']['records']}
@@ -144,7 +149,7 @@ directories. Then use `scripts/compare-v5.py --left BASE/combined-report.json
 Adapter weights remain at the local path recorded in the metadata; reproducing the LoRA run
 requires those weights. The evaluation source commit and dependency pins are in each report's provenance.
 '''
-    (output / 'README.md').write_text(text, encoding='utf-8')
+    (output / 'README.md').write_text(text, encoding='utf-8', newline='\n')
     write_json(output / 'artifact-hashes.json', {p.name: {'bytes': p.stat().st_size, 'sha256': sha256(p)}
                for p in sorted(output.iterdir()) if p.is_file()})
     return comparison

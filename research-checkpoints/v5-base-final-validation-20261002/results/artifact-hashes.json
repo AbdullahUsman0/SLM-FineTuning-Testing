@@ -1,0 +1,42 @@
+{
+  "base-metrics.json": {
+    "bytes": 153229,
+    "sha256": "fcbacdd16f904b6b353f5210d59da888fcb8d521098838b5239feef5a126c471"
+  },
+  "base-validation.json.gz": {
+    "bytes": 2012501,
+    "sha256": "a5a5953a5de41bdfba610f96d77c2156e7038b3d5dec6d13c07da78c6bdd048e"
+  },
+  "comparison.json": {
+    "bytes": 1317,
+    "sha256": "384ff8a9fb8f41b95b14d1f54b5d7e2479b0bbddd6c47c4f23f721c95c43562f"
+  },
+  "lora-metrics.json": {
+    "bytes": 152494,
+    "sha256": "cabb3cbb2ab3a60b07c669a989720571340f36594ebed0f13a48f468c02827a6"
+  },
+  "lora-validation.json.gz": {
+    "bytes": 2065766,
+    "sha256": "2b206d262a84b3f91a24b6e671ede2e312a73154f0399f48d5c5aab9a8824f3f"
+  },
+  "paired-extraction-errors.csv": {
+    "bytes": 3163385,
+    "sha256": "5d563960778b2933c430a714b2deeb25606a2c3e95284c73ade5709f0ebd7c1a"
+  },
+  "per-slot.csv": {
+    "bytes": 3467,
+    "sha256": "648213e2c1c6e2772dbbd132a5b7dd0695aba53a5d726a37b0ce1861267f8cd1"
+  },
+  "README.md": {
+    "bytes": 3569,
+    "sha256": "ed01e195f9fc2618c982d8bf0d4793a67ba5bfcb54a5839434a6792deb6fc925"
+  },
+  "training-audit.json": {
+    "bytes": 5072,
+    "sha256": "7c282baf8874c7b515276d8b56bb060d19c126826656bd1ca479ab06e21b3494"
+  },
+  "training-summary.md": {
+    "bytes": 2820,
+    "sha256": "2ad79941efdb644424094573e375d10f8694da03f0249c307b9729e6f3648b4d"
+  }
+}
