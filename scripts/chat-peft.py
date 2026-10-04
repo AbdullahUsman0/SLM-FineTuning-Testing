@@ -4,7 +4,9 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+import hashlib
 import json
+import re
 import sys
 from datetime import UTC, datetime
 from pathlib import Path
@@ -32,6 +34,10 @@ def main() -> None:
     parser.add_argument("--variant", choices=("base", "best", "final", "custom"), default="best")
     parser.add_argument("--adapter", help="Adapter directory for --variant custom")
     parser.add_argument("--base-model", default="Qwen/Qwen3.5-0.8B")
+    parser.add_argument("--revision", help="Pinned base-model revision (required for v5/v6 prompts)")
+    parser.add_argument("--prompt-version", choices=("legacy", "v5"), default="legacy",
+                        help="Use v5 for adapters trained on the v5 or v6 corpus")
+    parser.add_argument("--adapter-manifest", help="Completion JSON containing the expected adapter hashes")
     parser.add_argument("--device", choices=("auto", "cpu", "cuda"), default="auto")
     parser.add_argument(
         "--dtype", choices=("auto", "float32", "float16", "bfloat16"), default="bfloat16"
@@ -40,6 +46,8 @@ def main() -> None:
     parser.add_argument("--transcript", help="Output JSON path; defaults under results/")
     parser.add_argument("--debug", action="store_true", help="Print raw structured-model traces")
     args = parser.parse_args()
+    if args.prompt_version == "v5" and not re.fullmatch(r"[0-9a-f]{40}", args.revision or ""):
+        parser.error("--prompt-version v5 requires --revision with the pinned 40-character model commit")
 
     # Add the optional inference runtime only after application dependencies
     # are imported; this prevents it from shadowing the main pipeline stack.
@@ -47,9 +55,26 @@ def main() -> None:
         sys.path.append(str(PEFT_DEPS))
 
     adapter_path = resolve_adapter_path(args.variant, args.adapter)
+    if args.adapter_manifest:
+        if adapter_path is None:
+            parser.error("--adapter-manifest requires an adapter")
+        expected = json.loads(Path(args.adapter_manifest).read_text(encoding="utf-8"))["adapter"]
+        for name in ("adapter_model.safetensors", "adapter_config.json"):
+            path = adapter_path / name
+            if not path.is_file():
+                parser.error(f"Missing adapter file: {path}")
+            with path.open("rb") as stream:
+                digest = hashlib.file_digest(stream, "sha256").hexdigest()
+            if digest != expected[name]["sha256"] or path.stat().st_size != expected[name]["bytes"]:
+                parser.error(f"Adapter checksum or size mismatch: {path}")
+        print("Adapter weights and config match the completion record.")
+    provider_type = TransformersPeftProvider
+    if args.prompt_version == "v5":
+        from local_slm_lab.v5_provider import V5TransformersProvider
+        provider_type = V5TransformersProvider
     schema = load_schema()
     print(f"Loading {args.variant} variant; this can take several minutes on CPU...")
-    provider = TransformersPeftProvider(
+    provider = provider_type(
         PeftInferenceConfig(
             base_model=args.base_model,
             variant=args.variant,
@@ -57,6 +82,7 @@ def main() -> None:
             device=args.device,
             dtype=args.dtype,
             max_new_tokens=args.max_new_tokens,
+            revision=args.revision,
         ),
         schema,
     )
@@ -65,7 +91,8 @@ def main() -> None:
     state = engine.start_dialogue()
     transcript: list[dict[str, Any]] = []
 
-    print("Commands: /state shows collected slots; /confirm confirms when ready; /quit exits.")
+    print("Commands: /state shows collected slots; /reset starts a new case; /confirm confirms when ready; /quit exits.")
+    print("Clarification questions use the schema's fixed wording; --debug shows the model's extraction.")
     while True:
         try:
             message = input("you> ").strip()
@@ -76,6 +103,11 @@ def main() -> None:
             continue
         if message == "/quit":
             break
+        if message == "/reset":
+            state = engine.start_dialogue()
+            transcript.append({"event": "reset", "dialogue_id": str(state.dialogue_id)})
+            print("Started a new dialogue with no previous test context.")
+            continue
         if message == "/state":
             current = engine.get_state(state.dialogue_id)
             populated = {
@@ -121,6 +153,8 @@ def main() -> None:
                 "created_at": datetime.now(UTC).isoformat(),
                 "variant": args.variant,
                 "base_model": args.base_model,
+                "revision": args.revision,
+                "prompt_version": args.prompt_version,
                 "adapter": None if adapter_path is None else str(adapter_path),
                 "turns": transcript,
             },
