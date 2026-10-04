@@ -1,0 +1,122 @@
+{
+  "adapter-smoke.json": {
+    "bytes": 748,
+    "sha256": "35078078ae003b4fd9563199f1ad2d94d7df54cefa544f9b90e37196d44fb96e"
+  },
+  "authorization.json": {
+    "bytes": 830,
+    "sha256": "3518509d45882d216df926f8cc26b533f4f5ab0bd3ad81785a5c421fa4c142fa"
+  },
+  "checkpoint-attestations.json": {
+    "bytes": 98827,
+    "sha256": "5707e43bf0bb264773db7c1aa91d47bb191521f75a67033cb189317e82d66df4"
+  },
+  "completion-audit.json": {
+    "bytes": 4341,
+    "sha256": "cb8640ca758e79b3e3d5636107f3228233e1a1b402e6da0f1462375347f3afb5"
+  },
+  "completion.json": {
+    "bytes": 2155,
+    "sha256": "7bbe6bb1aaf78e7146bdd89211c51d77b2808d8af6f3b78869f84178a18ec6ee"
+  },
+  "evaluation.json": {
+    "bytes": 577,
+    "sha256": "460978d5e9f15a6ed287f3e7e7b095095f3b8fbdd65dfaf5c65e591fb6d5447f"
+  },
+  "input-lock.json": {
+    "bytes": 2177,
+    "sha256": "a5180870b3decf508bfd87d2de9627049ffb83356775ea898cd60d7e160090da"
+  },
+  "interruption-resume-260.json": {
+    "bytes": 460,
+    "sha256": "8569f7f7015a37d58e868421a4a8350aac1beba9db93bb60b79b6ab91dc5f6e9"
+  },
+  "last-process-result.json": {
+    "bytes": 126,
+    "sha256": "24a9572cbb4a37944d4de49a751d8cce690fa730811a38b9fb417f2b4a53399b"
+  },
+  "last-process.json": {
+    "bytes": 946,
+    "sha256": "3aed2f409414cb9b35358194f3ecc7f7b6a2a63a52b3790a4a0dd972c9af3e7e"
+  },
+  "launch-config.json": {
+    "bytes": 6058,
+    "sha256": "b9085494456c67fc108421041513fd99cd52019717a61b058b07c61b54d58821"
+  },
+  "metrics-history.csv": {
+    "bytes": 25434,
+    "sha256": "719cc9fc6fb8ec9b6476ca7f0874b05feb03545e0635e09f85e5a35b5e958005"
+  },
+  "original-completion-summary.md": {
+    "bytes": 2348,
+    "sha256": "261064c3540e1fa8cae666fa1fe2560dbbf007b733c183adb069fc60ab2fc36e"
+  },
+  "README.md": {
+    "bytes": 5159,
+    "sha256": "99f579b89c1341968dfb4db231c5533c13080ef982f03855b37ce65627c6e17c"
+  },
+  "reproduction/adapter_smoke_v6.py": {
+    "bytes": 1302,
+    "sha256": "180ae162214052ddb6c159dfd6ba184b393727e77a82f65c8f607b33f1daa805"
+  },
+  "reproduction/configure_v6_experiment.py": {
+    "bytes": 3882,
+    "sha256": "7dd7ef001448046b13a3c9d9b3851a1538db8ece5c7d9488496eea053a90ecfd"
+  },
+  "reproduction/prepare_v6_experiment.py": {
+    "bytes": 4552,
+    "sha256": "5a269018deb634a39b9d7a9164ed8df51b3a353f7a7c9e6155c1679e9d0af4ea"
+  },
+  "reproduction/publish_v6_training_records.py": {
+    "bytes": 16676,
+    "sha256": "84178305a8c2dd256cd064220727d23fa06710024480612172c829f1eca35c55"
+  },
+  "reproduction/resume_v6_training.ps1": {
+    "bytes": 1053,
+    "sha256": "362bcf9db8a6ab4b765f9af492ea4960d1f24f176e81bacad4fd7c13baec92a1"
+  },
+  "reproduction/supervise_v6_experiment.py": {
+    "bytes": 10717,
+    "sha256": "2f3fdfdd441b7df02075a32016f74b7a07fa6c8f39930c5230d35589146f3275"
+  },
+  "reproduction/v6_training_status.py": {
+    "bytes": 2118,
+    "sha256": "b1ef3ed319d0bf6b6ce176714f8a01d68a0197a4fb138166418018326c615e93"
+  },
+  "run-manifest.json": {
+    "bytes": 6080,
+    "sha256": "60bce5d294ea44e90181589db083d0c119ec8db6e505b0a384dfed00547282d0"
+  },
+  "run-notes.md": {
+    "bytes": 1081,
+    "sha256": "44a1e6e0a3528a98b2bb5d0ff35076f40d682631a19befd1f6963e30e31aeb51"
+  },
+  "smoke-console.log.gz": {
+    "bytes": 828,
+    "sha256": "5fc25fb87b5551239da7ed30b863130f2e89f4586f7e74dca06136f2bda9c9c0"
+  },
+  "source-records.json": {
+    "bytes": 6513,
+    "sha256": "3e0a17e8b6652db2ea1e43b28d04ee89dba207fd522a58147b77856337894c92"
+  },
+  "supervisor-verified-checkpoints.json": {
+    "bytes": 7212,
+    "sha256": "338eb4fb38b9be16a89490d36c568ba67aab088da3aacc4d939904e7395a05a6"
+  },
+  "token-lengths.json": {
+    "bytes": 347,
+    "sha256": "0d92f9f75c08636a3e30ba59859b565d7dac1c13a4081ca7e10fbff92f806dfe"
+  },
+  "trainer-state.json": {
+    "bytes": 44882,
+    "sha256": "3ce195aeb5b8b0d9b1658f7da64b570720f46e9c44a2c2209f688ffce66c7d03"
+  },
+  "training-console.log.gz": {
+    "bytes": 60617,
+    "sha256": "fd628972ec5aacfe9feae27b70727b4b168c6e41a40d53f741d3444d0235f3c4"
+  },
+  "training-events.jsonl.gz": {
+    "bytes": 14250,
+    "sha256": "c06ea68e2ff184fc0932e3fc660724282a2375f1d0c02f6369523f668aa6eafc"
+  }
+}

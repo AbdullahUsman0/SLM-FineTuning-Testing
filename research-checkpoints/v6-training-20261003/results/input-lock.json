@@ -1,0 +1,51 @@
+{
+  "corpus_version": "v6-20261002-r4",
+  "corpus_manifest_sha256": "0782956c587b5996a2df3f7b799fb0b9e572942b063c8fc1b623ea691fc5aeb9",
+  "fpy_commit": "04d52c015d1e3ecdefe92b87116f209361509b4b",
+  "files": {
+    "train.jsonl": {
+      "sha256": "f93cad3409f7a72da4c30470d895ea70e1b818d11d16f0eca0705fb80e951fb2",
+      "bytes": 70246691
+    },
+    "validation.jsonl": {
+      "sha256": "e8dd2fdfdb25326ae6c5096f1a900994151d7f3a2d7b882a0474b68e5721575a",
+      "bytes": 15162262
+    },
+    "validation-cases.jsonl": {
+      "sha256": "a2beb454284683a8e29598b9f56acaf1fc5a9b4b2069456881cc3210e05a0ccf",
+      "bytes": 5051526
+    },
+    "smoke-cases.jsonl": {
+      "sha256": "3f911f0d280cb5dde7b1da074daf88aa5f19cd0461156622289b3edd3d8a699c",
+      "bytes": 305977
+    }
+  },
+  "verification": {
+    "status": "verified_candidate_development",
+    "development_scenarios": 1700,
+    "dedup": {
+      "exact_model_input_duplicates": 0,
+      "normalized_model_input_duplicates": 0,
+      "entity_groups_crossing_splits": 0,
+      "template_families_crossing_splits": 0,
+      "checked_examples": 7053
+    },
+    "final_labels_parsed": false,
+    "sealed_hashes_checked": false,
+    "human_review": "pending"
+  },
+  "authorization": {
+    "recorded_at_utc": "2026-10-03T11:38:23.146466+00:00",
+    "source": "Explicit user request in this Codex conversation on 2026-10-03 (America/Los_Angeles)",
+    "request": "analyze the results, then pull the latest and fine tune the model on the newly ggenrated dataset v6 that is domain specific in the background",
+    "scope": "Experimental fine-tuning on the frozen v6 development data, in the background",
+    "corpus_manifest_sha256": "0782956c587b5996a2df3f7b799fb0b9e572942b063c8fc1b623ea691fc5aeb9",
+    "independent_human_review_complete": false,
+    "overlap_review_complete": false,
+    "unresolved_overlap_pairs": 10219,
+    "final_labels_accessed": false,
+    "note": "Direct user training authorization takes precedence over the repository review-first workflow. This is not a review approval or evidence of resolved leakage."
+  },
+  "status": "prepared_experimental_human_review_pending",
+  "final_labels_accessed": false
+}

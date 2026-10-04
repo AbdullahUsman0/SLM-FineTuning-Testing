@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "purpose": "Single synthetic loading/generation check, not behavioral validation",
+  "input": "I want to forecast daily maximum temperature in Celsius for the next 7 days using a CSV file.",
+  "output": {
+    "intent": "create_forecast",
+    "intent_confidence": 1.0,
+    "updates": [
+      {
+        "slot_id": "target_description",
+        "candidate_value": "daily maximum temperature in Celsius for the next 7 days using a CSV file",
+        "status": "provided",
+        "confidence": 1.0,
+        "evidence_text": "I want to forecast daily maximum temperature in Celsius for the next 7 days using a CSV file."
+      }
+    ],
+    "correction_detected": false,
+    "unsupported_claims": []
+  },
+  "device": "cuda:0"
+}

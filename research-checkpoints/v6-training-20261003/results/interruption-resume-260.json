@@ -1,0 +1,9 @@
+{
+  "recorded_at_utc": "2026-10-03T22:48:51.954792+00:00",
+  "windows_boot_utc": "2026-10-03T21:13:24.402503+00:00",
+  "last_observed_interrupted_step": 261,
+  "verified_resume_step": 260,
+  "checkpoint": "checkpoint-260",
+  "recovery": "Login recovery task started the guarded supervisor; resume decision independently verified from trainer log",
+  "note": "One optimizer step may be replayed. Same source, inputs, base revision and optimization settings."
+}

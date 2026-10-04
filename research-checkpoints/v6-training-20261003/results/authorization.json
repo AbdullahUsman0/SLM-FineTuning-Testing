@@ -1,0 +1,12 @@
+{
+  "recorded_at_utc": "2026-10-03T11:38:23.146466+00:00",
+  "source": "Explicit user request in this Codex conversation on 2026-10-03 (America/Los_Angeles)",
+  "request": "analyze the results, then pull the latest and fine tune the model on the newly ggenrated dataset v6 that is domain specific in the background",
+  "scope": "Experimental fine-tuning on the frozen v6 development data, in the background",
+  "corpus_manifest_sha256": "0782956c587b5996a2df3f7b799fb0b9e572942b063c8fc1b623ea691fc5aeb9",
+  "independent_human_review_complete": false,
+  "overlap_review_complete": false,
+  "unresolved_overlap_pairs": 10219,
+  "final_labels_accessed": false,
+  "note": "Direct user training authorization takes precedence over the repository review-first workflow. This is not a review approval or evidence of resolved leakage."
+}

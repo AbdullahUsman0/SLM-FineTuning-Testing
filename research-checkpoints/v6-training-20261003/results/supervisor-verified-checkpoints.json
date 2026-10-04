@@ -1,0 +1,294 @@
+{
+  "checkpoint-10": {
+    "step": 10,
+    "verified_utc": "2026-10-03T22:46:59.494266+00:00"
+  },
+  "checkpoint-100": {
+    "step": 100,
+    "verified_utc": "2026-10-03T22:46:59.667597+00:00"
+  },
+  "checkpoint-110": {
+    "step": 110,
+    "verified_utc": "2026-10-03T22:46:59.859380+00:00"
+  },
+  "checkpoint-120": {
+    "step": 120,
+    "verified_utc": "2026-10-03T22:47:00.042119+00:00"
+  },
+  "checkpoint-130": {
+    "step": 130,
+    "verified_utc": "2026-10-03T22:47:00.222882+00:00"
+  },
+  "checkpoint-140": {
+    "step": 140,
+    "verified_utc": "2026-10-03T22:47:00.414806+00:00"
+  },
+  "checkpoint-150": {
+    "step": 150,
+    "verified_utc": "2026-10-03T22:47:00.598539+00:00"
+  },
+  "checkpoint-160": {
+    "step": 160,
+    "verified_utc": "2026-10-03T22:47:00.769139+00:00"
+  },
+  "checkpoint-170": {
+    "step": 170,
+    "verified_utc": "2026-10-03T22:47:00.940354+00:00"
+  },
+  "checkpoint-180": {
+    "step": 180,
+    "verified_utc": "2026-10-03T22:47:01.128026+00:00"
+  },
+  "checkpoint-190": {
+    "step": 190,
+    "verified_utc": "2026-10-03T22:47:01.314371+00:00"
+  },
+  "checkpoint-20": {
+    "step": 20,
+    "verified_utc": "2026-10-03T22:47:01.501411+00:00"
+  },
+  "checkpoint-200": {
+    "step": 200,
+    "verified_utc": "2026-10-03T22:47:01.679836+00:00"
+  },
+  "checkpoint-210": {
+    "step": 210,
+    "verified_utc": "2026-10-03T22:47:01.862189+00:00"
+  },
+  "checkpoint-220": {
+    "step": 220,
+    "verified_utc": "2026-10-03T22:47:02.063553+00:00"
+  },
+  "checkpoint-230": {
+    "step": 230,
+    "verified_utc": "2026-10-03T22:47:02.256331+00:00"
+  },
+  "checkpoint-240": {
+    "step": 240,
+    "verified_utc": "2026-10-03T22:47:02.435735+00:00"
+  },
+  "checkpoint-250": {
+    "step": 250,
+    "verified_utc": "2026-10-03T22:47:02.609810+00:00"
+  },
+  "checkpoint-260": {
+    "step": 260,
+    "verified_utc": "2026-10-03T22:47:02.789228+00:00"
+  },
+  "checkpoint-30": {
+    "step": 30,
+    "verified_utc": "2026-10-03T22:47:02.965526+00:00"
+  },
+  "checkpoint-40": {
+    "step": 40,
+    "verified_utc": "2026-10-03T22:47:03.143339+00:00"
+  },
+  "checkpoint-50": {
+    "step": 50,
+    "verified_utc": "2026-10-03T22:47:03.317176+00:00"
+  },
+  "checkpoint-60": {
+    "step": 60,
+    "verified_utc": "2026-10-03T22:47:03.488649+00:00"
+  },
+  "checkpoint-70": {
+    "step": 70,
+    "verified_utc": "2026-10-03T22:47:03.662797+00:00"
+  },
+  "checkpoint-80": {
+    "step": 80,
+    "verified_utc": "2026-10-03T22:47:03.830249+00:00"
+  },
+  "checkpoint-90": {
+    "step": 90,
+    "verified_utc": "2026-10-03T22:47:04.006343+00:00"
+  },
+  "checkpoint-270": {
+    "step": 270,
+    "verified_utc": "2026-10-03T23:00:21.595393+00:00"
+  },
+  "checkpoint-280": {
+    "step": 280,
+    "verified_utc": "2026-10-03T23:09:53.554860+00:00"
+  },
+  "checkpoint-290": {
+    "step": 290,
+    "verified_utc": "2026-10-03T23:19:55.486426+00:00"
+  },
+  "checkpoint-300": {
+    "step": 300,
+    "verified_utc": "2026-10-03T23:29:12.367973+00:00"
+  },
+  "checkpoint-310": {
+    "step": 310,
+    "verified_utc": "2026-10-03T23:39:14.377638+00:00"
+  },
+  "checkpoint-320": {
+    "step": 320,
+    "verified_utc": "2026-10-03T23:48:46.261800+00:00"
+  },
+  "checkpoint-330": {
+    "step": 330,
+    "verified_utc": "2026-10-03T23:58:03.136312+00:00"
+  },
+  "checkpoint-340": {
+    "step": 340,
+    "verified_utc": "2026-10-04T00:07:19.954561+00:00"
+  },
+  "checkpoint-350": {
+    "step": 350,
+    "verified_utc": "2026-10-04T00:17:21.892147+00:00"
+  },
+  "checkpoint-360": {
+    "step": 360,
+    "verified_utc": "2026-10-04T00:26:53.870818+00:00"
+  },
+  "checkpoint-370": {
+    "step": 370,
+    "verified_utc": "2026-10-04T00:51:13.432189+00:00"
+  },
+  "checkpoint-380": {
+    "step": 380,
+    "verified_utc": "2026-10-04T01:00:30.372120+00:00"
+  },
+  "checkpoint-390": {
+    "step": 390,
+    "verified_utc": "2026-10-04T01:09:47.193707+00:00"
+  },
+  "checkpoint-400": {
+    "step": 400,
+    "verified_utc": "2026-10-04T01:19:04.105485+00:00"
+  },
+  "checkpoint-410": {
+    "step": 410,
+    "verified_utc": "2026-10-04T01:29:06.141794+00:00"
+  },
+  "checkpoint-420": {
+    "step": 420,
+    "verified_utc": "2026-10-04T01:38:23.005522+00:00"
+  },
+  "checkpoint-430": {
+    "step": 430,
+    "verified_utc": "2026-10-04T01:47:39.945100+00:00"
+  },
+  "checkpoint-440": {
+    "step": 440,
+    "verified_utc": "2026-10-04T01:57:11.887957+00:00"
+  },
+  "checkpoint-450": {
+    "step": 450,
+    "verified_utc": "2026-10-04T02:06:43.916718+00:00"
+  },
+  "checkpoint-460": {
+    "step": 460,
+    "verified_utc": "2026-10-04T02:16:15.935925+00:00"
+  },
+  "checkpoint-470": {
+    "step": 470,
+    "verified_utc": "2026-10-04T02:25:17.795557+00:00"
+  },
+  "checkpoint-480": {
+    "step": 480,
+    "verified_utc": "2026-10-04T02:34:19.597660+00:00"
+  },
+  "checkpoint-490": {
+    "step": 490,
+    "verified_utc": "2026-10-04T02:43:36.548481+00:00"
+  },
+  "checkpoint-500": {
+    "step": 500,
+    "verified_utc": "2026-10-04T02:52:53.384907+00:00"
+  },
+  "checkpoint-510": {
+    "step": 510,
+    "verified_utc": "2026-10-04T03:02:25.332326+00:00"
+  },
+  "checkpoint-520": {
+    "step": 520,
+    "verified_utc": "2026-10-04T03:11:57.229424+00:00"
+  },
+  "checkpoint-530": {
+    "step": 530,
+    "verified_utc": "2026-10-04T03:21:14.124450+00:00"
+  },
+  "checkpoint-540": {
+    "step": 540,
+    "verified_utc": "2026-10-04T03:31:16.142629+00:00"
+  },
+  "checkpoint-550": {
+    "step": 550,
+    "verified_utc": "2026-10-04T03:41:18.242961+00:00"
+  },
+  "checkpoint-560": {
+    "step": 560,
+    "verified_utc": "2026-10-04T03:50:35.141534+00:00"
+  },
+  "checkpoint-570": {
+    "step": 570,
+    "verified_utc": "2026-10-04T03:59:52.087155+00:00"
+  },
+  "checkpoint-580": {
+    "step": 580,
+    "verified_utc": "2026-10-04T04:09:09.017140+00:00"
+  },
+  "checkpoint-590": {
+    "step": 590,
+    "verified_utc": "2026-10-04T04:18:40.908075+00:00"
+  },
+  "checkpoint-600": {
+    "step": 600,
+    "verified_utc": "2026-10-04T04:28:27.833475+00:00"
+  },
+  "checkpoint-610": {
+    "step": 610,
+    "verified_utc": "2026-10-04T04:37:59.727158+00:00"
+  },
+  "checkpoint-620": {
+    "step": 620,
+    "verified_utc": "2026-10-04T04:47:31.672148+00:00"
+  },
+  "checkpoint-630": {
+    "step": 630,
+    "verified_utc": "2026-10-04T04:57:18.766839+00:00"
+  },
+  "checkpoint-640": {
+    "step": 640,
+    "verified_utc": "2026-10-04T05:06:35.768230+00:00"
+  },
+  "checkpoint-650": {
+    "step": 650,
+    "verified_utc": "2026-10-04T05:15:52.649589+00:00"
+  },
+  "checkpoint-660": {
+    "step": 660,
+    "verified_utc": "2026-10-04T05:25:39.703246+00:00"
+  },
+  "checkpoint-670": {
+    "step": 670,
+    "verified_utc": "2026-10-04T05:34:56.563119+00:00"
+  },
+  "checkpoint-680": {
+    "step": 680,
+    "verified_utc": "2026-10-04T05:44:28.526283+00:00"
+  },
+  "checkpoint-690": {
+    "step": 690,
+    "verified_utc": "2026-10-04T05:54:15.533781+00:00"
+  },
+  "checkpoint-700": {
+    "step": 700,
+    "verified_utc": "2026-10-04T06:04:02.571216+00:00"
+  },
+  "checkpoint-710": {
+    "step": 710,
+    "verified_utc": "2026-10-04T06:13:49.523838+00:00"
+  },
+  "checkpoint-720": {
+    "step": 720,
+    "verified_utc": "2026-10-04T06:23:06.473177+00:00"
+  },
+  "checkpoint-726": {
+    "step": 726,
+    "verified_utc": "2026-10-04T06:28:37.765362+00:00"
+  }
+}

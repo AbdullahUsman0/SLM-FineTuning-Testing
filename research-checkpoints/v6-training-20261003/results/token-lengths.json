@@ -1,0 +1,18 @@
+{
+  "train": {
+    "examples": 5800,
+    "minimum": 209,
+    "maximum": 3385,
+    "p95": 3083
+  },
+  "validation": {
+    "examples": 1253,
+    "minimum": 209,
+    "maximum": 3347,
+    "p95": 3089
+  },
+  "max_length": 3584,
+  "truncation_allowed": false,
+  "enable_thinking": false,
+  "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc"
+}

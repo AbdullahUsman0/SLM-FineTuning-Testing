@@ -1,10 +1,19 @@
-# V6 weather/economics specialist: experimental background training
+# V6 weather/economics specialist: completed experimental training
+
+**Complete: 726 optimizer steps, two epochs, 73 retained and independently
+hash-verified checkpoints.** Verification finished at 00:00:31 PDT on 2026-10-04.
+Final teacher-forced validation loss: **0.00006398998812073842**.
+Read the [completion report and all study records](results/README.md).
+
+The loading smoke returned valid JSON but collapsed frequency, unit, horizon,
+and file requirements into one `target_description`. Behavioral validation
+remains pending; low training loss is not evidence of natural-language quality.
 
 The user requested analysis of v5 results, a pull of the latest code, and
 background fine-tuning on the newly generated domain-specific v6 corpus.
 The latest source pulled was `afccf38` on `experiment/v5-grounded-20260919`.
 
-Training uses a new specialist adapter from stock Qwen/Qwen3.5-2B revision
+Training used a new specialist adapter from stock Qwen/Qwen3.5-2B revision
 `15852e8c16360a2fea060d615a32b45270f8a8fc`. It does not continue the v5 adapter.
 The unchanged 79-slot contract extracts forecasting requirements and asks
 clarifications; it does not predict weather or economic measurements.
@@ -26,8 +35,8 @@ the pinned tokenizer and `enable_thinking=False`, matching the trainer.
 Settings: two epochs, learning rate 5e-5, batch 1 with gradient accumulation 16,
 BF16 CUDA on RTX A4000, LoRA rank 16/alpha 32/dropout 0.05, cosine schedule,
 seed 42, no early stopping, complete checkpoints every 10 optimizer steps.
-Expected total: 726 optimizer steps. Every checkpoint is retained; automatic
-recovery resumes only a complete hash-verified checkpoint from this run.
+Completed total: 726 optimizer steps. Every checkpoint is retained; automatic
+recovery resumed only a complete hash-verified checkpoint from this run.
 The final saved adapter is a final-step candidate, not a behavioral winner.
 
 Independent human label review and fuzzy-overlap review remain pending, with
@@ -38,7 +47,7 @@ existing review-required materializer retains its approval checks; this run
 materializes the verified development bytes separately and records the user's
 authorization honestly. A matched behavioral pilot has not been run.
 
-Training runs from an isolated detached worktree at
+Training ran from an isolated detached worktree at
 `D:\SLM\SLM-v6-training-20261003`, keeping its code stable when the main checkout
 changes. The pinned fpy dependency remains
 `04d52c015d1e3ecdefe92b87116f209361509b4b`.
@@ -47,13 +56,13 @@ Local run: `D:\SLM\FYP-model-runs\qwen35-2b-lora-v6-20261003T113807Z`.
 The pointer `D:\SLM\active-v6-training-run.txt` identifies this run.
 Inspect `launch-config.json`, `authorization.json`, `inputs/input-lock.json`,
 `token-lengths.json`, `full-console.log`, and `monitor-status.json` there.
-A hidden supervisor and a login-triggered recovery task continue the run;
-source/input hashes are checked before every launch. They do not load sealed
+A hidden supervisor completed the run; the login-triggered recovery task is
+now disabled. Source/input hashes were checked before every launch. They did not load sealed
 final labels or call a paid API. Weights, checkpoints and caches remain outside Git.
 
-On completion, the supervisor verifies retained checkpoints, finite adapter
-tensors and exact equality with the final checkpoint, then performs one synthetic
-weather loading smoke. It records a completion summary and disables recovery.
+On completion, the supervisor verified retained checkpoints, finite adapter
+tensors and exact equality with the final checkpoint, then performed one synthetic
+weather loading smoke. The publication audit independently repeated those checks.
 Teacher-forced loss and loading smoke are not behavioral quality evidence.
 
 Subsequent quality evaluation should compare stock, v5 and v6 on identical v6

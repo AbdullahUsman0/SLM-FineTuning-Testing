@@ -7,4 +7,5 @@
 /scripts/*v5*.py text eol=lf
 /training/v5-*.json text eol=lf
 /research-checkpoints/v5-base-final-validation-20261002/results/** -text
+/research-checkpoints/v6-training-20261003/results/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
 /notebooks/Qwen_2B_LoRA_v5_Grounded_Colab.ipynb text eol=lf

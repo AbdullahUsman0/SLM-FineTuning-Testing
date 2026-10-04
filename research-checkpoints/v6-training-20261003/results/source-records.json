@@ -1,0 +1,145 @@
+{
+  "completion.json": {
+    "local_source": "completion.json",
+    "source_sha256": "e9d265084cff1472b8767addf0a740dd482e40e9db4e873b53374933963cd1da",
+    "source_bytes": 2269,
+    "packaging": "JSON value preserved; UTF-8, LF, indentation normalized"
+  },
+  "adapter-smoke.json": {
+    "local_source": "adapter-smoke.json",
+    "source_sha256": "86e76acfbdaf7aebb3ed12f6b180807f411f53a4ffad44ca231fb479a5d2363e",
+    "source_bytes": 769,
+    "packaging": "JSON value preserved; UTF-8, LF, indentation normalized"
+  },
+  "evaluation.json": {
+    "local_source": "full/evaluation.json",
+    "source_sha256": "484ab49aa5ef9a8b009d6d6b69d4b6514cdae4240b36d3cc68ef5a07f6324d0c",
+    "source_bytes": 593,
+    "packaging": "JSON value preserved; UTF-8, LF, indentation normalized"
+  },
+  "run-manifest.json": {
+    "local_source": "full/run-manifest.json",
+    "source_sha256": "5ce1b4e9bb6dc58b927e1585d3d95d8849ef8c2c428a5b81b246f8acd85bfcca",
+    "source_bytes": 6245,
+    "packaging": "JSON value preserved; UTF-8, LF, indentation normalized"
+  },
+  "trainer-state.json": {
+    "local_source": "full/checkpoint-726/trainer_state.json",
+    "source_sha256": "aa882b84436142d78db28a7a86a81e7c4da0105c6db33e302a8804f8662b0836",
+    "source_bytes": 46377,
+    "packaging": "JSON value preserved; UTF-8, LF, indentation normalized"
+  },
+  "launch-config.json": {
+    "local_source": "launch-config.json",
+    "source_sha256": "e78c579763ac1b1a249f55220be3c54f272482f1698779e0964e9749a8c79248",
+    "source_bytes": 6125,
+    "packaging": "JSON value preserved; UTF-8, LF, indentation normalized"
+  },
+  "authorization.json": {
+    "local_source": "authorization.json",
+    "source_sha256": "7cb092f0f81ff6ec1abd9faf4bbb1b773a6e4add007eeefd80dabce5d64a95b6",
+    "source_bytes": 842,
+    "packaging": "JSON value preserved; UTF-8, LF, indentation normalized"
+  },
+  "input-lock.json": {
+    "local_source": "inputs/input-lock.json",
+    "source_sha256": "020c9f5624a72b3042a575dc8db448849b4ae0fc8854de481941eacc0d8fda8e",
+    "source_bytes": 2228,
+    "packaging": "JSON value preserved; UTF-8, LF, indentation normalized"
+  },
+  "token-lengths.json": {
+    "local_source": "token-lengths.json",
+    "source_sha256": "15a6ee3ca42d1645e207349ede3e2574043a24e31a9bfcfd657cca8f8577a184",
+    "source_bytes": 365,
+    "packaging": "JSON value preserved; UTF-8, LF, indentation normalized"
+  },
+  "interruption-resume-260.json": {
+    "local_source": "interruption-resume-260.json",
+    "source_sha256": "079ee5433dba2b2b3de6b227d5957051cbea260024da221703b424275d536746",
+    "source_bytes": 467,
+    "packaging": "JSON value preserved; UTF-8, LF, indentation normalized"
+  },
+  "last-process.json": {
+    "local_source": "process.json",
+    "source_sha256": "1c4e0357a747587a814f10dd9f4f5bddbd92f619ec76ef1eb00d6c9590290618",
+    "source_bytes": 982,
+    "packaging": "JSON value preserved; UTF-8, LF, indentation normalized"
+  },
+  "last-process-result.json": {
+    "local_source": "process-result.json",
+    "source_sha256": "bebc8ddd6d535f6d94ce3d58eca72916394835db502364059a56291a071aea1a",
+    "source_bytes": 131,
+    "packaging": "JSON value preserved; UTF-8, LF, indentation normalized"
+  },
+  "supervisor-verified-checkpoints.json": {
+    "local_source": "verified-checkpoints.json",
+    "source_sha256": "91795ac6739aa451a211cd1ca42471826a3210667b8ef4143cfb465786cb383a",
+    "source_bytes": 7506,
+    "packaging": "JSON value preserved; UTF-8, LF, indentation normalized"
+  },
+  "run-notes.md": {
+    "local_source": "RUN_NOTES.md",
+    "source_sha256": "8785d5b0a72a5edc32b820b4422b2c8509a04c0677d7a5772f85a1ff12787b93",
+    "source_bytes": 1094,
+    "packaging": "UTF-8 text, LF normalized"
+  },
+  "original-completion-summary.md": {
+    "local_source": "TRAINING_COMPLETION_SUMMARY.md",
+    "source_sha256": "4b44ed475b5564fd220127934dc4c00526ef5bb4d0a5d5f739b0ed0d834991ae",
+    "source_bytes": 2469,
+    "packaging": "UTF-8 text, LF normalized"
+  },
+  "training-events.jsonl.gz": {
+    "local_source": "full/events.jsonl",
+    "source_sha256": "8752b7b5048106790accf5d0fd46cfe264d39a8c4cead80273e2659eaa9730ae",
+    "source_bytes": 69822,
+    "packaging": "lossless deterministic gzip, original bytes preserved"
+  },
+  "training-console.log.gz": {
+    "local_source": "full-console.log",
+    "source_sha256": "edd0d5d72b7c0f998244581aadeec60c55b6225879c425ca958dd26d0ad3a095",
+    "source_bytes": 403512,
+    "packaging": "lossless deterministic gzip, original bytes preserved"
+  },
+  "smoke-console.log.gz": {
+    "local_source": "smoke-console.log",
+    "source_sha256": "2f99750ad434308359e8963f24ad557577cdefb1cbdb7951dc57a194f429ab8c",
+    "source_bytes": 1953,
+    "packaging": "lossless deterministic gzip, original bytes preserved"
+  },
+  "reproduction/prepare_v6_experiment.py": {
+    "local_source": "prepare_v6_experiment.py",
+    "source_sha256": "5a269018deb634a39b9d7a9164ed8df51b3a353f7a7c9e6155c1679e9d0af4ea",
+    "packaging": "original executed source bytes"
+  },
+  "reproduction/supervise_v6_experiment.py": {
+    "local_source": "supervise_v6_experiment.py",
+    "source_sha256": "2f3fdfdd441b7df02075a32016f74b7a07fa6c8f39930c5230d35589146f3275",
+    "packaging": "original executed source bytes"
+  },
+  "reproduction/resume_v6_training.ps1": {
+    "local_source": "resume_v6_training.ps1",
+    "source_sha256": "362bcf9db8a6ab4b765f9af492ea4960d1f24f176e81bacad4fd7c13baec92a1",
+    "packaging": "original executed source bytes"
+  },
+  "reproduction/adapter_smoke_v6.py": {
+    "local_source": "adapter_smoke_v6.py",
+    "source_sha256": "180ae162214052ddb6c159dfd6ba184b393727e77a82f65c8f607b33f1daa805",
+    "packaging": "original executed source bytes"
+  },
+  "reproduction/configure_v6_experiment.py": {
+    "local_source": "D:\\SLM\\setup\\configure_v6_experiment.py",
+    "source_sha256": "7dd7ef001448046b13a3c9d9b3851a1538db8ece5c7d9488496eea053a90ecfd",
+    "packaging": "local orchestration/status helper source bytes"
+  },
+  "reproduction/v6_training_status.py": {
+    "local_source": "D:\\SLM\\setup\\v6_training_status.py",
+    "source_sha256": "b1ef3ed319d0bf6b6ce176714f8a01d68a0197a4fb138166418018326c615e93",
+    "packaging": "local orchestration/status helper source bytes"
+  },
+  "reproduction/publish_v6_training_records.py": {
+    "local_source": "D:\\SLM\\setup\\publish_v6_training_records.py",
+    "source_sha256": "84178305a8c2dd256cd064220727d23fa06710024480612172c829f1eca35c55",
+    "packaging": "independent audit and publication helper source bytes"
+  }
+}

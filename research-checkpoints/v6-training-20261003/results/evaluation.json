@@ -1,0 +1,16 @@
+{
+  "eval_loss": 6.398998812073842e-05,
+  "eval_runtime": 933.4879,
+  "eval_samples_per_second": 1.342,
+  "eval_steps_per_second": 1.342,
+  "eval_entropy": 0.00033743016594304186,
+  "eval_num_tokens": 15382360.0,
+  "eval_mean_token_accuracy": 0.9999930703059635,
+  "epoch": 2.0,
+  "adapter_selection": {
+    "best-adapter": "final-step adapter; frequent durability checkpoints retained for later behavioral selection",
+    "task_winner_selected": false,
+    "behavioral_selection": "pending; compare all retained checkpoints separately",
+    "loss_best_checkpoint": null
+  }
+}
