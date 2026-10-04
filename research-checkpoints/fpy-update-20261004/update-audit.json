@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-04",
+  "fpy_remote": "https://github.com/int-abd-5/fpy.git",
+  "previous_checkout": "ebfea0b6512ba8037d7d4b3bd1d01a2039f7ca3e",
+  "pulled_revision": "9bc2bd18c495514efa79a4371be1d706b9fc3824",
+  "local_patch_applied": true,
+  "local_patch_committed_or_pushed_to_fpy": false,
+  "training_snapshot": "04d52c015d1e3ecdefe92b87116f209361509b4b",
+  "regression_tests": {
+    "command": "pytest tests/integration/test_elicitation_flow.py tests/unit/test_clarification.py -q",
+    "passed": 53
+  },
+  "recorded_transcript": "results/peft-chat-custom-20261004T223752Z.json",
+  "offline_replay_all_nine_facts_retained": true,
+  "remaining_issue": "problem_statement still required separately from target_description; repeated-target wording not resolved by pull",
+  "sealed_final_accessed": false,
+  "paid_api_calls": 0
+}

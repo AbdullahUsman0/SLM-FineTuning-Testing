@@ -1,0 +1,229 @@
+{
+  "created_at": "2026-10-04T22:54:52.528907+00:00",
+  "variant": "custom",
+  "provider": "v5_local_quantized_manual",
+  "base_model": "Qwen/Qwen3.5-2B",
+  "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "prompt_version": "v5",
+  "server_url": "http://127.0.0.1:8086/v1",
+  "server_model": "local-qwen35-2b-v6",
+  "fpy_source": "C:\\Users\\ABDULLAH'S PC\\Desktop\\SML-FYP\\fpy\\src",
+  "fpy": {
+    "package_path": "C:\\Users\\ABDULLAH'S PC\\Desktop\\SML-FYP\\fpy\\src\\forecasting_assistant",
+    "mode": "latest",
+    "revision": "9bc2bd18c495514efa79a4371be1d706b9fc3824",
+    "working_tree_dirty": true,
+    "python_source_sha256": {
+      "__init__.py": "41362a5ea4931c546433d4c48290c5707bf02dbbea1c3aafa9f43d1225e47003",
+      "application/clarification.py": "6666ece7a883650202533f264365ae1b7f8f0ebdb26f2fa4922158417159d199",
+      "application/dataset_discovery.py": "77c3af878a6cd13742a012b8555d38982e3b4dfa7ccb34f38ec953af98a0ead7",
+      "application/dataset_query.py": "624db8cb7292cc1f45fcfcd95d6ff1ce38d7530e65a96054b6d53a0ee0a26df9",
+      "application/dataset_ranking.py": "beb8d04dbec6cbb7e54b7da47a0b1e69795e2fbff0c72ca7a84b0f3ad040222f",
+      "application/dataset_validation.py": "03581d117fc681e7ff2d362ee1cd08cf0403817647ae2b8675b8d62463095f17",
+      "application/interview_ontology.py": "fec1f776b5b1fa640f90484bc85c1401094fd3aa99809ffb4f8358d8b48b05f6",
+      "application/normalization.py": "28fdee0ee0edfd7e1d3ddc08d2719c911a4929fce8c715dbfd927b3bbe364f82",
+      "application/orchestrator.py": "094cadea8bcf90115440088796544fab7976f93ba0d423010fd763f1820c7e27",
+      "application/state_reducer.py": "010663e0be6d80951330763efd8533968eeb81c38e6da460322cab34be9193a3",
+      "application/validation.py": "088b9d3873bfebd3c672292c606e57773faef3dc45e4ebf947fd32633513f34d",
+      "config.py": "fc943532ff323f418106eb730c07eb7119fc1cf02b9eb6bd35ae3143a7bed248",
+      "domain/conditions.py": "643180d9e8f14e2988b70f9d12faa8548ccb0e0997c8a577053e748320e23305",
+      "domain/datasets.py": "483ecf923727ed62d29276b8620ba98fce617d669d8e30d894e21381ab7d4be1",
+      "domain/models.py": "2aa9775d9391a94270e1b257c829eab8c12e85b87d9c59820c91cb691f4fa50f",
+      "domain/schema.py": "5cce029007b542558771a8e83639b2421b80c86d0938ff8f3dc9de685e7112e1",
+      "infrastructure/datasets/__init__.py": "4b0570b1bb4e2158b42a6db40eeb28467bc7cdf143ff622337e0e5f4cfb43b14",
+      "infrastructure/datasets/adapters.py": "f599bd06e64badc0222a411ef578557b982674834e023c884b3ab6027ab422a3",
+      "infrastructure/datasets/http.py": "e7afcbd04af9e4f38af89b5d2826cde0e29cf48f240f07e422effb8b6955ae4d",
+      "infrastructure/datasets/object_store.py": "319f2247dbee502cff781665b8c7cb6be64ceace248789315c857fd84ae730db",
+      "infrastructure/datasets/protocol.py": "7ebe03f01b91032a89c0f1f1e66df37dc7411282076b03cfca566d531d8d6e85",
+      "infrastructure/datasets/registry.py": "db3e7796810f7780a11a90ccde99eb2a453129dbb2dd0d8b964574c5cd610909",
+      "infrastructure/datasets/registry_adapter.py": "c68e601ea2b0db35e93d227fa915b5dcc0a5995e8cb15d536c701770d8f6bee9",
+      "infrastructure/datasets/registry_client.py": "21a7c6eee8958dab6e18f8ff79197822a1a452b237cb3d08887200d9b2cc54ed",
+      "infrastructure/datasets/sqlite_repository.py": "79719ba95f5aeff24a4c3cf4487e98090ed3b714233786acb93af38bc0add282",
+      "infrastructure/llm/openai_responses.py": "5b04d813e6d1cccd84ea8acec0808e6b7539948d6a22b1ec512b6e39ab97b834",
+      "infrastructure/llm/protocol.py": "d25344e099a7eb1fae2cff8e3fab6d25a132b9b20d295c3e20b52d8971b7ad38",
+      "infrastructure/observability/__init__.py": "af3bd342fefecd713fa89e7ee9203fc74829bcf451b5a8f04c114e0a23eeb792",
+      "infrastructure/observability/pipeline_logger.py": "faffa435d2805ba25df85cecc893a739a99238098e5060a5b9467255d6013f3a",
+      "infrastructure/persistence/protocol.py": "e00c7fafc1d5b7f2e49a668f851f1f1c4398a6bd013f4db0be7eaa5ccf867b5b",
+      "infrastructure/persistence/sqlite_repository.py": "631ab96b1fc04461fd32aada546cec6f56c081c48ff22da3c9b6f07ee48fa70d",
+      "interfaces/__init__.py": "1802b8821b520125574719a4cf1bf0793d3642b2911f6ef6d7a94a76300cbb11",
+      "interfaces/cli.py": "2e38932b41da78a64d6f513ee5a69073d55ffb4c84d2ec20a00828bc1ebc4565",
+      "interfaces/web.py": "b03caff489c629ab8448fd2af9a256a8c04f78f1f1d6b38b80a209baaa96a479",
+      "prompts/extractor.py": "5fd8b390783849b3b1278bdd211efa8d6a03513ba1b73129ce9f269c699479a2",
+      "prompts/llmrei_long.py": "af4cbfc9efe238a7a28aeab7e29df07cde32fc6b67ed3e2c76a9e8258c314fa0"
+    }
+  },
+  "adapter": "C:\\Users\\ABDULLAH'S PC\\Desktop\\SML-FYP\\SLM-FineTuning-Testing\\adapters\\qwen35-2b-v6-20261003-step726",
+  "turns": [
+    {
+      "user": "Forecast daily maximum temperature for Lahore. The target is measured in Celsius. Each observation covers 1 day. Predict the next 7 days. The target column is tmax. I will upload weather.csv in csv format.",
+      "assistant": "Which file, online service, or database connection should be used? Example answer: bitcoin_prices.csv.",
+      "ready": false,
+      "unresolved_slots": [
+        "problem_statement",
+        "business_goal",
+        "success_criteria",
+        "time_column",
+        "dataset_type",
+        "source_reference",
+        "forecast_type",
+        "output_granularity",
+        "primary_metric",
+        "contains_sensitive_data"
+      ],
+      "traces": [
+        {
+          "operation": "extract",
+          "raw_output": "{\"correction_detected\": false, \"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"unsupported_claims\": [], \"updates\": [{\"candidate_value\": \"\\\"daily maximum temperature for Lahore\\\"\", \"confidence\": 1.0, \"evidence_text\": \"Forecast daily maximum temperature for Lahore.\", \"slot_id\": \"target_description\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"Celsius\\\"\", \"confidence\": 1.0, \"evidence_text\": \"The target is measured in Celsius.\", \"slot_id\": \"target_unit\", \"status\": \"provided\"}, {\"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"day\\\"}\", \"confidence\": 1.0, \"evidence_text\": \"Each observation covers 1 day.\", \"slot_id\": \"frequency\", \"status\": \"provided\"}, {\"candidate_value\": \"{\\\"periods\\\": 7, \\\"unit\\\": \\\"day\\\"}\", \"confidence\": 1.0, \"evidence_text\": \"Predict the next 7 days.\", \"slot_id\": \"forecast_horizon\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"tmax\\\"\", \"confidence\": 1.0, \"evidence_text\": \"The target column is tmax.\", \"slot_id\": \"target_column\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"csv\\\"\", \"confidence\": 1.0, \"evidence_text\": \"I will upload weather.csv in csv format.\", \"slot_id\": \"file_format\", \"status\": \"provided\"}]}",
+          "raw_json_valid": true,
+          "raw_schema_valid": true,
+          "parsed": true,
+          "error": null,
+          "prompt_tokens": 2163,
+          "completion_tokens": 318,
+          "recovery_applied": false,
+          "hit_generation_limit": false
+        }
+      ],
+      "pipeline_recovered_slots": [
+        "source_mode"
+      ],
+      "recorded_slots": {
+        "intent": {
+          "value": "create_forecast",
+          "status": "provided",
+          "validation_errors": []
+        },
+        "target_column": {
+          "value": "tmax",
+          "status": "provided",
+          "validation_errors": []
+        },
+        "target_description": {
+          "value": "daily maximum temperature for Lahore",
+          "status": "provided",
+          "validation_errors": []
+        },
+        "target_unit": {
+          "value": "Celsius",
+          "status": "provided",
+          "validation_errors": []
+        },
+        "frequency": {
+          "value": {
+            "periods": 1.0,
+            "unit": "day"
+          },
+          "status": "provided",
+          "validation_errors": []
+        },
+        "forecast_horizon": {
+          "value": {
+            "periods": 7.0,
+            "unit": "day"
+          },
+          "status": "provided",
+          "validation_errors": []
+        },
+        "source_mode": {
+          "value": "upload",
+          "status": "provided",
+          "validation_errors": []
+        },
+        "file_format": {
+          "value": "csv",
+          "status": "provided",
+          "validation_errors": []
+        }
+      }
+    },
+    {
+      "user": "I will upload the data. The source is weather.csv. The timestamp column is date.",
+      "assistant": "What would you like the system to predict? Example answer: forecast Bitcoin daily closing price.",
+      "ready": false,
+      "unresolved_slots": [
+        "problem_statement",
+        "business_goal",
+        "success_criteria",
+        "dataset_type",
+        "forecast_type",
+        "output_granularity",
+        "primary_metric",
+        "contains_sensitive_data"
+      ],
+      "traces": [
+        {
+          "operation": "extract",
+          "raw_output": "{\"correction_detected\": false, \"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"unsupported_claims\": [], \"updates\": [{\"candidate_value\": \"\\\"weather.csv\\\"\", \"confidence\": 1.0, \"evidence_text\": \"The source is weather.csv.\", \"slot_id\": \"source_reference\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"date\\\"\", \"confidence\": 1.0, \"evidence_text\": \"The timestamp column is date.\", \"slot_id\": \"time_column\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"upload\\\"\", \"confidence\": 1.0, \"evidence_text\": \"I will upload the data.\", \"slot_id\": \"source_mode\", \"status\": \"provided\"}]}",
+          "raw_json_valid": true,
+          "raw_schema_valid": true,
+          "parsed": true,
+          "error": null,
+          "prompt_tokens": 2314,
+          "completion_tokens": 160,
+          "recovery_applied": false,
+          "hit_generation_limit": false
+        }
+      ],
+      "pipeline_recovered_slots": [],
+      "recorded_slots": {
+        "intent": {
+          "value": "create_forecast",
+          "status": "provided",
+          "validation_errors": []
+        },
+        "target_column": {
+          "value": "tmax",
+          "status": "provided",
+          "validation_errors": []
+        },
+        "target_description": {
+          "value": "daily maximum temperature for Lahore",
+          "status": "provided",
+          "validation_errors": []
+        },
+        "target_unit": {
+          "value": "Celsius",
+          "status": "provided",
+          "validation_errors": []
+        },
+        "time_column": {
+          "value": "date",
+          "status": "provided",
+          "validation_errors": []
+        },
+        "frequency": {
+          "value": {
+            "periods": 1.0,
+            "unit": "day"
+          },
+          "status": "provided",
+          "validation_errors": []
+        },
+        "forecast_horizon": {
+          "value": {
+            "periods": 7.0,
+            "unit": "day"
+          },
+          "status": "provided",
+          "validation_errors": []
+        },
+        "source_mode": {
+          "value": "upload",
+          "status": "provided",
+          "validation_errors": []
+        },
+        "source_reference": {
+          "value": "weather.csv",
+          "status": "provided",
+          "validation_errors": []
+        },
+        "file_format": {
+          "value": "csv",
+          "status": "provided",
+          "validation_errors": []
+        }
+      }
+    }
+  ],
+  "purpose": "Offline replay of saved model outputs to check application compatibility; not new model inference"
+}

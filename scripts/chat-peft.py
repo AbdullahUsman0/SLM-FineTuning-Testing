@@ -8,6 +8,7 @@ import hashlib
 import json
 import os
 import re
+import subprocess
 import sys
 from datetime import UTC, datetime
 from pathlib import Path
@@ -21,6 +22,7 @@ for path in (PROJECT_ROOT, FPY_SRC):
         sys.path.insert(0, str(path))
 
 from forecasting_assistant.domain.schema import load_schema  # noqa: E402
+from forecasting_assistant.prompts.extractor import safe_provider_value  # noqa: E402
 from local_slm_lab.memory_repository import MemoryRepository  # noqa: E402
 from local_slm_lab.peft_provider import (  # noqa: E402
     PeftInferenceConfig,
@@ -28,6 +30,30 @@ from local_slm_lab.peft_provider import (  # noqa: E402
     resolve_adapter_path,
 )
 from local_slm_lab.slm_engine import LocalSLMElicitationEngine  # noqa: E402
+
+
+def fpy_source_record() -> dict:
+    # Record the actual package backing the schema, including local fixes.
+    source_root = Path(load_schema.__code__.co_filename).resolve().parents[1]
+    hashes = {path.relative_to(source_root).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest()
+              for path in sorted(source_root.rglob("*.py"))}
+    record = {"package_path": str(source_root), "mode": os.environ.get("SLM_FPY_MODE", "checkout"),
+              "revision": None, "working_tree_dirty": None, "python_source_sha256": hashes}
+    repo = source_root.parents[1]
+    if (repo / ".git").exists():
+        revision = subprocess.run(["git", "-C", str(repo), "rev-parse", "HEAD"],
+                                  capture_output=True, text=True, check=True)
+        status = subprocess.run(["git", "-C", str(repo), "status", "--porcelain"],
+                                capture_output=True, text=True, check=True)
+        record.update(revision=revision.stdout.strip(), working_tree_dirty=bool(status.stdout.strip()))
+    else:
+        launch = PROJECT_ROOT / "research-checkpoints/v6-training-20261003/results/launch-config.json"
+        if launch.is_file():
+            expected = json.loads(launch.read_text(encoding="utf-8"))
+            prefixed = {"src/forecasting_assistant/" + key: value for key, value in hashes.items()}
+            if prefixed == expected["fpy_source_sha256"]:
+                record.update(revision=expected["fpy_revision"], working_tree_dirty=False)
+    return record
 
 
 def main() -> None:
@@ -84,6 +110,8 @@ def main() -> None:
         )
         print("Using the local quantized server; results differ from BF16 CUDA evaluation.")
     schema = load_schema()
+    fpy_record = fpy_source_record()
+    print(f"fpy revision: {fpy_record['revision']}; local changes: {fpy_record['working_tree_dirty']}")
     print(f"Loading {args.variant} variant; this can take several minutes on CPU...")
     provider = provider_type(
         PeftInferenceConfig(
@@ -136,11 +164,24 @@ def main() -> None:
                 print(f"not ready: {exc}")
             continue
 
+        events_before = len(repository.events)
         result = asyncio.run(engine.handle_user_message(state.dialogue_id, message))
         print(f"model> {result.assistant_message}")
         traces = provider.drain_traces()
+        recovered_slots = [event["payload"]["slot_id"]
+                           for event in repository.events[events_before:]
+                           if event["event_type"] == "deterministic_recovery_applied"]
+        recorded_slots = {
+            slot_id: {
+                "value": safe_provider_value(slot.value, secret=slot_id == "authentication_reference"),
+                "status": slot.status.value,
+                "validation_errors": slot.validation_errors,
+            }
+            for slot_id, slot in result.state.slots.items() if slot.value is not None
+        }
         if args.debug:
-            print(json.dumps({"debug_traces": traces}, indent=2, ensure_ascii=False))
+            print(json.dumps({"debug_traces": traces, "pipeline_recovered_slots": recovered_slots},
+                             indent=2, ensure_ascii=False))
         transcript.append(
             {
                 "user": message,
@@ -148,6 +189,8 @@ def main() -> None:
                 "ready": result.readiness.ready,
                 "unresolved_slots": result.readiness.unresolved_slots,
                 "traces": traces,
+                "pipeline_recovered_slots": recovered_slots,
+                "recorded_slots": recorded_slots,
             }
         )
 
@@ -170,6 +213,7 @@ def main() -> None:
                 "server_url": args.server_url,
                 "server_model": args.server_model if args.server_url else None,
                 "fpy_source": str(FPY_SRC.resolve()),
+                "fpy": fpy_record,
                 "adapter": None if adapter_path is None else str(adapter_path),
                 "turns": transcript,
             },

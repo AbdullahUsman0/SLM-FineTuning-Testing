@@ -1,0 +1,88 @@
+diff --git a/src/forecasting_assistant/application/orchestrator.py b/src/forecasting_assistant/application/orchestrator.py
+index 224bf84..11f5e16 100644
+--- a/src/forecasting_assistant/application/orchestrator.py
++++ b/src/forecasting_assistant/application/orchestrator.py
+@@ -699,6 +699,20 @@ class ElicitationEngine:
+                 recovery_is_for_pending_slot or bad_intent_for_recovery
+             ):
+                 state, slot_id = recovered
++                # A missing selected slot can be recovered from a multi-fact
++                # message. Keep the extractor's other grounded updates instead
++                # of replacing the entire turn with the one recovered value.
++                if recovery_is_for_pending_slot and extraction.intent not in {
++                    Intent.NOT_FORECASTING,
++                    Intent.UNSUPPORTED,
++                }:
++                    state = apply_extraction(
++                        state,
++                        extraction,
++                        self._schema,
++                        turn_number,
++                        message,
++                    )
+                 self._trace(
+                     "state.recovery_applied",
+                     {"slot_id": slot_id, "state_after": self._trace_state(state)},
+@@ -710,7 +724,13 @@ class ElicitationEngine:
+                         "turn_number": turn_number,
+                         "slot_id": slot_id,
+                         "message": message,
+-                        "reason": "overrode unsupported intent for selected slot answer",
++                        "reason": (
++                            "completed selected slot while retaining extractor updates"
++                            if recovery_is_for_pending_slot and extraction.intent not in {
++                                Intent.NOT_FORECASTING, Intent.UNSUPPORTED
++                            }
++                            else "overrode unsupported intent for selected slot answer"
++                        ),
+                     },
+                 )
+             else:
+diff --git a/tests/integration/test_elicitation_flow.py b/tests/integration/test_elicitation_flow.py
+index 7910cb1..c3b6dda 100644
+--- a/tests/integration/test_elicitation_flow.py
++++ b/tests/integration/test_elicitation_flow.py
+@@ -481,6 +481,43 @@ async def test_selected_enum_answer_recovers_when_extractor_fails() -> None:
+     assert "confirm" in result.assistant_message.lower()
+ 
+ 
++@pytest.mark.asyncio
++async def test_source_mode_recovery_preserves_other_extracted_requirements() -> None:
++    message = (
++        "Forecast daily maximum temperature for Lahore. The target is measured in Celsius. "
++        "Each observation covers 1 day. Predict the next 7 days. "
++        "The target column is tmax. I will upload weather.csv in csv format."
++    )
++    values = {
++        "target_description": ("daily maximum temperature for Lahore", "Forecast daily maximum temperature for Lahore."),
++        "target_unit": ("Celsius", "The target is measured in Celsius."),
++        "frequency": ({"periods": 1, "unit": "day"}, "Each observation covers 1 day."),
++        "forecast_horizon": ({"periods": 7, "unit": "day"}, "Predict the next 7 days."),
++        "target_column": ("tmax", "The target column is tmax."),
++        "file_format": ("csv", "I will upload weather.csv in csv format."),
++    }
++    client = FakeLLMClient([
++        ExtractorResult(
++            intent=Intent.CREATE_FORECAST,
++            intent_confidence=0.99,
++            updates=[_update(slot_id, value, evidence=evidence)
++                     for slot_id, (value, evidence) in values.items()],
++        )
++    ])
++    engine, repository, dialogue_id = await _start(client)
++
++    result = await engine.handle_user_message(dialogue_id, message)
++
++    assert result.state.intent == Intent.CREATE_FORECAST
++    assert result.state.slots["source_mode"].value == "upload"
++    for slot_id, (expected, _) in values.items():
++        assert result.state.slots[slot_id].value == expected
++    stored = repository.load_state(dialogue_id)
++    assert stored.slots["target_description"].value == values["target_description"][0]
++    assert stored.slots["source_reference"].value is None
++    assert len(client.extract_requests) == 1
++
++
+ @pytest.mark.asyncio
+ async def test_data_list_phrase_fills_catalog_source_mode_on_first_try() -> None:
+     client = FakeLLMClient(

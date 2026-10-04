@@ -56,8 +56,29 @@ If the server is stopped, run this in one PowerShell terminal first:
 ```
 
 Then run chat in a second terminal. The launcher uses the bundled Python
-runtime, an exported pinned fpy snapshot, v5/v6 prompts, and adapter hash checks.
+runtime, the sibling fpy checkout, v5/v6 prompts, and adapter hash checks.
 It saves timestamped transcripts and supports `/state`, `/reset` and `/quit`.
+
+After the October 4 fpy update, its default `latest` mode uses
+`../fpy/src` at `9bc2bd1` plus the local recovery fix described in
+[the dependency update checkpoint](research-checkpoints/fpy-update-20261004/README.md).
+Restart the Python chat after a dependency update; the model server can stay up.
+Each new transcript records the fpy commit, working-tree status and Python-file
+hashes, so locally modified application behavior is identifiable.
+
+For the original training dependency and historical manual comparison, use:
+
+```powershell
+.\scripts\chat-v6-local.ps1 -FpyMode training
+```
+
+That mode uses the untouched exported snapshot at
+`04d52c015d1e3ecdefe92b87116f209361509b4b`. The newer fpy changes prompt descriptions,
+question priority and readiness behavior; do not mix its results with frozen
+training-protocol scores without explicitly reporting the different dependency.
+The new registry/deployment changes do not eliminate the separate
+`problem_statement` requirement, so a target-description follow-up can still
+sound repetitive. No missing requirement is silently filled to hide that issue.
 The base server has already loaded the converted adapter; the chat hash check
 verifies the original adapter files but cannot independently attest what an
 arbitrarily supplied HTTP server loaded. Local server logs and the runtime
