@@ -6,6 +6,7 @@ import argparse
 import asyncio
 import hashlib
 import json
+import os
 import re
 import sys
 from datetime import UTC, datetime
@@ -13,7 +14,7 @@ from pathlib import Path
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-FPY_SRC = PROJECT_ROOT.parent / "fpy" / "src"
+FPY_SRC = Path(os.environ.get("SLM_FPY_SRC", PROJECT_ROOT.parent / "fpy" / "src"))
 PEFT_DEPS = PROJECT_ROOT / ".peft-deps"
 for path in (PROJECT_ROOT, FPY_SRC):
     if str(path) not in sys.path:
@@ -38,6 +39,8 @@ def main() -> None:
     parser.add_argument("--prompt-version", choices=("legacy", "v5"), default="legacy",
                         help="Use v5 for adapters trained on the v5 or v6 corpus")
     parser.add_argument("--adapter-manifest", help="Completion JSON containing the expected adapter hashes")
+    parser.add_argument("--server-url", help="Local llama.cpp /v1 endpoint for quantized v5/v6 manual testing")
+    parser.add_argument("--server-model", default="local-qwen35-2b-v6")
     parser.add_argument("--device", choices=("auto", "cpu", "cuda"), default="auto")
     parser.add_argument(
         "--dtype", choices=("auto", "float32", "float16", "bfloat16"), default="bfloat16"
@@ -48,6 +51,8 @@ def main() -> None:
     args = parser.parse_args()
     if args.prompt_version == "v5" and not re.fullmatch(r"[0-9a-f]{40}", args.revision or ""):
         parser.error("--prompt-version v5 requires --revision with the pinned 40-character model commit")
+    if args.server_url and args.prompt_version != "v5":
+        parser.error("--server-url requires --prompt-version v5")
 
     # Add the optional inference runtime only after application dependencies
     # are imported; this prevents it from shadowing the main pipeline stack.
@@ -72,6 +77,12 @@ def main() -> None:
     if args.prompt_version == "v5":
         from local_slm_lab.v5_provider import V5TransformersProvider
         provider_type = V5TransformersProvider
+    if args.server_url:
+        from local_slm_lab.v5_local_provider import V5LocalServerProvider
+        provider_type = lambda config, schema: V5LocalServerProvider(
+            config, schema, base_url=args.server_url, model=args.server_model
+        )
+        print("Using the local quantized server; results differ from BF16 CUDA evaluation.")
     schema = load_schema()
     print(f"Loading {args.variant} variant; this can take several minutes on CPU...")
     provider = provider_type(
@@ -152,9 +163,13 @@ def main() -> None:
             {
                 "created_at": datetime.now(UTC).isoformat(),
                 "variant": args.variant,
+                "provider": provider.name,
                 "base_model": args.base_model,
                 "revision": args.revision,
                 "prompt_version": args.prompt_version,
+                "server_url": args.server_url,
+                "server_model": args.server_model if args.server_url else None,
+                "fpy_source": str(FPY_SRC.resolve()),
                 "adapter": None if adapter_path is None else str(adapter_path),
                 "turns": transcript,
             },

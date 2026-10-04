@@ -1,0 +1,77 @@
+{
+  "created_at": "2026-10-04T22:16:32.385367+00:00",
+  "variant": "custom",
+  "base_model": "Qwen/Qwen3.5-2B",
+  "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "prompt_version": "v5",
+  "server_url": "http://127.0.0.1:8086/v1",
+  "server_model": "local-qwen35-2b-v6",
+  "adapter": "C:\\Users\\ABDULLAH'S PC\\Desktop\\SML-FYP\\SLM-FineTuning-Testing\\adapters\\qwen35-2b-v6-20261003-step726",
+  "turns": [
+    {
+      "user": "Please build a time-series forecast. Forecast daily maximum temperature for Lahore. The target is measured in Celsius. Each observation covers 1 day. Predict the next 7 days. Read the target from the tmax column. The timestamp column is date. I will upload the data. The uploaded file format is csv. The source is weather.csv.",
+      "assistant": "What exactly do you need to predict?",
+      "ready": false,
+      "unresolved_slots": [
+        "problem_statement",
+        "business_goal",
+        "success_criteria",
+        "dataset_type",
+        "forecast_type",
+        "output_granularity",
+        "primary_metric",
+        "contains_sensitive_data"
+      ],
+      "traces": [
+        {
+          "operation": "extract",
+          "raw_output": "{\"correction_detected\": false, \"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"unsupported_claims\": [], \"updates\": [{\"candidate_value\": \"\\\"create_forecast\\\"\", \"confidence\": 1.0, \"evidence_text\": \"Please build a time-series forecast.\", \"slot_id\": \"intent\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"daily maximum temperature for Lahore\\\"\", \"confidence\": 1.0, \"evidence_text\": \"Forecast daily maximum temperature for Lahore.\", \"slot_id\": \"target_description\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"Celsius\\\"\", \"confidence\": 1.0, \"evidence_text\": \"The target is measured in Celsius.\", \"slot_id\": \"target_unit\", \"status\": \"provided\"}, {\"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"day\\\"}\", \"confidence\": 1.0, \"evidence_text\": \"Each observation covers 1 day.\", \"slot_id\": \"frequency\", \"status\": \"provided\"}, {\"candidate_value\": \"{\\\"periods\\\": 7, \\\"unit\\\": \\\"day\\\"}\", \"confidence\": 1.0, \"evidence_text\": \"Predict the next 7 days.\", \"slot_id\": \"forecast_horizon\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"tmax\\\"\", \"confidence\": 1.0, \"evidence_text\": \"Read the target from the tmax column.\", \"slot_id\": \"target_column\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"date\\\"\", \"confidence\": 1.0, \"evidence_text\": \"The timestamp column is date.\", \"slot_id\": \"time_column\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"upload\\\"\", \"confidence\": 1.0, \"evidence_text\": \"I will upload the data.\", \"slot_id\": \"source_mode\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"csv\\\"\", \"confidence\": 1.0, \"evidence_text\": \"The uploaded file format is csv.\", \"slot_id\": \"file_format\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"weather.csv\\\"\", \"confidence\": 1.0, \"evidence_text\": \"The source is weather.csv.\", \"slot_id\": \"source_reference\", \"status\": \"provided\"}]}",
+          "raw_json_valid": true,
+          "raw_schema_valid": true,
+          "parsed": true,
+          "error": null,
+          "prompt_tokens": 2188,
+          "completion_tokens": 485,
+          "recovery_applied": false,
+          "hit_generation_limit": false
+        }
+      ]
+    },
+    {
+      "user": "Correction: predict the next 14 days instead of 7 days.",
+      "assistant": "I could not reliably record What must be predicted. Please answer in one short phrase.",
+      "ready": false,
+      "unresolved_slots": [
+        "problem_statement",
+        "business_goal",
+        "success_criteria",
+        "dataset_type",
+        "forecast_type",
+        "output_granularity",
+        "primary_metric",
+        "contains_sensitive_data"
+      ],
+      "traces": [
+        {
+          "operation": "extract",
+          "raw_output": "{\"correction_detected\": true, \"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"unsupported_claims\": [], \"updates\": [{\"candidate_value\": \"{\\\"periods\\\": 14.0, \\\"unit\\\": \\\"day\\\"}\", \"confidence\": 1.0, \"evidence_text\": \"Correction: predict the next 14 days instead of 7 days.\", \"slot_id\": \"forecast_horizon\", \"status\": \"provided\"}]}",
+          "raw_json_valid": true,
+          "raw_schema_valid": true,
+          "parsed": true,
+          "error": null,
+          "prompt_tokens": 2372,
+          "completion_tokens": 101,
+          "recovery_applied": false,
+          "hit_generation_limit": false
+        }
+      ]
+    },
+    {
+      "event": "reset",
+      "dialogue_id": "2745589e-8037-44e7-a706-6bbcdecfe882"
+    }
+  ],
+  "provider": "v5_local_quantized_manual",
+  "fpy_commit": "04d52c015d1e3ecdefe92b87116f209361509b4b",
+  "purpose": "Two illustrative manual turns; not a frozen behavioral benchmark"
+}

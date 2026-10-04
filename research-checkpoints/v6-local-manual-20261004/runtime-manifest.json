@@ -1,0 +1,19 @@
+{
+  "purpose": "Quantized CPU manual testing, not matched BF16 behavioral evaluation",
+  "original_adapter_sha256": "e7add7b8b02d24615ed89067c7761c3985a4a6afb7c84ca2a72e3b06fd84e74d",
+  "fpy_commit": "04d52c015d1e3ecdefe92b87116f209361509b4b",
+  "converter": "llama.cpp b11026 convert_lora_to_gguf.py",
+  "adapter_output_type": "f16",
+  "cpu_threads": 8,
+  "files": {
+    "models/Qwen3.5-2B-Q4_K_M.gguf": {
+      "bytes": 1280835840,
+      "sha256": "aaf42c8b7c3cab2bf3d69c355048d4a0ee9973d48f16c731c0520ee914699223"
+    },
+    "runtime/adapter-downloads/v6-adapter-step726-F16.gguf": {
+      "bytes": 33664288,
+      "sha256": "5a053b32e31b4fe405611c757c7faecf77adccb3369830be8f47810d468b9e6f"
+    }
+  },
+  "fpy_python_source_files_byte_identical_to_training": 31
+}

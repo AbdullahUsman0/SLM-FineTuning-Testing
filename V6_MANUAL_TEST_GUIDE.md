@@ -34,6 +34,55 @@ show the model's raw extraction, including failures. The pipeline can normalize
 or recover values, so inspect both raw traces and the recorded state.
 This is the requirement extraction pipeline, not a weather/price forecaster.
 
+## Run on the prepared Intel laptop
+
+The authoring laptop has Intel graphics, 32 GB RAM and no CUDA GPU. Its local
+CPU server uses the existing Q4_K_M stock base and the converted F16 v6 LoRA.
+These are quantized manual tests, not the matched BF16 CUDA research evaluation.
+The NPU is not used. The HF cache contains tokenizer/config files; this path
+does not require downloading the separate 4.55 GB HF model weights.
+
+On this PC the server was started in the background on port 8086. From the
+repository root, launch chat with:
+
+```powershell
+.\scripts\chat-v6-local.ps1
+```
+
+If the server is stopped, run this in one PowerShell terminal first:
+
+```powershell
+.\scripts\start-v6-local.ps1
+```
+
+Then run chat in a second terminal. The launcher uses the bundled Python
+runtime, an exported pinned fpy snapshot, v5/v6 prompts, and adapter hash checks.
+It saves timestamped transcripts and supports `/state`, `/reset` and `/quit`.
+The base server has already loaded the converted adapter; the chat hash check
+verifies the original adapter files but cannot independently attest what an
+arbitrarily supplied HTTP server loaded. Local server logs and the runtime
+manifest identify the loaded files.
+
+Prepared artifacts (ignored by Git):
+
+- `runtime/llama-b11026-cpu/llama-server.exe`
+- `models/Qwen3.5-2B-Q4_K_M.gguf`
+- `runtime/adapter-downloads/v6-adapter-step726-F16.gguf`
+- `runtime/adapter-downloads/v6-local-runtime.json`
+- `runtime/fpy-v6-pinned/src/`
+
+A fresh clone on another PC does not include these artifacts. Use the existing
+HF setup later in this guide or prepare this llama.cpp runtime separately.
+The adapter conversion used the existing b11026 converter and cached pinned
+base configuration, with `--outtype f16`. The local base GGUF hash is recorded;
+an exact underlying HF weight-revision match has not been established here.
+
+The October 4 local smoke extracted 10 explicitly stated weather requirements
+and correctly changed a 7-day horizon to 14 days. Both raw outputs passed strict
+JSON/schema parsing. The first call took about 53 seconds at approximately
+17.5 generated tokens/second with eight CPU threads. These two illustrative
+turns do not establish overall quality or performance across the dataset.
+
 ## Manual cases
 
 These newly written illustrative cases are not an independently reviewed or
