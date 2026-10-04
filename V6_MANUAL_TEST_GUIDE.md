@@ -121,21 +121,65 @@ I want a forecast of inflation, but I do not know the data source, column names,
 Check that missing information is asked for instead of fabricated. Unknown
 values are not the same as explicit indifference (`dont_care`).
 
-## Move the adapter to another PC
+## Download and test on another PC
 
-Copy only the `best-adapter` folder (at least `adapter_model.safetensors` and
-`adapter_config.json`). Their expected hashes are in the completion record:
+The final adapter weights and configuration are now published in
+[`adapters/qwen35-2b-v6-20261003-step726`](adapters/qwen35-2b-v6-20261003-step726/README.md).
+The actual 67.3 MB weights are stored directly in Git. In your checkout, use:
+
+```powershell
+git pull --ff-only origin experiment/v5-grounded-20260919
+```
+
+For a new checkout, clone this branch:
+
+```powershell
+git clone --branch experiment/v5-grounded-20260919 --single-branch https://github.com/AbdullahUsman0/SLM-FineTuning-Testing.git
+cd SLM-FineTuning-Testing
+```
+
+Git LFS is unnecessary for this adapter: the repository's exhausted LFS budget
+prevented that upload, so the actual file is included in a regular clone/pull.
+
+The 79-slot contracts come from the sibling `../fpy` repository. If absent,
+clone it, then pin it to the training commit. Use a clean sibling checkout;
+preserve any unrelated local work in an existing `fpy` checkout.
+
+```powershell
+git clone https://github.com/int-abd-5/fpy.git ../fpy
+git -C ../fpy checkout --detach 04d52c015d1e3ecdefe92b87116f209361509b4b
+py -3.12 -m venv .venv
+& .\.venv\Scripts\python.exe -m pip install -r training/requirements-inference.txt
+& .\.venv\Scripts\python.exe -m pip install -e ../fpy
+```
+
+The commands above use the checked-in inference dependency versions. For an
+NVIDIA GPU, use a CUDA-enabled PyTorch installation compatible with your driver;
+the training PC used `torch 2.11.0+cu128`. Check GPU availability before choosing
+`--device cuda`:
+
+```powershell
+& .\.venv\Scripts\python.exe -c "import torch; print(torch.__version__); print(torch.cuda.is_available())"
+& .\.venv\Scripts\python.exe scripts/chat-peft.py `
+  --variant custom `
+  --adapter adapters/qwen35-2b-v6-20261003-step726 `
+  --adapter-manifest research-checkpoints/v6-training-20261003/results/completion.json `
+  --base-model Qwen/Qwen3.5-2B `
+  --revision 15852e8c16360a2fea060d615a32b45270f8a8fc `
+  --prompt-version v5 --device cuda --dtype bfloat16 --max-new-tokens 1024 --debug
+```
+
+For CPU inference, replace `--device cuda --dtype bfloat16` with
+`--device cpu --dtype float32`; allow extra RAM and slower generation.
+The NPU is not used by this script. The first launch downloads the separate
+stock base weights (approximately 4.55 GB) and tokenizer from the pinned Hugging
+Face revision, unless already cached. No API key or paid API call is required.
+Set `HF_HOME` before launching if you already keep that cache elsewhere.
+
+The expected hashes are in the completion record:
 
 - Weights: `e7add7b8b02d24615ed89067c7761c3985a4a6afb7c84ca2a72e3b06fd84e74d`
 - Config: `38f60de9678324e91fa882ed86c70d09e4a39b27ae28884374ddc3e6fece15ef`
 
-GitHub currently contains the audit records, not these adapter bytes.
-Copying optimizer checkpoints is unnecessary for inference. The adapter still
-requires the pinned stock 2B base model, which is downloaded separately by the
-inference runtime or read from the local Hugging Face cache.
-Change the adapter path and Python executable for the receiving PC. For CPU
-inference use `--device cpu --dtype float32`; the NPU is not used by this script.
-The GPU command above reuses the environment already proven to load this model.
-
-The CLI flags and audit hashes were checked locally. Actual v6 model inference
-could not be rerun on the authoring PC because the adapter bytes are remote.
+The published weights and config are copied without modification from the
+previously audited adapter. Optimizer checkpoints are unnecessary for inference.

@@ -1,0 +1,34 @@
+{
+  "format_version": 1,
+  "run": "qwen35-2b-lora-v6-20261003T113807Z",
+  "global_step": 726,
+  "epochs": 2,
+  "selection": "final-step candidate; behavioral checkpoint selection pending",
+  "base_model": "Qwen/Qwen3.5-2B",
+  "base_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "base_architecture": "Qwen3_5ForConditionalGeneration",
+  "tokenizer_source": "pinned base model",
+  "prompt_version": "v5",
+  "enable_thinking": false,
+  "training_repository_commit": "36290d6c28fe65f0014b622045889bf54d5cac48",
+  "fpy_commit": "04d52c015d1e3ecdefe92b87116f209361509b4b",
+  "corpus": "v6-20261002-r4",
+  "corpus_manifest_sha256": "0782956c587b5996a2df3f7b799fb0b9e572942b063c8fc1b623ea691fc5aeb9",
+  "completion_record": "../../research-checkpoints/v6-training-20261003/results/completion.json",
+  "adapter": {
+    "adapter_model.safetensors": {
+      "bytes": 67332688,
+      "sha256": "e7add7b8b02d24615ed89067c7761c3985a4a6afb7c84ca2a72e3b06fd84e74d"
+    },
+    "adapter_config.json": {
+      "bytes": 1413,
+      "sha256": "38f60de9678324e91fa882ed86c70d09e4a39b27ae28884374ddc3e6fece15ef"
+    }
+  },
+  "adapter_tensors": 372,
+  "teacher_forced_validation_loss": 0.00006398998812073842,
+  "behavioral_validation": "pending",
+  "loading_smoke": "valid JSON; separate frequency, unit, horizon and file-format updates omitted",
+  "distribution": "Weights stored directly in Git; unchanged PEFT config; base downloaded separately",
+  "distribution_note": "Git LFS upload rejected because the repository LFS budget was exhausted"
+}
