@@ -62,4 +62,9 @@ class RolloutTests(unittest.TestCase):
         self.assertEqual(metrics['unknown_no_updates_and_valid']['denominator'],1)
         self.assertEqual(metrics['unknown_no_updates_and_valid']['numerator'],0)
 
+    def test_unscored_warmup_file_uses_validation_labels(self):
+        warmup,_=runner.load_cases(ROOT/'corpus-v5/v5-20260919-r1/splits/smoke.jsonl',split='validation')
+        self.assertTrue(warmup)
+        self.assertEqual(len(runner.build_call_plan(warmup[:1],self.schema)[:1]),1)
+
 if __name__=='__main__': unittest.main()

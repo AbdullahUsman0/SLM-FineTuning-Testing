@@ -100,6 +100,9 @@ def run_locked(args,study,out):
         plans[name]=build_call_plan(cases[name],schema)
         assert digest([c['key'] for c in plans[name]])==manifest['cases'][name]['ordered_keys_sha256']
         assert digest([[c['key'],digest(c['context']),digest(c['expected'])] for c in plans[name]])==manifest['cases'][name]['context_gold_sha256']
+    # The smoke file is an unscored subset of development validation scenarios.
+    warmup_cases,_=load_cases(ROOT/'corpus-v5/v5-20260919-r1/splits/smoke.jsonl',split='validation')
+    warmup_plan=build_call_plan(warmup_cases[:1],schema)[:1]
     for arm,path in [('v5',V5),('v6',V6)]:
         for name,expected in ADAPTER_HASHES[arm].items():
             if sha256(path/name)!=expected: raise ValueError(f'{arm} adapter hash mismatch')
@@ -126,8 +129,6 @@ def run_locked(args,study,out):
         variant='base',device='cuda',dtype='bfloat16',max_new_tokens=1024)
     started=perf_counter(); provider=SynchronizedProvider(config,schema)
     native_load_ms=(perf_counter()-started)*1000
-    warmup_cases,_=load_cases(ROOT/'corpus-v5/v5-20260919-r1/splits/smoke.jsonl',split='smoke')
-    warmup_plan=build_call_plan(warmup_cases[:1],schema)[:1]
     native=asyncio.run(evaluate(provider,warmup_cases[:1],schema=schema,plan=warmup_plan))
     provider._model=load_peft_adapter(PeftModel,provider._model,V5)
     with warnings.catch_warnings(record=True) as caught:
