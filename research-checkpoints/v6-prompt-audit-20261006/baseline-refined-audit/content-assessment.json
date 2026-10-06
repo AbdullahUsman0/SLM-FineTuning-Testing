@@ -1,0 +1,240 @@
+{
+  "created_utc": "2026-10-06T22:06:12.730597+00:00",
+  "source_report_sha256": {
+    "base-natural_component.json.gz": "950f9c110a630f577ccbebac32633df8bfcd5de7b3b905969e4f18307c7834b4",
+    "base-natural_rollout.json.gz": "7283e66b006d179a7d33aae31fd8ad7194c2f5a8ea101406fcae82d0b7c316a8",
+    "v5-natural_component.json.gz": "1a00f6d72ff41c70e02a933d10e5e04613bca9fd019cd08f61e1edea418894ff",
+    "v5-natural_rollout.json.gz": "7d80ceeb64bf5821e149f1ea1e33264ba729c710d6572e3b01dbf49cca590c4f",
+    "v6-natural_component.json.gz": "3d713641ffc1581fffc89390f1d120ca595e63c968d0436000cbe8e0b1591bb2",
+    "v6-natural_rollout.json.gz": "8d808076dd561e1e5a4afb058f8298fa89e5da79dd458f2b3e8a365059482fde"
+  },
+  "code_sha256": "6be8bc2310540ca923afa1fe296fdf3c386b4e7f1a81dd0b1e57c0d68d551723",
+  "method": "Supplementary post hoc structural failure audit. Invalid strict JSON makes content unassessable; repeated slot IDs are reported separately. Different free-text values are not independently adjudicated as semantic errors. No outputs are repaired, applied or rescored.",
+  "tracks": {
+    "natural_component": {
+      "base": {
+        "categories": {
+          "wrong_status": 89,
+          "absent_from_readable_emissions": 54,
+          "different_value_or_type_not_adjudicated_semantically": 31,
+          "new_unmentioned_slot": 114,
+          "repeated_prior_fact": 33,
+          "exact_readable_content": 5,
+          "unassessable_strict_json_failure": 5,
+          "normalization_only": 8
+        },
+        "readable_omissions_by_slot": {
+          "forecast_horizon": 5,
+          "target_description": 29,
+          "frequency": 7,
+          "target_column": 1,
+          "time_column": 2,
+          "target_unit": 9,
+          "prediction_frequency": 1
+        },
+        "categories_by_turn_kind": {
+          "initial": {
+            "wrong_status": 80,
+            "absent_from_readable_emissions": 54,
+            "different_value_or_type_not_adjudicated_semantically": 22,
+            "new_unmentioned_slot": 49,
+            "unassessable_strict_json_failure": 4
+          },
+          "correction": {
+            "different_value_or_type_not_adjudicated_semantically": 9,
+            "exact_readable_content": 5,
+            "repeated_prior_fact": 15,
+            "new_unmentioned_slot": 8,
+            "unassessable_strict_json_failure": 1,
+            "wrong_status": 9,
+            "normalization_only": 8
+          },
+          "unknown": {
+            "new_unmentioned_slot": 57,
+            "repeated_prior_fact": 18
+          }
+        }
+      },
+      "v5": {
+        "categories": {
+          "exact_readable_content": 77,
+          "absent_from_readable_emissions": 68,
+          "different_value_or_type_not_adjudicated_semantically": 15,
+          "normalization_only": 32,
+          "new_unmentioned_slot": 21
+        },
+        "readable_omissions_by_slot": {
+          "target_description": 21,
+          "source_mode": 4,
+          "target_unit": 19,
+          "frequency": 19,
+          "file_format": 3,
+          "time_column": 1,
+          "prediction_frequency": 1
+        },
+        "categories_by_turn_kind": {
+          "initial": {
+            "exact_readable_content": 76,
+            "absent_from_readable_emissions": 68,
+            "different_value_or_type_not_adjudicated_semantically": 15,
+            "new_unmentioned_slot": 5,
+            "normalization_only": 1
+          },
+          "correction": {
+            "normalization_only": 31,
+            "exact_readable_content": 1
+          },
+          "unknown": {
+            "new_unmentioned_slot": 16
+          }
+        }
+      },
+      "v6": {
+        "categories": {
+          "normalization_only": 12,
+          "absent_from_readable_emissions": 49,
+          "exact_readable_content": 92,
+          "duplicate_slot_emissions": 1,
+          "different_value_or_type_not_adjudicated_semantically": 27,
+          "new_unmentioned_slot": 13,
+          "unassessable_strict_json_failure": 11
+        },
+        "readable_omissions_by_slot": {
+          "forecast_horizon": 6,
+          "target_unit": 22,
+          "source_mode": 6,
+          "frequency": 11,
+          "file_format": 2,
+          "prediction_frequency": 2
+        },
+        "categories_by_turn_kind": {
+          "initial": {
+            "normalization_only": 3,
+            "absent_from_readable_emissions": 49,
+            "exact_readable_content": 69,
+            "duplicate_slot_emissions": 1,
+            "different_value_or_type_not_adjudicated_semantically": 27,
+            "unassessable_strict_json_failure": 11,
+            "new_unmentioned_slot": 1
+          },
+          "correction": {
+            "exact_readable_content": 23,
+            "normalization_only": 9
+          },
+          "unknown": {
+            "new_unmentioned_slot": 12
+          }
+        }
+      }
+    },
+    "natural_rollout": {
+      "base": {
+        "categories": {
+          "wrong_status": 82,
+          "absent_from_readable_emissions": 55,
+          "different_value_or_type_not_adjudicated_semantically": 51,
+          "new_unmentioned_slot": 143,
+          "unassessable_strict_json_failure": 4
+        },
+        "readable_omissions_by_slot": {
+          "forecast_horizon": 6,
+          "target_description": 29,
+          "frequency": 7,
+          "target_column": 1,
+          "time_column": 2,
+          "target_unit": 9,
+          "prediction_frequency": 1
+        },
+        "categories_by_turn_kind": {
+          "initial": {
+            "wrong_status": 80,
+            "absent_from_readable_emissions": 54,
+            "different_value_or_type_not_adjudicated_semantically": 22,
+            "new_unmentioned_slot": 49,
+            "unassessable_strict_json_failure": 4
+          },
+          "correction": {
+            "different_value_or_type_not_adjudicated_semantically": 29,
+            "wrong_status": 2,
+            "new_unmentioned_slot": 5,
+            "absent_from_readable_emissions": 1
+          },
+          "unknown": {
+            "new_unmentioned_slot": 89
+          }
+        }
+      },
+      "v5": {
+        "categories": {
+          "exact_readable_content": 78,
+          "absent_from_readable_emissions": 68,
+          "different_value_or_type_not_adjudicated_semantically": 15,
+          "normalization_only": 31,
+          "new_unmentioned_slot": 21
+        },
+        "readable_omissions_by_slot": {
+          "target_description": 21,
+          "source_mode": 4,
+          "target_unit": 19,
+          "frequency": 19,
+          "file_format": 3,
+          "time_column": 1,
+          "prediction_frequency": 1
+        },
+        "categories_by_turn_kind": {
+          "initial": {
+            "exact_readable_content": 76,
+            "absent_from_readable_emissions": 68,
+            "different_value_or_type_not_adjudicated_semantically": 15,
+            "new_unmentioned_slot": 5,
+            "normalization_only": 1
+          },
+          "correction": {
+            "normalization_only": 30,
+            "exact_readable_content": 2
+          },
+          "unknown": {
+            "new_unmentioned_slot": 16
+          }
+        }
+      },
+      "v6": {
+        "categories": {
+          "normalization_only": 9,
+          "absent_from_readable_emissions": 49,
+          "exact_readable_content": 95,
+          "duplicate_slot_emissions": 1,
+          "different_value_or_type_not_adjudicated_semantically": 27,
+          "new_unmentioned_slot": 13,
+          "unassessable_strict_json_failure": 11
+        },
+        "readable_omissions_by_slot": {
+          "forecast_horizon": 6,
+          "target_unit": 22,
+          "source_mode": 6,
+          "frequency": 11,
+          "file_format": 2,
+          "prediction_frequency": 2
+        },
+        "categories_by_turn_kind": {
+          "initial": {
+            "normalization_only": 3,
+            "absent_from_readable_emissions": 49,
+            "exact_readable_content": 69,
+            "duplicate_slot_emissions": 1,
+            "different_value_or_type_not_adjudicated_semantically": 27,
+            "unassessable_strict_json_failure": 11,
+            "new_unmentioned_slot": 1
+          },
+          "correction": {
+            "exact_readable_content": 26,
+            "normalization_only": 6
+          },
+          "unknown": {
+            "new_unmentioned_slot": 12
+          }
+        }
+      }
+    }
+  }
+}
