@@ -1,0 +1,67 @@
+{
+  "version": "v6-schema-fix-20261006-1",
+  "frozen_before_new_inference_utc": "2026-10-06T22:49:42.725587+00:00",
+  "natural_sha256": "88824a03b4f29196e6ed827e73b9edda6a1caf4c2b13ec7eea3d5b367bcbfb19",
+  "original_study_manifest_sha256": "7218a78d17aa8b6abda975ec138c80da9ffef4e2ef5af419020df0ee68143e5d",
+  "base_model": "Qwen/Qwen3.5-2B",
+  "base_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "v6_adapter_sha256": {
+    "adapter_model.safetensors": "e7add7b8b02d24615ed89067c7761c3985a4a6afb7c84ca2a72e3b06fd84e74d",
+    "adapter_config.json": "38f60de9678324e91fa882ed86c70d09e4a39b27ae28884374ddc3e6fece15ef"
+  },
+  "prompt_sha256": {
+    "revised": "e216999f9e8c0852ff5dc210b5c5a74c5cd149e1fa43d66bc67b2dcb3019005c",
+    "schema_fixed": "97d38edb81585f5d653b7dbcc154803d9126968e56fd571fb91c21a41aed803a"
+  },
+  "scenarios": 32,
+  "calls_per_arm_track": 96,
+  "total_scored_calls": 384,
+  "tracks": [
+    "natural_component",
+    "natural_rollout"
+  ],
+  "arms": [
+    "revised",
+    "schema_fixed"
+  ],
+  "primary": "Exact schema-gated slot/value/status F1 excluding intent; same unchanged gold labels",
+  "supplementary": "Pinned application-normalized F1; local corrected-horizon/state-preservation metrics; raw content error categories",
+  "contexts": "Gold prior state for component; own prior state for rollout, fixed user script. Both variants rerun in the same session.",
+  "order": "Original/revised order alternates per scenario; serial batch 1 after equal unscored warmups",
+  "decoding": {
+    "seed": 42,
+    "do_sample": false,
+    "max_new_tokens": 1024,
+    "enable_thinking": false,
+    "dtype": "bfloat16",
+    "device": "cuda",
+    "torch_threads": 4
+  },
+  "success_criteria": "Schema-fixed validity at least original reference (93/96) on each track; maintain 32/32 valid unknown abstentions and no observed new unmentioned slots; normalized F1 and full-state accuracy must not fall versus same-session revised control. Report per-domain tradeoffs, raw typed corrections, latency, bootstrap intervals and every failure. This is a development screen, not deployment approval.",
+  "limitations": "One format-only candidate designed after earlier development outputs; no unseen-case or independent human-review claim. Revised control is rerun; compare its raw outputs to the previous run to disclose any repeat drift.",
+  "sealed_final_accessed": false,
+  "training_started": false,
+  "paid_apis_used": false,
+  "ordered_keys_sha256": "610ca21250df65c0abc8cbb85abfaaeef0f971a0c1385634566ce08dd01a4762",
+  "context_gold_sha256": "696ef89f936bff691d1b1fff6d0c7ac7bd68d759f267ac7484c2468b746beacf",
+  "historical_references": {
+    "original-natural_component": {
+      "path": "research-checkpoints/v6-prompt-audit-20261006/results/original-natural_component.json.gz",
+      "sha256": "df04ee541a3507df9c1bc9f6a939dbd0ebe8a2ba435c9e44b36a1fe627aa2342"
+    },
+    "original-natural_rollout": {
+      "path": "research-checkpoints/v6-prompt-audit-20261006/results/original-natural_rollout.json.gz",
+      "sha256": "6356fd7204722acb454d57f868f82ef4a19f7e24670acaee9c481dfd90446407"
+    },
+    "revised-natural_component": {
+      "path": "research-checkpoints/v6-prompt-audit-20261006/results/revised-natural_component.json.gz",
+      "sha256": "6383c20e3fa7abbd49bef27625d3ea987016ba35f81fdca9387e4c479b77b25a"
+    },
+    "revised-natural_rollout": {
+      "path": "research-checkpoints/v6-prompt-audit-20261006/results/revised-natural_rollout.json.gz",
+      "sha256": "9cb55d6cc8fc8fae91ee06b823660ea79ad0e0c062ddf1b64b1540882a286d16"
+    }
+  },
+  "hypothesis": "Appending only an explicit field whitelist and separate-update construction rules reduces extra-field and merged-update contract failures without undoing completeness and abstention gains.",
+  "comparison": "Revised versus schema_fixed in the same session, matched labels and gold component contexts; original prompt is a clearly identified historical reference, with no direct cross-session latency claim."
+}

@@ -48,4 +48,19 @@ class AuditTests(unittest.TestCase):
         duration=next(u for u in result.updates if u.slot_id=='forecast_horizon')
         self.assertEqual(duration.candidate_value,{'periods':2,'unit':'week'})
 
+    def test_schema_candidate_keeps_prior_content_and_changes_only_contract_tail(self):
+        from local_slm_lab.v6_schema_fix import build_schema_fixed_instructions,SCHEMA_FIX
+        prior=audit.build_revised_instructions()
+        self.assertEqual(build_schema_fixed_instructions(),prior+SCHEMA_FIX)
+
+    def test_extra_type_and_merged_requirement_fields_are_still_rejected(self):
+        import json
+        text=audit.build_revised_instructions()
+        example=text.split('the wire response is:\n',1)[1].split('\n',1)[0]
+        for extra in ({'type':'string'},{'target_unit':json.dumps('litres')}):
+            parsed=audit.strict_json_object(example)
+            parsed['updates'][0].update(extra)
+            with self.assertRaises(ValueError):
+                audit.validate_raw_output(parsed,audit.ExtractorResult)
+
 if __name__=='__main__':unittest.main()

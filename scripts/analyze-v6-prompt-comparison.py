@@ -15,12 +15,13 @@ audit=importlib.util.module_from_spec(SPEC);SPEC.loader.exec_module(audit)
 def analyze(run,output):
     completion=json.loads((run/'completion.json').read_text());assert completion['status']=='complete' and completion['scored_calls']==384
     output.mkdir(parents=True,exist_ok=False);schema=audit.load_schema();records={};rows=[];slot_rows=[]
+    arms=tuple(completion.get('arms',('original','revised')));assert len(arms)==2
     result={'status':'complete','completion':completion,'tracks':{},'paired_differences':{},
             'analysis_sha256':audit.sha256(Path(__file__)),
             'interpretation':'Exploratory comparison on the same 32 development conversations used to design the prompt. No independent held-out improvement claim. Original labels and primary scoring unchanged.'}
     for track in ('natural_component','natural_rollout'):
         result['tracks'][track]={}
-        for arm in ('original','revised'):
+        for arm in arms:
             path=run/f'{arm}-{track}.json';payload=path.read_bytes();report=json.loads(payload)
             assert report['status']=='complete' and report['fingerprint']==completion['fingerprint']
             group=report['records'];records[(track,arm)]=group
@@ -46,13 +47,14 @@ def analyze(run,output):
             for r in audit.audit_records(group,schema):slot_rows.append({'arm':arm,**r})
             compressed=gzip.compress(payload,mtime=0);assert gzip.decompress(compressed)==payload
             (output/(path.name+'.gz')).write_bytes(compressed)
-        left=records[(track,'original')];right=records[(track,'revised')]
+        left=records[(track,arms[0])];right=records[(track,arms[1])]
         lm={tuple(r['key']):r for r in left};rm={tuple(r['key']):r for r in right};assert lm.keys()==rm.keys()
         for key,l in lm.items():
             assert l['gold_sha256']==rm[key]['gold_sha256']
             if track!='natural_rollout':assert l['context_sha256']==rm[key]['context_sha256']
-        l=result['tracks'][track]['original']['all'];r=result['tracks'][track]['revised']['all']
+        l=result['tracks'][track][arms[0]]['all'];r=result['tracks'][track][arms[1]]['all']
         result['paired_differences'][track]={
+            'left_arm':arms[0],'right_arm':arms[1],
             'strict_f1_delta':r['strict']['nonintent']['f1']-l['strict']['nonintent']['f1'],
             'normalized_f1_delta':r['supplementary_normalized']['schema_gated_normalized_slot_value_status']['f1']-l['supplementary_normalized']['schema_gated_normalized_slot_value_status']['f1'],
             'new_unmentioned_slot_delta':r['strict']['new_unmentioned_slot_count']-l['strict']['new_unmentioned_slot_count'],
@@ -64,14 +66,14 @@ def analyze(run,output):
     audit.write_json(output/'analysis.json',result)
     for name in ('run-manifest.json','completion.json'):shutil.copyfile(run/name,output/name)
     audit.write_json(output/'execution-evidence.json',{'sessions':{p.name:json.loads(p.read_text()) for p in (run/'sessions').glob('*.json')}})
-    text=['# V6 failure audit and original versus revised prompt comparison','',
-          'All 384 new scored calls are complete: two prompts, two context tracks, the same 32 conversations and the same unchanged final-step v6 weights. No training, repairs, retries, paid APIs or sealed final labels. Original and revised prompt order alternated per scenario in one serial BF16 CUDA session. Complete raw predictions, contexts, timings and gold labels are preserved in four compressed reports.','',
+    text=[f'# V6 prompt comparison: {arms[0]} versus {arms[1]}','',
+          'All 384 new scored calls are complete: two frozen prompts, two context tracks, the same 32 conversations and the same unchanged final-step v6 weights. No training, repairs, retries, paid APIs or sealed final labels. Prompt order alternated per scenario in one serial BF16 CUDA session. Complete raw predictions, contexts, timings and gold labels are preserved in four compressed reports.','',
           'All 32 conversation labels and 96 turns were reviewed by the Codex agent, with no clear factual label error or label changes. This is not independent human review. The original cohort was already inspected to design the candidate prompt, so this experiment measures development-set response to one fixed prompt change, not generalization. Input review notes and the frozen protocol are under evaluation/v6-prompt-audit-20261006.','',
           'Strict F1 preserves the original schema-gated exact slot/value/status definition. Supplementary normalized F1 applies only the existing pinned application normalize_value to both gold and observed values, retains the schema-validity gate and status, and does not repair output. It distinguishes accepted enum capitalization and duration text from omissions and wrong values. Free-text synonyms and missing target qualifiers are not automatically forgiven.','',
           '| Track | Prompt | Strict F1 | Normalized F1 | JSON / schema valid | New unmentioned slots | Corrected horizon / 32 | Fully correct state after correction / 32 | Unknown valid/no updates / 32 | Median / p95 (s) |',
           '| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |']
     for track in ('natural_component','natural_rollout'):
-        for arm in ('original','revised'):
+        for arm in arms:
             block=result['tracks'][track][arm]['all'];m=block['strict'];n=block['supplementary_normalized'];lat=m['extract_latency_ms']
             text.append(f'| {track} | {arm} | {m["nonintent"]["f1"]:.3f} | {n["schema_gated_normalized_slot_value_status"]["f1"]:.3f} | {m["extract_json_valid"]["rate"]:.3f} / {m["extract_schema_valid"]["rate"]:.3f} | {m["new_unmentioned_slot_count"]} | {n["correction_horizon_after_reducer"]["numerator"]} | {m["correction_flag_and_reducer_transition_accuracy"]["numerator"]} | {m["unknown_no_updates_and_valid"]["numerator"]} | {lat["p50"]/1000:.3f} / {lat["p95"]/1000:.3f} |')
     text+=['','Local corrected-horizon success and preservation of other prior slots are separate from matching the entire gold accumulated state. A correct correction can coexist with missing initial facts. Unknown tests measure abstention and prior-state retention, not generated clarification-question quality. Unmentioned slots are annotation-relative flags, not independently adjudicated semantic hallucinations.','',

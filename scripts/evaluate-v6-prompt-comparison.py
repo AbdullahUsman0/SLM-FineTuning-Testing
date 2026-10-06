@@ -1,4 +1,4 @@
-"""One frozen original/revised prompt comparison with unchanged v6 weights."""
+"""One frozen two-prompt comparison with unchanged v6 weights."""
 import argparse
 import asyncio
 from dataclasses import replace
@@ -14,6 +14,7 @@ from local_slm_lab.v5_eval import build_call_plan,digest,evaluate,load_cases,loa
 from local_slm_lab.peft_provider import PeftInferenceConfig
 from local_slm_lab.v5_prompts import build_v5_extractor_input,build_v5_extractor_instructions
 from local_slm_lab.v6_prompt_revision import build_revised_instructions
+from local_slm_lab.v6_schema_fix import build_schema_fixed_instructions
 from forecasting_assistant.domain.models import ExtractorResult
 
 SPEC=importlib.util.spec_from_file_location('matched_runner',ROOT/'scripts/evaluate-v6-matched.py')
@@ -46,14 +47,18 @@ def run_locked(study,out):
     assert len(cases)==32 and len(plan)==96
     assert digest([c['key'] for c in plan])==protocol['ordered_keys_sha256']
     assert digest([[c['key'],digest(c['context']),digest(c['expected'])] for c in plan])==protocol['context_gold_sha256']
-    prompts={'original':build_v5_extractor_instructions(),'revised':build_revised_instructions()}
+    builders={'original':build_v5_extractor_instructions,'revised':build_revised_instructions,
+              'schema_fixed':build_schema_fixed_instructions}
+    arms=tuple(protocol['arms']);assert len(arms)==2 and len(set(arms))==2
+    prompts={arm:builders[arm]() for arm in arms}
     for arm,text in prompts.items():assert digest(text)==protocol['prompt_sha256'][arm]
     adapter=matched.V6
     for name,expected in protocol['v6_adapter_sha256'].items():assert sha256(adapter/name)==expected,name
     snapshot=Path(os.environ['HF_HOME'])/'hub/models--Qwen--Qwen3.5-2B/snapshots'/protocol['base_revision']
     assert sha256(snapshot/'model.safetensors-00001-of-00001.safetensors')=='aa33250c4fc64891ddfaba3a314fd9542ea371843c387178b425fbcc5ed680b1'
     sources=[Path(__file__),ROOT/'scripts/evaluate-v6-matched.py',ROOT/'scripts/audit-v6-natural-failures.py',
-             ROOT/'scripts/analyze-v6-prompt-comparison.py',ROOT/'local_slm_lab/v6_prompt_revision.py']
+             ROOT/'scripts/analyze-v6-prompt-comparison.py',ROOT/'local_slm_lab/v6_prompt_revision.py',
+             ROOT/'local_slm_lab/v6_schema_fix.py']
     identity={'protocol_sha256':sha256(study/'protocol.json'),'provenance':provenance('base'),
               'source_sha256':{p.relative_to(ROOT).as_posix():sha256(p) for p in sources},
               'schema_sha256':digest(schema.model_dump(mode='json'))}
@@ -86,7 +91,7 @@ def run_locked(study,out):
     for track in ('natural_component','natural_rollout'):
         for index,case in enumerate(cases):
             calls=[c for c in plan if c['scenario_id']==case['scenario_id']]
-            for arm in (('original','revised') if index%2==0 else ('revised','original')):
+            for arm in (arms if index%2==0 else tuple(reversed(arms))):
                 folder=out/arm/track;folder.mkdir(parents=True,exist_ok=True);target=folder/f'{index:04d}.json'
                 if target.exists():continue
                 provider.instructions=prompts[arm]
@@ -113,7 +118,7 @@ def run_locked(study,out):
             assert len(reports)==32
             records=[r for report in reports for r in report['records']];assert len(records)==96
             matched.atomic(out/f'{arm}-{track}.json',{'status':'complete','fingerprint':fingerprint,'arm':arm,'track':track,'records':records})
-    completion={'status':'complete','scored_calls':384,'finished_utc':now(),'fingerprint':fingerprint,
+    completion={'status':'complete','scored_calls':384,'finished_utc':now(),'fingerprint':fingerprint,'arms':list(arms),
                 'sealed_final_accessed':False,'training_started':False,'paid_apis_used':False}
     matched.atomic(out/'completion.json',completion);matched.atomic(out/'status.json',completion)
     return completion

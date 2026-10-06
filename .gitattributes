@@ -20,3 +20,6 @@
 /research-checkpoints/v6-prompt-audit-20261006/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
 /local_slm_lab/v6_prompt_revision.py text eol=lf
 /tests/test_v6_prompt_audit.py text eol=lf
+/local_slm_lab/v6_schema_fix.py text eol=lf
+/evaluation/v6-schema-fix-20261006/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+/research-checkpoints/v6-schema-fix-20261006/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
