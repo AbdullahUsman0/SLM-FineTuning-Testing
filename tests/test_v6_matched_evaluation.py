@@ -67,4 +67,15 @@ class RolloutTests(unittest.TestCase):
         self.assertTrue(warmup)
         self.assertEqual(len(runner.build_call_plan(warmup[:1],self.schema)[:1]),1)
 
+    def test_unknown_must_retain_intent_to_retain_state(self):
+        from copy import deepcopy
+        before=self.gold[2]['context']; after=deepcopy(self.gold[2]['gold_after'])
+        after['intent']='ambiguous'
+        record={'task':'extract','expected':self.gold[2]['expected'],'emitted':{'updates':[]},
+                'prediction_valid':True,'context':before,'test_kind':'unknown',
+                'predicted_after':after,'forbidden_slots':self.gold[2]['forbidden_slots']}
+        metrics=analysis.extra_metrics([record])
+        self.assertEqual(metrics['unknown_no_updates_and_valid']['numerator'],1)
+        self.assertEqual(metrics['unknown_retains_prior_state_and_valid']['numerator'],0)
+
 if __name__=='__main__': unittest.main()
