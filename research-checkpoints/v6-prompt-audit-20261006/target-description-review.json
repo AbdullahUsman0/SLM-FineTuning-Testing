@@ -1,0 +1,126 @@
+{
+  "reviewer": "Codex agent, post hoc; human review pending",
+  "method": "Manual examination of all 21 differing readable target-description values followed by literal containment check. Twenty retain the full expected target but append unit/time requirements; crypto/06 returns basis points instead of the target. No labels, predictions or scores change.",
+  "expanded_targets": [
+    {
+      "scenario_id": "natural-v6-20261005/weather/03",
+      "expected_target": "peak wind speed",
+      "observed_target": "peak wind speed in metres per second, every hour, out to 12 hours",
+      "separate_unit_assessment": "absent_from_readable_emissions"
+    },
+    {
+      "scenario_id": "natural-v6-20261005/weather/05",
+      "expected_target": "cloud cover",
+      "observed_target": "cloud cover, in percent",
+      "separate_unit_assessment": "absent_from_readable_emissions"
+    },
+    {
+      "scenario_id": "natural-v6-20261005/weather/07",
+      "expected_target": "overnight minimum temperature",
+      "observed_target": "overnight minimum temperature in degrees Fahrenheit",
+      "separate_unit_assessment": "absent_from_readable_emissions"
+    },
+    {
+      "scenario_id": "natural-v6-20261005/weather/08",
+      "expected_target": "sunshine duration",
+      "observed_target": "sunshine duration, measured in hours, with one observation every week",
+      "separate_unit_assessment": "absent_from_readable_emissions"
+    },
+    {
+      "scenario_id": "natural-v6-20261005/inflation/01",
+      "expected_target": "year-over-year CPI inflation",
+      "observed_target": "year-over-year CPI inflation, in percent",
+      "separate_unit_assessment": "absent_from_readable_emissions"
+    },
+    {
+      "scenario_id": "natural-v6-20261005/inflation/05",
+      "expected_target": "producer price inflation",
+      "observed_target": "producer price inflation, measured in percent, using quarterly observations",
+      "separate_unit_assessment": "absent_from_readable_emissions"
+    },
+    {
+      "scenario_id": "natural-v6-20261005/inflation/06",
+      "expected_target": "consumer price index level",
+      "observed_target": "consumer price index level in index points",
+      "separate_unit_assessment": "absent_from_readable_emissions"
+    },
+    {
+      "scenario_id": "natural-v6-20261005/inflation/07",
+      "expected_target": "annual average inflation",
+      "observed_target": "annual average inflation in percent",
+      "separate_unit_assessment": "absent_from_readable_emissions"
+    },
+    {
+      "scenario_id": "natural-v6-20261005/stocks/01",
+      "expected_target": "NOVA's adjusted closing price",
+      "observed_target": "NOVA's adjusted closing price, in USD per share",
+      "separate_unit_assessment": "absent_from_readable_emissions"
+    },
+    {
+      "scenario_id": "natural-v6-20261005/stocks/03",
+      "expected_target": "total share return including dividends",
+      "observed_target": "total share return including dividends, measured in percent",
+      "separate_unit_assessment": "absent_from_readable_emissions"
+    },
+    {
+      "scenario_id": "natural-v6-20261005/stocks/04",
+      "expected_target": "trading volume",
+      "observed_target": "trading volume, measured in shares, from daily observations for the next 9 days",
+      "separate_unit_assessment": "absent_from_readable_emissions"
+    },
+    {
+      "scenario_id": "natural-v6-20261005/stocks/05",
+      "expected_target": "dividend yield",
+      "observed_target": "dividend yield in percent",
+      "separate_unit_assessment": "absent_from_readable_emissions"
+    },
+    {
+      "scenario_id": "natural-v6-20261005/stocks/07",
+      "expected_target": "daily log share return",
+      "observed_target": "daily log share return in percent",
+      "separate_unit_assessment": "absent_from_readable_emissions"
+    },
+    {
+      "scenario_id": "natural-v6-20261005/stocks/08",
+      "expected_target": "ETF trading volume",
+      "observed_target": "ETF trading volume in shares",
+      "separate_unit_assessment": "absent_from_readable_emissions"
+    },
+    {
+      "scenario_id": "natural-v6-20261005/crypto/01",
+      "expected_target": "BTC/USD spot price",
+      "observed_target": "BTC/USD spot price in USD per BTC",
+      "separate_unit_assessment": "different_value_or_type_not_adjudicated_semantically"
+    },
+    {
+      "scenario_id": "natural-v6-20261005/crypto/02",
+      "expected_target": "ETH trading volume",
+      "observed_target": "ETH trading volume, in ETH",
+      "separate_unit_assessment": "absent_from_readable_emissions"
+    },
+    {
+      "scenario_id": "natural-v6-20261005/crypto/04",
+      "expected_target": "futures open interest",
+      "observed_target": "futures open interest in contracts",
+      "separate_unit_assessment": "absent_from_readable_emissions"
+    },
+    {
+      "scenario_id": "natural-v6-20261005/crypto/05",
+      "expected_target": "realized volatility",
+      "observed_target": "realized volatility, in percent per year",
+      "separate_unit_assessment": "absent_from_readable_emissions"
+    },
+    {
+      "scenario_id": "natural-v6-20261005/crypto/07",
+      "expected_target": "BTC log return",
+      "observed_target": "BTC log return in percent",
+      "separate_unit_assessment": "absent_from_readable_emissions"
+    },
+    {
+      "scenario_id": "natural-v6-20261005/crypto/08",
+      "expected_target": "digital-asset market capitalization",
+      "observed_target": "digital-asset market capitalization in millions of USD",
+      "separate_unit_assessment": "absent_from_readable_emissions"
+    }
+  ]
+}
