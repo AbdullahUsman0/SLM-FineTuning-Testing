@@ -19,6 +19,7 @@ TRACKS=('natural_component','natural_rollout','frozen_component')
 def extra_metrics(records):
     extraction=[r for r in records if r['task']=='extract']
     slot_counts=[0,0,0]; value_counts=[0,0,0]
+    readable_slot_counts=[0,0,0]; readable_value_counts=[0,0,0]
     invented=redundant=wrong=evidence_bad=0
     unknown=[]; invented_calls=0; corrections=[]
     for r in extraction:
@@ -29,6 +30,11 @@ def extra_metrics(records):
         for i,n in enumerate((overlap,len(observed)-overlap,len(gold)-overlap)):slot_counts[i]+=n
         same=sum(k in observed and observed[k][0]==v[0] for k,v in gold.items()) if valid else 0
         for i,n in enumerate((same,len(observed)-same,len(gold)-same)):value_counts[i]+=n
+        readable=r.get('raw_json_valid') is True
+        readable_names=len(set(gold)&set(observed)) if readable else 0
+        readable_values=sum(k in observed and observed[k][0]==v[0] for k,v in gold.items()) if readable else 0
+        for i,n in enumerate((readable_names,len(observed)-readable_names,len(gold)-readable_names)):readable_slot_counts[i]+=n
+        for i,n in enumerate((readable_values,len(observed)-readable_values,len(gold)-readable_values)):readable_value_counts[i]+=n
         prior=r['context']['state']['slots']
         new=0
         for key,(value,status) in observed.items():
@@ -57,6 +63,7 @@ def extra_metrics(records):
                             'forbidden':bool(set(observed)&set(r['forbidden_slots'])),
                             'retains_prior_state':valid and retained})
     return {'slot_name_prf':prf(*slot_counts),'slot_value_prf_without_status':prf(*value_counts),
+            'readable_slot_name_prf':prf(*readable_slot_counts),'readable_slot_value_prf':prf(*readable_value_counts),
             'new_unmentioned_slot_count':invented,'new_unmentioned_slot_call_rate':rate(invented_calls,len(extraction)),
             'repeated_unchanged_prior_slot_count':redundant,'wrong_values_for_stated_slots':wrong,
             'unsupported_evidence_update_count':evidence_bad,
@@ -108,7 +115,8 @@ def analyze(run,output):
     completion=json.loads((run/'completion.json').read_text())
     assert completion['status']=='complete' and completion['scored_calls']==2469
     output.mkdir(parents=True,exist_ok=False)
-    reports={};result={'completion':completion,'tracks':{},'paired_f1_bootstrap':{},'analysis_code_sha256':sha256(Path(__file__))}
+    reports={};result={'completion':completion,'tracks':{},'paired_f1_bootstrap':{},'analysis_code_sha256':sha256(Path(__file__)),
+        'supplementary_readable_content_diagnostic':'Added after initial calls; descriptive, not predeclared primary. Counts structurally readable slot_id/candidate_value/status emissions in valid JSON despite wire-schema failure. Does not repair outputs, enable state updates, or change the operational score.'}
     errors=[]; summary_rows=[]
     for track in TRACKS:
         result['tracks'][track]={}
@@ -124,6 +132,8 @@ def analyze(run,output):
                 summary_rows.append({'track':track,'arm':arm,'domain':domain,'calls':m['calls']['total'],
                     'slot_value_status_f1':m['nonintent']['f1'],'slot_name_f1':m['slot_name_prf']['f1'],
                     'slot_value_f1':m['slot_value_prf_without_status']['f1'],
+                    'readable_slot_name_f1':m['readable_slot_name_prf']['f1'],
+                    'readable_slot_value_f1':m['readable_slot_value_prf']['f1'],
                     'extract_json_valid':m['extract_json_valid']['rate'],'extract_schema_valid':m['extract_schema_valid']['rate'],
                     'new_unmentioned_slots':m['new_unmentioned_slot_count'],
                     'wrong_stated_values':m['wrong_values_for_stated_slots'],
@@ -159,6 +169,7 @@ def analyze(run,output):
           'All 2,469 scored calls completed on the same RTX A4000, BF16 CUDA, pinned Qwen3.5-2B revision, greedy decoding and 1,024-token cap. Stock adapters were disabled and checked against native stock output. Arms rotated per scenario; serial latency follows per-arm warmup. No JSON repairs, retries, training, paid APIs or sealed final labels.', '',
           'The frozen component cohort contains all 150 v6 validation scenarios in the requested domains (90 weather, 15 inflation, 15 stocks, 30 crypto). Its language is synthetic and template-based. The 32 natural conversations (eight per domain) were authored before inference, with initial facts, an explicit horizon correction, and unknown information. They are exploratory diagnostics, pending independent human review. Natural component calls use gold prior state; rollout calls use the model’s own state with a fixed user script. These are not live-user trials.', '',
           'Primary F1 requires exact slot, JSON-decoded value and status. CSV also reports slot-name and slot/value F1 without the status requirement. Free-text values follow the exact wording required by the prompt. Intent is scored separately. Unexpected new slot emissions flag possible invented requirements against the annotations, not independently adjudicated semantic hallucinations. They are separated from repeated prior facts, wrong values of stated slots and unsupported evidence. Invalid outputs fail extraction and cannot certify unknown-information handling. JSON syntax validity and field/type schema validity are separate from canonical slot-ID correctness; the table uses extraction calls only, while question timing/validity are separate in analysis.json. Timing excludes model load. Generation-limit hits are disclosed in analysis.json.', '',
+          'Supplementary readable-content scores inspect structurally readable slot IDs and decoded values in valid JSON even when the response fails the wire schema. They were added after initial calls to distinguish formatting failures from content omissions. These descriptive scores do not repair responses or make them usable by the pipeline; primary scores and rollout behavior are unchanged.', '',
           '| Track | Model | Exact F1 | JSON valid | Schema valid | New unmentioned slots | Corrections exact | Unknown valid/no updates | Extract median / p95 (s) |',
           '| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |']
     fmt=lambda value: '—' if value is None else f'{value:.3f}'
