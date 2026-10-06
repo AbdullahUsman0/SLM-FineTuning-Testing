@@ -14,3 +14,5 @@
 /adapters/qwen35-2b-v6-20261003-step726/adapter_config.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
 /adapters/qwen35-2b-v6-20261003-step726/manifest.json text eol=lf
 /adapters/qwen35-2b-v6-20261003-step726/README.md text eol=lf
+/evaluation/v6-matched-20261005/** -text
+/research-checkpoints/v6-matched-evaluation-20261005/** -text whitespace=trailing-space,space-before-tab,cr-at-eol

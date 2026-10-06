@@ -1,0 +1,54 @@
+{
+  "version": "v6-matched-20261005-1",
+  "frozen_before_inference_utc": "2026-10-06T05:45:14.382108+00:00",
+  "base_model": "Qwen/Qwen3.5-2B",
+  "base_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "source_validation_sha256": "96e56bf49da953916986dfcadc8e2f781e841d2bf321a22c4920452c651559ed",
+  "fpy_revision": "04d52c015d1e3ecdefe92b87116f209361509b4b",
+  "source_dataset": "v6-20261002-r4",
+  "sealed_final_accessed": false,
+  "independent_human_review": "pending; authored natural diagnostics are exploratory",
+  "primary_metrics": "exact slot/value/status micro F1 excluding intent; intent separate; raw JSON/schema validity",
+  "invented_requirements": "new unmentioned slot updates separate from repeated prior slots and wrong stated values",
+  "natural_contexts": [
+    "gold_context_component",
+    "predicted_state_rollout_fixed_user_script"
+  ],
+  "decoding": {
+    "do_sample": false,
+    "max_new_tokens": 1024,
+    "enable_thinking": false,
+    "dtype": "bfloat16",
+    "device": "cuda",
+    "seed": 42
+  },
+  "latency": "serial batch size 1 after unscored warmup; load time separate; no retries or repair; CUDA synchronized",
+  "cases": {
+    "frozen": {
+      "sha256": "16fb1111703ff9284a278a2d35c223d776b6d0525bfd5c52bf9f90a9ed6e2a9e",
+      "scenarios": 150,
+      "calls": 631,
+      "domains": {
+        "weather": 90,
+        "inflation": 15,
+        "stocks": 15,
+        "crypto": 30
+      },
+      "ordered_keys_sha256": "1bc3a29dada109a2003ec5ed0e0c128a7d0f70ba5a572c4c445ca788ce0700bd",
+      "context_gold_sha256": "5b3e7c8a50e54cdf6542c7f34370e5564f74124c5b4d3dcdea501d0c90909fe5"
+    },
+    "natural": {
+      "sha256": "88824a03b4f29196e6ed827e73b9edda6a1caf4c2b13ec7eea3d5b367bcbfb19",
+      "scenarios": 32,
+      "calls": 96,
+      "domains": {
+        "weather": 8,
+        "inflation": 8,
+        "stocks": 8,
+        "crypto": 8
+      },
+      "ordered_keys_sha256": "610ca21250df65c0abc8cbb85abfaaeef0f971a0c1385634566ce08dd01a4762",
+      "context_gold_sha256": "696ef89f936bff691d1b1fff6d0c7ac7bd68d759f267ac7484c2468b746beacf"
+    }
+  }
+}
