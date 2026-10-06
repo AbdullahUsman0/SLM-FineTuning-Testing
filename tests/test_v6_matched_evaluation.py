@@ -78,4 +78,22 @@ class RolloutTests(unittest.TestCase):
         self.assertEqual(metrics['unknown_no_updates_and_valid']['numerator'],1)
         self.assertEqual(metrics['unknown_retains_prior_state_and_valid']['numerator'],0)
 
+    def test_summary_uses_schema_snapshot_for_known_slot_ids(self):
+        import json
+        from pathlib import Path
+        # Completed live record is optional; construct the complete scorer row
+        # from frozen gold so this remains an offline regression test.
+        call=self.gold[0]
+        record={'task':'extract','key':call['key'],'scenario_id':call['scenario_id'],
+                'expected':call['expected'],'predicted':call['expected'],'emitted':call['expected'],
+                'raw_value':call['expected'],'prediction_valid':True,'provider_success':True,
+                'context':call['context'],'forbidden_slots':[],'latency_ms':1,
+                'raw_json_valid':True,'raw_schema_valid':True}
+        metrics=analysis.summarize([record])
+        self.assertEqual(metrics['unknown_slot_count'],0)
+        record['emitted']={'updates':[dict(call['expected']['updates'][0],slot_id='made_up_id')]}
+        record['raw_value']=record['emitted']
+        metrics=analysis.summarize([record])
+        self.assertEqual(metrics['unknown_slot_count'],1)
+
 if __name__=='__main__': unittest.main()

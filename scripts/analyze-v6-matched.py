@@ -68,13 +68,18 @@ def extra_metrics(records):
             'unknown_forbidden_observed':rate(sum(u['forbidden'] for u in unknown),len(unknown))}
 
 def summarize(records):
-    metrics=score_records(records)
+    # Use the actual evaluated schema snapshot, rather than treating every
+    # emitted ID as unknown when score_records receives its empty default.
+    sample=next((r for r in records if r['task']=='extract'),None)
+    slot_ids=list(sample['context']['state']['slots']) if sample else []
+    metrics=score_records(records,slot_ids)
     metrics.update(extra_metrics(records))
-    extract_metrics=score_records([r for r in records if r['task']=='extract'])
+    extract_metrics=score_records([r for r in records if r['task']=='extract'],slot_ids)
     metrics['extract_latency_ms']=extract_metrics['latency_ms']
     metrics['extract_json_valid']=extract_metrics['raw_json_valid']
     metrics['extract_schema_valid']=extract_metrics['raw_schema_valid']
-    metrics['ask_latency_ms']=score_records([r for r in records if r['task']=='ask'])['latency_ms']
+    metrics['ask_latency_ms']=score_records([r for r in records if r['task']=='ask'],slot_ids)['latency_ms']
+    metrics['generation_limit_calls']=rate(sum(any(t.get('hit_generation_limit') for t in r.get('traces',[])) for r in records),len(records))
     return metrics
 
 def bootstrap(left,right,samples=10000,seed=42):
@@ -153,7 +158,7 @@ def analyze(run,output):
     text=['# Matched stock 2B / v5 / v6 evaluation','',
           'All 2,469 scored calls completed on the same RTX A4000, BF16 CUDA, pinned Qwen3.5-2B revision, greedy decoding and 1,024-token cap. Stock adapters were disabled and checked against native stock output. Arms rotated per scenario; serial latency follows per-arm warmup. No JSON repairs, retries, training, paid APIs or sealed final labels.', '',
           'The frozen component cohort contains all 150 v6 validation scenarios in the requested domains (90 weather, 15 inflation, 15 stocks, 30 crypto). Its language is synthetic and template-based. The 32 natural conversations (eight per domain) were authored before inference, with initial facts, an explicit horizon correction, and unknown information. They are exploratory diagnostics, pending independent human review. Natural component calls use gold prior state; rollout calls use the model’s own state with a fixed user script. These are not live-user trials.', '',
-          'Primary F1 requires exact slot, JSON-decoded value and status. CSV also reports slot-name and slot/value F1 without the status requirement. Free-text values follow the exact wording required by the prompt. Intent is scored separately. Unexpected new slot emissions flag possible invented requirements against the annotations, not independently adjudicated semantic hallucinations. They are separated from repeated prior facts, wrong values of stated slots and unsupported evidence. Invalid outputs fail extraction and cannot certify unknown-information handling. JSON syntax validity and full schema validity are separate; the table uses extraction calls only, while question timing/validity are separate in analysis.json. Timing excludes model load.', '',
+          'Primary F1 requires exact slot, JSON-decoded value and status. CSV also reports slot-name and slot/value F1 without the status requirement. Free-text values follow the exact wording required by the prompt. Intent is scored separately. Unexpected new slot emissions flag possible invented requirements against the annotations, not independently adjudicated semantic hallucinations. They are separated from repeated prior facts, wrong values of stated slots and unsupported evidence. Invalid outputs fail extraction and cannot certify unknown-information handling. JSON syntax validity and field/type schema validity are separate from canonical slot-ID correctness; the table uses extraction calls only, while question timing/validity are separate in analysis.json. Timing excludes model load. Generation-limit hits are disclosed in analysis.json.', '',
           '| Track | Model | Exact F1 | JSON valid | Schema valid | New unmentioned slots | Corrections exact | Unknown valid/no updates | Extract median / p95 (s) |',
           '| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |']
     fmt=lambda value: '—' if value is None else f'{value:.3f}'
