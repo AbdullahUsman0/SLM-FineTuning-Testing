@@ -1,0 +1,1 @@
+{"status": "complete", "scored_calls": 384, "finished_utc": "2026-10-06T23:39:01.575763+00:00", "fingerprint": "c4a41f31adf811d3931f550f9e82f701e027c652d1a9423e36654403f11cf3f6", "arms": ["revised", "schema_fixed"], "sealed_final_accessed": false, "training_started": false, "paid_apis_used": false}
