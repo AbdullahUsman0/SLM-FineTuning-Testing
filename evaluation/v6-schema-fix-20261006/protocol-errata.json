@@ -1,0 +1,6 @@
+{
+  "frozen_protocol_sha256": "d7098eaaea8457a2674acce660ad505ff1bd681b1231aceb910e79284eda1146",
+  "field": "order",
+  "frozen_value": "Original/revised order alternates per scenario; serial batch 1 after equal unscored warmups",
+  "clarification": "The inherited order string uses earlier arm names. This experiment actually alternates revised then schema_fixed on even scenario indices and schema_fixed then revised on odd indices, as the frozen arms field and executed runner specify. The protocol artifact is preserved unchanged. This corrects labels in the description only; no model inputs, ordering, metrics or frozen hashes change."
+}

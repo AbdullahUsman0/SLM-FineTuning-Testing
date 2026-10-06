@@ -34,6 +34,7 @@ def prepare():
             references[f'{arm}-{track}']={'path':path.relative_to(ROOT).as_posix(),'sha256':sha256(path)}
     protocol.update(version='v6-schema-fix-20261006-1',frozen_before_new_inference_utc=now(),
         arms=['revised','schema_fixed'],prompt_sha256={arm:digest(text) for arm,text in prompts.items()},
+        order='Revised/schema_fixed order alternates per scenario; serial batch 1 after equal unscored warmups',
         historical_references=references,
         hypothesis='Appending only an explicit field whitelist and separate-update construction rules reduces extra-field and merged-update contract failures without undoing completeness and abstention gains.',
         comparison='Revised versus schema_fixed in the same session, matched labels and gold component contexts; original prompt is a clearly identified historical reference, with no direct cross-session latency claim.',
