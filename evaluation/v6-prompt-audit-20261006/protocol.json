@@ -1,0 +1,47 @@
+{
+  "version": "v6-prompt-audit-20261006-1",
+  "frozen_before_new_inference_utc": "2026-10-06T21:54:11.461665+00:00",
+  "natural_sha256": "88824a03b4f29196e6ed827e73b9edda6a1caf4c2b13ec7eea3d5b367bcbfb19",
+  "original_study_manifest_sha256": "7218a78d17aa8b6abda975ec138c80da9ffef4e2ef5af419020df0ee68143e5d",
+  "base_model": "Qwen/Qwen3.5-2B",
+  "base_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "v6_adapter_sha256": {
+    "adapter_model.safetensors": "e7add7b8b02d24615ed89067c7761c3985a4a6afb7c84ca2a72e3b06fd84e74d",
+    "adapter_config.json": "38f60de9678324e91fa882ed86c70d09e4a39b27ae28884374ddc3e6fece15ef"
+  },
+  "prompt_sha256": {
+    "original": "0f56229694831cd19d71ec38f323cef10060eb52037be412e8b13cb7ea1bfa01",
+    "revised": "e216999f9e8c0852ff5dc210b5c5a74c5cd149e1fa43d66bc67b2dcb3019005c"
+  },
+  "scenarios": 32,
+  "calls_per_arm_track": 96,
+  "total_scored_calls": 384,
+  "tracks": [
+    "natural_component",
+    "natural_rollout"
+  ],
+  "arms": [
+    "original",
+    "revised"
+  ],
+  "primary": "Exact schema-gated slot/value/status F1 excluding intent; same unchanged gold labels",
+  "supplementary": "Pinned application-normalized F1; local corrected-horizon/state-preservation metrics; raw content error categories",
+  "contexts": "Gold prior state for component; own prior state for rollout, fixed user script. Both variants rerun in the same session.",
+  "order": "Original/revised order alternates per scenario; serial batch 1 after equal unscored warmups",
+  "decoding": {
+    "seed": 42,
+    "do_sample": false,
+    "max_new_tokens": 1024,
+    "enable_thinking": false,
+    "dtype": "bfloat16",
+    "device": "cuda",
+    "torch_threads": 4
+  },
+  "success_criteria": "Report paired F1 differences plus invented slot counts, JSON/schema validity, local corrections, unknown handling and latency. No winner from F1 alone; no further prompt tuning in this experiment.",
+  "limitations": "Exploratory development comparison designed after original outputs; no independent held-out generalization claim.",
+  "sealed_final_accessed": false,
+  "training_started": false,
+  "paid_apis_used": false,
+  "ordered_keys_sha256": "610ca21250df65c0abc8cbb85abfaaeef0f971a0c1385634566ce08dd01a4762",
+  "context_gold_sha256": "696ef89f936bff691d1b1fff6d0c7ac7bd68d759f267ac7484c2468b746beacf"
+}

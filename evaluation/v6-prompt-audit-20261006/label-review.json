@@ -1,0 +1,718 @@
+[
+  {
+    "scenario_id": "natural-v6-20261005/weather/01",
+    "reviewer": "Codex agent; not an independent human reviewer",
+    "initial_facts": {
+      "target_description": "afternoon air temperature",
+      "target_unit": "degrees Celsius",
+      "frequency": {
+        "periods": 1,
+        "unit": "day"
+      },
+      "forecast_horizon": {
+        "periods": 5,
+        "unit": "day"
+      },
+      "file_format": "csv"
+    },
+    "initial_label_review": "Unit, observation spacing and initial horizon are separate explicit facts. CSV is the canonical lowercase enum; uppercase emission is normalization-only.",
+    "correction_review": "Explicit replacement horizon is annotated correctly; assess both local correction and full accumulated-state accuracy.",
+    "unknown_review": "Explicitly unknown/undecided information supplies no values. Empty updates are consistent with the extraction contract. This tests abstention, not generated clarification questions.",
+    "label_changes": [],
+    "human_review_status": "pending"
+  },
+  {
+    "scenario_id": "natural-v6-20261005/weather/02",
+    "reviewer": "Codex agent; not an independent human reviewer",
+    "initial_facts": {
+      "target_description": "accumulated rainfall",
+      "target_unit": "millimetres",
+      "frequency": {
+        "periods": 1,
+        "unit": "hour"
+      },
+      "forecast_horizon": {
+        "periods": 36,
+        "unit": "hour"
+      }
+    },
+    "initial_label_review": "Use accumulated rainfall as target, millimetres as unit; hourly spacing and 36-hour horizon are explicit. Rain is introductory context, not a second target update.",
+    "correction_review": "Explicit replacement horizon is annotated correctly; assess both local correction and full accumulated-state accuracy.",
+    "unknown_review": "Explicitly unknown/undecided information supplies no values. Empty updates are consistent with the extraction contract. This tests abstention, not generated clarification questions.",
+    "label_changes": [],
+    "human_review_status": "pending"
+  },
+  {
+    "scenario_id": "natural-v6-20261005/weather/03",
+    "reviewer": "Codex agent; not an independent human reviewer",
+    "initial_facts": {
+      "target_description": "peak wind speed",
+      "target_unit": "metres per second",
+      "frequency": {
+        "periods": 1,
+        "unit": "hour"
+      },
+      "forecast_horizon": {
+        "periods": 12,
+        "unit": "hour"
+      },
+      "source_mode": "upload",
+      "file_format": "parquet"
+    },
+    "initial_label_review": "Upload and parquet are explicit. Every hour denotes observation spacing, 12 hours denotes horizon.",
+    "correction_review": "Explicit replacement horizon is annotated correctly; assess both local correction and full accumulated-state accuracy.",
+    "unknown_review": "Explicitly unknown/undecided information supplies no values. Empty updates are consistent with the extraction contract. This tests abstention, not generated clarification questions.",
+    "label_changes": [],
+    "human_review_status": "pending"
+  },
+  {
+    "scenario_id": "natural-v6-20261005/weather/04",
+    "reviewer": "Codex agent; not an independent human reviewer",
+    "initial_facts": {
+      "target_description": "relative humidity",
+      "target_unit": "percent",
+      "frequency": {
+        "periods": 1,
+        "unit": "day"
+      },
+      "forecast_horizon": {
+        "periods": 9,
+        "unit": "day"
+      },
+      "target_column": "humidity_pct",
+      "time_column": "observation_date"
+    },
+    "initial_label_review": "humidity_pct and observation_date are explicitly distinct target and timestamp columns.",
+    "correction_review": "Explicit replacement horizon is annotated correctly; assess both local correction and full accumulated-state accuracy.",
+    "unknown_review": "Explicitly unknown/undecided information supplies no values. Empty updates are consistent with the extraction contract. This tests abstention, not generated clarification questions.",
+    "label_changes": [],
+    "human_review_status": "pending"
+  },
+  {
+    "scenario_id": "natural-v6-20261005/weather/05",
+    "reviewer": "Codex agent; not an independent human reviewer",
+    "initial_facts": {
+      "target_description": "cloud cover",
+      "target_unit": "percent",
+      "frequency": {
+        "periods": 3,
+        "unit": "hour"
+      },
+      "forecast_horizon": {
+        "periods": 18,
+        "unit": "hour"
+      }
+    },
+    "initial_label_review": "Three-hour observation spacing must not be confused with the 18-hour horizon.",
+    "correction_review": "Explicit replacement horizon is annotated correctly; assess both local correction and full accumulated-state accuracy.",
+    "unknown_review": "Explicitly unknown/undecided information supplies no values. Empty updates are consistent with the extraction contract. This tests abstention, not generated clarification questions.",
+    "label_changes": [],
+    "human_review_status": "pending"
+  },
+  {
+    "scenario_id": "natural-v6-20261005/weather/06",
+    "reviewer": "Codex agent; not an independent human reviewer",
+    "initial_facts": {
+      "target_description": "sea-level pressure",
+      "target_unit": "hectopascals",
+      "frequency": {
+        "periods": 6,
+        "unit": "hour"
+      },
+      "forecast_horizon": {
+        "periods": 2,
+        "unit": "day"
+      }
+    },
+    "initial_label_review": "Six-hour spacing and two-day horizon use different units. Hectopascals is the explicit unit.",
+    "correction_review": "Explicit replacement horizon is annotated correctly; assess both local correction and full accumulated-state accuracy.",
+    "unknown_review": "Explicitly unknown/undecided information supplies no values. Empty updates are consistent with the extraction contract. This tests abstention, not generated clarification questions.",
+    "label_changes": [],
+    "human_review_status": "pending"
+  },
+  {
+    "scenario_id": "natural-v6-20261005/weather/07",
+    "reviewer": "Codex agent; not an independent human reviewer",
+    "initial_facts": {
+      "target_description": "overnight minimum temperature",
+      "target_unit": "degrees Fahrenheit",
+      "frequency": {
+        "periods": 1,
+        "unit": "day"
+      },
+      "forecast_horizon": {
+        "periods": 8,
+        "unit": "day"
+      },
+      "prediction_frequency": {
+        "periods": 2,
+        "unit": "day"
+      }
+    },
+    "initial_label_review": "Two-day refresh belongs to prediction_frequency, independently of daily data and eight-day horizon.",
+    "correction_review": "Explicit replacement horizon is annotated correctly; assess both local correction and full accumulated-state accuracy.",
+    "unknown_review": "Explicitly unknown/undecided information supplies no values. Empty updates are consistent with the extraction contract. This tests abstention, not generated clarification questions.",
+    "label_changes": [],
+    "human_review_status": "pending"
+  },
+  {
+    "scenario_id": "natural-v6-20261005/weather/08",
+    "reviewer": "Codex agent; not an independent human reviewer",
+    "initial_facts": {
+      "target_description": "sunshine duration",
+      "target_unit": "hours",
+      "frequency": {
+        "periods": 1,
+        "unit": "week"
+      },
+      "forecast_horizon": {
+        "periods": 4,
+        "unit": "week"
+      },
+      "source_mode": "upload",
+      "file_format": "xlsx"
+    },
+    "initial_label_review": "Uploaded file explicitly supports upload mode and xlsx; hours measures sunshine, not observation spacing.",
+    "correction_review": "Explicit replacement horizon is annotated correctly; assess both local correction and full accumulated-state accuracy.",
+    "unknown_review": "Explicitly unknown/undecided information supplies no values. Empty updates are consistent with the extraction contract. This tests abstention, not generated clarification questions.",
+    "label_changes": [],
+    "human_review_status": "pending"
+  },
+  {
+    "scenario_id": "natural-v6-20261005/inflation/01",
+    "reviewer": "Codex agent; not an independent human reviewer",
+    "initial_facts": {
+      "target_description": "year-over-year CPI inflation",
+      "target_unit": "percent",
+      "frequency": {
+        "periods": 1,
+        "unit": "month"
+      },
+      "forecast_horizon": {
+        "periods": 5,
+        "unit": "month"
+      }
+    },
+    "initial_label_review": "Target is year-over-year inflation, explicitly excluding the CPI index. Percent is unit; five months is horizon.",
+    "correction_review": "Explicit replacement horizon is annotated correctly; assess both local correction and full accumulated-state accuracy.",
+    "unknown_review": "Explicitly unknown/undecided information supplies no values. Empty updates are consistent with the extraction contract. This tests abstention, not generated clarification questions.",
+    "label_changes": [],
+    "human_review_status": "pending"
+  },
+  {
+    "scenario_id": "natural-v6-20261005/inflation/02",
+    "reviewer": "Codex agent; not an independent human reviewer",
+    "initial_facts": {
+      "target_description": "headline CPI index level",
+      "target_unit": "index points, base 2015=100",
+      "frequency": {
+        "periods": 1,
+        "unit": "month"
+      },
+      "forecast_horizon": {
+        "periods": 8,
+        "unit": "month"
+      }
+    },
+    "initial_label_review": "Keep index base 2015=100 within the stated unit. It does not imply a target column, calendar or timezone.",
+    "correction_review": "Explicit replacement horizon is annotated correctly; assess both local correction and full accumulated-state accuracy.",
+    "unknown_review": "Explicitly unknown/undecided information supplies no values. Empty updates are consistent with the extraction contract. This tests abstention, not generated clarification questions.",
+    "label_changes": [],
+    "human_review_status": "pending"
+  },
+  {
+    "scenario_id": "natural-v6-20261005/inflation/03",
+    "reviewer": "Codex agent; not an independent human reviewer",
+    "initial_facts": {
+      "target_description": "month-over-month core inflation",
+      "target_unit": "percent",
+      "frequency": {
+        "periods": 1,
+        "unit": "month"
+      },
+      "forecast_horizon": {
+        "periods": 3,
+        "unit": "month"
+      },
+      "file_format": "csv"
+    },
+    "initial_label_review": "Monthly spacing and three-month horizon are distinct; csv is explicitly stated.",
+    "correction_review": "Explicit replacement horizon is annotated correctly; assess both local correction and full accumulated-state accuracy.",
+    "unknown_review": "Explicitly unknown/undecided information supplies no values. Empty updates are consistent with the extraction contract. This tests abstention, not generated clarification questions.",
+    "label_changes": [],
+    "human_review_status": "pending"
+  },
+  {
+    "scenario_id": "natural-v6-20261005/inflation/04",
+    "reviewer": "Codex agent; not an independent human reviewer",
+    "initial_facts": {
+      "target_description": "food-price inflation",
+      "target_unit": "percent",
+      "frequency": {
+        "periods": 1,
+        "unit": "month"
+      },
+      "forecast_horizon": {
+        "periods": 11,
+        "unit": "month"
+      },
+      "target_column": "food_inflation",
+      "time_column": "month_end"
+    },
+    "initial_label_review": "food_inflation and month_end are distinct explicit columns. Percent is separate from the target description.",
+    "correction_review": "Explicit replacement horizon is annotated correctly; assess both local correction and full accumulated-state accuracy.",
+    "unknown_review": "Explicitly unknown/undecided information supplies no values. Empty updates are consistent with the extraction contract. This tests abstention, not generated clarification questions.",
+    "label_changes": [],
+    "human_review_status": "pending"
+  },
+  {
+    "scenario_id": "natural-v6-20261005/inflation/05",
+    "reviewer": "Codex agent; not an independent human reviewer",
+    "initial_facts": {
+      "target_description": "producer price inflation",
+      "target_unit": "percent",
+      "frequency": {
+        "periods": 1,
+        "unit": "quarter"
+      },
+      "forecast_horizon": {
+        "periods": 2,
+        "unit": "quarter"
+      }
+    },
+    "initial_label_review": "Quarterly spacing maps to one quarter; two quarters is horizon, not two months.",
+    "correction_review": "Explicit replacement horizon is annotated correctly; assess both local correction and full accumulated-state accuracy.",
+    "unknown_review": "Explicitly unknown/undecided information supplies no values. Empty updates are consistent with the extraction contract. This tests abstention, not generated clarification questions.",
+    "label_changes": [],
+    "human_review_status": "pending"
+  },
+  {
+    "scenario_id": "natural-v6-20261005/inflation/06",
+    "reviewer": "Codex agent; not an independent human reviewer",
+    "initial_facts": {
+      "target_description": "consumer price index level",
+      "target_unit": "index points",
+      "frequency": {
+        "periods": 1,
+        "unit": "month"
+      },
+      "forecast_horizon": {
+        "periods": 1,
+        "unit": "year"
+      },
+      "source_mode": "upload",
+      "file_format": "parquet"
+    },
+    "initial_label_review": "Monthly spacing and one-year horizon are independent. Upload and parquet are explicit.",
+    "correction_review": "Explicit replacement horizon is annotated correctly; assess both local correction and full accumulated-state accuracy.",
+    "unknown_review": "Explicitly unknown/undecided information supplies no values. Empty updates are consistent with the extraction contract. This tests abstention, not generated clarification questions.",
+    "label_changes": [],
+    "human_review_status": "pending"
+  },
+  {
+    "scenario_id": "natural-v6-20261005/inflation/07",
+    "reviewer": "Codex agent; not an independent human reviewer",
+    "initial_facts": {
+      "target_description": "annual average inflation",
+      "target_unit": "percent",
+      "frequency": {
+        "periods": 1,
+        "unit": "year"
+      },
+      "forecast_horizon": {
+        "periods": 3,
+        "unit": "year"
+      },
+      "prediction_frequency": {
+        "periods": 1,
+        "unit": "year"
+      }
+    },
+    "initial_label_review": "Annual average inflation is the target. One-year spacing, three-year horizon and one-year refresh are three separate facts.",
+    "correction_review": "Explicit replacement horizon is annotated correctly; assess both local correction and full accumulated-state accuracy.",
+    "unknown_review": "Explicitly unknown/undecided information supplies no values. Empty updates are consistent with the extraction contract. This tests abstention, not generated clarification questions.",
+    "label_changes": [],
+    "human_review_status": "pending"
+  },
+  {
+    "scenario_id": "natural-v6-20261005/inflation/08",
+    "reviewer": "Codex agent; not an independent human reviewer",
+    "initial_facts": {
+      "target_description": "trimmed-mean inflation",
+      "target_unit": "percent",
+      "frequency": {
+        "periods": 1,
+        "unit": "month"
+      },
+      "forecast_horizon": {
+        "periods": 7,
+        "unit": "month"
+      },
+      "source_mode": "upload",
+      "file_format": "xlsx"
+    },
+    "initial_label_review": "Uploaded xlsx is explicit. Monthly spacing and seven-month horizon are separate.",
+    "correction_review": "Explicit replacement horizon is annotated correctly; assess both local correction and full accumulated-state accuracy.",
+    "unknown_review": "Explicitly unknown/undecided information supplies no values. Empty updates are consistent with the extraction contract. This tests abstention, not generated clarification questions.",
+    "label_changes": [],
+    "human_review_status": "pending"
+  },
+  {
+    "scenario_id": "natural-v6-20261005/stocks/01",
+    "reviewer": "Codex agent; not an independent human reviewer",
+    "initial_facts": {
+      "target_description": "NOVA's adjusted closing price",
+      "target_unit": "USD per share",
+      "frequency": {
+        "periods": 1,
+        "unit": "day"
+      },
+      "forecast_horizon": {
+        "periods": 10,
+        "unit": "day"
+      }
+    },
+    "initial_label_review": "Keep NOVA and adjusted closing price in the verbatim target description; USD per share is the unit.",
+    "correction_review": "Explicit replacement horizon is annotated correctly; assess both local correction and full accumulated-state accuracy.",
+    "unknown_review": "Explicitly unknown/undecided information supplies no values. Empty updates are consistent with the extraction contract. This tests abstention, not generated clarification questions.",
+    "label_changes": [],
+    "human_review_status": "pending"
+  },
+  {
+    "scenario_id": "natural-v6-20261005/stocks/02",
+    "reviewer": "Codex agent; not an independent human reviewer",
+    "initial_facts": {
+      "target_description": "raw closing share price, without adjusting corporate actions",
+      "target_unit": "GBP per share",
+      "frequency": {
+        "periods": 1,
+        "unit": "day"
+      },
+      "forecast_horizon": {
+        "periods": 6,
+        "unit": "day"
+      }
+    },
+    "initial_label_review": "Without adjusting corporate actions qualifies raw closing price and should be preserved. Shorter descriptions may be semantically close but are not certified equivalent here.",
+    "correction_review": "Explicit replacement horizon is annotated correctly; assess both local correction and full accumulated-state accuracy.",
+    "unknown_review": "Explicitly unknown/undecided information supplies no values. Empty updates are consistent with the extraction contract. This tests abstention, not generated clarification questions.",
+    "label_changes": [],
+    "human_review_status": "pending"
+  },
+  {
+    "scenario_id": "natural-v6-20261005/stocks/03",
+    "reviewer": "Codex agent; not an independent human reviewer",
+    "initial_facts": {
+      "target_description": "total share return including dividends",
+      "target_unit": "percent",
+      "frequency": {
+        "periods": 1,
+        "unit": "week"
+      },
+      "forecast_horizon": {
+        "periods": 5,
+        "unit": "week"
+      },
+      "source_mode": "upload",
+      "file_format": "csv"
+    },
+    "initial_label_review": "Including dividends qualifies total share return. Upload mode and csv are explicit; percent is unit.",
+    "correction_review": "Explicit replacement horizon is annotated correctly; assess both local correction and full accumulated-state accuracy.",
+    "unknown_review": "Explicitly unknown/undecided information supplies no values. Empty updates are consistent with the extraction contract. This tests abstention, not generated clarification questions.",
+    "label_changes": [],
+    "human_review_status": "pending"
+  },
+  {
+    "scenario_id": "natural-v6-20261005/stocks/04",
+    "reviewer": "Codex agent; not an independent human reviewer",
+    "initial_facts": {
+      "target_description": "trading volume",
+      "target_unit": "shares",
+      "frequency": {
+        "periods": 1,
+        "unit": "day"
+      },
+      "forecast_horizon": {
+        "periods": 9,
+        "unit": "day"
+      },
+      "target_column": "volume_shares",
+      "time_column": "trade_date"
+    },
+    "initial_label_review": "volume_shares is the explicit target column, trade_date is the timestamp column; shares is the unit.",
+    "correction_review": "Explicit replacement horizon is annotated correctly; assess both local correction and full accumulated-state accuracy.",
+    "unknown_review": "Explicitly unknown/undecided information supplies no values. Empty updates are consistent with the extraction contract. This tests abstention, not generated clarification questions.",
+    "label_changes": [],
+    "human_review_status": "pending"
+  },
+  {
+    "scenario_id": "natural-v6-20261005/stocks/05",
+    "reviewer": "Codex agent; not an independent human reviewer",
+    "initial_facts": {
+      "target_description": "dividend yield",
+      "target_unit": "percent",
+      "frequency": {
+        "periods": 1,
+        "unit": "month"
+      },
+      "forecast_horizon": {
+        "periods": 4,
+        "unit": "month"
+      }
+    },
+    "initial_label_review": "Dividend yield is the target, percent the unit; monthly data and four-month horizon are explicit.",
+    "correction_review": "Explicit replacement horizon is annotated correctly; assess both local correction and full accumulated-state accuracy.",
+    "unknown_review": "Explicitly unknown/undecided information supplies no values. Empty updates are consistent with the extraction contract. This tests abstention, not generated clarification questions.",
+    "label_changes": [],
+    "human_review_status": "pending"
+  },
+  {
+    "scenario_id": "natural-v6-20261005/stocks/06",
+    "reviewer": "Codex agent; not an independent human reviewer",
+    "initial_facts": {
+      "target_description": "adjusted closing share price",
+      "target_unit": "EUR per share",
+      "frequency": {
+        "periods": 1,
+        "unit": "hour"
+      },
+      "forecast_horizon": {
+        "periods": 16,
+        "unit": "hour"
+      },
+      "file_format": "parquet"
+    },
+    "initial_label_review": "EUR per share must not be merged with frequency or horizon; parquet is explicitly stated.",
+    "correction_review": "Explicit replacement horizon is annotated correctly; assess both local correction and full accumulated-state accuracy.",
+    "unknown_review": "Explicitly unknown/undecided information supplies no values. Empty updates are consistent with the extraction contract. This tests abstention, not generated clarification questions.",
+    "label_changes": [],
+    "human_review_status": "pending"
+  },
+  {
+    "scenario_id": "natural-v6-20261005/stocks/07",
+    "reviewer": "Codex agent; not an independent human reviewer",
+    "initial_facts": {
+      "target_description": "daily log share return",
+      "target_unit": "percent",
+      "frequency": {
+        "periods": 1,
+        "unit": "day"
+      },
+      "forecast_horizon": {
+        "periods": 12,
+        "unit": "day"
+      },
+      "prediction_frequency": {
+        "periods": 3,
+        "unit": "day"
+      }
+    },
+    "initial_label_review": "Keep log return distinct from price. Three-day refresh is independent of daily data and twelve-day horizon.",
+    "correction_review": "Explicit replacement horizon is annotated correctly; assess both local correction and full accumulated-state accuracy.",
+    "unknown_review": "Explicitly unknown/undecided information supplies no values. Empty updates are consistent with the extraction contract. This tests abstention, not generated clarification questions.",
+    "label_changes": [],
+    "human_review_status": "pending"
+  },
+  {
+    "scenario_id": "natural-v6-20261005/stocks/08",
+    "reviewer": "Codex agent; not an independent human reviewer",
+    "initial_facts": {
+      "target_description": "ETF trading volume",
+      "target_unit": "shares",
+      "frequency": {
+        "periods": 1,
+        "unit": "week"
+      },
+      "forecast_horizon": {
+        "periods": 6,
+        "unit": "week"
+      },
+      "source_mode": "upload",
+      "file_format": "xlsx"
+    },
+    "initial_label_review": "ETF trading volume is the target, shares the unit. Upload mode and xlsx are explicitly requested.",
+    "correction_review": "Explicit replacement horizon is annotated correctly; assess both local correction and full accumulated-state accuracy.",
+    "unknown_review": "Explicitly unknown/undecided information supplies no values. Empty updates are consistent with the extraction contract. This tests abstention, not generated clarification questions.",
+    "label_changes": [],
+    "human_review_status": "pending"
+  },
+  {
+    "scenario_id": "natural-v6-20261005/crypto/01",
+    "reviewer": "Codex agent; not an independent human reviewer",
+    "initial_facts": {
+      "target_description": "BTC/USD spot price",
+      "target_unit": "USD per BTC",
+      "frequency": {
+        "periods": 1,
+        "unit": "hour"
+      },
+      "forecast_horizon": {
+        "periods": 20,
+        "unit": "hour"
+      }
+    },
+    "initial_label_review": "Spot price, not futures price, is explicitly specified. USD per BTC is the unit; no timezone is given.",
+    "correction_review": "Explicit replacement horizon is annotated correctly; assess both local correction and full accumulated-state accuracy.",
+    "unknown_review": "Explicitly unknown/undecided information supplies no values. Empty updates are consistent with the extraction contract. This tests abstention, not generated clarification questions.",
+    "label_changes": [],
+    "human_review_status": "pending"
+  },
+  {
+    "scenario_id": "natural-v6-20261005/crypto/02",
+    "reviewer": "Codex agent; not an independent human reviewer",
+    "initial_facts": {
+      "target_description": "ETH trading volume",
+      "target_unit": "ETH",
+      "frequency": {
+        "periods": 2,
+        "unit": "hour"
+      },
+      "forecast_horizon": {
+        "periods": 14,
+        "unit": "hour"
+      }
+    },
+    "initial_label_review": "ETH trading volume is target; ETH is unit, two hours is observation spacing, fourteen hours is horizon.",
+    "correction_review": "Explicit replacement horizon is annotated correctly; assess both local correction and full accumulated-state accuracy.",
+    "unknown_review": "Explicitly unknown/undecided information supplies no values. Empty updates are consistent with the extraction contract. This tests abstention, not generated clarification questions.",
+    "label_changes": [],
+    "human_review_status": "pending"
+  },
+  {
+    "scenario_id": "natural-v6-20261005/crypto/03",
+    "reviewer": "Codex agent; not an independent human reviewer",
+    "initial_facts": {
+      "target_description": "perpetual-swap funding rate",
+      "target_unit": "percent per 8 hours",
+      "frequency": {
+        "periods": 8,
+        "unit": "hour"
+      },
+      "forecast_horizon": {
+        "periods": 48,
+        "unit": "hour"
+      },
+      "source_mode": "upload",
+      "file_format": "csv"
+    },
+    "initial_label_review": "Percent per 8 hours is the funding-rate unit. Eight-hour data spacing is a separate fact. Upload and csv are explicit.",
+    "correction_review": "Explicit replacement horizon is annotated correctly; assess both local correction and full accumulated-state accuracy.",
+    "unknown_review": "Explicitly unknown/undecided information supplies no values. Empty updates are consistent with the extraction contract. This tests abstention, not generated clarification questions.",
+    "label_changes": [],
+    "human_review_status": "pending"
+  },
+  {
+    "scenario_id": "natural-v6-20261005/crypto/04",
+    "reviewer": "Codex agent; not an independent human reviewer",
+    "initial_facts": {
+      "target_description": "futures open interest",
+      "target_unit": "contracts",
+      "frequency": {
+        "periods": 1,
+        "unit": "hour"
+      },
+      "forecast_horizon": {
+        "periods": 30,
+        "unit": "hour"
+      },
+      "target_column": "open_contracts",
+      "time_column": "event_time"
+    },
+    "initial_label_review": "open_contracts and event_time are explicitly distinct target and timestamp columns; contracts is unit.",
+    "correction_review": "Explicit replacement horizon is annotated correctly; assess both local correction and full accumulated-state accuracy.",
+    "unknown_review": "Explicitly unknown/undecided information supplies no values. Empty updates are consistent with the extraction contract. This tests abstention, not generated clarification questions.",
+    "label_changes": [],
+    "human_review_status": "pending"
+  },
+  {
+    "scenario_id": "natural-v6-20261005/crypto/05",
+    "reviewer": "Codex agent; not an independent human reviewer",
+    "initial_facts": {
+      "target_description": "realized volatility",
+      "target_unit": "percent per year",
+      "frequency": {
+        "periods": 1,
+        "unit": "day"
+      },
+      "forecast_horizon": {
+        "periods": 7,
+        "unit": "day"
+      }
+    },
+    "initial_label_review": "Percent per year is the volatility unit, not a yearly observation frequency; observations are daily.",
+    "correction_review": "Explicit replacement horizon is annotated correctly; assess both local correction and full accumulated-state accuracy.",
+    "unknown_review": "Explicitly unknown/undecided information supplies no values. Empty updates are consistent with the extraction contract. This tests abstention, not generated clarification questions.",
+    "label_changes": [],
+    "human_review_status": "pending"
+  },
+  {
+    "scenario_id": "natural-v6-20261005/crypto/06",
+    "reviewer": "Codex agent; not an independent human reviewer",
+    "initial_facts": {
+      "target_description": "futures-minus-spot basis",
+      "target_unit": "basis points",
+      "frequency": {
+        "periods": 1,
+        "unit": "hour"
+      },
+      "forecast_horizon": {
+        "periods": 2,
+        "unit": "day"
+      },
+      "file_format": "parquet"
+    },
+    "initial_label_review": "Futures-minus-spot basis and basis points are explicit target/unit. One-hour spacing and two-day horizon differ.",
+    "correction_review": "Explicit replacement horizon is annotated correctly; assess both local correction and full accumulated-state accuracy.",
+    "unknown_review": "Explicitly unknown/undecided information supplies no values. Empty updates are consistent with the extraction contract. This tests abstention, not generated clarification questions.",
+    "label_changes": [],
+    "human_review_status": "pending"
+  },
+  {
+    "scenario_id": "natural-v6-20261005/crypto/07",
+    "reviewer": "Codex agent; not an independent human reviewer",
+    "initial_facts": {
+      "target_description": "BTC log return",
+      "target_unit": "percent",
+      "frequency": {
+        "periods": 1,
+        "unit": "hour"
+      },
+      "forecast_horizon": {
+        "periods": 18,
+        "unit": "hour"
+      },
+      "prediction_frequency": {
+        "periods": 6,
+        "unit": "hour"
+      }
+    },
+    "initial_label_review": "Six-hour refresh is distinct from hourly data and eighteen-hour horizon. Do not change log return to price.",
+    "correction_review": "Explicit replacement horizon is annotated correctly; assess both local correction and full accumulated-state accuracy.",
+    "unknown_review": "Explicitly unknown/undecided information supplies no values. Empty updates are consistent with the extraction contract. This tests abstention, not generated clarification questions.",
+    "label_changes": [],
+    "human_review_status": "pending"
+  },
+  {
+    "scenario_id": "natural-v6-20261005/crypto/08",
+    "reviewer": "Codex agent; not an independent human reviewer",
+    "initial_facts": {
+      "target_description": "digital-asset market capitalization",
+      "target_unit": "millions of USD",
+      "frequency": {
+        "periods": 1,
+        "unit": "day"
+      },
+      "forecast_horizon": {
+        "periods": 15,
+        "unit": "day"
+      },
+      "source_mode": "upload",
+      "file_format": "json"
+    },
+    "initial_label_review": "Millions of USD is the full unit. Upload and JSON format are explicitly stated; do not invent columns.",
+    "correction_review": "Explicit replacement horizon is annotated correctly; assess both local correction and full accumulated-state accuracy.",
+    "unknown_review": "Explicitly unknown/undecided information supplies no values. Empty updates are consistent with the extraction contract. This tests abstention, not generated clarification questions.",
+    "label_changes": [],
+    "human_review_status": "pending"
+  }
+]
