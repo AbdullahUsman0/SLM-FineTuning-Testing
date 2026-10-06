@@ -1,0 +1,38 @@
+{
+  "audit-findings.md": {
+    "sha256": "a6b49779ce75f1a22c7611f6cac6678dcfc820f9fcc6b5698d8c1087489c636b",
+    "bytes": 5325
+  },
+  "baseline-refined-audit/content-assessment.csv": {
+    "sha256": "f660d5d23bca50b9e060a24415a816cede6b17cc72531193478efa2f3438d7fe",
+    "bytes": 458133
+  },
+  "baseline-refined-audit/content-assessment.json": {
+    "sha256": "d8a6e02dc6fabd22dbb5a774d563a659173650a84e370ad4a717fee28eb018f7",
+    "bytes": 8382
+  },
+  "comparison-refined-audit/content-assessment.csv": {
+    "sha256": "0a2bd506b7e2e812c21755892bd54f90a937c9a83cfd0d5ae2ca6f81ddf1b851",
+    "bytes": 255478
+  },
+  "comparison-refined-audit/content-assessment.json": {
+    "sha256": "7782a96b727251dffa6ce95f9ca7655ea2fb56e3c873e7d18a902c793d7d2da9",
+    "bytes": 5379
+  },
+  "contract-failure-review.json": {
+    "sha256": "4970e8b64c927ea8bde1dde20c964cf875b55d63de190fe5d072789332804c1a",
+    "bytes": 5735
+  },
+  "findings.md": {
+    "sha256": "64d289bb01a8ca7cf1fdc2c766d75476376b703155aa36b71a881975cfe99c0a",
+    "bytes": 7372
+  },
+  "independent-verification.json": {
+    "sha256": "09f23504babd7ad8793873dbbb8467df5ba4c3e3068a503f4c7811a358229712",
+    "bytes": 3346
+  },
+  "target-description-review.json": {
+    "sha256": "0cb063cb9af063ede56cc4d66fd1a8904612d1fea54e5268927195c9d4b39800",
+    "bytes": 5710
+  }
+}

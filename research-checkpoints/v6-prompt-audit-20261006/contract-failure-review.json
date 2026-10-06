@@ -1,0 +1,198 @@
+{
+  "source": "Immutable complete 384-call reports published in 3d03c52",
+  "method": "Post hoc categorization of schema-invalid outputs; no repair, changed labels or changed scores. Raw valid JSON with an extra update-level type key is separately identified. The other failure in crypto/05 places target_unit, frequency and forecast_horizon as keys inside one target-description update, rather than separate updates.",
+  "summary": {
+    "natural_component": {
+      "original": {
+        "duplicate_slot_updates": 1,
+        "strict_json_failure": 2
+      },
+      "revised": {
+        "strict_json_failure": 2,
+        "unsupported_type_field": 6,
+        "requirements_merged_into_single_update": 1
+      }
+    },
+    "natural_rollout": {
+      "original": {
+        "duplicate_slot_updates": 1,
+        "strict_json_failure": 2
+      },
+      "revised": {
+        "strict_json_failure": 2,
+        "unsupported_type_field": 6,
+        "requirements_merged_into_single_update": 1
+      }
+    }
+  },
+  "cases": [
+    {
+      "arm": "original",
+      "track": "natural_component",
+      "scenario_id": "natural-v6-20261005/weather/02",
+      "turn": 1,
+      "category": "duplicate_slot_updates"
+    },
+    {
+      "arm": "original",
+      "track": "natural_component",
+      "scenario_id": "natural-v6-20261005/inflation/04",
+      "turn": 1,
+      "category": "strict_json_failure"
+    },
+    {
+      "arm": "original",
+      "track": "natural_component",
+      "scenario_id": "natural-v6-20261005/stocks/06",
+      "turn": 1,
+      "category": "strict_json_failure"
+    },
+    {
+      "arm": "original",
+      "track": "natural_rollout",
+      "scenario_id": "natural-v6-20261005/weather/02",
+      "turn": 1,
+      "category": "duplicate_slot_updates"
+    },
+    {
+      "arm": "original",
+      "track": "natural_rollout",
+      "scenario_id": "natural-v6-20261005/inflation/04",
+      "turn": 1,
+      "category": "strict_json_failure"
+    },
+    {
+      "arm": "original",
+      "track": "natural_rollout",
+      "scenario_id": "natural-v6-20261005/stocks/06",
+      "turn": 1,
+      "category": "strict_json_failure"
+    },
+    {
+      "arm": "revised",
+      "track": "natural_component",
+      "scenario_id": "natural-v6-20261005/weather/01",
+      "turn": 1,
+      "category": "strict_json_failure"
+    },
+    {
+      "arm": "revised",
+      "track": "natural_component",
+      "scenario_id": "natural-v6-20261005/weather/03",
+      "turn": 1,
+      "category": "unsupported_type_field"
+    },
+    {
+      "arm": "revised",
+      "track": "natural_component",
+      "scenario_id": "natural-v6-20261005/weather/06",
+      "turn": 1,
+      "category": "unsupported_type_field"
+    },
+    {
+      "arm": "revised",
+      "track": "natural_component",
+      "scenario_id": "natural-v6-20261005/inflation/01",
+      "turn": 1,
+      "category": "unsupported_type_field"
+    },
+    {
+      "arm": "revised",
+      "track": "natural_component",
+      "scenario_id": "natural-v6-20261005/inflation/02",
+      "turn": 1,
+      "category": "unsupported_type_field"
+    },
+    {
+      "arm": "revised",
+      "track": "natural_component",
+      "scenario_id": "natural-v6-20261005/inflation/05",
+      "turn": 1,
+      "category": "unsupported_type_field"
+    },
+    {
+      "arm": "revised",
+      "track": "natural_component",
+      "scenario_id": "natural-v6-20261005/inflation/08",
+      "turn": 1,
+      "category": "unsupported_type_field"
+    },
+    {
+      "arm": "revised",
+      "track": "natural_component",
+      "scenario_id": "natural-v6-20261005/crypto/04",
+      "turn": 1,
+      "category": "strict_json_failure"
+    },
+    {
+      "arm": "revised",
+      "track": "natural_component",
+      "scenario_id": "natural-v6-20261005/crypto/05",
+      "turn": 1,
+      "category": "requirements_merged_into_single_update"
+    },
+    {
+      "arm": "revised",
+      "track": "natural_rollout",
+      "scenario_id": "natural-v6-20261005/weather/01",
+      "turn": 1,
+      "category": "strict_json_failure"
+    },
+    {
+      "arm": "revised",
+      "track": "natural_rollout",
+      "scenario_id": "natural-v6-20261005/weather/03",
+      "turn": 1,
+      "category": "unsupported_type_field"
+    },
+    {
+      "arm": "revised",
+      "track": "natural_rollout",
+      "scenario_id": "natural-v6-20261005/weather/06",
+      "turn": 1,
+      "category": "unsupported_type_field"
+    },
+    {
+      "arm": "revised",
+      "track": "natural_rollout",
+      "scenario_id": "natural-v6-20261005/inflation/01",
+      "turn": 1,
+      "category": "unsupported_type_field"
+    },
+    {
+      "arm": "revised",
+      "track": "natural_rollout",
+      "scenario_id": "natural-v6-20261005/inflation/02",
+      "turn": 1,
+      "category": "unsupported_type_field"
+    },
+    {
+      "arm": "revised",
+      "track": "natural_rollout",
+      "scenario_id": "natural-v6-20261005/inflation/05",
+      "turn": 1,
+      "category": "unsupported_type_field"
+    },
+    {
+      "arm": "revised",
+      "track": "natural_rollout",
+      "scenario_id": "natural-v6-20261005/inflation/08",
+      "turn": 1,
+      "category": "unsupported_type_field"
+    },
+    {
+      "arm": "revised",
+      "track": "natural_rollout",
+      "scenario_id": "natural-v6-20261005/crypto/04",
+      "turn": 1,
+      "category": "strict_json_failure"
+    },
+    {
+      "arm": "revised",
+      "track": "natural_rollout",
+      "scenario_id": "natural-v6-20261005/crypto/05",
+      "turn": 1,
+      "category": "requirements_merged_into_single_update"
+    }
+  ]
+}
