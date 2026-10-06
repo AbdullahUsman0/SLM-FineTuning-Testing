@@ -1,0 +1,202 @@
+{
+  "revised-natural_component.json.gz": {
+    "strict_json_failures": [
+      {
+        "key": [
+          "natural-v6-20261005/weather/01",
+          "extract",
+          1
+        ],
+        "reason": "duplicate_object_key:candidate_value",
+        "completion_tokens": 315
+      },
+      {
+        "key": [
+          "natural-v6-20261005/crypto/04",
+          "extract",
+          1
+        ],
+        "reason": "duplicate_object_key:candidate_value",
+        "completion_tokens": 359
+      }
+    ],
+    "hit_generation_limit_calls": 0
+  },
+  "revised-natural_rollout.json.gz": {
+    "strict_json_failures": [
+      {
+        "key": [
+          "natural-v6-20261005/weather/01",
+          "extract",
+          1
+        ],
+        "reason": "duplicate_object_key:candidate_value",
+        "completion_tokens": 315
+      },
+      {
+        "key": [
+          "natural-v6-20261005/crypto/04",
+          "extract",
+          1
+        ],
+        "reason": "duplicate_object_key:candidate_value",
+        "completion_tokens": 359
+      }
+    ],
+    "hit_generation_limit_calls": 0
+  },
+  "schema_fixed-natural_component.json.gz": {
+    "strict_json_failures": [
+      {
+        "key": [
+          "natural-v6-20261005/weather/03",
+          "extract",
+          1
+        ],
+        "reason": "duplicate_object_key:evidence_text",
+        "completion_tokens": 302
+      },
+      {
+        "key": [
+          "natural-v6-20261005/inflation/04",
+          "extract",
+          1
+        ],
+        "reason": "duplicate_object_key:evidence_text",
+        "completion_tokens": 316
+      },
+      {
+        "key": [
+          "natural-v6-20261005/stocks/04",
+          "extract",
+          1
+        ],
+        "reason": "duplicate_object_key:evidence_text",
+        "completion_tokens": 457
+      },
+      {
+        "key": [
+          "natural-v6-20261005/stocks/07",
+          "extract",
+          1
+        ],
+        "reason": "duplicate_object_key:evidence_text",
+        "completion_tokens": 256
+      },
+      {
+        "key": [
+          "natural-v6-20261005/stocks/08",
+          "extract",
+          1
+        ],
+        "reason": "duplicate_object_key:evidence_text",
+        "completion_tokens": 242
+      },
+      {
+        "key": [
+          "natural-v6-20261005/crypto/04",
+          "extract",
+          1
+        ],
+        "reason": "duplicate_object_key:candidate_value",
+        "completion_tokens": 413
+      },
+      {
+        "key": [
+          "natural-v6-20261005/crypto/05",
+          "extract",
+          1
+        ],
+        "reason": "duplicate_object_key:evidence_text",
+        "completion_tokens": 266
+      },
+      {
+        "key": [
+          "natural-v6-20261005/crypto/08",
+          "extract",
+          1
+        ],
+        "reason": "duplicate_object_key:evidence_text",
+        "completion_tokens": 280
+      }
+    ],
+    "hit_generation_limit_calls": 0
+  },
+  "schema_fixed-natural_rollout.json.gz": {
+    "strict_json_failures": [
+      {
+        "key": [
+          "natural-v6-20261005/weather/03",
+          "extract",
+          1
+        ],
+        "reason": "duplicate_object_key:evidence_text",
+        "completion_tokens": 302
+      },
+      {
+        "key": [
+          "natural-v6-20261005/inflation/04",
+          "extract",
+          1
+        ],
+        "reason": "duplicate_object_key:evidence_text",
+        "completion_tokens": 316
+      },
+      {
+        "key": [
+          "natural-v6-20261005/stocks/04",
+          "extract",
+          1
+        ],
+        "reason": "duplicate_object_key:evidence_text",
+        "completion_tokens": 457
+      },
+      {
+        "key": [
+          "natural-v6-20261005/stocks/07",
+          "extract",
+          1
+        ],
+        "reason": "duplicate_object_key:evidence_text",
+        "completion_tokens": 256
+      },
+      {
+        "key": [
+          "natural-v6-20261005/stocks/08",
+          "extract",
+          1
+        ],
+        "reason": "duplicate_object_key:evidence_text",
+        "completion_tokens": 242
+      },
+      {
+        "key": [
+          "natural-v6-20261005/crypto/04",
+          "extract",
+          1
+        ],
+        "reason": "duplicate_object_key:candidate_value",
+        "completion_tokens": 413
+      },
+      {
+        "key": [
+          "natural-v6-20261005/crypto/05",
+          "extract",
+          1
+        ],
+        "reason": "duplicate_object_key:evidence_text",
+        "completion_tokens": 266
+      },
+      {
+        "key": [
+          "natural-v6-20261005/crypto/08",
+          "extract",
+          1
+        ],
+        "reason": "duplicate_object_key:evidence_text",
+        "completion_tokens": 280
+      }
+    ],
+    "hit_generation_limit_calls": 0
+  }
+}

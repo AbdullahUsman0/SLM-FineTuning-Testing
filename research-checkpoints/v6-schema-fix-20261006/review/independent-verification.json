@@ -1,0 +1,85 @@
+{
+  "verified_utc": "2026-10-06T23:39:42.173093+00:00",
+  "published_commit": "5b73d8d1a120b7a10b67011550eee33e3897e0f3",
+  "verified_artifacts": {
+    "analysis.json": {
+      "sha256": "fcb98b7add2821cde3df1593615158377364cb5f34092605d2eaff549b9f66ec",
+      "bytes": 600990
+    },
+    "completion.json": {
+      "sha256": "6348465ac6c2a2f679107c89dd128fcf4ad098eb222b518d67c5bac30084587d",
+      "bytes": 300
+    },
+    "execution-evidence.json": {
+      "sha256": "935093a9720931f01e7e56726f7abf144ff13e65af7492f5aa6e19eacd12d477",
+      "bytes": 269839
+    },
+    "README.md": {
+      "sha256": "5733cbee2ea988e2c4e55c1253414555ede15cbd4469562c861d5bd2ffd27c27",
+      "bytes": 2819
+    },
+    "revised-natural_component.json.gz": {
+      "sha256": "8915434d1f3a3ba5a29e5788000549c522b2564abd82c6276a0b6904e357921c",
+      "bytes": 80462
+    },
+    "revised-natural_rollout.json.gz": {
+      "sha256": "714a63c6f73d3c75ad7033db97ad89c15b45c311aabda45d64abb991eaa80aa2",
+      "bytes": 80395
+    },
+    "run-manifest.json": {
+      "sha256": "a18371d414502344bb31129adc0ca738d34abeeed70f558bac6e5f81531900b2",
+      "bytes": 6773
+    },
+    "schema_fixed-natural_component.json.gz": {
+      "sha256": "9cb297eb7e6e3ea944986dc845e914527094186260665053f82944a022a29987",
+      "bytes": 70682
+    },
+    "schema_fixed-natural_rollout.json.gz": {
+      "sha256": "d30aedce94ad18c84a234273ce91b63f358a57f1c8dd3e7424b73cdd5f2c6d5d",
+      "bytes": 69940
+    },
+    "slot-error-audit.csv": {
+      "sha256": "dd309f78da978a43f67dfd4bc101826008a34ca0c39e4987b110d89d74d676e4",
+      "bytes": 233784
+    },
+    "summary.csv": {
+      "sha256": "0976444c1f351c18cd50f755c78875ea1961f0b591615fa578e209e9dc657193",
+      "bytes": 4065
+    }
+  },
+  "lossless_reports": 4,
+  "total_records": 384,
+  "matching": {
+    "natural_component": {
+      "matched_turn_keys": 96,
+      "identical_gold_records": 96,
+      "identical_component_contexts": 96
+    },
+    "natural_rollout": {
+      "matched_turn_keys": 96,
+      "identical_gold_records": 96,
+      "identical_component_contexts": null
+    }
+  },
+  "revised_control_repeat": {
+    "natural_component": {
+      "raw_output": 96,
+      "context": 96,
+      "expected": 96,
+      "prediction_valid": 96
+    },
+    "natural_rollout": {
+      "raw_output": 96,
+      "context": 96,
+      "expected": 96,
+      "prediction_valid": 96
+    }
+  },
+  "post_inference_adapter_sha256": {
+    "adapter_model.safetensors": "e7add7b8b02d24615ed89067c7761c3985a4a6afb7c84ca2a72e3b06fd84e74d",
+    "adapter_config.json": "38f60de9678324e91fa882ed86c70d09e4a39b27ae28884374ddc3e6fece15ef"
+  },
+  "code_sha256": "a4d410d85ebb8b67218f338fa4ba84f9e6bc6f47ce5e4423c9a1deeef45885bf",
+  "record_metadata_limit": "Optional model_calls and retry_count are null in all 384 records; no measured retry-count claim from these fields. The pinned runner executes one extraction per turn without a repair/retry loop.",
+  "result": "All assertions passed; historical original latency is not a same-session comparison."
+}

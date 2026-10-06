@@ -1,0 +1,1109 @@
+{
+  "method": "Post hoc structural classification of every schema-invalid call; categories can overlap. No repair, label change or rescoring. Semantic human review remains pending. Strict JSON failure includes duplicate JSON object keys.",
+  "reports": {
+    "revised-natural_component": {
+      "invalid_calls": 9,
+      "issue_counts": {
+        "strict_json_failure": 2,
+        "extra_update_fields:type": 6,
+        "extra_update_fields:forecast_horizon,frequency,target_unit": 1
+      },
+      "calls": [
+        {
+          "key": [
+            "natural-v6-20261005/weather/01",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "issues": [
+            "strict_json_failure"
+          ],
+          "completion_tokens": 315,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/weather/03",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 258,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/weather/06",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 273,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/inflation/01",
+            "extract",
+            1
+          ],
+          "domain": "inflation",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 218,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/inflation/02",
+            "extract",
+            1
+          ],
+          "domain": "inflation",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 275,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/inflation/05",
+            "extract",
+            1
+          ],
+          "domain": "inflation",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 261,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/inflation/08",
+            "extract",
+            1
+          ],
+          "domain": "inflation",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 250,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/crypto/04",
+            "extract",
+            1
+          ],
+          "domain": "crypto",
+          "kind": "initial",
+          "issues": [
+            "strict_json_failure"
+          ],
+          "completion_tokens": 359,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/crypto/05",
+            "extract",
+            1
+          ],
+          "domain": "crypto",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:forecast_horizon,frequency,target_unit"
+          ],
+          "completion_tokens": 141,
+          "hit_generation_limit": false
+        }
+      ]
+    },
+    "schema_fixed-natural_component": {
+      "invalid_calls": 29,
+      "issue_counts": {
+        "extra_update_fields:type": 16,
+        "strict_json_failure": 8,
+        "extra_update_fields:update_type": 5
+      },
+      "calls": [
+        {
+          "key": [
+            "natural-v6-20261005/weather/01",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 257,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/weather/02",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 266,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/weather/03",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "issues": [
+            "strict_json_failure"
+          ],
+          "completion_tokens": 302,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/weather/04",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:update_type"
+          ],
+          "completion_tokens": 358,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/weather/05",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 258,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/weather/06",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 273,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/weather/07",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 323,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/weather/08",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:update_type"
+          ],
+          "completion_tokens": 321,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/inflation/01",
+            "extract",
+            1
+          ],
+          "domain": "inflation",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 218,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/inflation/02",
+            "extract",
+            1
+          ],
+          "domain": "inflation",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 275,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/inflation/03",
+            "extract",
+            1
+          ],
+          "domain": "inflation",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 302,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/inflation/04",
+            "extract",
+            1
+          ],
+          "domain": "inflation",
+          "kind": "initial",
+          "issues": [
+            "strict_json_failure"
+          ],
+          "completion_tokens": 316,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/inflation/05",
+            "extract",
+            1
+          ],
+          "domain": "inflation",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 261,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/inflation/06",
+            "extract",
+            1
+          ],
+          "domain": "inflation",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:update_type"
+          ],
+          "completion_tokens": 257,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/inflation/08",
+            "extract",
+            1
+          ],
+          "domain": "inflation",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 250,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/stocks/01",
+            "extract",
+            1
+          ],
+          "domain": "stocks",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:update_type"
+          ],
+          "completion_tokens": 274,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/stocks/02",
+            "extract",
+            1
+          ],
+          "domain": "stocks",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 263,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/stocks/03",
+            "extract",
+            1
+          ],
+          "domain": "stocks",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 305,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/stocks/04",
+            "extract",
+            1
+          ],
+          "domain": "stocks",
+          "kind": "initial",
+          "issues": [
+            "strict_json_failure"
+          ],
+          "completion_tokens": 457,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/stocks/05",
+            "extract",
+            1
+          ],
+          "domain": "stocks",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:update_type"
+          ],
+          "completion_tokens": 216,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/stocks/06",
+            "extract",
+            1
+          ],
+          "domain": "stocks",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 265,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/stocks/07",
+            "extract",
+            1
+          ],
+          "domain": "stocks",
+          "kind": "initial",
+          "issues": [
+            "strict_json_failure"
+          ],
+          "completion_tokens": 256,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/stocks/08",
+            "extract",
+            1
+          ],
+          "domain": "stocks",
+          "kind": "initial",
+          "issues": [
+            "strict_json_failure"
+          ],
+          "completion_tokens": 242,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/crypto/01",
+            "extract",
+            1
+          ],
+          "domain": "crypto",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 257,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/crypto/03",
+            "extract",
+            1
+          ],
+          "domain": "crypto",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 262,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/crypto/04",
+            "extract",
+            1
+          ],
+          "domain": "crypto",
+          "kind": "initial",
+          "issues": [
+            "strict_json_failure"
+          ],
+          "completion_tokens": 413,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/crypto/05",
+            "extract",
+            1
+          ],
+          "domain": "crypto",
+          "kind": "initial",
+          "issues": [
+            "strict_json_failure"
+          ],
+          "completion_tokens": 266,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/crypto/06",
+            "extract",
+            1
+          ],
+          "domain": "crypto",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 310,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/crypto/08",
+            "extract",
+            1
+          ],
+          "domain": "crypto",
+          "kind": "initial",
+          "issues": [
+            "strict_json_failure"
+          ],
+          "completion_tokens": 280,
+          "hit_generation_limit": false
+        }
+      ]
+    },
+    "revised-natural_rollout": {
+      "invalid_calls": 9,
+      "issue_counts": {
+        "strict_json_failure": 2,
+        "extra_update_fields:type": 6,
+        "extra_update_fields:forecast_horizon,frequency,target_unit": 1
+      },
+      "calls": [
+        {
+          "key": [
+            "natural-v6-20261005/weather/01",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "issues": [
+            "strict_json_failure"
+          ],
+          "completion_tokens": 315,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/weather/03",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 258,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/weather/06",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 273,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/inflation/01",
+            "extract",
+            1
+          ],
+          "domain": "inflation",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 218,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/inflation/02",
+            "extract",
+            1
+          ],
+          "domain": "inflation",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 275,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/inflation/05",
+            "extract",
+            1
+          ],
+          "domain": "inflation",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 261,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/inflation/08",
+            "extract",
+            1
+          ],
+          "domain": "inflation",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 250,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/crypto/04",
+            "extract",
+            1
+          ],
+          "domain": "crypto",
+          "kind": "initial",
+          "issues": [
+            "strict_json_failure"
+          ],
+          "completion_tokens": 359,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/crypto/05",
+            "extract",
+            1
+          ],
+          "domain": "crypto",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:forecast_horizon,frequency,target_unit"
+          ],
+          "completion_tokens": 141,
+          "hit_generation_limit": false
+        }
+      ]
+    },
+    "schema_fixed-natural_rollout": {
+      "invalid_calls": 29,
+      "issue_counts": {
+        "extra_update_fields:type": 16,
+        "strict_json_failure": 8,
+        "extra_update_fields:update_type": 5
+      },
+      "calls": [
+        {
+          "key": [
+            "natural-v6-20261005/weather/01",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 257,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/weather/02",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 266,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/weather/03",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "issues": [
+            "strict_json_failure"
+          ],
+          "completion_tokens": 302,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/weather/04",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:update_type"
+          ],
+          "completion_tokens": 358,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/weather/05",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 258,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/weather/06",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 273,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/weather/07",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 323,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/weather/08",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:update_type"
+          ],
+          "completion_tokens": 321,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/inflation/01",
+            "extract",
+            1
+          ],
+          "domain": "inflation",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 218,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/inflation/02",
+            "extract",
+            1
+          ],
+          "domain": "inflation",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 275,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/inflation/03",
+            "extract",
+            1
+          ],
+          "domain": "inflation",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 302,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/inflation/04",
+            "extract",
+            1
+          ],
+          "domain": "inflation",
+          "kind": "initial",
+          "issues": [
+            "strict_json_failure"
+          ],
+          "completion_tokens": 316,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/inflation/05",
+            "extract",
+            1
+          ],
+          "domain": "inflation",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 261,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/inflation/06",
+            "extract",
+            1
+          ],
+          "domain": "inflation",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:update_type"
+          ],
+          "completion_tokens": 257,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/inflation/08",
+            "extract",
+            1
+          ],
+          "domain": "inflation",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 250,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/stocks/01",
+            "extract",
+            1
+          ],
+          "domain": "stocks",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:update_type"
+          ],
+          "completion_tokens": 274,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/stocks/02",
+            "extract",
+            1
+          ],
+          "domain": "stocks",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 263,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/stocks/03",
+            "extract",
+            1
+          ],
+          "domain": "stocks",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 305,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/stocks/04",
+            "extract",
+            1
+          ],
+          "domain": "stocks",
+          "kind": "initial",
+          "issues": [
+            "strict_json_failure"
+          ],
+          "completion_tokens": 457,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/stocks/05",
+            "extract",
+            1
+          ],
+          "domain": "stocks",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:update_type"
+          ],
+          "completion_tokens": 216,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/stocks/06",
+            "extract",
+            1
+          ],
+          "domain": "stocks",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 265,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/stocks/07",
+            "extract",
+            1
+          ],
+          "domain": "stocks",
+          "kind": "initial",
+          "issues": [
+            "strict_json_failure"
+          ],
+          "completion_tokens": 256,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/stocks/08",
+            "extract",
+            1
+          ],
+          "domain": "stocks",
+          "kind": "initial",
+          "issues": [
+            "strict_json_failure"
+          ],
+          "completion_tokens": 242,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/crypto/01",
+            "extract",
+            1
+          ],
+          "domain": "crypto",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 257,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/crypto/03",
+            "extract",
+            1
+          ],
+          "domain": "crypto",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 262,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/crypto/04",
+            "extract",
+            1
+          ],
+          "domain": "crypto",
+          "kind": "initial",
+          "issues": [
+            "strict_json_failure"
+          ],
+          "completion_tokens": 413,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/crypto/05",
+            "extract",
+            1
+          ],
+          "domain": "crypto",
+          "kind": "initial",
+          "issues": [
+            "strict_json_failure"
+          ],
+          "completion_tokens": 266,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/crypto/06",
+            "extract",
+            1
+          ],
+          "domain": "crypto",
+          "kind": "initial",
+          "issues": [
+            "extra_update_fields:type"
+          ],
+          "completion_tokens": 310,
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/crypto/08",
+            "extract",
+            1
+          ],
+          "domain": "crypto",
+          "kind": "initial",
+          "issues": [
+            "strict_json_failure"
+          ],
+          "completion_tokens": 280,
+          "hit_generation_limit": false
+        }
+      ]
+    }
+  }
+}
