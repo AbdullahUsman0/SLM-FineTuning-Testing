@@ -1,0 +1,144 @@
+{
+  "source_commit": "9fbcadd0a15b5e6028dbc3e663d4cb6d7cfd140a",
+  "result_artifacts_verified": 11,
+  "source_sha256": {
+    "analysis.json": "21b5eca39e6ab983575b181259efd3204562b770a0cb2e6f3541f2ffa43892a6",
+    "completion.json": "0a0affd5b3592feaffc9c57f6e91faef811e7c58de3020b533e83bd925518d8c",
+    "constrained-natural_component.json.gz": "4b32e0c75d1bc533d5fb861bd85c98b6d8297b88ffc1f4521711ba09bdc93416",
+    "constrained-natural_rollout.json.gz": "06003e6185dc5739dfba5d51add4b504decd3c3487081ac2ec727bc1aee7bfd7",
+    "execution-evidence.json": "f97e41d9e0a940c4a8de107d003c729b02aa7b5821951f74343f9bb64ba82432",
+    "original-natural_component.json.gz": "9d2c6db2a4afc5cc44c39006d173dc31f2eecd8b4769f32397387aec12a6ef47",
+    "original-natural_rollout.json.gz": "a9d6cae9167a99cb703dc728e179360df274593e51a743c4bb80b4c9c5109020",
+    "README.md": "9d6481a42df9cce7a8c5f61bd48cfc7a3bdd6c4ec06c96400527d6a049091681",
+    "run-manifest.json": "b8194948ce53f73cec1887be153ac2c8dc4f9e51e1fcbb065728e53689ff8748",
+    "slot-error-audit.csv": "1b304a31c4732c9359765bfb56ed99a37e2fddf7c1efd888f699c55b0d30a35b",
+    "summary.csv": "2ec4c763b186091ef1d5b9f7acb81a4fa7484fb6fb0035e5c5071b366da884ae"
+  },
+  "policy_sha256": "558581a35a0abc592c59d6f30bc7a2a3c0542368bfee668ac3018800b702189e",
+  "summaries": {
+    "original/component": {
+      "calls": 96,
+      "original_wire_admitted": 93,
+      "frozen_policy_admitted": 93,
+      "rejections": {
+        "invalid_json": 2,
+        "duplicate_slot": 1
+      }
+    },
+    "original/rollout": {
+      "calls": 96,
+      "original_wire_admitted": 93,
+      "frozen_policy_admitted": 93,
+      "rejections": {
+        "invalid_json": 2,
+        "duplicate_slot": 1
+      }
+    },
+    "constrained/component": {
+      "calls": 96,
+      "original_wire_admitted": 78,
+      "frozen_policy_admitted": 96,
+      "rejections": {}
+    },
+    "constrained/rollout": {
+      "calls": 96,
+      "original_wire_admitted": 77,
+      "frozen_policy_admitted": 96,
+      "rejections": {}
+    }
+  },
+  "examples": [
+    {
+      "track": "component",
+      "key": [
+        "natural-v6-20261005/weather/01",
+        "extract",
+        1
+      ],
+      "slot": "intent",
+      "candidate": "create_forecast",
+      "new_policy_admitted": true
+    },
+    {
+      "track": "component",
+      "key": [
+        "natural-v6-20261005/weather/01",
+        "extract",
+        1
+      ],
+      "slot": "target_description",
+      "candidate": "afternoon air temperature",
+      "new_policy_admitted": true
+    },
+    {
+      "track": "component",
+      "key": [
+        "natural-v6-20261005/weather/03",
+        "extract",
+        1
+      ],
+      "slot": "source_mode",
+      "candidate": "upload",
+      "new_policy_admitted": true
+    },
+    {
+      "track": "component",
+      "key": [
+        "natural-v6-20261005/weather/03",
+        "extract",
+        2
+      ],
+      "slot": "intent",
+      "candidate": "create_forecast",
+      "new_policy_admitted": true
+    },
+    {
+      "track": "component",
+      "key": [
+        "natural-v6-20261005/weather/04",
+        "extract",
+        1
+      ],
+      "slot": "target_description",
+      "candidate": "relative humidity",
+      "new_policy_admitted": true
+    },
+    {
+      "track": "component",
+      "key": [
+        "natural-v6-20261005/weather/04",
+        "extract",
+        1
+      ],
+      "slot": "target_unit",
+      "candidate": "percent",
+      "new_policy_admitted": true
+    },
+    {
+      "track": "component",
+      "key": [
+        "natural-v6-20261005/weather/04",
+        "extract",
+        1
+      ],
+      "slot": "target_column",
+      "candidate": "humidity_pct",
+      "new_policy_admitted": true
+    },
+    {
+      "track": "component",
+      "key": [
+        "natural-v6-20261005/weather/06",
+        "extract",
+        1
+      ],
+      "slot": "intent",
+      "candidate": "create_forecast",
+      "new_policy_admitted": true
+    }
+  ],
+  "new_inferences": 0,
+  "api_calls": 0,
+  "quality_scores_recomputed": false,
+  "limitation": "Retrospective admission only on original 32-case contexts; no new reviewed-cohort score or alternate rollout trajectory is implied."
+}
