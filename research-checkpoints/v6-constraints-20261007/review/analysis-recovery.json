@@ -1,0 +1,10 @@
+{
+  "inference_commit": "2e25b15",
+  "analysis_commit": "2272807",
+  "retained_failed_analysis": "study-results",
+  "completed_analysis": "study-results-final",
+  "cause": "Supplementary normalization could not serialize Python datetime from invented forecast_start values. Four recorded emissions affected.",
+  "fix": "Use the unchanged existing _snapshot_value ISO-8601 serializer after pinned normalize_value. No new normalization semantics, repairs, retries, label changes or inference.",
+  "tests_passed": 24,
+  "previous_study_records_with_unchanged_normalized_metrics": 768
+}

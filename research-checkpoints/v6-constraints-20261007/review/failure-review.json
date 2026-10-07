@@ -1,0 +1,2068 @@
+{
+  "method": "Post hoc structural classification of all application-invalid calls; no repair or label/score changes. Categories can overlap. Semantic human adjudication remains pending.",
+  "reports": {
+    "original-natural_component": {
+      "invalid_calls": 3,
+      "reason_counts": {
+        "duplicate_slot_ids": 1,
+        "strict_json_failure": 2
+      },
+      "calls": [
+        {
+          "key": [
+            "natural-v6-20261005/weather/02",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "reasons": [
+            "duplicate_slot_ids"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"correction_detected\": false, \"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"unsupported_claims\": [], \"updates\": [{\"candidate_value\": \"\\\"rain\\\"\", \"confidence\": 1.0, \"evidence_text\": \"Rain is what I care about:\", \"slot_id\": \"target_description\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"accumulated rainfall, measured in millimetres\\\"\", \"confidence\": 1.0, \"evidence_text\": \"please predict accumulated rainfall, measured in millimetres.\", \"slot_id\": \"target_description\", \"status\": \"provided\"}, {\"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"hour\\\"}\", \"confidence\": 1.0, \"evidence_text\": \"I have hourly readings\", \"slot_id\": \"frequency\", \"status\": \"provided\"}, {\"candidate_value\": \"{\\\"periods\\\": 36, \\\"unit\\\": \\\"hour\\\"}\", \"confidence\": 1.0, \"evidence_text\": \"want 36 hours ahead.\", \"slot_id\": \"forecast_horizon\", \"status\": \"provided\"}]}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2149,
+              "completion_tokens": 239,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": null,
+              "first_pass_json_valid": null,
+              "first_pass_schema_valid": null,
+              "constraint_backend": "none",
+              "schema_compile_ms": 0,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/inflation/04",
+            "extract",
+            1
+          ],
+          "domain": "inflation",
+          "kind": "initial",
+          "reasons": [
+            "strict_json_failure"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"correction_detected\": false, \"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"unsupported_claims\": [], \"updates\": [{\"candidate_value\": \"\\\"food-price inflation in percent\\\"\", \"confidence\": 1.0, \"evidence_text\": \"Help me predict food-price inflation in percent.\", \"slot_id\": \"target_description\", \"status\": \"provided\"}, {\"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"month\\\"}\", \"confidence\": 1.0, \"evidence_text\": \"There is one observation each month.\", \"slot_id\": \"frequency\", \"status\": \"provided\"}, {\"candidate_value\": \"{\\\"periods\\\": 11, \\\"unit\\\": \\\"month\\\"}\", \"confidence\": 1.0, \"evidence_text\": \"Look 11 months ahead.\", \"slot_id\": \"forecast_horizon\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"food_inflation\\\"\", \"confidence\": 1.0, \"evidence_text\": \"The target column is food_inflation and the date column is month_end.\", \"slot_id\": \"target_column\", \"slot_id\": \"time_column\", \"status\": \"provided\"}]}",
+              "raw_json_valid": false,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2157,
+              "completion_tokens": 253,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": null,
+              "first_pass_json_valid": null,
+              "first_pass_schema_valid": null,
+              "constraint_backend": "none",
+              "schema_compile_ms": 0,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/stocks/06",
+            "extract",
+            1
+          ],
+          "domain": "stocks",
+          "kind": "initial",
+          "reasons": [
+            "strict_json_failure"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"correction_detected\": false, \"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"unsupported_claims\": [], \"updates\": [{\"candidate_value\": \"\\\"adjusted closing share price\\\"\", \"confidence\": 1.0, \"evidence_text\": \"I need a forecast of adjusted closing share price.\", \"slot_id\": \"target_description\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"EUR per share\\\"\", \"confidence\": 1.0, \"evidence_text\": \"It is in EUR per share, sampled hourly, and I want 16 hours ahead.\", \"slot_id\": \"target_unit\", \"slot_id\": \"frequency\", \"slot_id\": \"forecast_horizon\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"parquet\\\"\", \"confidence\": 1.0, \"evidence_text\": \"The file format is parquet.\", \"slot_id\": \"file_format\", \"status\": \"provided\"}]}",
+              "raw_json_valid": false,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2154,
+              "completion_tokens": 200,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": null,
+              "first_pass_json_valid": null,
+              "first_pass_schema_valid": null,
+              "constraint_backend": "none",
+              "schema_compile_ms": 0,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        }
+      ]
+    },
+    "constrained-natural_component": {
+      "invalid_calls": 18,
+      "reason_counts": {
+        "candidate_value_not_valid_json_text": 18
+      },
+      "calls": [
+        {
+          "key": [
+            "natural-v6-20261005/weather/01",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Could you forecast afternoon air temperature?\"}, {\"slot_id\": \"target_description\", \"candidate_value\": \"afternoon air temperature\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"My readings are daily, in degrees Celsius, and I need the next 5 days.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"My readings are daily, in degrees Celsius, and I need the next 5 days.\"}, {\"slot_id\": \"file_format\", \"candidate_value\": \"\\\"csv\\\"\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"The file is CSV.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2149,
+              "completion_tokens": 242,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Could you forecast afternoon air temperature?\"}, {\"slot_id\": \"target_description\", \"candidate_value\": \"afternoon air temperature\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"My readings are daily, in degrees Celsius, and I need the next 5 days.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"My readings are daily, in degrees Celsius, and I need the next 5 days.\"}, {\"slot_id\": \"file_format\", \"candidate_value\": \"\\\"csv\\\"\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"The file is CSV.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Could you forecast afternoon air temperature?\"}, {\"slot_id\": \"target_description\", \"candidate_value\": \"afternoon air temperature\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"My readings are daily, in degrees Celsius, and I need the next 5 days.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"My readings are daily, in degrees Celsius, and I need the next 5 days.\"}, {\"slot_id\": \"file_format\", \"candidate_value\": \"\\\"csv\\\"\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"The file is CSV.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2149,
+                  "completion_tokens": 242,
+                  "hit_generation_limit": false,
+                  "latency_ms": 11222.088999999869,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/weather/03",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"\\\"peak wind speed in metres per second\\\"\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I need a forecast of peak wind speed in metres per second, every hour, out to 12 hours.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I need a forecast of peak wind speed in metres per second, every hour, out to 12 hours.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 12, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I need a forecast of peak wind speed in metres per second, every hour, out to 12 hours.\"}, {\"slot_id\": \"source_mode\", \"candidate_value\": \"upload\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I will upload the data as parquet.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2150,
+              "completion_tokens": 286,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"\\\"peak wind speed in metres per second\\\"\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I need a forecast of peak wind speed in metres per second, every hour, out to 12 hours.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I need a forecast of peak wind speed in metres per second, every hour, out to 12 hours.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 12, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I need a forecast of peak wind speed in metres per second, every hour, out to 12 hours.\"}, {\"slot_id\": \"source_mode\", \"candidate_value\": \"upload\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I will upload the data as parquet.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"\\\"peak wind speed in metres per second\\\"\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I need a forecast of peak wind speed in metres per second, every hour, out to 12 hours.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I need a forecast of peak wind speed in metres per second, every hour, out to 12 hours.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 12, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I need a forecast of peak wind speed in metres per second, every hour, out to 12 hours.\"}, {\"slot_id\": \"source_mode\", \"candidate_value\": \"upload\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I will upload the data as parquet.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2150,
+                  "completion_tokens": 286,
+                  "hit_generation_limit": false,
+                  "latency_ms": 14022.280000000137,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/weather/03",
+            "extract",
+            2
+          ],
+          "domain": "weather",
+          "kind": "correction",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 15.0, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast the next 15 hours, please.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I changed my mind about the horizon. Forecast the next 15 hours, please.\"}], \"correction_detected\": true, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2308,
+              "completion_tokens": 152,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 15.0, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast the next 15 hours, please.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I changed my mind about the horizon. Forecast the next 15 hours, please.\"}], \"correction_detected\": true, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 15.0, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast the next 15 hours, please.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I changed my mind about the horizon. Forecast the next 15 hours, please.\"}], \"correction_detected\": true, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2308,
+                  "completion_tokens": 152,
+                  "hit_generation_limit": false,
+                  "latency_ms": 7681.241100000079,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/weather/04",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"relative humidity\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Help me predict relative humidity.\"}, {\"slot_id\": \"target_unit\", \"candidate_value\": \"percent\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"It is in percent, observed daily; look ahead 9 days.\"}, {\"slot_id\": \"target_column\", \"candidate_value\": \"humidity_pct\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Read humidity_pct as the target and observation_date as the timestamp.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2152,
+              "completion_tokens": 179,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"relative humidity\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Help me predict relative humidity.\"}, {\"slot_id\": \"target_unit\", \"candidate_value\": \"percent\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"It is in percent, observed daily; look ahead 9 days.\"}, {\"slot_id\": \"target_column\", \"candidate_value\": \"humidity_pct\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Read humidity_pct as the target and observation_date as the timestamp.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"relative humidity\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Help me predict relative humidity.\"}, {\"slot_id\": \"target_unit\", \"candidate_value\": \"percent\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"It is in percent, observed daily; look ahead 9 days.\"}, {\"slot_id\": \"target_column\", \"candidate_value\": \"humidity_pct\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Read humidity_pct as the target and observation_date as the timestamp.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2152,
+                  "completion_tokens": 179,
+                  "hit_generation_limit": false,
+                  "latency_ms": 8531.500899999628,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/weather/06",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Can we forecast sea-level pressure?\"}, {\"slot_id\": \"target_description\", \"candidate_value\": \"sea-level pressure\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Values are in hectopascals and arrive every 6 hours.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 2, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I need a 2 day horizon.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2148,
+              "completion_tokens": 188,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Can we forecast sea-level pressure?\"}, {\"slot_id\": \"target_description\", \"candidate_value\": \"sea-level pressure\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Values are in hectopascals and arrive every 6 hours.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 2, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I need a 2 day horizon.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Can we forecast sea-level pressure?\"}, {\"slot_id\": \"target_description\", \"candidate_value\": \"sea-level pressure\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Values are in hectopascals and arrive every 6 hours.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 2, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I need a 2 day horizon.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2148,
+                  "completion_tokens": 188,
+                  "hit_generation_limit": false,
+                  "latency_ms": 10017.881699999634,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/weather/07",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"overnight minimum temperature in degrees Fahrenheit\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Please predict overnight minimum temperature in degrees Fahrenheit.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Observations are daily.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 8, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast 8 days ahead, and generate a fresh forecast every 2 days.\"}, {\"slot_id\": \"prediction_frequency\", \"candidate_value\": \"{\\\"periods\\\": 2, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"generate a fresh forecast every 2 days.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2149,
+              "completion_tokens": 258,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"overnight minimum temperature in degrees Fahrenheit\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Please predict overnight minimum temperature in degrees Fahrenheit.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Observations are daily.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 8, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast 8 days ahead, and generate a fresh forecast every 2 days.\"}, {\"slot_id\": \"prediction_frequency\", \"candidate_value\": \"{\\\"periods\\\": 2, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"generate a fresh forecast every 2 days.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"overnight minimum temperature in degrees Fahrenheit\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Please predict overnight minimum temperature in degrees Fahrenheit.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Observations are daily.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 8, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast 8 days ahead, and generate a fresh forecast every 2 days.\"}, {\"slot_id\": \"prediction_frequency\", \"candidate_value\": \"{\\\"periods\\\": 2, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"generate a fresh forecast every 2 days.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2149,
+                  "completion_tokens": 258,
+                  "hit_generation_limit": false,
+                  "latency_ms": 11822.495400000662,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/inflation/03",
+            "extract",
+            2
+          ],
+          "domain": "inflation",
+          "kind": "correction",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 6.0, \\\"unit\\\": \\\"month\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast the next 6 months, please.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I changed my mind about the horizon. Forecast the next 6 months, please.\"}], \"correction_detected\": true, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2284,
+              "completion_tokens": 149,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 6.0, \\\"unit\\\": \\\"month\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast the next 6 months, please.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I changed my mind about the horizon. Forecast the next 6 months, please.\"}], \"correction_detected\": true, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 6.0, \\\"unit\\\": \\\"month\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast the next 6 months, please.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I changed my mind about the horizon. Forecast the next 6 months, please.\"}], \"correction_detected\": true, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2284,
+                  "completion_tokens": 149,
+                  "hit_generation_limit": false,
+                  "latency_ms": 7342.280099999698,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/inflation/06",
+            "extract",
+            1
+          ],
+          "domain": "inflation",
+          "kind": "initial",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"\\\"consumer price index level in index points\\\"\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast the consumer price index level in index points.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"month\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"The series has a monthly observation and I need a 1 year horizon.\"}, {\"slot_id\": \"source_mode\", \"candidate_value\": \"upload\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I will upload a parquet file.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2151,
+              "completion_tokens": 192,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"\\\"consumer price index level in index points\\\"\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast the consumer price index level in index points.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"month\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"The series has a monthly observation and I need a 1 year horizon.\"}, {\"slot_id\": \"source_mode\", \"candidate_value\": \"upload\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I will upload a parquet file.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"\\\"consumer price index level in index points\\\"\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast the consumer price index level in index points.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"month\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"The series has a monthly observation and I need a 1 year horizon.\"}, {\"slot_id\": \"source_mode\", \"candidate_value\": \"upload\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I will upload a parquet file.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2151,
+                  "completion_tokens": 192,
+                  "hit_generation_limit": false,
+                  "latency_ms": 11200.373599999693,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/stocks/02",
+            "extract",
+            1
+          ],
+          "domain": "stocks",
+          "kind": "initial",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"raw closing share price\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Please predict raw closing share price, without adjusting corporate actions.\"}, {\"slot_id\": \"target_unit\", \"candidate_value\": \"GBP per share\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Prices are in GBP per share, observed every day.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 6, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Look ahead 6 days.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2148,
+              "completion_tokens": 190,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"raw closing share price\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Please predict raw closing share price, without adjusting corporate actions.\"}, {\"slot_id\": \"target_unit\", \"candidate_value\": \"GBP per share\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Prices are in GBP per share, observed every day.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 6, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Look ahead 6 days.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"raw closing share price\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Please predict raw closing share price, without adjusting corporate actions.\"}, {\"slot_id\": \"target_unit\", \"candidate_value\": \"GBP per share\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Prices are in GBP per share, observed every day.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 6, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Look ahead 6 days.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2148,
+                  "completion_tokens": 190,
+                  "hit_generation_limit": false,
+                  "latency_ms": 9402.960999999777,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/stocks/03",
+            "extract",
+            1
+          ],
+          "domain": "stocks",
+          "kind": "initial",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"\\\"total share return including dividends, measured in percent\\\"\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Help me forecast total share return including dividends, measured in percent.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 7, \\\"unit\\\": \\\"week\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Observations are weekly; I need 5 weeks ahead.\"}, {\"slot_id\": \"source_mode\", \"candidate_value\": \"upload\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I will upload CSV data.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2150,
+              "completion_tokens": 193,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"\\\"total share return including dividends, measured in percent\\\"\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Help me forecast total share return including dividends, measured in percent.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 7, \\\"unit\\\": \\\"week\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Observations are weekly; I need 5 weeks ahead.\"}, {\"slot_id\": \"source_mode\", \"candidate_value\": \"upload\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I will upload CSV data.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"\\\"total share return including dividends, measured in percent\\\"\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Help me forecast total share return including dividends, measured in percent.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 7, \\\"unit\\\": \\\"week\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Observations are weekly; I need 5 weeks ahead.\"}, {\"slot_id\": \"source_mode\", \"candidate_value\": \"upload\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I will upload CSV data.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2150,
+                  "completion_tokens": 193,
+                  "hit_generation_limit": false,
+                  "latency_ms": 9940.370400000575,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/stocks/03",
+            "extract",
+            2
+          ],
+          "domain": "stocks",
+          "kind": "correction",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 8.0, \\\"unit\\\": \\\"week\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast the next 8 weeks, please.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I changed my mind about the horizon. Forecast the next 8 weeks, please.\"}], \"correction_detected\": true, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2304,
+              "completion_tokens": 149,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 8.0, \\\"unit\\\": \\\"week\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast the next 8 weeks, please.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I changed my mind about the horizon. Forecast the next 8 weeks, please.\"}], \"correction_detected\": true, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 8.0, \\\"unit\\\": \\\"week\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast the next 8 weeks, please.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I changed my mind about the horizon. Forecast the next 8 weeks, please.\"}], \"correction_detected\": true, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2304,
+                  "completion_tokens": 149,
+                  "hit_generation_limit": false,
+                  "latency_ms": 8504.023299999972,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/stocks/04",
+            "extract",
+            1
+          ],
+          "domain": "stocks",
+          "kind": "initial",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"trading volume, measured in shares\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast trading volume, measured in shares, from daily observations for the next 9 days.\"}, {\"slot_id\": \"target_column\", \"candidate_value\": \"volume_shares\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Read the target from volume_shares and the timestamp from trade_date.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 9, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast trading volume, measured in shares, from daily observations for the next 9 days.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2151,
+              "completion_tokens": 214,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"trading volume, measured in shares\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast trading volume, measured in shares, from daily observations for the next 9 days.\"}, {\"slot_id\": \"target_column\", \"candidate_value\": \"volume_shares\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Read the target from volume_shares and the timestamp from trade_date.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 9, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast trading volume, measured in shares, from daily observations for the next 9 days.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"trading volume, measured in shares\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast trading volume, measured in shares, from daily observations for the next 9 days.\"}, {\"slot_id\": \"target_column\", \"candidate_value\": \"volume_shares\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Read the target from volume_shares and the timestamp from trade_date.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 9, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast trading volume, measured in shares, from daily observations for the next 9 days.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2151,
+                  "completion_tokens": 214,
+                  "hit_generation_limit": false,
+                  "latency_ms": 11485.338600000432,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/stocks/07",
+            "extract",
+            1
+          ],
+          "domain": "stocks",
+          "kind": "initial",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"\\\"daily log share return in percent\\\"\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Could you forecast daily log share return in percent?\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"There is one observation per day.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 12, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Predict 12 days ahead but refresh the forecast every 3 days.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Could you forecast daily log share return in percent? There is one observation per day. Predict 12 days ahead but refresh the forecast every 3 days.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2151,
+              "completion_tokens": 273,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"\\\"daily log share return in percent\\\"\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Could you forecast daily log share return in percent?\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"There is one observation per day.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 12, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Predict 12 days ahead but refresh the forecast every 3 days.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Could you forecast daily log share return in percent? There is one observation per day. Predict 12 days ahead but refresh the forecast every 3 days.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"\\\"daily log share return in percent\\\"\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Could you forecast daily log share return in percent?\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"There is one observation per day.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 12, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Predict 12 days ahead but refresh the forecast every 3 days.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Could you forecast daily log share return in percent? There is one observation per day. Predict 12 days ahead but refresh the forecast every 3 days.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2151,
+                  "completion_tokens": 273,
+                  "hit_generation_limit": false,
+                  "latency_ms": 15832.169700000122,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/stocks/08",
+            "extract",
+            1
+          ],
+          "domain": "stocks",
+          "kind": "initial",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"ETF trading volume in shares\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I want to forecast ETF trading volume in shares.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"week\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I have weekly data and need the next 6 weeks.\"}, {\"slot_id\": \"source_mode\", \"candidate_value\": \"upload\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I will upload the spreadsheet in xlsx format.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2151,
+              "completion_tokens": 190,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"ETF trading volume in shares\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I want to forecast ETF trading volume in shares.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"week\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I have weekly data and need the next 6 weeks.\"}, {\"slot_id\": \"source_mode\", \"candidate_value\": \"upload\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I will upload the spreadsheet in xlsx format.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"ETF trading volume in shares\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I want to forecast ETF trading volume in shares.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"week\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I have weekly data and need the next 6 weeks.\"}, {\"slot_id\": \"source_mode\", \"candidate_value\": \"upload\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I will upload the spreadsheet in xlsx format.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2151,
+                  "completion_tokens": 190,
+                  "hit_generation_limit": false,
+                  "latency_ms": 10811.736999999994,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/crypto/03",
+            "extract",
+            1
+          ],
+          "domain": "crypto",
+          "kind": "initial",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"perpetual-swap funding rate\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Help me forecast perpetual-swap funding rate.\"}, {\"slot_id\": \"target_unit\", \"candidate_value\": \"percent per 8 hours\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Units are percent per 8 hours and observations come every 8 hours.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 48, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Look ahead 48 hours.\"}, {\"slot_id\": \"source_mode\", \"candidate_value\": \"upload\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I will upload CSV data.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2156,
+              "completion_tokens": 240,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"perpetual-swap funding rate\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Help me forecast perpetual-swap funding rate.\"}, {\"slot_id\": \"target_unit\", \"candidate_value\": \"percent per 8 hours\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Units are percent per 8 hours and observations come every 8 hours.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 48, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Look ahead 48 hours.\"}, {\"slot_id\": \"source_mode\", \"candidate_value\": \"upload\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I will upload CSV data.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"perpetual-swap funding rate\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Help me forecast perpetual-swap funding rate.\"}, {\"slot_id\": \"target_unit\", \"candidate_value\": \"percent per 8 hours\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Units are percent per 8 hours and observations come every 8 hours.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 48, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Look ahead 48 hours.\"}, {\"slot_id\": \"source_mode\", \"candidate_value\": \"upload\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I will upload CSV data.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2156,
+                  "completion_tokens": 240,
+                  "hit_generation_limit": false,
+                  "latency_ms": 12847.329100000024,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/crypto/03",
+            "extract",
+            2
+          ],
+          "domain": "crypto",
+          "kind": "correction",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 51.0, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast the next 51 hours, please.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I changed my mind about the horizon. Forecast the next 51 hours, please.\"}], \"correction_detected\": true, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2312,
+              "completion_tokens": 152,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 51.0, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast the next 51 hours, please.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I changed my mind about the horizon. Forecast the next 51 hours, please.\"}], \"correction_detected\": true, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 51.0, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast the next 51 hours, please.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I changed my mind about the horizon. Forecast the next 51 hours, please.\"}], \"correction_detected\": true, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2312,
+                  "completion_tokens": 152,
+                  "hit_generation_limit": false,
+                  "latency_ms": 8498.945899999853,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/crypto/04",
+            "extract",
+            1
+          ],
+          "domain": "crypto",
+          "kind": "initial",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"futures open interest in contracts\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I need a forecast of futures open interest in contracts.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"This is hourly data and the horizon is 30 hours.\"}, {\"slot_id\": \"target_column\", \"candidate_value\": \"open_contracts\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Read open_contracts as the target and event_time as the timestamp.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2157,
+              "completion_tokens": 199,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"futures open interest in contracts\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I need a forecast of futures open interest in contracts.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"This is hourly data and the horizon is 30 hours.\"}, {\"slot_id\": \"target_column\", \"candidate_value\": \"open_contracts\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Read open_contracts as the target and event_time as the timestamp.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"futures open interest in contracts\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I need a forecast of futures open interest in contracts.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"This is hourly data and the horizon is 30 hours.\"}, {\"slot_id\": \"target_column\", \"candidate_value\": \"open_contracts\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Read open_contracts as the target and event_time as the timestamp.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2157,
+                  "completion_tokens": 199,
+                  "hit_generation_limit": false,
+                  "latency_ms": 10251.74479999987,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/crypto/05",
+            "extract",
+            1
+          ],
+          "domain": "crypto",
+          "kind": "initial",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"realized volatility, in percent per year\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Please forecast realized volatility, in percent per year, from daily observations for the next 7 days.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Please forecast realized volatility, in percent per year, from daily observations for the next 7 days.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 7, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Please forecast realized volatility, in percent per year, from daily observations for the next 7 days.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2139,
+              "completion_tokens": 233,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"realized volatility, in percent per year\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Please forecast realized volatility, in percent per year, from daily observations for the next 7 days.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Please forecast realized volatility, in percent per year, from daily observations for the next 7 days.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 7, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Please forecast realized volatility, in percent per year, from daily observations for the next 7 days.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"realized volatility, in percent per year\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Please forecast realized volatility, in percent per year, from daily observations for the next 7 days.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Please forecast realized volatility, in percent per year, from daily observations for the next 7 days.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 7, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Please forecast realized volatility, in percent per year, from daily observations for the next 7 days.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2139,
+                  "completion_tokens": 233,
+                  "hit_generation_limit": false,
+                  "latency_ms": 13556.681000000026,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        }
+      ]
+    },
+    "original-natural_rollout": {
+      "invalid_calls": 3,
+      "reason_counts": {
+        "duplicate_slot_ids": 1,
+        "strict_json_failure": 2
+      },
+      "calls": [
+        {
+          "key": [
+            "natural-v6-20261005/weather/02",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "reasons": [
+            "duplicate_slot_ids"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"correction_detected\": false, \"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"unsupported_claims\": [], \"updates\": [{\"candidate_value\": \"\\\"rain\\\"\", \"confidence\": 1.0, \"evidence_text\": \"Rain is what I care about:\", \"slot_id\": \"target_description\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"accumulated rainfall, measured in millimetres\\\"\", \"confidence\": 1.0, \"evidence_text\": \"please predict accumulated rainfall, measured in millimetres.\", \"slot_id\": \"target_description\", \"status\": \"provided\"}, {\"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"hour\\\"}\", \"confidence\": 1.0, \"evidence_text\": \"I have hourly readings\", \"slot_id\": \"frequency\", \"status\": \"provided\"}, {\"candidate_value\": \"{\\\"periods\\\": 36, \\\"unit\\\": \\\"hour\\\"}\", \"confidence\": 1.0, \"evidence_text\": \"want 36 hours ahead.\", \"slot_id\": \"forecast_horizon\", \"status\": \"provided\"}]}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2149,
+              "completion_tokens": 239,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": null,
+              "first_pass_json_valid": null,
+              "first_pass_schema_valid": null,
+              "constraint_backend": "none",
+              "schema_compile_ms": 0,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/inflation/04",
+            "extract",
+            1
+          ],
+          "domain": "inflation",
+          "kind": "initial",
+          "reasons": [
+            "strict_json_failure"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"correction_detected\": false, \"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"unsupported_claims\": [], \"updates\": [{\"candidate_value\": \"\\\"food-price inflation in percent\\\"\", \"confidence\": 1.0, \"evidence_text\": \"Help me predict food-price inflation in percent.\", \"slot_id\": \"target_description\", \"status\": \"provided\"}, {\"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"month\\\"}\", \"confidence\": 1.0, \"evidence_text\": \"There is one observation each month.\", \"slot_id\": \"frequency\", \"status\": \"provided\"}, {\"candidate_value\": \"{\\\"periods\\\": 11, \\\"unit\\\": \\\"month\\\"}\", \"confidence\": 1.0, \"evidence_text\": \"Look 11 months ahead.\", \"slot_id\": \"forecast_horizon\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"food_inflation\\\"\", \"confidence\": 1.0, \"evidence_text\": \"The target column is food_inflation and the date column is month_end.\", \"slot_id\": \"target_column\", \"slot_id\": \"time_column\", \"status\": \"provided\"}]}",
+              "raw_json_valid": false,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2157,
+              "completion_tokens": 253,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": null,
+              "first_pass_json_valid": null,
+              "first_pass_schema_valid": null,
+              "constraint_backend": "none",
+              "schema_compile_ms": 0,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/stocks/06",
+            "extract",
+            1
+          ],
+          "domain": "stocks",
+          "kind": "initial",
+          "reasons": [
+            "strict_json_failure"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"correction_detected\": false, \"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"unsupported_claims\": [], \"updates\": [{\"candidate_value\": \"\\\"adjusted closing share price\\\"\", \"confidence\": 1.0, \"evidence_text\": \"I need a forecast of adjusted closing share price.\", \"slot_id\": \"target_description\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"EUR per share\\\"\", \"confidence\": 1.0, \"evidence_text\": \"It is in EUR per share, sampled hourly, and I want 16 hours ahead.\", \"slot_id\": \"target_unit\", \"slot_id\": \"frequency\", \"slot_id\": \"forecast_horizon\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"parquet\\\"\", \"confidence\": 1.0, \"evidence_text\": \"The file format is parquet.\", \"slot_id\": \"file_format\", \"status\": \"provided\"}]}",
+              "raw_json_valid": false,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2154,
+              "completion_tokens": 200,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": null,
+              "first_pass_json_valid": null,
+              "first_pass_schema_valid": null,
+              "constraint_backend": "none",
+              "schema_compile_ms": 0,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        }
+      ]
+    },
+    "constrained-natural_rollout": {
+      "invalid_calls": 19,
+      "reason_counts": {
+        "candidate_value_not_valid_json_text": 19
+      },
+      "calls": [
+        {
+          "key": [
+            "natural-v6-20261005/weather/01",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Could you forecast afternoon air temperature?\"}, {\"slot_id\": \"target_description\", \"candidate_value\": \"afternoon air temperature\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"My readings are daily, in degrees Celsius, and I need the next 5 days.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"My readings are daily, in degrees Celsius, and I need the next 5 days.\"}, {\"slot_id\": \"file_format\", \"candidate_value\": \"\\\"csv\\\"\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"The file is CSV.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2149,
+              "completion_tokens": 242,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Could you forecast afternoon air temperature?\"}, {\"slot_id\": \"target_description\", \"candidate_value\": \"afternoon air temperature\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"My readings are daily, in degrees Celsius, and I need the next 5 days.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"My readings are daily, in degrees Celsius, and I need the next 5 days.\"}, {\"slot_id\": \"file_format\", \"candidate_value\": \"\\\"csv\\\"\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"The file is CSV.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Could you forecast afternoon air temperature?\"}, {\"slot_id\": \"target_description\", \"candidate_value\": \"afternoon air temperature\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"My readings are daily, in degrees Celsius, and I need the next 5 days.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"My readings are daily, in degrees Celsius, and I need the next 5 days.\"}, {\"slot_id\": \"file_format\", \"candidate_value\": \"\\\"csv\\\"\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"The file is CSV.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2149,
+                  "completion_tokens": 242,
+                  "hit_generation_limit": false,
+                  "latency_ms": 12293.886399999792,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/weather/03",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"\\\"peak wind speed in metres per second\\\"\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I need a forecast of peak wind speed in metres per second, every hour, out to 12 hours.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I need a forecast of peak wind speed in metres per second, every hour, out to 12 hours.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 12, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I need a forecast of peak wind speed in metres per second, every hour, out to 12 hours.\"}, {\"slot_id\": \"source_mode\", \"candidate_value\": \"upload\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I will upload the data as parquet.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2150,
+              "completion_tokens": 286,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"\\\"peak wind speed in metres per second\\\"\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I need a forecast of peak wind speed in metres per second, every hour, out to 12 hours.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I need a forecast of peak wind speed in metres per second, every hour, out to 12 hours.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 12, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I need a forecast of peak wind speed in metres per second, every hour, out to 12 hours.\"}, {\"slot_id\": \"source_mode\", \"candidate_value\": \"upload\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I will upload the data as parquet.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"\\\"peak wind speed in metres per second\\\"\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I need a forecast of peak wind speed in metres per second, every hour, out to 12 hours.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I need a forecast of peak wind speed in metres per second, every hour, out to 12 hours.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 12, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I need a forecast of peak wind speed in metres per second, every hour, out to 12 hours.\"}, {\"slot_id\": \"source_mode\", \"candidate_value\": \"upload\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I will upload the data as parquet.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2150,
+                  "completion_tokens": 286,
+                  "hit_generation_limit": false,
+                  "latency_ms": 13032.797699999719,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/weather/03",
+            "extract",
+            2
+          ],
+          "domain": "weather",
+          "kind": "correction",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 15, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast the next 15 hours, please.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I changed my mind about the horizon.\"}], \"correction_detected\": true, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2137,
+              "completion_tokens": 141,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 15, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast the next 15 hours, please.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I changed my mind about the horizon.\"}], \"correction_detected\": true, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 15, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast the next 15 hours, please.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I changed my mind about the horizon.\"}], \"correction_detected\": true, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2137,
+                  "completion_tokens": 141,
+                  "hit_generation_limit": false,
+                  "latency_ms": 7670.991799999683,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/weather/04",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"relative humidity\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Help me predict relative humidity.\"}, {\"slot_id\": \"target_unit\", \"candidate_value\": \"percent\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"It is in percent, observed daily; look ahead 9 days.\"}, {\"slot_id\": \"target_column\", \"candidate_value\": \"humidity_pct\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Read humidity_pct as the target and observation_date as the timestamp.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2152,
+              "completion_tokens": 179,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"relative humidity\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Help me predict relative humidity.\"}, {\"slot_id\": \"target_unit\", \"candidate_value\": \"percent\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"It is in percent, observed daily; look ahead 9 days.\"}, {\"slot_id\": \"target_column\", \"candidate_value\": \"humidity_pct\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Read humidity_pct as the target and observation_date as the timestamp.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"relative humidity\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Help me predict relative humidity.\"}, {\"slot_id\": \"target_unit\", \"candidate_value\": \"percent\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"It is in percent, observed daily; look ahead 9 days.\"}, {\"slot_id\": \"target_column\", \"candidate_value\": \"humidity_pct\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Read humidity_pct as the target and observation_date as the timestamp.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2152,
+                  "completion_tokens": 179,
+                  "hit_generation_limit": false,
+                  "latency_ms": 9675.044399999933,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/weather/06",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Can we forecast sea-level pressure?\"}, {\"slot_id\": \"target_description\", \"candidate_value\": \"sea-level pressure\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Values are in hectopascals and arrive every 6 hours.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 2, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I need a 2 day horizon.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2148,
+              "completion_tokens": 188,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Can we forecast sea-level pressure?\"}, {\"slot_id\": \"target_description\", \"candidate_value\": \"sea-level pressure\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Values are in hectopascals and arrive every 6 hours.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 2, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I need a 2 day horizon.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Can we forecast sea-level pressure?\"}, {\"slot_id\": \"target_description\", \"candidate_value\": \"sea-level pressure\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Values are in hectopascals and arrive every 6 hours.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 2, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I need a 2 day horizon.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2148,
+                  "completion_tokens": 188,
+                  "hit_generation_limit": false,
+                  "latency_ms": 9101.465900000221,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/weather/07",
+            "extract",
+            1
+          ],
+          "domain": "weather",
+          "kind": "initial",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"overnight minimum temperature in degrees Fahrenheit\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Please predict overnight minimum temperature in degrees Fahrenheit.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Observations are daily.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 8, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast 8 days ahead, and generate a fresh forecast every 2 days.\"}, {\"slot_id\": \"prediction_frequency\", \"candidate_value\": \"{\\\"periods\\\": 2, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"generate a fresh forecast every 2 days.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2149,
+              "completion_tokens": 258,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"overnight minimum temperature in degrees Fahrenheit\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Please predict overnight minimum temperature in degrees Fahrenheit.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Observations are daily.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 8, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast 8 days ahead, and generate a fresh forecast every 2 days.\"}, {\"slot_id\": \"prediction_frequency\", \"candidate_value\": \"{\\\"periods\\\": 2, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"generate a fresh forecast every 2 days.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"overnight minimum temperature in degrees Fahrenheit\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Please predict overnight minimum temperature in degrees Fahrenheit.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Observations are daily.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 8, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast 8 days ahead, and generate a fresh forecast every 2 days.\"}, {\"slot_id\": \"prediction_frequency\", \"candidate_value\": \"{\\\"periods\\\": 2, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"generate a fresh forecast every 2 days.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2149,
+                  "completion_tokens": 258,
+                  "hit_generation_limit": false,
+                  "latency_ms": 12564.633400000275,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/inflation/03",
+            "extract",
+            2
+          ],
+          "domain": "inflation",
+          "kind": "correction",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 6.0, \\\"unit\\\": \\\"month\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast the next 6 months, please.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I changed my mind about the horizon. Forecast the next 6 months, please.\"}], \"correction_detected\": true, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2284,
+              "completion_tokens": 149,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 6.0, \\\"unit\\\": \\\"month\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast the next 6 months, please.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I changed my mind about the horizon. Forecast the next 6 months, please.\"}], \"correction_detected\": true, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 6.0, \\\"unit\\\": \\\"month\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast the next 6 months, please.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I changed my mind about the horizon. Forecast the next 6 months, please.\"}], \"correction_detected\": true, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2284,
+                  "completion_tokens": 149,
+                  "hit_generation_limit": false,
+                  "latency_ms": 7028.761100000338,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/inflation/04",
+            "extract",
+            2
+          ],
+          "domain": "inflation",
+          "kind": "correction",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 14, \\\"unit\\\": \\\"month\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"That previous forecast horizon is wrong: make it 14 months.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"That previous forecast horizon is wrong: make it 14 months.\"}], \"correction_detected\": true, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2133,
+              "completion_tokens": 150,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 14, \\\"unit\\\": \\\"month\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"That previous forecast horizon is wrong: make it 14 months.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"That previous forecast horizon is wrong: make it 14 months.\"}], \"correction_detected\": true, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 14, \\\"unit\\\": \\\"month\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"That previous forecast horizon is wrong: make it 14 months.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"That previous forecast horizon is wrong: make it 14 months.\"}], \"correction_detected\": true, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2133,
+                  "completion_tokens": 150,
+                  "hit_generation_limit": false,
+                  "latency_ms": 8144.737900000109,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/inflation/06",
+            "extract",
+            1
+          ],
+          "domain": "inflation",
+          "kind": "initial",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"\\\"consumer price index level in index points\\\"\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast the consumer price index level in index points.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"month\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"The series has a monthly observation and I need a 1 year horizon.\"}, {\"slot_id\": \"source_mode\", \"candidate_value\": \"upload\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I will upload a parquet file.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2151,
+              "completion_tokens": 192,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"\\\"consumer price index level in index points\\\"\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast the consumer price index level in index points.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"month\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"The series has a monthly observation and I need a 1 year horizon.\"}, {\"slot_id\": \"source_mode\", \"candidate_value\": \"upload\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I will upload a parquet file.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"\\\"consumer price index level in index points\\\"\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast the consumer price index level in index points.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"month\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"The series has a monthly observation and I need a 1 year horizon.\"}, {\"slot_id\": \"source_mode\", \"candidate_value\": \"upload\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I will upload a parquet file.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2151,
+                  "completion_tokens": 192,
+                  "hit_generation_limit": false,
+                  "latency_ms": 10997.252399999525,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/stocks/02",
+            "extract",
+            1
+          ],
+          "domain": "stocks",
+          "kind": "initial",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"raw closing share price\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Please predict raw closing share price, without adjusting corporate actions.\"}, {\"slot_id\": \"target_unit\", \"candidate_value\": \"GBP per share\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Prices are in GBP per share, observed every day.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 6, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Look ahead 6 days.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2148,
+              "completion_tokens": 190,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"raw closing share price\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Please predict raw closing share price, without adjusting corporate actions.\"}, {\"slot_id\": \"target_unit\", \"candidate_value\": \"GBP per share\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Prices are in GBP per share, observed every day.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 6, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Look ahead 6 days.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"raw closing share price\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Please predict raw closing share price, without adjusting corporate actions.\"}, {\"slot_id\": \"target_unit\", \"candidate_value\": \"GBP per share\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Prices are in GBP per share, observed every day.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 6, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Look ahead 6 days.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2148,
+                  "completion_tokens": 190,
+                  "hit_generation_limit": false,
+                  "latency_ms": 11085.777000000235,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/stocks/03",
+            "extract",
+            1
+          ],
+          "domain": "stocks",
+          "kind": "initial",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"\\\"total share return including dividends, measured in percent\\\"\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Help me forecast total share return including dividends, measured in percent.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 7, \\\"unit\\\": \\\"week\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Observations are weekly; I need 5 weeks ahead.\"}, {\"slot_id\": \"source_mode\", \"candidate_value\": \"upload\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I will upload CSV data.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2150,
+              "completion_tokens": 193,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"\\\"total share return including dividends, measured in percent\\\"\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Help me forecast total share return including dividends, measured in percent.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 7, \\\"unit\\\": \\\"week\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Observations are weekly; I need 5 weeks ahead.\"}, {\"slot_id\": \"source_mode\", \"candidate_value\": \"upload\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I will upload CSV data.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"\\\"total share return including dividends, measured in percent\\\"\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Help me forecast total share return including dividends, measured in percent.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 7, \\\"unit\\\": \\\"week\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Observations are weekly; I need 5 weeks ahead.\"}, {\"slot_id\": \"source_mode\", \"candidate_value\": \"upload\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I will upload CSV data.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2150,
+                  "completion_tokens": 193,
+                  "hit_generation_limit": false,
+                  "latency_ms": 11122.166599999218,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/stocks/03",
+            "extract",
+            2
+          ],
+          "domain": "stocks",
+          "kind": "correction",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 8, \\\"unit\\\": \\\"week\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast the next 8 weeks, please.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I changed my mind about the horizon.\"}], \"correction_detected\": true, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2136,
+              "completion_tokens": 139,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 8, \\\"unit\\\": \\\"week\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast the next 8 weeks, please.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I changed my mind about the horizon.\"}], \"correction_detected\": true, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 8, \\\"unit\\\": \\\"week\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast the next 8 weeks, please.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I changed my mind about the horizon.\"}], \"correction_detected\": true, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2136,
+                  "completion_tokens": 139,
+                  "hit_generation_limit": false,
+                  "latency_ms": 8107.074499999726,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/stocks/04",
+            "extract",
+            1
+          ],
+          "domain": "stocks",
+          "kind": "initial",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"trading volume, measured in shares\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast trading volume, measured in shares, from daily observations for the next 9 days.\"}, {\"slot_id\": \"target_column\", \"candidate_value\": \"volume_shares\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Read the target from volume_shares and the timestamp from trade_date.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 9, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast trading volume, measured in shares, from daily observations for the next 9 days.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2151,
+              "completion_tokens": 214,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"trading volume, measured in shares\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast trading volume, measured in shares, from daily observations for the next 9 days.\"}, {\"slot_id\": \"target_column\", \"candidate_value\": \"volume_shares\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Read the target from volume_shares and the timestamp from trade_date.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 9, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast trading volume, measured in shares, from daily observations for the next 9 days.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"trading volume, measured in shares\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast trading volume, measured in shares, from daily observations for the next 9 days.\"}, {\"slot_id\": \"target_column\", \"candidate_value\": \"volume_shares\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Read the target from volume_shares and the timestamp from trade_date.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 9, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Forecast trading volume, measured in shares, from daily observations for the next 9 days.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2151,
+                  "completion_tokens": 214,
+                  "hit_generation_limit": false,
+                  "latency_ms": 12532.866899999135,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/stocks/07",
+            "extract",
+            1
+          ],
+          "domain": "stocks",
+          "kind": "initial",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"\\\"daily log share return in percent\\\"\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Could you forecast daily log share return in percent?\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"There is one observation per day.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 12, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Predict 12 days ahead but refresh the forecast every 3 days.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Could you forecast daily log share return in percent? There is one observation per day. Predict 12 days ahead but refresh the forecast every 3 days.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2151,
+              "completion_tokens": 273,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"\\\"daily log share return in percent\\\"\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Could you forecast daily log share return in percent?\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"There is one observation per day.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 12, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Predict 12 days ahead but refresh the forecast every 3 days.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Could you forecast daily log share return in percent? There is one observation per day. Predict 12 days ahead but refresh the forecast every 3 days.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"\\\"daily log share return in percent\\\"\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Could you forecast daily log share return in percent?\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"There is one observation per day.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 12, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Predict 12 days ahead but refresh the forecast every 3 days.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Could you forecast daily log share return in percent? There is one observation per day. Predict 12 days ahead but refresh the forecast every 3 days.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2151,
+                  "completion_tokens": 273,
+                  "hit_generation_limit": false,
+                  "latency_ms": 14400.824400000602,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/stocks/08",
+            "extract",
+            1
+          ],
+          "domain": "stocks",
+          "kind": "initial",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"ETF trading volume in shares\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I want to forecast ETF trading volume in shares.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"week\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I have weekly data and need the next 6 weeks.\"}, {\"slot_id\": \"source_mode\", \"candidate_value\": \"upload\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I will upload the spreadsheet in xlsx format.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2151,
+              "completion_tokens": 190,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"ETF trading volume in shares\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I want to forecast ETF trading volume in shares.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"week\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I have weekly data and need the next 6 weeks.\"}, {\"slot_id\": \"source_mode\", \"candidate_value\": \"upload\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I will upload the spreadsheet in xlsx format.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"ETF trading volume in shares\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I want to forecast ETF trading volume in shares.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"week\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I have weekly data and need the next 6 weeks.\"}, {\"slot_id\": \"source_mode\", \"candidate_value\": \"upload\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I will upload the spreadsheet in xlsx format.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2151,
+                  "completion_tokens": 190,
+                  "hit_generation_limit": false,
+                  "latency_ms": 9245.488700000351,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/stocks/08",
+            "extract",
+            2
+          ],
+          "domain": "stocks",
+          "kind": "correction",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 9, \\\"unit\\\": \\\"week\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Replace the horizon I gave you with 9 weeks.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"The user's current message indicates a forecasting task.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2130,
+              "completion_tokens": 142,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 9, \\\"unit\\\": \\\"week\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Replace the horizon I gave you with 9 weeks.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"The user's current message indicates a forecasting task.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 9, \\\"unit\\\": \\\"week\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Replace the horizon I gave you with 9 weeks.\"}, {\"slot_id\": \"intent\", \"candidate_value\": \"create_forecast\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"The user's current message indicates a forecasting task.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2130,
+                  "completion_tokens": 142,
+                  "hit_generation_limit": false,
+                  "latency_ms": 7064.49689999954,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/crypto/03",
+            "extract",
+            1
+          ],
+          "domain": "crypto",
+          "kind": "initial",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"perpetual-swap funding rate\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Help me forecast perpetual-swap funding rate.\"}, {\"slot_id\": \"target_unit\", \"candidate_value\": \"percent per 8 hours\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Units are percent per 8 hours and observations come every 8 hours.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 48, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Look ahead 48 hours.\"}, {\"slot_id\": \"source_mode\", \"candidate_value\": \"upload\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I will upload CSV data.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2156,
+              "completion_tokens": 240,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"perpetual-swap funding rate\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Help me forecast perpetual-swap funding rate.\"}, {\"slot_id\": \"target_unit\", \"candidate_value\": \"percent per 8 hours\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Units are percent per 8 hours and observations come every 8 hours.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 48, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Look ahead 48 hours.\"}, {\"slot_id\": \"source_mode\", \"candidate_value\": \"upload\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I will upload CSV data.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"perpetual-swap funding rate\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Help me forecast perpetual-swap funding rate.\"}, {\"slot_id\": \"target_unit\", \"candidate_value\": \"percent per 8 hours\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Units are percent per 8 hours and observations come every 8 hours.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 48, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Look ahead 48 hours.\"}, {\"slot_id\": \"source_mode\", \"candidate_value\": \"upload\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I will upload CSV data.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2156,
+                  "completion_tokens": 240,
+                  "hit_generation_limit": false,
+                  "latency_ms": 14116.690200000448,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/crypto/04",
+            "extract",
+            1
+          ],
+          "domain": "crypto",
+          "kind": "initial",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"futures open interest in contracts\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I need a forecast of futures open interest in contracts.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"This is hourly data and the horizon is 30 hours.\"}, {\"slot_id\": \"target_column\", \"candidate_value\": \"open_contracts\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Read open_contracts as the target and event_time as the timestamp.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2157,
+              "completion_tokens": 199,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"futures open interest in contracts\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I need a forecast of futures open interest in contracts.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"This is hourly data and the horizon is 30 hours.\"}, {\"slot_id\": \"target_column\", \"candidate_value\": \"open_contracts\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Read open_contracts as the target and event_time as the timestamp.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"futures open interest in contracts\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"I need a forecast of futures open interest in contracts.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"hour\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"This is hourly data and the horizon is 30 hours.\"}, {\"slot_id\": \"target_column\", \"candidate_value\": \"open_contracts\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Read open_contracts as the target and event_time as the timestamp.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2157,
+                  "completion_tokens": 199,
+                  "hit_generation_limit": false,
+                  "latency_ms": 9620.982999999796,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        },
+        {
+          "key": [
+            "natural-v6-20261005/crypto/05",
+            "extract",
+            1
+          ],
+          "domain": "crypto",
+          "kind": "initial",
+          "reasons": [
+            "candidate_value_not_valid_json_text"
+          ],
+          "traces": [
+            {
+              "operation": "extract",
+              "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"realized volatility, in percent per year\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Please forecast realized volatility, in percent per year, from daily observations for the next 7 days.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Please forecast realized volatility, in percent per year, from daily observations for the next 7 days.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 7, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Please forecast realized volatility, in percent per year, from daily observations for the next 7 days.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "raw_json_valid": true,
+              "raw_schema_valid": false,
+              "prompt_tokens": 2139,
+              "completion_tokens": 233,
+              "parsed": false,
+              "model_calls": 1,
+              "retry_count": 0,
+              "retry_success": false,
+              "first_pass_raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"realized volatility, in percent per year\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Please forecast realized volatility, in percent per year, from daily observations for the next 7 days.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Please forecast realized volatility, in percent per year, from daily observations for the next 7 days.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 7, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Please forecast realized volatility, in percent per year, from daily observations for the next 7 days.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+              "first_pass_json_valid": true,
+              "first_pass_schema_valid": false,
+              "constraint_backend": "xgrammar==0.2.7/torch_native",
+              "schema_compile_ms": 634.5094999996945,
+              "strategy": null,
+              "rule_covered_slots": null,
+              "attempts": [
+                {
+                  "raw_output": "{\"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"updates\": [{\"slot_id\": \"target_description\", \"candidate_value\": \"realized volatility, in percent per year\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Please forecast realized volatility, in percent per year, from daily observations for the next 7 days.\"}, {\"slot_id\": \"frequency\", \"candidate_value\": \"{\\\"periods\\\": 1, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Please forecast realized volatility, in percent per year, from daily observations for the next 7 days.\"}, {\"slot_id\": \"forecast_horizon\", \"candidate_value\": \"{\\\"periods\\\": 7, \\\"unit\\\": \\\"day\\\"}\", \"status\": \"provided\", \"confidence\": 1.0, \"evidence_text\": \"Please forecast realized volatility, in percent per year, from daily observations for the next 7 days.\"}], \"correction_detected\": false, \"unsupported_claims\": []}",
+                  "raw_json_valid": true,
+                  "raw_schema_valid": false,
+                  "parsed": false,
+                  "prompt_tokens": 2139,
+                  "completion_tokens": 233,
+                  "hit_generation_limit": false,
+                  "latency_ms": 10909.599500000695,
+                  "slot_id": null,
+                  "error": "provider_trace_error"
+                }
+              ],
+              "error": "provider_trace_error"
+            }
+          ],
+          "hit_generation_limit": false
+        }
+      ]
+    }
+  }
+}

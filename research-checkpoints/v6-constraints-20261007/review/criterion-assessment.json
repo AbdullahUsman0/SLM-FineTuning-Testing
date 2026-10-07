@@ -1,0 +1,24 @@
+{
+  "frozen_criteria": {
+    "component": {
+      "target_96_of_96_application_schema_valid": false,
+      "strict_f1_not_lower": false,
+      "normalized_f1_not_lower": false,
+      "full_state_correction_accuracy_not_lower": false,
+      "valid_unknown_abstention_not_lower": true,
+      "unmentioned_slot_count_not_higher": false
+    },
+    "rollout": {
+      "target_96_of_96_application_schema_valid": false,
+      "strict_f1_not_lower": false,
+      "normalized_f1_not_lower": false,
+      "full_state_correction_accuracy_not_lower": false,
+      "valid_unknown_abstention_not_lower": true,
+      "unmentioned_slot_count_not_higher": false
+    }
+  },
+  "all_passed": false,
+  "deployment_adopted": false,
+  "training_started": false,
+  "case_human_review": "pending"
+}
