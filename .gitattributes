@@ -23,3 +23,8 @@
 /local_slm_lab/v6_schema_fix.py text eol=lf
 /evaluation/v6-schema-fix-20261006/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
 /research-checkpoints/v6-schema-fix-20261006/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+/research-checkpoints/v6-constraints-20261007/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+/evaluation/v6-constraints-20261007/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+/local_slm_lab/v6_constrained_provider.py text eol=lf
+/tests/test_v6_constrained_provider.py text eol=lf
+/training/requirements-v6-constraints.txt text eol=lf

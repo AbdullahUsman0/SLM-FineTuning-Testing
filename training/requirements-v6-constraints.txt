@@ -1,0 +1,4 @@
+# Add these research-only packages to the existing pinned GPU inference environment.
+# Core model-library versions must remain identical between comparison arms.
+xgrammar==0.2.7
+apache-tvm-ffi==0.1.14.post1

@@ -1,0 +1,33 @@
+{
+  "added_packages": [
+    {
+      "name": "xgrammar",
+      "version": "0.2.7",
+      "wheel_url": "https://files.pythonhosted.org/packages/c3/c7/3f856551d2ec293cbb26e866b0da7862934c1f6ef0e7608f009484f9f8c0/xgrammar-0.2.7-cp312-cp312-win_amd64.whl",
+      "archive_info": {
+        "hash": "sha256=397edf3dc6d9634eba1127f83f5f16aff4f06a17dff55cd4d441f35fb680ed5b",
+        "hashes": {
+          "sha256": "397edf3dc6d9634eba1127f83f5f16aff4f06a17dff55cd4d441f35fb680ed5b"
+        }
+      }
+    },
+    {
+      "name": "apache-tvm-ffi",
+      "version": "0.1.14.post1",
+      "wheel_url": "https://files.pythonhosted.org/packages/fd/3d/6f9f21541d2431c500ebe559d5215c8c2651b61613011b75d1515dd7b7ba/apache_tvm_ffi-0.1.14.post1-cp312-cp312-win_amd64.whl",
+      "archive_info": {
+        "hash": "sha256=fd3edd7ccb4fb90092845f4db10ddec92696a5119842062222a9abd3e719565e",
+        "hashes": {
+          "sha256": "fd3edd7ccb4fb90092845f4db10ddec92696a5119842062222a9abd3e719565e"
+        }
+      }
+    }
+  ],
+  "core_packages_changed": false,
+  "tests_passed": 23,
+  "documentation": [
+    "https://xgrammar.mlc.ai/docs/latest/start/installation.html",
+    "https://xgrammar.mlc.ai/docs/latest/using_xgrammar/engine_integration.html"
+  ],
+  "arbitrary_order_preflight": "Rejected before protocol freeze: permitted duplicate object keys. Fixed schema field order passes duplicate-key contract test."
+}

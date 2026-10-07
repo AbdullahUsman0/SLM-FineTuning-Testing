@@ -1,0 +1,9 @@
+{
+  "backend-install-evidence.json": "bb3685d2b390d1030a759d094cce95e8f691caa0c584e40dc72f69b465ac74fa",
+  "extractor-result.schema.json": "93bfe76e70e824f6ca24101c92bdb5c6ff57eae2d89b9e31f658ed207cb5f9ef",
+  "natural.jsonl": "88824a03b4f29196e6ed827e73b9edda6a1caf4c2b13ec7eea3d5b367bcbfb19",
+  "original-instructions.txt": "634a9d608860765a5b343a52d7c89741b96805bbc3e630d7b29a54ce16dd0f3b",
+  "preflight-evidence.json": "70d629feb91e779acec2606aa311d365c7777251f397b2162f7d72ca71ff82d2",
+  "protocol.json": "562c6dfc38356bbaea2f2a6ac1c675f42b9eee484824e52d21488cd792b883cd",
+  "README.md": "20628a313bbf04d2ec45192216e85890b6aec91ece7d0925e234bd6fb40cdf5c"
+}
