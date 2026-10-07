@@ -18,6 +18,8 @@ def analyze(run,output):
     arms=tuple(completion.get('arms',('original','revised')));assert len(arms)==2
     result={'status':'complete','completion':completion,'tracks':{},'paired_differences':{},
             'analysis_sha256':audit.sha256(Path(__file__)),
+            'used_audit_sha256':audit.sha256(ROOT/'scripts/audit-v6-natural-failures.py'),
+            'post_inference_analysis_note':'Supplementary date serialization uses the existing state-snapshot ISO policy. Inference inputs, raw outputs, gold labels and strict scoring unchanged; original failed analysis retained separately.',
             'interpretation':'Exploratory decoding comparison on the same 32 development conversations previously used in prompt studies. No independent held-out improvement claim. Original prompt, labels and primary scoring unchanged.'}
     for track in ('natural_component','natural_rollout'):
         result['tracks'][track]={}

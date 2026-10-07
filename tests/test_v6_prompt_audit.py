@@ -28,6 +28,17 @@ class AuditTests(unittest.TestCase):
         row=self.row(self.calls[0]);row['prediction_valid']=False
         self.assertEqual(audit.normalized_counts([row],self.schema)['tp'],0)
 
+    def test_normalized_datetime_is_serializable_and_unmentioned_date_stays_false_positive(self):
+        value=('forecast_start','"2024-01-01T00:00:00Z"','provided')
+        normalized=audit.normalized_tuple(value,self.schema)
+        self.assertEqual(normalized,('forecast_start','"2024-01-01T00:00:00+00:00"','provided'))
+        row=self.row(self.calls[0]);base=audit.normalized_counts([row],self.schema)
+        row['emitted']['updates'].append({'slot_id':'forecast_start','candidate_value':'2024-01-01T00:00:00Z','status':'provided'})
+        result=audit.normalized_counts([row],self.schema)
+        self.assertEqual(result['tp'],base['tp'])
+        self.assertEqual(result['fp'],base['fp']+1)
+        self.assertEqual(result['fn'],base['fn'])
+
     def test_corrected_horizon_can_succeed_without_full_gold_state(self):
         call=self.calls[1];row=self.row(call)
         row.update(test_kind='correction',gold_after=call['gold_after'],predicted=call['expected'])

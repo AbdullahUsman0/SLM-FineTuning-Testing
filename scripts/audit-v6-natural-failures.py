@@ -10,7 +10,7 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
-from local_slm_lab.v5_eval import digest, dumps, load_cases, load_schema, now, prf, sha256, tuples, build_call_plan
+from local_slm_lab.v5_eval import digest, dumps, load_cases, load_schema, now, prf, sha256, tuples, build_call_plan, _snapshot_value
 from forecasting_assistant.application.normalization import normalize_value
 from local_slm_lab.v5_provider import strict_json_object, validate_raw_output
 from forecasting_assistant.domain.models import ExtractorResult
@@ -64,7 +64,9 @@ def normalized_tuple(update,schema):
         normalized=normalize_value(schema.get(slot),decoded)
     except (KeyError,TypeError,ValueError):
         normalized=decoded
-    return slot,dumps(normalized),status
+    # Keep normalized dates serializable using the existing state-snapshot policy.
+    # This changes representation only; schema/status gates and FP counts remain.
+    return slot,dumps(_snapshot_value(normalized)),status
 
 def normalized_counts(records,schema):
     total=[0,0,0]
