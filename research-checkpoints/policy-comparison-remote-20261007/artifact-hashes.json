@@ -1,0 +1,42 @@
+{
+  "base-vs-v5.json": {
+    "sha256": "4692689ae7f3ecda911dcc2c1d0bd04a3a923d890aadf630bdadca62536ac3ce",
+    "bytes": 91141
+  },
+  "base-vs-v6.json": {
+    "sha256": "ab0d6d244e6f982003984c56af6476dc97e9af595ba7f2c73c24bc0cf7f78e19",
+    "bytes": 91284
+  },
+  "domain-summary.csv": {
+    "sha256": "abe409ff29f5d1532d2d1bdb6b0deff0e1cadc100bcd67898bf324116f9fde35",
+    "bytes": 3002
+  },
+  "independent-verification.json": {
+    "sha256": "6082742fff10af009f37e3fbb88c2e6737e30da4c7b7cbd051f144bc779b2dbe",
+    "bytes": 31011
+  },
+  "README.md": {
+    "sha256": "49f4b319ce0f2b3eee2b6a0297703b13fc2d5b15bf0988279d2cc09991827aa0",
+    "bytes": 4758
+  },
+  "reviewed-policy-gpu-results-20261007.zip": {
+    "sha256": "0e80568800eb1a46998214a1b59bd8cc69d80174d2851a6b59e44635ec045391",
+    "bytes": 2845522
+  },
+  "reviewed-policy-gpu-results-20261007.zip.sha256": {
+    "sha256": "aa292c02ec71cf895e7ce56321231c71b49beae6f02d1e2ad9f0b87173c35a65",
+    "bytes": 107
+  },
+  "summary.csv": {
+    "sha256": "d59547ed81f47db45243b9108feab6f91a1fd296ccad8a672a3f23d01eae6ced",
+    "bytes": 1289
+  },
+  "v5-vs-v6.json": {
+    "sha256": "c7aa4c379e7329a8f882b19860710ddb370222992a55d0316bf1ebb4cc1a28e2",
+    "bytes": 91928
+  },
+  "verification-and-publication.py": {
+    "sha256": "a9741d445230dff6e89fc892f1e9e8792b77bf17bf81dc3f954c6f159ad4baf5",
+    "bytes": 21855
+  }
+}

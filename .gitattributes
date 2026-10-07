@@ -28,3 +28,4 @@
 /local_slm_lab/v6_constrained_provider.py text eol=lf
 /tests/test_v6_constrained_provider.py text eol=lf
 /training/requirements-v6-constraints.txt text eol=lf
+/research-checkpoints/policy-comparison-remote-20261007/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
