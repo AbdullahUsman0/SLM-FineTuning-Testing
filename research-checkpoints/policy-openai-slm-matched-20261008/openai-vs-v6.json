@@ -1,0 +1,3656 @@
+{
+  "policy_sha256": "558581a35a0abc592c59d6f30bc7a2a3c0542368bfee668ac3018800b702189e",
+  "comparisons": {
+    "component": {
+      "left_f1": 0.48440366972477067,
+      "right_f1": 0.48179271708683474,
+      "delta_right_minus_left": -0.002610952637935926,
+      "ci95": [
+        -0.09120531175218237,
+        0.08954641226833376
+      ],
+      "samples": 10000,
+      "seed": 42,
+      "cluster_count": 31,
+      "interval": "paired source-scenario percentile 95%; recomputed exact micro F1",
+      "inferential_warning": "Tiny convenience cohorts, particularly the one-scenario D pilot, do not support general superiority claims",
+      "left_arm": "F",
+      "right_arm": "v6",
+      "left_representation": "OpenAI hosted",
+      "right_representation": "CUDA BF16 PEFT",
+      "matched_calls": 93,
+      "left_metrics": {
+        "inclusive": {
+          "tp": 132,
+          "fp": 204,
+          "fn": 84,
+          "support": 216,
+          "precision": 0.39285714285714285,
+          "recall": 0.6111111111111112,
+          "f1": 0.4782608695652174
+        },
+        "nonintent": {
+          "tp": 132,
+          "fp": 197,
+          "fn": 84,
+          "support": 216,
+          "precision": 0.4012158054711246,
+          "recall": 0.6111111111111112,
+          "f1": 0.48440366972477067
+        },
+        "per_slot": {
+          "acceptable_error": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "aggregation_level": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "aggregation_method": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "allow_negative_values": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "authentication_reference": {
+            "tp": 0,
+            "fp": 8,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "backtest_folds": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "baseline_model": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "business_days_only": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "business_goal": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "calendar_type": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "contains_sensitive_data": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "covariate_availability": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "data_cutoff": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "dataset_type": {
+            "tp": 0,
+            "fp": 2,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "decision_supported": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "destination": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "duplicate_policy": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "expected_history_length": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "explainability_level": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "external_covariate_sources": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "file_format": {
+            "tp": 10,
+            "fp": 2,
+            "fn": 1,
+            "support": 11,
+            "precision": 0.8333333333333334,
+            "recall": 0.9090909090909091,
+            "f1": 0.8695652173913043
+          },
+          "forecast_horizon": {
+            "tp": 34,
+            "fp": 31,
+            "fn": 28,
+            "support": 62,
+            "precision": 0.5230769230769231,
+            "recall": 0.5483870967741935,
+            "f1": 0.5354330708661418
+          },
+          "forecast_start": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "forecast_type": {
+            "tp": 0,
+            "fp": 2,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "frequency": {
+            "tp": 29,
+            "fp": 7,
+            "fn": 2,
+            "support": 31,
+            "precision": 0.8055555555555556,
+            "recall": 0.9354838709677419,
+            "f1": 0.8656716417910447
+          },
+          "geography": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "hierarchy_columns": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "history_end": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "history_start": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "holidays": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "human_approval_required": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "inference_mode": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "intent": {
+            "tp": 0,
+            "fp": 7,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "invalid_value_policy": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "known_future_covariates": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "known_regime_changes": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "known_seasonality": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "latency_requirement": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "lead_time": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "license": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "minimum_coverage": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "minimum_training_points": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "missing_target_policy": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "missing_timestamp_policy": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "outlier_policy": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "output_format": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "output_granularity": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "past_covariates": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "prediction_frequency": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 1,
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571
+          },
+          "prediction_interval_levels": {
+            "tp": 0,
+            "fp": 31,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "primary_metric": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "privacy_constraints": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "problem_statement": {
+            "tp": 6,
+            "fp": 28,
+            "fn": 25,
+            "support": 31,
+            "precision": 0.17647058823529413,
+            "recall": 0.1935483870967742,
+            "f1": 0.18461538461538463
+          },
+          "provenance_required": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "quantiles": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "refresh_frequency": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "retraining_frequency": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "rounding_rule": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "scenario_forecasts": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "scope_filters": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "seasonal_periods": {
+            "tp": 0,
+            "fp": 31,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "secondary_metrics": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "series_id_columns": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "sheet_or_table": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "source_mode": {
+            "tp": 3,
+            "fp": 3,
+            "fn": 4,
+            "support": 7,
+            "precision": 0.5,
+            "recall": 0.42857142857142855,
+            "f1": 0.46153846153846156
+          },
+          "source_provider": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "source_reference": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "special_events": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "stakeholder_role": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "static_features": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "success_criteria": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "target_bounds": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "target_column": {
+            "tp": 4,
+            "fp": 4,
+            "fn": 0,
+            "support": 4,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          "target_description": {
+            "tp": 12,
+            "fp": 8,
+            "fn": 19,
+            "support": 31,
+            "precision": 0.6,
+            "recall": 0.3870967741935484,
+            "f1": 0.47058823529411764
+          },
+          "target_unit": {
+            "tp": 27,
+            "fp": 6,
+            "fn": 4,
+            "support": 31,
+            "precision": 0.8181818181818182,
+            "recall": 0.8709677419354839,
+            "f1": 0.84375
+          },
+          "test_window": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "time_column": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "support": 4,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "timezone": {
+            "tp": 0,
+            "fp": 32,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "validation_strategy": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        },
+        "scenario_all_gold_nonintent": {
+          "numerator": 0,
+          "denominator": 31,
+          "rate": 0.0
+        },
+        "scenario_all_gold_nonintent_nonempty": {
+          "numerator": 0,
+          "denominator": 31,
+          "rate": 0.0
+        },
+        "scenario_exact_nonintent": {
+          "numerator": 0,
+          "denominator": 31,
+          "rate": 0.0
+        },
+        "empty_gold_nonintent_scenarios": 0,
+        "intent_accuracy": {
+          "numerator": 91,
+          "denominator": 93,
+          "rate": 0.978494623655914
+        },
+        "correction_flag_accuracy": {
+          "numerator": 91,
+          "denominator": 93,
+          "rate": 0.978494623655914
+        },
+        "correction_tuple_accuracy": {
+          "numerator": 4,
+          "denominator": 31,
+          "rate": 0.12903225806451613
+        },
+        "reducer_transition_accuracy": {
+          "numerator": 32,
+          "denominator": 93,
+          "rate": 0.34408602150537637
+        },
+        "forbidden_call_rate": {
+          "numerator": 31,
+          "denominator": 31,
+          "rate": 1.0
+        },
+        "forbidden_slot_rate": {
+          "numerator": 101,
+          "denominator": 124,
+          "rate": 0.8145161290322581
+        },
+        "forbidden_call_rate_conditional_success": {
+          "numerator": 30,
+          "denominator": 30,
+          "rate": 1.0
+        },
+        "forbidden_failed_calls": 1,
+        "hallucinated_slot_call_rate": {
+          "numerator": 40,
+          "denominator": 93,
+          "rate": 0.43010752688172044
+        },
+        "hallucinated_slot_call_rate_conditional_success": {
+          "numerator": 39,
+          "denominator": 91,
+          "rate": 0.42857142857142855
+        },
+        "hallucinated_slot_count": 139,
+        "unknown_slot_call_rate": {
+          "numerator": 0,
+          "denominator": 93,
+          "rate": 0.0
+        },
+        "unknown_slot_count": 0,
+        "empty_update_collapse": {
+          "numerator": 1,
+          "denominator": 62,
+          "rate": 0.016129032258064516
+        },
+        "successful_empty_update_collapse": {
+          "numerator": 0,
+          "denominator": 62,
+          "rate": 0.0
+        },
+        "duplicate_prediction_calls": 2,
+        "provider_success": {
+          "numerator": 91,
+          "denominator": 93,
+          "rate": 0.978494623655914
+        },
+        "question_contract": {
+          "numerator": 0,
+          "denominator": 0,
+          "rate": null
+        },
+        "question_exact_match": {
+          "numerator": 0,
+          "denominator": 0,
+          "rate": null
+        },
+        "calls": {
+          "total": 93,
+          "extract": 93,
+          "ask": 0
+        },
+        "model_calls": {
+          "total": 93,
+          "zero_call_records": 0
+        },
+        "retry_rate": {
+          "numerator": 0,
+          "denominator": 93,
+          "rate": 0.0
+        },
+        "retry_success_rate": {
+          "numerator": 0,
+          "denominator": 0,
+          "rate": null
+        },
+        "latency_ms": {
+          "mean": 2776.1548548374794,
+          "p50": 2813.3806999830995,
+          "p95": 4535.656299995026
+        },
+        "observed_completion_tokens_per_second": 80.46249426496719,
+        "raw_json_valid": {
+          "numerator": 93,
+          "denominator": 93,
+          "rate": 1.0,
+          "measured_calls": 93,
+          "unavailable_calls": 0,
+          "measured_rate": 1.0
+        },
+        "raw_schema_valid": {
+          "numerator": 93,
+          "denominator": 93,
+          "rate": 1.0,
+          "measured_calls": 93,
+          "unavailable_calls": 0,
+          "measured_rate": 1.0
+        },
+        "first_pass_json_valid": {
+          "numerator": 93,
+          "denominator": 93,
+          "rate": 1.0,
+          "measured_calls": 93,
+          "unavailable_calls": 0
+        },
+        "first_pass_schema_valid": {
+          "numerator": 93,
+          "denominator": 93,
+          "rate": 1.0,
+          "measured_calls": 93,
+          "unavailable_calls": 0
+        },
+        "wrong_valid_schema_rate": {
+          "numerator": 89,
+          "denominator": 93,
+          "rate": 0.956989247311828
+        },
+        "tokens": {
+          "prompt_tokens": {
+            "total_observed": 261043,
+            "measured_calls": 93,
+            "unavailable_calls": 0
+          },
+          "completion_tokens": {
+            "total_observed": 20774,
+            "measured_calls": 93,
+            "unavailable_calls": 0
+          }
+        },
+        "forbidden_interpretation": "observed forbidden emissions only; failed/unparseable calls are NOT certified safe"
+      },
+      "right_metrics": {
+        "inclusive": {
+          "tp": 86,
+          "fp": 57,
+          "fn": 130,
+          "support": 216,
+          "precision": 0.6013986013986014,
+          "recall": 0.39814814814814814,
+          "f1": 0.479108635097493
+        },
+        "nonintent": {
+          "tp": 86,
+          "fp": 55,
+          "fn": 130,
+          "support": 216,
+          "precision": 0.6099290780141844,
+          "recall": 0.39814814814814814,
+          "f1": 0.48179271708683474
+        },
+        "per_slot": {
+          "acceptable_error": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "aggregation_level": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "aggregation_method": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "allow_negative_values": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "authentication_reference": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "backtest_folds": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "baseline_model": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "business_days_only": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "business_goal": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "calendar_type": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "contains_sensitive_data": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "covariate_availability": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "data_cutoff": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "dataset_type": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "decision_supported": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "destination": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "duplicate_policy": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "expected_history_length": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "explainability_level": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "external_covariate_sources": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "file_format": {
+            "tp": 7,
+            "fp": 1,
+            "fn": 4,
+            "support": 11,
+            "precision": 0.875,
+            "recall": 0.6363636363636364,
+            "f1": 0.7368421052631579
+          },
+          "forecast_horizon": {
+            "tp": 41,
+            "fp": 13,
+            "fn": 21,
+            "support": 62,
+            "precision": 0.7592592592592593,
+            "recall": 0.6612903225806451,
+            "f1": 0.7068965517241379
+          },
+          "forecast_start": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "forecast_type": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "frequency": {
+            "tp": 17,
+            "fp": 1,
+            "fn": 14,
+            "support": 31,
+            "precision": 0.9444444444444444,
+            "recall": 0.5483870967741935,
+            "f1": 0.6938775510204082
+          },
+          "geography": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "hierarchy_columns": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "history_end": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "history_start": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "holidays": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "human_approval_required": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "inference_mode": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "intent": {
+            "tp": 0,
+            "fp": 2,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "invalid_value_policy": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "known_future_covariates": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "known_regime_changes": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "known_seasonality": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "latency_requirement": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "lead_time": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "license": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "minimum_coverage": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "minimum_training_points": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "missing_target_policy": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "missing_timestamp_policy": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "outlier_policy": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "output_format": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "output_granularity": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "past_covariates": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "prediction_frequency": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 2,
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          },
+          "prediction_interval_levels": {
+            "tp": 0,
+            "fp": 4,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "primary_metric": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "privacy_constraints": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "problem_statement": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 31,
+            "support": 31,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "provenance_required": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "quantiles": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "refresh_frequency": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "retraining_frequency": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "rounding_rule": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "scenario_forecasts": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "scope_filters": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "seasonal_periods": {
+            "tp": 0,
+            "fp": 4,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "secondary_metrics": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "series_id_columns": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "sheet_or_table": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "source_mode": {
+            "tp": 0,
+            "fp": 2,
+            "fn": 7,
+            "support": 7,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "source_provider": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "source_reference": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "special_events": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "stakeholder_role": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "static_features": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "success_criteria": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "target_bounds": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "target_column": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 1,
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571
+          },
+          "target_description": {
+            "tp": 8,
+            "fp": 22,
+            "fn": 23,
+            "support": 31,
+            "precision": 0.26666666666666666,
+            "recall": 0.25806451612903225,
+            "f1": 0.26229508196721313
+          },
+          "target_unit": {
+            "tp": 5,
+            "fp": 3,
+            "fn": 26,
+            "support": 31,
+            "precision": 0.625,
+            "recall": 0.16129032258064516,
+            "f1": 0.2564102564102564
+          },
+          "test_window": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "time_column": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 1,
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571
+          },
+          "timezone": {
+            "tp": 0,
+            "fp": 4,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "validation_strategy": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        },
+        "scenario_all_gold_nonintent": {
+          "numerator": 0,
+          "denominator": 31,
+          "rate": 0.0
+        },
+        "scenario_all_gold_nonintent_nonempty": {
+          "numerator": 0,
+          "denominator": 31,
+          "rate": 0.0
+        },
+        "scenario_exact_nonintent": {
+          "numerator": 0,
+          "denominator": 31,
+          "rate": 0.0
+        },
+        "empty_gold_nonintent_scenarios": 0,
+        "intent_accuracy": {
+          "numerator": 90,
+          "denominator": 93,
+          "rate": 0.967741935483871
+        },
+        "correction_flag_accuracy": {
+          "numerator": 90,
+          "denominator": 93,
+          "rate": 0.967741935483871
+        },
+        "correction_tuple_accuracy": {
+          "numerator": 22,
+          "denominator": 31,
+          "rate": 0.7096774193548387
+        },
+        "reducer_transition_accuracy": {
+          "numerator": 58,
+          "denominator": 93,
+          "rate": 0.6236559139784946
+        },
+        "forbidden_call_rate": {
+          "numerator": 4,
+          "denominator": 31,
+          "rate": 0.12903225806451613
+        },
+        "forbidden_slot_rate": {
+          "numerator": 12,
+          "denominator": 124,
+          "rate": 0.0967741935483871
+        },
+        "forbidden_call_rate_conditional_success": {
+          "numerator": 4,
+          "denominator": 31,
+          "rate": 0.12903225806451613
+        },
+        "forbidden_failed_calls": 0,
+        "hallucinated_slot_call_rate": {
+          "numerator": 7,
+          "denominator": 93,
+          "rate": 0.07526881720430108
+        },
+        "hallucinated_slot_call_rate_conditional_success": {
+          "numerator": 7,
+          "denominator": 90,
+          "rate": 0.07777777777777778
+        },
+        "hallucinated_slot_count": 15,
+        "unknown_slot_call_rate": {
+          "numerator": 0,
+          "denominator": 93,
+          "rate": 0.0
+        },
+        "unknown_slot_count": 0,
+        "empty_update_collapse": {
+          "numerator": 3,
+          "denominator": 62,
+          "rate": 0.04838709677419355
+        },
+        "successful_empty_update_collapse": {
+          "numerator": 0,
+          "denominator": 62,
+          "rate": 0.0
+        },
+        "duplicate_prediction_calls": 1,
+        "provider_success": {
+          "numerator": 90,
+          "denominator": 93,
+          "rate": 0.967741935483871
+        },
+        "question_contract": {
+          "numerator": 0,
+          "denominator": 0,
+          "rate": null
+        },
+        "question_exact_match": {
+          "numerator": 0,
+          "denominator": 0,
+          "rate": null
+        },
+        "calls": {
+          "total": 93,
+          "extract": 93,
+          "ask": 0
+        },
+        "model_calls": {
+          "total": 93,
+          "zero_call_records": 0
+        },
+        "retry_rate": {
+          "numerator": 0,
+          "denominator": 93,
+          "rate": 0.0
+        },
+        "retry_success_rate": {
+          "numerator": 0,
+          "denominator": 0,
+          "rate": null
+        },
+        "latency_ms": {
+          "mean": 6834.099775268745,
+          "p50": 5502.119500000845,
+          "p95": 13405.400899999222
+        },
+        "observed_completion_tokens_per_second": 19.001802625665764,
+        "raw_json_valid": {
+          "numerator": 91,
+          "denominator": 93,
+          "rate": 0.978494623655914,
+          "measured_calls": 93,
+          "unavailable_calls": 0,
+          "measured_rate": 0.978494623655914
+        },
+        "raw_schema_valid": {
+          "numerator": 91,
+          "denominator": 93,
+          "rate": 0.978494623655914,
+          "measured_calls": 93,
+          "unavailable_calls": 0,
+          "measured_rate": 0.978494623655914
+        },
+        "first_pass_json_valid": {
+          "numerator": 91,
+          "denominator": 93,
+          "rate": 0.978494623655914,
+          "measured_calls": 93,
+          "unavailable_calls": 0
+        },
+        "first_pass_schema_valid": {
+          "numerator": 91,
+          "denominator": 93,
+          "rate": 0.978494623655914,
+          "measured_calls": 93,
+          "unavailable_calls": 0
+        },
+        "wrong_valid_schema_rate": {
+          "numerator": 42,
+          "denominator": 91,
+          "rate": 0.46153846153846156
+        },
+        "tokens": {
+          "prompt_tokens": {
+            "total_observed": 209878,
+            "measured_calls": 93,
+            "unavailable_calls": 0
+          },
+          "completion_tokens": {
+            "total_observed": 12077,
+            "measured_calls": 93,
+            "unavailable_calls": 0
+          }
+        },
+        "forbidden_interpretation": "observed forbidden emissions only; failed/unparseable calls are NOT certified safe"
+      }
+    },
+    "rollout": {
+      "left_f1": 0.5086042065009561,
+      "right_f1": 0.49859943977591037,
+      "delta_right_minus_left": -0.010004766725045688,
+      "ci95": [
+        -0.08358600199068789,
+        0.06387345688193291
+      ],
+      "samples": 10000,
+      "seed": 42,
+      "cluster_count": 31,
+      "interval": "paired source-scenario percentile 95%; recomputed exact micro F1",
+      "inferential_warning": "Tiny convenience cohorts, particularly the one-scenario D pilot, do not support general superiority claims",
+      "left_arm": "F",
+      "right_arm": "v6",
+      "left_representation": "OpenAI hosted",
+      "right_representation": "CUDA BF16 PEFT",
+      "matched_calls": 93,
+      "left_metrics": {
+        "inclusive": {
+          "tp": 133,
+          "fp": 175,
+          "fn": 83,
+          "support": 216,
+          "precision": 0.4318181818181818,
+          "recall": 0.6157407407407407,
+          "f1": 0.5076335877862596
+        },
+        "nonintent": {
+          "tp": 133,
+          "fp": 174,
+          "fn": 83,
+          "support": 216,
+          "precision": 0.43322475570032576,
+          "recall": 0.6157407407407407,
+          "f1": 0.5086042065009561
+        },
+        "per_slot": {
+          "acceptable_error": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "aggregation_level": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "aggregation_method": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "allow_negative_values": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "authentication_reference": {
+            "tp": 0,
+            "fp": 8,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "backtest_folds": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "baseline_model": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "business_days_only": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "business_goal": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "calendar_type": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "contains_sensitive_data": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "covariate_availability": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "data_cutoff": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "dataset_type": {
+            "tp": 0,
+            "fp": 4,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "decision_supported": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "destination": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "duplicate_policy": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "expected_history_length": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "explainability_level": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "external_covariate_sources": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "file_format": {
+            "tp": 11,
+            "fp": 0,
+            "fn": 0,
+            "support": 11,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "forecast_horizon": {
+            "tp": 31,
+            "fp": 31,
+            "fn": 31,
+            "support": 62,
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1": 0.5
+          },
+          "forecast_start": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "forecast_type": {
+            "tp": 0,
+            "fp": 3,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "frequency": {
+            "tp": 29,
+            "fp": 2,
+            "fn": 2,
+            "support": 31,
+            "precision": 0.9354838709677419,
+            "recall": 0.9354838709677419,
+            "f1": 0.9354838709677419
+          },
+          "geography": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "hierarchy_columns": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "history_end": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "history_start": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "holidays": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "human_approval_required": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "inference_mode": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "intent": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "invalid_value_policy": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "known_future_covariates": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "known_regime_changes": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "known_seasonality": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "latency_requirement": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "lead_time": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "license": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "minimum_coverage": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "minimum_training_points": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "missing_target_policy": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "missing_timestamp_policy": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "outlier_policy": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "output_format": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "output_granularity": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "past_covariates": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "prediction_frequency": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 2,
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          },
+          "prediction_interval_levels": {
+            "tp": 0,
+            "fp": 31,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "primary_metric": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "privacy_constraints": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "problem_statement": {
+            "tp": 7,
+            "fp": 22,
+            "fn": 24,
+            "support": 31,
+            "precision": 0.2413793103448276,
+            "recall": 0.22580645161290322,
+            "f1": 0.23333333333333334
+          },
+          "provenance_required": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "quantiles": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "refresh_frequency": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "retraining_frequency": {
+            "tp": 0,
+            "fp": 2,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "rounding_rule": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "scenario_forecasts": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "scope_filters": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "seasonal_periods": {
+            "tp": 0,
+            "fp": 31,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "secondary_metrics": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "series_id_columns": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "sheet_or_table": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "source_mode": {
+            "tp": 3,
+            "fp": 1,
+            "fn": 4,
+            "support": 7,
+            "precision": 0.75,
+            "recall": 0.42857142857142855,
+            "f1": 0.5454545454545454
+          },
+          "source_provider": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "source_reference": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "special_events": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "stakeholder_role": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "static_features": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "success_criteria": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "target_bounds": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "target_column": {
+            "tp": 4,
+            "fp": 5,
+            "fn": 0,
+            "support": 4,
+            "precision": 0.4444444444444444,
+            "recall": 1.0,
+            "f1": 0.6153846153846154
+          },
+          "target_description": {
+            "tp": 12,
+            "fp": 3,
+            "fn": 19,
+            "support": 31,
+            "precision": 0.8,
+            "recall": 0.3870967741935484,
+            "f1": 0.5217391304347826
+          },
+          "target_unit": {
+            "tp": 30,
+            "fp": 0,
+            "fn": 1,
+            "support": 31,
+            "precision": 1.0,
+            "recall": 0.967741935483871,
+            "f1": 0.9836065573770492
+          },
+          "test_window": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "time_column": {
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "support": 4,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "timezone": {
+            "tp": 0,
+            "fp": 31,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "validation_strategy": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        },
+        "scenario_all_gold_nonintent": {
+          "numerator": 0,
+          "denominator": 31,
+          "rate": 0.0
+        },
+        "scenario_all_gold_nonintent_nonempty": {
+          "numerator": 0,
+          "denominator": 31,
+          "rate": 0.0
+        },
+        "scenario_exact_nonintent": {
+          "numerator": 0,
+          "denominator": 31,
+          "rate": 0.0
+        },
+        "empty_gold_nonintent_scenarios": 0,
+        "intent_accuracy": {
+          "numerator": 93,
+          "denominator": 93,
+          "rate": 1.0
+        },
+        "correction_flag_accuracy": {
+          "numerator": 93,
+          "denominator": 93,
+          "rate": 1.0
+        },
+        "correction_tuple_accuracy": {
+          "numerator": 0,
+          "denominator": 31,
+          "rate": 0.0
+        },
+        "reducer_transition_accuracy": {
+          "numerator": 0,
+          "denominator": 93,
+          "rate": 0.0
+        },
+        "forbidden_call_rate": {
+          "numerator": 31,
+          "denominator": 31,
+          "rate": 1.0
+        },
+        "forbidden_slot_rate": {
+          "numerator": 101,
+          "denominator": 124,
+          "rate": 0.8145161290322581
+        },
+        "forbidden_call_rate_conditional_success": {
+          "numerator": 31,
+          "denominator": 31,
+          "rate": 1.0
+        },
+        "forbidden_failed_calls": 0,
+        "hallucinated_slot_call_rate": {
+          "numerator": 42,
+          "denominator": 93,
+          "rate": 0.45161290322580644
+        },
+        "hallucinated_slot_call_rate_conditional_success": {
+          "numerator": 42,
+          "denominator": 93,
+          "rate": 0.45161290322580644
+        },
+        "hallucinated_slot_count": 116,
+        "unknown_slot_call_rate": {
+          "numerator": 0,
+          "denominator": 93,
+          "rate": 0.0
+        },
+        "unknown_slot_count": 0,
+        "empty_update_collapse": {
+          "numerator": 0,
+          "denominator": 62,
+          "rate": 0.0
+        },
+        "successful_empty_update_collapse": {
+          "numerator": 0,
+          "denominator": 62,
+          "rate": 0.0
+        },
+        "duplicate_prediction_calls": 0,
+        "provider_success": {
+          "numerator": 93,
+          "denominator": 93,
+          "rate": 1.0
+        },
+        "question_contract": {
+          "numerator": 0,
+          "denominator": 0,
+          "rate": null
+        },
+        "question_exact_match": {
+          "numerator": 0,
+          "denominator": 0,
+          "rate": null
+        },
+        "calls": {
+          "total": 93,
+          "extract": 93,
+          "ask": 0
+        },
+        "model_calls": {
+          "total": 93,
+          "zero_call_records": 0
+        },
+        "retry_rate": {
+          "numerator": 0,
+          "denominator": 93,
+          "rate": 0.0
+        },
+        "retry_success_rate": {
+          "numerator": 0,
+          "denominator": 0,
+          "rate": null
+        },
+        "latency_ms": {
+          "mean": 2766.4343268805815,
+          "p50": 2688.4098000009544,
+          "p95": 4272.910499974387
+        },
+        "observed_completion_tokens_per_second": 74.94993971366225,
+        "raw_json_valid": {
+          "numerator": 93,
+          "denominator": 93,
+          "rate": 1.0,
+          "measured_calls": 93,
+          "unavailable_calls": 0,
+          "measured_rate": 1.0
+        },
+        "raw_schema_valid": {
+          "numerator": 93,
+          "denominator": 93,
+          "rate": 1.0,
+          "measured_calls": 93,
+          "unavailable_calls": 0,
+          "measured_rate": 1.0
+        },
+        "first_pass_json_valid": {
+          "numerator": 93,
+          "denominator": 93,
+          "rate": 1.0,
+          "measured_calls": 93,
+          "unavailable_calls": 0
+        },
+        "first_pass_schema_valid": {
+          "numerator": 93,
+          "denominator": 93,
+          "rate": 1.0,
+          "measured_calls": 93,
+          "unavailable_calls": 0
+        },
+        "wrong_valid_schema_rate": {
+          "numerator": 93,
+          "denominator": 93,
+          "rate": 1.0
+        },
+        "tokens": {
+          "prompt_tokens": {
+            "total_observed": 260867,
+            "measured_calls": 93,
+            "unavailable_calls": 0
+          },
+          "completion_tokens": {
+            "total_observed": 19283,
+            "measured_calls": 93,
+            "unavailable_calls": 0
+          }
+        },
+        "forbidden_interpretation": "observed forbidden emissions only; failed/unparseable calls are NOT certified safe"
+      },
+      "right_metrics": {
+        "inclusive": {
+          "tp": 89,
+          "fp": 54,
+          "fn": 127,
+          "support": 216,
+          "precision": 0.6223776223776224,
+          "recall": 0.41203703703703703,
+          "f1": 0.4958217270194986
+        },
+        "nonintent": {
+          "tp": 89,
+          "fp": 52,
+          "fn": 127,
+          "support": 216,
+          "precision": 0.6312056737588653,
+          "recall": 0.41203703703703703,
+          "f1": 0.49859943977591037
+        },
+        "per_slot": {
+          "acceptable_error": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "aggregation_level": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "aggregation_method": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "allow_negative_values": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "authentication_reference": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "backtest_folds": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "baseline_model": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "business_days_only": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "business_goal": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "calendar_type": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "contains_sensitive_data": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "covariate_availability": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "data_cutoff": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "dataset_type": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "decision_supported": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "destination": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "duplicate_policy": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "expected_history_length": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "explainability_level": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "external_covariate_sources": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "file_format": {
+            "tp": 7,
+            "fp": 1,
+            "fn": 4,
+            "support": 11,
+            "precision": 0.875,
+            "recall": 0.6363636363636364,
+            "f1": 0.7368421052631579
+          },
+          "forecast_horizon": {
+            "tp": 44,
+            "fp": 10,
+            "fn": 18,
+            "support": 62,
+            "precision": 0.8148148148148148,
+            "recall": 0.7096774193548387,
+            "f1": 0.7586206896551724
+          },
+          "forecast_start": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "forecast_type": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "frequency": {
+            "tp": 17,
+            "fp": 1,
+            "fn": 14,
+            "support": 31,
+            "precision": 0.9444444444444444,
+            "recall": 0.5483870967741935,
+            "f1": 0.6938775510204082
+          },
+          "geography": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "hierarchy_columns": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "history_end": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "history_start": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "holidays": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "human_approval_required": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "inference_mode": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "intent": {
+            "tp": 0,
+            "fp": 2,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "invalid_value_policy": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "known_future_covariates": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "known_regime_changes": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "known_seasonality": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "latency_requirement": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "lead_time": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "license": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "minimum_coverage": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "minimum_training_points": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "missing_target_policy": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "missing_timestamp_policy": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "outlier_policy": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "output_format": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "output_granularity": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "past_covariates": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "prediction_frequency": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 2,
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          },
+          "prediction_interval_levels": {
+            "tp": 0,
+            "fp": 4,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "primary_metric": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "privacy_constraints": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "problem_statement": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 31,
+            "support": 31,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "provenance_required": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "quantiles": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "refresh_frequency": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "retraining_frequency": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "rounding_rule": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "scenario_forecasts": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "scope_filters": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "seasonal_periods": {
+            "tp": 0,
+            "fp": 4,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "secondary_metrics": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "series_id_columns": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "sheet_or_table": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "source_mode": {
+            "tp": 0,
+            "fp": 2,
+            "fn": 7,
+            "support": 7,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "source_provider": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "source_reference": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "special_events": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "stakeholder_role": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "static_features": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "success_criteria": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "target_bounds": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "target_column": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 1,
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571
+          },
+          "target_description": {
+            "tp": 8,
+            "fp": 22,
+            "fn": 23,
+            "support": 31,
+            "precision": 0.26666666666666666,
+            "recall": 0.25806451612903225,
+            "f1": 0.26229508196721313
+          },
+          "target_unit": {
+            "tp": 5,
+            "fp": 3,
+            "fn": 26,
+            "support": 31,
+            "precision": 0.625,
+            "recall": 0.16129032258064516,
+            "f1": 0.2564102564102564
+          },
+          "test_window": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "time_column": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 1,
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571
+          },
+          "timezone": {
+            "tp": 0,
+            "fp": 4,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "validation_strategy": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "support": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        },
+        "scenario_all_gold_nonintent": {
+          "numerator": 0,
+          "denominator": 31,
+          "rate": 0.0
+        },
+        "scenario_all_gold_nonintent_nonempty": {
+          "numerator": 0,
+          "denominator": 31,
+          "rate": 0.0
+        },
+        "scenario_exact_nonintent": {
+          "numerator": 0,
+          "denominator": 31,
+          "rate": 0.0
+        },
+        "empty_gold_nonintent_scenarios": 0,
+        "intent_accuracy": {
+          "numerator": 90,
+          "denominator": 93,
+          "rate": 0.967741935483871
+        },
+        "correction_flag_accuracy": {
+          "numerator": 90,
+          "denominator": 93,
+          "rate": 0.967741935483871
+        },
+        "correction_tuple_accuracy": {
+          "numerator": 25,
+          "denominator": 31,
+          "rate": 0.8064516129032258
+        },
+        "reducer_transition_accuracy": {
+          "numerator": 0,
+          "denominator": 93,
+          "rate": 0.0
+        },
+        "forbidden_call_rate": {
+          "numerator": 4,
+          "denominator": 31,
+          "rate": 0.12903225806451613
+        },
+        "forbidden_slot_rate": {
+          "numerator": 12,
+          "denominator": 124,
+          "rate": 0.0967741935483871
+        },
+        "forbidden_call_rate_conditional_success": {
+          "numerator": 4,
+          "denominator": 31,
+          "rate": 0.12903225806451613
+        },
+        "forbidden_failed_calls": 0,
+        "hallucinated_slot_call_rate": {
+          "numerator": 7,
+          "denominator": 93,
+          "rate": 0.07526881720430108
+        },
+        "hallucinated_slot_call_rate_conditional_success": {
+          "numerator": 7,
+          "denominator": 90,
+          "rate": 0.07777777777777778
+        },
+        "hallucinated_slot_count": 15,
+        "unknown_slot_call_rate": {
+          "numerator": 0,
+          "denominator": 93,
+          "rate": 0.0
+        },
+        "unknown_slot_count": 0,
+        "empty_update_collapse": {
+          "numerator": 3,
+          "denominator": 62,
+          "rate": 0.04838709677419355
+        },
+        "successful_empty_update_collapse": {
+          "numerator": 0,
+          "denominator": 62,
+          "rate": 0.0
+        },
+        "duplicate_prediction_calls": 1,
+        "provider_success": {
+          "numerator": 90,
+          "denominator": 93,
+          "rate": 0.967741935483871
+        },
+        "question_contract": {
+          "numerator": 0,
+          "denominator": 0,
+          "rate": null
+        },
+        "question_exact_match": {
+          "numerator": 0,
+          "denominator": 0,
+          "rate": null
+        },
+        "calls": {
+          "total": 93,
+          "extract": 93,
+          "ask": 0
+        },
+        "model_calls": {
+          "total": 93,
+          "zero_call_records": 0
+        },
+        "retry_rate": {
+          "numerator": 0,
+          "denominator": 93,
+          "rate": 0.0
+        },
+        "retry_success_rate": {
+          "numerator": 0,
+          "denominator": 0,
+          "rate": null
+        },
+        "latency_ms": {
+          "mean": 6549.91790860211,
+          "p50": 5262.329799999861,
+          "p95": 12794.844000000012
+        },
+        "observed_completion_tokens_per_second": 19.461788690841065,
+        "raw_json_valid": {
+          "numerator": 91,
+          "denominator": 93,
+          "rate": 0.978494623655914,
+          "measured_calls": 93,
+          "unavailable_calls": 0,
+          "measured_rate": 0.978494623655914
+        },
+        "raw_schema_valid": {
+          "numerator": 91,
+          "denominator": 93,
+          "rate": 0.978494623655914,
+          "measured_calls": 93,
+          "unavailable_calls": 0,
+          "measured_rate": 0.978494623655914
+        },
+        "first_pass_json_valid": {
+          "numerator": 91,
+          "denominator": 93,
+          "rate": 0.978494623655914,
+          "measured_calls": 93,
+          "unavailable_calls": 0
+        },
+        "first_pass_schema_valid": {
+          "numerator": 91,
+          "denominator": 93,
+          "rate": 0.978494623655914,
+          "measured_calls": 93,
+          "unavailable_calls": 0
+        },
+        "wrong_valid_schema_rate": {
+          "numerator": 39,
+          "denominator": 91,
+          "rate": 0.42857142857142855
+        },
+        "tokens": {
+          "prompt_tokens": {
+            "total_observed": 205741,
+            "measured_calls": 93,
+            "unavailable_calls": 0
+          },
+          "completion_tokens": {
+            "total_observed": 11855,
+            "measured_calls": 93,
+            "unavailable_calls": 0
+          }
+        },
+        "forbidden_interpretation": "observed forbidden emissions only; failed/unparseable calls are NOT certified safe"
+      }
+    }
+  },
+  "source_sha256": {
+    "C:\\Users\\ABDULLAH'S PC\\Desktop\\SML-FYP\\SLM-FineTuning-Testing\\training-runs\\policy-openai-F-20261007\\component-report.json": "50a23b0b85d741a4c98e2090671d0a449a4a94112caca18bd3292f93837e52b0",
+    "C:\\Users\\ABDULLAH'S PC\\Desktop\\SML-FYP\\SLM-FineTuning-Testing\\runtime\\returned-policy-gpu-20261008\\training-runs\\policy-v6-bf16-20261007\\component-report.json": "0c5f085b6af39bfc94b2ec46e2ad48e0a9774cbbf504f2626dcb303eff708dc1",
+    "C:\\Users\\ABDULLAH'S PC\\Desktop\\SML-FYP\\SLM-FineTuning-Testing\\training-runs\\policy-openai-F-20261007\\rollout-report.json": "0129aa38d2b01d238b038f4c7692668bb3c6177c6356bc30e75b7181e843ab68",
+    "C:\\Users\\ABDULLAH'S PC\\Desktop\\SML-FYP\\SLM-FineTuning-Testing\\runtime\\returned-policy-gpu-20261008\\training-runs\\policy-v6-bf16-20261007\\rollout-report.json": "b00d108fbb476a2fa298ed18d7b6165b14d5bc0c5623e046948043ddf4c0418d"
+  },
+  "bootstrap_script_sha256": "7dd3a8b7c470abee6e3c82e993999cab3ce2c528b4adf567ecdf39fecdb511e5",
+  "api_calls_made": 0,
+  "limitation": "Agent-reviewed posthoc development cohort; no independent held-out superiority claim"
+}

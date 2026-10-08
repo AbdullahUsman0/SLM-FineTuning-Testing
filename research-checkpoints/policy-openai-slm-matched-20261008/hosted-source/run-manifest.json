@@ -1,0 +1,39 @@
+{
+  "identity": {
+    "protocol": {
+      "policy_sha256": "558581a35a0abc592c59d6f30bc7a2a3c0542368bfee668ac3018800b702189e",
+      "cases_sha256": "789c94308f7f9bce9ba728e9d0639c4e64194e5e0fcba2f8f9eee858d1d16063",
+      "context_gold_sha256": "9e8b8445f05460e4b47299f233d45940a3accb47da5b22818eb0eb184d0ccde0",
+      "runner_sha256": "b9d2393a880e22fd2fd0d279a9ce085cb38fb638d01d05df9e1cac7c4af5dd0d",
+      "base_model": "Qwen/Qwen3.5-2B",
+      "base_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+      "openai_model": "gpt-5-mini-2025-08-07",
+      "component": "reviewed gold prior state",
+      "rollout": "own predicted state, fixed reviewed user script",
+      "one_pass_primary": true,
+      "B_separate_retry_arm": true
+    },
+    "protocol_fingerprint": "f2c3095ca689026497754e0df58c75646c548c555379f82b8eb71e20ded3e539",
+    "arm": "F",
+    "tracks": [
+      "component",
+      "rollout"
+    ],
+    "adapter": null,
+    "representation": "OpenAI hosted",
+    "generation": {
+      "max_tokens": 2048,
+      "reasoning": "minimal",
+      "sampling": "provider default"
+    },
+    "openai_cost_cap_usd": 1.0,
+    "parser_versions": {
+      "pydantic": "2.13.5",
+      "jsonschema": "4.26.0"
+    },
+    "sdk_version": "2.54.0"
+  },
+  "fingerprint": "8eea8142febcd6cba3ccede72f579f901e38358f7689e5cde2aee8bec4313f80",
+  "run_id": "a9fd6f7c-1161-4b6f-952c-c050a053b8aa",
+  "created_at_utc": "2026-10-07T20:04:35.892018+00:00"
+}

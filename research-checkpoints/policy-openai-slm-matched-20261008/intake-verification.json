@@ -1,0 +1,10 @@
+{
+  "source_commit": "b809dda515e4484bdb036b4db9caffd294a1b264",
+  "result_artifacts_verified": 10,
+  "ZIP_sha256": "0e80568800eb1a46998214a1b59bd8cc69d80174d2851a6b59e44635ec045391",
+  "GitHub_download_verified": true,
+  "archive_CRC_passed": true,
+  "run_files_hash_verified": 201,
+  "extracted_run_root": "C:\\Users\\ABDULLAH'S PC\\Desktop\\SML-FYP\\SLM-FineTuning-Testing\\runtime\\returned-policy-gpu-20261008",
+  "API_calls_made": 0
+}

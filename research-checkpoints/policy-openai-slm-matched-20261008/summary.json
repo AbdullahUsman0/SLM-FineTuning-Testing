@@ -1,0 +1,202 @@
+{
+  "created_at_utc": "2026-10-08T22:02:27.898891+00:00",
+  "policy_sha256": "558581a35a0abc592c59d6f30bc7a2a3c0542368bfee668ac3018800b702189e",
+  "summaries": [
+    {
+      "model": "OpenAI_F",
+      "track": "component",
+      "calls": 93,
+      "f1": 0.48440366972477067,
+      "precision": 0.4012158054711246,
+      "recall": 0.6111111111111112,
+      "JSON_valid": 93,
+      "declared_schema_valid": 93,
+      "parser_admitted": 91,
+      "scenario_exact": 0,
+      "forbidden_unknown_turns": 31,
+      "unknown_tests": 31,
+      "median_latency_seconds": 2.8133806999830995,
+      "exact_without_status": {
+        "tp": 157,
+        "fp": 172,
+        "fn": 59,
+        "f1": 0.5761467889908257,
+        "profile": "Supplemental exact slot/value without status, same structural gate; not the primary endpoint"
+      }
+    },
+    {
+      "model": "OpenAI_F",
+      "track": "rollout",
+      "calls": 93,
+      "f1": 0.5086042065009561,
+      "precision": 0.43322475570032576,
+      "recall": 0.6157407407407407,
+      "JSON_valid": 93,
+      "declared_schema_valid": 93,
+      "parser_admitted": 93,
+      "scenario_exact": 0,
+      "forbidden_unknown_turns": 31,
+      "unknown_tests": 31,
+      "median_latency_seconds": 2.6884098000009544,
+      "exact_without_status": {
+        "tp": 161,
+        "fp": 146,
+        "fn": 55,
+        "f1": 0.615678776290631,
+        "profile": "Supplemental exact slot/value without status, same structural gate; not the primary endpoint"
+      }
+    },
+    {
+      "model": "stock_2B",
+      "track": "component",
+      "calls": 93,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "JSON_valid": 88,
+      "declared_schema_valid": 14,
+      "parser_admitted": 14,
+      "scenario_exact": 0,
+      "forbidden_unknown_turns": 16,
+      "unknown_tests": 31,
+      "median_latency_seconds": 8.121307299999899,
+      "exact_without_status": {
+        "tp": 7,
+        "fp": 282,
+        "fn": 209,
+        "f1": 0.027722772277227723,
+        "profile": "Supplemental exact slot/value without status, same structural gate; not the primary endpoint"
+      }
+    },
+    {
+      "model": "stock_2B",
+      "track": "rollout",
+      "calls": 93,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "JSON_valid": 91,
+      "declared_schema_valid": 34,
+      "parser_admitted": 34,
+      "scenario_exact": 0,
+      "forbidden_unknown_turns": 24,
+      "unknown_tests": 31,
+      "median_latency_seconds": 7.580631699998776,
+      "exact_without_status": {
+        "tp": 7,
+        "fp": 255,
+        "fn": 209,
+        "f1": 0.029288702928870293,
+        "profile": "Supplemental exact slot/value without status, same structural gate; not the primary endpoint"
+      }
+    },
+    {
+      "model": "v5",
+      "track": "component",
+      "calls": 93,
+      "f1": 0.42134831460674155,
+      "precision": 0.5357142857142857,
+      "recall": 0.3472222222222222,
+      "JSON_valid": 93,
+      "declared_schema_valid": 93,
+      "parser_admitted": 93,
+      "scenario_exact": 0,
+      "forbidden_unknown_turns": 8,
+      "unknown_tests": 31,
+      "median_latency_seconds": 5.4801079999997455,
+      "exact_without_status": {
+        "tp": 75,
+        "fp": 65,
+        "fn": 141,
+        "f1": 0.42134831460674155,
+        "profile": "Supplemental exact slot/value without status, same structural gate; not the primary endpoint"
+      }
+    },
+    {
+      "model": "v5",
+      "track": "rollout",
+      "calls": 93,
+      "f1": 0.42696629213483145,
+      "precision": 0.5428571428571428,
+      "recall": 0.35185185185185186,
+      "JSON_valid": 93,
+      "declared_schema_valid": 93,
+      "parser_admitted": 93,
+      "scenario_exact": 0,
+      "forbidden_unknown_turns": 8,
+      "unknown_tests": 31,
+      "median_latency_seconds": 5.378077299999859,
+      "exact_without_status": {
+        "tp": 76,
+        "fp": 64,
+        "fn": 140,
+        "f1": 0.42696629213483145,
+        "profile": "Supplemental exact slot/value without status, same structural gate; not the primary endpoint"
+      }
+    },
+    {
+      "model": "v6",
+      "track": "component",
+      "calls": 93,
+      "f1": 0.48179271708683474,
+      "precision": 0.6099290780141844,
+      "recall": 0.39814814814814814,
+      "JSON_valid": 91,
+      "declared_schema_valid": 91,
+      "parser_admitted": 90,
+      "scenario_exact": 0,
+      "forbidden_unknown_turns": 4,
+      "unknown_tests": 31,
+      "median_latency_seconds": 5.502119500000845,
+      "exact_without_status": {
+        "tp": 86,
+        "fp": 55,
+        "fn": 130,
+        "f1": 0.48179271708683474,
+        "profile": "Supplemental exact slot/value without status, same structural gate; not the primary endpoint"
+      }
+    },
+    {
+      "model": "v6",
+      "track": "rollout",
+      "calls": 93,
+      "f1": 0.49859943977591037,
+      "precision": 0.6312056737588653,
+      "recall": 0.41203703703703703,
+      "JSON_valid": 91,
+      "declared_schema_valid": 91,
+      "parser_admitted": 90,
+      "scenario_exact": 0,
+      "forbidden_unknown_turns": 4,
+      "unknown_tests": 31,
+      "median_latency_seconds": 5.262329799999861,
+      "exact_without_status": {
+        "tp": 89,
+        "fp": 52,
+        "fn": 127,
+        "f1": 0.49859943977591037,
+        "profile": "Supplemental exact slot/value without status, same structural gate; not the primary endpoint"
+      }
+    }
+  ],
+  "source_report_sha256": {
+    "training-runs\\policy-openai-F-20261007\\component-report.json": "50a23b0b85d741a4c98e2090671d0a449a4a94112caca18bd3292f93837e52b0",
+    "training-runs\\policy-openai-F-20261007\\rollout-report.json": "0129aa38d2b01d238b038f4c7692668bb3c6177c6356bc30e75b7181e843ab68",
+    "runtime\\returned-policy-gpu-20261008\\training-runs\\policy-stock-bf16-20261007\\component-report.json": "1dd5388078f5e1ca30753b60731a249dab11858dada9f1a86a92f64568658ce2",
+    "runtime\\returned-policy-gpu-20261008\\training-runs\\policy-stock-bf16-20261007\\rollout-report.json": "d032507434232ceac2a08c8081752cbe1722ab3cc474f42ef87e8b4f72506b81",
+    "runtime\\returned-policy-gpu-20261008\\training-runs\\policy-v5-bf16-20261007\\component-report.json": "5d542c69a2a90518267818e9d20f179abaa4e5a731ee2a6ec6cd6c179ab64765",
+    "runtime\\returned-policy-gpu-20261008\\training-runs\\policy-v5-bf16-20261007\\rollout-report.json": "65731b1fe41d4392ecc4e730f774c938d24ee53cc5e5f81924f8eb04567b167f",
+    "runtime\\returned-policy-gpu-20261008\\training-runs\\policy-v6-bf16-20261007\\component-report.json": "0c5f085b6af39bfc94b2ec46e2ad48e0a9774cbbf504f2626dcb303eff708dc1",
+    "runtime\\returned-policy-gpu-20261008\\training-runs\\policy-v6-bf16-20261007\\rollout-report.json": "b00d108fbb476a2fa298ed18d7b6165b14d5bc0c5623e046948043ddf4c0418d"
+  },
+  "verified_scored_calls": 744,
+  "all_primary_metrics_reproduced": true,
+  "all_admissions_reproduced": true,
+  "all_pairing_guards_passed": true,
+  "human_review_queue_cases": 31,
+  "human_review_completed": false,
+  "new_inferences": 0,
+  "paid_API_calls": 0,
+  "sealed_final_accessed": false,
+  "script_sha256": "dff1237911aa0f276b8905a7c324b18ad4c51ed15e4e24544e5abf22bfab9bb9"
+}

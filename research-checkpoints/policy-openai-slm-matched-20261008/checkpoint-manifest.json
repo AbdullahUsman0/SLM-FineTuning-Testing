@@ -1,0 +1,86 @@
+{
+  "files": {
+    "hosted-source/completion.json": {
+      "sha256": "ff19c6ace25790c922c5f641879b3088a72d6e8cf7f01f70afad0c3695ccb244",
+      "bytes": 1208
+    },
+    "hosted-source/component-report.json.gz": {
+      "sha256": "996a58f62e35af5148898af580a261155bf2fcaa0af342e1d15a49b00439b16d",
+      "bytes": 257801
+    },
+    "hosted-source/rollout-report.json.gz": {
+      "sha256": "c8c09d46ccf254fb9aa59d1777f821feaec829c7f11381d0e0b7d3614d228063",
+      "bytes": 254987
+    },
+    "hosted-source/rpc-journal.jsonl.gz": {
+      "sha256": "ad79bc1b1a0db138517a55177d59db8dce750d61c735d4c86b2120cd0706ffd5",
+      "bytes": 38702
+    },
+    "hosted-source/run-manifest.json": {
+      "sha256": "2c22ffeb1763ca81975bff4227329d3fc2512d5211c9e649cf723b1bde2b666d",
+      "bytes": 1446
+    },
+    "hosted-source/source-sha256.json": {
+      "sha256": "db789cc26a4021781ee08278789f9bfe249e636e66d259be8f10b15b2628be46",
+      "bytes": 812
+    },
+    "human-review-queue.jsonl": {
+      "sha256": "ab60cc90c925e1d987cb21f16509b4cd928b0bcf53c9cf5defd7ed705f53db8d",
+      "bytes": 1376641
+    },
+    "human-review-sheet.csv": {
+      "sha256": "a4fbc62cddb2ed83dfcb79d3d992af0cdda5892f39d7c76b4c1c76873749b972",
+      "bytes": 1988
+    },
+    "intake-verification.json": {
+      "sha256": "4628cf7459fe8c1096c3531b5859105404cfc8f878841a7ea13ac99b81792ce9",
+      "bytes": 451
+    },
+    "openai-vs-base.json": {
+      "sha256": "de64cac1b1bc9399f07636d291830e4bb83497bc1ecf333ea46c1a4eb8508e46",
+      "bytes": 91228
+    },
+    "openai-vs-v5.json": {
+      "sha256": "488855d38170bd9200a4f217ea4581e98fa09ccbbf2ee91ee37a585d42d6c819",
+      "bytes": 91867
+    },
+    "openai-vs-v6.json": {
+      "sha256": "ded8743c1c229a29418076a78716c7e60babf566a4d32a367404a4c3eb6c57e7",
+      "bytes": 92010
+    },
+    "README.md": {
+      "sha256": "335cd444f5b067bfbaea585e5c52dffb6d376558d6e451f46a77cb81c2181497",
+      "bytes": 9793
+    },
+    "reproduction/analyze-policy-openai-slm.py": {
+      "sha256": "dff1237911aa0f276b8905a7c324b18ad4c51ed15e4e24544e5abf22bfab9bb9",
+      "bytes": 9286
+    },
+    "reproduction/compare-openai-output-methods.py": {
+      "sha256": "7dd3a8b7c470abee6e3c82e993999cab3ce2c528b4adf567ecdf39fecdb511e5",
+      "bytes": 7435
+    },
+    "reproduction/compare-policy-comparison.py": {
+      "sha256": "571805bb8476ccb198bb7b3b0155e4fa2e9a66fd68c04717bdcc97a105699c92",
+      "bytes": 2904
+    },
+    "summary.csv": {
+      "sha256": "4fc5456e932f376073a7a7ecaee74a83a4dd99456a694273ed4a78b480fef810",
+      "bytes": 970
+    },
+    "summary.json": {
+      "sha256": "14745e163de49f73c1577dcff180134e1d098b28c235fe6c7bd749ee62e16538",
+      "bytes": 7144
+    }
+  },
+  "remote_source_commit": "b809dda515e4484bdb036b4db9caffd294a1b264",
+  "remote_zip_sha256": "0e80568800eb1a46998214a1b59bd8cc69d80174d2851a6b59e44635ec045391",
+  "policy_sha256": "558581a35a0abc592c59d6f30bc7a2a3c0542368bfee668ac3018800b702189e",
+  "scored_calls_verified": 744,
+  "metrics_and_admissions_reproduced": true,
+  "shared_protocol_and_gold_context_verified": true,
+  "paid_API_calls_in_analysis": 0,
+  "new_inference_calls": 0,
+  "human_review_completed": false,
+  "publication_scope": "Derived matched results, unchanged hosted source evidence, reproduction code and pending human-review material. Remote source artifacts remain at b809dda."
+}

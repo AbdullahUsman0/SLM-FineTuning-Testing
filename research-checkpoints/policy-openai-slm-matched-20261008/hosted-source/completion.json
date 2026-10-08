@@ -1,0 +1,48 @@
+{
+  "status": "complete",
+  "failure": null,
+  "fingerprint": "8eea8142febcd6cba3ccede72f579f901e38358f7689e5cde2aee8bec4313f80",
+  "finished_utc": "2026-10-07T20:14:24.151776+00:00",
+  "reports": {
+    "component": {
+      "calls": 93,
+      "nonintent": {
+        "tp": 132,
+        "fp": 197,
+        "fn": 84,
+        "support": 216,
+        "precision": 0.4012158054711246,
+        "recall": 0.6111111111111112,
+        "f1": 0.48440366972477067
+      }
+    },
+    "rollout": {
+      "calls": 93,
+      "nonintent": {
+        "tp": 133,
+        "fp": 174,
+        "fn": 83,
+        "support": 216,
+        "precision": 0.43322475570032576,
+        "recall": 0.6157407407407407,
+        "f1": 0.5086042065009561
+      }
+    }
+  },
+  "budget": {
+    "cap_usd": 1.0,
+    "spent_or_reserved_usd": 0.1598171,
+    "observed_cost_usd": 0.1598171,
+    "requests_reserved": 186,
+    "responses_received": 186,
+    "uncertain_or_failed": 0,
+    "prices_per_million": {
+      "input": 0.25,
+      "cached_input": 0.025,
+      "output": 2.0
+    },
+    "price_source": "https://developers.openai.com/api/docs/models/gpt-5-mini",
+    "cost_is_usage_estimate_not_invoice": true
+  },
+  "sealed_final_accessed": false
+}
