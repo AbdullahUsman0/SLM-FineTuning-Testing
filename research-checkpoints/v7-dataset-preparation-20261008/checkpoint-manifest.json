@@ -1,0 +1,63 @@
+{
+  "status": "development_candidate_complete_pending_human",
+  "corpus_version": "v7-20261008-r4",
+  "source_results_commit": "afa3a2b1b256709ef15d15dcd4014b50a569b4c8",
+  "publication_parent": "afa3a2b1b256709ef15d15dcd4014b50a569b4c8",
+  "files": {
+    "README.md": {
+      "sha256": "c64b697a648f15b1992233a395cba1d6b41aa3c05e18d495a4e3a6dae9a584e6",
+      "bytes": 4920
+    },
+    "DATASETS_AND_SLOT_FILLING_2026-10-08.md": {
+      "sha256": "66f28e56d97e1c30ae6ebfedbffaec64eb5d9f2b0ee9fa88f28f40b2d7f18750",
+      "bytes": 34939
+    },
+    "Forecasting_datasets_v1_v6_and_slot_filling_2026-10-08.pdf": {
+      "sha256": "65c7c42eb0a90c598adfbe8820e6252d10b8014532a219f58b499b446360ac61",
+      "bytes": 35911
+    },
+    "V7_DATASET_PLAN_2026-10-08.md": {
+      "sha256": "d7aeee865410495dc8da82d61104109cefcfa35efee6fecee192ea4c7d598b9e",
+      "bytes": 10800
+    },
+    "error-requirements-source.json": {
+      "sha256": "5f19800c1b89044a474063cc3e43466aa86a582da13d7094e38370ed263d81ba",
+      "bytes": 2892
+    },
+    "length-preflight-r4.json": {
+      "sha256": "8724655bd8f7037d442e22b0e602ab02149087bd82c4d4e4218a6e31b73d2520",
+      "bytes": 1456
+    },
+    "machine-verification-r4.json": {
+      "sha256": "7eb6870363af87c808da3b26e113cc25ec3f52418446da8c1190506831428d48",
+      "bytes": 288
+    },
+    "portable-verification-r4.json": {
+      "sha256": "7eb6870363af87c808da3b26e113cc25ec3f52418446da8c1190506831428d48",
+      "bytes": 288
+    },
+    "bundle-manifest.json": {
+      "sha256": "1b8ef1d299257f09268c44129783aa8702aea275deeee9ae9bbf364580b70d49",
+      "bytes": 20574
+    },
+    "v7-development-bundle-20261008-r4.zip": {
+      "sha256": "e93e93c3872f16df5c51e2552f9fea530df0ddd03cde5bdfa4acfe56367ebbda",
+      "bytes": 8578121
+    },
+    "v7-development-bundle-20261008-r4.sha256": {
+      "sha256": "155c608f30fd4cd6d58d23d46593286953ca89129152a96520f08c5765745e01",
+      "bytes": 104
+    }
+  },
+  "source_scenarios": 4000,
+  "training_SFT": 14560,
+  "validation_SFT": 3120,
+  "machine_verified_development_SFT": 17680,
+  "targeted_tests_passed": 16,
+  "fresh_portable_extraction_verified": true,
+  "human_review": "pending",
+  "final_labels_included": false,
+  "new_API_calls": 0,
+  "training_started": false,
+  "pdf_pages_visually_checked": 13
+}

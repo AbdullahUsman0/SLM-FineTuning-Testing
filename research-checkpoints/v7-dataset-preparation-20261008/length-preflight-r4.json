@@ -1,0 +1,51 @@
+{
+  "corpus_version": "v7-20261008-r4",
+  "corpus_manifest_sha256": "65a65f84a8e30cb98d1ef981e67fb3602ebe605e306ff8f154e4da2936cdb3b4",
+  "model": "Qwen/Qwen3.5-2B",
+  "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "transformers": "5.15.0",
+  "tokenizers": "0.22.2",
+  "chat_template_kwargs": {
+    "enable_thinking": false
+  },
+  "tokenizer_class": "Qwen2Tokenizer",
+  "chat_template_sha256": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+  "trainer_token_length_helper_sha256": "c5eb79d665ac06c459d367aceac4760e4b2e873144863bc557afc242586768d5",
+  "max_length": 3584,
+  "truncation": false,
+  "results": {
+    "train": {
+      "examples": 14560,
+      "max_tokens": 3203,
+      "p50_tokens": 2533,
+      "p95_tokens": 2835,
+      "over_limit": 0,
+      "histogram_256": {
+        "2560": 5289,
+        "2304": 8434,
+        "2816": 751,
+        "3072": 86
+      },
+      "over_limit_examples": []
+    },
+    "validation": {
+      "examples": 3120,
+      "max_tokens": 3156,
+      "p50_tokens": 2535,
+      "p95_tokens": 2842,
+      "over_limit": 0,
+      "histogram_256": {
+        "2560": 1136,
+        "2304": 1794,
+        "2816": 176,
+        "3072": 14
+      },
+      "over_limit_examples": []
+    }
+  },
+  "keyed_lengths_sha256": "41cc5f3bf7e1e8c75c0c0a941705f854ae27f63255f586a8430e14160927e65c",
+  "status": "pass",
+  "final_labels_accessed": false,
+  "model_weights_loaded": false,
+  "training_started": false
+}

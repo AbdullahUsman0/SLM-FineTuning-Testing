@@ -1,0 +1,93 @@
+{
+  "source_sha256": "ab60cc90c925e1d987cb21f16509b4cd928b0bcf53c9cf5defd7ed705f53db8d",
+  "source_cases": 31,
+  "source_review_status": "pending_human",
+  "labels_changed": false,
+  "rollout_errors": {
+    "v5": {
+      "missing_exact_tuples_by_slot": {
+        "forecast_horizon": 32,
+        "problem_statement": 30,
+        "target_description": 27,
+        "target_unit": 23,
+        "frequency": 20,
+        "file_format": 3,
+        "source_mode": 3,
+        "prediction_frequency": 1,
+        "time_column": 1
+      },
+      "extra_exact_tuples_by_slot": {
+        "forecast_horizon": 32,
+        "timezone": 8,
+        "target_description": 7,
+        "target_unit": 5,
+        "seasonal_periods": 4,
+        "prediction_interval_levels": 4,
+        "aggregation_method": 1,
+        "problem_statement": 1,
+        "refresh_frequency": 1,
+        "frequency": 1
+      },
+      "parser_rejections_by_turn": {},
+      "caveat": "Exact value/status mismatches contribute a missing and an extra tuple; these are not all pure omissions or fabricated facts."
+    },
+    "v6": {
+      "missing_exact_tuples_by_slot": {
+        "problem_statement": 31,
+        "target_unit": 26,
+        "target_description": 23,
+        "forecast_horizon": 18,
+        "frequency": 14,
+        "source_mode": 7,
+        "file_format": 4,
+        "prediction_frequency": 2,
+        "target_column": 1,
+        "time_column": 1
+      },
+      "extra_exact_tuples_by_slot": {
+        "target_description": 22,
+        "forecast_horizon": 10,
+        "timezone": 4,
+        "seasonal_periods": 4,
+        "prediction_interval_levels": 4,
+        "target_unit": 3,
+        "source_mode": 2,
+        "frequency": 1,
+        "refresh_frequency": 1,
+        "file_format": 1
+      },
+      "parser_rejections_by_turn": {
+        "1": 3
+      },
+      "caveat": "Exact value/status mismatches contribute a missing and an extra tuple; these are not all pure omissions or fabricated facts."
+    },
+    "OpenAI_F": {
+      "missing_exact_tuples_by_slot": {
+        "forecast_horizon": 31,
+        "problem_statement": 24,
+        "target_description": 19,
+        "source_mode": 4,
+        "frequency": 2,
+        "prediction_frequency": 2,
+        "target_unit": 1
+      },
+      "extra_exact_tuples_by_slot": {
+        "forecast_horizon": 31,
+        "timezone": 31,
+        "seasonal_periods": 31,
+        "prediction_interval_levels": 31,
+        "problem_statement": 22,
+        "authentication_reference": 8,
+        "target_column": 5,
+        "dataset_type": 4,
+        "target_description": 3,
+        "forecast_type": 3,
+        "frequency": 2,
+        "retraining_frequency": 2,
+        "source_mode": 1
+      },
+      "parser_rejections_by_turn": {},
+      "caveat": "Exact value/status mismatches contribute a missing and an extra tuple; these are not all pure omissions or fabricated facts."
+    }
+  }
+}
