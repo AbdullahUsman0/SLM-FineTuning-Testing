@@ -1,0 +1,59 @@
+{
+  "status": "agent_review_complete_human_adjudication_pending",
+  "corpus_version": "v7-20261009-r7-dev",
+  "corpus_manifest_sha256": "9fd0d10a357df7845afe83b2462c6a2299b7afc2b8e650277e9b53b41ab8cf7f",
+  "publication_parent": "7bdd34661eeff1805f2b04dd00ded1f4a193fd87",
+  "development_scenarios": 3400,
+  "development_SFT": 17680,
+  "local_tests_passed": 15,
+  "portable_tests_executed": 13,
+  "portable_archived_data_tests_skipped": 2,
+  "human_approvals_written": 0,
+  "final_labels_accessed": false,
+  "final_labels_generated": false,
+  "training_started": false,
+  "new_API_calls": 0,
+  "local_checkout_and_index_preserved": true,
+  "files": {
+    "README.md": {
+      "sha256": "7c9094df8910e88005955f70dc5ac010ca822264b7a986c81af4745c09488fe4",
+      "bytes": 2085
+    },
+    "V7_AGENT_REVIEW_2026-10-09.md": {
+      "sha256": "031164cc8239becb1d76703aedeca31f848bf99ae1fee6bbf2e66a9368ac0ff4",
+      "bytes": 13796
+    },
+    "original-r4-agent-summary.json": {
+      "sha256": "4a87364801c5f424dbcfa2f471a903215057c3224f5f51c9973cb251a8758f6c",
+      "bytes": 51733
+    },
+    "current-r7-agent-summary.json": {
+      "sha256": "d4725a03bac5444af604b0705f1e0be87f4e05d978814cbf29ed1d9c0069a2f8",
+      "bytes": 25204
+    },
+    "length-preflight-r7-dev.json": {
+      "sha256": "52536d445f9ec4f12d2724bd74a75de3d36720d81f6cd2599afdd61c10c3f689",
+      "bytes": 1461
+    },
+    "machine-verification-r7-dev.json": {
+      "sha256": "b1ed97ee6f86652e4ebe8afdfb98f9ad65d26541d41a718bf44775916c94b1fe",
+      "bytes": 365
+    },
+    "portable-verification-r7-dev.json": {
+      "sha256": "080e6ab6549534da7a5c3604eb742faea832f429bde4e13ad71c77906bab55e1",
+      "bytes": 1451
+    },
+    "bundle-manifest.json": {
+      "sha256": "8e2d2fb903eab2af94f5d8f16c5b013db889e83b651999b7cf24a1bbcc19f105",
+      "bytes": 22694
+    },
+    "v7-reviewed-development-20261009-r7.zip": {
+      "sha256": "da6e67a42dd984e5d97029304e54e437d76a09843be73adbf98e1990d7f1a8ae",
+      "bytes": 8756555
+    },
+    "v7-reviewed-development-20261009-r7.sha256": {
+      "sha256": "153f3ad6a917be8af24683d2d4aa28b09e7b9e6d292ce9de8242939abe8cf552",
+      "bytes": 106
+    }
+  }
+}

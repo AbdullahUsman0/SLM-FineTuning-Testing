@@ -1,0 +1,56 @@
+{
+  "status": "fresh_bundle_extraction_verified",
+  "archive_sha256": "da6e67a42dd984e5d97029304e54e437d76a09843be73adbf98e1990d7f1a8ae",
+  "all_bundle_file_hashes_verified": true,
+  "development_scenarios": 3400,
+  "development_examples": 17680,
+  "semantic_tests_executed": 12,
+  "gate_tests_executed": 1,
+  "archived_r4_gate_tests_skipped": 2,
+  "local_original_checkout_tests_passed": 15,
+  "dependencies_reused_for_check_only": true,
+  "final_labels_accessed": false,
+  "final_labels_generated": false,
+  "training_started": false,
+  "new_API_calls": 0,
+  "jobs": [
+    {
+      "arguments": [
+        "scripts/build-corpus-v7-reviewed.py",
+        "--verify",
+        "--output",
+        "corpus-v7/v7-20261009-r7-dev"
+      ],
+      "exit_code": 0,
+      "log_sha256": "b1ed97ee6f86652e4ebe8afdfb98f9ad65d26541d41a718bf44775916c94b1fe"
+    },
+    {
+      "arguments": [
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_v7_agent_review.py"
+      ],
+      "exit_code": 0,
+      "log_sha256": "bb6f247a70c9ff8321a625d453bebf799334adabe2d5901741d062b39bdad2a1"
+    },
+    {
+      "arguments": [
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_v7_review_gate.py"
+      ],
+      "exit_code": 0,
+      "log_sha256": "7645573d60599c56e52a8acedfd95e344c4c00d40cd54f675171ccb0f9a36506"
+    }
+  ]
+}

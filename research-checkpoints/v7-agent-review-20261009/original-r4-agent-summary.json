@@ -1,0 +1,2410 @@
+{
+  "corpus_version": "v7-20261008-r4",
+  "corpus_manifest_sha256": "65a65f84a8e30cb98d1ef981e67fb3602ebe605e306ff8f154e4da2936cdb3b4",
+  "reviewer_type": "agent",
+  "audit_version": 2,
+  "reviewed_utc": "2026-10-09T09:57:08.318787+00:00",
+  "scope": "Targeted programmatic pass over all development records; clause/template interpretation by Codex. Not 524 independently read human conversations.",
+  "development_scenarios": 3400,
+  "development_turns": 17680,
+  "sample_scenarios": 524,
+  "sample_decisions": {
+    "no_issue_detected_by_checks": 220,
+    "revise": 304
+  },
+  "issue_occurrences": {
+    "roman_urdu_duration_inflection": 768,
+    "weak_confirmation_wording": 680,
+    "scope_mismatch": 62,
+    "unchanged_provided_update": 125,
+    "unclear_cadence_resolution": 340,
+    "rejected_alternative_in_positive_target": 600
+  },
+  "scenarios_with_issues": 1318,
+  "affected_scenarios_by_issue": {
+    "unchanged_provided_update": 82,
+    "scope_mismatch": 62,
+    "rejected_alternative_in_positive_target": 300,
+    "weak_confirmation_wording": 340,
+    "unclear_cadence_resolution": 340,
+    "roman_urdu_duration_inflection": 426,
+    "positive_target_also_rejected": 0
+  },
+  "boolean_supervision": {
+    "known_seasonality": {
+      "true": 230,
+      "false": 171
+    },
+    "allow_negative_values": {
+      "true": 116,
+      "false": 284
+    },
+    "contains_sensitive_data": {
+      "false": 236,
+      "true": 171
+    },
+    "business_days_only": {
+      "false": 48,
+      "true": 11
+    },
+    "provenance_required": {
+      "false": 63
+    },
+    "human_approval_required": {
+      "false": 62
+    }
+  },
+  "constant_horizon_domain_category_cells": 165,
+  "constant_horizon_cells": [
+    {
+      "domain": "temperature",
+      "category": "core_recall",
+      "horizon": {
+        "periods": 4,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "temperature",
+      "category": "correction_chain",
+      "horizon": {
+        "periods": 6,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "temperature",
+      "category": "confirmation_status",
+      "horizon": {
+        "periods": 8,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "temperature",
+      "category": "lifecycle_dense",
+      "horizon": {
+        "periods": 10,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "temperature",
+      "category": "encoding_literal",
+      "horizon": {
+        "periods": 12,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "precipitation",
+      "category": "core_recall",
+      "horizon": {
+        "periods": 5,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "precipitation",
+      "category": "correction_chain",
+      "horizon": {
+        "periods": 7,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "precipitation",
+      "category": "confirmation_status",
+      "horizon": {
+        "periods": 9,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "precipitation",
+      "category": "lifecycle_dense",
+      "horizon": {
+        "periods": 11,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "precipitation",
+      "category": "encoding_literal",
+      "horizon": {
+        "periods": 13,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "wind",
+      "category": "cadence_contrast",
+      "horizon": {
+        "periods": 7,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "wind",
+      "category": "unknown_then_value",
+      "horizon": {
+        "periods": 9,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "wind",
+      "category": "explicit_state_repair",
+      "horizon": {
+        "periods": 11,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "wind",
+      "category": "target_contrast",
+      "horizon": {
+        "periods": 13,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "wind",
+      "category": "ambiguous_then_clarified",
+      "horizon": {
+        "periods": 15,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "humidity_pressure",
+      "category": "core_recall",
+      "horizon": {
+        "periods": 7,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "humidity_pressure",
+      "category": "correction_chain",
+      "horizon": {
+        "periods": 9,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "humidity_pressure",
+      "category": "confirmation_status",
+      "horizon": {
+        "periods": 11,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "humidity_pressure",
+      "category": "lifecycle_dense",
+      "horizon": {
+        "periods": 13,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "humidity_pressure",
+      "category": "encoding_literal",
+      "horizon": {
+        "periods": 15,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "solar_cloud",
+      "category": "cadence_contrast",
+      "horizon": {
+        "periods": 9,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "solar_cloud",
+      "category": "unknown_then_value",
+      "horizon": {
+        "periods": 11,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "solar_cloud",
+      "category": "explicit_state_repair",
+      "horizon": {
+        "periods": 13,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "solar_cloud",
+      "category": "target_contrast",
+      "horizon": {
+        "periods": 15,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "solar_cloud",
+      "category": "ambiguous_then_clarified",
+      "horizon": {
+        "periods": 17,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "weather_extremes",
+      "category": "cadence_contrast",
+      "horizon": {
+        "periods": 10,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "weather_extremes",
+      "category": "unknown_then_value",
+      "horizon": {
+        "periods": 12,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "weather_extremes",
+      "category": "explicit_state_repair",
+      "horizon": {
+        "periods": 14,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "weather_extremes",
+      "category": "target_contrast",
+      "horizon": {
+        "periods": 16,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "weather_extremes",
+      "category": "ambiguous_then_clarified",
+      "horizon": {
+        "periods": 18,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "inflation_prices",
+      "category": "core_recall",
+      "horizon": {
+        "periods": 10,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "inflation_prices",
+      "category": "cadence_contrast",
+      "horizon": {
+        "periods": 11,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "inflation_prices",
+      "category": "correction_chain",
+      "horizon": {
+        "periods": 12,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "inflation_prices",
+      "category": "unknown_then_value",
+      "horizon": {
+        "periods": 13,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "inflation_prices",
+      "category": "confirmation_status",
+      "horizon": {
+        "periods": 14,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "inflation_prices",
+      "category": "explicit_state_repair",
+      "horizon": {
+        "periods": 15,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "inflation_prices",
+      "category": "lifecycle_dense",
+      "horizon": {
+        "periods": 16,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "inflation_prices",
+      "category": "target_contrast",
+      "horizon": {
+        "periods": 17,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "inflation_prices",
+      "category": "encoding_literal",
+      "horizon": {
+        "periods": 18,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "inflation_prices",
+      "category": "ambiguous_then_clarified",
+      "horizon": {
+        "periods": 19,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "output_growth",
+      "category": "cadence_contrast",
+      "horizon": {
+        "periods": 12,
+        "unit": "quarter"
+      }
+    },
+    {
+      "domain": "output_growth",
+      "category": "unknown_then_value",
+      "horizon": {
+        "periods": 14,
+        "unit": "quarter"
+      }
+    },
+    {
+      "domain": "output_growth",
+      "category": "explicit_state_repair",
+      "horizon": {
+        "periods": 16,
+        "unit": "quarter"
+      }
+    },
+    {
+      "domain": "output_growth",
+      "category": "target_contrast",
+      "horizon": {
+        "periods": 18,
+        "unit": "quarter"
+      }
+    },
+    {
+      "domain": "output_growth",
+      "category": "ambiguous_then_clarified",
+      "horizon": {
+        "periods": 20,
+        "unit": "quarter"
+      }
+    },
+    {
+      "domain": "labor_employment",
+      "category": "core_recall",
+      "horizon": {
+        "periods": 12,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "labor_employment",
+      "category": "cadence_contrast",
+      "horizon": {
+        "periods": 13,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "labor_employment",
+      "category": "correction_chain",
+      "horizon": {
+        "periods": 14,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "labor_employment",
+      "category": "unknown_then_value",
+      "horizon": {
+        "periods": 15,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "labor_employment",
+      "category": "confirmation_status",
+      "horizon": {
+        "periods": 16,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "labor_employment",
+      "category": "explicit_state_repair",
+      "horizon": {
+        "periods": 17,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "labor_employment",
+      "category": "lifecycle_dense",
+      "horizon": {
+        "periods": 18,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "labor_employment",
+      "category": "target_contrast",
+      "horizon": {
+        "periods": 19,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "labor_employment",
+      "category": "encoding_literal",
+      "horizon": {
+        "periods": 20,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "labor_employment",
+      "category": "ambiguous_then_clarified",
+      "horizon": {
+        "periods": 4,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "rates_fixed_income",
+      "category": "core_recall",
+      "horizon": {
+        "periods": 13,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "rates_fixed_income",
+      "category": "cadence_contrast",
+      "horizon": {
+        "periods": 14,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "rates_fixed_income",
+      "category": "correction_chain",
+      "horizon": {
+        "periods": 15,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "rates_fixed_income",
+      "category": "unknown_then_value",
+      "horizon": {
+        "periods": 16,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "rates_fixed_income",
+      "category": "confirmation_status",
+      "horizon": {
+        "periods": 17,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "rates_fixed_income",
+      "category": "explicit_state_repair",
+      "horizon": {
+        "periods": 18,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "rates_fixed_income",
+      "category": "lifecycle_dense",
+      "horizon": {
+        "periods": 19,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "rates_fixed_income",
+      "category": "target_contrast",
+      "horizon": {
+        "periods": 20,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "rates_fixed_income",
+      "category": "encoding_literal",
+      "horizon": {
+        "periods": 4,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "rates_fixed_income",
+      "category": "ambiguous_then_clarified",
+      "horizon": {
+        "periods": 5,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "equities_funds",
+      "category": "core_recall",
+      "horizon": {
+        "periods": 14,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "equities_funds",
+      "category": "cadence_contrast",
+      "horizon": {
+        "periods": 15,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "equities_funds",
+      "category": "correction_chain",
+      "horizon": {
+        "periods": 16,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "equities_funds",
+      "category": "unknown_then_value",
+      "horizon": {
+        "periods": 17,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "equities_funds",
+      "category": "confirmation_status",
+      "horizon": {
+        "periods": 18,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "equities_funds",
+      "category": "explicit_state_repair",
+      "horizon": {
+        "periods": 19,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "equities_funds",
+      "category": "lifecycle_dense",
+      "horizon": {
+        "periods": 20,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "equities_funds",
+      "category": "target_contrast",
+      "horizon": {
+        "periods": 4,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "equities_funds",
+      "category": "encoding_literal",
+      "horizon": {
+        "periods": 5,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "equities_funds",
+      "category": "ambiguous_then_clarified",
+      "horizon": {
+        "periods": 6,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "foreign_exchange",
+      "category": "core_recall",
+      "horizon": {
+        "periods": 15,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "foreign_exchange",
+      "category": "cadence_contrast",
+      "horizon": {
+        "periods": 16,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "foreign_exchange",
+      "category": "correction_chain",
+      "horizon": {
+        "periods": 17,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "foreign_exchange",
+      "category": "unknown_then_value",
+      "horizon": {
+        "periods": 18,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "foreign_exchange",
+      "category": "confirmation_status",
+      "horizon": {
+        "periods": 19,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "foreign_exchange",
+      "category": "explicit_state_repair",
+      "horizon": {
+        "periods": 20,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "foreign_exchange",
+      "category": "lifecycle_dense",
+      "horizon": {
+        "periods": 4,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "foreign_exchange",
+      "category": "target_contrast",
+      "horizon": {
+        "periods": 5,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "foreign_exchange",
+      "category": "encoding_literal",
+      "horizon": {
+        "periods": 6,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "foreign_exchange",
+      "category": "ambiguous_then_clarified",
+      "horizon": {
+        "periods": 7,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "commodities",
+      "category": "core_recall",
+      "horizon": {
+        "periods": 16,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "commodities",
+      "category": "cadence_contrast",
+      "horizon": {
+        "periods": 17,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "commodities",
+      "category": "correction_chain",
+      "horizon": {
+        "periods": 18,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "commodities",
+      "category": "unknown_then_value",
+      "horizon": {
+        "periods": 19,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "commodities",
+      "category": "confirmation_status",
+      "horizon": {
+        "periods": 20,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "commodities",
+      "category": "explicit_state_repair",
+      "horizon": {
+        "periods": 4,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "commodities",
+      "category": "lifecycle_dense",
+      "horizon": {
+        "periods": 5,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "commodities",
+      "category": "target_contrast",
+      "horizon": {
+        "periods": 6,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "commodities",
+      "category": "encoding_literal",
+      "horizon": {
+        "periods": 7,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "commodities",
+      "category": "ambiguous_then_clarified",
+      "horizon": {
+        "periods": 8,
+        "unit": "day"
+      }
+    },
+    {
+      "domain": "crypto_spot",
+      "category": "core_recall",
+      "horizon": {
+        "periods": 17,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "crypto_spot",
+      "category": "cadence_contrast",
+      "horizon": {
+        "periods": 18,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "crypto_spot",
+      "category": "correction_chain",
+      "horizon": {
+        "periods": 19,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "crypto_spot",
+      "category": "unknown_then_value",
+      "horizon": {
+        "periods": 20,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "crypto_spot",
+      "category": "confirmation_status",
+      "horizon": {
+        "periods": 4,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "crypto_spot",
+      "category": "explicit_state_repair",
+      "horizon": {
+        "periods": 5,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "crypto_spot",
+      "category": "lifecycle_dense",
+      "horizon": {
+        "periods": 6,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "crypto_spot",
+      "category": "target_contrast",
+      "horizon": {
+        "periods": 7,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "crypto_spot",
+      "category": "encoding_literal",
+      "horizon": {
+        "periods": 8,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "crypto_spot",
+      "category": "ambiguous_then_clarified",
+      "horizon": {
+        "periods": 9,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "crypto_derivatives",
+      "category": "core_recall",
+      "horizon": {
+        "periods": 18,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "crypto_derivatives",
+      "category": "cadence_contrast",
+      "horizon": {
+        "periods": 19,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "crypto_derivatives",
+      "category": "correction_chain",
+      "horizon": {
+        "periods": 20,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "crypto_derivatives",
+      "category": "unknown_then_value",
+      "horizon": {
+        "periods": 4,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "crypto_derivatives",
+      "category": "confirmation_status",
+      "horizon": {
+        "periods": 5,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "crypto_derivatives",
+      "category": "explicit_state_repair",
+      "horizon": {
+        "periods": 6,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "crypto_derivatives",
+      "category": "lifecycle_dense",
+      "horizon": {
+        "periods": 7,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "crypto_derivatives",
+      "category": "target_contrast",
+      "horizon": {
+        "periods": 8,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "crypto_derivatives",
+      "category": "encoding_literal",
+      "horizon": {
+        "periods": 9,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "crypto_derivatives",
+      "category": "ambiguous_then_clarified",
+      "horizon": {
+        "periods": 10,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "housing_property",
+      "category": "core_recall",
+      "horizon": {
+        "periods": 19,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "housing_property",
+      "category": "cadence_contrast",
+      "horizon": {
+        "periods": 20,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "housing_property",
+      "category": "correction_chain",
+      "horizon": {
+        "periods": 4,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "housing_property",
+      "category": "unknown_then_value",
+      "horizon": {
+        "periods": 5,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "housing_property",
+      "category": "confirmation_status",
+      "horizon": {
+        "periods": 6,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "housing_property",
+      "category": "explicit_state_repair",
+      "horizon": {
+        "periods": 7,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "housing_property",
+      "category": "lifecycle_dense",
+      "horizon": {
+        "periods": 8,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "housing_property",
+      "category": "target_contrast",
+      "horizon": {
+        "periods": 9,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "housing_property",
+      "category": "encoding_literal",
+      "horizon": {
+        "periods": 10,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "housing_property",
+      "category": "ambiguous_then_clarified",
+      "horizon": {
+        "periods": 11,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "trade_fiscal",
+      "category": "core_recall",
+      "horizon": {
+        "periods": 20,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "trade_fiscal",
+      "category": "cadence_contrast",
+      "horizon": {
+        "periods": 4,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "trade_fiscal",
+      "category": "correction_chain",
+      "horizon": {
+        "periods": 5,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "trade_fiscal",
+      "category": "unknown_then_value",
+      "horizon": {
+        "periods": 6,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "trade_fiscal",
+      "category": "confirmation_status",
+      "horizon": {
+        "periods": 7,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "trade_fiscal",
+      "category": "explicit_state_repair",
+      "horizon": {
+        "periods": 8,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "trade_fiscal",
+      "category": "lifecycle_dense",
+      "horizon": {
+        "periods": 9,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "trade_fiscal",
+      "category": "target_contrast",
+      "horizon": {
+        "periods": 10,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "trade_fiscal",
+      "category": "encoding_literal",
+      "horizon": {
+        "periods": 11,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "trade_fiscal",
+      "category": "ambiguous_then_clarified",
+      "horizon": {
+        "periods": 12,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "corporate_finance",
+      "category": "core_recall",
+      "horizon": {
+        "periods": 4,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "corporate_finance",
+      "category": "cadence_contrast",
+      "horizon": {
+        "periods": 5,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "corporate_finance",
+      "category": "correction_chain",
+      "horizon": {
+        "periods": 6,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "corporate_finance",
+      "category": "unknown_then_value",
+      "horizon": {
+        "periods": 7,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "corporate_finance",
+      "category": "confirmation_status",
+      "horizon": {
+        "periods": 8,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "corporate_finance",
+      "category": "explicit_state_repair",
+      "horizon": {
+        "periods": 9,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "corporate_finance",
+      "category": "lifecycle_dense",
+      "horizon": {
+        "periods": 10,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "corporate_finance",
+      "category": "target_contrast",
+      "horizon": {
+        "periods": 11,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "corporate_finance",
+      "category": "encoding_literal",
+      "horizon": {
+        "periods": 12,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "corporate_finance",
+      "category": "ambiguous_then_clarified",
+      "horizon": {
+        "periods": 13,
+        "unit": "month"
+      }
+    },
+    {
+      "domain": "weather_energy",
+      "category": "core_recall",
+      "horizon": {
+        "periods": 5,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "weather_energy",
+      "category": "cadence_contrast",
+      "horizon": {
+        "periods": 6,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "weather_energy",
+      "category": "correction_chain",
+      "horizon": {
+        "periods": 7,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "weather_energy",
+      "category": "unknown_then_value",
+      "horizon": {
+        "periods": 8,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "weather_energy",
+      "category": "confirmation_status",
+      "horizon": {
+        "periods": 9,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "weather_energy",
+      "category": "explicit_state_repair",
+      "horizon": {
+        "periods": 10,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "weather_energy",
+      "category": "lifecycle_dense",
+      "horizon": {
+        "periods": 11,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "weather_energy",
+      "category": "target_contrast",
+      "horizon": {
+        "periods": 12,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "weather_energy",
+      "category": "encoding_literal",
+      "horizon": {
+        "periods": 13,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "weather_energy",
+      "category": "ambiguous_then_clarified",
+      "horizon": {
+        "periods": 14,
+        "unit": "hour"
+      }
+    },
+    {
+      "domain": "weather_agriculture",
+      "category": "core_recall",
+      "horizon": {
+        "periods": 6,
+        "unit": "week"
+      }
+    },
+    {
+      "domain": "weather_agriculture",
+      "category": "cadence_contrast",
+      "horizon": {
+        "periods": 7,
+        "unit": "week"
+      }
+    },
+    {
+      "domain": "weather_agriculture",
+      "category": "correction_chain",
+      "horizon": {
+        "periods": 8,
+        "unit": "week"
+      }
+    },
+    {
+      "domain": "weather_agriculture",
+      "category": "unknown_then_value",
+      "horizon": {
+        "periods": 9,
+        "unit": "week"
+      }
+    },
+    {
+      "domain": "weather_agriculture",
+      "category": "confirmation_status",
+      "horizon": {
+        "periods": 10,
+        "unit": "week"
+      }
+    },
+    {
+      "domain": "weather_agriculture",
+      "category": "explicit_state_repair",
+      "horizon": {
+        "periods": 11,
+        "unit": "week"
+      }
+    },
+    {
+      "domain": "weather_agriculture",
+      "category": "lifecycle_dense",
+      "horizon": {
+        "periods": 12,
+        "unit": "week"
+      }
+    },
+    {
+      "domain": "weather_agriculture",
+      "category": "target_contrast",
+      "horizon": {
+        "periods": 13,
+        "unit": "week"
+      }
+    },
+    {
+      "domain": "weather_agriculture",
+      "category": "encoding_literal",
+      "horizon": {
+        "periods": 14,
+        "unit": "week"
+      }
+    },
+    {
+      "domain": "weather_agriculture",
+      "category": "ambiguous_then_clarified",
+      "horizon": {
+        "periods": 15,
+        "unit": "week"
+      }
+    }
+  ],
+  "constant_horizon_period_cells": 200,
+  "target_form_counts_per_domain_category": [
+    {
+      "domain": "commodities",
+      "category": "ambiguous_then_clarified",
+      "target_forms": 2
+    },
+    {
+      "domain": "commodities",
+      "category": "cadence_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "commodities",
+      "category": "confirmation_status",
+      "target_forms": 2
+    },
+    {
+      "domain": "commodities",
+      "category": "core_recall",
+      "target_forms": 2
+    },
+    {
+      "domain": "commodities",
+      "category": "correction_chain",
+      "target_forms": 2
+    },
+    {
+      "domain": "commodities",
+      "category": "encoding_literal",
+      "target_forms": 2
+    },
+    {
+      "domain": "commodities",
+      "category": "explicit_state_repair",
+      "target_forms": 2
+    },
+    {
+      "domain": "commodities",
+      "category": "lifecycle_dense",
+      "target_forms": 2
+    },
+    {
+      "domain": "commodities",
+      "category": "target_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "commodities",
+      "category": "unknown_then_value",
+      "target_forms": 2
+    },
+    {
+      "domain": "corporate_finance",
+      "category": "ambiguous_then_clarified",
+      "target_forms": 2
+    },
+    {
+      "domain": "corporate_finance",
+      "category": "cadence_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "corporate_finance",
+      "category": "confirmation_status",
+      "target_forms": 2
+    },
+    {
+      "domain": "corporate_finance",
+      "category": "core_recall",
+      "target_forms": 2
+    },
+    {
+      "domain": "corporate_finance",
+      "category": "correction_chain",
+      "target_forms": 2
+    },
+    {
+      "domain": "corporate_finance",
+      "category": "encoding_literal",
+      "target_forms": 2
+    },
+    {
+      "domain": "corporate_finance",
+      "category": "explicit_state_repair",
+      "target_forms": 2
+    },
+    {
+      "domain": "corporate_finance",
+      "category": "lifecycle_dense",
+      "target_forms": 2
+    },
+    {
+      "domain": "corporate_finance",
+      "category": "target_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "corporate_finance",
+      "category": "unknown_then_value",
+      "target_forms": 2
+    },
+    {
+      "domain": "crypto_derivatives",
+      "category": "ambiguous_then_clarified",
+      "target_forms": 2
+    },
+    {
+      "domain": "crypto_derivatives",
+      "category": "cadence_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "crypto_derivatives",
+      "category": "confirmation_status",
+      "target_forms": 2
+    },
+    {
+      "domain": "crypto_derivatives",
+      "category": "core_recall",
+      "target_forms": 2
+    },
+    {
+      "domain": "crypto_derivatives",
+      "category": "correction_chain",
+      "target_forms": 2
+    },
+    {
+      "domain": "crypto_derivatives",
+      "category": "encoding_literal",
+      "target_forms": 2
+    },
+    {
+      "domain": "crypto_derivatives",
+      "category": "explicit_state_repair",
+      "target_forms": 2
+    },
+    {
+      "domain": "crypto_derivatives",
+      "category": "lifecycle_dense",
+      "target_forms": 2
+    },
+    {
+      "domain": "crypto_derivatives",
+      "category": "target_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "crypto_derivatives",
+      "category": "unknown_then_value",
+      "target_forms": 2
+    },
+    {
+      "domain": "crypto_spot",
+      "category": "ambiguous_then_clarified",
+      "target_forms": 2
+    },
+    {
+      "domain": "crypto_spot",
+      "category": "cadence_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "crypto_spot",
+      "category": "confirmation_status",
+      "target_forms": 2
+    },
+    {
+      "domain": "crypto_spot",
+      "category": "core_recall",
+      "target_forms": 2
+    },
+    {
+      "domain": "crypto_spot",
+      "category": "correction_chain",
+      "target_forms": 2
+    },
+    {
+      "domain": "crypto_spot",
+      "category": "encoding_literal",
+      "target_forms": 2
+    },
+    {
+      "domain": "crypto_spot",
+      "category": "explicit_state_repair",
+      "target_forms": 2
+    },
+    {
+      "domain": "crypto_spot",
+      "category": "lifecycle_dense",
+      "target_forms": 2
+    },
+    {
+      "domain": "crypto_spot",
+      "category": "target_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "crypto_spot",
+      "category": "unknown_then_value",
+      "target_forms": 2
+    },
+    {
+      "domain": "equities_funds",
+      "category": "ambiguous_then_clarified",
+      "target_forms": 2
+    },
+    {
+      "domain": "equities_funds",
+      "category": "cadence_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "equities_funds",
+      "category": "confirmation_status",
+      "target_forms": 2
+    },
+    {
+      "domain": "equities_funds",
+      "category": "core_recall",
+      "target_forms": 2
+    },
+    {
+      "domain": "equities_funds",
+      "category": "correction_chain",
+      "target_forms": 2
+    },
+    {
+      "domain": "equities_funds",
+      "category": "encoding_literal",
+      "target_forms": 2
+    },
+    {
+      "domain": "equities_funds",
+      "category": "explicit_state_repair",
+      "target_forms": 2
+    },
+    {
+      "domain": "equities_funds",
+      "category": "lifecycle_dense",
+      "target_forms": 2
+    },
+    {
+      "domain": "equities_funds",
+      "category": "target_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "equities_funds",
+      "category": "unknown_then_value",
+      "target_forms": 2
+    },
+    {
+      "domain": "foreign_exchange",
+      "category": "ambiguous_then_clarified",
+      "target_forms": 2
+    },
+    {
+      "domain": "foreign_exchange",
+      "category": "cadence_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "foreign_exchange",
+      "category": "confirmation_status",
+      "target_forms": 2
+    },
+    {
+      "domain": "foreign_exchange",
+      "category": "core_recall",
+      "target_forms": 2
+    },
+    {
+      "domain": "foreign_exchange",
+      "category": "correction_chain",
+      "target_forms": 2
+    },
+    {
+      "domain": "foreign_exchange",
+      "category": "encoding_literal",
+      "target_forms": 2
+    },
+    {
+      "domain": "foreign_exchange",
+      "category": "explicit_state_repair",
+      "target_forms": 2
+    },
+    {
+      "domain": "foreign_exchange",
+      "category": "lifecycle_dense",
+      "target_forms": 2
+    },
+    {
+      "domain": "foreign_exchange",
+      "category": "target_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "foreign_exchange",
+      "category": "unknown_then_value",
+      "target_forms": 2
+    },
+    {
+      "domain": "housing_property",
+      "category": "ambiguous_then_clarified",
+      "target_forms": 2
+    },
+    {
+      "domain": "housing_property",
+      "category": "cadence_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "housing_property",
+      "category": "confirmation_status",
+      "target_forms": 2
+    },
+    {
+      "domain": "housing_property",
+      "category": "core_recall",
+      "target_forms": 2
+    },
+    {
+      "domain": "housing_property",
+      "category": "correction_chain",
+      "target_forms": 2
+    },
+    {
+      "domain": "housing_property",
+      "category": "encoding_literal",
+      "target_forms": 2
+    },
+    {
+      "domain": "housing_property",
+      "category": "explicit_state_repair",
+      "target_forms": 2
+    },
+    {
+      "domain": "housing_property",
+      "category": "lifecycle_dense",
+      "target_forms": 2
+    },
+    {
+      "domain": "housing_property",
+      "category": "target_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "housing_property",
+      "category": "unknown_then_value",
+      "target_forms": 2
+    },
+    {
+      "domain": "humidity_pressure",
+      "category": "ambiguous_then_clarified",
+      "target_forms": 2
+    },
+    {
+      "domain": "humidity_pressure",
+      "category": "cadence_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "humidity_pressure",
+      "category": "confirmation_status",
+      "target_forms": 2
+    },
+    {
+      "domain": "humidity_pressure",
+      "category": "core_recall",
+      "target_forms": 2
+    },
+    {
+      "domain": "humidity_pressure",
+      "category": "correction_chain",
+      "target_forms": 2
+    },
+    {
+      "domain": "humidity_pressure",
+      "category": "encoding_literal",
+      "target_forms": 2
+    },
+    {
+      "domain": "humidity_pressure",
+      "category": "explicit_state_repair",
+      "target_forms": 2
+    },
+    {
+      "domain": "humidity_pressure",
+      "category": "lifecycle_dense",
+      "target_forms": 2
+    },
+    {
+      "domain": "humidity_pressure",
+      "category": "target_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "humidity_pressure",
+      "category": "unknown_then_value",
+      "target_forms": 2
+    },
+    {
+      "domain": "inflation_prices",
+      "category": "ambiguous_then_clarified",
+      "target_forms": 2
+    },
+    {
+      "domain": "inflation_prices",
+      "category": "cadence_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "inflation_prices",
+      "category": "confirmation_status",
+      "target_forms": 2
+    },
+    {
+      "domain": "inflation_prices",
+      "category": "core_recall",
+      "target_forms": 2
+    },
+    {
+      "domain": "inflation_prices",
+      "category": "correction_chain",
+      "target_forms": 2
+    },
+    {
+      "domain": "inflation_prices",
+      "category": "encoding_literal",
+      "target_forms": 2
+    },
+    {
+      "domain": "inflation_prices",
+      "category": "explicit_state_repair",
+      "target_forms": 2
+    },
+    {
+      "domain": "inflation_prices",
+      "category": "lifecycle_dense",
+      "target_forms": 2
+    },
+    {
+      "domain": "inflation_prices",
+      "category": "target_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "inflation_prices",
+      "category": "unknown_then_value",
+      "target_forms": 2
+    },
+    {
+      "domain": "labor_employment",
+      "category": "ambiguous_then_clarified",
+      "target_forms": 2
+    },
+    {
+      "domain": "labor_employment",
+      "category": "cadence_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "labor_employment",
+      "category": "confirmation_status",
+      "target_forms": 2
+    },
+    {
+      "domain": "labor_employment",
+      "category": "core_recall",
+      "target_forms": 2
+    },
+    {
+      "domain": "labor_employment",
+      "category": "correction_chain",
+      "target_forms": 2
+    },
+    {
+      "domain": "labor_employment",
+      "category": "encoding_literal",
+      "target_forms": 2
+    },
+    {
+      "domain": "labor_employment",
+      "category": "explicit_state_repair",
+      "target_forms": 2
+    },
+    {
+      "domain": "labor_employment",
+      "category": "lifecycle_dense",
+      "target_forms": 2
+    },
+    {
+      "domain": "labor_employment",
+      "category": "target_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "labor_employment",
+      "category": "unknown_then_value",
+      "target_forms": 2
+    },
+    {
+      "domain": "output_growth",
+      "category": "ambiguous_then_clarified",
+      "target_forms": 2
+    },
+    {
+      "domain": "output_growth",
+      "category": "cadence_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "output_growth",
+      "category": "confirmation_status",
+      "target_forms": 2
+    },
+    {
+      "domain": "output_growth",
+      "category": "core_recall",
+      "target_forms": 2
+    },
+    {
+      "domain": "output_growth",
+      "category": "correction_chain",
+      "target_forms": 2
+    },
+    {
+      "domain": "output_growth",
+      "category": "encoding_literal",
+      "target_forms": 2
+    },
+    {
+      "domain": "output_growth",
+      "category": "explicit_state_repair",
+      "target_forms": 2
+    },
+    {
+      "domain": "output_growth",
+      "category": "lifecycle_dense",
+      "target_forms": 2
+    },
+    {
+      "domain": "output_growth",
+      "category": "target_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "output_growth",
+      "category": "unknown_then_value",
+      "target_forms": 2
+    },
+    {
+      "domain": "precipitation",
+      "category": "ambiguous_then_clarified",
+      "target_forms": 2
+    },
+    {
+      "domain": "precipitation",
+      "category": "cadence_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "precipitation",
+      "category": "confirmation_status",
+      "target_forms": 2
+    },
+    {
+      "domain": "precipitation",
+      "category": "core_recall",
+      "target_forms": 2
+    },
+    {
+      "domain": "precipitation",
+      "category": "correction_chain",
+      "target_forms": 2
+    },
+    {
+      "domain": "precipitation",
+      "category": "encoding_literal",
+      "target_forms": 2
+    },
+    {
+      "domain": "precipitation",
+      "category": "explicit_state_repair",
+      "target_forms": 2
+    },
+    {
+      "domain": "precipitation",
+      "category": "lifecycle_dense",
+      "target_forms": 2
+    },
+    {
+      "domain": "precipitation",
+      "category": "target_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "precipitation",
+      "category": "unknown_then_value",
+      "target_forms": 2
+    },
+    {
+      "domain": "rates_fixed_income",
+      "category": "ambiguous_then_clarified",
+      "target_forms": 4
+    },
+    {
+      "domain": "rates_fixed_income",
+      "category": "cadence_contrast",
+      "target_forms": 4
+    },
+    {
+      "domain": "rates_fixed_income",
+      "category": "confirmation_status",
+      "target_forms": 4
+    },
+    {
+      "domain": "rates_fixed_income",
+      "category": "core_recall",
+      "target_forms": 4
+    },
+    {
+      "domain": "rates_fixed_income",
+      "category": "correction_chain",
+      "target_forms": 4
+    },
+    {
+      "domain": "rates_fixed_income",
+      "category": "encoding_literal",
+      "target_forms": 4
+    },
+    {
+      "domain": "rates_fixed_income",
+      "category": "explicit_state_repair",
+      "target_forms": 4
+    },
+    {
+      "domain": "rates_fixed_income",
+      "category": "lifecycle_dense",
+      "target_forms": 4
+    },
+    {
+      "domain": "rates_fixed_income",
+      "category": "target_contrast",
+      "target_forms": 4
+    },
+    {
+      "domain": "rates_fixed_income",
+      "category": "unknown_then_value",
+      "target_forms": 4
+    },
+    {
+      "domain": "solar_cloud",
+      "category": "ambiguous_then_clarified",
+      "target_forms": 2
+    },
+    {
+      "domain": "solar_cloud",
+      "category": "cadence_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "solar_cloud",
+      "category": "confirmation_status",
+      "target_forms": 2
+    },
+    {
+      "domain": "solar_cloud",
+      "category": "core_recall",
+      "target_forms": 2
+    },
+    {
+      "domain": "solar_cloud",
+      "category": "correction_chain",
+      "target_forms": 2
+    },
+    {
+      "domain": "solar_cloud",
+      "category": "encoding_literal",
+      "target_forms": 2
+    },
+    {
+      "domain": "solar_cloud",
+      "category": "explicit_state_repair",
+      "target_forms": 2
+    },
+    {
+      "domain": "solar_cloud",
+      "category": "lifecycle_dense",
+      "target_forms": 2
+    },
+    {
+      "domain": "solar_cloud",
+      "category": "target_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "solar_cloud",
+      "category": "unknown_then_value",
+      "target_forms": 2
+    },
+    {
+      "domain": "temperature",
+      "category": "ambiguous_then_clarified",
+      "target_forms": 2
+    },
+    {
+      "domain": "temperature",
+      "category": "cadence_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "temperature",
+      "category": "confirmation_status",
+      "target_forms": 2
+    },
+    {
+      "domain": "temperature",
+      "category": "core_recall",
+      "target_forms": 2
+    },
+    {
+      "domain": "temperature",
+      "category": "correction_chain",
+      "target_forms": 2
+    },
+    {
+      "domain": "temperature",
+      "category": "encoding_literal",
+      "target_forms": 2
+    },
+    {
+      "domain": "temperature",
+      "category": "explicit_state_repair",
+      "target_forms": 2
+    },
+    {
+      "domain": "temperature",
+      "category": "lifecycle_dense",
+      "target_forms": 2
+    },
+    {
+      "domain": "temperature",
+      "category": "target_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "temperature",
+      "category": "unknown_then_value",
+      "target_forms": 2
+    },
+    {
+      "domain": "trade_fiscal",
+      "category": "ambiguous_then_clarified",
+      "target_forms": 2
+    },
+    {
+      "domain": "trade_fiscal",
+      "category": "cadence_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "trade_fiscal",
+      "category": "confirmation_status",
+      "target_forms": 2
+    },
+    {
+      "domain": "trade_fiscal",
+      "category": "core_recall",
+      "target_forms": 2
+    },
+    {
+      "domain": "trade_fiscal",
+      "category": "correction_chain",
+      "target_forms": 2
+    },
+    {
+      "domain": "trade_fiscal",
+      "category": "encoding_literal",
+      "target_forms": 2
+    },
+    {
+      "domain": "trade_fiscal",
+      "category": "explicit_state_repair",
+      "target_forms": 2
+    },
+    {
+      "domain": "trade_fiscal",
+      "category": "lifecycle_dense",
+      "target_forms": 2
+    },
+    {
+      "domain": "trade_fiscal",
+      "category": "target_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "trade_fiscal",
+      "category": "unknown_then_value",
+      "target_forms": 2
+    },
+    {
+      "domain": "weather_agriculture",
+      "category": "ambiguous_then_clarified",
+      "target_forms": 2
+    },
+    {
+      "domain": "weather_agriculture",
+      "category": "cadence_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "weather_agriculture",
+      "category": "confirmation_status",
+      "target_forms": 2
+    },
+    {
+      "domain": "weather_agriculture",
+      "category": "core_recall",
+      "target_forms": 2
+    },
+    {
+      "domain": "weather_agriculture",
+      "category": "correction_chain",
+      "target_forms": 2
+    },
+    {
+      "domain": "weather_agriculture",
+      "category": "encoding_literal",
+      "target_forms": 2
+    },
+    {
+      "domain": "weather_agriculture",
+      "category": "explicit_state_repair",
+      "target_forms": 2
+    },
+    {
+      "domain": "weather_agriculture",
+      "category": "lifecycle_dense",
+      "target_forms": 2
+    },
+    {
+      "domain": "weather_agriculture",
+      "category": "target_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "weather_agriculture",
+      "category": "unknown_then_value",
+      "target_forms": 2
+    },
+    {
+      "domain": "weather_energy",
+      "category": "ambiguous_then_clarified",
+      "target_forms": 2
+    },
+    {
+      "domain": "weather_energy",
+      "category": "cadence_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "weather_energy",
+      "category": "confirmation_status",
+      "target_forms": 2
+    },
+    {
+      "domain": "weather_energy",
+      "category": "core_recall",
+      "target_forms": 2
+    },
+    {
+      "domain": "weather_energy",
+      "category": "correction_chain",
+      "target_forms": 2
+    },
+    {
+      "domain": "weather_energy",
+      "category": "encoding_literal",
+      "target_forms": 2
+    },
+    {
+      "domain": "weather_energy",
+      "category": "explicit_state_repair",
+      "target_forms": 2
+    },
+    {
+      "domain": "weather_energy",
+      "category": "lifecycle_dense",
+      "target_forms": 2
+    },
+    {
+      "domain": "weather_energy",
+      "category": "target_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "weather_energy",
+      "category": "unknown_then_value",
+      "target_forms": 2
+    },
+    {
+      "domain": "weather_extremes",
+      "category": "ambiguous_then_clarified",
+      "target_forms": 2
+    },
+    {
+      "domain": "weather_extremes",
+      "category": "cadence_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "weather_extremes",
+      "category": "confirmation_status",
+      "target_forms": 2
+    },
+    {
+      "domain": "weather_extremes",
+      "category": "core_recall",
+      "target_forms": 2
+    },
+    {
+      "domain": "weather_extremes",
+      "category": "correction_chain",
+      "target_forms": 2
+    },
+    {
+      "domain": "weather_extremes",
+      "category": "encoding_literal",
+      "target_forms": 2
+    },
+    {
+      "domain": "weather_extremes",
+      "category": "explicit_state_repair",
+      "target_forms": 2
+    },
+    {
+      "domain": "weather_extremes",
+      "category": "lifecycle_dense",
+      "target_forms": 2
+    },
+    {
+      "domain": "weather_extremes",
+      "category": "target_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "weather_extremes",
+      "category": "unknown_then_value",
+      "target_forms": 2
+    },
+    {
+      "domain": "wind",
+      "category": "ambiguous_then_clarified",
+      "target_forms": 2
+    },
+    {
+      "domain": "wind",
+      "category": "cadence_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "wind",
+      "category": "confirmation_status",
+      "target_forms": 1
+    },
+    {
+      "domain": "wind",
+      "category": "core_recall",
+      "target_forms": 1
+    },
+    {
+      "domain": "wind",
+      "category": "correction_chain",
+      "target_forms": 1
+    },
+    {
+      "domain": "wind",
+      "category": "encoding_literal",
+      "target_forms": 1
+    },
+    {
+      "domain": "wind",
+      "category": "explicit_state_repair",
+      "target_forms": 2
+    },
+    {
+      "domain": "wind",
+      "category": "lifecycle_dense",
+      "target_forms": 1
+    },
+    {
+      "domain": "wind",
+      "category": "target_contrast",
+      "target_forms": 2
+    },
+    {
+      "domain": "wind",
+      "category": "unknown_then_value",
+      "target_forms": 2
+    }
+  ],
+  "overlap_representatives": 35,
+  "overlap_shared_template_flags": 35,
+  "overlap_exact_message_matches": 0,
+  "overlap_same_horizon": 35,
+  "training_recommendation": "hold_for_revision",
+  "human_review": "pending",
+  "human_approvals_written": 0,
+  "final_labels_accessed": false,
+  "final_labels_generated": false,
+  "training_started": false,
+  "new_API_calls": 0,
+  "human_ledger_sha256": "961065ccbf6cf183607277ca9a37c0da1fb8afed40e2aafe689b11bab5003e28",
+  "input_hashes": {
+    "splits/train.jsonl.gz": "5b7facac11a4a32e60237cf18a49e5fe5af87ebc8fcacdcc679284913eb50086",
+    "splits/validation.jsonl.gz": "ea4c74a95a628a958175b4724e22da8d3782181c0f522634fa28358c94461f5e",
+    "review-sample.jsonl.gz": "58d83c6f04558f774435ec0e0fa7677dde6564e96559c456f19ded0ae7bb3a46",
+    "overlap-review-queue.jsonl.gz": "ded3ceff1568e8db420a223762aac7f4d25b1e00d328fc0187f62e5e72cb9db6"
+  },
+  "audit_script_sha256": "56572ce2660e643f890bbaec3d5f2148c60ccd5ecfb93c3fa10636fd200c33b8",
+  "limitations": [
+    "Flags are not an unbiased semantic error rate.",
+    "Exact candidate labels and values follow the recorded rubric; no earlier gold/results changed.",
+    "All flagged overlap representatives are a review queue, not every one of the 75 threshold pairs.",
+    "Unknown withdrawal, dont_care, conflicts, STT and independent user prose remain uncovered.",
+    "Roman Urdu technical clauses retain English field/value vocabulary; fluent speaker review required.",
+    "Confirmation and problem/target dual labeling remain policy conventions requiring human adjudication."
+  ]
+}
