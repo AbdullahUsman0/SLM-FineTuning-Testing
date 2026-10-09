@@ -1,0 +1,60 @@
+{
+  "status": "six_annotation_conventions_approved_sample_review_pending",
+  "corpus_version": "v7-20261009-r8-dev",
+  "prompt_version": "v7-user-approved-extraction-1",
+  "corpus_manifest_sha256": "4e59ba3eafa689325f94b108719da02b955e5c4f5de5571f208053e4c905da72",
+  "publication_parent": "55158784e36ad00daf240dd34cd266c16252ca7e",
+  "development_scenarios": 3400,
+  "development_SFT": 17680,
+  "new_policy_tests_passed": 7,
+  "existing_gate_tests_passed": 3,
+  "human_sample_review_complete": false,
+  "human_overlap_review_complete": false,
+  "training_approved": false,
+  "final_labels_accessed": false,
+  "final_labels_generated": false,
+  "training_started": false,
+  "new_API_calls": 0,
+  "files": {
+    "README.md": {
+      "sha256": "c06d8dced14bfeb0a57cbd067e8e6e1e288efaaf73da75e2b7ad930dd344a91a",
+      "bytes": 2013
+    },
+    "V7_APPROVED_POLICY_2026-10-09.md": {
+      "sha256": "acb3b5802b6f788b38ec2d296f5f9802edd6b68903eeaf84dde849846964c905",
+      "bytes": 5571
+    },
+    "annotation-policy.json": {
+      "sha256": "3b69e2aac27dd8f51199591828a9e9e267184253c249fcc2f26a0e3592cb274d",
+      "bytes": 2373
+    },
+    "agent-summary-r8.json": {
+      "sha256": "ca10a02c665192e2d9db8ed96c4b4b966e02e88396069b6a5a0d64dea5bd6c97",
+      "bytes": 25228
+    },
+    "length-preflight-r8-dev.json": {
+      "sha256": "5ae91d4ec64c45ea4e1125325ee9a8702719e88e1e05383b39d19161f80e85a7",
+      "bytes": 1458
+    },
+    "machine-verification-r8-dev.json": {
+      "sha256": "2e31cc1d34307fdae91f4b8aa60d7e6435ecb7ec8c2615a4c08f32dc18224676",
+      "bytes": 484
+    },
+    "portable-verification-r8-dev.json": {
+      "sha256": "fac6476862c57e8f01fe6070b0aaaf09e39201fa1d3da8b1b5d9a75e99a6b7dd",
+      "bytes": 1450
+    },
+    "bundle-manifest.json": {
+      "sha256": "d856cdbbac1300ced2f5192cc06b84f566bfd7c64a4dac6560019328ad5d44a8",
+      "bytes": 23446
+    },
+    "v7-approved-policy-development-20261009-r8.zip": {
+      "sha256": "9f8424895c4f7591b65a5f1aaa7e87104f8035671c272177cd8b6a5bb8bba22b",
+      "bytes": 8762677
+    },
+    "v7-approved-policy-development-20261009-r8.sha256": {
+      "sha256": "d6af3ee3b937b2984c60f399afe26c72a7c4caf69bd497ed17b1451d45e4a662",
+      "bytes": 113
+    }
+  }
+}

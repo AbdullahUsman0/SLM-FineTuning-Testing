@@ -1,0 +1,52 @@
+{
+  "status": "fresh_bundle_extraction_verified",
+  "archive_sha256": "9f8424895c4f7591b65a5f1aaa7e87104f8035671c272177cd8b6a5bb8bba22b",
+  "all_bundle_file_hashes_verified": true,
+  "development_scenarios": 3400,
+  "development_examples": 17680,
+  "new_policy_tests_executed": 7,
+  "chat_cli_help_verified": true,
+  "local_existing_gate_tests_passed": 3,
+  "six_annotation_conventions_approved": true,
+  "human_sample_review_complete": false,
+  "human_overlap_review_complete": false,
+  "final_labels_accessed": false,
+  "final_labels_generated": false,
+  "training_started": false,
+  "new_API_calls": 0,
+  "dependencies_reused_for_check_only": true,
+  "jobs": [
+    {
+      "arguments": [
+        "scripts/build-corpus-v7-reviewed.py",
+        "--verify",
+        "--output",
+        "corpus-v7/v7-20261009-r8-dev"
+      ],
+      "exit_code": 0,
+      "log_sha256": "2e31cc1d34307fdae91f4b8aa60d7e6435ecb7ec8c2615a4c08f32dc18224676"
+    },
+    {
+      "arguments": [
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_v7_approved_policy.py"
+      ],
+      "exit_code": 0,
+      "log_sha256": "689b2bacb4a87745bceb67130f4902b8f53ad0cfa4845cf3ee3410d90087c011"
+    },
+    {
+      "arguments": [
+        "scripts/chat-peft.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "log_sha256": "b75f6461694543421d90a4b55b1b6d16fcc7e804981afa8b83dbcf73ebc79e0e"
+    }
+  ]
+}

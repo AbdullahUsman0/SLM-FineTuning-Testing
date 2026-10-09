@@ -1,0 +1,14 @@
+{
+  "status": "verified_development_records_and_hashes",
+  "development_scenarios": 3400,
+  "development_examples": 17680,
+  "human_review": "pending",
+  "tokenizer_preflight": "pending",
+  "final_labels_deserialized": false,
+  "new_API_calls": 0,
+  "training_started": false,
+  "annotation_policy_version": "v7-user-approved-annotation-1",
+  "prompt_version": "v7-user-approved-extraction-1",
+  "agent_semantic_regressions": "pass",
+  "final_labels_generated": false
+}
