@@ -1,0 +1,55 @@
+{
+  "python": "D:\\SLM\\SLM-FineTuning-Testing\\.venv\\Scripts\\python.exe",
+  "bundle": "D:\\SLM\\v7-approved-policy-20261009-r8-review",
+  "trainer": "D:\\SLM\\v7-approved-policy-20261009-r8-review\\training\\train_lora.py",
+  "trainer_sha256": "c5eb79d665ac06c459d367aceac4760e4b2e873144863bc557afc242586768d5",
+  "run": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v7-r8-pilot-20261010T002204Z",
+  "output": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v7-r8-pilot-20261010T002204Z\\pilot",
+  "inputs": {
+    "train": {
+      "path": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v7-r8-pilot-20261010T002204Z\\inputs\\train.jsonl",
+      "sha256": "11b764346be8c39826b7a9b30284887c5552f65557a1141d196f275d6668a2c3",
+      "records": 1040,
+      "conversations": 200,
+      "source_gzip_sha256": "a0ee9b4c9c56666d224fcf4e6669646d93a091023083f4c5488027abc161d35e",
+      "rows_are_byte_identical_source_lines": true
+    },
+    "validation": {
+      "path": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v7-r8-pilot-20261010T002204Z\\inputs\\validation.jsonl",
+      "sha256": "563fc4acbbd66c3aee3904df10113ea706950d56f5fec2b84e3e62cc4e3f2a90",
+      "records": 1040,
+      "conversations": 200,
+      "source_gzip_sha256": "58c24587a5f5a7fabe12a93a76cd94f2e1ff8c6ae7aa7df4c1d6948d29e47327",
+      "rows_are_byte_identical_source_lines": true
+    }
+  },
+  "settings": {
+    "initialization": "stock base, new LoRA adapter",
+    "model": "Qwen/Qwen3.5-2B",
+    "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "epochs": 1,
+    "learning_rate": 5e-05,
+    "max_length": 3584,
+    "truncation": false,
+    "save_steps": 10,
+    "early_stopping_patience": 0,
+    "seed": 42,
+    "batch_size": 1,
+    "gradient_accumulation_steps": 16,
+    "expected_optimizer_steps": 65,
+    "lora_rank": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05
+  },
+  "base_weights_sha256": "aa33250c4fc64891ddfaba3a314fd9542ea371843c387178b425fbcc5ed680b1",
+  "env": {
+    "HF_HOME": "D:\\SLM\\hf-cache",
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "PYTHONPATH": "D:\\SLM\\v7-approved-policy-20261009-r8-review\\.review-deps",
+    "OMP_NUM_THREADS": "4",
+    "MKL_NUM_THREADS": "4",
+    "TOKENIZERS_PARALLELISM": "false",
+    "PYTHONUNBUFFERED": "1"
+  }
+}
