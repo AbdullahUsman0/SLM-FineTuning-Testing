@@ -1,0 +1,13 @@
+{
+  "tests_passed": 10,
+  "tests_skipped": 0,
+  "oracle_calls_per_track": 1040,
+  "actual_gpu_inference_calls": 0,
+  "code_sha256": {
+    "continue_r8.py": "0ead2194ec9679afed8786f2316543c63db48175525b415084f6d03120ca3929",
+    "evaluate_r8.py": "a3866ae2dc34b397f2b46689bc9b86b2f4b2e4730213c26433f0154beec677cd",
+    "finish_r8.py": "7014ab6dd33006f5aa20073aa7a798ff107261c49d80a1191a0054ad078ed11a",
+    "test_r8_evaluation.py": "5ccdafdc8efe402769ec70e18aa512ef0b60e1ce9e2eabb48b0335801f9a3f6d"
+  },
+  "source_groups": 20
+}
