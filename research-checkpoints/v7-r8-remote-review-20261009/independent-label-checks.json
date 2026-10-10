@@ -1,0 +1,96 @@
+{
+  "corpus_manifest_sha256": "4e59ba3eafa689325f94b108719da02b955e5c4f5de5571f208053e4c905da72",
+  "reviewer_type": "agent",
+  "development_scenarios": 3400,
+  "sample_scenarios": 524,
+  "counts": {
+    "turns": 17680,
+    "updates": 46150,
+    "unknown_turns": 3400,
+    "confirmed_updates": 680,
+    "ambiguous_cadence_turns": 340,
+    "inferred_format_updates": 81
+  },
+  "targeted_issues": [],
+  "inference_by_language_and_format": [
+    {
+      "language": "en",
+      "format": "csv",
+      "train": 16,
+      "validation": 3
+    },
+    {
+      "language": "en",
+      "format": "json",
+      "train": 14,
+      "validation": 1
+    },
+    {
+      "language": "en",
+      "format": "parquet",
+      "train": 14,
+      "validation": 6
+    },
+    {
+      "language": "en",
+      "format": "xlsx",
+      "train": 16,
+      "validation": 2
+    },
+    {
+      "language": "ur",
+      "format": "csv",
+      "train": 1,
+      "validation": 0
+    },
+    {
+      "language": "ur",
+      "format": "json",
+      "train": 1,
+      "validation": 0
+    },
+    {
+      "language": "ur",
+      "format": "parquet",
+      "train": 2,
+      "validation": 1
+    },
+    {
+      "language": "ur",
+      "format": "xlsx",
+      "train": 2,
+      "validation": 0
+    },
+    {
+      "language": "mixed",
+      "format": "csv",
+      "train": 0,
+      "validation": 0
+    },
+    {
+      "language": "mixed",
+      "format": "json",
+      "train": 2,
+      "validation": 0
+    },
+    {
+      "language": "mixed",
+      "format": "parquet",
+      "train": 0,
+      "validation": 0
+    },
+    {
+      "language": "mixed",
+      "format": "xlsx",
+      "train": 0,
+      "validation": 0
+    }
+  ],
+  "human_pending_decisions": 524,
+  "human_ledger_sha256": "8af81e875ad6a035ea5db36d71eaaa92b79ba792c5eb044ad44687865700e2b7",
+  "human_ledger_unchanged": true,
+  "scope": "Independent structural/status checks over all development turns, supplemented by selected sentence review; not individual human approval.",
+  "final_labels_accessed": false,
+  "training_started": false,
+  "paid_API_calls": 0
+}

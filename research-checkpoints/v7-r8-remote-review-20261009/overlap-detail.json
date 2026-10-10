@@ -1,0 +1,3933 @@
+{
+  "pairs": [
+    {
+      "Jaccard": 0.6666666666666666,
+      "nearest_train": "v7-20261009-r8-dev/temperature/0079",
+      "review_status": "pending",
+      "validation": "v7-20261009-r8-dev/temperature/0159",
+      "reviewer_type": "agent",
+      "human_decision": "pending",
+      "train_category": "ambiguous_then_clarified",
+      "validation_category": "ambiguous_then_clarified",
+      "different_entity_groups": true,
+      "train_message": "Mujhe mean air temperature for Yarven temperature site 1007 ka forecast chahiye. Target ki unit degrees Fahrenheit hai. Forecast aglay 8 din tak chahiye. Har ghantay chahiye; abhi yeh nahi bataya ke data ka interval hai ya forecast banane ka schedule.",
+      "validation_message": "Analyst ki request yeh hai.  Hamein mean air temperature for Yarven temperature site 1015 ka outlook chahiye. Target measurements ki unit degrees Fahrenheit hai. Future coverage 11 din chahiye. Har ghantay chahiye; abhi yeh nahi bataya ke data ka interval hai ya forecast banane ka schedule.",
+      "assessment": "Shared cadence clause and target form with changed scope/horizon; synthetic development overlap, not independent user prose."
+    },
+    {
+      "Jaccard": 0.6666666666666666,
+      "nearest_train": "v7-20261009-r8-dev/wind/0119",
+      "review_status": "pending",
+      "validation": "v7-20261009-r8-dev/wind/0199",
+      "reviewer_type": "agent",
+      "human_decision": "pending",
+      "train_category": "ambiguous_then_clarified",
+      "validation_category": "ambiguous_then_clarified",
+      "different_entity_groups": true,
+      "train_message": "Mujhe mean wind speed for Pelmar wind site 1211 ka forecast chahiye. Target ki unit metres per second hai. Forecast aglay 7 ghantay tak chahiye. Har ghantay chahiye; abhi yeh nahi bataya ke data ka interval hai ya forecast banane ka schedule.",
+      "validation_message": "Analyst ki request yeh hai.  Hamein mean wind speed for Pelmar wind site 1219 ka outlook chahiye. Target measurements ki unit metres per second hai. Future coverage 10 ghantay chahiye. Har ghantay chahiye; abhi yeh nahi bataya ke data ka interval hai ya forecast banane ka schedule.",
+      "assessment": "Shared cadence clause and target form with changed scope/horizon; synthetic development overlap, not independent user prose."
+    },
+    {
+      "Jaccard": 0.6229508196721312,
+      "nearest_train": "v7-20261009-r8-dev/weather_extremes/0129",
+      "review_status": "pending",
+      "validation": "v7-20261009-r8-dev/weather_extremes/0049",
+      "reviewer_type": "agent",
+      "human_decision": "pending",
+      "train_category": "ambiguous_then_clarified",
+      "validation_category": "ambiguous_then_clarified",
+      "different_entity_groups": true,
+      "train_message": "For my request,  I need the next 10 weeks predicted. The target values are in days. The quantity to predict is count of frost days defined as minimum temperature below 0 Celsius for Talven weather extremes site 1512. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+      "validation_message": "The analyst request is as follows.  We need an outlook for count of frost days defined as minimum temperature below 0 Celsius for Talven weather extremes site 1504. Target measurements use days. The requested future coverage is 7 weeks. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+      "assessment": "Shared cadence clause and target form with changed scope/horizon; synthetic development overlap, not independent user prose."
+    },
+    {
+      "Jaccard": 0.6451612903225806,
+      "nearest_train": "v7-20261009-r8-dev/weather_extremes/0039",
+      "review_status": "pending",
+      "validation": "v7-20261009-r8-dev/weather_extremes/0119",
+      "reviewer_type": "agent",
+      "human_decision": "pending",
+      "train_category": "ambiguous_then_clarified",
+      "validation_category": "ambiguous_then_clarified",
+      "different_entity_groups": true,
+      "train_message": "I need forecasts of high-wind indicator defined as gust speed above 25 metres per second for Pelmar weather extremes site 1503. Measure the target in 0 or 1. The forecast should extend 13 days ahead. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+      "validation_message": "The analyst request is as follows.  We need an outlook for high-wind indicator defined as gust speed above 25 metres per second for Pelmar weather extremes site 1511. Target measurements use 0 or 1. The requested future coverage is 16 days. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+      "assessment": "Shared cadence clause and target form with changed scope/horizon; synthetic development overlap, not independent user prose."
+    },
+    {
+      "Jaccard": 0.6071428571428571,
+      "nearest_train": "v7-20261009-r8-dev/output_growth/0199",
+      "review_status": "pending",
+      "validation": "v7-20261009-r8-dev/output_growth/0119",
+      "reviewer_type": "agent",
+      "human_decision": "pending",
+      "train_category": "ambiguous_then_clarified",
+      "validation_category": "ambiguous_then_clarified",
+      "different_entity_groups": true,
+      "train_message": "I need forecasts of nominal GDP level in current prices for Pelmar output growth site 1719. Measure the target in millions of USD. The forecast should extend 8 quarters ahead. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+      "validation_message": "The analyst request is as follows.  We need an outlook for nominal GDP level in current prices for Pelmar output growth site 1711. Target measurements use millions of USD. The requested future coverage is 5 quarters. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+      "assessment": "Shared cadence clause and target form with changed scope/horizon; synthetic development overlap, not independent user prose."
+    },
+    {
+      "Jaccard": 0.603448275862069,
+      "nearest_train": "v7-20261009-r8-dev/equities_funds/0079",
+      "review_status": "pending",
+      "validation": "v7-20261009-r8-dev/equities_funds/0159",
+      "reviewer_type": "agent",
+      "human_decision": "pending",
+      "train_category": "ambiguous_then_clarified",
+      "validation_category": "ambiguous_then_clarified",
+      "different_entity_groups": true,
+      "train_message": "I need forecasts of split-and-dividend-adjusted closing share price for Yarven equities funds site 2007. Measure the target in USD per share. The forecast should extend 4 days ahead. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+      "validation_message": "The analyst request is as follows.  We need an outlook for split-and-dividend-adjusted closing share price for Yarven equities funds site 2015. Target measurements use USD per share. The requested future coverage is 7 days. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+      "assessment": "Shared cadence clause and target form with changed scope/horizon; synthetic development overlap, not independent user prose."
+    },
+    {
+      "Jaccard": 0.6065573770491803,
+      "nearest_train": "v7-20261009-r8-dev/equities_funds/0029",
+      "review_status": "pending",
+      "validation": "v7-20261009-r8-dev/equities_funds/0189",
+      "reviewer_type": "agent",
+      "human_decision": "pending",
+      "train_category": "ambiguous_then_clarified",
+      "validation_category": "ambiguous_then_clarified",
+      "different_entity_groups": true,
+      "train_message": "Please record this.  Predict a horizon of 17 days. Use USD per share as the target unit. My prediction target is raw closing share price without corporate-action adjustment for Orven equities funds site 2002. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+      "validation_message": "The analyst request is as follows.  We need an outlook for raw closing share price without corporate-action adjustment for Orven equities funds site 2018. Target measurements use USD per share. The requested future coverage is 6 days. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+      "assessment": "Shared cadence clause and target form with changed scope/horizon; synthetic development overlap, not independent user prose."
+    },
+    {
+      "Jaccard": 0.6065573770491803,
+      "nearest_train": "v7-20261009-r8-dev/foreign_exchange/0029",
+      "review_status": "pending",
+      "validation": "v7-20261009-r8-dev/foreign_exchange/0109",
+      "reviewer_type": "agent",
+      "human_decision": "pending",
+      "train_category": "ambiguous_then_clarified",
+      "validation_category": "ambiguous_then_clarified",
+      "different_entity_groups": true,
+      "train_message": "Please record this.  Predict a horizon of 20 days. Use index points, base 2020=100 as the target unit. My prediction target is trade-weighted real effective exchange-rate index for Orven foreign exchange site 2102. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+      "validation_message": "The analyst request is as follows.  We need an outlook for trade-weighted real effective exchange-rate index for Orven foreign exchange site 2110. Target measurements use index points, base 2020=100. The requested future coverage is 6 days. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+      "assessment": "Shared cadence clause and target form with changed scope/horizon; synthetic development overlap, not independent user prose."
+    },
+    {
+      "Jaccard": 0.6,
+      "nearest_train": "v7-20261009-r8-dev/foreign_exchange/0079",
+      "review_status": "pending",
+      "validation": "v7-20261009-r8-dev/foreign_exchange/0159",
+      "reviewer_type": "agent",
+      "human_decision": "pending",
+      "train_category": "ambiguous_then_clarified",
+      "validation_category": "ambiguous_then_clarified",
+      "different_entity_groups": true,
+      "train_message": "I need forecasts of USD/JPY spot rate quoted as JPY per USD for Yarven foreign exchange site 2107. Measure the target in JPY per USD. The forecast should extend 7 days ahead. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+      "validation_message": "The analyst request is as follows.  We need an outlook for USD/JPY spot rate quoted as JPY per USD for Yarven foreign exchange site 2115. Target measurements use JPY per USD. The requested future coverage is 10 days. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+      "assessment": "Shared cadence clause and target form with changed scope/horizon; synthetic development overlap, not independent user prose."
+    },
+    {
+      "Jaccard": 0.6,
+      "nearest_train": "v7-20261009-r8-dev/crypto_spot/0199",
+      "review_status": "pending",
+      "validation": "v7-20261009-r8-dev/crypto_spot/0119",
+      "reviewer_type": "agent",
+      "human_decision": "pending",
+      "train_category": "ambiguous_then_clarified",
+      "validation_category": "ambiguous_then_clarified",
+      "different_entity_groups": true,
+      "train_message": "I need forecasts of digital-asset market capitalization for Pelmar crypto spot site 2319. Measure the target in millions of USD. The forecast should extend 9 hours ahead. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+      "validation_message": "The analyst request is as follows.  We need an outlook for digital-asset market capitalization for Pelmar crypto spot site 2311. Target measurements use millions of USD. The requested future coverage is 6 hours. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+      "assessment": "Shared cadence clause and target form with changed scope/horizon; synthetic development overlap, not independent user prose."
+    },
+    {
+      "Jaccard": 0.6101694915254238,
+      "nearest_train": "v7-20261009-r8-dev/crypto_derivatives/0159",
+      "review_status": "pending",
+      "validation": "v7-20261009-r8-dev/crypto_derivatives/0079",
+      "reviewer_type": "agent",
+      "human_decision": "pending",
+      "train_category": "ambiguous_then_clarified",
+      "validation_category": "ambiguous_then_clarified",
+      "different_entity_groups": true,
+      "train_message": "I need forecasts of BTC perpetual-swap funding rate per eight-hour funding interval for Yarven crypto derivatives site 2415. Measure the target in percent per 8 hours. The forecast should extend 19 hours ahead. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+      "validation_message": "The analyst request is as follows.  We need an outlook for BTC perpetual-swap funding rate per eight-hour funding interval for Yarven crypto derivatives site 2407. Target measurements use percent per 8 hours. The requested future coverage is 16 hours. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+      "assessment": "Shared cadence clause and target form with changed scope/horizon; synthetic development overlap, not independent user prose."
+    },
+    {
+      "Jaccard": 0.6071428571428571,
+      "nearest_train": "v7-20261009-r8-dev/trade_fiscal/0199",
+      "review_status": "pending",
+      "validation": "v7-20261009-r8-dev/trade_fiscal/0119",
+      "reviewer_type": "agent",
+      "human_decision": "pending",
+      "train_category": "ambiguous_then_clarified",
+      "validation_category": "ambiguous_then_clarified",
+      "different_entity_groups": true,
+      "train_message": "I need forecasts of government fiscal balance, revenue minus expenditure for Pelmar trade fiscal site 2619. Measure the target in millions of USD. The forecast should extend 18 months ahead. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+      "validation_message": "The analyst request is as follows.  We need an outlook for government fiscal balance, revenue minus expenditure for Pelmar trade fiscal site 2611. Target measurements use millions of USD. The requested future coverage is 15 months. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+      "assessment": "Shared cadence clause and target form with changed scope/horizon; synthetic development overlap, not independent user prose."
+    },
+    {
+      "Jaccard": 0.6065573770491803,
+      "nearest_train": "v7-20261009-r8-dev/weather_agriculture/0089",
+      "review_status": "pending",
+      "validation": "v7-20261009-r8-dev/weather_agriculture/0009",
+      "reviewer_type": "agent",
+      "human_decision": "pending",
+      "train_category": "ambiguous_then_clarified",
+      "validation_category": "ambiguous_then_clarified",
+      "different_entity_groups": true,
+      "train_message": "For my request,  I need the next 8 weeks predicted. The target values are in USD per metric tonne. The quantity to predict is wheat cash price with precipitation covariates for Merlow weather agriculture site 2908. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+      "validation_message": "The analyst request is as follows.  We need an outlook for wheat cash price with precipitation covariates for Merlow weather agriculture site 2900. Target measurements use USD per metric tonne. The requested future coverage is 5 weeks. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+      "assessment": "Shared cadence clause and target form with changed scope/horizon; synthetic development overlap, not independent user prose."
+    },
+    {
+      "Jaccard": 0.603448275862069,
+      "nearest_train": "v7-20261009-r8-dev/weather_agriculture/0029",
+      "review_status": "pending",
+      "validation": "v7-20261009-r8-dev/weather_agriculture/0189",
+      "reviewer_type": "agent",
+      "human_decision": "pending",
+      "train_category": "ambiguous_then_clarified",
+      "validation_category": "ambiguous_then_clarified",
+      "different_entity_groups": true,
+      "train_message": "Please record this.  Predict a horizon of 10 weeks. Use thousands of USD as the target unit. My prediction target is irrigation expenditure with temperature covariates for Orven weather agriculture site 2902. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+      "validation_message": "The analyst request is as follows.  We need an outlook for irrigation expenditure with temperature covariates for Orven weather agriculture site 2918. Target measurements use thousands of USD. The requested future coverage is 16 weeks. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+      "assessment": "Shared cadence clause and target form with changed scope/horizon; synthetic development overlap, not independent user prose."
+    }
+  ],
+  "validation_current_message_duplicates": 744,
+  "validation_turns": 3120,
+  "duplicate_behaviors": {
+    "unknown_omission": 600,
+    "explicit_nonforecasting": 59,
+    "explicit_boolean": 60,
+    "lifecycle_bundle": 25
+  },
+  "duplicate_current_message_records": [
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0130",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0131",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0132",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0133",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0133",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0134",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0135",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0136",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0137",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0138",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0138",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0139",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0150",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0151",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0152",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0153",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0154",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0155",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0155",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0156",
+      "turn_id": "t4",
+      "behavior": "lifecycle_bundle"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0156",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0157",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0158",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0158",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0159",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0170",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0171",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0172",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0173",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0174",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0175",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0176",
+      "turn_id": "t4",
+      "behavior": "lifecycle_bundle"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0176",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0177",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0177",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0178",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0178",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/temperature/0179",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0040",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0041",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0042",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0043",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0044",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0045",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0045",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0046",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0047",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0048",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0048",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0049",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0070",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0071",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0072",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0073",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0074",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0075",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0076",
+      "turn_id": "t3",
+      "behavior": "lifecycle_bundle"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0076",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0077",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0078",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0078",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0078",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0079",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0110",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0111",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0112",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0112",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0113",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0114",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0115",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0116",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0117",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0118",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0118",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0119",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0040",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0041",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0042",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0043",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0044",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0045",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0046",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0046",
+      "turn_id": "t7",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0047",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0048",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0048",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0049",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0160",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0161",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0162",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0163",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0164",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0165",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0166",
+      "turn_id": "t3",
+      "behavior": "lifecycle_bundle"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0166",
+      "turn_id": "t4",
+      "behavior": "lifecycle_bundle"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0166",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0167",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0168",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0168",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0168",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0169",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0190",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0191",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0191",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0192",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0193",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0194",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0195",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0196",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0197",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0198",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0198",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/wind/0199",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0080",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0081",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0081",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0082",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0083",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0084",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0085",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0086",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0087",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0088",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0088",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0089",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0100",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0101",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0102",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0103",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0103",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0104",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0105",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0106",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0107",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0108",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0108",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0109",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0160",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0161",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0162",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0163",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0164",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0165",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0166",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0167",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0168",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0168",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0169",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0169",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0040",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0041",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0042",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0043",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0044",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0045",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0046",
+      "turn_id": "t4",
+      "behavior": "lifecycle_bundle"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0046",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0047",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0048",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0048",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0048",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0049",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0060",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0060",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0061",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0062",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0063",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0064",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0065",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0066",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0067",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0068",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0068",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0069",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0080",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0081",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0082",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0082",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0083",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0084",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0085",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0086",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0087",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0088",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0088",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0089",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0040",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0041",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0042",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0043",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0044",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0045",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0046",
+      "turn_id": "t3",
+      "behavior": "lifecycle_bundle"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0046",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0047",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0048",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0048",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0049",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0049",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0050",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0050",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0051",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0052",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0053",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0054",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0055",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0056",
+      "turn_id": "t3",
+      "behavior": "lifecycle_bundle"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0056",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0057",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0058",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0058",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0059",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0110",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0111",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0112",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0113",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0114",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0115",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0116",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0116",
+      "turn_id": "t7",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0117",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0118",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0118",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0119",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0070",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0071",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0072",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0073",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0073",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0074",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0075",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0076",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0077",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0078",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0078",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0079",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0100",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0101",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0102",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0103",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0104",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0105",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0106",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0106",
+      "turn_id": "t7",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0107",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0108",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0108",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0109",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0140",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0141",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0142",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0143",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0144",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0145",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0146",
+      "turn_id": "t3",
+      "behavior": "lifecycle_bundle"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0146",
+      "turn_id": "t4",
+      "behavior": "lifecycle_bundle"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0146",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0147",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0148",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0148",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/inflation_prices/0149",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0100",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0101",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0102",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0103",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0104",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0105",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0106",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0107",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0107",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0108",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0108",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0109",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0110",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0111",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0112",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0113",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0114",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0115",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0116",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0117",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0118",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0118",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0118",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0119",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0130",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0130",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0131",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0132",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0133",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0134",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0135",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0136",
+      "turn_id": "t4",
+      "behavior": "lifecycle_bundle"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0136",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0137",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0138",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0138",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0139",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0030",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0031",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0031",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0032",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0033",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0034",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0035",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0036",
+      "turn_id": "t3",
+      "behavior": "lifecycle_bundle"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0036",
+      "turn_id": "t4",
+      "behavior": "lifecycle_bundle"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0036",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0037",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0038",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0038",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0039",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0050",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0051",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0052",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0053",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0053",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0054",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0055",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0056",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0057",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0058",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0058",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0059",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0170",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0171",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0172",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0173",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0174",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0175",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0175",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0176",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0177",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0178",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0178",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0179",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0030",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0031",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0032",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0032",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0033",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0034",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0035",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0036",
+      "turn_id": "t3",
+      "behavior": "lifecycle_bundle"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0036",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0037",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0038",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0038",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0039",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0040",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0041",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0042",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0043",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0043",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0044",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0045",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0046",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0047",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0048",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0048",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0049",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0120",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0121",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0121",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0122",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0123",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0124",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0125",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0126",
+      "turn_id": "t3",
+      "behavior": "lifecycle_bundle"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0126",
+      "turn_id": "t4",
+      "behavior": "lifecycle_bundle"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0126",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0127",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0128",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0128",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/rates_fixed_income/0129",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0090",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0091",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0092",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0093",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0094",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0095",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0096",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0097",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0098",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0098",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0099",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0099",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0150",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0151",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0152",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0153",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0154",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0155",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0155",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0156",
+      "turn_id": "t3",
+      "behavior": "lifecycle_bundle"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0156",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0157",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0158",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0158",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0159",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0180",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0181",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0182",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0183",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0184",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0185",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0186",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0187",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0188",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0188",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0188",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0189",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0050",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0051",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0052",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0053",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0054",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0055",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0056",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0056",
+      "turn_id": "t7",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0057",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0058",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0058",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0059",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0100",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0101",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0101",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0102",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0103",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0104",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0105",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0106",
+      "turn_id": "t4",
+      "behavior": "lifecycle_bundle"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0106",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0107",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0108",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0108",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0109",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0150",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0151",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0152",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0153",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0154",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0155",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0156",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0156",
+      "turn_id": "t7",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0157",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0158",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0158",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0159",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0030",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0031",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0032",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0033",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0034",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0035",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0035",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0036",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0037",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0038",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0038",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0039",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0090",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0091",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0091",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0092",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0093",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0094",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0095",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0096",
+      "turn_id": "t3",
+      "behavior": "lifecycle_bundle"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0096",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0097",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0098",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0098",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0099",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0110",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0111",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0112",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0113",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0113",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0114",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0115",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0116",
+      "turn_id": "t3",
+      "behavior": "lifecycle_bundle"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0116",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0117",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0118",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0118",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/commodities/0119",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0040",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0041",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0042",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0043",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0044",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0045",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0046",
+      "turn_id": "t4",
+      "behavior": "lifecycle_bundle"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0046",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0047",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0047",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0048",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0048",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0049",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0060",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0061",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0062",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0063",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0064",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0065",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0066",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0067",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0068",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0068",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0069",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0069",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0110",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0111",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0112",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0113",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0114",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0114",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0115",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0116",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0117",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0118",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0118",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0119",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0070",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0071",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0071",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0072",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0073",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0074",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0075",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0076",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0077",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0078",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0078",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0079",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0130",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0131",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0132",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0133",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0134",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0135",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0136",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0137",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0137",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0138",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0138",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0139",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0160",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0160",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0161",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0162",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0163",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0164",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0165",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0166",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0167",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0168",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0168",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0169",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0050",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0050",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0051",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0052",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0053",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0054",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0055",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0056",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0057",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0058",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0058",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0059",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0100",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0101",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0102",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0103",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0104",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0105",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0105",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0106",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0107",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0108",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0108",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0109",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0180",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0181",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0182",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0183",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0183",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0184",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0185",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0186",
+      "turn_id": "t4",
+      "behavior": "lifecycle_bundle"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0186",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0187",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0188",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0188",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0189",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0110",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0111",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0112",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0113",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0114",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0115",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0116",
+      "turn_id": "t4",
+      "behavior": "lifecycle_bundle"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0116",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0117",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0117",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0118",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0118",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0119",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0130",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0131",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0132",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0133",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0134",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0135",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0136",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0137",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0138",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0138",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0139",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0139",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0170",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0171",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0172",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0173",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0173",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0174",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0175",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0176",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0177",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0178",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0178",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0179",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0110",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0111",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0112",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0113",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0114",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0115",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0116",
+      "turn_id": "t3",
+      "behavior": "lifecycle_bundle"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0116",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0117",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0118",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0118",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0118",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0119",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0150",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0151",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0152",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0152",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0153",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0154",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0155",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0156",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0157",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0158",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0158",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0159",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0180",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0181",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0182",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0183",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0184",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0185",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0185",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0186",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0187",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0188",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0188",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0189",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0030",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0031",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0031",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0032",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0033",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0034",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0035",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0036",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0037",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0038",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0038",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0039",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0070",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0071",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0072",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0073",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0074",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0075",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0075",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0076",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0077",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0078",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0078",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0079",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0100",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0101",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0102",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0103",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0104",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0105",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0106",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0107",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0108",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0108",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0108",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0109",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0000",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0001",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0002",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0003",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0004",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0005",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0006",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0007",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0008",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0008",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0009",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0009",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0070",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0071",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0072",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0073",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0074",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0075",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0076",
+      "turn_id": "t4",
+      "behavior": "lifecycle_bundle"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0076",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0076",
+      "turn_id": "t7",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0077",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0078",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0078",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0079",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0180",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0181",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0182",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0183",
+      "turn_id": "t2",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0184",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0185",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0186",
+      "turn_id": "t6",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0187",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0187",
+      "turn_id": "t6",
+      "behavior": "explicit_nonforecasting"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0188",
+      "turn_id": "t3",
+      "behavior": "explicit_boolean"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0188",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    },
+    {
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0189",
+      "turn_id": "t5",
+      "behavior": "unknown_omission"
+    }
+  ],
+  "exact_full_sft_message_list_collisions": 0,
+  "entity_group_collisions": 0,
+  "limitation": "Repeated current messages are not identical complete training examples; their prior contexts differ. This is descriptive template overlap, not proof of an invalid split."
+}

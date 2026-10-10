@@ -1,0 +1,28 @@
+{
+  "reviewed_at_utc": "2026-10-10T00:12:05.936254+00:00",
+  "source_commit": "6bd184364580c4e4108d27b2efb81ee01a27a400",
+  "bundle_sha256": "9f8424895c4f7591b65a5f1aaa7e87104f8035671c272177cd8b6a5bb8bba22b",
+  "payload_files_reverified": 131,
+  "supplied_verifier": {
+    "status": "verified_development_records_and_hashes",
+    "development_scenarios": 3400,
+    "development_examples": 17680,
+    "agent_semantic_regressions": "pass"
+  },
+  "tests": {
+    "r8_policy_tests_passed": 7,
+    "historical_gate_tests_passed_locally": 0,
+    "historical_gate_tests_skipped": 3,
+    "skip_reason": "Required historical r4/r7 fixtures are not included in this portable r8 bundle.",
+    "actual_r8_negative_gate_checks_passed": 3
+  },
+  "tokenizer_receipt_exactly_matches_transferred": true,
+  "candidate_payloads_unchanged": true,
+  "human_decisions_pending": 524,
+  "overlap_human_decisions_pending": 14,
+  "training_started": false,
+  "training_inputs_created": false,
+  "final_labels_accessed": false,
+  "final_labels_generated": false,
+  "paid_API_calls": 0
+}

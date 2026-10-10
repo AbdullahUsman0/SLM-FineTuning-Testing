@@ -1,0 +1,162 @@
+{
+  "human-review/annotation-policy.json": {
+    "sha256": "3b69e2aac27dd8f51199591828a9e9e267184253c249fcc2f26a0e3592cb274d",
+    "bytes": 2373
+  },
+  "human-review/annotation-rubric.md": {
+    "sha256": "c203699bac94450d8953dcf29cfe02a183282f1cd2db0c36fa65db0efd27103a",
+    "bytes": 2803
+  },
+  "human-review/approval-template.json": {
+    "sha256": "0d08a38fdc6defead34a872c8b7a13605338398760b9a410e42d15709e208d6e",
+    "bytes": 622
+  },
+  "human-review/commodities.md": {
+    "sha256": "a39eba475324c047a9f511ba02d5681036bbd1bc5124dc97f3fbb32f6d6a4e1a",
+    "bytes": 129888
+  },
+  "human-review/corporate_finance.md": {
+    "sha256": "8dfec3e2fda8b3bc3eb041343a8a57b31938288c23c51a2f76ad9843799d72bd",
+    "bytes": 137238
+  },
+  "human-review/crypto_derivatives.md": {
+    "sha256": "3cf6fd8eb4a48db232b697c9e84d20c6b26bb3849bb88baa9a531281b812444b",
+    "bytes": 140510
+  },
+  "human-review/crypto_spot.md": {
+    "sha256": "b3b9246fdbcbcca9a1f0f1d00af00198fbe6b8a429417953b3f599d5388494f2",
+    "bytes": 145211
+  },
+  "human-review/decisions.csv": {
+    "sha256": "8af81e875ad6a035ea5db36d71eaaa92b79ba792c5eb044ad44687865700e2b7",
+    "bytes": 49946
+  },
+  "human-review/equities_funds.md": {
+    "sha256": "135bba1a3d136d374ca5b271d86f1efd86dadf7565b7a762968899a05ec8bbd9",
+    "bytes": 137147
+  },
+  "human-review/foreign_exchange.md": {
+    "sha256": "5d2e837de4aaca38b55e10abe3c7a32f4cbffe2433629965dd2deb2fbe7fa5dd",
+    "bytes": 143178
+  },
+  "human-review/housing_property.md": {
+    "sha256": "b717d135313b4fc67be830a8244e77e5cda27c65d3ba3df989c16b343cb80861",
+    "bytes": 129790
+  },
+  "human-review/humidity_pressure.md": {
+    "sha256": "42fa134f6bc76dedd33f9e1307c62b87e70a6a8de8bf8913c8dd9f7a4bcd9e6d",
+    "bytes": 140330
+  },
+  "human-review/inflation_prices.md": {
+    "sha256": "aed33e14c7136c4c72b95dca4ff0c7844d7adbb9cfe3a5cd5b1b1a442b0a813c",
+    "bytes": 142919
+  },
+  "human-review/labor_employment.md": {
+    "sha256": "1a650080972458d3ffdc0759f140be7158a405b1623b46c88c680f8d89126eca",
+    "bytes": 134468
+  },
+  "human-review/output_growth.md": {
+    "sha256": "62b6e33d24771c1ef80c58fb2993d4c54bfcc0e0f4888ce7138dbd97c55c34e6",
+    "bytes": 140448
+  },
+  "human-review/precipitation.md": {
+    "sha256": "697009ce04f26ecb343e29966691300e15f5218a3f1364dea265aaa9216d960c",
+    "bytes": 122009
+  },
+  "human-review/rates_fixed_income.md": {
+    "sha256": "70894206cb0506aa20d5f8608e4614f2b1a8c99c9d814b596b2c625dfe522eea",
+    "bytes": 135093
+  },
+  "human-review/review-manifest.json": {
+    "sha256": "4ef75d583f73a7c9bfee0caf5dc02bc7c4f794d41975c3ad643ee61b5b37e649",
+    "bytes": 25150
+  },
+  "human-review/solar_cloud.md": {
+    "sha256": "667962b58fb628108385628d1b2edc06bd52b8187fe7b7c8662f08c1bcc9f905",
+    "bytes": 137838
+  },
+  "human-review/temperature.md": {
+    "sha256": "5267d9f900dbff7f8f1cb0faa14636110e833177bbe62c5c018be1918755e12f",
+    "bytes": 136592
+  },
+  "human-review/trade_fiscal.md": {
+    "sha256": "b3f95e10cebb5cec1603a258d2801c2eab90aaef3530798a087b6c990b034cfd",
+    "bytes": 130221
+  },
+  "human-review/weather_agriculture.md": {
+    "sha256": "14e3555a91364c41d8316f8a479a1aa5715f1c0911b20321960ef1f6f205c7de",
+    "bytes": 138502
+  },
+  "human-review/weather_energy.md": {
+    "sha256": "b4309fe71fc2896d011827745f56a617e064ac830ce5f5a7ffe848647cf6abcb",
+    "bytes": 138899
+  },
+  "human-review/weather_extremes.md": {
+    "sha256": "bc08a00cd05ebab584931572174633e910b84a0116c2fd172c4d6aab78daf0de",
+    "bytes": 156053
+  },
+  "human-review/wind.md": {
+    "sha256": "48ab43fb5ef5f0564cc279785fc9439e46e5423dad4db21e27e9e6e65b2599e9",
+    "bytes": 107279
+  },
+  "independent-label-checks.json": {
+    "sha256": "dbeb82a16c86cdd69bd3c0fdcc7e448b16f0ba344be69964ede377bb4ed9b171",
+    "bytes": 2077
+  },
+  "independent-review.py": {
+    "sha256": "4d155c5739d57316cc90155c24f7eab589a5f75297f00e52b2d6bbbe7a759cd9",
+    "bytes": 11740
+  },
+  "local-tokenizer-preflight.json": {
+    "sha256": "5ae91d4ec64c45ea4e1125325ee9a8702719e88e1e05383b39d19161f80e85a7",
+    "bytes": 1458
+  },
+  "local-verification.json": {
+    "sha256": "12be5efdc628166d0e361b822268ea168946627c3f19b417bcee4ff1c82e173d",
+    "bytes": 1087
+  },
+  "overlap-detail.json": {
+    "sha256": "8015f09862be8d12432c508c6a13f3ee284713bd05e58d723bff23b746cbbac5",
+    "bytes": 120033
+  },
+  "overlap-review.md": {
+    "sha256": "ef6c1672b091e3cd584bcc3aae0e2d36a7ef2b8e9936ee214b2ac3aef1d8d578",
+    "bytes": 12867
+  },
+  "pilot-plan.json": {
+    "sha256": "28f43f8b034d179d9fe1a70f3943f2563cc9951cdb883128e172451d79ac327d",
+    "bytes": 22228
+  },
+  "r8-negative-gate-checks.json": {
+    "sha256": "96c2699a431e5e33ba7263d61f22815f37940e0cda478a5369c7074ec560dcca",
+    "bytes": 519
+  },
+  "README.md": {
+    "sha256": "26f27a39779dca1e96aeb06c963aa7fbd5b4f7da0d83360f3af7a175cdb7b6e5",
+    "bytes": 9091
+  },
+  "selected-sentence-review.json": {
+    "sha256": "8e074ac19f2fa984f42ac3897bd4986f1a6e95a28e536f92e1bcb51847a11573",
+    "bytes": 683531
+  },
+  "targeted-audit/audit-source.py": {
+    "sha256": "dc82404f47a9d81fc0c0d5467ab11f641aee7ce96e8e7eaa24317bbb32e5df4e",
+    "bytes": 11381
+  },
+  "targeted-audit/findings.json": {
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "bytes": 3
+  },
+  "targeted-audit/overlap-agent-decisions.json": {
+    "sha256": "c0979ceef6ad0c350d0cfac41c1028a8aac23a1b77ee3e9d0d8f844f19996aa0",
+    "bytes": 17891
+  },
+  "targeted-audit/sample-agent-decisions.csv": {
+    "sha256": "f3a9da465f4a88c9d8228bc4b72fba9fb6e5fb99aba741995277dc83a581ec92",
+    "bytes": 129615
+  },
+  "targeted-audit/summary.json": {
+    "sha256": "b86f56bc345d485575ffee8cb7708aa6ea67a5928e28b0e9167d111c16d9c336",
+    "bytes": 25290
+  }
+}

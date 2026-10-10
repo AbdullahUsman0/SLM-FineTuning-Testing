@@ -1,0 +1,20 @@
+[
+  {
+    "check": "pending_review",
+    "passed": true,
+    "reason": "Human corpus and overlap reviews are still pending",
+    "inputs_created": false
+  },
+  {
+    "check": "pending_ledger",
+    "passed": true,
+    "reason": "Pending/rejected sample or missing substantive human decisions; revise corpus, do not bypass",
+    "inputs_created": false
+  },
+  {
+    "check": "wrong_policy_hash",
+    "passed": true,
+    "reason": "Review is not bound to the approved annotation policy",
+    "inputs_created": false
+  }
+]

@@ -1,0 +1,171 @@
+# Actual r8 initial-message overlap queue
+
+All human decisions remain pending. These are the 14 nearest representatives, not every threshold pair.
+
+## Pair 1: Jaccard 0.666667
+
+Training: `v7-20261009-r8-dev/temperature/0079`
+
+Mujhe mean air temperature for Yarven temperature site 1007 ka forecast chahiye. Target ki unit degrees Fahrenheit hai. Forecast aglay 8 din tak chahiye. Har ghantay chahiye; abhi yeh nahi bataya ke data ka interval hai ya forecast banane ka schedule.
+
+Validation: `v7-20261009-r8-dev/temperature/0159`
+
+Analyst ki request yeh hai.  Hamein mean air temperature for Yarven temperature site 1015 ka outlook chahiye. Target measurements ki unit degrees Fahrenheit hai. Future coverage 11 din chahiye. Har ghantay chahiye; abhi yeh nahi bataya ke data ka interval hai ya forecast banane ka schedule.
+
+Agent assessment: shared ambiguous-cadence wording; different entity groups. Human decision and rationale: pending.
+
+## Pair 2: Jaccard 0.666667
+
+Training: `v7-20261009-r8-dev/wind/0119`
+
+Mujhe mean wind speed for Pelmar wind site 1211 ka forecast chahiye. Target ki unit metres per second hai. Forecast aglay 7 ghantay tak chahiye. Har ghantay chahiye; abhi yeh nahi bataya ke data ka interval hai ya forecast banane ka schedule.
+
+Validation: `v7-20261009-r8-dev/wind/0199`
+
+Analyst ki request yeh hai.  Hamein mean wind speed for Pelmar wind site 1219 ka outlook chahiye. Target measurements ki unit metres per second hai. Future coverage 10 ghantay chahiye. Har ghantay chahiye; abhi yeh nahi bataya ke data ka interval hai ya forecast banane ka schedule.
+
+Agent assessment: shared ambiguous-cadence wording; different entity groups. Human decision and rationale: pending.
+
+## Pair 3: Jaccard 0.622951
+
+Training: `v7-20261009-r8-dev/weather_extremes/0129`
+
+For my request,  I need the next 10 weeks predicted. The target values are in days. The quantity to predict is count of frost days defined as minimum temperature below 0 Celsius for Talven weather extremes site 1512. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.
+
+Validation: `v7-20261009-r8-dev/weather_extremes/0049`
+
+The analyst request is as follows.  We need an outlook for count of frost days defined as minimum temperature below 0 Celsius for Talven weather extremes site 1504. Target measurements use days. The requested future coverage is 7 weeks. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.
+
+Agent assessment: shared ambiguous-cadence wording; different entity groups. Human decision and rationale: pending.
+
+## Pair 4: Jaccard 0.645161
+
+Training: `v7-20261009-r8-dev/weather_extremes/0039`
+
+I need forecasts of high-wind indicator defined as gust speed above 25 metres per second for Pelmar weather extremes site 1503. Measure the target in 0 or 1. The forecast should extend 13 days ahead. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.
+
+Validation: `v7-20261009-r8-dev/weather_extremes/0119`
+
+The analyst request is as follows.  We need an outlook for high-wind indicator defined as gust speed above 25 metres per second for Pelmar weather extremes site 1511. Target measurements use 0 or 1. The requested future coverage is 16 days. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.
+
+Agent assessment: shared ambiguous-cadence wording; different entity groups. Human decision and rationale: pending.
+
+## Pair 5: Jaccard 0.607143
+
+Training: `v7-20261009-r8-dev/output_growth/0199`
+
+I need forecasts of nominal GDP level in current prices for Pelmar output growth site 1719. Measure the target in millions of USD. The forecast should extend 8 quarters ahead. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.
+
+Validation: `v7-20261009-r8-dev/output_growth/0119`
+
+The analyst request is as follows.  We need an outlook for nominal GDP level in current prices for Pelmar output growth site 1711. Target measurements use millions of USD. The requested future coverage is 5 quarters. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.
+
+Agent assessment: shared ambiguous-cadence wording; different entity groups. Human decision and rationale: pending.
+
+## Pair 6: Jaccard 0.603448
+
+Training: `v7-20261009-r8-dev/equities_funds/0079`
+
+I need forecasts of split-and-dividend-adjusted closing share price for Yarven equities funds site 2007. Measure the target in USD per share. The forecast should extend 4 days ahead. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.
+
+Validation: `v7-20261009-r8-dev/equities_funds/0159`
+
+The analyst request is as follows.  We need an outlook for split-and-dividend-adjusted closing share price for Yarven equities funds site 2015. Target measurements use USD per share. The requested future coverage is 7 days. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.
+
+Agent assessment: shared ambiguous-cadence wording; different entity groups. Human decision and rationale: pending.
+
+## Pair 7: Jaccard 0.606557
+
+Training: `v7-20261009-r8-dev/equities_funds/0029`
+
+Please record this.  Predict a horizon of 17 days. Use USD per share as the target unit. My prediction target is raw closing share price without corporate-action adjustment for Orven equities funds site 2002. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.
+
+Validation: `v7-20261009-r8-dev/equities_funds/0189`
+
+The analyst request is as follows.  We need an outlook for raw closing share price without corporate-action adjustment for Orven equities funds site 2018. Target measurements use USD per share. The requested future coverage is 6 days. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.
+
+Agent assessment: shared ambiguous-cadence wording; different entity groups. Human decision and rationale: pending.
+
+## Pair 8: Jaccard 0.606557
+
+Training: `v7-20261009-r8-dev/foreign_exchange/0029`
+
+Please record this.  Predict a horizon of 20 days. Use index points, base 2020=100 as the target unit. My prediction target is trade-weighted real effective exchange-rate index for Orven foreign exchange site 2102. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.
+
+Validation: `v7-20261009-r8-dev/foreign_exchange/0109`
+
+The analyst request is as follows.  We need an outlook for trade-weighted real effective exchange-rate index for Orven foreign exchange site 2110. Target measurements use index points, base 2020=100. The requested future coverage is 6 days. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.
+
+Agent assessment: shared ambiguous-cadence wording; different entity groups. Human decision and rationale: pending.
+
+## Pair 9: Jaccard 0.600000
+
+Training: `v7-20261009-r8-dev/foreign_exchange/0079`
+
+I need forecasts of USD/JPY spot rate quoted as JPY per USD for Yarven foreign exchange site 2107. Measure the target in JPY per USD. The forecast should extend 7 days ahead. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.
+
+Validation: `v7-20261009-r8-dev/foreign_exchange/0159`
+
+The analyst request is as follows.  We need an outlook for USD/JPY spot rate quoted as JPY per USD for Yarven foreign exchange site 2115. Target measurements use JPY per USD. The requested future coverage is 10 days. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.
+
+Agent assessment: shared ambiguous-cadence wording; different entity groups. Human decision and rationale: pending.
+
+## Pair 10: Jaccard 0.600000
+
+Training: `v7-20261009-r8-dev/crypto_spot/0199`
+
+I need forecasts of digital-asset market capitalization for Pelmar crypto spot site 2319. Measure the target in millions of USD. The forecast should extend 9 hours ahead. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.
+
+Validation: `v7-20261009-r8-dev/crypto_spot/0119`
+
+The analyst request is as follows.  We need an outlook for digital-asset market capitalization for Pelmar crypto spot site 2311. Target measurements use millions of USD. The requested future coverage is 6 hours. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.
+
+Agent assessment: shared ambiguous-cadence wording; different entity groups. Human decision and rationale: pending.
+
+## Pair 11: Jaccard 0.610169
+
+Training: `v7-20261009-r8-dev/crypto_derivatives/0159`
+
+I need forecasts of BTC perpetual-swap funding rate per eight-hour funding interval for Yarven crypto derivatives site 2415. Measure the target in percent per 8 hours. The forecast should extend 19 hours ahead. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.
+
+Validation: `v7-20261009-r8-dev/crypto_derivatives/0079`
+
+The analyst request is as follows.  We need an outlook for BTC perpetual-swap funding rate per eight-hour funding interval for Yarven crypto derivatives site 2407. Target measurements use percent per 8 hours. The requested future coverage is 16 hours. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.
+
+Agent assessment: shared ambiguous-cadence wording; different entity groups. Human decision and rationale: pending.
+
+## Pair 12: Jaccard 0.607143
+
+Training: `v7-20261009-r8-dev/trade_fiscal/0199`
+
+I need forecasts of government fiscal balance, revenue minus expenditure for Pelmar trade fiscal site 2619. Measure the target in millions of USD. The forecast should extend 18 months ahead. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.
+
+Validation: `v7-20261009-r8-dev/trade_fiscal/0119`
+
+The analyst request is as follows.  We need an outlook for government fiscal balance, revenue minus expenditure for Pelmar trade fiscal site 2611. Target measurements use millions of USD. The requested future coverage is 15 months. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.
+
+Agent assessment: shared ambiguous-cadence wording; different entity groups. Human decision and rationale: pending.
+
+## Pair 13: Jaccard 0.606557
+
+Training: `v7-20261009-r8-dev/weather_agriculture/0089`
+
+For my request,  I need the next 8 weeks predicted. The target values are in USD per metric tonne. The quantity to predict is wheat cash price with precipitation covariates for Merlow weather agriculture site 2908. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.
+
+Validation: `v7-20261009-r8-dev/weather_agriculture/0009`
+
+The analyst request is as follows.  We need an outlook for wheat cash price with precipitation covariates for Merlow weather agriculture site 2900. Target measurements use USD per metric tonne. The requested future coverage is 5 weeks. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.
+
+Agent assessment: shared ambiguous-cadence wording; different entity groups. Human decision and rationale: pending.
+
+## Pair 14: Jaccard 0.603448
+
+Training: `v7-20261009-r8-dev/weather_agriculture/0029`
+
+Please record this.  Predict a horizon of 10 weeks. Use thousands of USD as the target unit. My prediction target is irrigation expenditure with temperature covariates for Orven weather agriculture site 2902. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.
+
+Validation: `v7-20261009-r8-dev/weather_agriculture/0189`
+
+The analyst request is as follows.  We need an outlook for irrigation expenditure with temperature covariates for Orven weather agriculture site 2918. Target measurements use thousands of USD. The requested future coverage is 16 weeks. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.
+
+Agent assessment: shared ambiguous-cadence wording; different entity groups. Human decision and rationale: pending.
