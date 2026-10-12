@@ -1,0 +1,86 @@
+{
+  "stock-vs-v6": {
+    "component": {
+      "left_f1": 0.0015179113539769277,
+      "right_f1": 0.8191770479426198,
+      "delta_right_minus_left": 0.8176591365886429,
+      "ci95": [
+        0.8081372482383046,
+        0.8274453498961534
+      ],
+      "samples": 10000,
+      "seed": 42,
+      "cluster_count": 20,
+      "interval": "Paired entity-group percentile bootstrap; exact micro F1 recomputed."
+    },
+    "rollout": {
+      "left_f1": 0.0006995452955578874,
+      "right_f1": 0.8337087087087087,
+      "delta_right_minus_left": 0.8330091634131508,
+      "ci95": [
+        0.823334000224161,
+        0.8421448730009408
+      ],
+      "samples": 10000,
+      "seed": 42,
+      "cluster_count": 20,
+      "interval": "Paired entity-group percentile bootstrap; exact micro F1 recomputed."
+    }
+  },
+  "stock-vs-v7": {
+    "component": {
+      "left_f1": 0.0015179113539769277,
+      "right_f1": 0.8774645292058227,
+      "delta_right_minus_left": 0.8759466178518458,
+      "ci95": [
+        0.8434621003923374,
+        0.9038661539510439
+      ],
+      "samples": 10000,
+      "seed": 42,
+      "cluster_count": 20,
+      "interval": "Paired entity-group percentile bootstrap; exact micro F1 recomputed."
+    },
+    "rollout": {
+      "left_f1": 0.0006995452955578874,
+      "right_f1": 0.878480545823345,
+      "delta_right_minus_left": 0.8777810005277871,
+      "ci95": [
+        0.8492551683568207,
+        0.9031310444133536
+      ],
+      "samples": 10000,
+      "seed": 42,
+      "cluster_count": 20,
+      "interval": "Paired entity-group percentile bootstrap; exact micro F1 recomputed."
+    }
+  },
+  "v6-vs-v7": {
+    "component": {
+      "left_f1": 0.8191770479426198,
+      "right_f1": 0.8774645292058227,
+      "delta_right_minus_left": 0.058287481263202934,
+      "ci95": [
+        0.028789483794649923,
+        0.08521258449147436
+      ],
+      "samples": 10000,
+      "seed": 42,
+      "cluster_count": 20,
+      "interval": "Paired entity-group percentile bootstrap; exact micro F1 recomputed."
+    },
+    "rollout": {
+      "left_f1": 0.8337087087087087,
+      "right_f1": 0.878480545823345,
+      "delta_right_minus_left": 0.04477183711463628,
+      "ci95": [
+        0.02193609626871989,
+        0.06628502939481347
+      ],
+      "samples": 10000,
+      "seed": 42,
+      "cluster_count": 20,
+      "interval": "Paired entity-group percentile bootstrap; exact micro F1 recomputed."
+    }
+  }
+}

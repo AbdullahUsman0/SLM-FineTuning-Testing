@@ -1,0 +1,12 @@
+{
+  "adapter": {
+    "adapter_model.safetensors": {
+      "sha256": "a9ab464ae78f62e94b3dbb30b3d763563e5b7802dc437bb009acfae9b2a1a1db",
+      "bytes": 67332688
+    },
+    "adapter_config.json": {
+      "sha256": "fcbed9d64ab43e0a8fe5382bd7db03cf73cea6e6281d9d0950fe4537678c5f1e",
+      "bytes": 1413
+    }
+  }
+}

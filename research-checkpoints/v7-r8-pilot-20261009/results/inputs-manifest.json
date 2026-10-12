@@ -1,0 +1,26 @@
+{
+  "authorization_sha256": "40b29ca260d6fcef23eb793ad32ff252adda3493807249122fe7a42bbf4c3109",
+  "corpus_manifest_sha256": "4e59ba3eafa689325f94b108719da02b955e5c4f5de5571f208053e4c905da72",
+  "pilot_plan_sha256": "28f43f8b034d179d9fe1a70f3943f2563cc9951cdb883128e172451d79ac327d",
+  "inputs": {
+    "train": {
+      "path": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v7-r8-pilot-20261010T002204Z\\inputs\\train.jsonl",
+      "sha256": "11b764346be8c39826b7a9b30284887c5552f65557a1141d196f275d6668a2c3",
+      "records": 1040,
+      "conversations": 200,
+      "source_gzip_sha256": "a0ee9b4c9c56666d224fcf4e6669646d93a091023083f4c5488027abc161d35e",
+      "rows_are_byte_identical_source_lines": true
+    },
+    "validation": {
+      "path": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v7-r8-pilot-20261010T002204Z\\inputs\\validation.jsonl",
+      "sha256": "563fc4acbbd66c3aee3904df10113ea706950d56f5fec2b84e3e62cc4e3f2a90",
+      "records": 1040,
+      "conversations": 200,
+      "source_gzip_sha256": "58c24587a5f5a7fabe12a93a76cd94f2e1ff8c6ae7aa7df4c1d6948d29e47327",
+      "rows_are_byte_identical_source_lines": true
+    }
+  },
+  "selection": "One complete ten-conversation entity group per domain per split; minimum SHA256(v7-r8-pilot-seed42:group_id).",
+  "human_review_complete": false,
+  "final_labels_accessed": false
+}

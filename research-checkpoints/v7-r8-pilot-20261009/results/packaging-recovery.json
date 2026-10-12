@@ -1,0 +1,33 @@
+{
+  "status": "packaging_only_repair",
+  "started_at": "2026-10-12T00:01:42.186894+00:00",
+  "failure": "NameError: name 'hashlib' is not defined in ZIP member verification",
+  "repair": "Versioned copy of finish_r8.py adds only import hashlib. Frozen source remains byte-identical.",
+  "frozen_packager_sha256": "7014ab6dd33006f5aa20073aa7a798ff107261c49d80a1191a0054ad078ed11a",
+  "corrected_packager_sha256": "5286df7a1626a9dcf31bc243f7da1292dc47f39cfc62f040bf696d293ad0fa1e",
+  "publication_wrapper_sha256": "a9c75850d2b61fe519d07e5d97715ed69c584938ac94968a52f4b9fce0a53a4a",
+  "protocol_fingerprint": "d5ec475a260428daa321037a31f0795c8c80a2dc6b029da293d6e20675e2be07",
+  "preserved_previous_artifacts": [
+    {
+      "source": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v7-r8-pilot-20261010T002204Z\\continuation-results",
+      "preserved_as": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v7-r8-pilot-20261010T002204Z\\packaging-recovery\\20261012T000142Z\\continuation-results"
+    },
+    {
+      "source": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v7-r8-pilot-20261010T002204Z\\qwen35-2b-lora-v7-r8-pilot-20261010T002204Z-adapter.zip",
+      "preserved_as": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v7-r8-pilot-20261010T002204Z\\packaging-recovery\\20261012T000142Z\\qwen35-2b-lora-v7-r8-pilot-20261010T002204Z-adapter.zip"
+    }
+  ],
+  "regression_checks": [
+    "ZIP CRC",
+    "member inventory",
+    "member SHA-256",
+    "archive SHA-256",
+    "existing archive overwrite rejected"
+  ],
+  "evaluation_calls_repeated": 0,
+  "training_restarted": false,
+  "paid_API_calls": 0,
+  "sealed_final_accessed": false,
+  "latency_note": "V7 was resumed twice after unexpected PC shutdowns; three GPU sessions and three unscored warmups. Resume receipts are included under evaluation/v7 in the result archive.",
+  "scored_summaries_and_intervals_byte_identical": true
+}

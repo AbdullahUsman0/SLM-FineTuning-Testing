@@ -1,0 +1,19 @@
+{
+  "record_type": "explicit_user_training_authorization",
+  "user_message": "approved, start training",
+  "recorded_at_utc": "2026-10-10T00:22:04.841442+00:00",
+  "scope": "The proposed one-epoch, 200-conversation v7 r8 pilot; retain r8 with its disclosed development limitations.",
+  "corpus_manifest_sha256": "4e59ba3eafa689325f94b108719da02b955e5c4f5de5571f208053e4c905da72",
+  "pilot_plan_sha256": "28f43f8b034d179d9fe1a70f3943f2563cc9951cdb883128e172451d79ac327d",
+  "policy_sha256": "3b69e2aac27dd8f51199591828a9e9e267184253c249fcc2f26a0e3592cb274d",
+  "rubric_sha256": "c203699bac94450d8953dcf29cfe02a183282f1cd2db0c36fa65db0efd27103a",
+  "preflight_sha256": "5ae91d4ec64c45ea4e1125325ee9a8702719e88e1e05383b39d19161f80e85a7",
+  "human_review_ledger_sha256": "8af81e875ad6a035ea5db36d71eaaa92b79ba792c5eb044ad44687865700e2b7",
+  "human_sample_review_complete": false,
+  "human_overlap_review_complete": false,
+  "authorization_precedence": "The user explicitly authorized starting after being told the original materializer requires pending human review. This pilot uses a separate documented authorization route; the original gate and human ledger remain unchanged.",
+  "human_approvals_fabricated": false,
+  "full_training_authorized_by_this_record": false,
+  "final_labels_accessed": false,
+  "paid_APIs_authorized": false
+}

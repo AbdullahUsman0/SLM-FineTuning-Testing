@@ -1,0 +1,41 @@
+{
+  "status": "complete",
+  "completed_at_utc": "2026-10-10T02:15:15.106593+00:00",
+  "run_fingerprint": "c238b17fae2a8f002d33895824297c17654eec0c6402c9eb22ca3cc5c57b142a",
+  "optimizer_steps": 65,
+  "checkpoint_steps": [
+    10,
+    20,
+    30,
+    40,
+    50,
+    60,
+    65
+  ],
+  "checkpoint_hash_verification": "passed",
+  "adapter": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v7-r8-pilot-20261010T002204Z\\pilot\\best-adapter",
+  "adapter_sha256": {
+    "adapter_model.safetensors": "a9ab464ae78f62e94b3dbb30b3d763563e5b7802dc437bb009acfae9b2a1a1db",
+    "adapter_config.json": "fcbed9d64ab43e0a8fe5382bd7db03cf73cea6e6281d9d0950fe4537678c5f1e"
+  },
+  "evaluation": {
+    "eval_loss": 0.004412734415382147,
+    "eval_runtime": 1007.5348,
+    "eval_samples_per_second": 1.032,
+    "eval_steps_per_second": 1.032,
+    "eval_entropy": 0.005000148562528641,
+    "eval_num_tokens": 2891740.0,
+    "eval_mean_token_accuracy": 0.9989719155316169,
+    "epoch": 1.0,
+    "adapter_selection": {
+      "best-adapter": "final-step adapter; frequent durability checkpoints retained for later behavioral selection",
+      "task_winner_selected": false,
+      "behavioral_selection": "pending; compare all retained checkpoints separately",
+      "loss_best_checkpoint": null
+    }
+  },
+  "selection": "experimental final-step pilot adapter; behavioral evaluation pending",
+  "human_review_complete": false,
+  "final_labels_accessed": false,
+  "paid_API_calls": 0
+}

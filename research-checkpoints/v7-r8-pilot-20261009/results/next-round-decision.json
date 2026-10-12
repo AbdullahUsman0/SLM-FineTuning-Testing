@@ -1,0 +1,25 @@
+{
+  "status": "awaiting_human_failure_review_and_explicit_next_round_decision",
+  "predeclared_quantitative_candidate_gate_passed": false,
+  "v6_vs_v7_rollout": {
+    "left_f1": 0.8337087087087087,
+    "right_f1": 0.878480545823345,
+    "delta_right_minus_left": 0.04477183711463628,
+    "ci95": [
+      0.02193609626871989,
+      0.06628502939481347
+    ],
+    "samples": 10000,
+    "seed": 42,
+    "cluster_count": 20,
+    "interval": "Paired entity-group percentile bootstrap; exact micro F1 recomputed."
+  },
+  "automatic_full_training_started": false,
+  "model_quality_generalized_to_unseen_users": false,
+  "limitations": [
+    "Synthetic template overlap; agent review is not human annotation approval.",
+    "20 shared entity groups, not 200 independent conversations.",
+    "Filename-inference validation sparse for Roman Urdu and absent for mixed.",
+    "Serial GPU runs do not establish a controlled latency advantage."
+  ]
+}
