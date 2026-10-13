@@ -1,0 +1,11 @@
+{
+  "authorization_source": "Direct user message in this chat: we dont have this many funds, keep it low or use previous results for now",
+  "chosen_scope": "Verified existing results and offline preparation only",
+  "current_new_API_calls": 0,
+  "earlier_budget_proposal": "budget-request.json is an unapproved historical planning estimate, not authorization.",
+  "new_final_cohort_runs_authorized": false,
+  "new_paid_budget_usd": 0,
+  "recorded_at": "2026-10-12T23:56:24.085280+00:00",
+  "status": "paid_execution_deferred_use_previous_results",
+  "training_authorized": false
+}

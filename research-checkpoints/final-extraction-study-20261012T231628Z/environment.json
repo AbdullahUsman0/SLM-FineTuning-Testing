@@ -1,0 +1,29 @@
+{
+  "BF16_supported": true,
+  "RAM_available_bytes": 26618994688,
+  "RAM_bytes": 34033348608,
+  "VRAM_bytes": 17170956288,
+  "cuda_available": true,
+  "executable": "D:\\SLM\\SLM-FineTuning-Testing\\.venv\\Scripts\\python.exe",
+  "gpu": "NVIDIA RTX A4000",
+  "nvidia_smi": "NVIDIA RTX A4000, 16376 MiB, 596.86",
+  "openai_credential_available_in_process": false,
+  "packages": {
+    "accelerate": "1.14.0",
+    "jsonschema": "4.26.0",
+    "numpy": "2.5.2",
+    "openai": "2.54.0",
+    "peft": "0.20.0",
+    "psutil": "7.2.2",
+    "pydantic": "2.13.5",
+    "safetensors": "0.8.0",
+    "torch": "2.11.0+cu128",
+    "transformers": "5.15.0"
+  },
+  "paid_API_calls": 0,
+  "platform": "Windows-11-10.0.22621-SP0",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "recorded_at": "2026-10-12T23:21:30.117842+00:00",
+  "torch_cuda": "12.8",
+  "working_gpu_environment_upgraded": false
+}

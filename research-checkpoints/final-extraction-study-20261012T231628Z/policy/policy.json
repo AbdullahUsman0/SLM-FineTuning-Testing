@@ -1,0 +1,13 @@
+{
+  "candidate_decoding": "Exactly once, followed by model_construct for already validated values",
+  "exact_evidence_hard_gate": true,
+  "historical_files_modified": false,
+  "new_study_only": true,
+  "parser_dependencies": {
+    "jsonschema": "4.26.0",
+    "pydantic": "2.13.5"
+  },
+  "reference_policy_fingerprint": "558581a35a0abc592c59d6f30bc7a2a3c0542368bfee668ac3018800b702189e",
+  "structural_rules_reference": "Duplicate keys, nonfinite including overflow, closed fields, enums and duplicate-slot rejection from pinned ComparisonPolicy",
+  "version": "fresh-exact-evidence-pydantic-once-20261012-1"
+}

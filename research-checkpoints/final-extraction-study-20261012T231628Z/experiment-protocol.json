@@ -1,0 +1,288 @@
+{
+  "balance_differs_from_training": "Intentionally equal domains; 80/10/10 language quota. Not the earlier training domain mixture.",
+  "bootstrap": {
+    "micro_F1_recomputed": true,
+    "resamples": 10000,
+    "seed": 42,
+    "unit": "authored source/template-family group"
+  },
+  "budget_approval_required": true,
+  "calls_per_track_per_model": 1180,
+  "candidate_sha256": "7de52c1c326d1ba1d0b09b8445adf5a48b9894edcb1e922f40ef207821bb09b9",
+  "cohort_size": 240,
+  "document_type": "prospective experiment protocol",
+  "domain_quotas": {
+    "crypto": 60,
+    "inflation": 60,
+    "stocks": 60,
+    "weather": 60
+  },
+  "final_labels_enter_training_or_selection": false,
+  "hosted": {
+    "API": "Responses",
+    "SDK_retries": 0,
+    "budget": "Conservative reservation persisted before every attempt. Unknown transport outcomes retain worst-case reservation; completed usage includes reasoning and cached tokens.",
+    "concurrency": 1,
+    "deprecated_snapshot": "Official catalog marks snapshot deprecated; availability must be confirmed. No automatic substitution.",
+    "global_retry_allowance": 236,
+    "input_request_bytes_cap": 32768,
+    "max_attempts_per_call": 2,
+    "max_output_tokens_including_reasoning": 2048,
+    "maximum_attempts": 2597,
+    "model": "gpt-5-mini-2025-08-07",
+    "pricing": {
+      "cached_input_per_million": 0.025,
+      "input_per_million": 0.25,
+      "output_per_million": 2.0
+    },
+    "pricing_source": "https://developers.openai.com/api/docs/models/gpt-5-mini",
+    "pricing_verified_at": "2026-10-12T23:45:31.257114+00:00",
+    "reasoning": "minimal, previously verified for this exact snapshot; current access/settings checked before scoring",
+    "structured_outputs": "Strict closed shared schema",
+    "unscored_warmups": 1
+  },
+  "language_per_domain": {
+    "en": 48,
+    "mixed": 6,
+    "ur": 6
+  },
+  "local": {
+    "PEFT_parameter_precision": "Default FP32 LoRA parameters preserved, same verified PEFT loader for both adapters",
+    "base_precision": "bfloat16",
+    "batch_size": 1,
+    "device": "CUDA",
+    "enable_thinking": false,
+    "greedy": true,
+    "max_new_tokens": 1024,
+    "repetition_penalty": 1.0,
+    "seed": 42,
+    "unscored_warmups": "One per actual GPU model-loading session; recorded separately; none count in quality metrics."
+  },
+  "models": {
+    "OpenAI_model": "gpt-5-mini-2025-08-07",
+    "adapters": {
+      "v6": {
+        "provenance_sha256": "f705a926876c92bfe31f6ac9372dcb64f355658c322421947641bbcee57a1c87",
+        "sha256": {
+          "adapter_config.json": "38f60de9678324e91fa882ed86c70d09e4a39b27ae28884374ddc3e6fece15ef",
+          "adapter_model.safetensors": "e7add7b8b02d24615ed89067c7761c3985a4a6afb7c84ca2a72e3b06fd84e74d"
+        }
+      },
+      "v7": {
+        "ZIP_sha256": "df34422e42fe7c03a4cac3160876061592b37e3e2ae974c5c97c099742a59da8",
+        "provenance_sha256": "f197a20bdbf40033cdd212835125d1cf35f452e5b5ce0bc215a3b7daccd5cb2c",
+        "selection": "Frozen experimental final-step 65 pilot; no post-final checkpoint selection",
+        "sha256": {
+          "adapter_config.json": "fcbed9d64ab43e0a8fe5382bd7db03cf73cea6e6281d9d0950fe4537678c5f1e",
+          "adapter_model.safetensors": "a9ab464ae78f62e94b3dbb30b3d763563e5b7802dc437bb009acfae9b2a1a1db"
+        }
+      }
+    },
+    "base_model": "Qwen/Qwen3.5-2B",
+    "base_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "base_weights_sha256": "aa33250c4fc64891ddfaba3a314fd9542ea371843c387178b425fbcc5ed680b1",
+    "fpy_revision": "04d52c015d1e3ecdefe92b87116f209361509b4b",
+    "frozen_at": "2026-10-12T23:22:06.358298+00:00",
+    "training_authorized": false
+  },
+  "planned_scored_calls": 7080,
+  "policy": {
+    "application": "Pinned fpy reducer; reject contract/evidence failures as a whole; preserve prior slots on rejection and append actual user history.",
+    "candidate_wire": "String containing JSON text; historical ordinary-string acceptance retained. Exactly one decoding pass; explicitly encoded literal-looking strings remain strings.",
+    "evidence": "Exact nonblank current-message substring, case and whitespace sensitive.",
+    "invalid_calls": "Readable emitted tuples count as FP, every gold tuple as FN, zero TP on rejected calls; no silent repair, defaults, gold-conditioned postprocessing or semantic retries.",
+    "reference": "558581a35a0abc592c59d6f30bc7a2a3c0542368bfee668ac3018800b702189e",
+    "version": "fresh-exact-evidence-pydantic-once-20261012-1"
+  },
+  "primary_endpoint": "Exact non-intent slot/value/status micro F1 in rollout",
+  "primary_hypothesis": {
+    "alternative": "The cohort-specific difference is nonzero (two-sided).",
+    "decision": "Prespecified paired percentile 95% interval; no post-hoc equivalence/noninferiority claim.",
+    "null": "The cohort-specific exact rollout F1 difference v7 minus OpenAI is zero."
+  },
+  "primary_pair": "v7 minus OpenAI",
+  "protocol_version": "fresh-extraction-matched-20261012-1",
+  "research_task": "Forecasting-requirement extraction into a tabular time-series 79-slot schema, not actual forecasting accuracy.",
+  "review_required": true,
+  "schedule": [
+    {
+      "arm": "v6",
+      "group": "authored-family-00"
+    },
+    {
+      "arm": "v7",
+      "group": "authored-family-00"
+    },
+    {
+      "arm": "openai",
+      "group": "authored-family-00"
+    },
+    {
+      "arm": "v7",
+      "group": "authored-family-01"
+    },
+    {
+      "arm": "v6",
+      "group": "authored-family-01"
+    },
+    {
+      "arm": "openai",
+      "group": "authored-family-01"
+    },
+    {
+      "arm": "v6",
+      "group": "authored-family-02"
+    },
+    {
+      "arm": "v7",
+      "group": "authored-family-02"
+    },
+    {
+      "arm": "openai",
+      "group": "authored-family-02"
+    },
+    {
+      "arm": "v7",
+      "group": "authored-family-03"
+    },
+    {
+      "arm": "v6",
+      "group": "authored-family-03"
+    },
+    {
+      "arm": "openai",
+      "group": "authored-family-03"
+    },
+    {
+      "arm": "v6",
+      "group": "authored-family-04"
+    },
+    {
+      "arm": "v7",
+      "group": "authored-family-04"
+    },
+    {
+      "arm": "openai",
+      "group": "authored-family-04"
+    },
+    {
+      "arm": "v7",
+      "group": "authored-family-05"
+    },
+    {
+      "arm": "v6",
+      "group": "authored-family-05"
+    },
+    {
+      "arm": "openai",
+      "group": "authored-family-05"
+    },
+    {
+      "arm": "v6",
+      "group": "authored-family-06"
+    },
+    {
+      "arm": "v7",
+      "group": "authored-family-06"
+    },
+    {
+      "arm": "openai",
+      "group": "authored-family-06"
+    },
+    {
+      "arm": "v7",
+      "group": "authored-family-07"
+    },
+    {
+      "arm": "v6",
+      "group": "authored-family-07"
+    },
+    {
+      "arm": "openai",
+      "group": "authored-family-07"
+    },
+    {
+      "arm": "v6",
+      "group": "authored-family-08"
+    },
+    {
+      "arm": "v7",
+      "group": "authored-family-08"
+    },
+    {
+      "arm": "openai",
+      "group": "authored-family-08"
+    },
+    {
+      "arm": "v7",
+      "group": "authored-family-09"
+    },
+    {
+      "arm": "v6",
+      "group": "authored-family-09"
+    },
+    {
+      "arm": "openai",
+      "group": "authored-family-09"
+    },
+    {
+      "arm": "v6",
+      "group": "authored-family-10"
+    },
+    {
+      "arm": "v7",
+      "group": "authored-family-10"
+    },
+    {
+      "arm": "openai",
+      "group": "authored-family-10"
+    },
+    {
+      "arm": "v7",
+      "group": "authored-family-11"
+    },
+    {
+      "arm": "v6",
+      "group": "authored-family-11"
+    },
+    {
+      "arm": "openai",
+      "group": "authored-family-11"
+    }
+  ],
+  "schedule_limitation": "Local order alternates within 20-conversation family blocks; hosted requests follow the paired GPU block. Hardware, transport, reasoning and output constraints differ.",
+  "secondary_endpoints": [
+    "component exact F1",
+    "precision",
+    "recall",
+    "slot-name F1",
+    "raw JSON validity",
+    "schema validity",
+    "admission",
+    "exact evidence grounding",
+    "extra current-turn slot flags",
+    "duplicate slots",
+    "correction flag and exact replacement",
+    "unrelated-state preservation",
+    "complete state after correction",
+    "unknown semantic/metadata preservation and intent",
+    "complete conversation semantic state",
+    "original generation latency",
+    "tokens and hosted cost",
+    "numeric-canonical and status-free diagnostics"
+  ],
+  "secondary_pairs": [
+    "v6 minus OpenAI",
+    "v7 minus v6"
+  ],
+  "seeded_state_corruption_in_primary": false,
+  "stopping_rule": "One reviewed frozen cohort, one planned matched experiment, independent raw verification and documented failure analysis. No additional training or outcome-driven cohort expansion.",
+  "subgroup_analysis": "Domain/language/template-family secondary exploratory; no universal conclusions or multiplicity-adjusted claims.",
+  "synthetic_authorship": "Agent-authored parameterized synthetic candidate; independent human review required. Not independent human-authored requests.",
+  "template_clustering": "Twelve authored macro-template groups, with related variants/translations across domains. Shared generic clauses across groups remain a limitation.",
+  "tracks": {
+    "component": "Exact same gold-replayed prior state, schema and logical instructions for all arms.",
+    "rollout": "Fixed reviewed user scripts; each model uses its own accepted accumulated state."
+  },
+  "upstream_source_commit": "15d8c8703b6c2312356aecc920aeb8a5ac31afb2"
+}

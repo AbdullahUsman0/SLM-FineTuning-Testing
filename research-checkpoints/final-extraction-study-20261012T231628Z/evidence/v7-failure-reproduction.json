@@ -1,0 +1,165 @@
+{
+  "paid_API_calls": 0,
+  "scope": "Historical synthetic development cohort; not the new study",
+  "sealed_final_accessed": false,
+  "source_ZIP_sha256": "a253dc06fe165cbb2c516903e3cd928344ed010407747f51a73a9b494a74bb7a",
+  "tracks": {
+    "component": {
+      "v6": {
+        "exact_F1": 0.8191770479426198,
+        "extra_slot_flags_by_slot": {
+          "cadence": 2,
+          "expected_history_length": 15,
+          "forecast_horizon": 1,
+          "frequency": 13,
+          "prediction_frequency": 8,
+          "refresh_frequency": 2,
+          "target_column": 3,
+          "target_description": 8,
+          "timezone": 1
+        },
+        "extra_slot_flags_total": 53,
+        "invalid_JSON_calls": [],
+        "nonexact_evidence_calls": 159,
+        "nonexact_evidence_updates": 159,
+        "whitespace_collapsed_diagnostic_matches": 159
+      },
+      "v7": {
+        "exact_F1": 0.8774645292058227,
+        "extra_slot_flags_by_slot": {
+          "expected_history_length": 30,
+          "frequency": 12,
+          "known_future_covariates": 1,
+          "minimum_coverage": 1,
+          "output_format": 1,
+          "prediction_frequency": 14,
+          "prediction_interval_levels": 3,
+          "source_mode": 5,
+          "source_provider": 1,
+          "target_column": 3
+        },
+        "extra_slot_flags_total": 71,
+        "invalid_JSON_calls": [
+          {
+            "behavior": "lifecycle_bundle",
+            "hit_generation_limit": false,
+            "key": [
+              "v7-20261009-r8-dev/corporate_finance/0186",
+              "extract",
+              3
+            ],
+            "language": "ur",
+            "raw_output": "{\"correction_detected\": false, \"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"unsupported_claims\": [], \"updates\": [{\"candidate_value\": \"[\\\"holidays\\\", \\\"special_events\\\", \\\"past_covariates\\\", \\\"known_future_covariates\\\", \\\"static_features\\\", \\\"covariate_availability\\\"]\", \"confidence\": 1.0, \"evidence_text\": \"holidays ki requirement synthetic reporting holiday hai. special events ki requirement [{\\\"date\\\": \\\"2026-10-05\\\", \\\"name\\\": \\\"synthetic scheduled data release\\\"}] hai. past covariates ki requirement lagged_target hai. known future covariates ki requirement announced_calendar_event hai. static features ki requirement scope_sector hai. covariate availability ki requirement [{\\\"available\\\": \\\"announced before cutoff\\\", \\\"name\\\": \\\"announced_calendar_event\\\"}] hai.\", \"slot_id\": \"holidays\", \"status\": \"provided\"}, {\"candidate_value\": \"[\\\"synthetic scheduled data release\\\"]\", \"confidence\": 1.0, \"evidence_text\": \"special events ki requirement [{\\\"date\\\": \\\"2026-10-05\\\", \\\"name\\\": \\\"synthetic scheduled data release\\\"}] hai.\", \"slot_id\": \"special_events\", \"status\": \"provided\"}, {\"candidate_value\": \"[\\\"lagged_target\\\"]\", \"confidence\": 1.0, \"evidence_text\": \"past covariates ki requirement lagged_target hai.\", \"slot_id\": \"past_covariates\", \"status\": \"provided\"}, {\"candidate_value\": \"[\\\"announced_calendar_event\\\"]\", \"confidence\": 1.0, \"evidence_text\": \"known future covariates ki requirement announced_calendar_event hai.\", \"slot_id\": \"known_future_covariates\", \"status\": \"provided\"}, {\"candidate_value\": \"[\\\"scope_sector\\\"]\", \"confidence\": 1.0, \"evidence_text\": \"static features ki requirement scope_sector hai.\", \"slot_id\": \"static_features\", \"status\": \"provided\"}, {\"candidate_value\": \"[{\\\"available\\\": \\\"announced before cutoff\\\", \\\"name\\\": \\\"announced_calendar_event\\\"}]\", \"confidence\": 1.0, \"evidence_text\": \"covariate availability ki requirement [{\\\"available\\\": \\\"announced before cutoff\\\", \\\"name\\\": \\\"announced_calendar_event\\\"}] hai.\", \"slot_id\": \"covariate_availability\", \"status\": \"provided\"}]"
+          },
+          {
+            "behavior": "lifecycle_bundle",
+            "hit_generation_limit": true,
+            "key": [
+              "v7-20261009-r8-dev/precipitation/0076",
+              "extract",
+              3
+            ],
+            "language": "en",
+            "raw_output": "{\"correction_detected\": false, \"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"unsupported_claims\": [], \"updates\": [{\"candidate_value\": \"\\\"[\\\\\\\"{\\\\\\\"date\\\\\\\": \\\\\\\"2026-10-05\\\\\\\", \\\\\\\"name\\\\\\\": \\\\\\\"synthetic weather alert\\\\\\\"}\\\\\\\"]\", \"confidence\": 1.0, \"evidence_text\": \"The known special events are [{\\\"date\\\": \\\"2026-10-05\\\", \\\"name\\\": \\\"synthetic weather alert\\\"}].\", \"slot_id\": \"special_events\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"[\\\\\\\"{\\\\\\\"date\\\\\\\": \\\\\\\"2026-10-05\\\\\\\", \\\\\\\"name\\\\\\\": \\\\\\\"synthetic weather alert\\\\\\\"}\\\\\\\"]\", \"confidence\": 1.0, \"evidence_text\": \"The known special events are [{\\\"date\\\": \\\"2026-10-05\\\", \\\"name\\\": \\\"synthetic weather alert\\\"}].\", \"slot_id\": \"special_events\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"[\\\\\\\"{\\\\\\\"date\\\\\\\": \\\\\\\"2026-10-05\\\\\\\", \\\\\\\"name\\\\\\\": \\\\\\\"synthetic weather alert\\\\\\\"}\\\\\\\"]\", \"confidence\": 1.0, \"evidence_text\": \"The known special events are [{\\\"date\\\": \\\"2026-10-05\\\", \\\"name\\\": \\\"synthetic weather alert\\\"}].\", \"slot_id\": \"special_events\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"[\\\\\\\"{\\\\\\\"date\\\\\\\": \\\\\\\"2026-10-05\\\\\\\", \\\\\\\"name\\\\\\\": \\\\\\\"synthetic weather alert\\\\\\\"}\\\\\\\"]\", \"confidence\": 1.0, \"evidence_text\": \"The known special events are [{\\\"date\\\": \\\"2026-10-05\\\", \\\"name\\\": \\\"synthetic weather alert\\\"}].\", \"slot_id\": \"special_events\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"[\\\\\\\"{\\\\\\\"date\\\\\\\": \\\\\\\"2026-10-05\\\\\\\", \\\\\\\"name\\\\\\\": \\\\\\\"synthetic weather alert\\\\\\\"}\\\\\\\"]\", \"confidence\": 1.0, \"evidence_text\": \"The known special events are [{\\\"date\\\": \\\"2026-10-05\\\", \\\"name\\\": \\\"synthetic weather alert\\\"}].\", \"slot_id\": \"special_events\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"[\\\\\\\"{\\\\\\\"date\\\\\\\": \\\\\\\"2026-10-05\\\\\\\", \\\\\\\"name\\\\\\\": \\\\\\\"synthetic weather alert\\\\\\\"}\\\\\\\"]\", \"confidence\": 1.0, \"evidence_text\": \"The known special events are [{\\\"date\\\": \\\"2026-10-05\\\", \\\"name\\\": \\\"synthetic weather alert\\\"}].\", \"slot_id\": \"special_events\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"[\\\\\\\"{\\\\\\\"date\\\\\\\": \\\\\\\"2026-10-05\\\\\\\", \\\\\\\"name\\\\\\\": \\\\\\\"synthetic weather alert\\\\\\\"}\\\\\\\"]\", \"confidence\": 1.0, \"evidence_text\": \"The known special events are [{\\\"date\\\": \\\"2026-10-05\\\", \\\"name\\\": \\\"synthetic weather alert\\\"}].\", \"slot_id\": \"special_events\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"[\\\\\\\"{\\\\\\\"date\\\\\\\": \\\\\\\"2026-10-05\\\\\\\", \\\\\\\"name\\\\\\\": \\\\\\\"synthetic weather alert\\\\\\\"}\\\\\\\"]\", \"confidence\": 1.0, \"evidence_text\": \"The known special events are [{\\\"date\\\": \\\"2026-10-05\\\", \\\"name\\\": \\\"synthetic weather alert\\\"}].\", \"slot_id\": \"special_events\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"[\\\\\\\"{\\\\\\\"date\\\\\\\": \\\\\\\"2026-10-05\\\\\\\", \\\\\\\"name\\\\\\\": \\\\\\\"synthetic weather alert\\\\\\\"}\\\\\\\"]\", \"confidence\": 1.0, \"evidence_text\": \"The known special events are [{\\\"date\\\": \\\"2026-10-05\\\", \\\"name\\\": \\\"synthetic weather alert\\\"}].\", \"slot_id\": \"special_events\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"[\\\\\\\"{\\\\\\\"date\\\\\\\": \\\\\\\"2026-10-05\\\\\\\", \\\\\\\"name\\\\\\\": \\\\\\\"synthetic weather alert\\\\\\\"}\\\\\\\"]\", \""
+          },
+          {
+            "behavior": "lifecycle_bundle",
+            "hit_generation_limit": false,
+            "key": [
+              "v7-20261009-r8-dev/weather_agriculture/0076",
+              "extract",
+              4
+            ],
+            "language": "mixed",
+            "raw_output": "{\"correction_detected\": false, \"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"unsupported_claims\": [], \"updates\": [{\"candidate_value\": \"[{\\\"available\\\": \\\"announced before cutoff\\\", \\\"name\\\": \\\"announced_calendar_event\\\"}]\", \"confidence\": 1.0, \"evidence_text\": \"The future regressor availability records are [{\\\"available\\\": \\\"announced before cutoff\\\", \\\"name\\\": \\\"announced_calendar_event\\\"}].\", \"slot_id\": \"known_future_covariates\", \"status\": \"provided\"}, {\"candidate_value\": \"[{\\\"name\\\": \\\"observed_temperature\\\", \\\"source\\\": \\\"synthetic_station_archive\\\"}]\", \"confidence\": 1.0, \"evidence_text\": \"external covariate sources ki requirement [{\\\"name\\\": \\\"observed_temperature\\\", \\\"source\\\": \\\"synthetic_station_archive\\\"}] hai.\", \"slot_id\": \"external_covariate_sources\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"probabilistic\\\"\", \"confidence\": 1.0, \"evidence_text\": \"The requested forecast output type is probabilistic.\", \"slot_id\": \"forecast_type\", \"status\": \"provided\"}, {\"candidate_value\": \"[0.1, 0.5, 0.9]\", \"confidence\": 1.0, \"evidence_text\": \"quantiles ki requirement 0.1, 0.5, 0.9 hai.\", \"slot_id\": \"prediction_interval_levels\", \"status\": \"provided\"}, {\"candidate_value\": \"[{\\\"description\\\": \\\"synthetic extreme-weather scenario\\\", \\\"name\\\": \\\"stress\\\"}]\", \"confidence\": 1.0, \"evidence_text\": \"The alternative future scenarios are [{\\\"description\\\": \\\"synthetic extreme-weather scenario\\\", \\\"name\\\": \\\"stress\\\"}].\", \"slot_id\": \"scenario_forecasts\", \"status\": \"provided\"}, {\"candidate_value\": \"{\\\"decimal_places\\\": 2}\", \"confidence\": 1.0, \"evidence_text\": \"rounding rule ki requirement {\\\"decimal_places\\\": 2} hai.\", \"slot_id\": \"rounding_rule\", \"status\": \"provided\"}]"
+          }
+        ],
+        "nonexact_evidence_calls": 40,
+        "nonexact_evidence_updates": 77,
+        "whitespace_collapsed_diagnostic_matches": 76
+      }
+    },
+    "rollout": {
+      "v6": {
+        "exact_F1": 0.8337087087087087,
+        "extra_slot_flags_by_slot": {
+          "access_details": 1,
+          "cadence": 2,
+          "expected_history_length": 11,
+          "forecast_horizon": 1,
+          "frequency": 17,
+          "prediction_frequency": 7,
+          "prediction_interval_levels": 1,
+          "provided": 1,
+          "refresh_frequency": 3,
+          "seasonal_cycle_lengths": 1,
+          "target_column": 3,
+          "target_description": 14,
+          "time_column": 1,
+          "timezone": 1
+        },
+        "extra_slot_flags_total": 64,
+        "invalid_JSON_calls": [],
+        "nonexact_evidence_calls": 159,
+        "nonexact_evidence_updates": 159,
+        "whitespace_collapsed_diagnostic_matches": 159
+      },
+      "v7": {
+        "exact_F1": 0.878480545823345,
+        "extra_slot_flags_by_slot": {
+          "expected_history_length": 28,
+          "frequency": 13,
+          "future_regressor_availability": 1,
+          "known_future_covariates": 1,
+          "minimum_coverage": 1,
+          "output_format": 1,
+          "prediction_frequency": 13,
+          "prediction_interval_levels": 3,
+          "seasonal_periods": 1,
+          "source_mode": 6,
+          "source_provider": 1,
+          "target_column": 3
+        },
+        "extra_slot_flags_total": 72,
+        "invalid_JSON_calls": [
+          {
+            "behavior": "lifecycle_bundle",
+            "hit_generation_limit": false,
+            "key": [
+              "v7-20261009-r8-dev/corporate_finance/0186",
+              "extract",
+              3
+            ],
+            "language": "ur",
+            "raw_output": "{\"correction_detected\": false, \"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"unsupported_claims\": [], \"updates\": [{\"candidate_value\": \"[\\\"holidays\\\", \\\"special_events\\\", \\\"past_covariates\\\", \\\"known_future_covariates\\\", \\\"static_features\\\", \\\"covariate_availability\\\"]\", \"confidence\": 1.0, \"evidence_text\": \"holidays ki requirement synthetic reporting holiday hai. special events ki requirement [{\\\"date\\\": \\\"2026-10-05\\\", \\\"name\\\": \\\"synthetic scheduled data release\\\"}] hai. past covariates ki requirement lagged_target hai. known future covariates ki requirement announced_calendar_event hai. static features ki requirement scope_sector hai. covariate availability ki requirement [{\\\"available\\\": \\\"announced before cutoff\\\", \\\"name\\\": \\\"announced_calendar_event\\\"}] hai.\", \"slot_id\": \"holidays\", \"status\": \"provided\"}, {\"candidate_value\": \"[\\\"synthetic scheduled data release\\\"]\", \"confidence\": 1.0, \"evidence_text\": \"special events ki requirement [{\\\"date\\\": \\\"2026-10-05\\\", \\\"name\\\": \\\"synthetic scheduled data release\\\"}] hai.\", \"slot_id\": \"special_events\", \"status\": \"provided\"}, {\"candidate_value\": \"[\\\"lagged_target\\\"]\", \"confidence\": 1.0, \"evidence_text\": \"past covariates ki requirement lagged_target hai.\", \"slot_id\": \"past_covariates\", \"status\": \"provided\"}, {\"candidate_value\": \"[\\\"announced_calendar_event\\\"]\", \"confidence\": 1.0, \"evidence_text\": \"known future covariates ki requirement announced_calendar_event hai.\", \"slot_id\": \"known_future_covariates\", \"status\": \"provided\"}, {\"candidate_value\": \"[\\\"scope_sector\\\"]\", \"confidence\": 1.0, \"evidence_text\": \"static features ki requirement scope_sector hai.\", \"slot_id\": \"static_features\", \"status\": \"provided\"}, {\"candidate_value\": \"[{\\\"available\\\": \\\"announced before cutoff\\\", \\\"name\\\": \\\"announced_calendar_event\\\"}]\", \"confidence\": 1.0, \"evidence_text\": \"covariate availability ki requirement [{\\\"available\\\": \\\"announced before cutoff\\\", \\\"name\\\": \\\"announced_calendar_event\\\"}] hai.\", \"slot_id\": \"covariate_availability\", \"status\": \"provided\"}]"
+          },
+          {
+            "behavior": "lifecycle_bundle",
+            "hit_generation_limit": false,
+            "key": [
+              "v7-20261009-r8-dev/corporate_finance/0186",
+              "extract",
+              4
+            ],
+            "language": "ur",
+            "raw_output": "{\"correction_detected\": false, \"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"unsupported_claims\": [], \"updates\": [{\"candidate_value\": \"[{\\\"name\\\": \\\"announced_calendar_event\\\", \\\"source\\\": \\\"synthetic_calendar\\\"}]\", \"confidence\": 1.0, \"evidence_text\": \"external covariate sources ki requirement [{\\\"name\\\": \\\"announced_calendar_event\\\", \\\"source\\\": \\\"synthetic_calendar\\\"}] hai.\", \"slot_id\": \"external_covariate_sources\", \"status\": \"provided\"}, {\"candidate_value\": \"[\\\"probabilistic\\\"]\", \"confidence\": 1.0, \"evidence_text\": \"forecast type ki requirement probabilistic hai.\", \"slot_id\": \"forecast_type\", \"status\": \"provided\"}, {\"candidate_value\": \"[0.1, 0.5, 0.9]\", \"confidence\": 1.0, \"evidence_text\": \"quantiles ki requirement 0.1, 0.5, 0.9 hai.\", \"slot_id\": \"prediction_interval_levels\", \"status\": \"provided\"}, {\"candidate_value\": \"[{\\\"description\\\": \\\"synthetic planning sensitivity\\\", \\\"name\\\": \\\"stress\\\"}]\", \"confidence\": 1.0, \"evidence_text\": \"scenario forecasts ki requirement [{\\\"description\\\": \\\"synthetic planning sensitivity\\\", \\\"name\\\": \\\"stress\\\"}] hai.\", \"slot_id\": \"scenario_forecasts\", \"status\": \"provided\"}, {\"candidate_value\": \"{\\\"decimal_places\\\": 2}\", \"confidence\": 1.0, \"evidence_text\": \"rounding rule ki requirement {\\\"decimal_places\\\": 2} hai.\", \"slot_id\": \"rounding_rule\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"one prediction row per month\\\"\", \"confidence\": 1.0, \"evidence_text\": \"Prediction rows ki resolution one prediction row per month hai.\", \"slot_id\": \"output_granularity\", \"status\": \"provided\"}]"
+          },
+          {
+            "behavior": "lifecycle_bundle",
+            "hit_generation_limit": true,
+            "key": [
+              "v7-20261009-r8-dev/precipitation/0076",
+              "extract",
+              3
+            ],
+            "language": "en",
+            "raw_output": "{\"correction_detected\": false, \"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"unsupported_claims\": [], \"updates\": [{\"candidate_value\": \"\\\"[\\\\\\\"{\\\\\\\"date\\\\\\\": \\\\\\\"2026-10-05\\\\\\\", \\\\\\\"name\\\\\\\": \\\\\\\"synthetic weather alert\\\\\\\"}\\\\\\\"]\", \"confidence\": 1.0, \"evidence_text\": \"The known special events are [{\\\"date\\\": \\\"2026-10-05\\\", \\\"name\\\": \\\"synthetic weather alert\\\"}].\", \"slot_id\": \"special_events\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"[\\\\\\\"{\\\\\\\"date\\\\\\\": \\\\\\\"2026-10-05\\\\\\\", \\\\\\\"name\\\\\\\": \\\\\\\"synthetic weather alert\\\\\\\"}\\\\\\\"]\", \"confidence\": 1.0, \"evidence_text\": \"The known special events are [{\\\"date\\\": \\\"2026-10-05\\\", \\\"name\\\": \\\"synthetic weather alert\\\"}].\", \"slot_id\": \"special_events\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"[\\\\\\\"{\\\\\\\"date\\\\\\\": \\\\\\\"2026-10-05\\\\\\\", \\\\\\\"name\\\\\\\": \\\\\\\"synthetic weather alert\\\\\\\"}\\\\\\\"]\", \"confidence\": 1.0, \"evidence_text\": \"The known special events are [{\\\"date\\\": \\\"2026-10-05\\\", \\\"name\\\": \\\"synthetic weather alert\\\"}].\", \"slot_id\": \"special_events\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"[\\\\\\\"{\\\\\\\"date\\\\\\\": \\\\\\\"2026-10-05\\\\\\\", \\\\\\\"name\\\\\\\": \\\\\\\"synthetic weather alert\\\\\\\"}\\\\\\\"]\", \"confidence\": 1.0, \"evidence_text\": \"The known special events are [{\\\"date\\\": \\\"2026-10-05\\\", \\\"name\\\": \\\"synthetic weather alert\\\"}].\", \"slot_id\": \"special_events\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"[\\\\\\\"{\\\\\\\"date\\\\\\\": \\\\\\\"2026-10-05\\\\\\\", \\\\\\\"name\\\\\\\": \\\\\\\"synthetic weather alert\\\\\\\"}\\\\\\\"]\", \"confidence\": 1.0, \"evidence_text\": \"The known special events are [{\\\"date\\\": \\\"2026-10-05\\\", \\\"name\\\": \\\"synthetic weather alert\\\"}].\", \"slot_id\": \"special_events\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"[\\\\\\\"{\\\\\\\"date\\\\\\\": \\\\\\\"2026-10-05\\\\\\\", \\\\\\\"name\\\\\\\": \\\\\\\"synthetic weather alert\\\\\\\"}\\\\\\\"]\", \"confidence\": 1.0, \"evidence_text\": \"The known special events are [{\\\"date\\\": \\\"2026-10-05\\\", \\\"name\\\": \\\"synthetic weather alert\\\"}].\", \"slot_id\": \"special_events\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"[\\\\\\\"{\\\\\\\"date\\\\\\\": \\\\\\\"2026-10-05\\\\\\\", \\\\\\\"name\\\\\\\": \\\\\\\"synthetic weather alert\\\\\\\"}\\\\\\\"]\", \"confidence\": 1.0, \"evidence_text\": \"The known special events are [{\\\"date\\\": \\\"2026-10-05\\\", \\\"name\\\": \\\"synthetic weather alert\\\"}].\", \"slot_id\": \"special_events\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"[\\\\\\\"{\\\\\\\"date\\\\\\\": \\\\\\\"2026-10-05\\\\\\\", \\\\\\\"name\\\\\\\": \\\\\\\"synthetic weather alert\\\\\\\"}\\\\\\\"]\", \"confidence\": 1.0, \"evidence_text\": \"The known special events are [{\\\"date\\\": \\\"2026-10-05\\\", \\\"name\\\": \\\"synthetic weather alert\\\"}].\", \"slot_id\": \"special_events\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"[\\\\\\\"{\\\\\\\"date\\\\\\\": \\\\\\\"2026-10-05\\\\\\\", \\\\\\\"name\\\\\\\": \\\\\\\"synthetic weather alert\\\\\\\"}\\\\\\\"]\", \"confidence\": 1.0, \"evidence_text\": \"The known special events are [{\\\"date\\\": \\\"2026-10-05\\\", \\\"name\\\": \\\"synthetic weather alert\\\"}].\", \"slot_id\": \"special_events\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"[\\\\\\\"{\\\\\\\"date\\\\\\\": \\\\\\\"2026-10-05\\\\\\\", \\\\\\\"name\\\\\\\": \\\\\\\"synthetic weather alert\\\\\\\"}\\\\\\\"]\", \""
+          }
+        ],
+        "nonexact_evidence_calls": 40,
+        "nonexact_evidence_updates": 77,
+        "whitespace_collapsed_diagnostic_matches": 76
+      }
+    }
+  }
+}

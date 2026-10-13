@@ -1,0 +1,40 @@
+{
+  "API_complete_request_UTF8_bytes": {
+    "maximum": 19023,
+    "mean": 18175.004237288136,
+    "median": 18342.0,
+    "minimum": 17214
+  },
+  "API_complete_request_token_estimate": {
+    "maximum": 3963,
+    "mean": 3767.4322033898306,
+    "median": 3804.0,
+    "minimum": 3547
+  },
+  "Qwen_prompt_tokens": {
+    "maximum": 2835,
+    "mean": 2648.6949152542375,
+    "median": 2683.5,
+    "minimum": 2442
+  },
+  "candidate_sha256": "7de52c1c326d1ba1d0b09b8445adf5a48b9894edcb1e922f40ef207821bb09b9",
+  "encoding": "o200k_base",
+  "generation_cap_change": false,
+  "gold_wire_OpenAI_tokens": {
+    "maximum": 410,
+    "mean": 124.72966101694915,
+    "median": 135.0,
+    "minimum": 29
+  },
+  "gold_wire_Qwen_tokens": {
+    "maximum": 414,
+    "mean": 124.46101694915254,
+    "median": 133.0,
+    "minimum": 27
+  },
+  "local_gold_outputs_over_1024": 0,
+  "model_calls_on_cohort": 0,
+  "status": "offline_candidate_preflight_passed_not_final_execution",
+  "tiktoken_version": "0.12.0",
+  "token_counter_installed_in_isolated_directory": true
+}

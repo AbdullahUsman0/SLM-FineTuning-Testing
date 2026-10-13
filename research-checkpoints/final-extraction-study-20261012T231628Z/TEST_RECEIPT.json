@@ -1,0 +1,42 @@
+{
+  "actual_runner_gate_probe": "Deferred decision rejected before run directory/model loading",
+  "all_python_sources_compile": true,
+  "command": [
+    "D:\\SLM\\SLM-FineTuning-Testing\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\final-extraction-study-20261012T231628Z\\tests",
+    "-v"
+  ],
+  "exit_code": 0,
+  "mocked_test_fixtures_are_not_human_review": true,
+  "new_final_cohort_calls": 0,
+  "new_paid_API_calls": 0,
+  "source_sha256": {
+    "code/audit_overlap.py": "a9e007c7c6d9404135f1399ca963df6cafb2d0798b58c50b29710f015c1e05b2",
+    "code/evaluate.py": "3912a2b7dc7fa0893c5a79de914e23f96901d2f1f94f6f864c0ae5d7f78d0a5a",
+    "code/evidence_only.py": "64fd2be0c0d3a64c7d76c6747e92f071a2655ec056906a254f69e51002e39916",
+    "code/journal.py": "ad7062a02c7225e4e55e47eb52628e4099a7a5b40e6431247d4e7632f0a7cc75",
+    "code/manual.py": "df3704e50b536ac60d1499bc681dc249c4e0b3028df583987782f2baab2de4dc",
+    "code/metrics.py": "db52209815f26724cc8c0462b0912bb363da3c49a42b9d1886a8604b35acef8c",
+    "code/package_preparation.py": "628c8ed439cfbf70b40ade559b85bebbb149f2162817befe859fffdf0660bf96",
+    "code/prepare_evidence.py": "14f1e8ed796c332ecccd6dff12e8e861c7d017d1878da6dbc95adf064b59474c",
+    "code/prepare_registration.py": "5cdeb86574ba000881ef67db3a01321ff86161bbc02e8ac6f4fe52b046181bbe",
+    "code/providers.py": "199e076db53ce1822942a47e6557d782b7899e3544a7d9f54c68c256733c795d",
+    "code/registration.py": "1dd1aa0265c7dbbf9fd9eed335fff713f642871dc7a2a96311907830b49992d7",
+    "code/runtime.py": "e84565421f50dbc9424565de5063db6258d960238f8028c11659bd1627f8979f",
+    "code/schedule.py": "098d5c16c327b6877ad33269bfd7b06ddbd23e14eb9263097be80f2d907f093c",
+    "code/shared_policy.py": "a9119e0054cee7e422f747b276a3bdf2e9c569d385e892ca4ad8c98dbc5c3845",
+    "code/smoke.py": "870fc2ac3c32be43f5f0a6030d1d35e5b4e5bc5a57d143f309ec67aee2e3c6ff",
+    "code/verify_results.py": "1709cab05b07eb3e7f4cabc3698e0e6032e04cf215ba743717ab6ec00be39cb1",
+    "tests/test_contract.py": "9857a0b465156d5d2421a9d80654896fb48753d35adcf7caf3937b6bf97f7845",
+    "tests/test_experiment.py": "16de32f56573a5a75eaa8801a32e33701e774971a1e35f113258b63acd514aeb"
+  },
+  "status": "passed",
+  "test_output_sha256": "b7a8c76ccb1873ad007d9d648a75155aa4c92558409d8a1e8ca2c664fb189d5c",
+  "tests": 32,
+  "verified_at": "2026-10-13T00:12:38.971667+00:00"
+}

@@ -1,0 +1,86 @@
+{
+  "agent_semantic_review": "proposal authored and consistency checked by agent; independent human review pending",
+  "calls_per_track_per_model": 1180,
+  "candidate_sha256": "7de52c1c326d1ba1d0b09b8445adf5a48b9894edcb1e922f40ef207821bb09b9",
+  "clustering": "Twelve authored macro-template families shared across domains and translations; not 240 independent conversations.",
+  "conversations": 240,
+  "coverage": {
+    "ambiguous_cadence": 240,
+    "calendar_type": 20,
+    "confirmation": 20,
+    "dense_request": 60,
+    "filename_inference": 220,
+    "geographic_scope": 10,
+    "horizon": 240,
+    "horizon_correction": 220,
+    "inferred_to_provided": 20,
+    "lists": 20,
+    "literal_strings": 20,
+    "meaningful_target": 240,
+    "multiple_requirements": 240,
+    "nested_objects": 20,
+    "refresh_vs_access": 60,
+    "retrain_vs_refresh": 40,
+    "sampling_vs_history": 40,
+    "sampling_vs_issuance": 240,
+    "source_columns": 240,
+    "source_mode": 240,
+    "target_boundary": 240,
+    "unknown_information": 240,
+    "unknown_prior_ambiguous": 20,
+    "unrelated_state_preservation": 480,
+    "whitespace_evidence": 20
+  },
+  "dataset_version": "fresh-extraction-240-20261012-candidate-2",
+  "domain_language_counts": {
+    "crypto": {
+      "en": 48,
+      "mixed": 6,
+      "ur": 6
+    },
+    "inflation": {
+      "en": 48,
+      "mixed": 6,
+      "ur": 6
+    },
+    "stocks": {
+      "en": 48,
+      "mixed": 6,
+      "ur": 6
+    },
+    "weather": {
+      "en": 48,
+      "mixed": 6,
+      "ur": 6
+    }
+  },
+  "final_frozen": false,
+  "gold_slot_counts": {
+    "calendar_type": 20,
+    "expected_history_length": 40,
+    "file_format": 240,
+    "forecast_horizon": 480,
+    "frequency": 240,
+    "geography": 10,
+    "output_format": 240,
+    "past_covariates": 20,
+    "prediction_frequency": 60,
+    "problem_statement": 240,
+    "refresh_frequency": 60,
+    "retraining_frequency": 40,
+    "scope_filters": 20,
+    "source_mode": 240,
+    "source_reference": 240,
+    "target_column": 240,
+    "target_description": 240,
+    "time_column": 240
+  },
+  "human_review_complete": false,
+  "model_calls_on_cohort": 0,
+  "planned_hosted_calls": 2360,
+  "planned_scored_calls_all_arms": 7080,
+  "sealed_previous_final_accessed": false,
+  "structural_validation": "passed",
+  "template_groups": 12,
+  "training_examples_created": 0
+}

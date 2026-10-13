@@ -1,0 +1,20 @@
+{
+  "files_sha256": {
+    "code/providers.py": "199e076db53ce1822942a47e6557d782b7899e3544a7d9f54c68c256733c795d",
+    "code/runtime.py": "e84565421f50dbc9424565de5063db6258d960238f8028c11659bd1627f8979f",
+    "code/shared_policy.py": "a9119e0054cee7e422f747b276a3bdf2e9c569d385e892ca4ad8c98dbc5c3845",
+    "policy/ANNOTATION_RUBRIC.md": "5c753378fcaf366b5d755df398d64fe4da9e8d03ba3ab1a80d3602763628f985",
+    "policy/extractor-instructions.txt": "0c9f1c5dc73ca2e87e269333743cd4f140ab16375f0ed0c2b75dfbde8c1a2463",
+    "policy/extractor-result.schema.json": "47d43ce0bfb180080b8e48e4a5bb26cb19161b23ac4f910071ec88e1c4f3c871",
+    "policy/policy.json": "a41472d0a5842e123f020235843dd5086ee2525a80b2cb02eb96eac5d581563b"
+  },
+  "final_cohort_registered": false,
+  "fpy_revision": "04d52c015d1e3ecdefe92b87116f209361509b4b",
+  "parser_dependencies": {
+    "jsonschema": "4.26.0",
+    "pydantic": "2.13.5"
+  },
+  "policy_version": "fresh-exact-evidence-pydantic-once-20261012-1",
+  "reference_policy_fingerprint": "558581a35a0abc592c59d6f30bc7a2a3c0542368bfee668ac3018800b702189e",
+  "status": "prospective_common_policy_frozen_before_any_final_scoring"
+}

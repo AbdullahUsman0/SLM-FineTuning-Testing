@@ -1,0 +1,116 @@
+{
+  "cohort_examples_consumed": 0,
+  "completed_at": "2026-10-12T23:32:54.952326+00:00",
+  "fixtures_sha256": "ec525094f663af537657ac13c317bc77aaf0591ac940a35d8cfc5d7ec4e524f5",
+  "output_directory": "D:\\SLM\\FYP-evaluation-private\\final-extraction-study-20261012T231628Z\\smoke-2026-10-12T233022.513234_0000",
+  "paid_API_calls": 0,
+  "results": {
+    "v6": {
+      "CUDA_verified": true,
+      "active_adapters": [
+        "default"
+      ],
+      "fixtures": 6,
+      "generation_limit_hits": 0,
+      "runtime": {
+        "active_adapters": [
+          "default"
+        ],
+        "base_commit_hash": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+        "chat_template_sha256": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+        "cpu_offload": false,
+        "gpu": "NVIDIA RTX A4000",
+        "model_class": "PeftModel",
+        "parameter_devices": [
+          "cuda:0"
+        ],
+        "parameter_dtypes": [
+          "torch.bfloat16",
+          "torch.float32"
+        ],
+        "peft_adapter_configs": {
+          "default": {
+            "class": "LoraConfig",
+            "lora_alpha": 32,
+            "r": 16,
+            "target_modules": [
+              "down_proj",
+              "gate_proj",
+              "in_proj_a",
+              "in_proj_b",
+              "in_proj_qkv",
+              "in_proj_z",
+              "k_proj",
+              "o_proj",
+              "out_proj",
+              "q_proj",
+              "up_proj",
+              "v_proj"
+            ]
+          }
+        },
+        "precision": "BF16 base; PEFT default FP32 LoRA parameters retained, same verified loading path for both arms",
+        "processor_class": "Qwen2Tokenizer",
+        "revision_requested": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+        "tokenizer_class": "Qwen2Tokenizer"
+      },
+      "semantic_or_contract_failures_are_recorded_not_retried": true,
+      "warmup_calls": 1
+    },
+    "v7": {
+      "CUDA_verified": true,
+      "active_adapters": [
+        "default"
+      ],
+      "fixtures": 6,
+      "generation_limit_hits": 0,
+      "runtime": {
+        "active_adapters": [
+          "default"
+        ],
+        "base_commit_hash": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+        "chat_template_sha256": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+        "cpu_offload": false,
+        "gpu": "NVIDIA RTX A4000",
+        "model_class": "PeftModel",
+        "parameter_devices": [
+          "cuda:0"
+        ],
+        "parameter_dtypes": [
+          "torch.bfloat16",
+          "torch.float32"
+        ],
+        "peft_adapter_configs": {
+          "default": {
+            "class": "LoraConfig",
+            "lora_alpha": 32,
+            "r": 16,
+            "target_modules": [
+              "down_proj",
+              "gate_proj",
+              "in_proj_a",
+              "in_proj_b",
+              "in_proj_qkv",
+              "in_proj_z",
+              "k_proj",
+              "o_proj",
+              "out_proj",
+              "q_proj",
+              "up_proj",
+              "v_proj"
+            ]
+          }
+        },
+        "precision": "BF16 base; PEFT default FP32 LoRA parameters retained, same verified loading path for both arms",
+        "processor_class": "Qwen2Tokenizer",
+        "revision_requested": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+        "tokenizer_class": "Qwen2Tokenizer"
+      },
+      "semantic_or_contract_failures_are_recorded_not_retried": true,
+      "warmup_calls": 1
+    }
+  },
+  "scope": "separate fixtures, not final scoring",
+  "status": "GPU_readiness_verified",
+  "training_started": false
+}

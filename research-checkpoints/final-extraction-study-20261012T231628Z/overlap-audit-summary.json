@@ -1,0 +1,119 @@
+{
+  "candidate_exact_reference_matches": 0,
+  "candidate_normalized_reference_matches": 0,
+  "candidate_sha256": "7de52c1c326d1ba1d0b09b8445adf5a48b9894edcb1e922f40ef207821bb09b9",
+  "candidate_utterances": 1180,
+  "final_gate": "Exact/normalized reference matches must be removed or adjudicated before final freeze; every near-overlap row requires independent human decision.",
+  "limitations": [
+    "Lexical masking and trigram/character similarity cannot certify independent human authorship.",
+    "Parameterized synthetic clauses recur across macro-template families; clustered intervals remain conditional on this convenience design.",
+    "Accessible training and development are audited; previously sealed final labels are deliberately excluded."
+  ],
+  "model_calls": 0,
+  "near_overlap_queue": 0,
+  "overlap_queue_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "reference_utterances": 34358,
+  "sealed_final_accessed": false,
+  "shared_clauses_across_macro_groups": 38,
+  "sources": [
+    {
+      "path": "D:\\SLM\\SLM-FineTuning-Testing\\corpus\\splits\\train.jsonl",
+      "scope": "accessible training/development only",
+      "sha256": "340c0a3e96918f1a9deb38b0f95ef883a3bf2a68fa286befec629e126653f47b",
+      "utterances": 154
+    },
+    {
+      "path": "D:\\SLM\\SLM-FineTuning-Testing\\corpus\\splits\\validation.jsonl",
+      "scope": "accessible training/development only",
+      "sha256": "1f83b98c4b9b15279a2c95682e82a82cbbef73f8fdb0169b5591d9b505eafbc4",
+      "utterances": 33
+    },
+    {
+      "path": "D:\\SLM\\SLM-FineTuning-Testing\\corpus-v2\\splits\\train.jsonl",
+      "scope": "accessible training/development only",
+      "sha256": "76e0b56ccca7c7d147be28ad4f22b72339512427791e93e495f59fde48da61d0",
+      "utterances": 238
+    },
+    {
+      "path": "D:\\SLM\\SLM-FineTuning-Testing\\corpus-v2\\splits\\validation.jsonl",
+      "scope": "accessible training/development only",
+      "sha256": "7b70b353fba52fdc2e7b7db02572e63cf8d3e0a6dcd9e159addef9a0d4e6caea",
+      "utterances": 51
+    },
+    {
+      "path": "D:\\SLM\\SLM-FineTuning-Testing\\corpus-v3\\splits\\train.jsonl",
+      "scope": "accessible training/development only",
+      "sha256": "71f11dc556b313502a5645a1ed7b8bb27daf8f7b10da1cc4b2962b5955d39076",
+      "utterances": 238
+    },
+    {
+      "path": "D:\\SLM\\SLM-FineTuning-Testing\\corpus-v3\\splits\\validation.jsonl",
+      "scope": "accessible training/development only",
+      "sha256": "6a48945b776d78e480c96e28e6144cc04a9cb4c18bf5d6600a674e34f93c9b4a",
+      "utterances": 51
+    },
+    {
+      "path": "D:\\SLM\\SLM-FineTuning-Testing\\corpus-v5\\v5-20260919-r1\\splits\\train.jsonl",
+      "scope": "accessible training/development only",
+      "sha256": "a282b12f5427be404354101a8109b9b5123d123824ff99d7de55d9911cb68fa5",
+      "utterances": 3357
+    },
+    {
+      "path": "D:\\SLM\\SLM-FineTuning-Testing\\corpus-v5\\v5-20260919-r1\\splits\\validation.jsonl",
+      "scope": "accessible training/development only",
+      "sha256": "a98327f81de8379db36d3a71e6f7bc4bde2263d54356d8e48d47e6194beade72",
+      "utterances": 717
+    },
+    {
+      "path": "D:\\SLM\\SLM-FineTuning-Testing\\corpus-v6\\v6-20261002-r4\\splits\\train.jsonl.gz",
+      "scope": "accessible training/development only",
+      "sha256": "bf5838e7de793baebb742747b30a7a8d6e67a2c31524d6178343c865d2c7fe28",
+      "utterances": 4400
+    },
+    {
+      "path": "D:\\SLM\\SLM-FineTuning-Testing\\corpus-v6\\v6-20261002-r4\\splits\\validation.jsonl.gz",
+      "scope": "accessible training/development only",
+      "sha256": "96e56bf49da953916986dfcadc8e2f781e841d2bf321a22c4920452c651559ed",
+      "utterances": 953
+    },
+    {
+      "path": "D:\\SLM\\v7-approved-policy-20261009-r8-review\\corpus-v7\\v7-20261009-r8-dev\\splits\\train.jsonl.gz",
+      "scope": "accessible training/development only",
+      "sha256": "452a4434c4f3e3467a988916ba3305a8c9e19db8e0a2c6a37b70528b8db2233f",
+      "utterances": 14560
+    },
+    {
+      "path": "D:\\SLM\\v7-approved-policy-20261009-r8-review\\corpus-v7\\v7-20261009-r8-dev\\splits\\validation.jsonl.gz",
+      "scope": "accessible training/development only",
+      "sha256": "c36de123a0cb99fcd84a6ecb45b3e0b5603b6b6636726e7550d6fd1c36673ae9",
+      "utterances": 3120
+    },
+    {
+      "path": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v6-20261003T113807Z\\inputs\\train.jsonl",
+      "scope": "actual v6 materialized train",
+      "sha256": "f93cad3409f7a72da4c30470d895ea70e1b818d11d16f0eca0705fb80e951fb2",
+      "utterances": 4400
+    },
+    {
+      "path": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v6-20261003T113807Z\\inputs\\validation.jsonl",
+      "scope": "actual v6 materialized validation",
+      "sha256": "e8dd2fdfdb25326ae6c5096f1a900994151d7f3a2d7b882a0474b68e5721575a",
+      "utterances": 953
+    },
+    {
+      "path": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\policy-openai-slm-matched-20261008\\hosted-source\\component-report.json.gz",
+      "scope": "known 31-conversation development comparison",
+      "sha256": "996a58f62e35af5148898af580a261155bf2fcaa0af342e1d15a49b00439b16d",
+      "utterances": 93
+    },
+    {
+      "path": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\v7-r8-pilot-20261009\\results\\qwen35-2b-lora-v7-r8-pilot-20261010T002204Z-evaluation.zip",
+      "scope": "known v7 pilot development cohort",
+      "sha256": "a253dc06fe165cbb2c516903e3cd928344ed010407747f51a73a9b494a74bb7a",
+      "utterances": 1040
+    }
+  ],
+  "status": "machine_overlap_audit_complete_human_near_overlap_review_pending",
+  "unique_normalized_reference_utterances": 15397,
+  "within_candidate_repeated_normalized_turns": 81
+}

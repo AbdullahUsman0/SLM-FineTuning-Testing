@@ -1,0 +1,255 @@
+{
+  "final_cohort_calls": 0,
+  "not_human_adjudication": true,
+  "paid_API_calls": 0,
+  "raw_archive_sha256": "a253dc06fe165cbb2c516903e3cd928344ed010407747f51a73a9b494a74bb7a",
+  "role_examples": [
+    {
+      "arm": "v6",
+      "expected_slot_ids": [
+        "frequency",
+        "prediction_frequency"
+      ],
+      "extra_update": {
+        "candidate_value": {
+          "periods": 1,
+          "unit": "month"
+        },
+        "confidence": 1.0,
+        "evidence_text": "Each observed record covers 1 month.",
+        "slot_id": "expected_history_length",
+        "status": "provided"
+      },
+      "key": [
+        "v7-20261009-r8-dev/corporate_finance/0189",
+        "extract",
+        2
+      ],
+      "kind": "sampling_as_history",
+      "message": "The earlier every-hour phrase was not an agreed requirement. These are the two agreed schedules. Each observed record covers 1 month. New forecasts must be issued every 1 day.",
+      "parser_admitted": false
+    },
+    {
+      "arm": "v7",
+      "expected_slot_ids": [
+        "output_granularity",
+        "prediction_frequency",
+        "refresh_frequency",
+        "retraining_frequency"
+      ],
+      "extra_update": {
+        "candidate_value": {
+          "periods": 5,
+          "unit": "hour"
+        },
+        "confidence": 1.0,
+        "evidence_text": "Source ingestion repeats every 5 hours.",
+        "slot_id": "source_mode",
+        "status": "provided"
+      },
+      "key": [
+        "v7-20261009-r8-dev/commodities/0111",
+        "extract",
+        3
+      ],
+      "kind": "refresh_as_access_mode",
+      "message": "New forecasts must be issued every 3 days. Model har 2 mahinay dobara estimate karein. Source ingestion repeats every 5 hours. Prediction rows ki resolution one prediction row per day hai.",
+      "parser_admitted": true
+    },
+    {
+      "arm": "v7",
+      "expected_slot_ids": [
+        "file_format",
+        "forecast_horizon",
+        "frequency",
+        "problem_statement",
+        "source_mode",
+        "source_reference",
+        "target_description",
+        "target_unit"
+      ],
+      "extra_update": {
+        "candidate_value": {
+          "periods": 1,
+          "unit": "day"
+        },
+        "confidence": 1.0,
+        "evidence_text": "Har observed record 1 din cover karta hai.",
+        "slot_id": "expected_history_length",
+        "status": "provided"
+      },
+      "key": [
+        "v7-20261009-r8-dev/commodities/0114",
+        "extract",
+        1
+      ],
+      "kind": "sampling_as_history",
+      "message": "Analyst ki request yeh hai.  Hamein spot gold price for Pelmar commodities site 2211 ka outlook chahiye. Target measurements ki unit USD per troy ounce hai. Har observed record 1 din cover karta hai. Future coverage 19 din chahiye. Source data catalog se select karein. Diya hua source identifier https://inputs.example/commodities/2211 hai. Input container xlsx use karta hai.",
+      "parser_admitted": true
+    }
+  ],
+  "scope": "Existing public pilot; original historical scoring only",
+  "sealed_final_accessed": false,
+  "strata": [
+    {
+      "arm": "v6",
+      "calls": 828,
+      "exact": {
+        "f1": 0.8480649784997611,
+        "fn": 368,
+        "fp": 268,
+        "precision": 0.8688203622124328,
+        "recall": 0.8282781147923471,
+        "support": 2143,
+        "tp": 1775
+      },
+      "field": "language",
+      "track": "rollout",
+      "value": "en"
+    },
+    {
+      "arm": "v6",
+      "calls": 104,
+      "exact": {
+        "f1": 0.7036395147313691,
+        "fn": 76,
+        "fp": 95,
+        "precision": 0.6812080536912751,
+        "recall": 0.7275985663082437,
+        "support": 279,
+        "tp": 203
+      },
+      "field": "language",
+      "track": "rollout",
+      "value": "ur"
+    },
+    {
+      "arm": "v6",
+      "calls": 108,
+      "exact": {
+        "f1": 0.8601769911504424,
+        "fn": 47,
+        "fp": 32,
+        "precision": 0.8836363636363637,
+        "recall": 0.8379310344827586,
+        "support": 290,
+        "tp": 243
+      },
+      "field": "language",
+      "track": "rollout",
+      "value": "mixed"
+    },
+    {
+      "arm": "v6",
+      "calls": 122,
+      "exact": {
+        "f1": 0.8879023307436182,
+        "fn": 60,
+        "fp": 41,
+        "precision": 0.9070294784580499,
+        "recall": 0.8695652173913043,
+        "support": 460,
+        "tp": 400
+      },
+      "field": "category",
+      "track": "rollout",
+      "value": "lifecycle_dense"
+    },
+    {
+      "arm": "v6",
+      "calls": 101,
+      "exact": {
+        "f1": 0.9450171821305842,
+        "fn": 25,
+        "fp": 7,
+        "precision": 0.975177304964539,
+        "recall": 0.9166666666666666,
+        "support": 300,
+        "tp": 275
+      },
+      "field": "category",
+      "track": "rollout",
+      "value": "cadence_contrast"
+    },
+    {
+      "arm": "v7",
+      "calls": 828,
+      "exact": {
+        "f1": 0.894945259725134,
+        "fn": 222,
+        "fp": 229,
+        "precision": 0.8934883720930232,
+        "recall": 0.896406906206253,
+        "support": 2143,
+        "tp": 1921
+      },
+      "field": "language",
+      "track": "rollout",
+      "value": "en"
+    },
+    {
+      "arm": "v7",
+      "calls": 104,
+      "exact": {
+        "f1": 0.8058608058608059,
+        "fn": 59,
+        "fp": 47,
+        "precision": 0.8239700374531835,
+        "recall": 0.7885304659498208,
+        "support": 279,
+        "tp": 220
+      },
+      "field": "language",
+      "track": "rollout",
+      "value": "ur"
+    },
+    {
+      "arm": "v7",
+      "calls": 108,
+      "exact": {
+        "f1": 0.8253424657534246,
+        "fn": 49,
+        "fp": 53,
+        "precision": 0.8197278911564626,
+        "recall": 0.8310344827586207,
+        "support": 290,
+        "tp": 241
+      },
+      "field": "language",
+      "track": "rollout",
+      "value": "mixed"
+    },
+    {
+      "arm": "v7",
+      "calls": 122,
+      "exact": {
+        "f1": 0.8071748878923767,
+        "fn": 100,
+        "fp": 72,
+        "precision": 0.8333333333333334,
+        "recall": 0.782608695652174,
+        "support": 460,
+        "tp": 360
+      },
+      "field": "category",
+      "track": "rollout",
+      "value": "lifecycle_dense"
+    },
+    {
+      "arm": "v7",
+      "calls": 101,
+      "exact": {
+        "f1": 0.9233333333333333,
+        "fn": 23,
+        "fp": 23,
+        "precision": 0.9233333333333333,
+        "recall": 0.9233333333333333,
+        "support": 300,
+        "tp": 277
+      },
+      "field": "category",
+      "track": "rollout",
+      "value": "cadence_contrast"
+    }
+  ]
+}

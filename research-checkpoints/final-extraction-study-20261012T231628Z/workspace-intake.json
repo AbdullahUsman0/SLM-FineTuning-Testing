@@ -1,0 +1,9 @@
+{
+  "checkpoint": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\final-extraction-study-20261012T231628Z",
+  "private": "D:\\SLM\\FYP-evaluation-private\\final-extraction-study-20261012T231628Z",
+  "bundle": "D:\\SLM\\v7-approved-policy-20261009-r8-review",
+  "repo": "D:\\SLM\\SLM-FineTuning-Testing",
+  "python": "D:\\SLM\\SLM-FineTuning-Testing\\.venv\\Scripts\\python.exe",
+  "source_commit": "15d8c8703b6c2312356aecc920aeb8a5ac31afb2",
+  "created_at": "2026-10-12T23:16:28.968149+00:00"
+}

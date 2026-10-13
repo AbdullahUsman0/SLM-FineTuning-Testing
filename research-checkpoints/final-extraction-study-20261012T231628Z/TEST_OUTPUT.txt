@@ -1,0 +1,37 @@
+test_all_transports_share_admission (test_contract.Contract.test_all_transports_share_admission) ... ok
+test_closed_required_fields (test_contract.Contract.test_closed_required_fields) ... ok
+test_duplicate_outer_and_nested_keys (test_contract.Contract.test_duplicate_outer_and_nested_keys) ... ok
+test_duplicate_slots (test_contract.Contract.test_duplicate_slots) ... ok
+test_encoded_literals_no_double_decode (test_contract.Contract.test_encoded_literals_no_double_decode) ... ok
+test_exact_evidence (test_contract.Contract.test_exact_evidence) ... ok
+test_failed_readable_emissions_remain_FP (test_contract.Contract.test_failed_readable_emissions_remain_FP) ... ok
+test_full_schema_not_reduced (test_contract.Contract.test_full_schema_not_reduced) ... ok
+test_hosted_refusal_and_reasoning_accounting (test_contract.Contract.test_hosted_refusal_and_reasoning_accounting) ... ok
+test_hosted_request_same_logical_prompt (test_contract.Contract.test_hosted_request_same_logical_prompt) ... ok
+test_no_truncation_or_markdown_repair (test_contract.Contract.test_no_truncation_or_markdown_repair) ... ok
+test_nonfinite_constants_and_overflow (test_contract.Contract.test_nonfinite_constants_and_overflow) ... ok
+test_numbers_objects_lists (test_contract.Contract.test_numbers_objects_lists) ... ok
+test_ordinary_string (test_contract.Contract.test_ordinary_string) ... ok
+test_refusal_incomplete_and_token_limit (test_contract.Contract.test_refusal_incomplete_and_token_limit) ... ok
+test_rejected_evidence_preserves_state (test_contract.Contract.test_rejected_evidence_preserves_state) ... ok
+test_slot_and_status_enums (test_contract.Contract.test_slot_and_status_enums) ... ok
+test_unknown_initial_and_established_intent (test_contract.Contract.test_unknown_initial_and_established_intent) ... ok
+test_budget_reservation_survives_interruption (test_contract.Integrity.test_budget_reservation_survives_interruption) ... ok
+test_journal_identity_checksum_and_no_overwrite (test_contract.Integrity.test_journal_identity_checksum_and_no_overwrite) ... ok
+test_per_call_retry_limit_and_changed_budget (test_contract.Integrity.test_per_call_retry_limit_and_changed_budget) ... ok
+test_bootstrap_does_not_drop_failed_calls (test_experiment.StudyIntegrity.test_bootstrap_does_not_drop_failed_calls) ... ok
+test_changed_context_and_gold_cannot_reuse_journal (test_experiment.StudyIntegrity.test_changed_context_and_gold_cannot_reuse_journal) ... ok
+test_component_context_pairing_guard (test_experiment.StudyIntegrity.test_component_context_pairing_guard) ... ok
+test_distinct_new_runs_cannot_share_raw_receipt_identity (test_experiment.StudyIntegrity.test_distinct_new_runs_cannot_share_raw_receipt_identity) ... ok
+test_gate_precedes_model_loading (test_experiment.StudyIntegrity.test_gate_precedes_model_loading) ... ok
+test_missing_duplicate_review_rows_rejected (test_experiment.StudyIntegrity.test_missing_duplicate_review_rows_rejected) ... ok
+test_missing_execution_decision_fails_closed (test_experiment.StudyIntegrity.test_missing_execution_decision_fails_closed) ... ok
+test_pending_human_review_cannot_pass (test_experiment.StudyIntegrity.test_pending_human_review_cannot_pass) ... ok
+test_raw_receipt_resume_preserves_literal_and_own_state (test_experiment.StudyIntegrity.test_raw_receipt_resume_preserves_literal_and_own_state) ... ok
+test_review_from_another_cohort_cannot_pass (test_experiment.StudyIntegrity.test_review_from_another_cohort_cannot_pass) ... ok
+test_user_deferred_study_blocks_before_freeze_or_API_access (test_experiment.StudyIntegrity.test_user_deferred_study_blocks_before_freeze_or_API_access) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 3.316s
+
+OK

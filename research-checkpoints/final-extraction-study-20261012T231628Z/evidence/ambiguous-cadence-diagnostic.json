@@ -1,0 +1,749 @@
+{
+  "arms": {
+    "v6": {
+      "admitted_calls_with_extra_cadence_emissions": 18,
+      "calls": 20,
+      "calls_with_extra_cadence_emissions": 18,
+      "examples": [
+        {
+          "extra_updates": [
+            {
+              "candidate_value": "hour",
+              "confidence": 1.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "frequency",
+              "status": "provided"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/commodities/0119",
+            "extract",
+            1
+          ],
+          "message": "The analyst request is as follows.  We need an outlook for wheat cash price for Pelmar commodities site 2211. Target measurements use USD per metric tonne. The requested future coverage is 20 days. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+          "parser_admitted": true
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": {
+                "periods": 1,
+                "unit": "hour"
+              },
+              "confidence": 1.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "frequency",
+              "status": "provided"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/corporate_finance/0189",
+            "extract",
+            1
+          ],
+          "message": "The analyst request is as follows.  We need an outlook for net operating cash flow for Orven corporate finance site 2718. Target measurements use thousands of USD. The requested future coverage is 10 months. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+          "parser_admitted": true
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": "hour",
+              "confidence": 1.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "frequency",
+              "status": "provided"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/equities_funds/0159",
+            "extract",
+            1
+          ],
+          "message": "The analyst request is as follows.  We need an outlook for split-and-dividend-adjusted closing share price for Yarven equities funds site 2015. Target measurements use USD per share. The requested future coverage is 7 days. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+          "parser_admitted": true
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": null,
+              "confidence": 1.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "prediction_frequency",
+              "status": "provided"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/foreign_exchange/0159",
+            "extract",
+            1
+          ],
+          "message": "The analyst request is as follows.  We need an outlook for USD/JPY spot rate quoted as JPY per USD for Yarven foreign exchange site 2115. Target measurements use JPY per USD. The requested future coverage is 10 days. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+          "parser_admitted": true
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": {
+                "periods": 1,
+                "unit": "hour"
+              },
+              "confidence": 1.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "frequency",
+              "status": "provided"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/housing_property/0109",
+            "extract",
+            1
+          ],
+          "message": "The analyst request is as follows.  We need an outlook for housing starts count for Orven housing property site 2510. Target measurements use dwellings. The requested future coverage is 18 months. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+          "parser_admitted": true
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": "hour",
+              "confidence": 1.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "prediction_frequency",
+              "status": "provided"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/humidity_pressure/0109",
+            "extract",
+            1
+          ],
+          "message": "The analyst request is as follows.  We need an outlook for sea-level pressure for Orven humidity pressure site 1310. Target measurements use hectopascals. The requested future coverage is 16 hours. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+          "parser_admitted": true
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": {
+                "periods": 1,
+                "unit": "hour"
+              },
+              "confidence": 1.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "frequency",
+              "status": "provided"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/inflation_prices/0079",
+            "extract",
+            1
+          ],
+          "message": "The analyst request is as follows.  We need an outlook for headline CPI index level for Yarven inflation prices site 1607. Target measurements use index points, base 2020=100. The requested future coverage is 9 months. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+          "parser_admitted": true
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": {
+                "periods": 1,
+                "unit": "hour"
+              },
+              "confidence": 1.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "frequency",
+              "status": "provided"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/labor_employment/0179",
+            "extract",
+            1
+          ],
+          "message": "The analyst request is as follows.  We need an outlook for unemployment rate for Norelia labor employment site 1817. Target measurements use percent of labor force. The requested future coverage is 6 months. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+          "parser_admitted": true
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": {
+                "periods": 1,
+                "unit": "hour"
+              },
+              "confidence": 1.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "frequency",
+              "status": "provided"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/output_growth/0139",
+            "extract",
+            1
+          ],
+          "message": "The analyst request is as follows.  We need an outlook for real household consumption growth for Virelo output growth site 1713. Target measurements use percent year over year. The requested future coverage is 10 quarters. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+          "parser_admitted": true
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": {
+                "periods": 1,
+                "unit": "hour"
+              },
+              "confidence": 1.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "frequency",
+              "status": "provided"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/precipitation/0079",
+            "extract",
+            1
+          ],
+          "message": "The analyst request is as follows.  We need an outlook for accumulated precipitation for Yarven precipitation site 1107. Target measurements use millimetres. The requested future coverage is 11 weeks. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+          "parser_admitted": true
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": "hour",
+              "confidence": 1.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "prediction_frequency",
+              "status": "provided"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/rates_fixed_income/0039",
+            "extract",
+            1
+          ],
+          "message": "The analyst request is as follows.  We need an outlook for mortgage interest rate level for Pelmar rates fixed income site 1903. Target measurements use percent per year. The requested future coverage is 8 days. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+          "parser_admitted": true
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": {
+                "periods": 1,
+                "unit": "hour"
+              },
+              "confidence": 1.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "frequency",
+              "status": "provided"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/solar_cloud/0069",
+            "extract",
+            1
+          ],
+          "message": "The analyst request is as follows.  We need an outlook for direct normal irradiance for Weslin solar cloud site 1406. Target measurements use watts per square metre. The requested future coverage is 9 hours. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+          "parser_admitted": true
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": {
+                "periods": 1,
+                "unit": "hour"
+              },
+              "confidence": 1.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "frequency",
+              "status": "provided"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/temperature/0139",
+            "extract",
+            1
+          ],
+          "message": "The analyst request is as follows.  We need an outlook for maximum air temperature for Virelo temperature site 1013. Target measurements use degrees Celsius. The requested future coverage is 6 days. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+          "parser_admitted": true
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": {
+                "periods": 1,
+                "unit": "hour"
+              },
+              "confidence": 1.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "frequency",
+              "status": "provided"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/trade_fiscal/0119",
+            "extract",
+            1
+          ],
+          "message": "The analyst request is as follows.  We need an outlook for government fiscal balance, revenue minus expenditure for Pelmar trade fiscal site 2611. Target measurements use millions of USD. The requested future coverage is 15 months. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+          "parser_admitted": true
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": {
+                "periods": 1,
+                "unit": "hour"
+              },
+              "confidence": 1.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "frequency",
+              "status": "provided"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/weather_agriculture/0079",
+            "extract",
+            1
+          ],
+          "message": "The analyst request is as follows.  We need an outlook for crop shipment demand with rainfall covariates for Yarven weather agriculture site 2907. Target measurements use metric tonnes. The requested future coverage is 14 weeks. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+          "parser_admitted": true
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": {
+                "periods": 1,
+                "unit": "hour"
+              },
+              "confidence": 1.0,
+              "evidence_text": "Har ghantay chahiye;",
+              "slot_id": "prediction_frequency",
+              "status": "provided"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/weather_energy/0079",
+            "extract",
+            1
+          ],
+          "message": "Analyst ki request yeh hai.  Hamein electricity demand with weather covariates for Yarven weather energy site 2807 ka outlook chahiye. Target measurements ki unit megawatts hai. Future coverage 11 ghantay chahiye. Har ghantay chahiye; abhi yeh nahi bataya ke data ka interval hai ya forecast banane ka schedule.",
+          "parser_admitted": true
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": {
+                "periods": 1,
+                "unit": "hour"
+              },
+              "confidence": 1.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "prediction_frequency",
+              "status": "provided"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/weather_extremes/0059",
+            "extract",
+            1
+          ],
+          "message": "The analyst request is as follows.  We need an outlook for heavy-rain indicator defined as rainfall above 50 millimetres for Virelo weather extremes site 1505. Target measurements ki unit 0 or 1 hai. The requested future coverage is 18 days. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+          "parser_admitted": true
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": {
+                "periods": 1,
+                "unit": "hour"
+              },
+              "confidence": 1.0,
+              "evidence_text": "Har ghantay chahiye;",
+              "slot_id": "prediction_frequency",
+              "status": "provided"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/wind/0199",
+            "extract",
+            1
+          ],
+          "message": "Analyst ki request yeh hai.  Hamein mean wind speed for Pelmar wind site 1219 ka outlook chahiye. Target measurements ki unit metres per second hai. Future coverage 10 ghantay chahiye. Har ghantay chahiye; abhi yeh nahi bataya ke data ka interval hai ya forecast banane ka schedule.",
+          "parser_admitted": true
+        }
+      ]
+    },
+    "v7": {
+      "admitted_calls_with_extra_cadence_emissions": 7,
+      "calls": 20,
+      "calls_with_extra_cadence_emissions": 18,
+      "examples": [
+        {
+          "extra_updates": [
+            {
+              "candidate_value": "hour",
+              "confidence": 1.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "frequency",
+              "status": "unsupported"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/commodities/0119",
+            "extract",
+            1
+          ],
+          "message": "The analyst request is as follows.  We need an outlook for wheat cash price for Pelmar commodities site 2211. Target measurements use USD per metric tonne. The requested future coverage is 20 days. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+          "parser_admitted": false
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": "hour",
+              "confidence": 1.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "frequency",
+              "status": "ambiguous"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/corporate_finance/0189",
+            "extract",
+            1
+          ],
+          "message": "The analyst request is as follows.  We need an outlook for net operating cash flow for Orven corporate finance site 2718. Target measurements use thousands of USD. The requested future coverage is 10 months. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+          "parser_admitted": true
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": {
+                "periods": 1,
+                "unit": "hour"
+              },
+              "confidence": 1.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "prediction_frequency",
+              "status": "unsupported"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/crypto_derivatives/0139",
+            "extract",
+            1
+          ],
+          "message": "The analyst request is as follows.  We need an outlook for BTC annualized realized volatility from past returns for Virelo crypto derivatives site 2413. Target measurements use percent per year. The requested future coverage is 14 hours. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+          "parser_admitted": false
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": {
+                "periods": 1,
+                "unit": "hour"
+              },
+              "confidence": 1.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "prediction_frequency",
+              "status": "unresolved"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/crypto_spot/0049",
+            "extract",
+            1
+          ],
+          "message": "The analyst request is as follows.  We need an outlook for BTC/USD hourly log return for Talven crypto spot site 2304. Target measurements use percent. The requested future coverage is 14 hours. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+          "parser_admitted": false
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": {
+                "periods": 1,
+                "unit": "hour"
+              },
+              "confidence": 0.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "frequency",
+              "status": "unsupported"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/equities_funds/0159",
+            "extract",
+            1
+          ],
+          "message": "The analyst request is as follows.  We need an outlook for split-and-dividend-adjusted closing share price for Yarven equities funds site 2015. Target measurements use USD per share. The requested future coverage is 7 days. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+          "parser_admitted": false
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": "not yet specified whether this is sampling or forecast generation",
+              "confidence": 1.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "prediction_frequency",
+              "status": "unresolved"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/foreign_exchange/0159",
+            "extract",
+            1
+          ],
+          "message": "The analyst request is as follows.  We need an outlook for USD/JPY spot rate quoted as JPY per USD for Yarven foreign exchange site 2115. Target measurements use JPY per USD. The requested future coverage is 10 days. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+          "parser_admitted": false
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": "hour",
+              "confidence": 1.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "frequency",
+              "status": "ambiguous"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/housing_property/0109",
+            "extract",
+            1
+          ],
+          "message": "The analyst request is as follows.  We need an outlook for housing starts count for Orven housing property site 2510. Target measurements use dwellings. The requested future coverage is 18 months. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+          "parser_admitted": true
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": {
+                "periods": 1,
+                "unit": "hour"
+              },
+              "confidence": 1.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "prediction_frequency",
+              "status": "unresolved"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/humidity_pressure/0109",
+            "extract",
+            1
+          ],
+          "message": "The analyst request is as follows.  We need an outlook for sea-level pressure for Orven humidity pressure site 1310. Target measurements use hectopascals. The requested future coverage is 16 hours. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+          "parser_admitted": false
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": "hour",
+              "confidence": 1.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "frequency",
+              "status": "inferred"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/labor_employment/0179",
+            "extract",
+            1
+          ],
+          "message": "The analyst request is as follows.  We need an outlook for unemployment rate for Norelia labor employment site 1817. Target measurements use percent of labor force. The requested future coverage is 6 months. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+          "parser_admitted": false
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": "hour",
+              "confidence": 1.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "prediction_frequency",
+              "status": "inferred"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/precipitation/0079",
+            "extract",
+            1
+          ],
+          "message": "The analyst request is as follows.  We need an outlook for accumulated precipitation for Yarven precipitation site 1107. Target measurements use millimetres. The requested future coverage is 11 weeks. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+          "parser_admitted": true
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": "hour",
+              "confidence": 1.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "prediction_frequency",
+              "status": "inferred"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/rates_fixed_income/0039",
+            "extract",
+            1
+          ],
+          "message": "The analyst request is as follows.  We need an outlook for mortgage interest rate level for Pelmar rates fixed income site 1903. Target measurements use percent per year. The requested future coverage is 8 days. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+          "parser_admitted": true
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": {
+                "periods": 1,
+                "unit": "hour"
+              },
+              "confidence": 1.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "prediction_frequency",
+              "status": "unsupported_claims"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/solar_cloud/0069",
+            "extract",
+            1
+          ],
+          "message": "The analyst request is as follows.  We need an outlook for direct normal irradiance for Weslin solar cloud site 1406. Target measurements use watts per square metre. The requested future coverage is 9 hours. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+          "parser_admitted": false
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": "hour",
+              "confidence": 1.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "prediction_frequency",
+              "status": "inferred"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/temperature/0139",
+            "extract",
+            1
+          ],
+          "message": "The analyst request is as follows.  We need an outlook for maximum air temperature for Virelo temperature site 1013. Target measurements use degrees Celsius. The requested future coverage is 6 days. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+          "parser_admitted": true
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": "hour",
+              "confidence": 1.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "frequency",
+              "status": "ambiguous"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/trade_fiscal/0119",
+            "extract",
+            1
+          ],
+          "message": "The analyst request is as follows.  We need an outlook for government fiscal balance, revenue minus expenditure for Pelmar trade fiscal site 2611. Target measurements use millions of USD. The requested future coverage is 15 months. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+          "parser_admitted": true
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": "hour",
+              "confidence": 1.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "prediction_frequency",
+              "status": "inferred"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/weather_agriculture/0079",
+            "extract",
+            1
+          ],
+          "message": "The analyst request is as follows.  We need an outlook for crop shipment demand with rainfall covariates for Yarven weather agriculture site 2907. Target measurements use metric tonnes. The requested future coverage is 14 weeks. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+          "parser_admitted": true
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": {
+                "periods": 1,
+                "unit": "hour"
+              },
+              "confidence": 1.0,
+              "evidence_text": "Har ghantay chahiye;",
+              "slot_id": "prediction_frequency",
+              "status": "provided"
+            },
+            {
+              "candidate_value": "data ka interval hai ya forecast banane ka schedule",
+              "confidence": 1.0,
+              "evidence_text": "abhi yeh nahi bataya ke data ka interval hai ya forecast banane ka schedule.",
+              "slot_id": "prediction_frequency",
+              "status": "inferred"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/weather_energy/0079",
+            "extract",
+            1
+          ],
+          "message": "Analyst ki request yeh hai.  Hamein electricity demand with weather covariates for Yarven weather energy site 2807 ka outlook chahiye. Target measurements ki unit megawatts hai. Future coverage 11 ghantay chahiye. Har ghantay chahiye; abhi yeh nahi bataya ke data ka interval hai ya forecast banane ka schedule.",
+          "parser_admitted": false
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": "every hour",
+              "confidence": 1.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "prediction_frequency",
+              "status": "inferred"
+            },
+            {
+              "candidate_value": "sampling or forecast generation",
+              "confidence": 1.0,
+              "evidence_text": "Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+              "slot_id": "prediction_frequency",
+              "status": "inferred"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/weather_extremes/0059",
+            "extract",
+            1
+          ],
+          "message": "The analyst request is as follows.  We need an outlook for heavy-rain indicator defined as rainfall above 50 millimetres for Virelo weather extremes site 1505. Target measurements ki unit 0 or 1 hai. The requested future coverage is 18 days. Every hour is mentioned in the brief, but it is not yet specified whether this is sampling or forecast generation.",
+          "parser_admitted": false
+        },
+        {
+          "extra_updates": [
+            {
+              "candidate_value": {
+                "periods": 1,
+                "unit": "hour"
+              },
+              "confidence": 1.0,
+              "evidence_text": "Har ghantay chahiye;",
+              "slot_id": "prediction_frequency",
+              "status": "provided"
+            },
+            {
+              "candidate_value": "data ka interval hai ya forecast banane ka schedule",
+              "confidence": 1.0,
+              "evidence_text": "abhi yeh nahi bataya ke data ka interval hai ya forecast banane ka schedule.",
+              "slot_id": "prediction_frequency",
+              "status": "inferred"
+            }
+          ],
+          "key": [
+            "v7-20261009-r8-dev/wind/0199",
+            "extract",
+            1
+          ],
+          "message": "Analyst ki request yeh hai.  Hamein mean wind speed for Pelmar wind site 1219 ka outlook chahiye. Target measurements ki unit metres per second hai. Future coverage 10 ghantay chahiye. Har ghantay chahiye; abhi yeh nahi bataya ke data ka interval hai ya forecast banane ka schedule.",
+          "parser_admitted": false
+        }
+      ]
+    }
+  },
+  "scope": "Original public pilot rollout; diagnostic only, no changed primary scores",
+  "source_ZIP_sha256": "a253dc06fe165cbb2c516903e3cd928344ed010407747f51a73a9b494a74bb7a"
+}

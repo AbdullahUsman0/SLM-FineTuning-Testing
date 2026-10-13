@@ -1,0 +1,20 @@
+{
+  "assumptions": [
+    "No cache discount in upper bound. UTF-8 request bytes bound input tokens plus 1,024 overhead allowance.",
+    "Output cap includes billed reasoning. Retry allowance is at most 10% of planned calls and one retry per call.",
+    "Estimate uses offline complete-request and proposed-output token lengths plus historical minimal-reasoning usage; it is not new measured hosted output usage."
+  ],
+  "conservative_upper_bound_usd": 32.576768,
+  "earlier_budget_does_not_authorize_this_new_study": true,
+  "historical_minimal_reasoning_mean_tokens": 0,
+  "hosted_scored_calls": 2360,
+  "maximum_total_attempts_with_transport_retries": 2597,
+  "paid_calls_made": 0,
+  "paid_unscored_warmups": 1,
+  "planning_estimate_usd": 3.785551,
+  "planning_output_tokens_per_call": 315.09449152542373,
+  "pricing_source": "https://developers.openai.com/api/docs/models/gpt-5-mini",
+  "protocol_sha256": "b292aef7c2192f9e00daa1bacd525b391d596b35489bf6a9c888815dc593e79c",
+  "recommended_cap_usd": 35,
+  "status": "awaiting_user_approved_budget_for_this_specific_experiment"
+}
