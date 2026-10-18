@@ -1,0 +1,55 @@
+{
+  "control": "D:\\SLM\\FYP-experiment-control\\v8-final-20261018T230500Z",
+  "environment": "D:\\SLM\\FYP-environments\\v8-final-20261018T230255Z",
+  "followup_sha256": "246a46d982b9f12cd80ee29f54910daf56fca696b0b5f47c88721db0d9dfa603",
+  "fpy": "D:\\SLM\\SLM-FineTuning-Testing\\runtime\\fpy-final-pinned",
+  "gpu_packages_readonly_source": "D:\\SLM\\SLM-FineTuning-Testing\\.venv\\Lib\\site-packages",
+  "independent_human_review_complete": false,
+  "no_new_paid_API_calls": true,
+  "prepare_command": [
+    "D:\\SLM\\FYP-environments\\v8-final-20261018T230255Z\\Scripts\\python.exe",
+    "-B",
+    "D:\\SLM\\SLM-FineTuning-Testing\\training\\final_round\\run.py",
+    "prepare",
+    "--fpy",
+    "D:\\SLM\\SLM-FineTuning-Testing\\runtime\\fpy-final-pinned",
+    "--run",
+    "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z"
+  ],
+  "python": "D:\\SLM\\FYP-environments\\v8-final-20261018T230255Z\\Scripts\\python.exe",
+  "repo": "D:\\SLM\\SLM-FineTuning-Testing",
+  "results_relative": "research-checkpoints/v8-final-20261018T230500Z",
+  "run": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z",
+  "source_commit": "bd36ff605d1d7e6c5f79de6e65d60785e0afe49d",
+  "sources_sha256": {
+    "local_slm_lab/peft_provider.py": "0b5371dc7c0528cbe48d6d741f8f93ddf6f089b63cb2f0cca3e6f98453d0f6c5",
+    "local_slm_lab/v5_prompts.py": "2c8dadba7acb35bb8e57c666ea8c82024f6aaf2c6571183fbca07c070bab0947",
+    "local_slm_lab/v5_provider.py": "716a7bf903ff893d509f4adc8af29a466a640681ee4ac031a5d3273daa2106dd",
+    "training/final_round/audit_dataset.py": "86931e1420796d152e2b152566557b81abf4f57650e800aa26a1479017c42c39",
+    "training/final_round/build_dataset.py": "47db5b8372e09d79bc9515253e74bb8e1664d7e4002a4f1262468c56c16641fd",
+    "training/final_round/data_tools.py": "03679d0ddb863e00fd409d63695b865cd58a06197a3aeec08b8885ced881397e",
+    "training/final_round/evaluate_development.py": "d5188588b7f242ab45b4ebfa9b4731e25ef78e9e4a31dfe4879cd3487bff1696",
+    "training/final_round/oracle_smoke.py": "d0ce232c9ebfbf0bf5b16522289da8158fd8781acd4e0a4fcd2370fc75d2c76b",
+    "training/final_round/run.py": "d0765d38a94befec3b4ce71bdf0029ddd1654dd24bdce08792de94a1dd215339",
+    "training/final_round/test_final_round.py": "e3b699b8610bda71e2d5f4b2e42d235f5d991db7f71e2d34eeef8fb524923e89",
+    "training/train_lora.py": "575de11235c55fcf19ab740d558300c2e976cd3cf37aab521e12299feb5b29ed"
+  },
+  "start_command": [
+    "D:\\SLM\\FYP-environments\\v8-final-20261018T230255Z\\Scripts\\python.exe",
+    "-B",
+    "D:\\SLM\\SLM-FineTuning-Testing\\training\\final_round\\run.py",
+    "start",
+    "--run",
+    "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z"
+  ],
+  "status": "environment_preparation",
+  "technical_note": "Auxiliary followup r2 additionally scans decompressed raw ZIP/GZIP members for credential-shaped strings before publication. Original companion/config retained. Training worker, data, hyperparameters, optimizer progress and frozen diagnostic code unchanged. Auxiliary r3 adds all 20 individual development-domain breakdowns from unchanged stored confusion counts, in addition to supplied language/domain-family summaries. Both earlier companions/configs remain preserved. Training/diagnostic sources and settings unchanged. Auxiliary r4 makes publication use a separate clean detached worktree if the remote advances or unrelated staged work/current branch must be preserved. No rebase, force-push or training-source changes; previous companions retained.",
+  "tests_log": "D:\\SLM\\v8-final-preparation-tests-20261018.txt",
+  "v6": {
+    "path": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v6-20261003T113807Z\\full\\best-adapter",
+    "sha256": {
+      "adapter_config.json": "38f60de9678324e91fa882ed86c70d09e4a39b27ae28884374ddc3e6fece15ef",
+      "adapter_model.safetensors": "e7add7b8b02d24615ed89067c7761c3985a4a6afb7c84ca2a72e3b06fd84e74d"
+    }
+  }
+}

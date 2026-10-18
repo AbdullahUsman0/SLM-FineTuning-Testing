@@ -1,0 +1,21 @@
+{
+  "files_sha256": {
+    ".gitattributes": "c133ffcf8b8ec1beedc0aaf332d9894e66739f2f164e4675a29185d2bb5f446e",
+    "LAUNCH_HANDOFF.md": "3d18b1a8e24c70658ac9cb6e5f47b13b7d3487de0a51c8416be3d6d5090d2aed",
+    "LAUNCH_README.md": "cc1dadade17bbeb1cd0c800439b6be172b2e2289414a378482ee1521f834ddf4",
+    "LAUNCH_STATUS.json": "c7c048f88868a1849c6c31f4c9c3d5dbcb71c096de139773f33b73bc2cfd1af2",
+    "base-weights-verification.json": "4503af36b71f116019f42bebbf31e84923028c9bd4de3d56afe663a36574b6b1",
+    "first-checkpoint-verification.json": "00d9c1b504908bc54a76a707efc86e0630597450d3d85723442061f4077cb9a2",
+    "followup-publication-test.json": "86c94a5b584d0ae012281917835e46875873398891bbeef9b6eded8c84541263",
+    "followup.py": "246a46d982b9f12cd80ee29f54910daf56fca696b0b5f47c88721db0d9dfa603",
+    "inventory.json": "4c8b6e09118f7bcb9ba8a7de0e161dc1c6fd5f059bc5481666b499cbe65a294f",
+    "launch-config.json": "ca2f93c75c661f74986e1f650589d3826ae70296a54c321c4aef25c41636d1c6",
+    "launch-config.sha256.json": "4206a51e1440ca90f2102e565ba6571d6cd02b011a2d883782a412f4ce18046e",
+    "launch-notes.json": "1cf99fbf4ea17f1e93aa354db544c5d22e8f7a4ceea151f45e7e4af490cac343",
+    "preflight.json": "d125cc40a25bb7fceff24bfdc64cce7103c02cf976a567eb4b671e721805a9da",
+    "publish_launch_snapshot.py": "021cc6aec1935e4e98e7b50b231a96c3778d219b96408dda47657d1422526574",
+    "training-run-manifest.json": "1151ec4ccd4b7c01623bd6c65005091f5203ec25701783f053c46d5edff1f3a5",
+    "workflow-config.json": "168f0887d3108bda6260c52101b26457a30815c2e59004fec67da38727ea31be"
+  },
+  "scope": "Incomplete historical launch snapshot, no final results"
+}

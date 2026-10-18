@@ -1,0 +1,84 @@
+{
+  "status": "advancing_training_and_complete_checkpoint_independently_verified",
+  "verified_at_UTC": "2026-10-18T23:27:11.039085+00:00",
+  "run": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z",
+  "GPU": "NVIDIA RTX A4000",
+  "checkpoint": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full\\checkpoint-10",
+  "checkpoint_step": 10,
+  "complete_checkpoints_observed": 1,
+  "checkpoint_artifact_sha256": {
+    "README.md": "4351e9c7eeac74e8c222cc76e0cfbccd749a29ea3dc1075d0fdc71382030392f",
+    "adapter_config.json": "a457617f2f375eb562575cf35d010a58bc08ca8ded8a9d45406e423d5e592098",
+    "adapter_model.safetensors": "cef78b681b31069b19a374d83242fadaa7dc8bc96c4f8e47e112a89ca233e616",
+    "chat_template.jinja": "306abaf09cf3a6c0d14128373a72925bda3d7de2616a5642804d9768c7d2f78c",
+    "optimizer.pt": "b09603116f16f422d77ed69dd716a9fdb2b8d24f5609c339670c68c6cb6d5d6e",
+    "rng_state.pth": "d1331a5e2afa3cadab14325f0dea83c4f07cd001931c642533bb366d8471a71c",
+    "scheduler.pt": "b5bdd2a39f6e8c01dd14ea2ae643d451d02e1d9d93ac89d7a54825e76d1208a4",
+    "tokenizer.json": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+    "tokenizer_config.json": "7b0a126e2dd5f59c9d219ef18d34485cbd91d887d24620bd9b26e0c83f965b40",
+    "trainer_state.json": "0897b1bdb7c53ae6d51ef6a8db3ba54e045ddf7ee59bba47d528de03ae020c9c",
+    "training_args.bin": "71ff3208c0fa72b05be19d7daa1f6ea49e079c4f9204aa690c3c3f8b3016c465"
+  },
+  "actual_expected_optimizer_steps": 2234,
+  "prior_progress_observations": [
+    {
+      "observed_at_UTC": "2026-10-18T23:14:55.640619+00:00",
+      "observed_trainer_progress_step": 0,
+      "expected_steps": 2234
+    },
+    {
+      "observed_at_UTC": "2026-10-18T23:15:25.654518+00:00",
+      "observed_trainer_progress_step": 1,
+      "expected_steps": 2234
+    },
+    {
+      "observed_at_UTC": "2026-10-18T23:16:40.680478+00:00",
+      "observed_trainer_progress_step": 2,
+      "expected_steps": 2234
+    },
+    {
+      "observed_at_UTC": "2026-10-18T23:17:55.707811+00:00",
+      "observed_trainer_progress_step": 3,
+      "expected_steps": 2234
+    },
+    {
+      "observed_at_UTC": "2026-10-18T23:19:10.731882+00:00",
+      "observed_trainer_progress_step": 4,
+      "expected_steps": 2234
+    },
+    {
+      "observed_at_UTC": "2026-10-18T23:20:40.756846+00:00",
+      "observed_trainer_progress_step": 5,
+      "expected_steps": 2234
+    },
+    {
+      "observed_at_UTC": "2026-10-18T23:21:55.774482+00:00",
+      "observed_trainer_progress_step": 6,
+      "expected_steps": 2234
+    },
+    {
+      "observed_at_UTC": "2026-10-18T23:23:10.796166+00:00",
+      "observed_trainer_progress_step": 7,
+      "expected_steps": 2234
+    },
+    {
+      "observed_at_UTC": "2026-10-18T23:24:25.818799+00:00",
+      "observed_trainer_progress_step": 8,
+      "expected_steps": 2234
+    },
+    {
+      "observed_at_UTC": "2026-10-18T23:25:55.843674+00:00",
+      "observed_trainer_progress_step": 9,
+      "expected_steps": 2234
+    },
+    {
+      "observed_at_UTC": "2026-10-18T23:27:10.862282+00:00",
+      "observed_trainer_progress_step": 10,
+      "expected_steps": 2234
+    }
+  ],
+  "run_fingerprint": "541805a394f01f67a3b01e4bf5ca5bf623466c0e8e002a7eeb3a3510c46dc47a",
+  "training_complete": false,
+  "development_measurements_available": false,
+  "new_paid_API_calls": 0
+}

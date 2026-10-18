@@ -1,0 +1,13 @@
+{
+  "source_commit": "bd36ff605d1d7e6c5f79de6e65d60785e0afe49d",
+  "supplied_worker": "training/final_round/run.py",
+  "unchanged_experimental_settings": true,
+  "actual_environment": "D:\\SLM\\FYP-environments\\v8-final-20261018T230255Z",
+  "original_GPU_environment_modified": false,
+  "isolation_note": "New virtualenv with read-only .pth reference to existing verified CUDA package directory; pinned jsonschema and its missing dependencies installed only into the new environment.",
+  "preflight": "All 17860 train and 3980 validation examples; maxima3547/3531; no truncation; expected2234 optimizer steps.",
+  "followup_revision": "r2: compressed raw-member credential scanning added before publication; initial companion/config preserved; no training worker was stopped or restarted.",
+  "sleep_inhibitor": "Both workers request ES_CONTINUOUS | ES_SYSTEM_REQUIRED (0x80000001); no display-required flag. Windows powercfg query needs administrator rights, so no administrative power-plan changes were attempted.",
+  "restrictions": "Screen lock/client disconnect supported; shutdown, explicit sleep and logout are not made safe by idle-sleep inhibition.",
+  "post_training": "Supplied v8 diagnostic, hash-verified v6 same-cohort diagnostic, local adapter ZIP/checksum in training-PC Downloads, compact scientific records commit/push. No weights in normal Git; no paid API/final labels."
+}

@@ -1,0 +1,23 @@
+{
+  "GPU_driver_memory_utilization_csv": "NVIDIA RTX A4000, 596.86, 16376 MiB, 9243 MiB, 100 %",
+  "RAM_available_bytes": 23791185920,
+  "RAM_total_bytes": 34033348608,
+  "all_checkpoint_artifact_hashes_independently_verified": true,
+  "checkpoint": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full\\checkpoint-10",
+  "checkpoint_step": 10,
+  "development_measurements_available": false,
+  "expected_optimizer_steps": 2234,
+  "final_adapter_available": false,
+  "final_test_accessed": false,
+  "followup": "Supplied v8 diagnostic; identical verified-v6 diagnostic; verified local adapter ZIP; safe result-record commit/push.",
+  "independent_human_review_complete": false,
+  "model_winner_established": false,
+  "observed_at_UTC": "2026-10-18T23:28:07.695949+00:00",
+  "paid_API_calls": 0,
+  "record_type": "historical_launch_snapshot_not_current_status",
+  "run": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z",
+  "source_commit": "bd36ff605d1d7e6c5f79de6e65d60785e0afe49d",
+  "status": "training_active_complete_checkpoint_verified",
+  "training_complete": false,
+  "worker_PID": 14032
+}

@@ -1,0 +1,10 @@
+{
+  "fixture_path": "D:\\SLM\\FYP-experiment-control\\v8-final-20261018T230500Z\\publication-fixture-1792365696594448800",
+  "local_bare_fixture_only": true,
+  "main_checkout_HEAD_unchanged": true,
+  "no_GitHub_mutation_or_API_calls": true,
+  "remote_advancement_preserved": true,
+  "results_published_from_separate_worktree": true,
+  "status": "passed",
+  "unrelated_staged_work_preserved": true
+}
