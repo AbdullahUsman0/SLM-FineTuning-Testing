@@ -1,0 +1,16 @@
+{
+  "record_type": "explicit_user_experimental_training_scope",
+  "recorded_client_date": "2026-10-18",
+  "user_request": "alright , make the dataset, push it and give me a prompt to give to chatgpt on local server to pull, train on gpu and save results something like that and keep working even when i lock my laptop",
+  "corpus_version": "v8-final-20261018-r1",
+  "corpus_manifest_sha256": "abedd97e642152786db56d3e98a0f997d1c241bf6549365c56ddd01ac5cab2e9",
+  "full_training_authorized": true,
+  "scope": "Prepare and publish final synthetic development dataset; remote GPU agent runs a fixed two-epoch experimental Qwen3.5-2B LoRA training, frequent checkpoints and local development diagnostic in a separate new run directory.",
+  "independent_human_review_complete": false,
+  "human_approvals_fabricated": false,
+  "authorization_is_not_annotation_approval": true,
+  "previous_review_gates_modified": false,
+  "new_paid_API_budget_usd": 0,
+  "final_test_evaluation_authorized": false,
+  "preserve_existing_runs_and_adapters": true
+}
