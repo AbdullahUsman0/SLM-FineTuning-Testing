@@ -25,7 +25,9 @@ def sha(p):
 
 def atomic(p,v):
     p=Path(p);tmp=p.with_name(p.name+'.tmp')
-    tmp.write_text(dumps(v)+'\n',encoding='utf-8');tmp.replace(p)
+    # Preserve the published v8 Windows-authored JSON bytes on Linux as well.
+    with tmp.open('w',encoding='utf-8',newline='\r\n') as f:f.write(dumps(v)+'\n')
+    tmp.replace(p)
 
 def rows(p):
     with gzip.open(p,'rt',encoding='utf-8') as f:

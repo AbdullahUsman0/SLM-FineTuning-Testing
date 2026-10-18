@@ -42,6 +42,19 @@ def background(command,log):
 def code_lock():
     return {str(p.relative_to(ROOT)):sha(p) for p in [ROOT/'training/train_lora.py',*sorted(HERE.glob('*.py'))]}
 
+def frozen_environment():
+    result={'CUDA_VISIBLE_DEVICES':os.environ.get('CUDA_VISIBLE_DEVICES','0')}
+    if os.environ.get('HF_HOME'):result['HF_HOME']=str(Path(os.environ['HF_HOME']).expanduser().resolve())
+    for name in ['HF_HUB_OFFLINE','TRANSFORMERS_OFFLINE','HF_HUB_DISABLE_XET']:
+        if name in os.environ:result[name]=os.environ[name]
+    return result
+
+def execution_environment(config):
+    env=dict(os.environ);env.pop('OPENAI_API_KEY',None)
+    env.update(config['environment'])
+    env.update(PYTHONUNBUFFERED='1',TOKENIZERS_PARALLELISM='false',OMP_NUM_THREADS='4',MKL_NUM_THREADS='4',PYTHONDONTWRITEBYTECODE='1')
+    return env
+
 def check_config(run):
     c=json.loads((run/'launch-config.json').read_bytes())
     lock=json.loads((run/'launch-config.sha256.json').read_bytes())
@@ -96,7 +109,7 @@ def prepare(run,fpy,seed):
        'checkpoint_retention':'all','initialization':'fresh pinned stock base plus new LoRA; not continued from v6/v7',
        'base_revision':BASE_REVISION,'preflight_sha256':sha(run/'preflight.json'),'code_hashes':code_lock(),
        'development_diagnostic':'100 stratified validation conversations, component and rollout; not final test',
-       'human_review_complete':False,'training_authorization_sha256':sha(HERE/'TRAINING_AUTHORIZATION.json')}
+       'human_review_complete':False,'training_authorization_sha256':sha(HERE/'TRAINING_AUTHORIZATION.json'),'environment':frozen_environment()}
     atomic(run/'launch-config.json',c);atomic(run/'launch-config.sha256.json',{'sha256':sha(run/'launch-config.json')})
     atomic(run/'status.json',{'status':'ready','at':now(),'training_started':False,'expected_optimizer_steps':c['expected_optimizer_steps']})
     print(dumps({'status':'ready','run':str(run),'preflight':lengths,'expected_optimizer_steps':c['expected_optimizer_steps']}))
@@ -116,8 +129,7 @@ def worker(run):
             awake=ctypes.windll.kernel32.SetThreadExecutionState
             if not awake(0x80000001):raise RuntimeError('Windows sleep inhibition failed')
         try:
-            env=dict(os.environ);env.pop('OPENAI_API_KEY',None)
-            env.update(PYTHONUNBUFFERED='1',TOKENIZERS_PARALLELISM='false',OMP_NUM_THREADS='4',MKL_NUM_THREADS='4',PYTHONDONTWRITEBYTECODE='1')
+            env=execution_environment(c)
             def status(state,**items):atomic(run/'status.json',{'status':state,'phase':phase,'at':now(),'pid':os.getpid(),**items})
             completion=run/'training-completion.json'
             if not completion.exists():

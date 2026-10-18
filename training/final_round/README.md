@@ -45,6 +45,8 @@ Verify that global step advances and at least one complete checkpoint exists bef
 
 To resume after a failure, inspect logs, retain the exact code/environment/input files, then call **start on the same run path**. If a training manifest exists, the worker passes `--resume-from-checkpoint auto`; the unchanged trainer chooses the latest complete, hash-verified checkpoint and refuses an unsafe restart from zero. A failed run without any complete checkpoint cannot be resumed; preserve it and report the limitation rather than changing displayed progress. OS file locks reject a simultaneous second worker.
 
+The launch config retains the non-secret model-cache location, selected CUDA device and explicit offline flags. A resumed worker restores these even when started from a different terminal environment. It does not record API credentials.
+
 After technical training completion, the worker automatically runs a resumable 100-conversation local development diagnostic in both component and rollout tracks. It verifies adapter loading, journals raw outputs, and writes structural, exact F1, state, correction and language/domain summaries. It does not call OpenAI or consume a final test. The worker's final status is complete only after both phases finish.
 
 ## Expected saved evidence

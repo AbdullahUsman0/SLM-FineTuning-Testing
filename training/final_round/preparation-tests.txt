@@ -1,0 +1,27 @@
+test_admission_does_not_default_missing_required_field (__main__.FinalRoundTests.test_admission_does_not_default_missing_required_field) ... ok
+test_admission_preserves_literal_string_after_one_decode (__main__.FinalRoundTests.test_admission_preserves_literal_string_after_one_decode) ... ok
+test_admission_rejects_duplicate_slots (__main__.FinalRoundTests.test_admission_rejects_duplicate_slots) ... ok
+test_admission_rejects_extra_fields_and_unknown_slots (__main__.FinalRoundTests.test_admission_rejects_extra_fields_and_unknown_slots) ... ok
+test_admission_rejects_rewritten_or_prior_only_evidence (__main__.FinalRoundTests.test_admission_rejects_rewritten_or_prior_only_evidence) ... ok
+test_atomic_json_has_platform_independent_published_newlines (__main__.FinalRoundTests.test_atomic_json_has_platform_independent_published_newlines) ... ok
+test_detached_worker_survives_launcher_exit (__main__.FinalRoundTests.test_detached_worker_survives_launcher_exit) ... ok
+test_diagnostic_scope_is_balanced_and_validation_only (__main__.FinalRoundTests.test_diagnostic_scope_is_balanced_and_validation_only) ... ok
+test_duplicate_emissions_are_counted (__main__.FinalRoundTests.test_duplicate_emissions_are_counted) ... ok
+test_duplicate_journal_key_fails_closed (__main__.FinalRoundTests.test_duplicate_journal_key_fails_closed) ... ok
+test_frozen_corpus_full_structural_verification (__main__.FinalRoundTests.test_frozen_corpus_full_structural_verification) ... ok
+test_history_has_both_positive_and_abstention_contrasts (__main__.FinalRoundTests.test_history_has_both_positive_and_abstention_contrasts) ... ok
+test_journal_adds_newline_after_complete_final_record (__main__.FinalRoundTests.test_journal_adds_newline_after_complete_final_record) ... ok
+test_journal_recovers_partial_tail_and_preserves_it (__main__.FinalRoundTests.test_journal_recovers_partial_tail_and_preserves_it) ... ok
+test_live_worker_lock_excludes_second_worker (__main__.FinalRoundTests.test_live_worker_lock_excludes_second_worker) ... ok
+test_rejected_matching_response_gets_zero_true_positives (__main__.FinalRoundTests.test_rejected_matching_response_gets_zero_true_positives) ... ok
+test_resume_is_auto_only_after_a_real_manifest (__main__.FinalRoundTests.test_resume_is_auto_only_after_a_real_manifest) ... ok
+test_resume_restores_gpu_and_cache_without_recording_credentials (__main__.FinalRoundTests.test_resume_restores_gpu_and_cache_without_recording_credentials) ... ok
+test_safe_references_are_identifiers_only (__main__.FinalRoundTests.test_safe_references_are_identifiers_only) ... ok
+test_strict_json_rejects_duplicate_and_nonfinite_values (__main__.FinalRoundTests.test_strict_json_rejects_duplicate_and_nonfinite_values) ... ok
+test_unknowns_and_corrections_have_no_unrelated_updates (__main__.FinalRoundTests.test_unknowns_and_corrections_have_no_unrelated_updates) ... ok
+test_wire_string_values_decode_only_once (__main__.FinalRoundTests.test_wire_string_values_decode_only_once) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 15.004s
+
+OK

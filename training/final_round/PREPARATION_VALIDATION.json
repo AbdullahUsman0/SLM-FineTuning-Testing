@@ -118,8 +118,9 @@
   "public_parent_bundle_rebuild_byte_identical": true,
   "reproduced_manifest_files": 8,
   "offline_tests": {
-    "passed": 20,
-    "log": "runtime/v8-final-tests-20261018.log"
+    "passed": 22,
+    "test_report": "training/final_round/preparation-tests.txt",
+    "report_sha256": "457be2b3abe968b8d07c75715f6d0d3693cdecbf2c71e7a2549b887205861e14"
   },
   "evaluator_integrity_fixture": {
     "GPU_model_inference_performed": false,
@@ -135,5 +136,6 @@
   "GPU_inference_performed": false,
   "tokenizer_preflight": "must run on remote training environment",
   "independent_human_review_complete": false,
-  "new_paid_API_spend_usd": 0
+  "new_paid_API_spend_usd": 0,
+  "checks_are_not_model_quality_results": true
 }

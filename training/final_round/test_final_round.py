@@ -3,12 +3,17 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 import argparse,importlib.util,json,os,subprocess,sys,time,unittest
 sys.path.insert(0,str(Path(__file__).resolve().parent))
-from data_tools import CORPUS,ROOT,sha,rows,verify,use_fpy,dumps,admit,strict_json
+from data_tools import CORPUS,ROOT,sha,rows,verify,use_fpy,dumps,admit,strict_json,atomic
 from evaluate_development import select_cases,counts,prf,read_journal,decoded_tuples
-from run import run_lock,background,train_command
+from run import run_lock,background,train_command,frozen_environment,execution_environment
 FPY_AVAILABLE=False
 
 class FinalRoundTests(unittest.TestCase):
+    def test_atomic_json_has_platform_independent_published_newlines(self):
+        with TemporaryDirectory() as td:
+            p=Path(td)/'record.json';atomic(p,{'x':1})
+            self.assertEqual(p.read_bytes(),b'{"x": 1}\r\n')
+
     def test_frozen_corpus_full_structural_verification(self):
         result=verify()
         self.assertEqual(result['splits']['train']['scenarios'],3600)
@@ -131,6 +136,17 @@ class FinalRoundTests(unittest.TestCase):
             self.assertNotIn('--resume-from-checkpoint',train_command(run,c))
             (run/'full').mkdir();(run/'full/run-manifest.json').write_text('{}')
             self.assertEqual(train_command(run,c)[-2:],['--resume-from-checkpoint','auto'])
+
+    def test_resume_restores_gpu_and_cache_without_recording_credentials(self):
+        from unittest.mock import patch
+        with TemporaryDirectory() as td:
+            with patch.dict(os.environ,{'HF_HOME':td,'CUDA_VISIBLE_DEVICES':'GPU-fixture','OPENAI_API_KEY':'offline-placeholder'},clear=True):
+                frozen=frozen_environment()
+            self.assertNotIn('OPENAI_API_KEY',frozen)
+            with patch.dict(os.environ,{'CUDA_VISIBLE_DEVICES':'99','OPENAI_API_KEY':'offline-placeholder'},clear=True):
+                env=execution_environment({'environment':frozen})
+            self.assertEqual(env['CUDA_VISIBLE_DEVICES'],'GPU-fixture');self.assertEqual(env['HF_HOME'],str(Path(td).resolve()))
+            self.assertNotIn('OPENAI_API_KEY',env)
 
     def test_detached_worker_survives_launcher_exit(self):
         with TemporaryDirectory() as td:
