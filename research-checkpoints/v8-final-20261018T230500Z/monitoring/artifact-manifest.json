@@ -1,0 +1,15 @@
+{
+    "files_sha256":  {
+                         "check-hourly-hidden.ps1":  "8a5945125f743010eb2e521399322ba64521cf88a17fe3bf7bb7ae5c89579f1e",
+                         "hourly-installation.json":  "695b6f26e99dec4ed277b0e1a5d1f7e419a858eb4609919aa4ae731f0272b27d",
+                         "hourly-task.xml":  "2b3eb950c45fa1116a24e4f2bc01c6a21e8824475d9fa27e58132bd005b7437d",
+                         "hourly-watchdog.py":  "6b5c15ea94702e2a0680422239831afed5d1b0b23d68358197cc715f1da2a772",
+                         "hourly-watchdog-config.json":  "434de755f8327417a32bed9c42c39ffd5ae3531294ad335e25a0fd0f5b95914d",
+                         "initial-live-check.json":  "3dae65278e9fe2970cb73d6e25de5d00b5ac3bb58476fb792aa417e6956fb0d9",
+                         "install-hourly-watchdog.ps1":  "871dc3bd6d8d04e03185b1692e827733198ed70cd2bb2d35e057bf624bfa902a",
+                         "README.md":  "ea8466723e7eae68dc0cdbf3ee8e69dce68ecaba91b19ee6e530750e210dc756",
+                         "schedule-verification.json":  "fbcb707d8db5d200b03571427257176395bd21977f6a247e279e4dc074c6227e",
+                         "test_hourly_watchdog.py":  "5a3fc500ba40a5cf7fcd1717e736e2da11a3a9a41037c78a56a07a48ab2c8121"
+                     },
+    "credentials_or_weights_included":  false
+}

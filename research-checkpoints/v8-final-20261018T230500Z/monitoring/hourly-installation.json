@@ -1,0 +1,10 @@
+{
+    "status":  "registered_and_started",
+    "task":  "SLM-v8-final-hourly-20261018T230500Z",
+    "installed_UTC":  "2026-10-19T02:14:17.5039974Z",
+    "user":  "DESKTOP-0AR1ONF\\Abdullah",
+    "hourly_seconds":  3600,
+    "additional_trigger":  "AtLogOn",
+    "requires_logged_in_session":  true,
+    "credentials_stored":  false
+}

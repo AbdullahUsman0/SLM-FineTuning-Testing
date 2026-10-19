@@ -1,0 +1,28 @@
+{
+    "recorded_UTC":  "2026-10-19T02:15:34.8896565Z",
+    "task":  "SLM-v8-final-hourly-20261018T230500Z",
+    "state":  "Ready",
+    "last_run_UTC":  "2026-10-19T02:15:15.0000000Z",
+    "last_task_result":  0,
+    "next_run_UTC":  "2026-10-19T03:15:15.0000000Z",
+    "triggers":  [
+                     {
+                         "kind":  "MSFT_TaskTimeTrigger",
+                         "start":  "2026-10-18T19:15:17-07:00",
+                         "interval":  "PT1H",
+                         "user":  null
+                     },
+                     {
+                         "kind":  "MSFT_TaskLogonTrigger",
+                         "start":  null,
+                         "interval":  null,
+                         "user":  "DESKTOP-0AR1ONF\\Abdullah"
+                     }
+                 ],
+    "logon_type":  "Interactive",
+    "run_level":  "Limited",
+    "multiple_instances":  "IgnoreNew",
+    "tests_passed":  9,
+    "GPU_or_training_recovery_simulated":  false,
+    "tests_note":  "Nine offline policy/identity/checkpoint-selection/hidden-launch tests passed. Actual recovery was not triggered against the healthy trainer."
+}
