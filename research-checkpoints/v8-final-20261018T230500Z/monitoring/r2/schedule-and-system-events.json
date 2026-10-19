@@ -1,0 +1,34 @@
+{
+  "at_UTC": "2026-10-19T06:29:54.2042729Z",
+  "task": "SLM-v8-final-hourly-20261018T230500Z",
+  "state": "Running",
+  "last_task_result": 267009,
+  "last_run_UTC": "2026-10-19T06:29:29.0000000Z",
+  "next_run_UTC": "2026-10-19T07:15:15.0000000Z",
+  "multiple_instances": "Parallel",
+  "execution_time_limit": "PT0S",
+  "action": "-NoProfile -NonInteractive -WindowStyle Hidden -ExecutionPolicy Bypass -File \"D:\\SLM\\FYP-experiment-control\\v8-final-20261018T230500Z\\check-hourly-r2-hidden.ps1\"",
+  "boot_UTC": "2026-10-19T02:32:36.5000000Z",
+  "system_events": [
+    {
+      "at_UTC": "2026-10-19T02:32:38.8799182Z",
+      "id": 41,
+      "message": "The system has rebooted without cleanly shutting down first. This error could be caused if the system stopped responding, crashed, or lost power unexpectedly."
+    },
+    {
+      "at_UTC": "2026-10-19T02:32:44.3090532Z",
+      "id": 6008,
+      "message": "The previous system shutdown at 6:59:47 PM on \u00e2\u20ac\u017d10/\u00e2\u20ac\u017d18/\u00e2\u20ac\u017d2026 was unexpected."
+    },
+    {
+      "at_UTC": "2026-10-19T01:59:42.5759563Z",
+      "id": 41,
+      "message": "The system has rebooted without cleanly shutting down first. This error could be caused if the system stopped responding, crashed, or lost power unexpectedly."
+    },
+    {
+      "at_UTC": "2026-10-19T01:59:47.8136414Z",
+      "id": 6008,
+      "message": "The previous system shutdown at 6:36:02 PM on \u00e2\u20ac\u017d10/\u00e2\u20ac\u017d18/\u00e2\u20ac\u017d2026 was unexpected."
+    }
+  ]
+}

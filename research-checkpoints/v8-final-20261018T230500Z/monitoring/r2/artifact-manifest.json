@@ -1,0 +1,23 @@
+{
+  "files_sha256": {
+    "before-automatic-recovery.json": "9993828ab1aed0021c99b3d9c87bb900fdd40e5facaf6107943027015ed308d1",
+    "check-hourly-r2-hidden.ps1": "d1f0efad1d53df14c9f65392fd549ff5a1178cfeaf33bd3363847e4c138a00f8",
+    "checkpoint-130-independent-verification.json": "29fdb12122a08a4561f60d957a7846627f1d7c561775549debf05c55adeaded5",
+    "followup-status-at-publication.json": "d4046d68172c93cb8c4172cc8b9ac781b367ec9521f06afa1482d813436095ab",
+    "hourly-last-check-r2.json": "554fc3c6153317f30fde079f4ab7808a30cfb88f09c388aeae1a5898d5bede10",
+    "hourly-recoveries.jsonl": "04c342c7ed830ab9b01ae3b1c56ac44b69a1a56eb1d4e5257c011ce4317eb39e",
+    "hourly-task-r2.xml": "75806faaf84f0ff9e82cb2bd8e6488bff784922d9528c932ab29e1d7102437f5",
+    "hourly-watchdog-config-r2.json": "1510a2765402104f1d359b52086b04c5094a88a73bb4f9b2eb96bf029e1274d2",
+    "hourly-watchdog-r2.py": "5e7696fe4d9e6b6795ef601ad1f35631bc98416bc9657efd95277a87f3dcb5ef",
+    "README.md": "7f34a1f16ad7e52b94483517e5015478c64cff9e1e6568994a736264574a7a55",
+    "schedule-and-system-events.json": "a66a8a21c65138da4bf38b4d0319d3196f44d44c0eac7c0232f92f434ae3d2f3",
+    "test_hourly_watchdog_r2.py": "43ade29852de9f58d48a5e6284f835ff380d9e42df7ffbd737704c124f393e9c",
+    "tests.txt": "29aa22f9bd93a096b68734e4c0639be26afdf07af80f7feba1f46366b468af7a",
+    "timeout-fixture-completed.txt": "5e1f8562208322ba8dbd7567515383ac6ebf909de2eca4b674a5bfa781adcae4",
+    "training-console-tail.txt": "95023c8844fdad7fb1637c66b5c8f739557718f65ac3d51ca849ca066f5fadc0",
+    "training-progress-events.json": "14cef91538082477fa38b905286f79b7f82ceb81a67bec11aab30de2544266ec",
+    "worker-status-at-publication.json": "051f406589f6b78b18d2f11d8f1db76888fde0cec7cf270aba5c9dbcff94f79a"
+  },
+  "new_paid_API_calls": 0,
+  "final_test_accessed": false
+}

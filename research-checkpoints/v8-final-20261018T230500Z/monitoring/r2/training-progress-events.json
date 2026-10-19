@@ -1,0 +1,214 @@
+[
+  {
+    "at": "2026-10-18T23:20:28.091863+00:00",
+    "event": "metrics",
+    "step": 5
+  },
+  {
+    "at": "2026-10-18T23:27:02.157435+00:00",
+    "event": "metrics",
+    "step": 10
+  },
+  {
+    "at": "2026-10-18T23:27:03.005857+00:00",
+    "event": "checkpoint_complete",
+    "checkpoint": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full\\checkpoint-10"
+  },
+  {
+    "at": "2026-10-18T23:33:29.620907+00:00",
+    "event": "metrics",
+    "step": 15
+  },
+  {
+    "at": "2026-10-18T23:40:01.654912+00:00",
+    "event": "metrics",
+    "step": 20
+  },
+  {
+    "at": "2026-10-18T23:40:02.247613+00:00",
+    "event": "checkpoint_complete",
+    "checkpoint": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full\\checkpoint-20"
+  },
+  {
+    "at": "2026-10-18T23:46:25.198304+00:00",
+    "event": "metrics",
+    "step": 25
+  },
+  {
+    "at": "2026-10-18T23:52:40.808785+00:00",
+    "event": "metrics",
+    "step": 30
+  },
+  {
+    "at": "2026-10-18T23:52:41.403870+00:00",
+    "event": "checkpoint_complete",
+    "checkpoint": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full\\checkpoint-30"
+  },
+  {
+    "at": "2026-10-18T23:59:10.203133+00:00",
+    "event": "metrics",
+    "step": 35
+  },
+  {
+    "at": "2026-10-19T00:05:40.480967+00:00",
+    "event": "metrics",
+    "step": 40
+  },
+  {
+    "at": "2026-10-19T00:05:41.061747+00:00",
+    "event": "checkpoint_complete",
+    "checkpoint": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full\\checkpoint-40"
+  },
+  {
+    "at": "2026-10-19T00:12:06.892520+00:00",
+    "event": "metrics",
+    "step": 45
+  },
+  {
+    "at": "2026-10-19T00:18:37.000462+00:00",
+    "event": "metrics",
+    "step": 50
+  },
+  {
+    "at": "2026-10-19T00:18:37.972524+00:00",
+    "event": "checkpoint_complete",
+    "checkpoint": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full\\checkpoint-50"
+  },
+  {
+    "at": "2026-10-19T00:25:09.976072+00:00",
+    "event": "metrics",
+    "step": 55
+  },
+  {
+    "at": "2026-10-19T00:31:37.457745+00:00",
+    "event": "metrics",
+    "step": 60
+  },
+  {
+    "at": "2026-10-19T00:31:38.024180+00:00",
+    "event": "checkpoint_complete",
+    "checkpoint": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full\\checkpoint-60"
+  },
+  {
+    "at": "2026-10-19T00:38:05.087645+00:00",
+    "event": "metrics",
+    "step": 65
+  },
+  {
+    "at": "2026-10-19T00:44:34.681564+00:00",
+    "event": "metrics",
+    "step": 70
+  },
+  {
+    "at": "2026-10-19T00:44:35.254559+00:00",
+    "event": "checkpoint_complete",
+    "checkpoint": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full\\checkpoint-70"
+  },
+  {
+    "at": "2026-10-19T00:51:10.602146+00:00",
+    "event": "metrics",
+    "step": 75
+  },
+  {
+    "at": "2026-10-19T00:57:34.988158+00:00",
+    "event": "metrics",
+    "step": 80
+  },
+  {
+    "at": "2026-10-19T00:57:35.936749+00:00",
+    "event": "checkpoint_complete",
+    "checkpoint": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full\\checkpoint-80"
+  },
+  {
+    "at": "2026-10-19T01:04:03.393686+00:00",
+    "event": "metrics",
+    "step": 85
+  },
+  {
+    "at": "2026-10-19T01:10:36.336741+00:00",
+    "event": "metrics",
+    "step": 90
+  },
+  {
+    "at": "2026-10-19T01:10:36.925973+00:00",
+    "event": "checkpoint_complete",
+    "checkpoint": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full\\checkpoint-90"
+  },
+  {
+    "at": "2026-10-19T01:16:57.076669+00:00",
+    "event": "metrics",
+    "step": 95
+  },
+  {
+    "at": "2026-10-19T01:23:17.985535+00:00",
+    "event": "metrics",
+    "step": 100
+  },
+  {
+    "at": "2026-10-19T01:23:18.973888+00:00",
+    "event": "checkpoint_complete",
+    "checkpoint": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full\\checkpoint-100"
+  },
+  {
+    "at": "2026-10-19T01:29:34.616011+00:00",
+    "event": "metrics",
+    "step": 105
+  },
+  {
+    "at": "2026-10-19T01:35:50.279581+00:00",
+    "event": "metrics",
+    "step": 110
+  },
+  {
+    "at": "2026-10-19T01:35:51.289332+00:00",
+    "event": "checkpoint_complete",
+    "checkpoint": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full\\checkpoint-110"
+  },
+  {
+    "at": "2026-10-19T01:42:09.046743+00:00",
+    "event": "metrics",
+    "step": 115
+  },
+  {
+    "at": "2026-10-19T01:48:26.461971+00:00",
+    "event": "metrics",
+    "step": 120
+  },
+  {
+    "at": "2026-10-19T01:48:27.455232+00:00",
+    "event": "checkpoint_complete",
+    "checkpoint": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full\\checkpoint-120"
+  },
+  {
+    "at": "2026-10-19T01:54:47.756565+00:00",
+    "event": "metrics",
+    "step": 125
+  },
+  {
+    "at": "2026-10-19T02:05:48.306384+00:00",
+    "event": "run_resumed",
+    "resume_from_checkpoint": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full\\checkpoint-120",
+    "run_fingerprint": "541805a394f01f67a3b01e4bf5ca5bf623466c0e8e002a7eeb3a3510c46dc47a"
+  },
+  {
+    "at": "2026-10-19T02:13:26.042585+00:00",
+    "event": "metrics",
+    "step": 125
+  },
+  {
+    "at": "2026-10-19T02:19:43.734920+00:00",
+    "event": "metrics",
+    "step": 130
+  },
+  {
+    "at": "2026-10-19T02:19:44.575631+00:00",
+    "event": "checkpoint_complete",
+    "checkpoint": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full\\checkpoint-130"
+  },
+  {
+    "at": "2026-10-19T06:27:10.414693+00:00",
+    "event": "run_resumed",
+    "resume_from_checkpoint": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full\\checkpoint-130",
+    "run_fingerprint": "541805a394f01f67a3b01e4bf5ca5bf623466c0e8e002a7eeb3a3510c46dc47a"
+  }
+]
