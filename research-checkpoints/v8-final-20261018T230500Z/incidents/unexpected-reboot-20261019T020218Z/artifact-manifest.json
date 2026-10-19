@@ -1,0 +1,12 @@
+{
+  "files_sha256": {
+    "README.md": "3580a5e9887d21ca1c144d49899ff054cee6a873908fd0f31820fb640da55e86",
+    "followup-hidden-recovery-launch.json": "5dcaa7a3d3e7aee2eb7249c93a2430f024fe324613411708de0adb0ae9614f25",
+    "recovery-plan.json": "2196f412778d053a605f00b89beaaa03c5b43b4f41b2af92928d2666a862ac9a",
+    "resume-confirmation.json": "875b120a37deef2f042754be94228d76c430894cb2b8861667d4cb5eeb198da2",
+    "stale-followup-status.json": "a0864937d5c70a88de513b59ba5fe3ac275310dd6c70085466eaed106884b7ed",
+    "stale-worker-status.json": "b0ed9981b4509ae191ccbf6657e8e95de72c49f15d56de9560be35dd5119e04e",
+    "system-events.json": "7f3e99324fee6f631369db8aa41f8085324827699a07f79dbcdef1544fd27e17"
+  },
+  "weights_or_optimizer_states_included": false
+}

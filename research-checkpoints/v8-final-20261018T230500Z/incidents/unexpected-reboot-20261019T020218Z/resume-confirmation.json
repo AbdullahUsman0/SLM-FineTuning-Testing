@@ -1,0 +1,22 @@
+{
+  "all_frozen_training_sources_inputs_and_config_unchanged": true,
+  "development_results_available": false,
+  "followup_PID": 2024,
+  "followup_heartbeat": "2026-10-19T02:09:06.644024+00:00",
+  "new_observed_step": 122,
+  "new_training_run_created": false,
+  "paid_API_calls": 0,
+  "planned_optimizer_steps": 2234,
+  "restored_checkpoint_step": 120,
+  "run": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z",
+  "run_resumed_event": {
+    "at": "2026-10-19T02:05:48.306384+00:00",
+    "event": "run_resumed",
+    "resume_from_checkpoint": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full\\checkpoint-120",
+    "run_fingerprint": "541805a394f01f67a3b01e4bf5ca5bf623466c0e8e002a7eeb3a3510c46dc47a"
+  },
+  "saved_global_step_manually_edited": false,
+  "status": "same_run_optimizer_progress_confirmed",
+  "verified_at_UTC": "2026-10-19T02:09:35.079650+00:00",
+  "worker_PID": 2016
+}

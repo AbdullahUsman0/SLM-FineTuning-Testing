@@ -1,0 +1,32 @@
+﻿[
+    {
+        "UTC":  "2026-10-19T01:59:46.0476846Z",
+        "Id":  18,
+        "ProviderName":  "BTHUSB",
+        "Message":  "Windows cannot store Bluetooth authentication codes (link keys) on the local adapter. Bluetooth keyboards might not work in the system BIOS during startup."
+    },
+    {
+        "UTC":  "2026-10-19T01:59:42.5759563Z",
+        "Id":  41,
+        "ProviderName":  "Microsoft-Windows-Kernel-Power",
+        "Message":  "The system has rebooted without cleanly shutting down first. This error could be caused if the system stopped responding, crashed, or lost power unexpectedly."
+    },
+    {
+        "UTC":  "2026-10-19T01:59:47.8139912Z",
+        "Id":  6005,
+        "ProviderName":  "EventLog",
+        "Message":  "The Event log service was started."
+    },
+    {
+        "UTC":  "2026-10-19T01:59:47.8136414Z",
+        "Id":  6008,
+        "ProviderName":  "EventLog",
+        "Message":  "The previous system shutdown at 6:36:02 PM on ‎10/‎18/‎2026 was unexpected."
+    },
+    {
+        "UTC":  "2026-10-19T01:59:41.0981452Z",
+        "Id":  18,
+        "ProviderName":  "Microsoft-Windows-Kernel-Boot",
+        "Message":  "There are 0x1 boot options on this system."
+    }
+]

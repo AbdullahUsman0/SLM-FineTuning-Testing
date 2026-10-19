@@ -1,0 +1,36 @@
+{
+  "all_checkpoint_hashes_verified": true,
+  "checkpoint_receipt": {
+    "complete": true,
+    "completed_at": "2026-10-19T01:48:27.423125+00:00",
+    "global_step": 120,
+    "requires_scaler": false,
+    "run_fingerprint": "541805a394f01f67a3b01e4bf5ca5bf623466c0e8e002a7eeb3a3510c46dc47a",
+    "schema_version": 1,
+    "sha256": {
+      "README.md": "4351e9c7eeac74e8c222cc76e0cfbccd749a29ea3dc1075d0fdc71382030392f",
+      "adapter_config.json": "a457617f2f375eb562575cf35d010a58bc08ca8ded8a9d45406e423d5e592098",
+      "adapter_model.safetensors": "1e7bdb4bb9611a1ca91738301924aa486b56aedce2c6b3925ddea9a4743713c3",
+      "chat_template.jinja": "306abaf09cf3a6c0d14128373a72925bda3d7de2616a5642804d9768c7d2f78c",
+      "optimizer.pt": "2dc4017c0d8322cb91bbbc18e1318c0b2f4db40d9987fb52eef6d2a2b73948e7",
+      "rng_state.pth": "08034b40d5636b7af16361f11f1e030b7335d1336d623e3364bf147d707d895e",
+      "scheduler.pt": "045ec398676a3973b628fbbefdc1cbe06a291a9357ffb38ceda6c28ece2654fe",
+      "tokenizer.json": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+      "tokenizer_config.json": "7b0a126e2dd5f59c9d219ef18d34485cbd91d887d24620bd9b26e0c83f965b40",
+      "trainer_state.json": "7dd02f1fd1554be7d4cc88a002319a77ebbdd86ce1d182cf23cc161de4135973",
+      "training_args.bin": "71ff3208c0fa72b05be19d7daa1f6ea49e079c4f9204aa690c3c3f8b3016c465"
+    },
+    "world_size": 1
+  },
+  "events_offset_bytes": 13452,
+  "incident": "Windows logged an unexpected reboot; exact underlying cause not established",
+  "last_observed_unsaved_step": 125,
+  "observed_at_UTC": "2026-10-19T02:02:47.320491+00:00",
+  "paid_API_calls": 0,
+  "resume_checkpoint_step": 120,
+  "resume_from_zero": false,
+  "run": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z",
+  "training_log_offset_bytes": 151290,
+  "training_sources_and_inputs_unchanged": true,
+  "uncheckpointed_steps_to_replay": 5
+}
