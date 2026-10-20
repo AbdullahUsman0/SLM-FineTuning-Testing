@@ -1,0 +1,13 @@
+# Repeated reboot / hardware review, 2026-10-20 PDT
+
+Training is stopped again. Fresh prior progress reached step 556, while the latest complete checkpoint is 550. All 11 checkpoint artifacts and the original run/source/input identity were independently verified during this check. Six unsaved steps would be replayed on a subsequent same-run resume. The stale worker JSON says running but no actual worker/trainer exists; no PID/status-only success is claimed.
+
+Windows records another unclean reboot at approximately 09:26 PDT, following the 08:02 PDT reboot. Kernel-Power 41 reports BugcheckCode=0. WHEA event 17 records corrected PCIe errors for NVIDIA device VEN_10DE DEV_24B0 at bus 1:0:0 and its related audio endpoint 1:0:1. GPU identity maps the RTX A4000 to PCI 00000000:01:00.0 and device 0x24B010DE. These corrected errors were logged during reboot/startup; they do not establish a defective GPU or the cause of shutdown. No new trainer exception or console-close error appears in the latest interruption. The repeated 94–96C load temperatures remain a concern, but heat is NOT established as the reboot cause.
+
+No further manual full-power restart was performed during this check. The existing automatic recovery cap currently blocks restart; its value/history were not changed. The periodic check remains installed. Physical review of cooling, power and PCIe hardware is recommended before further full-power runs. The user previously reported being away from the PC.
+
+An optional 100W recovery proposal is prepared but NOT applied. The local driver reports a 100–140W supported range and a current limit of 140W. NVIDIA documents that --power-limit sets the GPU power ceiling and requires the appropriate privilege. If separately approved and permitted by the driver, the proposal changes the hardware limit to 100W and resumes THIS run from checkpoint 550, preserving the fixed model/training configuration. Lower power is a mitigation to test, not a proven repair or a guarantee against another reboot. Hardware operating conditions and latency comparisons must record the change. The proposal includes the exact apply/restore commands and readback gate. No operating limit has been changed.
+
+Reference: [NVIDIA System Management Interface documentation](https://docs.nvidia.com/deploy/nvidia-smi/index.html).
+
+All adapters, runs, checkpoints and original logs remain preserved outside Git. Final adapter and development measurements remain pending. No paid API calls, final-test labels, model/optimizer weights, credentials or caches are included in this static evidence snapshot.

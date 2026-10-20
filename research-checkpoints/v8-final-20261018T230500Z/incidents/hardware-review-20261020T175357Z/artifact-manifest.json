@@ -1,0 +1,11 @@
+{
+  "files_sha256": {
+    "checkpoint-550-verification.json": "20d2569c11676f62015f7223ed614d7d19305903f7766b398ba35abc658c72ab",
+    "gpu-telemetry.txt": "ae57684c44b30b8e0948e0c25039c708827bc5cbb34af0d88b0ad99f6aa474f2",
+    "monitor-status.json": "b4f717a7dcb92eaad3b75b4db4571a643f4b61d7996bcc2e34fffa42ba3ef985",
+    "proposed-100W-recovery.json": "d42e1a39eca74c254d2faf4da6dcf2c8038368322aec0b2f913095dfd8ad14bf",
+    "README.md": "59b5adbb4070a50c9baab7cba6019578106d597b0ce8901476f7e59eea43dced",
+    "status.json": "f013d3456de7b16c314ca618757e8e5bfbb99ed482b1e9c1a32741dd8013d0d0",
+    "system-events.json": "a24eaff2c6110a1ca58e821f44ed5b289872ed39fa4c5b6fdcaad62f714d3b67"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "at_UTC": "2026-10-20T17:53:57.929132+00:00",
+  "run": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z",
+  "actual_state": "stopped",
+  "progress_before_stop": {
+    "last_output_age_seconds": 5475.3,
+    "last_console_optimizer_step": 556,
+    "resume_checkpoint_step": 530,
+    "new_steps_observed_after_resume": true
+  },
+  "verified_checkpoint_step": 550,
+  "worker_pids": [],
+  "trainer_pids": [],
+  "manual_restart_performed_by_this_check": false,
+  "GPU_settings_changed": false,
+  "automatic_retry_cap_changed": false,
+  "final_adapter_exists": false,
+  "development_summary_exists": false,
+  "cause_established": false,
+  "paid_API_calls": 0,
+  "final_test_accessed": false
+}

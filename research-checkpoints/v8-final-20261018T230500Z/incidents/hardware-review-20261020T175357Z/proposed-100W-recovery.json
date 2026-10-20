@@ -1,0 +1,34 @@
+{
+  "status": "PROPOSED_ONLY_NOT_APPLIED",
+  "hardware": "NVIDIA RTX A4000 GPU 0",
+  "current_limit_W": 140.0,
+  "driver_min_W": 100.0,
+  "driver_max_W": 140.0,
+  "proposed_limit_W": 100,
+  "proposed_command": [
+    "nvidia-smi",
+    "-i",
+    "0",
+    "-pl",
+    "100"
+  ],
+  "restore_command": [
+    "nvidia-smi",
+    "-i",
+    "0",
+    "-pl",
+    "140"
+  ],
+  "resume_checkpoint": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full\\checkpoint-550",
+  "resume_run": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z",
+  "required_approval": "User training instruction prohibits silent setting changes; this changes a GPU hardware operating limit.",
+  "driver_permission_note": "May require administrator/driver permission; do not start unless successful readback confirms the approved limit.",
+  "conditions": [
+    "Preserve the same dataset/model revision, seed, optimizer state, two-epoch schedule and all checkpoints.",
+    "Record the hardware power limit change in the run evidence; do not imply the original hardware operating conditions continued unchanged.",
+    "Monitor temperature and progress through the next complete checkpoint; the setting does not establish that the hardware fault is fixed.",
+    "If an approved cap resets after reboot, verify/reapply the approved cap before another GPU launch; never fall back silently to 140W.",
+    "Use matching hardware conditions for later v8/v6 development latency measurements."
+  ],
+  "reference": "https://docs.nvidia.com/deploy/nvidia-smi/index.html#pl-power-limit-power-limit"
+}
