@@ -1,0 +1,11 @@
+# User-authorized continuation with the previous setup, 2026-10-20 PDT
+
+After reviewing the repeated system reboots, GPU temperatures and corrected PCIe error findings, the user explicitly instructed: "continue training with previous setup". This instruction was followed. The proposed 100W cap was not applied: the actual GPU operating limit remained 140W before launch and after fresh optimizer progress. The same fixed experiment and run path remain in use.
+
+All 11 artifacts in checkpoint 550 and the original run fingerprint were independently hash-verified. The source/input lock checks passed. With no live worker/trainer present, the unchanged supplied `run.py start --run SAME_PATH` was launched through the existing WMI/console-isolation helper. The same unchanged followup worker was restarted. A manually reviewed recovery receipt was appended; existing history and the automatic retry cap were not changed. This is a checkpoint continuation, not a new run or a reset to zero.
+
+Fresh optimizer progress after checkpoint 550 is recorded in resume-confirmation.json. Six unsaved steps (551–556) from the interrupted segment must be replayed. Original data, model revision, precision, training hyperparameters, seed, optimizer/RNG checkpoint state, fixed two-epoch endpoint and all earlier runs/checkpoints remain preserved. No launcher/environment source was changed and no dependencies were installed for this continuation. The existing process-lifetime repair remains active and its per-process proofs are retained.
+
+The earlier hardware findings are not marked resolved. Corrected PCIe errors observed at reboot do not establish the cause of shutdown, and heat is not assigned as the cause. This record documents the user's decision to continue under the previous operating conditions. Hourly checks remain installed. Further interruptions at the automatic cap require review; unlimited automatic recovery is not claimed. Screen lock is supported; shutdown/reboot and login-session termination can still interrupt work.
+
+The final adapter and matched v8/v6 development diagnostic remain pending. Training loss does not establish behavioral quality or a winner. Full logs/checkpoints remain outside Git; no model or optimizer weights, credentials, caches, paid API calls or final-test labels are included in this static snapshot.
