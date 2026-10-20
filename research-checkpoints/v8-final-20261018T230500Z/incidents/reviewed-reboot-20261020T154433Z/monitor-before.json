@@ -1,0 +1,47 @@
+{
+  "at": "2026-10-20T15:15:19.091760+00:00",
+  "run": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z",
+  "monitor_pid": 9612,
+  "actions": [],
+  "paid_API_calls": 0,
+  "training_settings_changed": false,
+  "verified_checkpoint": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full\\checkpoint-530",
+  "verified_step": 530,
+  "checkpoint_artifacts_verified": 11,
+  "rejected_checkpoints": [],
+  "worker_pids": [],
+  "trainer_pids": [],
+  "diagnostic_pids": [],
+  "companion_pids": [],
+  "v6_diagnostic_pids": [],
+  "progress": {
+    "last_output_age_seconds": 1159.8,
+    "last_console_optimizer_step": 534,
+    "resume_checkpoint_step": 150,
+    "new_steps_observed_after_resume": true
+  },
+  "worker_status": {
+    "at": "2026-10-20T06:48:26.767580+00:00",
+    "expected_optimizer_steps": 2234,
+    "phase": "training",
+    "pid": 7796,
+    "status": "running"
+  },
+  "followup_status": {
+    "PID": 11700,
+    "heartbeat_UTC": "2026-10-20T15:01:07.193429+00:00",
+    "new_paid_API_calls": 0,
+    "status": "waiting_for_supplied_worker",
+    "worker": {
+      "at": "2026-10-20T06:48:26.767580+00:00",
+      "expected_optimizer_steps": 2234,
+      "phase": "training",
+      "pid": 7796,
+      "status": "running"
+    }
+  },
+  "status": "blocked_preserved",
+  "error_type": "RuntimeError",
+  "reason": "Recovery limit reached; inspect saved failure before another attempt",
+  "finished_at": "2026-10-20T15:15:19.961051+00:00"
+}

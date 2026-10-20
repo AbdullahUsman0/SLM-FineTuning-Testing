@@ -1,0 +1,27 @@
+{
+  "at_UTC": "2026-10-20T15:44:33.068689+00:00",
+  "reason": "Windows Kernel-Power 41 and reboot at 2026-10-20 08:02 PDT; no live worker or trainer. Manually inspected after automatic retry cap. Underlying reboot cause unknown.",
+  "progress_before": {
+    "last_output_age_seconds": 2912.9,
+    "last_console_optimizer_step": 534,
+    "resume_checkpoint_step": 150,
+    "new_steps_observed_after_resume": true
+  },
+  "checkpoint": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full\\checkpoint-530",
+  "verified_sha256": {
+    "README.md": "4351e9c7eeac74e8c222cc76e0cfbccd749a29ea3dc1075d0fdc71382030392f",
+    "adapter_config.json": "b56a388609b6cdfbf7d42189bf16e9e458024c337c0dfe31466bb575dd169501",
+    "adapter_model.safetensors": "6104b8f5e54666ab06e87bdb90305ea24dbccba50d4ad49969da8e29bbf21d4e",
+    "chat_template.jinja": "306abaf09cf3a6c0d14128373a72925bda3d7de2616a5642804d9768c7d2f78c",
+    "optimizer.pt": "d361e9b048f560709a0f39de3050e6d1104faa330e021dd2dfdfdb2d8bb864f9",
+    "rng_state.pth": "a481626fe702472d99f9f8617a24f53817809d73370a9d41a8361f185b4854ab",
+    "scheduler.pt": "574df2d7d2fe61e95cafe75a5352e2a2554173f82e082dde0e1c98f35c6fb3cc",
+    "tokenizer.json": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+    "tokenizer_config.json": "7b0a126e2dd5f59c9d219ef18d34485cbd91d887d24620bd9b26e0c83f965b40",
+    "trainer_state.json": "968cccddbb35a4e40e60798da42442b612a88ea483b021c947bb77f9da457601",
+    "training_args.bin": "71ff3208c0fa72b05be19d7daa1f6ea49e079c4f9204aa690c3c3f8b3016c465"
+  },
+  "run_fingerprint": "541805a394f01f67a3b01e4bf5ca5bf623466c0e8e002a7eeb3a3510c46dc47a",
+  "source_input_locks_verified": true,
+  "automatic_retry_cap_changed": false
+}

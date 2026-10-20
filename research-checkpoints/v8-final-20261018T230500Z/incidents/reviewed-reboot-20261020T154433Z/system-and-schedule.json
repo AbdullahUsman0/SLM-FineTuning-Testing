@@ -1,0 +1,36 @@
+{
+  "recorded_UTC": "2026-10-20T15:52:27.1140013Z",
+  "boot_local": "2026-10-20T08:02:23.5000000-07:00",
+  "events": [
+    {
+      "at_local": "2026-10-20T08:02:25.7548257-07:00",
+      "id": 41,
+      "provider": "Microsoft-Windows-Kernel-Power",
+      "message": "The system has rebooted without cleanly shutting down first. This error could be caused if the system stopped responding, crashed, or lost power unexpectedly.",
+      "selected_event_data": {
+        "BugcheckCode": "0",
+        "SleepInProgress": "0",
+        "PowerButtonTimestamp": "0",
+        "BootAppStatus": "0"
+      }
+    },
+    {
+      "at_local": "2026-10-20T08:02:31.1990814-07:00",
+      "id": 6008,
+      "provider": "EventLog",
+      "message": "The previous system shutdown at 7:45:26 AM on \u00e2\u20ac\u017d10/\u00e2\u20ac\u017d20/\u00e2\u20ac\u017d2026 was unexpected.",
+      "selected_event_data": {}
+    },
+    {
+      "at_local": "2026-10-20T08:02:24.1028806-07:00",
+      "id": 12,
+      "provider": "Microsoft-Windows-Kernel-General",
+      "message": "The operating system started at system time \u00e2\u20ac\u017d2026\u00e2\u20ac\u017d-\u00e2\u20ac\u017d10\u00e2\u20ac\u017d-\u00e2\u20ac\u017d20T15:02:23.500000000Z.",
+      "selected_event_data": {}
+    }
+  ],
+  "task_state": "Ready",
+  "last_task_result": 0,
+  "last_run_local": "2026-10-20T08:45:45.0000000-07:00",
+  "next_run_local": "2026-10-20T09:15:15.0000000-07:00"
+}
