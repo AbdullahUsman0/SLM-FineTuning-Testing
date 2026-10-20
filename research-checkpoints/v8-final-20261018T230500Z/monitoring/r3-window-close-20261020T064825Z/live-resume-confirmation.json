@@ -1,0 +1,58 @@
+{
+  "at_UTC": "2026-10-20T06:53:51.301866+00:00",
+  "run": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z",
+  "progress": {
+    "last_output_age_seconds": 66.9,
+    "last_console_optimizer_step": 152,
+    "resume_checkpoint_step": 150,
+    "new_steps_observed_after_resume": true
+  },
+  "checkpoint_step": 150,
+  "checkpoint_artifacts_verified": {
+    "README.md": "4351e9c7eeac74e8c222cc76e0cfbccd749a29ea3dc1075d0fdc71382030392f",
+    "adapter_config.json": "65226cd803bcc4a861d45b65b80d0625f34bcce90388dc37a8846f0207785bb3",
+    "adapter_model.safetensors": "d30c6189f0e061f345c1536bcefde234522520b34e0fca80781cc7d52f8de463",
+    "chat_template.jinja": "306abaf09cf3a6c0d14128373a72925bda3d7de2616a5642804d9768c7d2f78c",
+    "optimizer.pt": "3605336efd617cf5177dcee7105151de1f5348edb9549dee869d1b59139499d8",
+    "rng_state.pth": "e39521c40a392eb26189bfea8af620b53985fc09833020dbc5bbb5f3ac028760",
+    "scheduler.pt": "ab853f551cb4b147efebeb07ab92c2934080a84e483fffff27ac462d76fda905",
+    "tokenizer.json": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+    "tokenizer_config.json": "7b0a126e2dd5f59c9d219ef18d34485cbd91d887d24620bd9b26e0c83f965b40",
+    "trainer_state.json": "a09a5de94ae219ea67ed7834413b88ed7aaf22ad61443199b1991b8c85998a00",
+    "training_args.bin": "71ff3208c0fa72b05be19d7daa1f6ea49e079c4f9204aa690c3c3f8b3016c465"
+  },
+  "run_fingerprint": "541805a394f01f67a3b01e4bf5ca5bf623466c0e8e002a7eeb3a3510c46dc47a",
+  "worker_pids": [
+    7796,
+    12376
+  ],
+  "trainer_pids": [
+    4496,
+    17288
+  ],
+  "console_detachment_proofs": {
+    "7796": {
+      "at_UTC": "2026-10-20T06:48:26.485691+00:00",
+      "pid": 7796,
+      "parent_pid": 12376,
+      "console_before": 1049552,
+      "console_after": 0,
+      "in_job": true,
+      "hook_sha256": "805b594d34a3ad6e6aaae896b9d0e5968819e8e725a90196526a0adb10dade22"
+    },
+    "4496": {
+      "at_UTC": "2026-10-20T06:48:27.002238+00:00",
+      "pid": 4496,
+      "parent_pid": 17288,
+      "console_before": 1246200,
+      "console_after": 0,
+      "in_job": true,
+      "hook_sha256": "805b594d34a3ad6e6aaae896b9d0e5968819e8e725a90196526a0adb10dade22"
+    }
+  },
+  "source_and_input_locks_verified": true,
+  "training_hyperparameters_changed": false,
+  "training_complete": false,
+  "paid_API_calls": 0,
+  "final_test_accessed": false
+}

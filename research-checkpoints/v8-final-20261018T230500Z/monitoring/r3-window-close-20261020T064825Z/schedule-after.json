@@ -1,0 +1,8 @@
+{
+  "at_UTC": "2026-10-20T06:53:51.9548048Z",
+  "state": "Ready",
+  "last_result": 0,
+  "last_run_local": "2026-10-19T23:52:52.0000000-07:00",
+  "next_run_local": "2026-10-20T00:15:15.0000000-07:00",
+  "action": "-NoProfile -NonInteractive -WindowStyle Hidden -ExecutionPolicy Bypass -File \"D:\\SLM\\FYP-experiment-control\\v8-final-20261018T230500Z\\check-hourly-r3-hidden.ps1\""
+}

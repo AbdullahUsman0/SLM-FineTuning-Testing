@@ -1,0 +1,17 @@
+{
+  "policy_tests_passed": 10,
+  "nested_isolation_probe_completed": true,
+  "initial_findings": [
+    "Windows venv redirectors allocated consoles despite a detached hidden parent.",
+    "An initial ctypes job-membership probe needed explicit 64-bit HANDLE signatures; corrected before final proof.",
+    "Even with requested CREATE_BREAKAWAY_FROM_JOB, job-membership checks remained true; absence of all job containers is NOT claimed.",
+    "Actual starter/worker/trainer Python consoles detached successfully with the opt-in startup helper.",
+    "The trainer native venv launcher retained its own visible console; its window was explicitly hidden without stopping training."
+  ],
+  "final_gates": [
+    "WMI-created root lineage verified as WmiPrvSE.exe, outside the monitoring shell process tree.",
+    "Three-level harmless probe survived starter exit and all actual Python processes reported console_window=0.",
+    "Live worker/trainer console_after=0 and fresh optimizer progress confirmed.",
+    "Original code/input/run locks and all 11 checkpoint-150 SHA256 values verified."
+  ]
+}

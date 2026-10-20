@@ -1,0 +1,25 @@
+{
+  "12376": {
+    "attached": false,
+    "console_window": 0,
+    "members": []
+  },
+  "17288": {
+    "attached": true,
+    "console_window": 1246200,
+    "members": [
+      15672,
+      17288
+    ]
+  },
+  "7796": {
+    "attached": false,
+    "console_window": 0,
+    "members": []
+  },
+  "4496": {
+    "attached": false,
+    "console_window": 0,
+    "members": []
+  }
+}

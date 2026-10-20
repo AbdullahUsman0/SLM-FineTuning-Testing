@@ -1,0 +1,54 @@
+{
+  "return_value": 0,
+  "pid": 9044,
+  "at": "2026-10-20T06:47:22.519880+00:00",
+  "capsule": "D:\\SLM\\FYP-experiment-control\\v8-final-20261018T230500Z\\isolation-probe-r6-20261020T064721873722Z.json",
+  "log": "D:\\SLM\\FYP-experiment-control\\v8-final-20261018T230500Z\\isolation-probe-r6-20261020T064721873722Z.log",
+  "command": [
+    "D:\\SLM\\FYP-environments\\v8-final-20261018T230255Z\\Scripts\\python.exe",
+    "-B",
+    "D:\\SLM\\FYP-experiment-control\\v8-final-20261018T230500Z\\probe-wmi-isolation.py",
+    "starter",
+    "D:\\SLM\\FYP-experiment-control\\v8-final-20261018T230500Z\\wmi-isolation-probe-r6-20261020T0647"
+  ],
+  "isolation": {
+    "at_UTC": "2026-10-20T06:47:22.402390+00:00",
+    "pid": 3760,
+    "parent_pid": 9044,
+    "console_window": 0,
+    "in_job": true,
+    "wmi_root_in_job": true,
+    "command": [
+      "D:\\SLM\\FYP-environments\\v8-final-20261018T230255Z\\Scripts\\python.exe",
+      "-B",
+      "D:\\SLM\\FYP-experiment-control\\v8-final-20261018T230500Z\\probe-wmi-isolation.py",
+      "starter",
+      "D:\\SLM\\FYP-experiment-control\\v8-final-20261018T230500Z\\wmi-isolation-probe-r6-20261020T0647"
+    ],
+    "capsule_sha256": "7a1958f2f427690ecc08735f62ebb41327a6a38c8eeb4a2b93d23d42dbc1b746",
+    "provider_pid": 18064,
+    "provider_name": "WmiPrvSE.exe"
+  },
+  "nested_proof": {
+    "starter": {
+      "pid": 8,
+      "parent_pid": 10268,
+      "console_window": 0,
+      "in_job": true
+    },
+    "worker": {
+      "pid": 11936,
+      "parent_pid": 10340,
+      "console_window": 0,
+      "in_job": true
+    },
+    "trainer": {
+      "pid": 17452,
+      "parent_pid": 3952,
+      "console_window": 0,
+      "in_job": true
+    }
+  },
+  "nested_completed": true,
+  "job_membership_not_assumed_absent": true
+}

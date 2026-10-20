@@ -1,0 +1,32 @@
+{
+  "files_sha256": {
+    "check-hourly-r3-hidden.ps1": "610ad2ddb6fdd398e7a47b0ab6e3fd44606b266425e74799899016cdc41715d5",
+    "checkpoint-verification.json": "d2c49128b0177cc851e8e4145c5a95142b1025aee5dd3cf5dec9c9ea54c96c95",
+    "console-parent-verification.json": "8a7b6cbcdcdeec8c4aae95852114926c111ca74fbf77a21b0d2c5f19388144b8",
+    "console-window-visibility.json": "b681aa7a62e2a89d5e1f4be25159061c5ffecc5547997ca12d25fceba3270110",
+    "followup-after.json": "3ecaafbf790899a8be7e9d924d38812bc17b623367ca9c2c6ab3c89e35070f8a",
+    "followup-before.json": "dcfa2a454d1654ce622a64469aabe0b2acba3b5b1e4284d5a4561876496d5249",
+    "followup-isolated-launch.json": "e4ab22c819b52cc95105a351c12d86ba2ca24c31b1618100042dbff364f5ae95",
+    "hourly-last-check-r3.json": "536d412d84d1ff859e6060dfa2dd4606c6f84684cd9c8eff5e1604bef59ee2ff",
+    "hourly-watchdog-config-r3.json": "1e36249a8463d88528fbbd8977795eb6f802ebfbd91df4857529d1eb39d62ae6",
+    "hourly-watchdog-r3.py": "3ada3d9b5accd25105e827ddc9be01f23d07a94251da3f11e7d6c1e17ff39577",
+    "idle-followup-before-replacement.json": "340440227dc594724c29a311e8ea78974240c31ba09a5ddaf4eae750a183131a",
+    "isolated-launch.json": "36a548fbe72a053780c6cb06130d5841a7be27b626c2585aea35a6858909ff43",
+    "live-resume-confirmation.json": "d9b679407e6d72857354535f5650e6f52719ec1cf0b4c7bbb15a904026423525",
+    "probe-wmi-isolation.py": "98fb72928392f2ce7e1003c366a1e085c102cd7bce9d0de42d33c4d85056dcf9",
+    "README.md": "dabbad0f8eb335c0c88b94197b61a6f573d1553de0d13fbd40730e4edd2ec30a",
+    "schedule-after.json": "311a1a383d675b81dccaae3da79ab107d7c15d752e5c9c7c06a30f31302c192e",
+    "test-findings.json": "d3ef806bab9725d4b97faee2652053779f629c6123edf4c89736401e4d123a6c",
+    "test_hourly_watchdog_r3.py": "02d2524569818a111adc109bd9c717882a4aea11ca6dc491ee1619c798fe2e20",
+    "tests.txt": "8a746073ac89e05297b51725edce1762ec50222f1181f7da29bd1426a126d409",
+    "training-abort-tail.log.gz": "e047ef33e33dcd6e0f321537143c271ca0eb99c00ddadad3b08fbc3a903063c7",
+    "windows-console-isolation/sitecustomize-v1.py": "805b594d34a3ad6e6aaae896b9d0e5968819e8e725a90196526a0adb10dade22",
+    "windows-console-isolation/sitecustomize.py": "5d7761e8eb87ed0cdd54ab8a6a7d59b0be04a26d25f3c1fb2c8b0e66b0aad3b7",
+    "wmi-isolation-config.json": "16de32048a8ec153221639d174c8174f6d17330b6429bdec807065a1559b29be",
+    "wmi-isolation-verification-r6.json": "0adf608d037d7c713f410b274c908109679e0fd4553d801b493bc5976a61a487",
+    "wmi-job.py": "5e9d32fdc810f9d092b1682b0fda8c4e17938a3e7ed1e48fa4d1df278fe1c591",
+    "wmi-launch.py": "7bc6420ca3a962649cae4aa5821f97c7622c346e3fc92e545be44539a4fa08ab",
+    "worker-before.json": "d0cc58d173466089b10b7e6aa2c6ee52d8655bb675053cff5d17dfb5a81d31b7"
+  },
+  "credentials_or_model_weights_included": false
+}

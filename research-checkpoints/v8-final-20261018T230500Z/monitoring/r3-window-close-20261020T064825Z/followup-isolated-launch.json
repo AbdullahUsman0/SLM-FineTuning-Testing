@@ -1,0 +1,34 @@
+{
+  "return_value": 0,
+  "pid": 6736,
+  "at": "2026-10-20T06:49:34.331017+00:00",
+  "capsule": "D:\\SLM\\FYP-experiment-control\\v8-final-20261018T230500Z\\isolated-followup-20261020T064933876308Z.json",
+  "log": "D:\\SLM\\FYP-experiment-control\\v8-final-20261018T230500Z\\isolated-followup-20261020T064933876308Z.log",
+  "command": [
+    "D:\\SLM\\FYP-environments\\v8-final-20261018T230255Z\\Scripts\\python.exe",
+    "-B",
+    "-u",
+    "D:\\SLM\\FYP-experiment-control\\v8-final-20261018T230500Z\\followup-r4.py",
+    "--config",
+    "D:\\SLM\\FYP-experiment-control\\v8-final-20261018T230500Z\\workflow-config-r4.json"
+  ],
+  "isolation": {
+    "at_UTC": "2026-10-20T06:49:34.229414+00:00",
+    "pid": 4232,
+    "parent_pid": 6736,
+    "console_window": 0,
+    "in_job": true,
+    "wmi_root_in_job": true,
+    "command": [
+      "D:\\SLM\\FYP-environments\\v8-final-20261018T230255Z\\Scripts\\python.exe",
+      "-B",
+      "-u",
+      "D:\\SLM\\FYP-experiment-control\\v8-final-20261018T230500Z\\followup-r4.py",
+      "--config",
+      "D:\\SLM\\FYP-experiment-control\\v8-final-20261018T230500Z\\workflow-config-r4.json"
+    ],
+    "capsule_sha256": "e28a825e25bcc0e7c20251d2b4bfa473e0d8f454e01fe187ebca0bd0543fea50",
+    "provider_pid": 18064,
+    "provider_name": "WmiPrvSE.exe"
+  }
+}
