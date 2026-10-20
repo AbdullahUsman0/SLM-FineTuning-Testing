@@ -1,0 +1,19 @@
+{
+  "at_UTC": "2026-10-20T06:16:56.525638+00:00",
+  "path": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full\\checkpoint-130",
+  "global_step": 130,
+  "run_fingerprint": "541805a394f01f67a3b01e4bf5ca5bf623466c0e8e002a7eeb3a3510c46dc47a",
+  "artifacts_sha256_independently_verified": {
+    "README.md": "4351e9c7eeac74e8c222cc76e0cfbccd749a29ea3dc1075d0fdc71382030392f",
+    "adapter_config.json": "79b2959668dcccc0be1e62e33727e5c9d0b9efc8b7fdb5dfc34c86f704de4d32",
+    "adapter_model.safetensors": "10132cf5f718ac978303073617db82fdc84bf26967e28f1c1bed07adb7b744ee",
+    "chat_template.jinja": "306abaf09cf3a6c0d14128373a72925bda3d7de2616a5642804d9768c7d2f78c",
+    "optimizer.pt": "8ecdc622f2d46dd962c0db7f16d8153c9cfb60c6f4a7d5eb67963ea176dfe690",
+    "rng_state.pth": "369d22515db6becbbb0edd89f387199dff3ff60e9aa436229fd6751a62a42b77",
+    "scheduler.pt": "65d0827e5c1e633eaa5b282243cb5ca8ee19444f2da654018d0e93d71adf0466",
+    "tokenizer.json": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+    "tokenizer_config.json": "7b0a126e2dd5f59c9d219ef18d34485cbd91d887d24620bd9b26e0c83f965b40",
+    "trainer_state.json": "3719e9a5fc2f34cdc3fd50d97d8d76b5c029ef07294ba6118cd0388cb112bc98",
+    "training_args.bin": "71ff3208c0fa72b05be19d7daa1f6ea49e079c4f9204aa690c3c3f8b3016c465"
+  }
+}

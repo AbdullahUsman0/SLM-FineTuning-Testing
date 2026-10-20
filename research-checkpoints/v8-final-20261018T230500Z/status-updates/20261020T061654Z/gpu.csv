@@ -1,0 +1,2 @@
+name, fan.speed [%], temperature.gpu, utilization.gpu [%], power.draw [W], power.limit [W], clocks.current.sm [MHz]
+NVIDIA RTX A4000, 97 %, 94, 98 %, 114.75 W, 140.00 W, 900 MHz

@@ -1,0 +1,22 @@
+[
+    {
+        "at_local":  "2026-10-19T23:00:19.0911503-07:00",
+        "id":  12,
+        "provider":  "Microsoft-Windows-Kernel-General"
+    },
+    {
+        "at_local":  "2026-10-19T00:25:21.1814602-07:00",
+        "id":  13,
+        "provider":  "Microsoft-Windows-Kernel-General"
+    },
+    {
+        "at_local":  "2026-10-19T23:00:25.9873833-07:00",
+        "id":  6005,
+        "provider":  "EventLog"
+    },
+    {
+        "at_local":  "2026-10-19T00:25:15.8490649-07:00",
+        "id":  6006,
+        "provider":  "EventLog"
+    }
+]

@@ -1,0 +1,49 @@
+{
+  "at_UTC": "2026-10-20T06:16:56.527659+00:00",
+  "run": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z",
+  "expected_steps": 2234,
+  "progress": {
+    "last_output_age_seconds": 7.5,
+    "last_console_optimizer_step": 138,
+    "resume_checkpoint_step": 130,
+    "new_steps_observed_after_resume": true
+  },
+  "verified_checkpoint": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full\\checkpoint-130",
+  "verified_checkpoint_step": 130,
+  "checkpoint_directories_retained": 13,
+  "worker_pids": [
+    14064,
+    14080
+  ],
+  "trainer_pids": [
+    14264,
+    14280
+  ],
+  "followup_pids": [
+    12468,
+    13860
+  ],
+  "followup": {
+    "PID": 12468,
+    "heartbeat_UTC": "2026-10-20T06:16:33.703252+00:00",
+    "new_paid_API_calls": 0,
+    "status": "waiting_for_supplied_worker",
+    "worker": {
+      "at": "2026-10-20T06:01:16.461581+00:00",
+      "expected_optimizer_steps": 2234,
+      "phase": "training",
+      "pid": 14080,
+      "status": "running"
+    }
+  },
+  "source_and_input_locks_verified": true,
+  "training_settings_changed": false,
+  "new_training_launches_by_this_check": 0,
+  "paid_API_calls": 0,
+  "final_test_accessed": false,
+  "training_complete": false,
+  "final_adapter_exists": false,
+  "development_summary_exists": false,
+  "gpu_thermal_throttling_observed": true,
+  "shutdown_cause_attributed_to_heat": false
+}

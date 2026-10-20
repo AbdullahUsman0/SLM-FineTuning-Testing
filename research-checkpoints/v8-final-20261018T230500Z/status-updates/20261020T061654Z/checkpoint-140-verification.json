@@ -1,0 +1,28 @@
+{
+  "at_UTC": "2026-10-20T06:19:38.663798+00:00",
+  "checkpoint": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full\\checkpoint-140",
+  "global_step": 140,
+  "run_fingerprint": "541805a394f01f67a3b01e4bf5ca5bf623466c0e8e002a7eeb3a3510c46dc47a",
+  "verified_sha256": {
+    "README.md": "4351e9c7eeac74e8c222cc76e0cfbccd749a29ea3dc1075d0fdc71382030392f",
+    "adapter_config.json": "65226cd803bcc4a861d45b65b80d0625f34bcce90388dc37a8846f0207785bb3",
+    "adapter_model.safetensors": "48d0b7ae8427a2f538b68e1255778cf2865b42870fd96af2cf03a45f94750e86",
+    "chat_template.jinja": "306abaf09cf3a6c0d14128373a72925bda3d7de2616a5642804d9768c7d2f78c",
+    "optimizer.pt": "19ae673146aa70b782bb7f0181f80b4c8a08a57eab21132de44387560e8176b8",
+    "rng_state.pth": "2397a5416849e9017278607471aa6d138d0fa96129082850fa82d32c13de0a8e",
+    "scheduler.pt": "e2748806d32b017350468c398db9323295301c6221bb67dae3baba26b90981a3",
+    "tokenizer.json": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+    "tokenizer_config.json": "7b0a126e2dd5f59c9d219ef18d34485cbd91d887d24620bd9b26e0c83f965b40",
+    "trainer_state.json": "8c48f4420af190bdf3a0a3a9c53df817bb21aca3bee2d7d3210064c789504e46",
+    "training_args.bin": "71ff3208c0fa72b05be19d7daa1f6ea49e079c4f9204aa690c3c3f8b3016c465"
+  },
+  "progress": {
+    "last_output_age_seconds": 17.8,
+    "last_console_optimizer_step": 140,
+    "resume_checkpoint_step": 130,
+    "new_steps_observed_after_resume": true
+  },
+  "source_and_input_locks_verified": true,
+  "settings_changed": false,
+  "checkpoint_directories_retained": 14
+}

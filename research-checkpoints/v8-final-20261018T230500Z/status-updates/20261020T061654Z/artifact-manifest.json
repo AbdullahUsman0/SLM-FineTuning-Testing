@@ -1,0 +1,13 @@
+{
+  "files_sha256": {
+    "checkpoint-140-verification.json": "bcc78f8924b5b422bfcfab950022bf6df4ee57383fb3d147b31013673f84032f",
+    "checkpoint-verification.json": "cae4660674d8c47374bed6f9a7cdfd9295cb4e048d75725f18951f5491129af0",
+    "gpu-thermal-status.txt": "271baa637f8a539966fd5667b72a7bfb3f4ff4101f920451183e87e0b0095a1c",
+    "gpu.csv": "4a4d02c8ca654a292a60ec2b8464f72351f6e56b24016e99aa9a0160a3ccb3a7",
+    "latest-hourly-check.json": "84e678b44363c4f183cbe69dac9331fe8f9e9a47834cc35bb1f9eb1ca7db7208",
+    "machine-and-schedule.json": "cdae16f43a46903b479b69a6f09b9e375502fe2e410b8392cddc4cd282735f87",
+    "README.md": "56338fbb46906db89d9ed890108afa30eb38f67140ef854385d690eeddff66c7",
+    "shutdown-and-boot-timeline.json": "0821f43cb737a7d6b0fb480fc26052b04c715da6550441cf086b971303b602e5",
+    "status.json": "10c851462797f31845238066e93b97daacddf70fb41564a67d652698bacd0580"
+  }
+}
