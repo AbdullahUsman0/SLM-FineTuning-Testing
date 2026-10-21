@@ -1,0 +1,122 @@
+﻿[
+    {
+        "at_local":  "2026-10-21T08:03:27.7845191-07:00",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Id":  37,
+        "Message":  "The speed of processor 23 in group 0 is being limited by system firmware. The processor has been in this reduced performance state for 71 seconds since the last report."
+    },
+    {
+        "at_local":  "2026-10-21T08:03:27.7687929-07:00",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Id":  37,
+        "Message":  "The speed of processor 22 in group 0 is being limited by system firmware. The processor has been in this reduced performance state for 71 seconds since the last report."
+    },
+    {
+        "at_local":  "2026-10-21T08:03:27.7686702-07:00",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Id":  37,
+        "Message":  "The speed of processor 21 in group 0 is being limited by system firmware. The processor has been in this reduced performance state for 71 seconds since the last report."
+    },
+    {
+        "at_local":  "2026-10-21T08:03:27.7686327-07:00",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Id":  37,
+        "Message":  "The speed of processor 20 in group 0 is being limited by system firmware. The processor has been in this reduced performance state for 71 seconds since the last report."
+    },
+    {
+        "at_local":  "2026-10-21T08:03:27.7536175-07:00",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Id":  37,
+        "Message":  "The speed of processor 17 in group 0 is being limited by system firmware. The processor has been in this reduced performance state for 71 seconds since the last report."
+    },
+    {
+        "at_local":  "2026-10-21T08:03:27.7535213-07:00",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Id":  37,
+        "Message":  "The speed of processor 16 in group 0 is being limited by system firmware. The processor has been in this reduced performance state for 71 seconds since the last report."
+    },
+    {
+        "at_local":  "2026-10-21T08:03:27.7534874-07:00",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Id":  37,
+        "Message":  "The speed of processor 18 in group 0 is being limited by system firmware. The processor has been in this reduced performance state for 71 seconds since the last report."
+    },
+    {
+        "at_local":  "2026-10-21T08:03:27.7534415-07:00",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Id":  37,
+        "Message":  "The speed of processor 19 in group 0 is being limited by system firmware. The processor has been in this reduced performance state for 71 seconds since the last report."
+    },
+    {
+        "at_local":  "2026-10-21T08:02:21.8896605-07:00",
+        "ProviderName":  "Microsoft-Windows-WHEA-Logger",
+        "Id":  17,
+        "Message":  "A corrected hardware error has occurred.\r\n\r\nComponent: PCI Express Legacy Endpoint\r\nError Source: Advanced Error Reporting (PCI Express)\r\n\r\nPrimary Bus:Device:Function: 0x1:0x0:0x0\r\nSecondary Bus:Device:Function: 0x0:0x0:0x0\r\nPrimary Device Name:PCI\\VEN_10DE\u0026DEV_24B0\u0026SUBSYS_14AD1028\u0026REV_A1\r\nSecondary Device Name:"
+    },
+    {
+        "at_local":  "2026-10-21T08:02:21.8630977-07:00",
+        "ProviderName":  "Microsoft-Windows-WHEA-Logger",
+        "Id":  17,
+        "Message":  "A corrected hardware error has occurred.\r\n\r\nComponent: PCI Express Endpoint\r\nError Source: Advanced Error Reporting (PCI Express)\r\n\r\nPrimary Bus:Device:Function: 0x1:0x0:0x1\r\nSecondary Bus:Device:Function: 0x0:0x0:0x0\r\nPrimary Device Name:PCI\\VEN_10DE\u0026DEV_228B\u0026SUBSYS_14AD1028\u0026REV_A1\r\nSecondary Device Name:"
+    },
+    {
+        "at_local":  "2026-10-21T08:02:21.8549310-07:00",
+        "ProviderName":  "Microsoft-Windows-WHEA-Logger",
+        "Id":  17,
+        "Message":  "A corrected hardware error has occurred.\r\n\r\nComponent: PCI Express Legacy Endpoint\r\nError Source: Advanced Error Reporting (PCI Express)\r\n\r\nPrimary Bus:Device:Function: 0x1:0x0:0x0\r\nSecondary Bus:Device:Function: 0x0:0x0:0x0\r\nPrimary Device Name:PCI\\VEN_10DE\u0026DEV_24B0\u0026SUBSYS_14AD1028\u0026REV_A1\r\nSecondary Device Name:"
+    },
+    {
+        "at_local":  "2026-10-21T08:02:16.6198300-07:00",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Id":  55,
+        "Message":  "Processor 23 in group 0 exposes the following power management capabilities:\r\n\r\nIdle state type: Micro Power Engine Plugin (11 state(s))\r\n\r\nPerformance state type: ACPI Collaborative Processor Performance Control\r\nNominal Frequency (MHz): 2100\r\nMaximum performance percentage: 195\r\nMinimum performance percentage: 66\r\nMinimum throttle percentage: 4"
+    },
+    {
+        "at_local":  "2026-10-21T08:02:16.6100529-07:00",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Id":  55,
+        "Message":  "Processor 22 in group 0 exposes the following power management capabilities:\r\n\r\nIdle state type: Micro Power Engine Plugin (11 state(s))\r\n\r\nPerformance state type: ACPI Collaborative Processor Performance Control\r\nNominal Frequency (MHz): 2100\r\nMaximum performance percentage: 195\r\nMinimum performance percentage: 71\r\nMinimum throttle percentage: 4"
+    },
+    {
+        "at_local":  "2026-10-21T08:02:16.6074881-07:00",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Id":  55,
+        "Message":  "Processor 21 in group 0 exposes the following power management capabilities:\r\n\r\nIdle state type: Micro Power Engine Plugin (11 state(s))\r\n\r\nPerformance state type: ACPI Collaborative Processor Performance Control\r\nNominal Frequency (MHz): 2100\r\nMaximum performance percentage: 195\r\nMinimum performance percentage: 66\r\nMinimum throttle percentage: 4"
+    },
+    {
+        "at_local":  "2026-10-21T08:02:16.6051632-07:00",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Id":  55,
+        "Message":  "Processor 20 in group 0 exposes the following power management capabilities:\r\n\r\nIdle state type: Micro Power Engine Plugin (11 state(s))\r\n\r\nPerformance state type: ACPI Collaborative Processor Performance Control\r\nNominal Frequency (MHz): 2100\r\nMaximum performance percentage: 195\r\nMinimum performance percentage: 66\r\nMinimum throttle percentage: 4"
+    },
+    {
+        "at_local":  "2026-10-21T08:02:16.6024977-07:00",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Id":  55,
+        "Message":  "Processor 19 in group 0 exposes the following power management capabilities:\r\n\r\nIdle state type: Micro Power Engine Plugin (11 state(s))\r\n\r\nPerformance state type: ACPI Collaborative Processor Performance Control\r\nNominal Frequency (MHz): 2100\r\nMaximum performance percentage: 195\r\nMinimum performance percentage: 66\r\nMinimum throttle percentage: 4"
+    },
+    {
+        "at_local":  "2026-10-21T08:02:16.6001342-07:00",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Id":  55,
+        "Message":  "Processor 18 in group 0 exposes the following power management capabilities:\r\n\r\nIdle state type: Micro Power Engine Plugin (11 state(s))\r\n\r\nPerformance state type: ACPI Collaborative Processor Performance Control\r\nNominal Frequency (MHz): 2100\r\nMaximum performance percentage: 195\r\nMinimum performance percentage: 66\r\nMinimum throttle percentage: 4"
+    },
+    {
+        "at_local":  "2026-10-21T08:02:16.5977828-07:00",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Id":  55,
+        "Message":  "Processor 17 in group 0 exposes the following power management capabilities:\r\n\r\nIdle state type: Micro Power Engine Plugin (11 state(s))\r\n\r\nPerformance state type: ACPI Collaborative Processor Performance Control\r\nNominal Frequency (MHz): 2100\r\nMaximum performance percentage: 195\r\nMinimum performance percentage: 66\r\nMinimum throttle percentage: 4"
+    },
+    {
+        "at_local":  "2026-10-21T08:02:16.5954016-07:00",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Id":  55,
+        "Message":  "Processor 16 in group 0 exposes the following power management capabilities:\r\n\r\nIdle state type: Micro Power Engine Plugin (11 state(s))\r\n\r\nPerformance state type: ACPI Collaborative Processor Performance Control\r\nNominal Frequency (MHz): 2100\r\nMaximum performance percentage: 195\r\nMinimum performance percentage: 66\r\nMinimum throttle percentage: 4"
+    },
+    {
+        "at_local":  "2026-10-21T08:02:16.5928789-07:00",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Id":  55,
+        "Message":  "Processor 15 in group 0 exposes the following power management capabilities:\r\n\r\nIdle state type: Micro Power Engine Plugin (11 state(s))\r\n\r\nPerformance state type: ACPI Collaborative Processor Performance Control\r\nNominal Frequency (MHz): 2100\r\nMaximum performance percentage: 250\r\nMinimum performance percentage: 69\r\nMinimum throttle percentage: 3"
+    }
+]

@@ -1,0 +1,15 @@
+# Interrupted process: verified checkpoint-960 continuation
+
+Windows booted at 2026-10-21 08:02:13 PDT. System event 41 at 08:02:15 records an unclean restart. Training's most recent completed optimizer step before this restart was 965; the latest complete, independently hash-verified checkpoint was 960. The interrupted process was absent at inspection. Its status file still said running with an old timestamp, so that stale file was not treated as evidence of a live trainer. The companion's last heartbeat was 08:01:07 PDT. No new trainer exception was recorded for this interruption. Older console tracebacks belong to earlier interruptions and are not attributed to this reboot. The reboot's underlying cause remains unresolved.
+
+This recovery resumes the original checkpoint-960 state and must replay five previously computed, unsaved optimizer steps (961-965). A new step 961 after this resume proves that the restored trainer advances; recovery beyond the previous high-water mark of 965 requires reaching step 966. Those two milestones are distinct. No claim is made that observing replayed step 961 increases the previous maximum completed progress.
+
+After boot, Windows also logged corrected PCIe errors for NVIDIA device IDs 24B0 and 228B, and firmware-imposed CPU speed limiting. Relevant events are saved in hardware-events.json. Their occurrence does not establish the reboot's cause; no hardware repair or power-setting change is claimed.
+
+The hourly monitor had used both automatic recovery attempts in its rolling 24-hour window and correctly preserved the run at its existing cap. After reviewing the logs, the user's standing instruction, "continue training with previous setup", was followed through a separately recorded, manually reviewed resume. The retry cap and recovery history were not reset or increased.
+
+All 11 checkpoint artifact hashes, the original run fingerprint, and frozen source/input locks were verified before resuming the SAME run from checkpoint 960. The original supplied background worker and existing console-isolated launcher were reused. The power limit remained 140W. Training settings, dataset, model revision, epoch count and optimizer step counter were not changed. Fresh optimizer progress beyond the resumed checkpoint is recorded in resume-confirmation.json. Initial startup output showing zero is not treated as a new run or as verified progress.
+
+The followup companion is waiting for training completion and will then perform the existing local development workflow. The hourly Windows task remains enabled. Current operation does not establish that the underlying interruption or system reliability issue is resolved. No model quality or winner is claimed: final adapter and measured development results remain pending.
+
+Full logs, adapters and optimizer checkpoints remain outside Git. This snapshot includes metadata and compressed log excerpts only, with no base weights, optimizer states, credentials, caches, final-test labels or paid API calls. This auditor does not change the training or monitor source.
