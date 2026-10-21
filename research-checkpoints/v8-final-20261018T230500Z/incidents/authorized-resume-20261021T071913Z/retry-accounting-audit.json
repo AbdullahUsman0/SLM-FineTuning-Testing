@@ -1,0 +1,11 @@
+{
+  "at_UTC": "2026-10-21T07:21:46.152272+00:00",
+  "legacy_count_all_recent_attempts": 3,
+  "fixed_count_automatic_attempts": 0,
+  "maximum_automatic_recoveries_per_24h": 2,
+  "explicit_manual_attempts_excluded": 3,
+  "history_SHA256_before": "3479ebf9c9b31b417027b3d51ed7fc8c5e901a036b1b8a6b413a5c392824d536",
+  "history_SHA256_after": "3479ebf9c9b31b417027b3d51ed7fc8c5e901a036b1b8a6b413a5c392824d536",
+  "history_preserved_byte_for_byte": true,
+  "training_settings_changed": false
+}

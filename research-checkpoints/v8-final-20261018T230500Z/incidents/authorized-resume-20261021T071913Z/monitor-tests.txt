@@ -1,0 +1,19 @@
+test_completed_worker_does_not_duplicate_v6_diagnostic (__main__.RecoveryPolicy.test_completed_worker_does_not_duplicate_v6_diagnostic) ... ok
+test_dead_worker_recovers_same_phase (__main__.RecoveryPolicy.test_dead_worker_recovers_same_phase) ... ok
+test_finished_stops (__main__.RecoveryPolicy.test_finished_stops) ... ok
+test_full_check_resumes_after_manual_attempts_but_blocks_after_two_automatic (__main__.RecoveryPolicy.test_full_check_resumes_after_manual_attempts_but_blocks_after_two_automatic) ... ok
+test_hidden_launcher_survives_parent_and_quotes_paths (__main__.RecoveryPolicy.test_hidden_launcher_survives_parent_and_quotes_paths) ... ok
+test_live_worker_never_restarts (__main__.RecoveryPolicy.test_live_worker_never_restarts) ... ok
+test_manual_recoveries_do_not_consume_automatic_slots (__main__.RecoveryPolicy.test_manual_recoveries_do_not_consume_automatic_slots) ... ok
+test_no_checkpoint_refuses_restart_from_zero (__main__.RecoveryPolicy.test_no_checkpoint_refuses_restart_from_zero) ... ok
+test_orphan_trainer_prevents_restart (__main__.RecoveryPolicy.test_orphan_trainer_prevents_restart) ... ok
+test_pid_alone_is_not_process_identity (__main__.RecoveryPolicy.test_pid_alone_is_not_process_identity) ... ok
+test_resume_does_not_report_old_unsaved_steps_as_current (__main__.RecoveryPolicy.test_resume_does_not_report_old_unsaved_steps_as_current) ... ok
+test_rolling_24_hour_boundary_and_clock_rollback (__main__.RecoveryPolicy.test_rolling_24_hour_boundary_and_clock_rollback) ... ok
+test_selects_verified_checkpoint_skips_corrupt_newer (__main__.RecoveryPolicy.test_selects_verified_checkpoint_skips_corrupt_newer) ... ok
+test_unlabelled_and_conflicting_entries_remain_conservatively_counted (__main__.RecoveryPolicy.test_unlabelled_and_conflicting_entries_remain_conservatively_counted) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 4.716s
+
+OK

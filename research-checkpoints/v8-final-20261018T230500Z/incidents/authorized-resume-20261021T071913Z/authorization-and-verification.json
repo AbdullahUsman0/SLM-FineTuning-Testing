@@ -1,0 +1,33 @@
+{
+  "at_UTC": "2026-10-21T07:19:13.580239+00:00",
+  "user_instruction": "continue training with previous setup",
+  "run": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z",
+  "checkpoint": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full\\checkpoint-780",
+  "checkpoint_step": 780,
+  "verified_sha256": {
+    "README.md": "4351e9c7eeac74e8c222cc76e0cfbccd749a29ea3dc1075d0fdc71382030392f",
+    "adapter_config.json": "e68ad0ecf0cb2a267e3b634e2869f9cdc870743a43b579dae9401af2fe0944d2",
+    "adapter_model.safetensors": "08b07d7b1993a18420a1e0fa4ca41f69d249f07cf564ef21460475e3e1bf18cf",
+    "chat_template.jinja": "306abaf09cf3a6c0d14128373a72925bda3d7de2616a5642804d9768c7d2f78c",
+    "optimizer.pt": "7cc793a609ff9b30f530be4faa773cb5079e1ce093104cc4b466b01f3d6467a5",
+    "rng_state.pth": "1a24f3f9770b926c59b19f177beb94e5783c81a72b8bdbdb14a17cf596032e3a",
+    "scheduler.pt": "f95ed22acc40a5bf7e98fc1fd2f58136aed126145d311ab74da17321e98b4d05",
+    "tokenizer.json": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+    "tokenizer_config.json": "7b0a126e2dd5f59c9d219ef18d34485cbd91d887d24620bd9b26e0c83f965b40",
+    "trainer_state.json": "1ed6251f75ba5d0828b2b85cf53eeb2c329ba8d03d66b30b4caa71900488bbb6",
+    "training_args.bin": "71ff3208c0fa72b05be19d7daa1f6ea49e079c4f9204aa690c3c3f8b3016c465"
+  },
+  "run_fingerprint": "541805a394f01f67a3b01e4bf5ca5bf623466c0e8e002a7eeb3a3510c46dc47a",
+  "progress_before": {
+    "last_output_age_seconds": 29733.5,
+    "last_console_optimizer_step": 786,
+    "resume_checkpoint_step": 550,
+    "new_steps_observed_after_resume": true
+  },
+  "GPU_limit_W": 140.0,
+  "GPU_settings_changed": false,
+  "training_settings_changed": false,
+  "source_input_locks_verified": true,
+  "rejected_checkpoints": [],
+  "automatic_retry_cap_changed": false
+}

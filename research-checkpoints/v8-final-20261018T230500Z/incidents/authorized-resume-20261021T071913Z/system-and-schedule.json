@@ -1,0 +1,25 @@
+{
+  "at_UTC": "2026-10-21T07:28:22.3650518Z",
+  "boot_local": "2026-10-20T16:50:10.5000000-07:00",
+  "events": [
+    {
+      "at_local": "2026-10-20T16:50:13.3400534-07:00",
+      "id": 41,
+      "message": "The system has rebooted without cleanly shutting down first. This error could be caused if the system stopped responding, crashed, or lost power unexpectedly."
+    },
+    {
+      "at_local": "2026-10-20T16:50:18.4127901-07:00",
+      "id": 6008,
+      "message": "The previous system shutdown at 3:41:26 PM on \u00e2\u20ac\u017d10/\u00e2\u20ac\u017d20/\u00e2\u20ac\u017d2026 was unexpected."
+    },
+    {
+      "at_local": "2026-10-20T16:50:11.1053848-07:00",
+      "id": 12,
+      "message": "The operating system started at system time \u00e2\u20ac\u017d2026\u00e2\u20ac\u017d-\u00e2\u20ac\u017d10\u00e2\u20ac\u017d-\u00e2\u20ac\u017d20T23:50:10.500000000Z."
+    }
+  ],
+  "state": "Ready",
+  "last_task_result": 0,
+  "next_check_local": "2026-10-21T01:15:15.0000000-07:00",
+  "action": "-NoProfile -NonInteractive -WindowStyle Hidden -ExecutionPolicy Bypass -File \"D:\\SLM\\FYP-experiment-control\\v8-final-20261018T230500Z\\check-hourly-r4-hidden.ps1\""
+}

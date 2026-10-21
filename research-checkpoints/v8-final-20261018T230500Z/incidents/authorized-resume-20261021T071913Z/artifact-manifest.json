@@ -1,0 +1,24 @@
+{
+  "files_sha256": {
+    "authorization-and-verification.json": "f4b01674f6b35581868a797fd24f2f1bcfce5cac5bd9a6309896003c3dddeb4b",
+    "check-hourly-r4-hidden.ps1": "42ab156ea6993f17f7aabb336ed67b626a3c851c11c21d4e257cd82ec3194f1b",
+    "console-isolation-proofs.json": "8a0c96f027e64052f9106b7f828a6d4934a2625683ada02b9fee64ac296c3bd7",
+    "followup-after.json": "504a5b696f977dd561dd543213fb98e5d0e1469a8018d0fa83fae1130f90a4aa",
+    "followup-before.json": "e3b0a7ac9869336669e4fd4c09d2c6ec3c5035ad2c6c777dcb0cffdfbe4285eb",
+    "followup-launch.json": "51194da2d3a9f8917fc2b71fd51e8752aea361c77ee7b33afe40ec351261e8a9",
+    "gpu.csv": "cb6b754a716a289133846002b0f15bf3caf8fe174a2bb647bcde212c8496a909",
+    "hourly-watchdog-config-r4.json": "d2d243ab8ab885b9d9ba5e08ab82ed8bba05ccfe706d35f0e4ba590370e64fb5",
+    "hourly-watchdog-r4.py": "431097ee4fb5659693b00aad0dd9e44e59562309724d3a2302a5850dc297600a",
+    "monitor-after.json": "7558833d59cc042a5d4999ccd87d6135f947ee437eaae02b961496706606795b",
+    "monitor-before.json": "ada4af81063384f0aff120ce6feb83dd1793564602fbd376fbe1a90853062c00",
+    "monitor-tests.txt": "56e186def975a352980ea939ce88f2d7f371def57836a7666f445d9bba393ea0",
+    "README.md": "a8b477175c81b9600b4ab3b3de4e42e26a3c6794153b9b508fa0d23d3a76aa1f",
+    "resume-confirmation.json": "470663b9426c2e2ce1cac1ac09493cdd9768ab9b3ada2df605d62f93bf57342b",
+    "retry-accounting-audit.json": "cf1ccfeb78b62ecae26ab217e17b1e13b55cbf535d5fb2f0d47cc1a235b6a1d6",
+    "system-and-schedule.json": "ab552c5b4803f454f04e2a52408147c0e6e8ca6ab713bce04ed14599ef54a6ff",
+    "test_hourly_watchdog_r4.py": "634803cc1b23b4bde5c41e10c0435dc46e47536ff0bbd99280511a684aabdea4",
+    "wmi-isolation-config.json": "16de32048a8ec153221639d174c8174f6d17330b6429bdec807065a1559b29be",
+    "worker-before.json": "73c296d0f002c4496497952ee1c7cd2cf375228352e04ff4b080ad50d6e13662",
+    "worker-launch.json": "216d1940abec3c9ac56730a979ba8834eab9ff72e4e546a59d67dab5940b7c3f"
+  }
+}

@@ -1,0 +1,17 @@
+{
+    "repo":  "D:/SLM/SLM-FineTuning-Testing",
+    "run":  "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z",
+    "control":  "D:\\SLM\\FYP-experiment-control\\v8-final-20261018T230500Z",
+    "python":  "D:\\SLM\\FYP-environments\\v8-final-20261018T230255Z\\Scripts\\python.exe",
+    "followup_source":  "D:\\SLM\\FYP-experiment-control\\v8-final-20261018T230500Z\\followup-r4.py",
+    "followup_config":  "D:\\SLM\\FYP-experiment-control\\v8-final-20261018T230500Z\\workflow-config-r4.json",
+    "run_fingerprint":  "541805a394f01f67a3b01e4bf5ca5bf623466c0e8e002a7eeb3a3510c46dc47a",
+    "watchdog_sha256":  "431097ee4fb5659693b00aad0dd9e44e59562309724d3a2302a5850dc297600a",
+    "interval_seconds":  3600,
+    "stall_seconds":  3600,
+    "max_recoveries_per_24h":  2,
+    "task_name":  "SLM-v8-final-hourly-20261018T230500Z",
+    "wmi_job_sha256":  "5e9d32fdc810f9d092b1682b0fda8c4e17938a3e7ed1e48fa4d1df278fe1c591",
+    "console_hook_sha256":  "5d7761e8eb87ed0cdd54ab8a6a7d59b0be04a26d25f3c1fb2c8b0e66b0aad3b7",
+    "wmi_launch_sha256":  "7bc6420ca3a962649cae4aa5821f97c7622c346e3fc92e545be44539a4fa08ab"
+}
