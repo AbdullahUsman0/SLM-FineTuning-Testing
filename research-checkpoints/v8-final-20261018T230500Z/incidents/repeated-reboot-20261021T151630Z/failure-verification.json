@@ -1,0 +1,36 @@
+{
+  "at_UTC": "2026-10-21T15:20:09.849357+00:00",
+  "run": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z",
+  "status": "stopped_after_unclean_system_restart",
+  "workers": [],
+  "trainers": [],
+  "progress": {
+    "last_output_age_seconds": 448.3,
+    "last_console_optimizer_step": 962,
+    "resume_checkpoint_step": 960,
+    "new_steps_observed_after_resume": true
+  },
+  "previous_observed_high_watermark": 965,
+  "latest_verified_checkpoint": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full\\checkpoint-960",
+  "verified_step": 960,
+  "verified_sha256": {
+    "README.md": "4351e9c7eeac74e8c222cc76e0cfbccd749a29ea3dc1075d0fdc71382030392f",
+    "adapter_config.json": "45d2225b483293158da6e4802bc9cf4150eb8e32faf9b4aa47e57f68a5fe8e7d",
+    "adapter_model.safetensors": "e759327a7c1527a525bb1223b33fd45399db20e4760f1153148658e3c0814f31",
+    "chat_template.jinja": "306abaf09cf3a6c0d14128373a72925bda3d7de2616a5642804d9768c7d2f78c",
+    "optimizer.pt": "303a7fee9010d7b92bfd0c871337d66abe5ece20fa71d5aa3f585726b3b63332",
+    "rng_state.pth": "e734fba657f9d34c083e5d73609e5e3a72f00ce5258f0408bb4441c1746594bf",
+    "scheduler.pt": "dc776522fba8986299e698a42ef2d6065ca19889b81522848356227e7c07df98",
+    "tokenizer.json": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+    "tokenizer_config.json": "7b0a126e2dd5f59c9d219ef18d34485cbd91d887d24620bd9b26e0c83f965b40",
+    "trainer_state.json": "be21f0101e8ee9306b9548a4de42c3373b9bd631bd52798b5320233cd9123a35",
+    "training_args.bin": "71ff3208c0fa72b05be19d7daa1f6ea49e079c4f9204aa690c3c3f8b3016c465"
+  },
+  "run_fingerprint": "541805a394f01f67a3b01e4bf5ca5bf623466c0e8e002a7eeb3a3510c46dc47a",
+  "source_and_input_locks_verified": true,
+  "rejected_checkpoints": [],
+  "new_restart_launched": false,
+  "training_settings_changed": false,
+  "final_test_labels_accessed": false,
+  "paid_API_calls": 0
+}

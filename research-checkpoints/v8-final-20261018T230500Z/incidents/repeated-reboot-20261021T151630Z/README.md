@@ -1,0 +1,7 @@
+# Second unexpected reboot: checkpoint 960 preserved
+
+Windows booted again at 2026-10-21 08:16:30 PDT and recorded an unclean restart (event 41) at 08:16:32. This follows the earlier unclean boot at 08:02. The reviewed same-run recovery from checkpoint 960 had demonstrably replayed steps 961 and 962, but the processes were absent after the latest boot. No checkpoint newer than 960 was completed. The earlier observed high-water mark remains 965; replaying 961-962 did not exceed it.
+
+Checkpoint 960 was independently verified again, including all 11 file hashes, original run fingerprint and frozen source/input locks. No worker or trainer was alive at verification. The running values retained in worker/companion status files are stale and do not establish current operation. The monitor correctly preserved the run because its two automatic recovery attempts per rolling 24 hours were exhausted. No recovery history or retry cap was changed. No additional manual restart was launched during this inspection, following the rapid recurrence of the reboot under the unchanged setup. No power cap or training setting was changed.
+
+The system reliability problem remains unresolved. This record does not establish the reboot cause or any model quality finding. Training, final adapter, validation and development comparisons remain incomplete. Checkpoints and full logs are preserved locally; this public record includes no weights, optimizer states, credentials, caches, final labels or paid API calls.
