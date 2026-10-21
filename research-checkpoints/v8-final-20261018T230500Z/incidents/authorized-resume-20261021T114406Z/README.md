@@ -1,0 +1,11 @@
+# Interrupted process: verified checkpoint-820 continuation
+
+The prior worker reported failure at 2026-10-21T10:13:28.572446+00:00. Its console recorded trainer exit status 3221225786 (0xC000013A). The interruption source is not established. The saved training log ended with a complete, hash-verified checkpoint; no Python model exception was reported there. A Windows restart initiated by RuntimeBroker was separately recorded at 2026-10-21 03:35 PDT, after the 03:13 PDT trainer failure. This later restart does not establish the cause of the earlier failure. System events and the worker traceback excerpt are retained alongside this record.
+
+The hourly monitor had used both automatic recovery attempts in its rolling 24-hour window and correctly preserved the run at its existing cap. After reviewing the logs, the user's standing instruction, "continue training with previous setup", was followed through a separately recorded, manually reviewed resume. The retry cap and recovery history were not reset or increased.
+
+All 11 checkpoint artifact hashes, the original run fingerprint, and frozen source/input locks were verified before resuming the SAME run from checkpoint 820. The original supplied background worker and existing console-isolated launcher were reused. The power limit remained 140W. Training settings, dataset, model revision, epoch count and optimizer step counter were not changed. Fresh optimizer progress beyond the resumed checkpoint is recorded in resume-confirmation.json. Initial startup output showing zero is not treated as a new run or as verified progress.
+
+The followup companion is waiting for training completion and will then perform the existing local development workflow. The hourly Windows task remains enabled. Current operation does not establish that the underlying interruption or system reliability issue is resolved. No model quality or winner is claimed: final adapter and measured development results remain pending.
+
+Full logs, adapters and optimizer checkpoints remain outside Git. This snapshot includes metadata and compressed log excerpts only, with no base weights, optimizer states, credentials, caches, final-test labels or paid API calls. This auditor does not change the training or monitor source.

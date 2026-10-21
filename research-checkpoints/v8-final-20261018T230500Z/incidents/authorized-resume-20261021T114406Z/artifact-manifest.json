@@ -1,0 +1,21 @@
+{
+  "files_sha256": {
+    "authorization-and-verification.json": "f0d5a48bff23e9489d4499c0d1029c6fd47e530f8ac00273e5cd3df3134c500c",
+    "console-isolation-proofs.json": "b4178eeafde6426a1f375963d78aed5b8e9b5f28cb7096079ff61d5533efd3c5",
+    "followup-after.json": "5887f33b724982c18e6050fe2a8abba8111a5e7fe27ac32794b5cfefef2c92cf",
+    "followup-before.json": "a45d63169ae489ac53be696d7bc1b998fc12ae92b61a2d1682cdb6041404c5c5",
+    "followup-launch.json": "83f65a24ef65672987a9374eaccede35b5eb1983e1595ab588f9702465a2c85b",
+    "gpu.csv": "f5f5ab8c716ba7094587b2ea118327d776226fc6bb0380812777ea3bbb31dfce",
+    "monitor-after.json": "c92014551e224a716695539842bdd0f82895d4e092e8d3631f04f82caf93710c",
+    "monitor-before.json": "12ee737ff1be8715d5661dcbf10a428eaf21566af008eb4649f8d79429416acd",
+    "previous-worker-tail.txt": "1370039a8dd9ca101314d8f746683e051157fd78454227a69d068cae2a41f1ab",
+    "README.md": "ee9bdc028eda07d93a332b5f188e7c39d550f6a7eee7db25a5dd3e78cfeea1c5",
+    "resume-authorized-existing-run.py": "14bddc1c47afa2ca9d4eb487124aec07adf1a89bc8e43209976c3393a195aac3",
+    "resume-confirmation.json": "2e822af3d82211b7eabebb4c0c7572441725296315d8c9aebb3cebd80e73eae0",
+    "save-interruption-resume-evidence.py": "525c5b1f301522e101d1fbae36897b8a3d9f295ff88b4e326c4f02778a84680b",
+    "system-events.json": "2cd6b4d29d84914e07548ac15afc5bdd11438318affc759e70dd38b657d08f7f",
+    "training-console-tail.log.gz": "2e2f1925624cc6791de11e7d83aeccebd2a014a3cc7782e3fd7d338f80bc8d3c",
+    "worker-before.json": "460b362077f55cab3bdc198f63f46dca739fc497e08c9763da6a9dbad7447920",
+    "worker-launch.json": "acbb416f494ae341a3e1a3961a276bc3f439af5ea6b9618b844c6ae307ac7286"
+  }
+}

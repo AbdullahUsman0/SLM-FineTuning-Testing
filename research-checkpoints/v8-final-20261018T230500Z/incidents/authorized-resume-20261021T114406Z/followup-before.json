@@ -1,0 +1,7 @@
+{
+  "at_UTC": "2026-10-21T10:13:42.263601+00:00",
+  "error_type": "RuntimeError",
+  "reason": "Supplied worker failed in training; inspect logs and resume same verified run",
+  "resume": "Inspect the actual failure; preserve this run and all existing checkpoints. No restart from zero.",
+  "status": "stopped_preserved"
+}

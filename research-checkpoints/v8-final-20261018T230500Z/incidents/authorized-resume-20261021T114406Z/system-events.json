@@ -1,0 +1,17 @@
+﻿[
+    {
+        "at_local":  "2026-10-21T03:35:18.3785474-07:00",
+        "Id":  1074,
+        "Message":  "The process C:\\Windows\\System32\\RuntimeBroker.exe (DESKTOP-0AR1ONF) has initiated the restart of computer DESKTOP-0AR1ONF on behalf of user DESKTOP-0AR1ONF\\Abdullah for the following reason: Other (Unplanned)\r\n Reason Code: 0x0\r\n Shutdown Type: restart\r\n Comment: "
+    },
+    {
+        "at_local":  "2026-10-21T00:50:35.9447869-07:00",
+        "Id":  41,
+        "Message":  "The system has rebooted without cleanly shutting down first. This error could be caused if the system stopped responding, crashed, or lost power unexpectedly."
+    },
+    {
+        "at_local":  "2026-10-21T00:50:41.4593778-07:00",
+        "Id":  6008,
+        "Message":  "The previous system shutdown at 12:20:18 AM on ‎10/‎21/‎2026 was unexpected."
+    }
+]

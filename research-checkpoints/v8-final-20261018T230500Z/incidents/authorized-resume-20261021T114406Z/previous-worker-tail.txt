@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "D:\SLM\SLM-FineTuning-Testing\training\final_round\run.py", line 138, in worker
+    with (run/'training-console.log').open('ab',buffering=0) as log:subprocess.run(command,cwd=ROOT,env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SLM\runtime\python.3.12.10\tools\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['D:\\SLM\\FYP-environments\\v8-final-20261018T230255Z\\Scripts\\python.exe', 'D:\\SLM\\SLM-FineTuning-Testing\\training\\train_lora.py', '--model', 'Qwen/Qwen3.5-2B', '--revision', '15852e8c16360a2fea060d615a32b45270f8a8fc', '--train', 'D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\inputs\\train.jsonl', '--validation', 'D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\inputs\\validation.jsonl', '--output', 'D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full', '--epochs', '2', '--learning-rate', '5e-5', '--max-length', '4096', '--save-steps', '10', '--early-stopping-patience', '0', '--seed', '42', '--resume-from-checkpoint', 'auto']' returned non-zero exit status 3221225786.
+Traceback (most recent call last):
+  File "D:\SLM\SLM-FineTuning-Testing\training\final_round\run.py", line 193, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\SLM\SLM-FineTuning-Testing\training\final_round\run.py", line 171, in main
+    elif a.action=='worker':worker(run)
+                            ^^^^^^^^^^^
+  File "D:\SLM\SLM-FineTuning-Testing\training\final_round\run.py", line 138, in worker
+    with (run/'training-console.log').open('ab',buffering=0) as log:subprocess.run(command,cwd=ROOT,env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SLM\runtime\python.3.12.10\tools\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['D:\\SLM\\FYP-environments\\v8-final-20261018T230255Z\\Scripts\\python.exe', 'D:\\SLM\\SLM-FineTuning-Testing\\training\\train_lora.py', '--model', 'Qwen/Qwen3.5-2B', '--revision', '15852e8c16360a2fea060d615a32b45270f8a8fc', '--train', 'D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\inputs\\train.jsonl', '--validation', 'D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\inputs\\validation.jsonl', '--output', 'D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full', '--epochs', '2', '--learning-rate', '5e-5', '--max-length', '4096', '--save-steps', '10', '--early-stopping-patience', '0', '--seed', '42', '--resume-from-checkpoint', 'auto']' returned non-zero exit status 3221225786.

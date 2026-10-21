@@ -1,0 +1,1 @@
+{"at": "2026-10-21T10:13:28.572446+00:00", "error_type": "CalledProcessError", "phase": "training", "pid": 14612, "resume": "Inspect logs and rerun start on THIS run; verified checkpoints only. No automatic restart from zero.", "status": "failed"}

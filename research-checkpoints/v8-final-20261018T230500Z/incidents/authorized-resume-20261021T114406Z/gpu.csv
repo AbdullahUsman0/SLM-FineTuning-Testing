@@ -1,0 +1,2 @@
+name, power.limit [W], temperature.gpu, utilization.gpu [%], memory.used [MiB]
+NVIDIA RTX A4000, 140.00 W, 94, 91 %, 9436 MiB

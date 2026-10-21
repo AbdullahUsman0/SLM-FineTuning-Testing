@@ -1,0 +1,44 @@
+{
+  "at": "2026-10-21T11:15:19.111323+00:00",
+  "run": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z",
+  "monitor_pid": 10420,
+  "actions": [],
+  "paid_API_calls": 0,
+  "training_settings_changed": false,
+  "verified_checkpoint": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full\\checkpoint-820",
+  "verified_step": 820,
+  "checkpoint_artifacts_verified": 11,
+  "rejected_checkpoints": [],
+  "worker_pids": [],
+  "trainer_pids": [],
+  "diagnostic_pids": [],
+  "companion_pids": [],
+  "v6_diagnostic_pids": [],
+  "progress": {
+    "last_output_age_seconds": 3741.6,
+    "last_console_optimizer_step": 820,
+    "resume_checkpoint_step": 780,
+    "new_steps_observed_after_resume": true
+  },
+  "worker_status": {
+    "at": "2026-10-21T10:13:28.572446+00:00",
+    "error_type": "CalledProcessError",
+    "phase": "training",
+    "pid": 14612,
+    "resume": "Inspect logs and rerun start on THIS run; verified checkpoints only. No automatic restart from zero.",
+    "status": "failed"
+  },
+  "followup_status": {
+    "at_UTC": "2026-10-21T10:13:42.263601+00:00",
+    "error_type": "RuntimeError",
+    "reason": "Supplied worker failed in training; inspect logs and resume same verified run",
+    "resume": "Inspect the actual failure; preserve this run and all existing checkpoints. No restart from zero.",
+    "status": "stopped_preserved"
+  },
+  "status": "blocked_preserved",
+  "automatic_recovery_attempts_last_24h": 2,
+  "maximum_automatic_recoveries_per_24h": 2,
+  "error_type": "RuntimeError",
+  "reason": "Recovery limit reached; inspect saved failure before another attempt",
+  "finished_at": "2026-10-21T11:15:20.207040+00:00"
+}
