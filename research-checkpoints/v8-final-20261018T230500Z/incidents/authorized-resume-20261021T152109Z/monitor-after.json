@@ -1,0 +1,54 @@
+{
+  "at": "2026-10-21T15:30:51.205664+00:00",
+  "run": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z",
+  "monitor_pid": 12404,
+  "actions": [],
+  "paid_API_calls": 0,
+  "training_settings_changed": false,
+  "verified_checkpoint": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full\\checkpoint-960",
+  "verified_step": 960,
+  "checkpoint_artifacts_verified": 11,
+  "rejected_checkpoints": [],
+  "worker_pids": [
+    8012,
+    16328
+  ],
+  "trainer_pids": [
+    12524,
+    17336
+  ],
+  "diagnostic_pids": [],
+  "companion_pids": [
+    6992,
+    16944
+  ],
+  "v6_diagnostic_pids": [],
+  "progress": {
+    "last_output_age_seconds": 37.1,
+    "last_console_optimizer_step": 961,
+    "resume_checkpoint_step": 960,
+    "new_steps_observed_after_resume": true
+  },
+  "worker_status": {
+    "at": "2026-10-21T15:21:10.776284+00:00",
+    "expected_optimizer_steps": 2234,
+    "phase": "training",
+    "pid": 16328,
+    "status": "running"
+  },
+  "followup_status": {
+    "PID": 16944,
+    "heartbeat_UTC": "2026-10-21T15:30:44.084124+00:00",
+    "new_paid_API_calls": 0,
+    "status": "waiting_for_supplied_worker",
+    "worker": {
+      "at": "2026-10-21T15:21:10.776284+00:00",
+      "expected_optimizer_steps": 2234,
+      "phase": "training",
+      "pid": 16328,
+      "status": "running"
+    }
+  },
+  "status": "active",
+  "finished_at": "2026-10-21T15:30:55.058366+00:00"
+}

@@ -1,0 +1,21 @@
+{
+  "files_sha256": {
+    "authorization-and-verification.json": "2888bacf4085fd341854e4530f45cd518ab4dd2a99a9fa470aa518b2ad4b3a2d",
+    "console-isolation-proofs.json": "2aad62b39d9b1ba85d482e8edfa6d8b9b1b2bfabc39d807871186cc38d2f2f80",
+    "followup-after.json": "5a2b997e6dc9ebf0cb8c2dfb29c723d08159ebe6c8f805241b75962caef7f458",
+    "followup-before.json": "6a768c3a65de3fb26e82d64325c025d8958ac030b92fb12152502a1628123961",
+    "followup-launch.json": "4edd030e5e9c3fb2ac8d962edb1247b0987f50666050829de32d9ed3bfcd6a57",
+    "gpu.csv": "c75652251e13dd11c6cda124c8eed39af1d036ed0ef3e79cbe0cdafd777f181e",
+    "incident-review.md": "420657ad06e27d5e958667ba67ded1c083e6a2621ab66880677d9c9483821af6",
+    "monitor-after.json": "f0fd591fa6254185edde03996e0a9e68b5238b4c579b82faf54ba9c286413477",
+    "monitor-before.json": "fd755dbd81ff3c3011c9de8f0fda611bc00fc5147d112f605ebea61005c5771a",
+    "README.md": "d25b7fcd9a28cd6acf61c72e1ae0207eed89dd4166ba8c31d0fa333aeb84c84a",
+    "restart-context.json": "fee144716654e19326a989f3432c2dc6bb040c2058f3f6a6100943fe5723c79c",
+    "resume-authorized-existing-run.py": "14bddc1c47afa2ca9d4eb487124aec07adf1a89bc8e43209976c3393a195aac3",
+    "resume-confirmation.json": "0447cd1db0a12e167576f88fbe49743e84fa0be27fd468bed9fbb0272c05139c",
+    "save-interruption-resume-evidence.py": "517e71606605115af98a921614b717b0ac483506cb2cf429837cfd4f22829bdb",
+    "training-console-tail.log.gz": "8fda7d4ec385727a34c63cf92e586e19959eb94b78f6c72e109f828c63ae7026",
+    "worker-before.json": "bca0d58981012535c4f05882f21eebbc0dad621f723528a3f61efd78fcfc7da0",
+    "worker-launch.json": "0eae76e62633762be7bc5b6e49b619181f6d72391cf64fc24abadff90dc2ae0c"
+  }
+}

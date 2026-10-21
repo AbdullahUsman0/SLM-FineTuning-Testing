@@ -1,0 +1,13 @@
+# Interrupted process: verified checkpoint-960 continuation
+
+The user explicitly requested another restart (message: "resraty", interpreted as "restart") after being told the previous attempt stopped following the 2026-10-21 08:16 PDT unclean system reboot. This authorizes one reviewed restart of the same run with the previously approved setup. The user did not authorize a power-cap change or a fresh experiment. The existing 140W limit and frozen training settings are retained. No automatic recovery history or numerical retry cap was changed.
+
+Before this attempt, the latest complete checkpoint was 960, the interrupted attempt had replayed through 962, and the run's earlier observed high-water mark was 965. The same checkpoint-960 optimizer state must replay unsaved work. A newly completed step 961 proves this attempt is advancing but does not exceed the earlier high-water mark; reaching 966 is required for progress beyond 965. The reboot's cause remains unresolved. The prior worker status file was stale, so actual process inspection and checkpoint hashes determined whether restarting was appropriate.
+
+The hourly monitor had used both automatic recovery attempts in its rolling 24-hour window and correctly preserved the run at its existing cap. After reviewing the logs, the user's standing instruction, "continue training with previous setup", was followed through a separately recorded, manually reviewed resume. The retry cap and recovery history were not reset or increased.
+
+All 11 checkpoint artifact hashes, the original run fingerprint, and frozen source/input locks were verified before resuming the SAME run from checkpoint 960. The original supplied background worker and existing console-isolated launcher were reused. The power limit remained 140W. Training settings, dataset, model revision, epoch count and optimizer step counter were not changed. Fresh optimizer progress beyond the resumed checkpoint is recorded in resume-confirmation.json. Initial startup output showing zero is not treated as a new run or as verified progress.
+
+The followup companion is waiting for training completion and will then perform the existing local development workflow. The hourly Windows task remains enabled. Current operation does not establish that the underlying interruption or system reliability issue is resolved. No model quality or winner is claimed: final adapter and measured development results remain pending.
+
+Full logs, adapters and optimizer checkpoints remain outside Git. This snapshot includes metadata and compressed log excerpts only, with no base weights, optimizer states, credentials, caches, final-test labels or paid API calls. This auditor does not change the training or monitor source.
