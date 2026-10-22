@@ -1,0 +1,34 @@
+{
+  "return_value": 0,
+  "pid": 13136,
+  "at": "2026-10-22T15:29:55.647386+00:00",
+  "capsule": "D:\\SLM\\FYP-experiment-control\\v8-final-20261018T230500Z\\authorized-worker-20261022T152954937169Z.json",
+  "log": "D:\\SLM\\FYP-experiment-control\\v8-final-20261018T230500Z\\authorized-worker-20261022T152954937169Z.log",
+  "command": [
+    "D:\\SLM\\FYP-environments\\v8-final-20261018T230255Z\\Scripts\\python.exe",
+    "-B",
+    "D:\\SLM\\SLM-FineTuning-Testing\\training\\final_round\\run.py",
+    "start",
+    "--run",
+    "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z"
+  ],
+  "isolation": {
+    "at_UTC": "2026-10-22T15:29:55.530527+00:00",
+    "pid": 12904,
+    "parent_pid": 13136,
+    "console_window": 0,
+    "in_job": true,
+    "wmi_root_in_job": true,
+    "command": [
+      "D:\\SLM\\FYP-environments\\v8-final-20261018T230255Z\\Scripts\\python.exe",
+      "-B",
+      "D:\\SLM\\SLM-FineTuning-Testing\\training\\final_round\\run.py",
+      "start",
+      "--run",
+      "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z"
+    ],
+    "capsule_sha256": "4cb0be4a6a9be3e59a5eabb64f1f92a04c6a0fd123fe3006035f40502e200bd2",
+    "provider_pid": 16132,
+    "provider_name": "WmiPrvSE.exe"
+  }
+}

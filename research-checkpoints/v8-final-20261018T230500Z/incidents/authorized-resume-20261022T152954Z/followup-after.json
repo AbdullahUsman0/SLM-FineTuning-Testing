@@ -1,0 +1,13 @@
+{
+  "PID": 2676,
+  "heartbeat_UTC": "2026-10-22T15:47:31.654871+00:00",
+  "new_paid_API_calls": 0,
+  "status": "waiting_for_supplied_worker",
+  "worker": {
+    "at": "2026-10-22T15:29:56.483075+00:00",
+    "expected_optimizer_steps": 2234,
+    "phase": "training",
+    "pid": 1668,
+    "status": "running"
+  }
+}
