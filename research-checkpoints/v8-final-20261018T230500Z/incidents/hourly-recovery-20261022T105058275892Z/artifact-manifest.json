@@ -1,0 +1,15 @@
+{
+  "files_sha256": {
+    "automatic-recovery-attempt.json": "95f55d2ac7bc0aca600a23c6e3f8d380e409679acadbc62687cd709c27c2c224",
+    "before.json": "de831acae4fa5764fa6a79ae9892904475e76e24b0568b14a5c31a010b980d2d",
+    "followup-after.json": "e252fe912ff8264860c7fcf07800aade821348c01a2dac24c390dbe56592132b",
+    "incident-review.md": "6774d941590cb1e26f16a83840d1838ad420066abcc560217ef512877afe8cbf",
+    "monitor-after.json": "c72cf04581decf3b329fd8a8924d3e69ba303daa9cb7769d7ef322b788e366a0",
+    "README.md": "d48c197fd8795cfef2fc6a463c2db2d3efd60278beea7d8e67f553b24c506853",
+    "resume-confirmation.json": "e9e0b7fa76bb618f60dfcb4d2dc64d5da85d40d50edeea3de7683cdcce7bbb3d",
+    "save-automatic-recovery-evidence.py": "b1be7b1fd35c024f42612e51c0d0acf3676fa314274d23689b1011bff3e1ee37",
+    "startup-verification.json": "142ade6ec2de40c8903872253160bce8dbb3cace0b02b1a5d1b04fab0a10bc91",
+    "system-reboot.json": "3ee667377e3f9bcba6c267b1177d66f92ed2db4a3eec5abf0a590b1c5e0cd74a",
+    "training-console-tail.log.gz": "1511323c93f379c76b6a1f089513488f3fbdc38ba2f4e1599fee14e8c0179367"
+  }
+}

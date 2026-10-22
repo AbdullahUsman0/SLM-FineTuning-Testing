@@ -1,0 +1,13 @@
+# Automatic recovery from checkpoint 1800
+
+Windows booted at 2026-10-22 03:25:13 PDT and logged an unclean restart (Kernel-Power event 41) at 03:25:15. The prior trainer had completed unsaved step 1804 and retained complete checkpoint 1800. Event 41 recorded BugcheckCode 0; that observation does not identify the underlying cause or rule out hardware/driver/power issues. CPU firmware speed-limiting warnings also appeared after boot. The cause remains unresolved; no hardware fix is claimed.
+
+At 03:50:58 PDT the hourly monitor recorded an automatic same-run recovery from checkpoint 1800. Its earlier two automatic attempts had aged out of the rolling 24-hour window, so this attempt was within the unchanged limit; the retry history was not cleared. The background worker started at approximately 03:51. The original supplied trainer verifies retained checkpoints once during automatic checkpoint selection and again after resumed-run preflight, before loading model weights. With 180 retained checkpoints, the two passes require roughly 80 GB of reads, plus library/model loading. Direct process inspection confirmed increasing read-transfer counts and disk activity during this delay. These frozen verification loops were not removed or bypassed. A live process alone was not reported as confirmed optimizer progress.
+
+This recovery must replay four unsaved steps, 1801-1804. A fresh replayed step 1801 proves that this attempt advances, while progress beyond the prior high-water mark requires step 1805. The 140W power limit and all frozen training settings were retained.
+
+The existing hourly monitor launched the original supplied worker on the SAME run, using automatic selection of its latest complete checkpoint. No duplicate worker or new experiment was launched during the status inspection. All 11 resumed checkpoint file hashes, original run fingerprint and frozen source/input locks were independently verified. Fresh optimizer progress beyond the restored checkpoint is recorded in resume-confirmation.json; this is distinct from recovering the earlier unsaved high-water mark.
+
+The original two-epoch training settings, pinned base and dataset remain unchanged. No step counter or checkpoint was edited. The monitor's two automatic attempts per rolling 24 hours and its history were not reset. Final adapter, remaining validation, development comparison and packaging are pending. The reboot cause remains unresolved; successful checkpoint restoration does not establish that system reliability is fixed.
+
+Full checkpoints and logs remain local. This snapshot contains metadata and a compressed log excerpt, with no base weights, optimizer states, credentials, caches, final-test labels or paid API calls.

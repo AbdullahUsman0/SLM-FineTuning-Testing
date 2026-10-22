@@ -1,0 +1,58 @@
+{
+  "at_UTC": "2026-10-22T11:08:36.538775+00:00",
+  "run": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z",
+  "run_fingerprint": "541805a394f01f67a3b01e4bf5ca5bf623466c0e8e002a7eeb3a3510c46dc47a",
+  "progress": {
+    "last_output_age_seconds": 25.5,
+    "last_console_optimizer_step": 1801,
+    "resume_checkpoint_step": 1800,
+    "new_steps_observed_after_resume": true
+  },
+  "resumed_step": 1800,
+  "resumed_artifacts_sha256_verified": {
+    "README.md": "4351e9c7eeac74e8c222cc76e0cfbccd749a29ea3dc1075d0fdc71382030392f",
+    "adapter_config.json": "6d6370fc725ccc780d1c702608ecc30ddbd8d48c059c59a71ee564379d3be08f",
+    "adapter_model.safetensors": "a7278a466b7ed7c75d14cdf9b81ceacd948e87d416fb300a10364170403603d2",
+    "chat_template.jinja": "306abaf09cf3a6c0d14128373a72925bda3d7de2616a5642804d9768c7d2f78c",
+    "optimizer.pt": "4d84535538940e82e28bc0e01b10be477a32661af9dd13a36e373e43c3921fcc",
+    "rng_state.pth": "c9ad7eb822eb3f6b9ecf7caed98740ef060fc2d23d88d9bed673c163841cb152",
+    "scheduler.pt": "941be25b13feebe486aebd0c29e794970340acf02c2cc21989e6abb95ec2926a",
+    "tokenizer.json": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+    "tokenizer_config.json": "7b0a126e2dd5f59c9d219ef18d34485cbd91d887d24620bd9b26e0c83f965b40",
+    "trainer_state.json": "5cc91398af5eacdc2bcb8dcefef8fc2eebfca0b367d7dea71e374ab9f3db8d23",
+    "training_args.bin": "71ff3208c0fa72b05be19d7daa1f6ea49e079c4f9204aa690c3c3f8b3016c465"
+  },
+  "latest_checkpoint": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full\\checkpoint-1800",
+  "latest_verified_step": 1800,
+  "latest_artifacts_sha256_verified": {
+    "README.md": "4351e9c7eeac74e8c222cc76e0cfbccd749a29ea3dc1075d0fdc71382030392f",
+    "adapter_config.json": "6d6370fc725ccc780d1c702608ecc30ddbd8d48c059c59a71ee564379d3be08f",
+    "adapter_model.safetensors": "a7278a466b7ed7c75d14cdf9b81ceacd948e87d416fb300a10364170403603d2",
+    "chat_template.jinja": "306abaf09cf3a6c0d14128373a72925bda3d7de2616a5642804d9768c7d2f78c",
+    "optimizer.pt": "4d84535538940e82e28bc0e01b10be477a32661af9dd13a36e373e43c3921fcc",
+    "rng_state.pth": "c9ad7eb822eb3f6b9ecf7caed98740ef060fc2d23d88d9bed673c163841cb152",
+    "scheduler.pt": "941be25b13feebe486aebd0c29e794970340acf02c2cc21989e6abb95ec2926a",
+    "tokenizer.json": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+    "tokenizer_config.json": "7b0a126e2dd5f59c9d219ef18d34485cbd91d887d24620bd9b26e0c83f965b40",
+    "trainer_state.json": "5cc91398af5eacdc2bcb8dcefef8fc2eebfca0b367d7dea71e374ab9f3db8d23",
+    "training_args.bin": "71ff3208c0fa72b05be19d7daa1f6ea49e079c4f9204aa690c3c3f8b3016c465"
+  },
+  "rejected_checkpoints": [],
+  "previous_observed_high_watermark": 1804,
+  "previous_high_watermark_recovered": false,
+  "worker_pids": [
+    15488,
+    16648
+  ],
+  "trainer_pids": [
+    16136,
+    16944
+  ],
+  "source_and_input_locks_verified": true,
+  "training_settings_changed": false,
+  "counter_edited": false,
+  "additional_worker_launched_by_this_auditor": false,
+  "automatic_retry_cap_changed": false,
+  "final_test_labels_accessed": false,
+  "paid_API_calls": 0
+}
