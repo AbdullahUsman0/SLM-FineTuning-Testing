@@ -1,0 +1,7 @@
+{
+  "at": "2026-10-22T14:23:54.068108+00:00",
+  "checkpoint": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full\\checkpoint-1940",
+  "step": 1940,
+  "incident": "D:\\SLM\\FYP-experiment-control\\v8-final-20261018T230500Z\\hourly-recovery-20261022T142354065464Z",
+  "automatic_recovery": true
+}

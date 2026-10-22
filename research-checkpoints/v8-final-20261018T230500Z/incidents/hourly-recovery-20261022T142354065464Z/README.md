@@ -1,0 +1,13 @@
+# Automatic recovery from checkpoint 1940
+
+Windows booted at 2026-10-22 07:16:38 PDT and logged an unclean restart (event 41) at 07:16:41. The trainer had reached unsaved step 1942 and retained complete checkpoint 1940. The cause remains unresolved. The latest checkpoint's 11 artifact hashes and frozen source/input locks were independently verified again during inspection.
+
+The existing hourly monitor launched automatic recovery on the SAME run at approximately 07:23:55 PDT. This was the second automatic attempt in the rolling 24-hour window; the limit and recovery history were not reset or increased. When the user subsequently requested "continue from the latest", the actual worker and trainer processes were already alive and restoring checkpoint 1940, so no duplicate or manual replacement process was launched. Only external monitoring pointers were refreshed; optimizer/trainer state and counters were not edited.
+
+The original supplied trainer verifies retained checkpoints twice before model loading. With 194 retained checkpoints, these passes read roughly 87 GB, followed by model loading and checkpoint-state restoration. Those frozen verification loops were preserved. A live process was not treated as confirmation of optimizer progress. This recovery replays unsaved steps 1941-1942; a newly completed 1941 proves this attempt advances, while 1943 is required to exceed the preceding high-water mark. The original 140W power limit and all fixed training settings remain unchanged.
+
+The existing hourly monitor launched the original supplied worker on the SAME run, using automatic selection of its latest complete checkpoint. No duplicate worker or new experiment was launched during the status inspection. All 11 resumed checkpoint file hashes, original run fingerprint and frozen source/input locks were independently verified. Fresh optimizer progress beyond the restored checkpoint is recorded in resume-confirmation.json; this is distinct from recovering the earlier unsaved high-water mark.
+
+The original two-epoch training settings, pinned base and dataset remain unchanged. No step counter or checkpoint was edited. The monitor's two automatic attempts per rolling 24 hours and its history were not reset. Final adapter, remaining validation, development comparison and packaging are pending. The reboot cause remains unresolved; successful checkpoint restoration does not establish that system reliability is fixed.
+
+Full checkpoints and logs remain local. This snapshot contains metadata and a compressed log excerpt, with no base weights, optimizer states, credentials, caches, final-test labels or paid API calls.

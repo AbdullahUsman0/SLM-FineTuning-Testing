@@ -1,0 +1,10 @@
+{
+  "at_UTC": "2026-10-22T14:30:59.877230+00:00",
+  "user_instruction": "continue from the latest",
+  "checkpoint": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\full\\checkpoint-1940",
+  "checkpoint_step": 1940,
+  "existing_recovery_kept_running": true,
+  "duplicate_worker_launched": false,
+  "training_settings_changed": false,
+  "automatic_retry_cap_changed": false
+}

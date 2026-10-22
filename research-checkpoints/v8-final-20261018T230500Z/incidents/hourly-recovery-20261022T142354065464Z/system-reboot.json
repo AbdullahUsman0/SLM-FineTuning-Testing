@@ -1,0 +1,87 @@
+﻿{
+    "at_local":  "2026-10-22T07:16:41.1699914-07:00",
+    "message":  "The system has rebooted without cleanly shutting down first. This error could be caused if the system stopped responding, crashed, or lost power unexpectedly.",
+    "event_data":  [
+                       {
+                           "name":  "BugcheckCode",
+                           "value":  "0"
+                       },
+                       {
+                           "name":  "BugcheckParameter1",
+                           "value":  "0x0"
+                       },
+                       {
+                           "name":  "BugcheckParameter2",
+                           "value":  "0x0"
+                       },
+                       {
+                           "name":  "BugcheckParameter3",
+                           "value":  "0x0"
+                       },
+                       {
+                           "name":  "BugcheckParameter4",
+                           "value":  "0x0"
+                       },
+                       {
+                           "name":  "SleepInProgress",
+                           "value":  "0"
+                       },
+                       {
+                           "name":  "PowerButtonTimestamp",
+                           "value":  "0"
+                       },
+                       {
+                           "name":  "BootAppStatus",
+                           "value":  "0"
+                       },
+                       {
+                           "name":  "Checkpoint",
+                           "value":  "0"
+                       },
+                       {
+                           "name":  "ConnectedStandbyInProgress",
+                           "value":  "false"
+                       },
+                       {
+                           "name":  "SystemSleepTransitionsToOn",
+                           "value":  "0"
+                       },
+                       {
+                           "name":  "CsEntryScenarioInstanceId",
+                           "value":  "0"
+                       },
+                       {
+                           "name":  "BugcheckInfoFromEFI",
+                           "value":  "false"
+                       },
+                       {
+                           "name":  "CheckpointStatus",
+                           "value":  "0"
+                       },
+                       {
+                           "name":  "CsEntryScenarioInstanceIdV2",
+                           "value":  "0"
+                       },
+                       {
+                           "name":  "LongPowerButtonPressDetected",
+                           "value":  "false"
+                       },
+                       {
+                           "name":  "LidReliability",
+                           "value":  "false"
+                       },
+                       {
+                           "name":  "InputSuppressionState",
+                           "value":  "0"
+                       },
+                       {
+                           "name":  "PowerButtonSuppressionState",
+                           "value":  "0"
+                       },
+                       {
+                           "name":  "LidState",
+                           "value":  "3"
+                       }
+                   ],
+    "boot_local":  "2026-10-22T07:16:38.5000000-07:00"
+}

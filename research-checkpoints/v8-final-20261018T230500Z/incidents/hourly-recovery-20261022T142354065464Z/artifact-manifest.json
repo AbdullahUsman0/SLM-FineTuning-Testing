@@ -1,0 +1,16 @@
+{
+  "files_sha256": {
+    "automatic-recovery-attempt.json": "b917578c9acf27fab55fd4da94ee17b5a3db061bb0953bf34aa746aebea1462f",
+    "before.json": "f2098ac77f3f17d922f221051abc971e57de19df607e137cbd3d9c1b140c418e",
+    "followup-after.json": "7c06c571087ebc5cc1cd022b30b6aebbd2078c9d5d3eaf6143301a6659ea64df",
+    "incident-review.md": "de1d607391061279fb1e861d7f445b3dbeb201cba99d27ecccd48c415615e12c",
+    "monitor-after.json": "ed35e91830bfd9fb2b5ed6f470c3ae1d177da8b26d57acf8934d0e04a77a3d27",
+    "README.md": "a19664596fb4b624f19e5e103ecb6ee1235cb7406811e672903858c6981bd9ba",
+    "resume-confirmation.json": "924c96140af64a3e0ce9614513d66063b616237af95027a4ad95f3b3949903df",
+    "save-automatic-recovery-evidence.py": "b1be7b1fd35c024f42612e51c0d0acf3676fa314274d23689b1011bff3e1ee37",
+    "startup-verification.json": "530ca7f167168c7c7d4c29e35e7edd2372c7948fa7ce1713dffe10f0ecdc18b8",
+    "system-reboot.json": "85e5761eb14b6a4af772c917e8329716731d7f7b8ecb01e58cc0900b1374560d",
+    "training-console-tail.log.gz": "45db938ffc3fa46cf4d45db95f820a2abb653bbe1185278fe391e9e0ec51a87e",
+    "user-continuation.json": "bc0a66e575142ad7cc3561e0c79668e4884f672b5599a86f55ac403558e7bc36"
+  }
+}
