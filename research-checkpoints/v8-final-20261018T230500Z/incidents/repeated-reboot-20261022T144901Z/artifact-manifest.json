@@ -1,0 +1,10 @@
+{
+  "files_sha256": {
+    "failure-verification.json": "eeebd4d842a999a40d4e46f5c124bfb3a1e398888452d398f83aa0f754a653d7",
+    "monitor.json": "291634bb19c54621636c294469214b2c0ba4a08be4db6e342bc9595958455349",
+    "README.md": "d8726feac005bf51a601030f0d5ca08843918feae7548dcc57351691dd8a7398",
+    "stale-followup-status.json": "34ca8609c4dfc39e0113155dd874028ca48dd08179fd10c85af2d22684289eaf",
+    "stale-worker-status.json": "8fa0e99af31ce339321a8cdfd7eb58c28bbff94ce9e8298eece5e2ef5c5dd4f5",
+    "system-events.json": "08ca22fe6bb2c7c452fb0e82b56d138a1eddf0434b35b8a89b99f303058ea71b"
+  }
+}
