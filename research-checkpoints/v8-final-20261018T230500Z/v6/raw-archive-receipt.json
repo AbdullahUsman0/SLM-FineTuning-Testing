@@ -1,0 +1,13 @@
+{
+  "CRC_and_extracted_SHA256_verified": true,
+  "bytes": 231047,
+  "filename": "v6-development-raw.zip",
+  "members_sha256": {
+    "calls.jsonl": "6d0819ef01138ccca44fe115cfd04d6853812c688c35400c01bf2420ff621354",
+    "freeze.json": "f42edb8ae2c6e16129a02cda293d8d18c25a862ded28b2a554b0ea126ed881d2",
+    "runtime.json": "9ef55b15bb7823b5e788311be9e3e49e78d3e71233b9e779e309605686803776",
+    "scored-records.jsonl.gz": "357d13614b70e889a54203fbcd29e46ba9f031f51e6d08e36d0f3f0d8994a5ad",
+    "summary.json": "673fb74f1374127d9414bcf4d809ee1a1492f2fc067559e4c55cc59e7e16742a"
+  },
+  "sha256": "0fb4a5c5aa22ab7fbf4d2d9d1b7c62cf1b2ec39779b855616a5cef687b163b10"
+}

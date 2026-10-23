@@ -1,0 +1,38 @@
+{
+  "followup": [
+    "D:\\SLM\\FYP-environments\\v8-final-20261018T230255Z\\Scripts\\python.exe",
+    "-B",
+    "D:\\SLM\\FYP-experiment-control\\v8-final-20261018T230500Z\\followup-r4.py",
+    "--config",
+    "D:\\SLM\\FYP-experiment-control\\v8-final-20261018T230500Z\\workflow-config-r4.json"
+  ],
+  "prepare": [
+    "D:\\SLM\\FYP-environments\\v8-final-20261018T230255Z\\Scripts\\python.exe",
+    "-B",
+    "D:\\SLM\\SLM-FineTuning-Testing\\training\\final_round\\run.py",
+    "prepare",
+    "--fpy",
+    "D:\\SLM\\SLM-FineTuning-Testing\\runtime\\fpy-final-pinned",
+    "--run",
+    "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z"
+  ],
+  "start": [
+    "D:\\SLM\\FYP-environments\\v8-final-20261018T230255Z\\Scripts\\python.exe",
+    "-B",
+    "D:\\SLM\\SLM-FineTuning-Testing\\training\\final_round\\run.py",
+    "start",
+    "--run",
+    "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z"
+  ],
+  "v6_diagnostic": [
+    "D:\\SLM\\FYP-environments\\v8-final-20261018T230255Z\\Scripts\\python.exe",
+    "-B",
+    "D:\\SLM\\SLM-FineTuning-Testing\\training\\final_round\\evaluate_development.py",
+    "--fpy",
+    "D:\\SLM\\SLM-FineTuning-Testing\\runtime\\fpy-final-pinned",
+    "--adapter",
+    "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v6-20261003T113807Z\\full\\best-adapter",
+    "--output",
+    "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\v6-same-development-diagnostic"
+  ]
+}

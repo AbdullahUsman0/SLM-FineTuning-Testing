@@ -1,0 +1,27 @@
+{
+  "at_UTC": "2026-10-23T19:11:08.644863+00:00",
+  "cause": "git diff --cached --check rejected trailing spaces in copied preparation test log",
+  "final_test_accessed": false,
+  "matched_case_and_protocol_freezes_verified": true,
+  "new_model_inference_calls": 0,
+  "new_paid_API_calls": 0,
+  "original_log_gzip_sha256": "2a8229f34e660566b6be26f41544adc3f922f84d6f4d72f2a75a928c2b362622",
+  "original_log_sha256": "af0706ec14d242462453909e2b84ae4c83ac26bbffe5ff6f85ca7d1166d590ed",
+  "primary_F1_recomputed_from_scored_records": true,
+  "published_test_log_after_sha256": "40095e71fdc7c14bbadbd3c1eda46493fccf87a403a8a3eda1811ad9fb4a6446",
+  "published_test_log_before_sha256": "6ad63f70af8673fdc0aa60da07f9de3a13a7d7b3b3923ef114f51e2951c098cc",
+  "raw_archive_CRC_and_member_hashes_verified": true,
+  "repair": "Normalized trailing whitespace and line endings only in published text; preserved original UTF-16 bytes compressed",
+  "verified_models": {
+    "v6": {
+      "calls": 996,
+      "freeze_sha256": "f42edb8ae2c6e16129a02cda293d8d18c25a862ded28b2a554b0ea126ed881d2",
+      "journal_sha256": "6d0819ef01138ccca44fe115cfd04d6853812c688c35400c01bf2420ff621354"
+    },
+    "v8": {
+      "calls": 996,
+      "freeze_sha256": "af87dcdccefcd8787b91702ade0385d8276ba70017897e16b38eecb412017c0b",
+      "journal_sha256": "292ca4da05eb34527cb10190f7ffbcac723802670a317e72816ab49bb6ef79c0"
+    }
+  }
+}

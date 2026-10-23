@@ -1,0 +1,905 @@
+{
+  "calls": [
+    {
+      "category": "encoding_literal",
+      "domain": "crypto_derivatives",
+      "domain_family": "economics",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "component",
+        "v7-20261009-r8-dev/crypto_derivatives/0078",
+        "t2"
+      ],
+      "language": "ur"
+    },
+    {
+      "category": "confirmation_status",
+      "domain": "equities_funds",
+      "domain_family": "economics",
+      "error_type": "ValueError",
+      "extra_slot_flags": 0,
+      "findings": [
+        "rejected",
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "component",
+        "v7-20261009-r8-dev/equities_funds/0094",
+        "t1"
+      ],
+      "language": "ur"
+    },
+    {
+      "category": "core_recall",
+      "domain": "foreign_exchange",
+      "domain_family": "economics",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "component",
+        "v7-20261009-r8-dev/foreign_exchange/0050",
+        "t1"
+      ],
+      "language": "en"
+    },
+    {
+      "category": "lifecycle_dense",
+      "domain": "foreign_exchange",
+      "domain_family": "economics",
+      "error_type": null,
+      "extra_slot_flags": 1,
+      "findings": [
+        "incomplete_state",
+        "extra_current_turn_slots"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "component",
+        "v7-20261009-r8-dev/foreign_exchange/0106",
+        "t3"
+      ],
+      "language": "en"
+    },
+    {
+      "category": "core_recall",
+      "domain": "inflation_prices",
+      "domain_family": "economics",
+      "error_type": "ValueError",
+      "extra_slot_flags": 0,
+      "findings": [
+        "rejected",
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "component",
+        "v7-20261009-r8-dev/inflation_prices/0140",
+        "t1"
+      ],
+      "language": "ur"
+    },
+    {
+      "category": "core_recall",
+      "domain": "temperature",
+      "domain_family": "weather",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "component",
+        "v7-20261009-r8-dev/temperature/0130",
+        "t1"
+      ],
+      "language": "en"
+    },
+    {
+      "category": "core_recall",
+      "domain": "temperature",
+      "domain_family": "weather",
+      "error_type": "ValueError",
+      "extra_slot_flags": 0,
+      "findings": [
+        "rejected",
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "component",
+        "v7-20261009-r8-dev/temperature/0170",
+        "t1"
+      ],
+      "language": "ur"
+    },
+    {
+      "category": "encoding_literal",
+      "domain": "weather_extremes",
+      "domain_family": "weather",
+      "error_type": "ValueError",
+      "extra_slot_flags": 0,
+      "findings": [
+        "rejected",
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "component",
+        "v7-20261009-r8-dev/weather_extremes/0118",
+        "t1"
+      ],
+      "language": "ur"
+    },
+    {
+      "category": "encoding_literal",
+      "domain": "weather_extremes",
+      "domain_family": "weather",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "component",
+        "v7-20261009-r8-dev/weather_extremes/0118",
+        "t2"
+      ],
+      "language": "ur"
+    },
+    {
+      "category": "cadence_role_isolation",
+      "domain": "commodities",
+      "domain_family": "economics",
+      "error_type": "ValueError",
+      "extra_slot_flags": 0,
+      "findings": [
+        "rejected",
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "component",
+        "v8-final-20261018-r1/focused/commodities/validation-008",
+        "t2"
+      ],
+      "language": "en"
+    },
+    {
+      "category": "cadence_role_isolation",
+      "domain": "output_growth",
+      "domain_family": "economics",
+      "error_type": "ValueError",
+      "extra_slot_flags": 0,
+      "findings": [
+        "rejected",
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "component",
+        "v8-final-20261018-r1/focused/output_growth/validation-008",
+        "t2"
+      ],
+      "language": "en"
+    },
+    {
+      "category": "cadence_role_isolation",
+      "domain": "trade_fiscal",
+      "domain_family": "economics",
+      "error_type": "ValueError",
+      "extra_slot_flags": 0,
+      "findings": [
+        "rejected",
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "component",
+        "v8-final-20261018-r1/focused/trade_fiscal/validation-008",
+        "t2"
+      ],
+      "language": "en"
+    },
+    {
+      "category": "encoding_literal",
+      "domain": "crypto_derivatives",
+      "domain_family": "economics",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v7-20261009-r8-dev/crypto_derivatives/0078",
+        "t2"
+      ],
+      "language": "ur"
+    },
+    {
+      "category": "encoding_literal",
+      "domain": "crypto_derivatives",
+      "domain_family": "economics",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v7-20261009-r8-dev/crypto_derivatives/0078",
+        "t3"
+      ],
+      "language": "ur"
+    },
+    {
+      "category": "encoding_literal",
+      "domain": "crypto_derivatives",
+      "domain_family": "economics",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v7-20261009-r8-dev/crypto_derivatives/0078",
+        "t4"
+      ],
+      "language": "ur"
+    },
+    {
+      "category": "encoding_literal",
+      "domain": "crypto_derivatives",
+      "domain_family": "economics",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v7-20261009-r8-dev/crypto_derivatives/0078",
+        "t5"
+      ],
+      "language": "ur"
+    },
+    {
+      "category": "confirmation_status",
+      "domain": "equities_funds",
+      "domain_family": "economics",
+      "error_type": "ValueError",
+      "extra_slot_flags": 0,
+      "findings": [
+        "rejected",
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v7-20261009-r8-dev/equities_funds/0094",
+        "t1"
+      ],
+      "language": "ur"
+    },
+    {
+      "category": "confirmation_status",
+      "domain": "equities_funds",
+      "domain_family": "economics",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v7-20261009-r8-dev/equities_funds/0094",
+        "t2"
+      ],
+      "language": "ur"
+    },
+    {
+      "category": "confirmation_status",
+      "domain": "equities_funds",
+      "domain_family": "economics",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v7-20261009-r8-dev/equities_funds/0094",
+        "t3"
+      ],
+      "language": "ur"
+    },
+    {
+      "category": "confirmation_status",
+      "domain": "equities_funds",
+      "domain_family": "economics",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v7-20261009-r8-dev/equities_funds/0094",
+        "t4"
+      ],
+      "language": "ur"
+    },
+    {
+      "category": "confirmation_status",
+      "domain": "equities_funds",
+      "domain_family": "economics",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v7-20261009-r8-dev/equities_funds/0094",
+        "t5"
+      ],
+      "language": "ur"
+    },
+    {
+      "category": "core_recall",
+      "domain": "foreign_exchange",
+      "domain_family": "economics",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v7-20261009-r8-dev/foreign_exchange/0050",
+        "t1"
+      ],
+      "language": "en"
+    },
+    {
+      "category": "lifecycle_dense",
+      "domain": "foreign_exchange",
+      "domain_family": "economics",
+      "error_type": null,
+      "extra_slot_flags": 1,
+      "findings": [
+        "incomplete_state",
+        "extra_current_turn_slots"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v7-20261009-r8-dev/foreign_exchange/0106",
+        "t3"
+      ],
+      "language": "en"
+    },
+    {
+      "category": "lifecycle_dense",
+      "domain": "foreign_exchange",
+      "domain_family": "economics",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v7-20261009-r8-dev/foreign_exchange/0106",
+        "t4"
+      ],
+      "language": "en"
+    },
+    {
+      "category": "lifecycle_dense",
+      "domain": "foreign_exchange",
+      "domain_family": "economics",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v7-20261009-r8-dev/foreign_exchange/0106",
+        "t5"
+      ],
+      "language": "en"
+    },
+    {
+      "category": "lifecycle_dense",
+      "domain": "foreign_exchange",
+      "domain_family": "economics",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v7-20261009-r8-dev/foreign_exchange/0106",
+        "t6"
+      ],
+      "language": "en"
+    },
+    {
+      "category": "core_recall",
+      "domain": "inflation_prices",
+      "domain_family": "economics",
+      "error_type": "ValueError",
+      "extra_slot_flags": 0,
+      "findings": [
+        "rejected",
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v7-20261009-r8-dev/inflation_prices/0140",
+        "t1"
+      ],
+      "language": "ur"
+    },
+    {
+      "category": "core_recall",
+      "domain": "inflation_prices",
+      "domain_family": "economics",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v7-20261009-r8-dev/inflation_prices/0140",
+        "t2"
+      ],
+      "language": "ur"
+    },
+    {
+      "category": "core_recall",
+      "domain": "inflation_prices",
+      "domain_family": "economics",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v7-20261009-r8-dev/inflation_prices/0140",
+        "t3"
+      ],
+      "language": "ur"
+    },
+    {
+      "category": "core_recall",
+      "domain": "inflation_prices",
+      "domain_family": "economics",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v7-20261009-r8-dev/inflation_prices/0140",
+        "t4"
+      ],
+      "language": "ur"
+    },
+    {
+      "category": "core_recall",
+      "domain": "inflation_prices",
+      "domain_family": "economics",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v7-20261009-r8-dev/inflation_prices/0140",
+        "t5"
+      ],
+      "language": "ur"
+    },
+    {
+      "category": "core_recall",
+      "domain": "inflation_prices",
+      "domain_family": "economics",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v7-20261009-r8-dev/inflation_prices/0140",
+        "t6"
+      ],
+      "language": "ur"
+    },
+    {
+      "category": "core_recall",
+      "domain": "temperature",
+      "domain_family": "weather",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v7-20261009-r8-dev/temperature/0130",
+        "t1"
+      ],
+      "language": "en"
+    },
+    {
+      "category": "core_recall",
+      "domain": "temperature",
+      "domain_family": "weather",
+      "error_type": "ValueError",
+      "extra_slot_flags": 0,
+      "findings": [
+        "rejected",
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v7-20261009-r8-dev/temperature/0170",
+        "t1"
+      ],
+      "language": "ur"
+    },
+    {
+      "category": "core_recall",
+      "domain": "temperature",
+      "domain_family": "weather",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v7-20261009-r8-dev/temperature/0170",
+        "t2"
+      ],
+      "language": "ur"
+    },
+    {
+      "category": "core_recall",
+      "domain": "temperature",
+      "domain_family": "weather",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v7-20261009-r8-dev/temperature/0170",
+        "t3"
+      ],
+      "language": "ur"
+    },
+    {
+      "category": "core_recall",
+      "domain": "temperature",
+      "domain_family": "weather",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v7-20261009-r8-dev/temperature/0170",
+        "t4"
+      ],
+      "language": "ur"
+    },
+    {
+      "category": "core_recall",
+      "domain": "temperature",
+      "domain_family": "weather",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v7-20261009-r8-dev/temperature/0170",
+        "t5"
+      ],
+      "language": "ur"
+    },
+    {
+      "category": "encoding_literal",
+      "domain": "weather_extremes",
+      "domain_family": "weather",
+      "error_type": "ValueError",
+      "extra_slot_flags": 0,
+      "findings": [
+        "rejected",
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v7-20261009-r8-dev/weather_extremes/0118",
+        "t1"
+      ],
+      "language": "ur"
+    },
+    {
+      "category": "encoding_literal",
+      "domain": "weather_extremes",
+      "domain_family": "weather",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v7-20261009-r8-dev/weather_extremes/0118",
+        "t2"
+      ],
+      "language": "ur"
+    },
+    {
+      "category": "encoding_literal",
+      "domain": "weather_extremes",
+      "domain_family": "weather",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v7-20261009-r8-dev/weather_extremes/0118",
+        "t3"
+      ],
+      "language": "ur"
+    },
+    {
+      "category": "encoding_literal",
+      "domain": "weather_extremes",
+      "domain_family": "weather",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v7-20261009-r8-dev/weather_extremes/0118",
+        "t4"
+      ],
+      "language": "ur"
+    },
+    {
+      "category": "encoding_literal",
+      "domain": "weather_extremes",
+      "domain_family": "weather",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v7-20261009-r8-dev/weather_extremes/0118",
+        "t5"
+      ],
+      "language": "ur"
+    },
+    {
+      "category": "cadence_role_isolation",
+      "domain": "commodities",
+      "domain_family": "economics",
+      "error_type": "ValueError",
+      "extra_slot_flags": 0,
+      "findings": [
+        "rejected",
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v8-final-20261018-r1/focused/commodities/validation-008",
+        "t2"
+      ],
+      "language": "en"
+    },
+    {
+      "category": "cadence_role_isolation",
+      "domain": "commodities",
+      "domain_family": "economics",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v8-final-20261018-r1/focused/commodities/validation-008",
+        "t3"
+      ],
+      "language": "en"
+    },
+    {
+      "category": "cadence_role_isolation",
+      "domain": "commodities",
+      "domain_family": "economics",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v8-final-20261018-r1/focused/commodities/validation-008",
+        "t4"
+      ],
+      "language": "en"
+    },
+    {
+      "category": "cadence_role_isolation",
+      "domain": "output_growth",
+      "domain_family": "economics",
+      "error_type": "ValueError",
+      "extra_slot_flags": 0,
+      "findings": [
+        "rejected",
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v8-final-20261018-r1/focused/output_growth/validation-008",
+        "t2"
+      ],
+      "language": "en"
+    },
+    {
+      "category": "cadence_role_isolation",
+      "domain": "output_growth",
+      "domain_family": "economics",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v8-final-20261018-r1/focused/output_growth/validation-008",
+        "t3"
+      ],
+      "language": "en"
+    },
+    {
+      "category": "cadence_role_isolation",
+      "domain": "output_growth",
+      "domain_family": "economics",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v8-final-20261018-r1/focused/output_growth/validation-008",
+        "t4"
+      ],
+      "language": "en"
+    },
+    {
+      "category": "cadence_role_isolation",
+      "domain": "trade_fiscal",
+      "domain_family": "economics",
+      "error_type": "ValueError",
+      "extra_slot_flags": 0,
+      "findings": [
+        "rejected",
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v8-final-20261018-r1/focused/trade_fiscal/validation-008",
+        "t2"
+      ],
+      "language": "en"
+    },
+    {
+      "category": "cadence_role_isolation",
+      "domain": "trade_fiscal",
+      "domain_family": "economics",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v8-final-20261018-r1/focused/trade_fiscal/validation-008",
+        "t3"
+      ],
+      "language": "en"
+    },
+    {
+      "category": "cadence_role_isolation",
+      "domain": "trade_fiscal",
+      "domain_family": "economics",
+      "error_type": null,
+      "extra_slot_flags": 0,
+      "findings": [
+        "incomplete_state"
+      ],
+      "forbidden_slot_flags": 0,
+      "key": [
+        "rollout",
+        "v8-final-20261018-r1/focused/trade_fiscal/validation-008",
+        "t4"
+      ],
+      "language": "en"
+    }
+  ],
+  "scope": "Automated development triage, not independent human adjudication"
+}

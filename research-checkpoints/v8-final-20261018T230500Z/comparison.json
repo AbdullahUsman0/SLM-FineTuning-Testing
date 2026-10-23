@@ -1,0 +1,1149 @@
+{
+  "confidence_intervals_implemented": false,
+  "independent_human_review_complete": false,
+  "model_winner_established": false,
+  "models": {
+    "v6": {
+      "conversations": 100,
+      "freeze_sha256": "f42edb8ae2c6e16129a02cda293d8d18c25a862ded28b2a554b0ea126ed881d2",
+      "human_review_complete": false,
+      "journal_sha256": "6d0819ef01138ccca44fe115cfd04d6853812c688c35400c01bf2420ff621354",
+      "model_winner_established": false,
+      "paid_API_calls": 0,
+      "scope": "inspected synthetic development diagnostic, not a new final test",
+      "status": "complete",
+      "tracks": {
+        "component": {
+          "admitted": 412,
+          "calls": 498,
+          "complete_state_after_correction": 107,
+          "complete_state_turns": 358,
+          "correct_correction_calls": 77,
+          "correction_calls": 120,
+          "domains": {
+            "combined": {
+              "admitted": 43,
+              "calls": 51,
+              "complete_state_after_correction": 10,
+              "complete_state_turns": 36,
+              "correct_correction_calls": 5,
+              "correction_calls": 11,
+              "extra_slot_flags_including_rejected": 2,
+              "forbidden_slot_flags_including_rejected": 1,
+              "intent_correct_calls": 43,
+              "json_valid": 51,
+              "median_extraction_seconds": 7.638947699997516,
+              "nonintent_exact": {
+                "f1": 0.4883720930232558,
+                "fn": 70,
+                "fp": 62,
+                "precision": 0.504,
+                "recall": 0.47368421052631576,
+                "tp": 63
+              },
+              "schema_valid": 51,
+              "unknown_preserved_nonintent_state": 11,
+              "unknown_successful_empty_calls": 11,
+              "unknown_turns": 11
+            },
+            "economics": {
+              "admitted": 244,
+              "calls": 297,
+              "complete_state_after_correction": 62,
+              "complete_state_turns": 215,
+              "correct_correction_calls": 51,
+              "correction_calls": 71,
+              "extra_slot_flags_including_rejected": 16,
+              "forbidden_slot_flags_including_rejected": 4,
+              "intent_correct_calls": 243,
+              "json_valid": 297,
+              "median_extraction_seconds": 8.537041399998998,
+              "nonintent_exact": {
+                "f1": 0.5077650236326806,
+                "fn": 385,
+                "fp": 344,
+                "precision": 0.5222222222222223,
+                "recall": 0.4940867279894875,
+                "tp": 376
+              },
+              "schema_valid": 296,
+              "unknown_preserved_nonintent_state": 62,
+              "unknown_successful_empty_calls": 62,
+              "unknown_turns": 62
+            },
+            "weather": {
+              "admitted": 125,
+              "calls": 150,
+              "complete_state_after_correction": 35,
+              "complete_state_turns": 107,
+              "correct_correction_calls": 21,
+              "correction_calls": 38,
+              "extra_slot_flags_including_rejected": 16,
+              "forbidden_slot_flags_including_rejected": 8,
+              "intent_correct_calls": 125,
+              "json_valid": 150,
+              "median_extraction_seconds": 7.428566950002278,
+              "nonintent_exact": {
+                "f1": 0.4307228915662651,
+                "fn": 199,
+                "fp": 179,
+                "precision": 0.4440993788819876,
+                "recall": 0.41812865497076024,
+                "tp": 143
+              },
+              "schema_valid": 150,
+              "unknown_preserved_nonintent_state": 30,
+              "unknown_successful_empty_calls": 30,
+              "unknown_turns": 30
+            }
+          },
+          "excluding_seeded_interventions": {
+            "admitted": 363,
+            "calls": 437,
+            "complete_state_after_correction": 86,
+            "complete_state_turns": 312,
+            "correct_correction_calls": 62,
+            "correction_calls": 96,
+            "extra_slot_flags_including_rejected": 31,
+            "forbidden_slot_flags_including_rejected": 13,
+            "intent_correct_calls": 362,
+            "json_valid": 437,
+            "median_extraction_seconds": 7.970202500000596,
+            "nonintent_exact": {
+              "f1": 0.5049928673323824,
+              "fn": 549,
+              "fp": 492,
+              "precision": 0.5190615835777126,
+              "recall": 0.49166666666666664,
+              "tp": 531
+            },
+            "schema_valid": 436,
+            "unknown_preserved_nonintent_state": 91,
+            "unknown_successful_empty_calls": 91,
+            "unknown_turns": 91
+          },
+          "extra_slot_flags_including_rejected": 34,
+          "forbidden_slot_flags_including_rejected": 13,
+          "intent_correct_calls": 411,
+          "json_valid": 498,
+          "languages": {
+            "en": {
+              "admitted": 332,
+              "calls": 394,
+              "complete_state_after_correction": 95,
+              "complete_state_turns": 296,
+              "correct_correction_calls": 70,
+              "correction_calls": 98,
+              "extra_slot_flags_including_rejected": 25,
+              "forbidden_slot_flags_including_rejected": 12,
+              "intent_correct_calls": 331,
+              "json_valid": 394,
+              "median_extraction_seconds": 7.903959150000446,
+              "nonintent_exact": {
+                "f1": 0.46609257265877285,
+                "fn": 528,
+                "fp": 464,
+                "precision": 0.48272017837235226,
+                "recall": 0.4505723204994797,
+                "tp": 433
+              },
+              "schema_valid": 393,
+              "unknown_preserved_nonintent_state": 83,
+              "unknown_successful_empty_calls": 83,
+              "unknown_turns": 83
+            },
+            "mixed": {
+              "admitted": 42,
+              "calls": 53,
+              "complete_state_after_correction": 12,
+              "complete_state_turns": 37,
+              "correct_correction_calls": 7,
+              "correction_calls": 12,
+              "extra_slot_flags_including_rejected": 2,
+              "forbidden_slot_flags_including_rejected": 1,
+              "intent_correct_calls": 42,
+              "json_valid": 53,
+              "median_extraction_seconds": 7.669682099993224,
+              "nonintent_exact": {
+                "f1": 0.391304347826087,
+                "fn": 87,
+                "fp": 81,
+                "precision": 0.4,
+                "recall": 0.3829787234042553,
+                "tp": 54
+              },
+              "schema_valid": 53,
+              "unknown_preserved_nonintent_state": 10,
+              "unknown_successful_empty_calls": 10,
+              "unknown_turns": 10
+            },
+            "ur": {
+              "admitted": 38,
+              "calls": 51,
+              "complete_state_after_correction": 0,
+              "complete_state_turns": 25,
+              "correct_correction_calls": 0,
+              "correction_calls": 10,
+              "extra_slot_flags_including_rejected": 7,
+              "forbidden_slot_flags_including_rejected": 0,
+              "intent_correct_calls": 38,
+              "json_valid": 51,
+              "median_extraction_seconds": 9.318597500001488,
+              "nonintent_exact": {
+                "f1": 0.7063197026022305,
+                "fn": 39,
+                "fp": 40,
+                "precision": 0.7037037037037037,
+                "recall": 0.7089552238805971,
+                "tp": 95
+              },
+              "schema_valid": 51,
+              "unknown_preserved_nonintent_state": 10,
+              "unknown_successful_empty_calls": 10,
+              "unknown_turns": 10
+            }
+          },
+          "median_extraction_seconds": 7.965795699999262,
+          "nonintent_exact": {
+            "f1": 0.484394506866417,
+            "fn": 654,
+            "fp": 585,
+            "precision": 0.4987146529562982,
+            "recall": 0.470873786407767,
+            "tp": 582
+          },
+          "schema_valid": 497,
+          "unknown_preserved_nonintent_state": 103,
+          "unknown_successful_empty_calls": 103,
+          "unknown_turns": 103
+        },
+        "rollout": {
+          "admitted": 401,
+          "calls": 498,
+          "complete_state_after_correction": 0,
+          "complete_state_turns": 0,
+          "correct_correction_calls": 104,
+          "correction_calls": 120,
+          "domains": {
+            "combined": {
+              "admitted": 42,
+              "calls": 51,
+              "complete_state_after_correction": 0,
+              "complete_state_turns": 0,
+              "correct_correction_calls": 9,
+              "correction_calls": 11,
+              "extra_slot_flags_including_rejected": 3,
+              "forbidden_slot_flags_including_rejected": 1,
+              "intent_correct_calls": 41,
+              "json_valid": 51,
+              "median_extraction_seconds": 7.492182799999682,
+              "nonintent_exact": {
+                "f1": 0.5,
+                "fn": 69,
+                "fp": 59,
+                "precision": 0.5203252032520326,
+                "recall": 0.48120300751879697,
+                "tp": 64
+              },
+              "schema_valid": 51,
+              "unknown_preserved_nonintent_state": 11,
+              "unknown_successful_empty_calls": 11,
+              "unknown_turns": 11
+            },
+            "economics": {
+              "admitted": 241,
+              "calls": 297,
+              "complete_state_after_correction": 0,
+              "complete_state_turns": 0,
+              "correct_correction_calls": 60,
+              "correction_calls": 71,
+              "extra_slot_flags_including_rejected": 18,
+              "forbidden_slot_flags_including_rejected": 4,
+              "intent_correct_calls": 236,
+              "json_valid": 297,
+              "median_extraction_seconds": 7.82012130000021,
+              "nonintent_exact": {
+                "f1": 0.5121621621621621,
+                "fn": 382,
+                "fp": 340,
+                "precision": 0.5271210013908206,
+                "recall": 0.4980289093298292,
+                "tp": 379
+              },
+              "schema_valid": 296,
+              "unknown_preserved_nonintent_state": 62,
+              "unknown_successful_empty_calls": 62,
+              "unknown_turns": 62
+            },
+            "weather": {
+              "admitted": 118,
+              "calls": 150,
+              "complete_state_after_correction": 0,
+              "complete_state_turns": 0,
+              "correct_correction_calls": 35,
+              "correction_calls": 38,
+              "extra_slot_flags_including_rejected": 14,
+              "forbidden_slot_flags_including_rejected": 8,
+              "intent_correct_calls": 117,
+              "json_valid": 150,
+              "median_extraction_seconds": 7.698943099999724,
+              "nonintent_exact": {
+                "f1": 0.4246987951807229,
+                "fn": 201,
+                "fp": 181,
+                "precision": 0.43788819875776397,
+                "recall": 0.41228070175438597,
+                "tp": 141
+              },
+              "schema_valid": 150,
+              "unknown_preserved_nonintent_state": 30,
+              "unknown_successful_empty_calls": 30,
+              "unknown_turns": 30
+            }
+          },
+          "excluding_seeded_interventions": {
+            "admitted": 352,
+            "calls": 437,
+            "complete_state_after_correction": 0,
+            "complete_state_turns": 0,
+            "correct_correction_calls": 85,
+            "correction_calls": 96,
+            "extra_slot_flags_including_rejected": 30,
+            "forbidden_slot_flags_including_rejected": 13,
+            "intent_correct_calls": 345,
+            "json_valid": 437,
+            "median_extraction_seconds": 7.742124299999887,
+            "nonintent_exact": {
+              "f1": 0.5038095238095238,
+              "fn": 551,
+              "fp": 491,
+              "precision": 0.5186274509803922,
+              "recall": 0.4898148148148148,
+              "tp": 529
+            },
+            "schema_valid": 436,
+            "unknown_preserved_nonintent_state": 91,
+            "unknown_successful_empty_calls": 91,
+            "unknown_turns": 91
+          },
+          "extra_slot_flags_including_rejected": 35,
+          "forbidden_slot_flags_including_rejected": 13,
+          "intent_correct_calls": 394,
+          "json_valid": 498,
+          "languages": {
+            "en": {
+              "admitted": 321,
+              "calls": 394,
+              "complete_state_after_correction": 0,
+              "complete_state_turns": 0,
+              "correct_correction_calls": 92,
+              "correction_calls": 98,
+              "extra_slot_flags_including_rejected": 30,
+              "forbidden_slot_flags_including_rejected": 12,
+              "intent_correct_calls": 317,
+              "json_valid": 394,
+              "median_extraction_seconds": 7.658899750000273,
+              "nonintent_exact": {
+                "f1": 0.4631125471190092,
+                "fn": 531,
+                "fp": 466,
+                "precision": 0.4799107142857143,
+                "recall": 0.4474505723204995,
+                "tp": 430
+              },
+              "schema_valid": 393,
+              "unknown_preserved_nonintent_state": 83,
+              "unknown_successful_empty_calls": 83,
+              "unknown_turns": 83
+            },
+            "mixed": {
+              "admitted": 41,
+              "calls": 53,
+              "complete_state_after_correction": 0,
+              "complete_state_turns": 0,
+              "correct_correction_calls": 12,
+              "correction_calls": 12,
+              "extra_slot_flags_including_rejected": 1,
+              "forbidden_slot_flags_including_rejected": 1,
+              "intent_correct_calls": 38,
+              "json_valid": 53,
+              "median_extraction_seconds": 7.673630299999786,
+              "nonintent_exact": {
+                "f1": 0.4290909090909091,
+                "fn": 82,
+                "fp": 75,
+                "precision": 0.44029850746268656,
+                "recall": 0.41843971631205673,
+                "tp": 59
+              },
+              "schema_valid": 53,
+              "unknown_preserved_nonintent_state": 10,
+              "unknown_successful_empty_calls": 10,
+              "unknown_turns": 10
+            },
+            "ur": {
+              "admitted": 39,
+              "calls": 51,
+              "complete_state_after_correction": 0,
+              "complete_state_turns": 0,
+              "correct_correction_calls": 0,
+              "correction_calls": 10,
+              "extra_slot_flags_including_rejected": 4,
+              "forbidden_slot_flags_including_rejected": 0,
+              "intent_correct_calls": 39,
+              "json_valid": 51,
+              "median_extraction_seconds": 8.681285500000286,
+              "nonintent_exact": {
+                "f1": 0.7089552238805971,
+                "fn": 39,
+                "fp": 39,
+                "precision": 0.7089552238805971,
+                "recall": 0.7089552238805971,
+                "tp": 95
+              },
+              "schema_valid": 51,
+              "unknown_preserved_nonintent_state": 10,
+              "unknown_successful_empty_calls": 10,
+              "unknown_turns": 10
+            }
+          },
+          "median_extraction_seconds": 7.726911099999597,
+          "nonintent_exact": {
+            "f1": 0.4866666666666667,
+            "fn": 652,
+            "fp": 580,
+            "precision": 0.5017182130584192,
+            "recall": 0.47249190938511326,
+            "tp": 584
+          },
+          "schema_valid": 497,
+          "unknown_preserved_nonintent_state": 103,
+          "unknown_successful_empty_calls": 103,
+          "unknown_turns": 103
+        }
+      }
+    },
+    "v8": {
+      "conversations": 100,
+      "freeze_sha256": "af87dcdccefcd8787b91702ade0385d8276ba70017897e16b38eecb412017c0b",
+      "human_review_complete": false,
+      "journal_sha256": "292ca4da05eb34527cb10190f7ffbcac723802670a317e72816ab49bb6ef79c0",
+      "model_winner_established": false,
+      "paid_API_calls": 0,
+      "scope": "inspected synthetic development diagnostic, not a new final test",
+      "status": "complete",
+      "tracks": {
+        "component": {
+          "admitted": 491,
+          "calls": 498,
+          "complete_state_after_correction": 120,
+          "complete_state_turns": 486,
+          "correct_correction_calls": 120,
+          "correction_calls": 120,
+          "domains": {
+            "combined": {
+              "admitted": 51,
+              "calls": 51,
+              "complete_state_after_correction": 11,
+              "complete_state_turns": 51,
+              "correct_correction_calls": 11,
+              "correction_calls": 11,
+              "extra_slot_flags_including_rejected": 0,
+              "forbidden_slot_flags_including_rejected": 0,
+              "intent_correct_calls": 51,
+              "json_valid": 51,
+              "median_extraction_seconds": 7.381138599994301,
+              "nonintent_exact": {
+                "f1": 1.0,
+                "fn": 0,
+                "fp": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "tp": 133
+              },
+              "schema_valid": 51,
+              "unknown_preserved_nonintent_state": 11,
+              "unknown_successful_empty_calls": 11,
+              "unknown_turns": 11
+            },
+            "economics": {
+              "admitted": 292,
+              "calls": 297,
+              "complete_state_after_correction": 71,
+              "complete_state_turns": 289,
+              "correct_correction_calls": 71,
+              "correction_calls": 71,
+              "extra_slot_flags_including_rejected": 1,
+              "forbidden_slot_flags_including_rejected": 0,
+              "intent_correct_calls": 292,
+              "json_valid": 297,
+              "median_extraction_seconds": 7.325611399995978,
+              "nonintent_exact": {
+                "f1": 0.9625246548323472,
+                "fn": 29,
+                "fp": 28,
+                "precision": 0.9631578947368421,
+                "recall": 0.961892247043364,
+                "tp": 732
+              },
+              "schema_valid": 297,
+              "unknown_preserved_nonintent_state": 62,
+              "unknown_successful_empty_calls": 62,
+              "unknown_turns": 62
+            },
+            "weather": {
+              "admitted": 148,
+              "calls": 150,
+              "complete_state_after_correction": 38,
+              "complete_state_turns": 146,
+              "correct_correction_calls": 38,
+              "correction_calls": 38,
+              "extra_slot_flags_including_rejected": 0,
+              "forbidden_slot_flags_including_rejected": 0,
+              "intent_correct_calls": 148,
+              "json_valid": 150,
+              "median_extraction_seconds": 7.381577549997019,
+              "nonintent_exact": {
+                "f1": 0.9530791788856305,
+                "fn": 17,
+                "fp": 15,
+                "precision": 0.9558823529411765,
+                "recall": 0.9502923976608187,
+                "tp": 325
+              },
+              "schema_valid": 150,
+              "unknown_preserved_nonintent_state": 30,
+              "unknown_successful_empty_calls": 30,
+              "unknown_turns": 30
+            }
+          },
+          "excluding_seeded_interventions": {
+            "admitted": 430,
+            "calls": 437,
+            "complete_state_after_correction": 96,
+            "complete_state_turns": 425,
+            "correct_correction_calls": 96,
+            "correction_calls": 96,
+            "extra_slot_flags_including_rejected": 1,
+            "forbidden_slot_flags_including_rejected": 0,
+            "intent_correct_calls": 430,
+            "json_valid": 437,
+            "median_extraction_seconds": 7.339374000002863,
+            "nonintent_exact": {
+              "f1": 0.9587389893370422,
+              "fn": 46,
+              "fp": 43,
+              "precision": 0.9600742804085423,
+              "recall": 0.9574074074074074,
+              "tp": 1034
+            },
+            "schema_valid": 437,
+            "unknown_preserved_nonintent_state": 91,
+            "unknown_successful_empty_calls": 91,
+            "unknown_turns": 91
+          },
+          "extra_slot_flags_including_rejected": 1,
+          "forbidden_slot_flags_including_rejected": 0,
+          "intent_correct_calls": 491,
+          "json_valid": 498,
+          "languages": {
+            "en": {
+              "admitted": 391,
+              "calls": 394,
+              "complete_state_after_correction": 98,
+              "complete_state_turns": 388,
+              "correct_correction_calls": 98,
+              "correction_calls": 98,
+              "extra_slot_flags_including_rejected": 1,
+              "forbidden_slot_flags_including_rejected": 0,
+              "intent_correct_calls": 391,
+              "json_valid": 394,
+              "median_extraction_seconds": 7.308959450001566,
+              "nonintent_exact": {
+                "f1": 0.9854166666666667,
+                "fn": 15,
+                "fp": 13,
+                "precision": 0.986444212721585,
+                "recall": 0.9843912591050988,
+                "tp": 946
+              },
+              "schema_valid": 394,
+              "unknown_preserved_nonintent_state": 83,
+              "unknown_successful_empty_calls": 83,
+              "unknown_turns": 83
+            },
+            "mixed": {
+              "admitted": 53,
+              "calls": 53,
+              "complete_state_after_correction": 12,
+              "complete_state_turns": 53,
+              "correct_correction_calls": 12,
+              "correction_calls": 12,
+              "extra_slot_flags_including_rejected": 0,
+              "forbidden_slot_flags_including_rejected": 0,
+              "intent_correct_calls": 53,
+              "json_valid": 53,
+              "median_extraction_seconds": 7.6360984000057215,
+              "nonintent_exact": {
+                "f1": 1.0,
+                "fn": 0,
+                "fp": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "tp": 141
+              },
+              "schema_valid": 53,
+              "unknown_preserved_nonintent_state": 10,
+              "unknown_successful_empty_calls": 10,
+              "unknown_turns": 10
+            },
+            "ur": {
+              "admitted": 47,
+              "calls": 51,
+              "complete_state_after_correction": 10,
+              "complete_state_turns": 45,
+              "correct_correction_calls": 10,
+              "correction_calls": 10,
+              "extra_slot_flags_including_rejected": 0,
+              "forbidden_slot_flags_including_rejected": 0,
+              "intent_correct_calls": 47,
+              "json_valid": 51,
+              "median_extraction_seconds": 8.102060099998198,
+              "nonintent_exact": {
+                "f1": 0.7715355805243446,
+                "fn": 31,
+                "fp": 30,
+                "precision": 0.7744360902255639,
+                "recall": 0.7686567164179104,
+                "tp": 103
+              },
+              "schema_valid": 51,
+              "unknown_preserved_nonintent_state": 10,
+              "unknown_successful_empty_calls": 10,
+              "unknown_turns": 10
+            }
+          },
+          "median_extraction_seconds": 7.343238450001081,
+          "nonintent_exact": {
+            "f1": 0.9639530174159578,
+            "fn": 46,
+            "fp": 43,
+            "precision": 0.9651257096512571,
+            "recall": 0.9627831715210357,
+            "tp": 1190
+          },
+          "schema_valid": 498,
+          "unknown_preserved_nonintent_state": 103,
+          "unknown_successful_empty_calls": 103,
+          "unknown_turns": 103
+        },
+        "rollout": {
+          "admitted": 491,
+          "calls": 498,
+          "complete_state_after_correction": 111,
+          "complete_state_turns": 458,
+          "correct_correction_calls": 120,
+          "correction_calls": 120,
+          "domains": {
+            "combined": {
+              "admitted": 51,
+              "calls": 51,
+              "complete_state_after_correction": 11,
+              "complete_state_turns": 51,
+              "correct_correction_calls": 11,
+              "correction_calls": 11,
+              "extra_slot_flags_including_rejected": 0,
+              "forbidden_slot_flags_including_rejected": 0,
+              "intent_correct_calls": 51,
+              "json_valid": 51,
+              "median_extraction_seconds": 7.715178400001605,
+              "nonintent_exact": {
+                "f1": 1.0,
+                "fn": 0,
+                "fp": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "tp": 133
+              },
+              "schema_valid": 51,
+              "unknown_preserved_nonintent_state": 11,
+              "unknown_successful_empty_calls": 11,
+              "unknown_turns": 11
+            },
+            "economics": {
+              "admitted": 292,
+              "calls": 297,
+              "complete_state_after_correction": 64,
+              "complete_state_turns": 268,
+              "correct_correction_calls": 71,
+              "correction_calls": 71,
+              "extra_slot_flags_including_rejected": 1,
+              "forbidden_slot_flags_including_rejected": 0,
+              "intent_correct_calls": 292,
+              "json_valid": 297,
+              "median_extraction_seconds": 7.342125200004375,
+              "nonintent_exact": {
+                "f1": 0.9625246548323472,
+                "fn": 29,
+                "fp": 28,
+                "precision": 0.9631578947368421,
+                "recall": 0.961892247043364,
+                "tp": 732
+              },
+              "schema_valid": 297,
+              "unknown_preserved_nonintent_state": 62,
+              "unknown_successful_empty_calls": 62,
+              "unknown_turns": 62
+            },
+            "weather": {
+              "admitted": 148,
+              "calls": 150,
+              "complete_state_after_correction": 36,
+              "complete_state_turns": 139,
+              "correct_correction_calls": 38,
+              "correction_calls": 38,
+              "extra_slot_flags_including_rejected": 0,
+              "forbidden_slot_flags_including_rejected": 0,
+              "intent_correct_calls": 148,
+              "json_valid": 150,
+              "median_extraction_seconds": 7.336104250000062,
+              "nonintent_exact": {
+                "f1": 0.9530791788856305,
+                "fn": 17,
+                "fp": 15,
+                "precision": 0.9558823529411765,
+                "recall": 0.9502923976608187,
+                "tp": 325
+              },
+              "schema_valid": 150,
+              "unknown_preserved_nonintent_state": 30,
+              "unknown_successful_empty_calls": 30,
+              "unknown_turns": 30
+            }
+          },
+          "excluding_seeded_interventions": {
+            "admitted": 430,
+            "calls": 437,
+            "complete_state_after_correction": 87,
+            "complete_state_turns": 397,
+            "correct_correction_calls": 96,
+            "correction_calls": 96,
+            "extra_slot_flags_including_rejected": 1,
+            "forbidden_slot_flags_including_rejected": 0,
+            "intent_correct_calls": 430,
+            "json_valid": 437,
+            "median_extraction_seconds": 7.364108599998872,
+            "nonintent_exact": {
+              "f1": 0.9587389893370422,
+              "fn": 46,
+              "fp": 43,
+              "precision": 0.9600742804085423,
+              "recall": 0.9574074074074074,
+              "tp": 1034
+            },
+            "schema_valid": 437,
+            "unknown_preserved_nonintent_state": 91,
+            "unknown_successful_empty_calls": 91,
+            "unknown_turns": 91
+          },
+          "extra_slot_flags_including_rejected": 1,
+          "forbidden_slot_flags_including_rejected": 0,
+          "intent_correct_calls": 491,
+          "json_valid": 498,
+          "languages": {
+            "en": {
+              "admitted": 391,
+              "calls": 394,
+              "complete_state_after_correction": 94,
+              "complete_state_turns": 379,
+              "correct_correction_calls": 98,
+              "correction_calls": 98,
+              "extra_slot_flags_including_rejected": 1,
+              "forbidden_slot_flags_including_rejected": 0,
+              "intent_correct_calls": 391,
+              "json_valid": 394,
+              "median_extraction_seconds": 7.417138149998209,
+              "nonintent_exact": {
+                "f1": 0.9854166666666667,
+                "fn": 15,
+                "fp": 13,
+                "precision": 0.986444212721585,
+                "recall": 0.9843912591050988,
+                "tp": 946
+              },
+              "schema_valid": 394,
+              "unknown_preserved_nonintent_state": 83,
+              "unknown_successful_empty_calls": 83,
+              "unknown_turns": 83
+            },
+            "mixed": {
+              "admitted": 53,
+              "calls": 53,
+              "complete_state_after_correction": 12,
+              "complete_state_turns": 53,
+              "correct_correction_calls": 12,
+              "correction_calls": 12,
+              "extra_slot_flags_including_rejected": 0,
+              "forbidden_slot_flags_including_rejected": 0,
+              "intent_correct_calls": 53,
+              "json_valid": 53,
+              "median_extraction_seconds": 7.286111400004302,
+              "nonintent_exact": {
+                "f1": 1.0,
+                "fn": 0,
+                "fp": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "tp": 141
+              },
+              "schema_valid": 53,
+              "unknown_preserved_nonintent_state": 10,
+              "unknown_successful_empty_calls": 10,
+              "unknown_turns": 10
+            },
+            "ur": {
+              "admitted": 47,
+              "calls": 51,
+              "complete_state_after_correction": 5,
+              "complete_state_turns": 26,
+              "correct_correction_calls": 10,
+              "correction_calls": 10,
+              "extra_slot_flags_including_rejected": 0,
+              "forbidden_slot_flags_including_rejected": 0,
+              "intent_correct_calls": 47,
+              "json_valid": 51,
+              "median_extraction_seconds": 6.9657143000004,
+              "nonintent_exact": {
+                "f1": 0.7715355805243446,
+                "fn": 31,
+                "fp": 30,
+                "precision": 0.7744360902255639,
+                "recall": 0.7686567164179104,
+                "tp": 103
+              },
+              "schema_valid": 51,
+              "unknown_preserved_nonintent_state": 10,
+              "unknown_successful_empty_calls": 10,
+              "unknown_turns": 10
+            }
+          },
+          "median_extraction_seconds": 7.353298750000249,
+          "nonintent_exact": {
+            "f1": 0.9639530174159578,
+            "fn": 46,
+            "fp": 43,
+            "precision": 0.9651257096512571,
+            "recall": 0.9627831715210357,
+            "tp": 1190
+          },
+          "schema_valid": 498,
+          "unknown_preserved_nonintent_state": 103,
+          "unknown_successful_empty_calls": 103,
+          "unknown_turns": 103
+        }
+      }
+    }
+  },
+  "paid_API_calls": 0,
+  "rows": [
+    {
+      "admitted": 491,
+      "arm": "v8",
+      "calls": 498,
+      "complete_state_after_correction": 120,
+      "complete_state_turns": 486,
+      "correct_correction_calls": 120,
+      "exact_f1": 0.9639530174159578,
+      "extra_slot_flags_including_rejected": 1,
+      "forbidden_slot_flags_including_rejected": 0,
+      "json_valid": 498,
+      "median_extraction_seconds": 7.343238450001081,
+      "precision": 0.9651257096512571,
+      "recall": 0.9627831715210357,
+      "schema_valid": 498,
+      "track": "component",
+      "unknown_preserved_nonintent_state": 103,
+      "unknown_successful_empty_calls": 103
+    },
+    {
+      "admitted": 491,
+      "arm": "v8",
+      "calls": 498,
+      "complete_state_after_correction": 111,
+      "complete_state_turns": 458,
+      "correct_correction_calls": 120,
+      "exact_f1": 0.9639530174159578,
+      "extra_slot_flags_including_rejected": 1,
+      "forbidden_slot_flags_including_rejected": 0,
+      "json_valid": 498,
+      "median_extraction_seconds": 7.353298750000249,
+      "precision": 0.9651257096512571,
+      "recall": 0.9627831715210357,
+      "schema_valid": 498,
+      "track": "rollout",
+      "unknown_preserved_nonintent_state": 103,
+      "unknown_successful_empty_calls": 103
+    },
+    {
+      "admitted": 412,
+      "arm": "v6",
+      "calls": 498,
+      "complete_state_after_correction": 107,
+      "complete_state_turns": 358,
+      "correct_correction_calls": 77,
+      "exact_f1": 0.484394506866417,
+      "extra_slot_flags_including_rejected": 34,
+      "forbidden_slot_flags_including_rejected": 13,
+      "json_valid": 498,
+      "median_extraction_seconds": 7.965795699999262,
+      "precision": 0.4987146529562982,
+      "recall": 0.470873786407767,
+      "schema_valid": 497,
+      "track": "component",
+      "unknown_preserved_nonintent_state": 103,
+      "unknown_successful_empty_calls": 103
+    },
+    {
+      "admitted": 401,
+      "arm": "v6",
+      "calls": 498,
+      "complete_state_after_correction": 0,
+      "complete_state_turns": 0,
+      "correct_correction_calls": 104,
+      "exact_f1": 0.4866666666666667,
+      "extra_slot_flags_including_rejected": 35,
+      "forbidden_slot_flags_including_rejected": 13,
+      "json_valid": 498,
+      "median_extraction_seconds": 7.726911099999597,
+      "precision": 0.5017182130584192,
+      "recall": 0.47249190938511326,
+      "schema_valid": 497,
+      "track": "rollout",
+      "unknown_preserved_nonintent_state": 103,
+      "unknown_successful_empty_calls": 103
+    }
+  ],
+  "scope": "v8-development-diagnostic-1; inspected synthetic development, not final test",
+  "subgroup_differences": [
+    {
+      "F1_regressed": false,
+      "extra_flags_increased": false,
+      "scope": "overall",
+      "track": "component",
+      "v8_minus_v6": {
+        "admitted": 79,
+        "complete_state_turns": 128,
+        "exact_f1": 0.47955851054954085,
+        "extra_slot_flags_including_rejected": -33,
+        "forbidden_slot_flags_including_rejected": -13,
+        "json_valid": 0,
+        "schema_valid": 1
+      }
+    },
+    {
+      "F1_regressed": false,
+      "extra_flags_increased": false,
+      "scope": "en",
+      "track": "component",
+      "v8_minus_v6": {
+        "admitted": 59,
+        "complete_state_turns": 92,
+        "exact_f1": 0.5193240940078938,
+        "extra_slot_flags_including_rejected": -24,
+        "forbidden_slot_flags_including_rejected": -12,
+        "json_valid": 0,
+        "schema_valid": 1
+      }
+    },
+    {
+      "F1_regressed": false,
+      "extra_flags_increased": false,
+      "scope": "ur",
+      "track": "component",
+      "v8_minus_v6": {
+        "admitted": 9,
+        "complete_state_turns": 20,
+        "exact_f1": 0.06521587792211403,
+        "extra_slot_flags_including_rejected": -7,
+        "forbidden_slot_flags_including_rejected": 0,
+        "json_valid": 0,
+        "schema_valid": 0
+      }
+    },
+    {
+      "F1_regressed": false,
+      "extra_flags_increased": false,
+      "scope": "mixed",
+      "track": "component",
+      "v8_minus_v6": {
+        "admitted": 11,
+        "complete_state_turns": 16,
+        "exact_f1": 0.6086956521739131,
+        "extra_slot_flags_including_rejected": -2,
+        "forbidden_slot_flags_including_rejected": -1,
+        "json_valid": 0,
+        "schema_valid": 0
+      }
+    },
+    {
+      "F1_regressed": false,
+      "extra_flags_increased": false,
+      "scope": "weather",
+      "track": "component",
+      "v8_minus_v6": {
+        "admitted": 23,
+        "complete_state_turns": 39,
+        "exact_f1": 0.5223562873193655,
+        "extra_slot_flags_including_rejected": -16,
+        "forbidden_slot_flags_including_rejected": -8,
+        "json_valid": 0,
+        "schema_valid": 0
+      }
+    },
+    {
+      "F1_regressed": false,
+      "extra_flags_increased": false,
+      "scope": "economics",
+      "track": "component",
+      "v8_minus_v6": {
+        "admitted": 48,
+        "complete_state_turns": 74,
+        "exact_f1": 0.45475963119966656,
+        "extra_slot_flags_including_rejected": -15,
+        "forbidden_slot_flags_including_rejected": -4,
+        "json_valid": 0,
+        "schema_valid": 1
+      }
+    },
+    {
+      "F1_regressed": false,
+      "extra_flags_increased": false,
+      "scope": "combined",
+      "track": "component",
+      "v8_minus_v6": {
+        "admitted": 8,
+        "complete_state_turns": 15,
+        "exact_f1": 0.5116279069767442,
+        "extra_slot_flags_including_rejected": -2,
+        "forbidden_slot_flags_including_rejected": -1,
+        "json_valid": 0,
+        "schema_valid": 0
+      }
+    },
+    {
+      "F1_regressed": false,
+      "extra_flags_increased": false,
+      "scope": "overall",
+      "track": "rollout",
+      "v8_minus_v6": {
+        "admitted": 90,
+        "complete_state_turns": 458,
+        "exact_f1": 0.47728635074929116,
+        "extra_slot_flags_including_rejected": -34,
+        "forbidden_slot_flags_including_rejected": -13,
+        "json_valid": 0,
+        "schema_valid": 1
+      }
+    },
+    {
+      "F1_regressed": false,
+      "extra_flags_increased": false,
+      "scope": "en",
+      "track": "rollout",
+      "v8_minus_v6": {
+        "admitted": 70,
+        "complete_state_turns": 379,
+        "exact_f1": 0.5223041195476575,
+        "extra_slot_flags_including_rejected": -29,
+        "forbidden_slot_flags_including_rejected": -12,
+        "json_valid": 0,
+        "schema_valid": 1
+      }
+    },
+    {
+      "F1_regressed": false,
+      "extra_flags_increased": false,
+      "scope": "ur",
+      "track": "rollout",
+      "v8_minus_v6": {
+        "admitted": 8,
+        "complete_state_turns": 26,
+        "exact_f1": 0.0625803566437475,
+        "extra_slot_flags_including_rejected": -4,
+        "forbidden_slot_flags_including_rejected": 0,
+        "json_valid": 0,
+        "schema_valid": 0
+      }
+    },
+    {
+      "F1_regressed": false,
+      "extra_flags_increased": false,
+      "scope": "mixed",
+      "track": "rollout",
+      "v8_minus_v6": {
+        "admitted": 12,
+        "complete_state_turns": 53,
+        "exact_f1": 0.5709090909090909,
+        "extra_slot_flags_including_rejected": -1,
+        "forbidden_slot_flags_including_rejected": -1,
+        "json_valid": 0,
+        "schema_valid": 0
+      }
+    },
+    {
+      "F1_regressed": false,
+      "extra_flags_increased": false,
+      "scope": "weather",
+      "track": "rollout",
+      "v8_minus_v6": {
+        "admitted": 30,
+        "complete_state_turns": 139,
+        "exact_f1": 0.5283803837049077,
+        "extra_slot_flags_including_rejected": -14,
+        "forbidden_slot_flags_including_rejected": -8,
+        "json_valid": 0,
+        "schema_valid": 0
+      }
+    },
+    {
+      "F1_regressed": false,
+      "extra_flags_increased": false,
+      "scope": "economics",
+      "track": "rollout",
+      "v8_minus_v6": {
+        "admitted": 51,
+        "complete_state_turns": 268,
+        "exact_f1": 0.450362492670185,
+        "extra_slot_flags_including_rejected": -17,
+        "forbidden_slot_flags_including_rejected": -4,
+        "json_valid": 0,
+        "schema_valid": 1
+      }
+    },
+    {
+      "F1_regressed": false,
+      "extra_flags_increased": false,
+      "scope": "combined",
+      "track": "rollout",
+      "v8_minus_v6": {
+        "admitted": 9,
+        "complete_state_turns": 51,
+        "exact_f1": 0.5,
+        "extra_slot_flags_including_rejected": -3,
+        "forbidden_slot_flags_including_rejected": -1,
+        "json_valid": 0,
+        "schema_valid": 0
+      }
+    }
+  ],
+  "v6_status": {
+    "adapter": {
+      "path": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v6-20261003T113807Z\\full\\best-adapter",
+      "sha256": {
+        "adapter_config.json": "38f60de9678324e91fa882ed86c70d09e4a39b27ae28884374ddc3e6fece15ef",
+        "adapter_model.safetensors": "e7add7b8b02d24615ed89067c7761c3985a4a6afb7c84ca2a72e3b06fd84e74d"
+      }
+    },
+    "status": "matched_development_complete"
+  }
+}

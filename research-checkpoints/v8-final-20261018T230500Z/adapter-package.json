@@ -1,0 +1,16 @@
+{
+  "CRC_and_extracted_SHA256_verified": true,
+  "bytes": 62226232,
+  "filename": "qwen35-2b-lora-v8-final-20261018T230500Z-adapter.zip",
+  "location_on_training_PC": "C:\\Users\\Abdullah\\Downloads\\qwen35-2b-lora-v8-final-20261018T230500Z-adapter.zip",
+  "members_sha256": {
+    "README.md": "7073c2c21a75ee172911105184990b3bc9abb1b077a02c3ccfef5c19322b5c60",
+    "best-adapter/adapter_config.json": "a1ce14418c5c22375ccfd773338ef1b09117ec9b9e72db034c71ade886b4664c",
+    "best-adapter/adapter_model.safetensors": "c83e0f1a458125970eb70ff360ebead02618f2f48b5bbb59e2ca91a5b7c4c0df",
+    "best-adapter/selection.json": "d3edaf644033a0c3bca146b52ba4b9c999c87fa1e92ad24b2761ae9721e2f70b",
+    "training-completion.json": "5bd0379470f1694b49cfb1c744a37a755d97e86df956a47d1ed3d6906a62c062"
+  },
+  "optimizer_checkpoints_included": false,
+  "sha256": "b582da1bfad64814bcecbbc63039c35e573f30d2b9166a89b3f818b3497408e4",
+  "uploaded_to_normal_Git": false
+}
