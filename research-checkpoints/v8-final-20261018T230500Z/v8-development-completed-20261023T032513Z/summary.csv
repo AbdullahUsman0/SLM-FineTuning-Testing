@@ -1,0 +1,3 @@
+track,calls,exact_f1,precision,recall,json_valid,schema_valid,admitted,extra_slot_flags_including_rejected,forbidden_slot_flags_including_rejected,correct_correction_calls,correction_calls,complete_state_after_correction,complete_state_turns,unknown_successful_empty_calls,unknown_preserved_nonintent_state,unknown_turns,median_extraction_seconds
+component,498,0.9639530174159578,0.9651257096512571,0.9627831715210357,498,498,491,1,0,120,120,120,486,103,103,103,7.343238450001081
+rollout,498,0.9639530174159578,0.9651257096512571,0.9627831715210357,498,498,491,1,0,120,120,111,458,103,103,103,7.353298750000249

@@ -1,0 +1,17 @@
+{
+  "files_sha256": {
+    "README.md": "e451614e621d5ed9c0c97260e8dac3aded87890c4f33010509dd16acd73048d3",
+    "SNAPSHOT_STATUS.json": "0166528692a80f8e79cd8fd46c45abb4eb772f9c7383f6a8c1e1883bf88e6f2e",
+    "failure-findings.json": "347e13d547fe48cf75e3d5f3c85850bd04ce4a00c83a51b141e166b64378da42",
+    "freeze.json": "af87dcdccefcd8787b91702ade0385d8276ba70017897e16b38eecb412017c0b",
+    "granular-domain-breakdown.json": "eeca5a52b809af9fa7fe071ec2efa0db3cce3493ebff1d92302e8244064e55db",
+    "package-snapshot.py": "69d8dc1ab4896b369e8639af2db614670d947adf2a5017b2d6bfd702738425b6",
+    "raw-archive-receipt.json": "d9d10cafff364ef6d78bb7879c97b13bcdd4cea3744b570321c6b6c329dd30b7",
+    "runtime.json": "9ef55b15bb7823b5e788311be9e3e49e78d3e71233b9e779e309605686803776",
+    "summary.csv": "e1ab0f324c9e68161ba4b5a25b4e1cb8a9edefd96f0f32b3f1412237dcddad81",
+    "summary.json": "4d7d2e5ec8371e5c94ae5d07851da91035c1e8eaf9a8d291b55a418654071045",
+    "v8-development-raw.zip": "e0a7d968eb1506afdcd3a8d18a0d81d37a01ff3321f181adb277ee6cdee43437",
+    "v8-development-raw.zip.sha256": "338b2653b8fe08f299a467e73bcd92639b49547a9d72a3bc2543f11db29d7637"
+  },
+  "weights_optimizer_credentials_caches_included": false
+}
