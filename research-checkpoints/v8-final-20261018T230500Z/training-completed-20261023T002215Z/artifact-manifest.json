@@ -1,9 +1,9 @@
 {
-  "at_UTC": "2026-10-23T00:34:52.422304+00:00",
+  "at_UTC": "2026-10-23T00:37:23.780660+00:00",
   "files_sha256": {
     "adapter-selection.json": "d3edaf644033a0c3bca146b52ba4b9c999c87fa1e92ad24b2761ae9721e2f70b",
     "ADAPTER_README.md": "abc0130716e85bf6eb7b3c490ccad456dc826eabfb7e60e91a0ed98152a7d7e4",
-    "ADAPTER_RELEASE.json": "6f80f71b22524c26084e04b8223f2a4d8bf02404bf4a542401b0a19e800675b7",
+    "ADAPTER_RELEASE.json": "29c4f8599cf069240532a9c2156682cc2e844994f8efe79a157c254f8532089c",
     "checkpoint-2234-independent-verification.json": "a0bc45b26bc1fef8b6acbe2fd26cff730c70d3a42cd55a110aadb6ec610fa202",
     "download_adapter.py": "11f3211783d58bb2d4bbf5b61ac2b874683d749b151587819ad197f86c4057ac",
     "ENVIRONMENT_FREEZE.txt": "1219b75af84123571b28f8ec5179ba7626b94dbc55587e0102378565f4f4d4b2",
@@ -18,7 +18,8 @@
     "RESEARCH_STATUS.json": "387e523d2fbf9da5a8972ef57507bed67f0f310fc1167428028c59f0b20528fe",
     "training-completion.json": "5bd0379470f1694b49cfb1c744a37a755d97e86df956a47d1ed3d6906a62c062",
     "training-evaluation.json": "60a4af44b5e9a5caf3405cf01fdf4fe91774556f77cbe3e520009cbe27b51c3f",
-    "training-run-manifest.json": "1151ec4ccd4b7c01623bd6c65005091f5203ec25701783f053c46d5edff1f3a5"
+    "training-run-manifest.json": "1151ec4ccd4b7c01623bd6c65005091f5203ec25701783f053c46d5edff1f3a5",
+    "TRANSFER_VERIFICATION.json": "f36699e5f9c728a5ae82c7ba0016b8b47e9b0e7b5fe2d2e92a5cb4c86acd5dd9"
   },
   "weights_optimizer_states_datasets_caches_in_normal_Git": false
 }

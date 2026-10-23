@@ -25,11 +25,34 @@
     "adapter_model.safetensors": "c83e0f1a458125970eb70ff360ebead02618f2f48b5bbb59e2ca91a5b7c4c0df",
     "selection.json": "d3edaf644033a0c3bca146b52ba4b9c999c87fa1e92ad24b2761ae9721e2f70b"
   },
-  "publication_status": "prepared_not_yet_uploaded",
+  "publication_status": "published_prerelease_download_verified",
   "weights_in_normal_Git": false,
   "development_comparison_status_at_preparation": "running; not a complete behavioral result",
   "model_winner_established": false,
   "independent_human_review_complete": false,
   "paid_API_calls": 0,
-  "final_test_labels_accessed": false
+  "final_test_labels_accessed": false,
+  "published_at_UTC": "2026-10-23T00:36:03.447741+00:00",
+  "release_id": 421335060,
+  "publication_metadata_commit": "b420e4431f6873c4fbb08ae489aa1343708d9405",
+  "assets": [
+    {
+      "name": "qwen35-2b-lora-v8-final-20261018T230500Z-experimental-final-step-20261023T003303Z.zip",
+      "id": 667518654,
+      "url": "https://github.com/AbdullahUsman0/SLM-FineTuning-Testing/releases/download/v8-adapter-20261022/qwen35-2b-lora-v8-final-20261018T230500Z-experimental-final-step-20261023T003303Z.zip",
+      "bytes": 62230929,
+      "sha256": "d2245b988f5b5e6a336c4518f3a161c46e81fc3fe55284735e53bd6ece096653",
+      "github_digest": "sha256:d2245b988f5b5e6a336c4518f3a161c46e81fc3fe55284735e53bd6ece096653",
+      "download_sha256_verified": true
+    },
+    {
+      "name": "qwen35-2b-lora-v8-final-20261018T230500Z-experimental-final-step-20261023T003303Z.zip.sha256",
+      "id": 667518938,
+      "url": "https://github.com/AbdullahUsman0/SLM-FineTuning-Testing/releases/download/v8-adapter-20261022/qwen35-2b-lora-v8-final-20261018T230500Z-experimental-final-step-20261023T003303Z.zip.sha256",
+      "bytes": 153,
+      "sha256": "2539fa7b71423750865173b8209c2109d7e4d56355f9348d8205b53fcae3c842",
+      "github_digest": "sha256:2539fa7b71423750865173b8209c2109d7e4d56355f9348d8205b53fcae3c842",
+      "download_sha256_verified": true
+    }
+  ]
 }
