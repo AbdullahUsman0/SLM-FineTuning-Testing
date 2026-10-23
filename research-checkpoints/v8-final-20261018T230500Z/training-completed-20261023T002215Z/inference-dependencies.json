@@ -1,0 +1,21 @@
+{
+  "python": "3.12.10",
+  "CUDA_runtime": "12.8",
+  "GPU": "NVIDIA RTX A4000",
+  "packages": {
+    "torch": "2.11.0+cu128",
+    "transformers": "5.15.0",
+    "datasets": "5.0.1",
+    "accelerate": "1.14.0",
+    "peft": "0.20.0",
+    "trl": "1.9.2",
+    "safetensors": "0.8.0",
+    "tokenizers": "0.22.2",
+    "pydantic": "2.13.5",
+    "jsonschema": "4.26.0"
+  },
+  "base_model": "Qwen/Qwen3.5-2B",
+  "base_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "architecture": "Qwen3_5ForConditionalGeneration",
+  "fpy_revision": "04d52c015d1e3ecdefe92b87116f209361509b4b"
+}

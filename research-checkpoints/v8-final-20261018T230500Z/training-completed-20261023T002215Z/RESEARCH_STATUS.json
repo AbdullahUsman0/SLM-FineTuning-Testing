@@ -1,0 +1,41 @@
+{
+  "at_UTC": "2026-10-23T00:33:07.019850+00:00",
+  "training_status": "complete_and_all_224_checkpoints_verified_by_supplied_worker",
+  "optimizer_steps": 2234,
+  "epochs": 2,
+  "seed": 42,
+  "dataset": "corpus-v8/v8-final-20261018-r1",
+  "corpus_manifest_sha256": "abedd97e642152786db56d3e98a0f997d1c241bf6549365c56ddd01ac5cab2e9",
+  "training_source_commit": "bd36ff605d1d7e6c5f79de6e65d60785e0afe49d",
+  "fpy_revision": "04d52c015d1e3ecdefe92b87116f209361509b4b",
+  "final_evaluation": {
+    "eval_loss": 0.0033881000708788633,
+    "eval_runtime": 3917.1254,
+    "eval_samples_per_second": 1.016,
+    "eval_steps_per_second": 1.016,
+    "eval_entropy": 0.00019481909126195786,
+    "eval_num_tokens": 13580169.0,
+    "eval_mean_token_accuracy": 0.999569866570396,
+    "epoch": 2.0,
+    "adapter_selection": {
+      "best-adapter": "final-step adapter; frequent durability checkpoints retained for later behavioral selection",
+      "task_winner_selected": false,
+      "behavioral_selection": "pending; compare all retained checkpoints separately",
+      "loss_best_checkpoint": null
+    }
+  },
+  "development_evaluation": {
+    "status": "running",
+    "version": "v8-development-diagnostic-1",
+    "freeze_file_in_running_evaluation": "D:\\SLM\\FYP-model-runs\\qwen35-2b-lora-v8-final-20261018T230500Z\\development-evaluation\\freeze.json",
+    "completed_results_expected_under": "research-checkpoints/v8-final-20261018T230500Z",
+    "v8_summary": "v8/summary.json",
+    "v6_summary": "v6/summary.json",
+    "comparison": "comparison.json",
+    "summary_table": "summary.csv"
+  },
+  "final_test_accessed": false,
+  "independent_human_review_complete": false,
+  "new_paid_API_calls": 0,
+  "model_winner_established": false
+}

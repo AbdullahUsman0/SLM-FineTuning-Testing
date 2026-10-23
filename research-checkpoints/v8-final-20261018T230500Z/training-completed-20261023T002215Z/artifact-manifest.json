@@ -1,0 +1,24 @@
+{
+  "at_UTC": "2026-10-23T00:34:52.422304+00:00",
+  "files_sha256": {
+    "adapter-selection.json": "d3edaf644033a0c3bca146b52ba4b9c999c87fa1e92ad24b2761ae9721e2f70b",
+    "ADAPTER_README.md": "abc0130716e85bf6eb7b3c490ccad456dc826eabfb7e60e91a0ed98152a7d7e4",
+    "ADAPTER_RELEASE.json": "6f80f71b22524c26084e04b8223f2a4d8bf02404bf4a542401b0a19e800675b7",
+    "checkpoint-2234-independent-verification.json": "a0bc45b26bc1fef8b6acbe2fd26cff730c70d3a42cd55a110aadb6ec610fa202",
+    "download_adapter.py": "11f3211783d58bb2d4bbf5b61ac2b874683d749b151587819ad197f86c4057ac",
+    "ENVIRONMENT_FREEZE.txt": "1219b75af84123571b28f8ec5179ba7626b94dbc55587e0102378565f4f4d4b2",
+    "inference-dependencies.json": "3d3476395b5fdd385917eb7aa415fb0beabab0839886e9157f5c8194fd6c5e85",
+    "inventory.json": "4c8b6e09118f7bcb9ba8a7de0e161dc1c6fd5f059bc5481666b499cbe65a294f",
+    "launch-config.json": "ca2f93c75c661f74986e1f650589d3826ae70296a54c321c4aef25c41636d1c6",
+    "launch-config.sha256.json": "4206a51e1440ca90f2102e565ba6571d6cd02b011a2d883782a412f4ce18046e",
+    "LOCAL_CODEX_HANDOFF.md": "b5d24af0abbc98964aba4820f18a0cbd2eba21e66994557536411a0ef152bf53",
+    "package-publish-v8.py": "a55ad302b8076b42c1d375b6ef11e02ae7569c941fbca4d69449e6a63f44c76e",
+    "preflight.json": "d125cc40a25bb7fceff24bfdc64cce7103c02cf976a567eb4b671e721805a9da",
+    "README.md": "8871baff7760602391a9eb5faf02bb72b45e9eb3fb40f9c81cc99bea275bee3a",
+    "RESEARCH_STATUS.json": "387e523d2fbf9da5a8972ef57507bed67f0f310fc1167428028c59f0b20528fe",
+    "training-completion.json": "5bd0379470f1694b49cfb1c744a37a755d97e86df956a47d1ed3d6906a62c062",
+    "training-evaluation.json": "60a4af44b5e9a5caf3405cf01fdf4fe91774556f77cbe3e520009cbe27b51c3f",
+    "training-run-manifest.json": "1151ec4ccd4b7c01623bd6c65005091f5203ec25701783f053c46d5edff1f3a5"
+  },
+  "weights_optimizer_states_datasets_caches_in_normal_Git": false
+}

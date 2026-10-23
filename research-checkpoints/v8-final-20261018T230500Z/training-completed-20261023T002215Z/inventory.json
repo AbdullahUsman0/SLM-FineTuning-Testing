@@ -1,0 +1,1 @@
+{"cuda": "12.8", "disk_free_bytes": 293102428160, "gpu": "NVIDIA RTX A4000", "gpu_bytes": 17170956288, "platform": "Windows-11-10.0.22621-SP0", "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]", "repo_head": "bd36ff605d1d7e6c5f79de6e65d60785e0afe49d", "torch": "2.11.0+cu128"}

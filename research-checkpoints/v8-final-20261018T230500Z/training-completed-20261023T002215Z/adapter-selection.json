@@ -1,0 +1,6 @@
+{
+  "best-adapter": "final-step adapter; frequent durability checkpoints retained for later behavioral selection",
+  "task_winner_selected": false,
+  "behavioral_selection": "pending; compare all retained checkpoints separately",
+  "loss_best_checkpoint": null
+}
