@@ -1,0 +1,12 @@
+{
+  "artifact": "bounded remote evaluation handoff; no new results",
+  "zip_name": "remote-v8-openai-handoff-20261023.zip",
+  "zip_sha256": "07e4c94337183866f46363a219a8192577e68e992737bc560177da4568ccd42f",
+  "zip_bytes": 42085,
+  "required_research_ancestor": "45fd8bd0edfe4996d961d638c5d5d8de63f488bd",
+  "fpy_snapshot": "9bc2bd18c495514efa79a4371be1d706b9fc3824 plus bundled four-file patch",
+  "total_api_budget_usd": 1.0,
+  "internal_dispatch_ceiling_usd": 0.9,
+  "new_inference_calls": 0,
+  "new_API_spend_usd": 0
+}
