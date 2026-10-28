@@ -1,0 +1,50 @@
+{
+  "scope": "Complete JSON diff of original versus user-adjudicated main cases",
+  "all_changes": [
+    {
+      "path": "main_cases/8/gold_final_statuses/target_column",
+      "before": "provided",
+      "after": "invalid"
+    },
+    {
+      "path": "main_cases/8/turns/1/expected_state_after/target_column/status",
+      "before": "provided",
+      "after": "invalid"
+    },
+    {
+      "path": "main_cases/8/turns/2/context_state/target_column/status",
+      "before": "provided",
+      "after": "invalid"
+    },
+    {
+      "path": "main_cases/8/turns/2/expected_state_after/target_column/status",
+      "before": "provided",
+      "after": "invalid"
+    },
+    {
+      "path": "main_cases/8/turns/3/context_state/target_column/status",
+      "before": "provided",
+      "after": "invalid"
+    },
+    {
+      "path": "main_cases/8/turns/3/expected_state_after/target_column/status",
+      "before": "provided",
+      "after": "invalid"
+    },
+    {
+      "path": "main_cases/8/turns/4/context_state/target_column/status",
+      "before": "provided",
+      "after": "invalid"
+    },
+    {
+      "path": "main_cases/8/turns/4/expected_state_after/target_column/status",
+      "before": "provided",
+      "after": "invalid"
+    }
+  ],
+  "raw_extraction_gold_unchanged": true,
+  "case_IDs_and_order_unchanged": true,
+  "only_approved_column_status_and_derived_final_state_status_changed": true,
+  "before_SHA256": "92fcdd5f4b35e86bdf34aa93682401ca723340f9d70afd9e77fbac813dac44f5",
+  "after_SHA256": "ab458bc83c9e51f1f979113e4f9bc511e4bf9489f125e9bdccca70072bee9dcc"
+}

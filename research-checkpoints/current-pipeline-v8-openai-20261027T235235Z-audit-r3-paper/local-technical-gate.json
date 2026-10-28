@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "legacy_probe": {
+    "calls": 9,
+    "exact": {
+      "f1": 0.8095238095238095,
+      "fn": 4,
+      "fp": 4,
+      "precision": 0.8095238095238095,
+      "recall": 0.8095238095238095,
+      "tp": 17
+    },
+    "instructions_SHA256": "31ccffdf4991dc86ebb7aa2edaa64aa5613c2a326fddf8905c42ce3db963684b",
+    "json_valid": 9,
+    "mode": "legacy",
+    "new_paid_requests": 0,
+    "positive_turns_admitted": 6,
+    "raw_contract_admitted": 8,
+    "schema_valid": 9,
+    "scope": "LOCAL-only disjoint pilot diagnostic, not main result"
+  },
+  "explicit_probe": {
+    "calls": 9,
+    "exact": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 21
+    },
+    "instructions_SHA256": "8520287adc2bf53bf0e86ee5d41e64b73b2506b63ee3b759a33a9c871d56799f",
+    "json_valid": 9,
+    "mode": "explicit",
+    "new_paid_requests": 0,
+    "positive_turns_admitted": 7,
+    "raw_contract_admitted": 9,
+    "schema_valid": 9,
+    "scope": "LOCAL-only disjoint pilot diagnostic, not main result"
+  },
+  "all_explicit_probe_inputs_recomputed_identically": true,
+  "explicit_instructions_equal_planned_common_instructions": true,
+  "interface_correction_sha256": "92d03614007e96bd0a17acb0283840ddaea09057336e717f03d4dd465cb9f7b1",
+  "probe_files_sha256": {
+    "legacy-probe-calls.jsonl": "e6585b76082f2ad86be302abc3acc8653eca5af90f0aca7383632b566dfd355a",
+    "legacy-probe-summary.json": "1c8846e8e8922752cfa1f6a76387d7768401ee365658fc5784ee249a5c413385",
+    "explicit-probe-calls.jsonl": "dde67735ae2df72610b61594af606a52e7b14fcff5b6dca70d25e3091ec821bc",
+    "explicit-probe-summary.json": "f6245081ba6e0dddf3879d74a5173344c2d43ff11962f59d845af4860bbacf40",
+    "explicit-probe-freeze.json": "8520287adc2bf53bf0e86ee5d41e64b73b2506b63ee3b759a33a9c871d56799f"
+  },
+  "paid_requests_in_positive_controls": 0
+}

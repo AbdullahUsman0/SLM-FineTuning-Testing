@@ -17,3 +17,8 @@ results/**/*.json
 results/**/*.csv
 results/**/*.log
 !results/.gitkeep
+
+# Local credentials and environment files
+.env
+.env.*
+!.env.example

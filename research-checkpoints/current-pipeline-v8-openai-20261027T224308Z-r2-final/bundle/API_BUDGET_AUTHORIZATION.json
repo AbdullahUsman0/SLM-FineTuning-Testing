@@ -1,0 +1,18 @@
+{
+  "authorized_at_utc": "2026-10-23T19:41:11.389486+00:00",
+  "authorization_source": "Direct human reply in this chat: 1$",
+  "scope": "one bounded current-pipeline v8/OpenAI evaluation, including pilots and retries",
+  "total_user_ceiling_usd": 1.0,
+  "internal_dispatch_ceiling_usd": 0.9,
+  "safety_margin_usd": 0.1,
+  "supersedes_previous_hosted_zero_budget_only_for_this_task": true,
+  "automatic_budget_renewal": false,
+  "model_snapshot": "gpt-5-mini-2025-08-07",
+  "silent_model_substitution": false,
+  "training_authorized": false,
+  "sealed_label_access_authorized": false,
+  "model_calls_already_made": 0,
+  "cost_ledger_must_span_restarts": true,
+  "handoff_publication_authorized": true,
+  "result_publication_authorized": false
+}

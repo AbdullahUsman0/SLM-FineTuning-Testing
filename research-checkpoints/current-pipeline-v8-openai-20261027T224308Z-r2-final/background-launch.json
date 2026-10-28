@@ -1,0 +1,30 @@
+{
+  "return_value": 0,
+  "pid": 20812,
+  "at": "2026-10-27T22:47:40.936541+00:00",
+  "capsule": "D:\\SLM\\FYP-experiment-control\\current-pipeline-v8-openai-20261023\\current-pipeline-r2-supervisor-20261027T224740256774Z.json",
+  "log": "D:\\SLM\\FYP-experiment-control\\current-pipeline-v8-openai-20261023\\current-pipeline-r2-supervisor-20261027T224740256774Z.log",
+  "command": [
+    "D:\\SLM\\FYP-environments\\v8-final-20261018T230255Z\\Scripts\\python.exe",
+    "-B",
+    "-u",
+    "D:\\SLM\\FYP-evaluation-runs\\current-pipeline-v8-openai-20261027T224308Z-r2\\supervisor.py"
+  ],
+  "isolation": {
+    "at_UTC": "2026-10-27T22:47:40.850026+00:00",
+    "pid": 4480,
+    "parent_pid": 20812,
+    "console_window": 0,
+    "in_job": true,
+    "wmi_root_in_job": true,
+    "command": [
+      "D:\\SLM\\FYP-environments\\v8-final-20261018T230255Z\\Scripts\\python.exe",
+      "-B",
+      "-u",
+      "D:\\SLM\\FYP-evaluation-runs\\current-pipeline-v8-openai-20261027T224308Z-r2\\supervisor.py"
+    ],
+    "capsule_sha256": "f34d172c3a3b75fe7eb411f5e79ba4c4ae97a2af62837d8dcec0905048fd6d01",
+    "provider_pid": 16604,
+    "provider_name": "WmiPrvSE.exe"
+  }
+}

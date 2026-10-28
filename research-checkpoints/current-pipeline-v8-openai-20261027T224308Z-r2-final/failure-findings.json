@@ -1,0 +1,7101 @@
+[
+  {
+    "domain": "commodities",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/commodities/0032",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "commodities",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/commodities/0032",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "commodities",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/commodities/0032",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "commodities",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/commodities/0032",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "commodities",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/commodities/0032",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "corporate_finance",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/corporate_finance/0116",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "corporate_finance",
+    "flags": [
+      "json_valid=false",
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/corporate_finance/0116",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "target_column"
+    ]
+  },
+  {
+    "domain": "corporate_finance",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/corporate_finance/0116",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "dataset_type"
+    ]
+  },
+  {
+    "domain": "corporate_finance",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/corporate_finance/0116",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "corporate_finance",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/corporate_finance/0116",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "corporate_finance",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/corporate_finance/0116",
+      "t6"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "crypto_derivatives",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/crypto_derivatives/0169",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "crypto_derivatives",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/crypto_derivatives/0169",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "crypto_derivatives",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/crypto_derivatives/0169",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "crypto_derivatives",
+    "flags": [
+      "json_valid=false",
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/crypto_derivatives/0169",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "crypto_spot",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/crypto_spot/0063",
+      "t1"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "crypto_spot",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/crypto_spot/0063",
+      "t2"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "crypto_spot",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/crypto_spot/0063",
+      "t3"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "crypto_spot",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/crypto_spot/0063",
+      "t4"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "crypto_spot",
+    "flags": [
+      "json_valid=false",
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/crypto_spot/0063",
+      "t5"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "equities_funds",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/equities_funds/0094",
+      "t1"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "equities_funds",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/equities_funds/0094",
+      "t2"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "equities_funds",
+    "flags": [
+      "json_valid=false",
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/equities_funds/0094",
+      "t3"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "equities_funds",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/equities_funds/0094",
+      "t4"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "equities_funds",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/equities_funds/0094",
+      "t5"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "foreign_exchange",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/foreign_exchange/0106",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "foreign_exchange",
+    "flags": [
+      "json_valid=false",
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/foreign_exchange/0106",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "foreign_exchange",
+    "flags": [
+      "json_valid=false",
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/foreign_exchange/0106",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "foreign_exchange",
+    "flags": [
+      "json_valid=false",
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/foreign_exchange/0106",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "foreign_exchange",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/foreign_exchange/0106",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "housing_property",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/housing_property/0189",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "housing_property",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/housing_property/0189",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "housing_property",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/housing_property/0189",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "housing_property",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/housing_property/0189",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "humidity_pressure",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/humidity_pressure/0085",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "humidity_pressure",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/humidity_pressure/0085",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "target_unit"
+    ]
+  },
+  {
+    "domain": "humidity_pressure",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/humidity_pressure/0085",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "target_unit"
+    ]
+  },
+  {
+    "domain": "humidity_pressure",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/humidity_pressure/0085",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "humidity_pressure",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/humidity_pressure/0085",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "labor_employment",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/labor_employment/0178",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "labor_employment",
+    "flags": [
+      "json_valid=false",
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/labor_employment/0178",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "labor_employment",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/labor_employment/0178",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "labor_employment",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/labor_employment/0178",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "output_growth",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/output_growth/0103",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "output_growth",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/output_growth/0103",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "output_growth",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/output_growth/0103",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "output_growth",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/output_growth/0103",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "precipitation",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/precipitation/0119",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "precipitation",
+    "flags": [
+      "json_valid=false",
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "capped"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/precipitation/0119",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "precipitation",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/precipitation/0119",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "precipitation",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/precipitation/0119",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "solar_cloud",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/solar_cloud/0062",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "solar_cloud",
+    "flags": [
+      "json_valid=false",
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/solar_cloud/0062",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "solar_cloud",
+    "flags": [
+      "json_valid=false",
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/solar_cloud/0062",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "solar_cloud",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/solar_cloud/0062",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "temperature",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/temperature/0130",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "temperature",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/temperature/0130",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "temperature",
+    "flags": [
+      "json_valid=false",
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/temperature/0130",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "temperature",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/temperature/0130",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "trade_fiscal",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/trade_fiscal/0134",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "trade_fiscal",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/trade_fiscal/0134",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "trade_fiscal",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/trade_fiscal/0134",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "trade_fiscal",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/trade_fiscal/0134",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_agriculture",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/weather_agriculture/0000",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "weather_agriculture",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/weather_agriculture/0000",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "weather_agriculture",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/weather_agriculture/0000",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "weather_agriculture",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/weather_agriculture/0000",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "weather_agriculture",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/weather_agriculture/0000",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "weather_energy",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/weather_energy/0075",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "weather_energy",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/weather_energy/0075",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_energy",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/weather_energy/0075",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_energy",
+    "flags": [
+      "json_valid=false",
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/weather_energy/0075",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_energy",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/weather_energy/0075",
+      "t6"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_extremes",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/weather_extremes/0118",
+      "t1"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "weather_extremes",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/weather_extremes/0118",
+      "t2"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": [
+      "target_column"
+    ]
+  },
+  {
+    "domain": "weather_extremes",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/weather_extremes/0118",
+      "t3"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_extremes",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/weather_extremes/0118",
+      "t4"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "wind",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/wind/0195",
+      "t1"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "wind",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/wind/0195",
+      "t2"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "wind",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/wind/0195",
+      "t3"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "wind",
+    "flags": [
+      "json_valid=false",
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/wind/0195",
+      "t4"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "inflation_prices",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v8-final-20261018-r1/focused/inflation_prices/validation-004",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "inflation_prices",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v8-final-20261018-r1/focused/inflation_prices/validation-004",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_reference"
+    ]
+  },
+  {
+    "domain": "inflation_prices",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v8-final-20261018-r1/focused/inflation_prices/validation-004",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_reference"
+    ]
+  },
+  {
+    "domain": "inflation_prices",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v8-final-20261018-r1/focused/inflation_prices/validation-004",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_reference"
+    ]
+  },
+  {
+    "domain": "rates_fixed_income",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v8-final-20261018-r1/focused/rates_fixed_income/validation-003",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "rates_fixed_income",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v8-final-20261018-r1/focused/rates_fixed_income/validation-003",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_reference"
+    ]
+  },
+  {
+    "domain": "rates_fixed_income",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v8-final-20261018-r1/focused/rates_fixed_income/validation-003",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_reference"
+    ]
+  },
+  {
+    "domain": "rates_fixed_income",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v8-final-20261018-r1/focused/rates_fixed_income/validation-003",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_reference"
+    ]
+  },
+  {
+    "domain": "commodities",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/commodities/0032",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "commodities",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/commodities/0032",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "commodities",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/commodities/0032",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "time_column"
+    ]
+  },
+  {
+    "domain": "commodities",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/commodities/0032",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "commodities",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/commodities/0032",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "corporate_finance",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/corporate_finance/0116",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "corporate_finance",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/corporate_finance/0116",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "time_column"
+    ]
+  },
+  {
+    "domain": "corporate_finance",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/corporate_finance/0116",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "corporate_finance",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/corporate_finance/0116",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "target_column"
+    ]
+  },
+  {
+    "domain": "corporate_finance",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/corporate_finance/0116",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "corporate_finance",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/corporate_finance/0116",
+      "t6"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "crypto_derivatives",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/crypto_derivatives/0169",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "crypto_derivatives",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/crypto_derivatives/0169",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "crypto_derivatives",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/crypto_derivatives/0169",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "crypto_derivatives",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/crypto_derivatives/0169",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "crypto_derivatives",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/crypto_derivatives/0169",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "crypto_spot",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/crypto_spot/0063",
+      "t1"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "crypto_spot",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/crypto_spot/0063",
+      "t2"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "crypto_spot",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/crypto_spot/0063",
+      "t3"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "crypto_spot",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/crypto_spot/0063",
+      "t4"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "crypto_spot",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/crypto_spot/0063",
+      "t5"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": [
+      "time_column"
+    ]
+  },
+  {
+    "domain": "equities_funds",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/equities_funds/0094",
+      "t1"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "equities_funds",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/equities_funds/0094",
+      "t2"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": [
+      "time_column"
+    ]
+  },
+  {
+    "domain": "equities_funds",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/equities_funds/0094",
+      "t3"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "equities_funds",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/equities_funds/0094",
+      "t4"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "equities_funds",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/equities_funds/0094",
+      "t5"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "foreign_exchange",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/foreign_exchange/0106",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "foreign_exchange",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/foreign_exchange/0106",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "foreign_exchange",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/foreign_exchange/0106",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "target_column"
+    ]
+  },
+  {
+    "domain": "foreign_exchange",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/foreign_exchange/0106",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "time_column"
+    ]
+  },
+  {
+    "domain": "foreign_exchange",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/foreign_exchange/0106",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "foreign_exchange",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/foreign_exchange/0106",
+      "t6"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "housing_property",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/housing_property/0189",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "housing_property",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/housing_property/0189",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "housing_property",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/housing_property/0189",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "housing_property",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/housing_property/0189",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "housing_property",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/housing_property/0189",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "humidity_pressure",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/humidity_pressure/0085",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "humidity_pressure",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/humidity_pressure/0085",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "humidity_pressure",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/humidity_pressure/0085",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "target_column"
+    ]
+  },
+  {
+    "domain": "humidity_pressure",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/humidity_pressure/0085",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "time_column"
+    ]
+  },
+  {
+    "domain": "humidity_pressure",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/humidity_pressure/0085",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "labor_employment",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/labor_employment/0178",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "labor_employment",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/labor_employment/0178",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "labor_employment",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/labor_employment/0178",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "target_column"
+    ]
+  },
+  {
+    "domain": "labor_employment",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/labor_employment/0178",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "time_column"
+    ]
+  },
+  {
+    "domain": "labor_employment",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/labor_employment/0178",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "output_growth",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/output_growth/0103",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "output_growth",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/output_growth/0103",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "output_growth",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/output_growth/0103",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "output_growth",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/output_growth/0103",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "output_growth",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/output_growth/0103",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "time_column"
+    ]
+  },
+  {
+    "domain": "precipitation",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/precipitation/0119",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "precipitation",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/precipitation/0119",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "precipitation",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/precipitation/0119",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "precipitation",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/precipitation/0119",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "precipitation",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/precipitation/0119",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "solar_cloud",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/solar_cloud/0062",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "solar_cloud",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/solar_cloud/0062",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "solar_cloud",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/solar_cloud/0062",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "time_column"
+    ]
+  },
+  {
+    "domain": "solar_cloud",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/solar_cloud/0062",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "solar_cloud",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/solar_cloud/0062",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "temperature",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/temperature/0130",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "temperature",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/temperature/0130",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "temperature",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/temperature/0130",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "time_column"
+    ]
+  },
+  {
+    "domain": "temperature",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/temperature/0130",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "temperature",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/temperature/0130",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "trade_fiscal",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/trade_fiscal/0134",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "trade_fiscal",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/trade_fiscal/0134",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "time_column"
+    ]
+  },
+  {
+    "domain": "trade_fiscal",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/trade_fiscal/0134",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "trade_fiscal",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/trade_fiscal/0134",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "trade_fiscal",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/trade_fiscal/0134",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_agriculture",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/weather_agriculture/0000",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "weather_agriculture",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/weather_agriculture/0000",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_agriculture",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/weather_agriculture/0000",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "time_column"
+    ]
+  },
+  {
+    "domain": "weather_agriculture",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/weather_agriculture/0000",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_agriculture",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/weather_agriculture/0000",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_energy",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/weather_energy/0075",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "weather_energy",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/weather_energy/0075",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_energy",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/weather_energy/0075",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "target_column"
+    ]
+  },
+  {
+    "domain": "weather_energy",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/weather_energy/0075",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "time_column"
+    ]
+  },
+  {
+    "domain": "weather_energy",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/weather_energy/0075",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_energy",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/weather_energy/0075",
+      "t6"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_extremes",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/weather_extremes/0118",
+      "t1"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "weather_extremes",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/weather_extremes/0118",
+      "t2"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": [
+      "target_column"
+    ]
+  },
+  {
+    "domain": "weather_extremes",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/weather_extremes/0118",
+      "t3"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_extremes",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/weather_extremes/0118",
+      "t4"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": [
+      "time_column"
+    ]
+  },
+  {
+    "domain": "weather_extremes",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/weather_extremes/0118",
+      "t5"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "wind",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/wind/0195",
+      "t1"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "wind",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/wind/0195",
+      "t2"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "wind",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/wind/0195",
+      "t3"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": [
+      "target_column"
+    ]
+  },
+  {
+    "domain": "wind",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/wind/0195",
+      "t4"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": [
+      "time_column"
+    ]
+  },
+  {
+    "domain": "wind",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/wind/0195",
+      "t5"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "inflation_prices",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v8-final-20261018-r1/focused/inflation_prices/validation-004",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "inflation_prices",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v8-final-20261018-r1/focused/inflation_prices/validation-004",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "inflation_prices",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v8-final-20261018-r1/focused/inflation_prices/validation-004",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "time_column"
+    ]
+  },
+  {
+    "domain": "inflation_prices",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v8-final-20261018-r1/focused/inflation_prices/validation-004",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "target_column"
+    ]
+  },
+  {
+    "domain": "rates_fixed_income",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v8-final-20261018-r1/focused/rates_fixed_income/validation-003",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "rates_fixed_income",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v8-final-20261018-r1/focused/rates_fixed_income/validation-003",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "rates_fixed_income",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v8-final-20261018-r1/focused/rates_fixed_income/validation-003",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "time_column"
+    ]
+  },
+  {
+    "domain": "rates_fixed_income",
+    "flags": [
+      "schema_valid=false",
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v8-final-20261018-r1/focused/rates_fixed_income/validation-003",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "target_column"
+    ]
+  },
+  {
+    "domain": "commodities",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/commodities/0032",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "commodities",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/commodities/0032",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "commodities",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/commodities/0032",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "commodities",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/commodities/0032",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "commodities",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/commodities/0032",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "corporate_finance",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/corporate_finance/0116",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "corporate_finance",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/corporate_finance/0116",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "dataset_type"
+    ]
+  },
+  {
+    "domain": "corporate_finance",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/corporate_finance/0116",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "corporate_finance",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/corporate_finance/0116",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "corporate_finance",
+    "flags": [
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "forbidden_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/corporate_finance/0116",
+      "t6"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "crypto_derivatives",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/crypto_derivatives/0169",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "crypto_derivatives",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/crypto_derivatives/0169",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "crypto_derivatives",
+    "flags": [
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/crypto_derivatives/0169",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "crypto_derivatives",
+    "flags": [
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/crypto_derivatives/0169",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "crypto_derivatives",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "extra_slots",
+      "forbidden_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/crypto_derivatives/0169",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "crypto_spot",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/crypto_spot/0063",
+      "t1"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "crypto_spot",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "forbidden_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/crypto_spot/0063",
+      "t2"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "crypto_spot",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/crypto_spot/0063",
+      "t3"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "crypto_spot",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/crypto_spot/0063",
+      "t4"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "crypto_spot",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/crypto_spot/0063",
+      "t5"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "equities_funds",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/equities_funds/0094",
+      "t1"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "equities_funds",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/equities_funds/0094",
+      "t2"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "equities_funds",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/equities_funds/0094",
+      "t3"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "equities_funds",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/equities_funds/0094",
+      "t4"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "equities_funds",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/equities_funds/0094",
+      "t5"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "foreign_exchange",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/foreign_exchange/0106",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "foreign_exchange",
+    "flags": [
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/foreign_exchange/0106",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "foreign_exchange",
+    "flags": [
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/foreign_exchange/0106",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "foreign_exchange",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/foreign_exchange/0106",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "foreign_exchange",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/foreign_exchange/0106",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "foreign_exchange",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/foreign_exchange/0106",
+      "t6"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "housing_property",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/housing_property/0189",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "housing_property",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/housing_property/0189",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "housing_property",
+    "flags": [
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/housing_property/0189",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "housing_property",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/housing_property/0189",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "housing_property",
+    "flags": [
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/housing_property/0189",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "humidity_pressure",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/humidity_pressure/0085",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "humidity_pressure",
+    "flags": [
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/humidity_pressure/0085",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "humidity_pressure",
+    "flags": [
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/humidity_pressure/0085",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "humidity_pressure",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/humidity_pressure/0085",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "humidity_pressure",
+    "flags": [
+      "extra_slots",
+      "forbidden_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/humidity_pressure/0085",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "labor_employment",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/labor_employment/0178",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "labor_employment",
+    "flags": [
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/labor_employment/0178",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "labor_employment",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/labor_employment/0178",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "labor_employment",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/labor_employment/0178",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "labor_employment",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "extra_slots",
+      "forbidden_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/labor_employment/0178",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "output_growth",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/output_growth/0103",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "output_growth",
+    "flags": [
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/output_growth/0103",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "output_growth",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/output_growth/0103",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "output_growth",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/output_growth/0103",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "output_growth",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/output_growth/0103",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "precipitation",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/precipitation/0119",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "precipitation",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/precipitation/0119",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "precipitation",
+    "flags": [
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/precipitation/0119",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "precipitation",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/precipitation/0119",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "precipitation",
+    "flags": [
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/precipitation/0119",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "solar_cloud",
+    "flags": [
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/solar_cloud/0062",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "solar_cloud",
+    "flags": [
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/solar_cloud/0062",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "solar_cloud",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/solar_cloud/0062",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "solar_cloud",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/solar_cloud/0062",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "solar_cloud",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "extra_slots",
+      "forbidden_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/solar_cloud/0062",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "temperature",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/temperature/0130",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "temperature",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/temperature/0130",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "temperature",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/temperature/0130",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "temperature",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/temperature/0130",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "temperature",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/temperature/0130",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "trade_fiscal",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/trade_fiscal/0134",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "trade_fiscal",
+    "flags": [
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/trade_fiscal/0134",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "trade_fiscal",
+    "flags": [
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/trade_fiscal/0134",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "trade_fiscal",
+    "flags": [
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/trade_fiscal/0134",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "trade_fiscal",
+    "flags": [
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/trade_fiscal/0134",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_agriculture",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/weather_agriculture/0000",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "weather_agriculture",
+    "flags": [
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/weather_agriculture/0000",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_agriculture",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/weather_agriculture/0000",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "weather_agriculture",
+    "flags": [
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/weather_agriculture/0000",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "output_granularity"
+    ]
+  },
+  {
+    "domain": "weather_agriculture",
+    "flags": [
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/weather_agriculture/0000",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_energy",
+    "flags": [
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/weather_energy/0075",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "weather_energy",
+    "flags": [
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/weather_energy/0075",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_energy",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/weather_energy/0075",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_energy",
+    "flags": [
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/weather_energy/0075",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_energy",
+    "flags": [
+      "extra_slots",
+      "forbidden_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/weather_energy/0075",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_energy",
+    "flags": [
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/weather_energy/0075",
+      "t6"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_extremes",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/weather_extremes/0118",
+      "t1"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "weather_extremes",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/weather_extremes/0118",
+      "t2"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_extremes",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/weather_extremes/0118",
+      "t3"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_extremes",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/weather_extremes/0118",
+      "t4"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_extremes",
+    "flags": [
+      "reducer_admitted=false",
+      "extra_slots",
+      "forbidden_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/weather_extremes/0118",
+      "t5"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "wind",
+    "flags": [
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/wind/0195",
+      "t1"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "wind",
+    "flags": [
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/wind/0195",
+      "t2"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "wind",
+    "flags": [
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/wind/0195",
+      "t3"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "wind",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/wind/0195",
+      "t4"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "wind",
+    "flags": [
+      "reducer_admitted=false",
+      "extra_slots",
+      "forbidden_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/wind/0195",
+      "t5"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "inflation_prices",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v8-final-20261018-r1/focused/inflation_prices/validation-004",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "inflation_prices",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v8-final-20261018-r1/focused/inflation_prices/validation-004",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_reference"
+    ]
+  },
+  {
+    "domain": "inflation_prices",
+    "flags": [
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v8-final-20261018-r1/focused/inflation_prices/validation-004",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "inflation_prices",
+    "flags": [
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v8-final-20261018-r1/focused/inflation_prices/validation-004",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "rates_fixed_income",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v8-final-20261018-r1/focused/rates_fixed_income/validation-003",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "rates_fixed_income",
+    "flags": [
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v8-final-20261018-r1/focused/rates_fixed_income/validation-003",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "rates_fixed_income",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v8-final-20261018-r1/focused/rates_fixed_income/validation-003",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_reference"
+    ]
+  },
+  {
+    "domain": "rates_fixed_income",
+    "flags": [
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v8-final-20261018-r1/focused/rates_fixed_income/validation-003",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "commodities",
+    "flags": [
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/commodities/0032",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "commodities",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/commodities/0032",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "commodities",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/commodities/0032",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "commodities",
+    "flags": [
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/commodities/0032",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "commodities",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/commodities/0032",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "corporate_finance",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/corporate_finance/0116",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "corporate_finance",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/corporate_finance/0116",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "corporate_finance",
+    "flags": [
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/corporate_finance/0116",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "corporate_finance",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/corporate_finance/0116",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "corporate_finance",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/corporate_finance/0116",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "corporate_finance",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "forbidden_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/corporate_finance/0116",
+      "t6"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "crypto_derivatives",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "forbidden_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/crypto_derivatives/0169",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "crypto_derivatives",
+    "flags": [
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/crypto_derivatives/0169",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "crypto_derivatives",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/crypto_derivatives/0169",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "crypto_derivatives",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/crypto_derivatives/0169",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "crypto_derivatives",
+    "flags": [
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/crypto_derivatives/0169",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "crypto_spot",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/crypto_spot/0063",
+      "t1"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "crypto_spot",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "forbidden_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/crypto_spot/0063",
+      "t2"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "crypto_spot",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/crypto_spot/0063",
+      "t3"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "crypto_spot",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/crypto_spot/0063",
+      "t4"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "crypto_spot",
+    "flags": [
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/crypto_spot/0063",
+      "t5"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "equities_funds",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/equities_funds/0094",
+      "t1"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "equities_funds",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/equities_funds/0094",
+      "t2"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "equities_funds",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/equities_funds/0094",
+      "t3"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": [
+      "source_reference"
+    ]
+  },
+  {
+    "domain": "equities_funds",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/equities_funds/0094",
+      "t4"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "equities_funds",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/equities_funds/0094",
+      "t5"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "foreign_exchange",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/foreign_exchange/0106",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "foreign_exchange",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/foreign_exchange/0106",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "foreign_exchange",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/foreign_exchange/0106",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "target_column"
+    ]
+  },
+  {
+    "domain": "foreign_exchange",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/foreign_exchange/0106",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "time_column"
+    ]
+  },
+  {
+    "domain": "foreign_exchange",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/foreign_exchange/0106",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "foreign_exchange",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/foreign_exchange/0106",
+      "t6"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "housing_property",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "forbidden_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/housing_property/0189",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "housing_property",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/housing_property/0189",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "housing_property",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/housing_property/0189",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "housing_property",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/housing_property/0189",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "housing_property",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/housing_property/0189",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "humidity_pressure",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/humidity_pressure/0085",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "humidity_pressure",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/humidity_pressure/0085",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "humidity_pressure",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/humidity_pressure/0085",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "humidity_pressure",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/humidity_pressure/0085",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "humidity_pressure",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/humidity_pressure/0085",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "labor_employment",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/labor_employment/0178",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "labor_employment",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/labor_employment/0178",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "labor_employment",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/labor_employment/0178",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "labor_employment",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/labor_employment/0178",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "labor_employment",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/labor_employment/0178",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "target_column"
+    ]
+  },
+  {
+    "domain": "output_growth",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/output_growth/0103",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "output_growth",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/output_growth/0103",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "output_growth",
+    "flags": [
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/output_growth/0103",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "output_growth",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/output_growth/0103",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "output_growth",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/output_growth/0103",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "precipitation",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/precipitation/0119",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "precipitation",
+    "flags": [
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/precipitation/0119",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "precipitation",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/precipitation/0119",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "precipitation",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/precipitation/0119",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "precipitation",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "forbidden_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/precipitation/0119",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "solar_cloud",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/solar_cloud/0062",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "solar_cloud",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/solar_cloud/0062",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "solar_cloud",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/solar_cloud/0062",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "solar_cloud",
+    "flags": [
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/solar_cloud/0062",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "solar_cloud",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "forbidden_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/solar_cloud/0062",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "temperature",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/temperature/0130",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "temperature",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/temperature/0130",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "temperature",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/temperature/0130",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "temperature",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/temperature/0130",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "temperature",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "forbidden_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/temperature/0130",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "trade_fiscal",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/trade_fiscal/0134",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "trade_fiscal",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/trade_fiscal/0134",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "trade_fiscal",
+    "flags": [
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/trade_fiscal/0134",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "trade_fiscal",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/trade_fiscal/0134",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "trade_fiscal",
+    "flags": [
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/trade_fiscal/0134",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_agriculture",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/weather_agriculture/0000",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_agriculture",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/weather_agriculture/0000",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_agriculture",
+    "flags": [
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/weather_agriculture/0000",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_agriculture",
+    "flags": [
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/weather_agriculture/0000",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_agriculture",
+    "flags": [
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/weather_agriculture/0000",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_energy",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/weather_energy/0075",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "weather_energy",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/weather_energy/0075",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_energy",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/weather_energy/0075",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_energy",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/weather_energy/0075",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_energy",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/weather_energy/0075",
+      "t5"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_energy",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/weather_energy/0075",
+      "t6"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_extremes",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/weather_extremes/0118",
+      "t1"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "weather_extremes",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/weather_extremes/0118",
+      "t2"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_extremes",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/weather_extremes/0118",
+      "t3"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_extremes",
+    "flags": [
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/weather_extremes/0118",
+      "t4"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "weather_extremes",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/weather_extremes/0118",
+      "t5"
+    ],
+    "language": "ur",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "wind",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/wind/0195",
+      "t1"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "wind",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/wind/0195",
+      "t2"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "wind",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/wind/0195",
+      "t3"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "wind",
+    "flags": [
+      "complete_pipeline_state=false",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/wind/0195",
+      "t4"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "wind",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "forbidden_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/wind/0195",
+      "t5"
+    ],
+    "language": "mixed",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "inflation_prices",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v8-final-20261018-r1/focused/inflation_prices/validation-004",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "source_mode"
+    ]
+  },
+  {
+    "domain": "inflation_prices",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "forbidden_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v8-final-20261018-r1/focused/inflation_prices/validation-004",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "inflation_prices",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v8-final-20261018-r1/focused/inflation_prices/validation-004",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "inflation_prices",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v8-final-20261018-r1/focused/inflation_prices/validation-004",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "rates_fixed_income",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v8-final-20261018-r1/focused/rates_fixed_income/validation-003",
+      "t1"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "rates_fixed_income",
+    "flags": [
+      "complete_pipeline_state=false"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v8-final-20261018-r1/focused/rates_fixed_income/validation-003",
+      "t2"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  },
+  {
+    "domain": "rates_fixed_income",
+    "flags": [
+      "raw_contract_admitted=false",
+      "reducer_admitted=false",
+      "complete_pipeline_state=false",
+      "extra_slots",
+      "raw_correction_failure"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v8-final-20261018-r1/focused/rates_fixed_income/validation-003",
+      "t3"
+    ],
+    "language": "en",
+    "recovered_slot_ids": [
+      "time_column"
+    ]
+  },
+  {
+    "domain": "rates_fixed_income",
+    "flags": [
+      "complete_pipeline_state=false",
+      "extra_slots"
+    ],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v8-final-20261018-r1/focused/rates_fixed_income/validation-003",
+      "t4"
+    ],
+    "language": "en",
+    "recovered_slot_ids": []
+  }
+]

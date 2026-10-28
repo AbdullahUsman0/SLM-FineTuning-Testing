@@ -1,0 +1,12 @@
+{
+  "raw_gold_roundtrip_calls": 101,
+  "metrics": {
+    "tp": 257,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "no_inference_or_paid_requests": true
+}

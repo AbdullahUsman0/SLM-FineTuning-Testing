@@ -1,0 +1,10 @@
+{
+  "repo": "D:\\SLM\\SLM-FineTuning-Testing",
+  "code": "D:\\SLM\\SLM-FineTuning-Testing\\evaluation\\current_pipeline_v8_openai_20261027_r2",
+  "python": "D:\\SLM\\FYP-environments\\v8-final-20261018T230255Z\\Scripts\\python.exe",
+  "console_hook_directory": "D:\\SLM\\FYP-experiment-control\\current-pipeline-v8-openai-20261023\\windows-console-isolation",
+  "supervisor_sources_sha256": {
+    "supervisor.py": "16d8e9ccfec17f102b9f3dbfb40dcc00240d05ed201caaa6d8db0ffb677318c5",
+    "delivery.py": "49938f9b327085b60589c2db1238aaf590639a6d473e71f863b3320044471dcd"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "run": "D:\\SLM\\FYP-evaluation-runs\\current-pipeline-v8-openai-20261027T235235Z-audit-r3",
+  "code": "D:\\SLM\\SLM-FineTuning-Testing\\evaluation\\current_pipeline_v8_openai_20261027_r3",
+  "repo": "D:\\SLM\\SLM-FineTuning-Testing",
+  "prior_run": "D:\\SLM\\FYP-evaluation-runs\\current-pipeline-v8-openai-20261027T224308Z-r2",
+  "fpy": "D:\\SLM\\FYP-evaluation-runs\\current-pipeline-v8-openai-20261027T224308Z-r2\\fpy",
+  "legacy_fpy": "D:\\SLM\\SLM-FineTuning-Testing\\runtime\\fpy-final-pinned",
+  "python": "D:\\SLM\\FYP-environments\\v8-final-20261018T230255Z\\Scripts\\python.exe",
+  "shared_ledger": "D:\\SLM\\FYP-experiment-control\\current-pipeline-v8-openai-20261023\\budget.sqlite3",
+  "scope": "Corrective current-pipeline development after user requested audit and paper tests; previous failed configuration preserved; no main-case reselection or raw gold changes; no budget renewal"
+}

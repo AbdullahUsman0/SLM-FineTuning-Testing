@@ -1,0 +1,29 @@
+{
+  "source": "User requested audit and all required paper tests after challenging zero F1",
+  "prior_failed_run": "D:\\SLM\\FYP-evaluation-runs\\current-pipeline-v8-openai-20261027T224308Z-r2",
+  "technical_defects": [
+    "The bare native prompt omitted update-field definitions and typed slot metadata expected by the trained adapter",
+    "Only the hosted arm received a machine-readable response schema; the local text payload did not expose it",
+    "The prior pilot gate checked budget completion without requiring a non-empty schema-compliant local extraction"
+  ],
+  "correction": "Versioned common adapter retains native application context, exposes identical full output schema and all typed slot definitions to BOTH models, and supplies the unchanged training annotation/value contract explicitly",
+  "scope": "post-hoc corrective DEVELOPMENT revision, not an independent confirmatory test",
+  "unchanged": [
+    "base revision",
+    "adapter bytes",
+    "20 main conversation IDs and raw gold",
+    "2 disjoint pilot IDs",
+    "approved invalid true-column state",
+    "max_new_tokens 1024/local and max_output_tokens 2048/hosted",
+    "common exact scorer",
+    "fpy snapshot and bundled fixes",
+    "authoritative US$1 shared ledger"
+  ],
+  "technical_gate": {
+    "legacy_positive_nonintent_TP_required": true,
+    "explicit_pilot_raw_contract_admitted_minimum": 8,
+    "explicit_pilot_positive_nonintent_TP_required": true
+  },
+  "independent_human_review_complete": false,
+  "no_budget_renewal": true
+}

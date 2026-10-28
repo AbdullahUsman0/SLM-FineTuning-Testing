@@ -1,0 +1,12 @@
+{
+  "source": "Direct user reply in this conversation",
+  "decision": "Keep current validator; approve expected state as invalid",
+  "case": "v7-20261009-r8-dev/labor_employment/0178",
+  "turn": "t2",
+  "slot": "target_column",
+  "value": "true",
+  "change": "State status becomes invalid at t2 and stays invalid in subsequent expected and supplied prior states; raw extraction labels unchanged",
+  "selection_ids_unchanged": true,
+  "prior_run": "D:\\SLM\\FYP-evaluation-runs\\current-pipeline-v8-openai-20261027T222208Z",
+  "independent_human_review_complete": false
+}

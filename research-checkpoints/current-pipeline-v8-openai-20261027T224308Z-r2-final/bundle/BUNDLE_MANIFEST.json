@@ -1,0 +1,20 @@
+{
+  "prepared_at_utc": "2026-10-23T20:04:34.420647+00:00",
+  "files_sha256": {
+    "API_BUDGET_AUTHORIZATION.json": "27bf05c09c95c976329ddf742bb7ca59cb9b74149e52b2802b6b5cfe2ce2bfa0",
+    "fpy-local-fixes.patch": "63f5d34a7ac553a9c84f0323f4a5f6955bd6a0948483fb23d69a0627377d8fb9",
+    "fpy-working-files/src/forecasting_assistant/application/orchestrator.py": "d6129fedba9f6cea835ad8b5153883adbeddfbce74ff0e00cfe4f580488ef6db",
+    "fpy-working-files/src/forecasting_assistant/prompts/llmrei_long.py": "3a0c4651dab4e19373cc988e19399dc0dfaebf2252ba907a8b4c6ed87a046b2b",
+    "fpy-working-files/tests/integration/test_elicitation_flow.py": "c96e2c523b2e5cdf556edcc6dc5bfe4b3b1671e7f42e31d2a603dc5ba285dbe5",
+    "fpy-working-files/tests/unit/test_question_policy.py": "7bc0fc30fbd92561a0d07bf9d67b53dd735e7e60020741f61b11f164e68cbae0",
+    "PLAN.md": "972951ae3df11242f3e63cf961fb7dbd6a92f748f9b674fbf1c7b6a756037e7b",
+    "PREPARATION.json": "27f98b6bd53f745604ff7f68807cd00f51cabff3cebc23f97b480d9d4203d03e",
+    "README.md": "3016b36c90ea37f02417e7666b8ec278327feb9f8c2c6b25da9a25185f2aebd9",
+    "REMOTE_CODEX_HANDOFF.md": "0641c6c11ceefa3b25ea32201c27c6049da801723eba8fb04c99f41b19cac4f0",
+    "START_HERE.txt": "61c9b88c939d1ac998b773941c4d70012bbed5b66ef5e830915db3c6504f822a",
+    "verify_bundle.py": "10aa6436f5f6a1cf78b808db2ec31ec886f57738df0124b55d209f6ed58646f5"
+  },
+  "new_inference_calls": 0,
+  "credentials_models_datasets_included": false,
+  "evaluator_implemented": false
+}

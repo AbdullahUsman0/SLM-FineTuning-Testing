@@ -1,0 +1,9 @@
+{
+  "failure": "KeyError: template_variant",
+  "cause": "Two focused synthetic cases have no optional template_variant field",
+  "fix": "Treat absent optional template_variant as null when reporting groups; preserve incomplete delivery folder; export to a NEW verified folder",
+  "inference_calls_rerun": 0,
+  "raw_outputs_or_gold_or_primary_metrics_changed": false,
+  "original_delivery_source": "delivery.py",
+  "recovery_source": "delivery_recovery.py"
+}

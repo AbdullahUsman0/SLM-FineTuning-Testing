@@ -1,0 +1,16 @@
+{
+  "existing_ledger": "D:\\SLM\\FYP-experiment-control\\current-pipeline-v8-openai-20261023\\budget.sqlite3",
+  "exclusive_lock_obtained": true,
+  "SQLite_integrity_previously_verified": true,
+  "balance": {
+    "authorization_total_USD": 1.0,
+    "dispatch_ceiling_USD": 0.9,
+    "actual_nanousd": 0,
+    "outstanding_nanousd": 0,
+    "actual_USD": 0.0,
+    "reserved_or_uncertain_USD": 0.0,
+    "remaining_dispatch_USD": 0.9,
+    "calls": []
+  },
+  "no_new_ledger_or_budget_reset": true
+}

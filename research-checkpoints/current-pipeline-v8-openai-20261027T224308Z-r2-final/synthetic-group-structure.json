@@ -1,0 +1,162 @@
+{
+  "v7-20261009-r8-dev/commodities/0032": {
+    "category": "correction_chain",
+    "cluster_id": "v7-20261009-r8-dev/commodities/entity-003",
+    "domain": "commodities",
+    "entity_group": "v7-20261009-r8-dev/commodities/entity-003",
+    "language": "en",
+    "template_variant": 4
+  },
+  "v7-20261009-r8-dev/corporate_finance/0116": {
+    "category": "lifecycle_dense",
+    "cluster_id": "v7-20261009-r8-dev/corporate_finance/entity-011",
+    "domain": "corporate_finance",
+    "entity_group": "v7-20261009-r8-dev/corporate_finance/entity-011",
+    "language": "en",
+    "template_variant": 4
+  },
+  "v7-20261009-r8-dev/crypto_derivatives/0169": {
+    "category": "ambiguous_then_clarified",
+    "cluster_id": "v7-20261009-r8-dev/crypto_derivatives/entity-016",
+    "domain": "crypto_derivatives",
+    "entity_group": "v7-20261009-r8-dev/crypto_derivatives/entity-016",
+    "language": "en",
+    "template_variant": 4
+  },
+  "v7-20261009-r8-dev/crypto_spot/0063": {
+    "category": "unknown_then_value",
+    "cluster_id": "v7-20261009-r8-dev/crypto_spot/entity-006",
+    "domain": "crypto_spot",
+    "entity_group": "v7-20261009-r8-dev/crypto_spot/entity-006",
+    "language": "mixed",
+    "template_variant": 4
+  },
+  "v7-20261009-r8-dev/equities_funds/0094": {
+    "category": "confirmation_status",
+    "cluster_id": "v7-20261009-r8-dev/equities_funds/entity-009",
+    "domain": "equities_funds",
+    "entity_group": "v7-20261009-r8-dev/equities_funds/entity-009",
+    "language": "ur",
+    "template_variant": 4
+  },
+  "v7-20261009-r8-dev/foreign_exchange/0106": {
+    "category": "lifecycle_dense",
+    "cluster_id": "v7-20261009-r8-dev/foreign_exchange/entity-010",
+    "domain": "foreign_exchange",
+    "entity_group": "v7-20261009-r8-dev/foreign_exchange/entity-010",
+    "language": "en",
+    "template_variant": 4
+  },
+  "v7-20261009-r8-dev/housing_property/0189": {
+    "category": "ambiguous_then_clarified",
+    "cluster_id": "v7-20261009-r8-dev/housing_property/entity-018",
+    "domain": "housing_property",
+    "entity_group": "v7-20261009-r8-dev/housing_property/entity-018",
+    "language": "en",
+    "template_variant": 4
+  },
+  "v7-20261009-r8-dev/humidity_pressure/0085": {
+    "category": "explicit_state_repair",
+    "cluster_id": "v7-20261009-r8-dev/humidity_pressure/entity-008",
+    "domain": "humidity_pressure",
+    "entity_group": "v7-20261009-r8-dev/humidity_pressure/entity-008",
+    "language": "en",
+    "template_variant": 4
+  },
+  "v7-20261009-r8-dev/labor_employment/0178": {
+    "category": "encoding_literal",
+    "cluster_id": "v7-20261009-r8-dev/labor_employment/entity-017",
+    "domain": "labor_employment",
+    "entity_group": "v7-20261009-r8-dev/labor_employment/entity-017",
+    "language": "en",
+    "template_variant": 4
+  },
+  "v7-20261009-r8-dev/output_growth/0103": {
+    "category": "unknown_then_value",
+    "cluster_id": "v7-20261009-r8-dev/output_growth/entity-010",
+    "domain": "output_growth",
+    "entity_group": "v7-20261009-r8-dev/output_growth/entity-010",
+    "language": "en",
+    "template_variant": 4
+  },
+  "v7-20261009-r8-dev/precipitation/0119": {
+    "category": "ambiguous_then_clarified",
+    "cluster_id": "v7-20261009-r8-dev/precipitation/entity-011",
+    "domain": "precipitation",
+    "entity_group": "v7-20261009-r8-dev/precipitation/entity-011",
+    "language": "en",
+    "template_variant": 4
+  },
+  "v7-20261009-r8-dev/solar_cloud/0062": {
+    "category": "correction_chain",
+    "cluster_id": "v7-20261009-r8-dev/solar_cloud/entity-006",
+    "domain": "solar_cloud",
+    "entity_group": "v7-20261009-r8-dev/solar_cloud/entity-006",
+    "language": "en",
+    "template_variant": 4
+  },
+  "v7-20261009-r8-dev/temperature/0130": {
+    "category": "core_recall",
+    "cluster_id": "v7-20261009-r8-dev/temperature/entity-013",
+    "domain": "temperature",
+    "entity_group": "v7-20261009-r8-dev/temperature/entity-013",
+    "language": "en",
+    "template_variant": 4
+  },
+  "v7-20261009-r8-dev/trade_fiscal/0134": {
+    "category": "confirmation_status",
+    "cluster_id": "v7-20261009-r8-dev/trade_fiscal/entity-013",
+    "domain": "trade_fiscal",
+    "entity_group": "v7-20261009-r8-dev/trade_fiscal/entity-013",
+    "language": "en",
+    "template_variant": 4
+  },
+  "v7-20261009-r8-dev/weather_agriculture/0000": {
+    "category": "core_recall",
+    "cluster_id": "v7-20261009-r8-dev/weather_agriculture/entity-000",
+    "domain": "weather_agriculture",
+    "entity_group": "v7-20261009-r8-dev/weather_agriculture/entity-000",
+    "language": "en",
+    "template_variant": 4
+  },
+  "v7-20261009-r8-dev/weather_energy/0075": {
+    "category": "explicit_state_repair",
+    "cluster_id": "v7-20261009-r8-dev/weather_energy/entity-007",
+    "domain": "weather_energy",
+    "entity_group": "v7-20261009-r8-dev/weather_energy/entity-007",
+    "language": "en",
+    "template_variant": 4
+  },
+  "v7-20261009-r8-dev/weather_extremes/0118": {
+    "category": "encoding_literal",
+    "cluster_id": "v7-20261009-r8-dev/weather_extremes/entity-011",
+    "domain": "weather_extremes",
+    "entity_group": "v7-20261009-r8-dev/weather_extremes/entity-011",
+    "language": "ur",
+    "template_variant": 4
+  },
+  "v7-20261009-r8-dev/wind/0195": {
+    "category": "explicit_state_repair",
+    "cluster_id": "v7-20261009-r8-dev/wind/entity-019",
+    "domain": "wind",
+    "entity_group": "v7-20261009-r8-dev/wind/entity-019",
+    "language": "mixed",
+    "template_variant": 4
+  },
+  "v8-final-20261018-r1/focused/inflation_prices/validation-004": {
+    "category": "cadence_role_isolation",
+    "cluster_id": "v8-final-20261018-r1/inflation_prices/validation/focused-family-00",
+    "domain": "inflation_prices",
+    "entity_group": "v8-final-20261018-r1/inflation_prices/validation/focused-family-00",
+    "language": "en",
+    "template_variant": null
+  },
+  "v8-final-20261018-r1/focused/rates_fixed_income/validation-003": {
+    "category": "correction_preserves_state",
+    "cluster_id": "v8-final-20261018-r1/rates_fixed_income/validation/focused-family-00",
+    "domain": "rates_fixed_income",
+    "entity_group": "v8-final-20261018-r1/rates_fixed_income/validation/focused-family-00",
+    "language": "en",
+    "template_variant": null
+  }
+}

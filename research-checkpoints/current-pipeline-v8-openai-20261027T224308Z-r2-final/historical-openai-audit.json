@@ -1,0 +1,66 @@
+{
+  "scope": "Offline audit of existing 31-conversation hosted reports; no fresh inference or current-protocol rescoring",
+  "new_API_calls": 0,
+  "sealed_final_accessed": false,
+  "tracks": {
+    "component": {
+      "calls": 93,
+      "conversations": 31,
+      "arithmetic_reproduced": {
+        "tp": 132,
+        "fp": 197,
+        "fn": 84,
+        "precision": 0.4012158054711246,
+        "recall": 0.6111111111111112,
+        "f1": 0.48440366972477067
+      },
+      "source_uncompressed_SHA256_verified": true,
+      "response_status_counts": {
+        "completed": 93
+      },
+      "refused_attempts": 0,
+      "capped_attempts": 0,
+      "duplicate_slot_calls": 2,
+      "plain_string_candidate_values_not_valid_inner_JSON": 125,
+      "encoding_interpretation": "historical frozen parser accepted ordinary text candidates; current comparison requires one JSON-encoded candidate value; this policy difference alone is not an archived arithmetic defect",
+      "model": "gpt-5-mini-2025-08-07"
+    },
+    "rollout": {
+      "calls": 93,
+      "conversations": 31,
+      "arithmetic_reproduced": {
+        "tp": 133,
+        "fp": 174,
+        "fn": 83,
+        "precision": 0.43322475570032576,
+        "recall": 0.6157407407407407,
+        "f1": 0.5086042065009561
+      },
+      "source_uncompressed_SHA256_verified": true,
+      "response_status_counts": {
+        "completed": 93
+      },
+      "refused_attempts": 0,
+      "capped_attempts": 0,
+      "duplicate_slot_calls": 0,
+      "plain_string_candidate_values_not_valid_inner_JSON": 132,
+      "encoding_interpretation": "historical frozen parser accepted ordinary text candidates; current comparison requires one JSON-encoded candidate value; this policy difference alone is not an archived arithmetic defect",
+      "model": "gpt-5-mini-2025-08-07"
+    }
+  },
+  "limits": [
+    "Archived admission decisions were used for metric arithmetic; their unavailable ComparisonPolicy implementation was not recreated.",
+    "This is not a new v8 comparison and does not revise archived gold or scores."
+  ],
+  "model": "gpt-5-mini-2025-08-07",
+  "identical_component_rollout_messages_and_gold_verified": true,
+  "archived_journal_entries": 558,
+  "archived_journal_statuses": {
+    "reserved": 186,
+    "dispatched": 186,
+    "complete": 186
+  },
+  "historical_parser_source_available": false,
+  "historical_arithmetic_defects_demonstrated": false,
+  "independent_human_review_complete": false
+}

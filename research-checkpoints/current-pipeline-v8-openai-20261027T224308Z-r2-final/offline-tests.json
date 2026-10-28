@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "passed_test_count": 91,
+  "command": [
+    "D:\\SLM\\FYP-environments\\v8-final-20261018T230255Z\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "pytest",
+    "-p",
+    "pytest_asyncio.plugin",
+    "-q",
+    "D:\\SLM\\SLM-FineTuning-Testing\\evaluation\\current_pipeline_v8_openai_20261027_r2\\test_controls.py",
+    "D:\\SLM\\FYP-evaluation-runs\\current-pipeline-v8-openai-20261027T224308Z-r2\\fpy\\tests\\unit\\test_question_policy.py",
+    "D:\\SLM\\FYP-evaluation-runs\\current-pipeline-v8-openai-20261027T224308Z-r2\\fpy\\tests\\integration\\test_elicitation_flow.py",
+    "--override-ini",
+    "asyncio_mode=auto",
+    "--override-ini",
+    "cache_dir=D:\\SLM\\FYP-evaluation-runs\\current-pipeline-v8-openai-20261027T224308Z-r2\\pytest-cache"
+  ],
+  "environment": "API key removed; isolated test dependencies; current fpy source first",
+  "runner_source_sha256": {
+    "controls.py": "a1e6835a7a6162e2dbd21accbbe92cedac8b12a9b98232719bb5ef3e06187f60",
+    "pipeline.py": "ac01f6555176c93678941094ee9c902f16653015caa5c14312f9f959fc6170a4",
+    "prepare.py": "ef6e8096cb864d94ae7e4160ecd28c7271867b64843beb9e6da6b5c5fa4c7752",
+    "runner.py": "4c3112b8c2e3603623735ad027c414a191552e048b5eaf63a2917affb1deabf3",
+    "test_controls.py": "cb8763efab95926675af0abc734882c0c2c22c2a06d02df1ad9ce3e208a8f9aa"
+  },
+  "log": "offline-tests.log"
+}

@@ -1,0 +1,1730 @@
+{
+  "openai/component/access_details": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/component/aggregation_level": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "openai/component/aggregation_method": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "openai/component/allow_negative_values": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "openai/component/business_goal": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "openai/component/calendar_type": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "openai/component/contains_sensitive_data": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 3,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "openai/component/data_cutoff": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "openai/component/dataset_structure": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/component/dataset_type": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 31,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "openai/component/expected_history_length": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 2,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "openai/component/file_format": {
+    "f1": 0.0,
+    "fn": 16,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 16,
+    "tp": 0
+  },
+  "openai/component/forecast_horizon": {
+    "f1": 0.0,
+    "fn": 44,
+    "fp": 38,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 44,
+    "tp": 0
+  },
+  "openai/component/forecast_start": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "openai/component/forecast_type": {
+    "f1": 0.2222222222222222,
+    "fn": 1,
+    "fp": 6,
+    "precision": 0.14285714285714285,
+    "recall": 0.5,
+    "support": 2,
+    "tp": 1
+  },
+  "openai/component/frequency": {
+    "f1": 0.0,
+    "fn": 24,
+    "fp": 25,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 24,
+    "tp": 0
+  },
+  "openai/component/geography": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 4,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "openai/component/hierarchy_columns": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "openai/component/history_end": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 2,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "openai/component/history_start": {
+    "f1": 1.0,
+    "fn": 0,
+    "fp": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "support": 1,
+    "tp": 1
+  },
+  "openai/component/invalid_value_policy": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 2,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/component/known_future_covariates": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/component/known_regime_changes": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "openai/component/known_seasonality": {
+    "f1": 0.2,
+    "fn": 1,
+    "fp": 7,
+    "precision": 0.125,
+    "recall": 0.5,
+    "support": 2,
+    "tp": 1
+  },
+  "openai/component/lead_time": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "openai/component/minimum_coverage": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/component/minimum_training_points": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "openai/component/missing_target_policy": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "openai/component/missing_timestamp_policy": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "openai/component/outlier_policy": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/component/output_granularity": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 20,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/component/pending_user_note": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/component/prediction_frequency": {
+    "f1": 0.0,
+    "fn": 4,
+    "fp": 3,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 4,
+    "tp": 0
+  },
+  "openai/component/prediction_interval_levels": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 2,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "openai/component/problem_statement": {
+    "f1": 0.08,
+    "fn": 19,
+    "fp": 4,
+    "precision": 0.2,
+    "recall": 0.05,
+    "support": 20,
+    "tp": 1
+  },
+  "openai/component/refresh_frequency": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 2,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "openai/component/rounding_rule": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 2,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/component/scope_filters": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 3,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "openai/component/scope_filters:site_id": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/component/seasonal_cycle_lengths": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/component/seasonal_periods": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/component/series_id_columns": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "openai/component/sheet_or_table": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "openai/component/source_access_details": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/component/source_format": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 2,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/component/source_mode": {
+    "f1": 0.07547169811320754,
+    "fn": 15,
+    "fp": 34,
+    "precision": 0.05555555555555555,
+    "recall": 0.11764705882352941,
+    "support": 17,
+    "tp": 2
+  },
+  "openai/component/source_mode_details": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/component/source_provider": {
+    "f1": 0.5,
+    "fn": 1,
+    "fp": 1,
+    "precision": 0.5,
+    "recall": 0.5,
+    "support": 2,
+    "tp": 1
+  },
+  "openai/component/source_reference": {
+    "f1": 0.32558139534883723,
+    "fn": 10,
+    "fp": 19,
+    "precision": 0.2692307692307692,
+    "recall": 0.4117647058823529,
+    "support": 17,
+    "tp": 7
+  },
+  "openai/component/source_reference.format": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/component/source_reference_file": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/component/target_bounds": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/component/target_column": {
+    "f1": 0.5238095238095238,
+    "fn": 5,
+    "fp": 15,
+    "precision": 0.4230769230769231,
+    "recall": 0.6875,
+    "support": 16,
+    "tp": 11
+  },
+  "openai/component/target_description": {
+    "f1": 0.0,
+    "fn": 20,
+    "fp": 10,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 20,
+    "tp": 0
+  },
+  "openai/component/target_unit": {
+    "f1": 0.3902439024390244,
+    "fn": 15,
+    "fp": 10,
+    "precision": 0.4444444444444444,
+    "recall": 0.34782608695652173,
+    "support": 23,
+    "tp": 8
+  },
+  "openai/component/time_column": {
+    "f1": 0.631578947368421,
+    "fn": 4,
+    "fp": 10,
+    "precision": 0.5454545454545454,
+    "recall": 0.75,
+    "support": 16,
+    "tp": 12
+  },
+  "openai/component/timezone": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 10,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "openai/rollout/access_details": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/rollout/aggregation_level": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "openai/rollout/aggregation_method": {
+    "f1": 1.0,
+    "fn": 0,
+    "fp": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "support": 1,
+    "tp": 1
+  },
+  "openai/rollout/allow_negative_values": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "openai/rollout/business_goal": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "openai/rollout/calendar_type": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "openai/rollout/contains_sensitive_data": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 2,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "openai/rollout/data_cutoff": {
+    "f1": 1.0,
+    "fn": 0,
+    "fp": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "support": 1,
+    "tp": 1
+  },
+  "openai/rollout/dataset_structure": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/rollout/dataset_type": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 6,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "openai/rollout/expected_history_length": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "openai/rollout/file_format": {
+    "f1": 0.1111111111111111,
+    "fn": 15,
+    "fp": 1,
+    "precision": 0.5,
+    "recall": 0.0625,
+    "support": 16,
+    "tp": 1
+  },
+  "openai/rollout/forecast_horizon": {
+    "f1": 0.0,
+    "fn": 44,
+    "fp": 55,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 44,
+    "tp": 0
+  },
+  "openai/rollout/forecast_start": {
+    "f1": 1.0,
+    "fn": 0,
+    "fp": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "support": 1,
+    "tp": 1
+  },
+  "openai/rollout/forecast_type": {
+    "f1": 0.5,
+    "fn": 0,
+    "fp": 4,
+    "precision": 0.3333333333333333,
+    "recall": 1.0,
+    "support": 2,
+    "tp": 2
+  },
+  "openai/rollout/frequency": {
+    "f1": 0.0,
+    "fn": 24,
+    "fp": 43,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 24,
+    "tp": 0
+  },
+  "openai/rollout/geography": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 4,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "openai/rollout/hierarchy_columns": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "openai/rollout/history_end": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "openai/rollout/history_start": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "openai/rollout/invalid_value_policy": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/rollout/known_regime_changes": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "openai/rollout/known_seasonality": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 9,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "openai/rollout/lead_time": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "openai/rollout/minimum_training_points": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "openai/rollout/missing_target_policy": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "openai/rollout/missing_timestamp_policy": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "openai/rollout/output_granularity": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/rollout/pending_action": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/rollout/pending_note": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/rollout/pending_slot": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 2,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/rollout/prediction_frequency": {
+    "f1": 0.0,
+    "fn": 4,
+    "fp": 3,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 4,
+    "tp": 0
+  },
+  "openai/rollout/prediction_interval_levels": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "openai/rollout/prediction_intervals": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/rollout/problem_statement": {
+    "f1": 0.0,
+    "fn": 20,
+    "fp": 10,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 20,
+    "tp": 0
+  },
+  "openai/rollout/refresh_frequency": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 3,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "openai/rollout/retraining_frequency": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/rollout/rounding_rule": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/rollout/scope_filters": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 3,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "openai/rollout/seasonal_cycle_lengths": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/rollout/series_hierarchy": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/rollout/series_id_columns": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "openai/rollout/sheet_or_table": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "openai/rollout/source_mode": {
+    "f1": 0.07407407407407407,
+    "fn": 15,
+    "fp": 35,
+    "precision": 0.05405405405405406,
+    "recall": 0.11764705882352941,
+    "support": 17,
+    "tp": 2
+  },
+  "openai/rollout/source_provider": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "openai/rollout/source_reference": {
+    "f1": 0.24489795918367346,
+    "fn": 11,
+    "fp": 26,
+    "precision": 0.1875,
+    "recall": 0.35294117647058826,
+    "support": 17,
+    "tp": 6
+  },
+  "openai/rollout/source_reference.dataset": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/rollout/source_reference.provider": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/rollout/source_reference_format": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/rollout/target_bounds": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/rollout/target_column": {
+    "f1": 0.3673469387755102,
+    "fn": 7,
+    "fp": 24,
+    "precision": 0.2727272727272727,
+    "recall": 0.5625,
+    "support": 16,
+    "tp": 9
+  },
+  "openai/rollout/target_description": {
+    "f1": 0.0,
+    "fn": 20,
+    "fp": 14,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 20,
+    "tp": 0
+  },
+  "openai/rollout/target_unit": {
+    "f1": 0.17777777777777778,
+    "fn": 19,
+    "fp": 18,
+    "precision": 0.18181818181818182,
+    "recall": 0.17391304347826086,
+    "support": 23,
+    "tp": 4
+  },
+  "openai/rollout/time_column": {
+    "f1": 0.4,
+    "fn": 7,
+    "fp": 20,
+    "precision": 0.3103448275862069,
+    "recall": 0.5625,
+    "support": 16,
+    "tp": 9
+  },
+  "openai/rollout/time_zone": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 2,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "openai/rollout/timezone": {
+    "f1": 0.25,
+    "fn": 1,
+    "fp": 5,
+    "precision": 0.16666666666666666,
+    "recall": 0.5,
+    "support": 2,
+    "tp": 1
+  },
+  "openai/rollout/unsupported_claims": {
+    "f1": 0.0,
+    "fn": 0,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 0,
+    "tp": 0
+  },
+  "v8/component/aggregation_level": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "v8/component/aggregation_method": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "v8/component/allow_negative_values": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "v8/component/business_goal": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "v8/component/calendar_type": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "v8/component/contains_sensitive_data": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "v8/component/data_cutoff": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "v8/component/dataset_type": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "v8/component/expected_history_length": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "v8/component/file_format": {
+    "f1": 0.0,
+    "fn": 16,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 16,
+    "tp": 0
+  },
+  "v8/component/forecast_horizon": {
+    "f1": 0.0,
+    "fn": 44,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 44,
+    "tp": 0
+  },
+  "v8/component/forecast_start": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "v8/component/forecast_type": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "v8/component/frequency": {
+    "f1": 0.0,
+    "fn": 24,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 24,
+    "tp": 0
+  },
+  "v8/component/geography": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "v8/component/hierarchy_columns": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "v8/component/history_end": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "v8/component/history_start": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "v8/component/known_regime_changes": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "v8/component/known_seasonality": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "v8/component/lead_time": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "v8/component/minimum_training_points": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "v8/component/missing_target_policy": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "v8/component/missing_timestamp_policy": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "v8/component/prediction_frequency": {
+    "f1": 0.0,
+    "fn": 4,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 4,
+    "tp": 0
+  },
+  "v8/component/prediction_interval_levels": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "v8/component/problem_statement": {
+    "f1": 0.0,
+    "fn": 20,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 20,
+    "tp": 0
+  },
+  "v8/component/refresh_frequency": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "v8/component/scope_filters": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "v8/component/series_id_columns": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "v8/component/sheet_or_table": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "v8/component/source_mode": {
+    "f1": 0.0,
+    "fn": 17,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 17,
+    "tp": 0
+  },
+  "v8/component/source_provider": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "v8/component/source_reference": {
+    "f1": 0.0,
+    "fn": 17,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 17,
+    "tp": 0
+  },
+  "v8/component/target_column": {
+    "f1": 0.0,
+    "fn": 16,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 16,
+    "tp": 0
+  },
+  "v8/component/target_description": {
+    "f1": 0.0,
+    "fn": 20,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 20,
+    "tp": 0
+  },
+  "v8/component/target_unit": {
+    "f1": 0.0,
+    "fn": 23,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 23,
+    "tp": 0
+  },
+  "v8/component/time_column": {
+    "f1": 0.0,
+    "fn": 16,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 16,
+    "tp": 0
+  },
+  "v8/component/timezone": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "v8/rollout/aggregation_level": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "v8/rollout/aggregation_method": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "v8/rollout/allow_negative_values": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "v8/rollout/business_goal": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "v8/rollout/calendar_type": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "v8/rollout/contains_sensitive_data": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "v8/rollout/data_cutoff": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "v8/rollout/dataset_type": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "v8/rollout/expected_history_length": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "v8/rollout/file_format": {
+    "f1": 0.0,
+    "fn": 16,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 16,
+    "tp": 0
+  },
+  "v8/rollout/forecast_horizon": {
+    "f1": 0.0,
+    "fn": 44,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 44,
+    "tp": 0
+  },
+  "v8/rollout/forecast_start": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "v8/rollout/forecast_type": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "v8/rollout/frequency": {
+    "f1": 0.0,
+    "fn": 24,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 24,
+    "tp": 0
+  },
+  "v8/rollout/geography": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "v8/rollout/hierarchy_columns": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "v8/rollout/history_end": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "v8/rollout/history_start": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "v8/rollout/known_regime_changes": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "v8/rollout/known_seasonality": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "v8/rollout/lead_time": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "v8/rollout/minimum_training_points": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "v8/rollout/missing_target_policy": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "v8/rollout/missing_timestamp_policy": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "v8/rollout/prediction_frequency": {
+    "f1": 0.0,
+    "fn": 4,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 4,
+    "tp": 0
+  },
+  "v8/rollout/prediction_interval_levels": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "v8/rollout/problem_statement": {
+    "f1": 0.0,
+    "fn": 20,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 20,
+    "tp": 0
+  },
+  "v8/rollout/refresh_frequency": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "v8/rollout/scope_filters": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "v8/rollout/series_id_columns": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "v8/rollout/sheet_or_table": {
+    "f1": 0.0,
+    "fn": 1,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 1,
+    "tp": 0
+  },
+  "v8/rollout/source_mode": {
+    "f1": 0.0,
+    "fn": 17,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 17,
+    "tp": 0
+  },
+  "v8/rollout/source_provider": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  },
+  "v8/rollout/source_reference": {
+    "f1": 0.0,
+    "fn": 17,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 17,
+    "tp": 0
+  },
+  "v8/rollout/target_column": {
+    "f1": 0.0,
+    "fn": 16,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 16,
+    "tp": 0
+  },
+  "v8/rollout/target_description": {
+    "f1": 0.0,
+    "fn": 20,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 20,
+    "tp": 0
+  },
+  "v8/rollout/target_unit": {
+    "f1": 0.0,
+    "fn": 23,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 23,
+    "tp": 0
+  },
+  "v8/rollout/time_column": {
+    "f1": 0.0,
+    "fn": 16,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 16,
+    "tp": 0
+  },
+  "v8/rollout/timezone": {
+    "f1": 0.0,
+    "fn": 2,
+    "fp": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 2,
+    "tp": 0
+  }
+}

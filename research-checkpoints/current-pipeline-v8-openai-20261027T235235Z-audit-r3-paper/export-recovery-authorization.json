@@ -1,0 +1,10 @@
+{
+  "reason": "Export-only recovery from generic credential-pattern false positive in an opaque encrypted reasoning field",
+  "original_delivery_sha256": "df8077e9dc20044ac6cdd8e4ecf5f7ae0aa13cec0f2e6e17b24c51bc2ffccb9d",
+  "export_helper_sha256": "df782a53e84a6d229ad3524e3170cf4d31c8808c5bd526b5d8968468dbbc78fc",
+  "original_delivery_and_partial_folder_preserved": true,
+  "model_calls_repeated": 0,
+  "prompts_models_cases_labels_and_scorer_changed": false,
+  "raw_responses_modified": false,
+  "scanner_exception_file_sha256": "4c3e5e6c1394dc0b3b7d27e930637503fbd6cd5ff403db78d9adca2221054f3b"
+}

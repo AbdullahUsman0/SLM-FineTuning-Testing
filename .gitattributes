@@ -33,3 +33,12 @@
 /research-checkpoints/v7-dataset-preparation-20261008/** -text
 /research-checkpoints/v7-agent-review-20261009/** -text
 /research-checkpoints/v7-approved-policy-20261009/** -text
+
+# Preserve byte-hashed current-pipeline evidence and bundled patch bytes
+/research-checkpoints/current-pipeline-v8-openai-20261027T224308Z-r2-final/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+/research-checkpoints/current-pipeline-v8-openai-20261027T224308Z-r2-final/bundle/fpy-local-fixes.patch -diff
+/evaluation/current_pipeline_v8_openai_20261027_r2/** -text
+/evaluation/current_pipeline_v8_openai_20261027_r3/** -text
+/research-checkpoints/current-pipeline-v8-openai-20261027T235235Z-audit-r3-paper/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+/research-checkpoints/current-pipeline-v8-openai-20261027T235235Z-audit-r3-paper/bundle/fpy-local-fixes.patch -diff
+/research-checkpoints/current-pipeline-v8-openai-paper-audit-20261027/** -text whitespace=trailing-space,space-before-tab,cr-at-eol

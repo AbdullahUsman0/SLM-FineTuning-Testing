@@ -1,0 +1,15 @@
+{
+  "at_UTC": "2026-10-27T23:39:15.451819+00:00",
+  "gpu_csv_fields": [
+    "name",
+    "driver_version",
+    "memory.total",
+    "power.limit"
+  ],
+  "gpu_csv": "NVIDIA RTX A4000, 596.86, 16376 MiB, 140.00 W",
+  "Windows": "Windows-11-10.0.22621-SP0",
+  "Python": "3.12.10",
+  "run_volume_free_bytes": 283949948928,
+  "model_runtime_receipt": "local-runtime.json",
+  "source": "read-only hardware metadata; no inference calls"
+}
