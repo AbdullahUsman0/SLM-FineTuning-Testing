@@ -1,0 +1,18 @@
+{
+  "status": "published_download_verified",
+  "at_UTC": "2026-10-28T01:04:17.025135+00:00",
+  "commit": "97c36a0917a6feca5488805c84ebc6e7002a734c",
+  "branch": "experiment/v5-grounded-20260919",
+  "download_URL": "https://raw.githubusercontent.com/AbdullahUsman0/SLM-FineTuning-Testing/97c36a0917a6feca5488805c84ebc6e7002a734c/research-checkpoints/current-pipeline-v8-openai-paper-audit-20261027/corrected-r3-results.zip",
+  "sha256": "1ec345308f596f6e3b791c76abe30b98ffea9f74b3494ffc5f5e3b0964ab89cf",
+  "bytes": 4755096,
+  "archive_members": 538,
+  "CRC_and_all_member_SHA_verified": true,
+  "handoff_URL": "https://github.com/AbdullahUsman0/SLM-FineTuning-Testing/blob/97c36a0917a6feca5488805c84ebc6e7002a734c/research-checkpoints/current-pipeline-v8-openai-paper-audit-20261027/LOCAL_CODEX_HANDOFF.md",
+  "evidence_commit": "97c36a0917a6feca5488805c84ebc6e7002a734c",
+  "scope": "Subsequent immutable GitHub ZIP download; original completion receipts retain prepublication state",
+  "inference_completed": true,
+  "offline_tests_passed": 303,
+  "raw_response_and_state_replays_passed": 404,
+  "independent_human_review_complete": false
+}
