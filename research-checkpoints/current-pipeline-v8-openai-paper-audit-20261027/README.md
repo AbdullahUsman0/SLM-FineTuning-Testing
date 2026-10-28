@@ -1,5 +1,7 @@
 # Start here: audited and corrected v8/OpenAI comparison
 
+**Paper-use qualification:** Read [PAPER_VALIDITY_ADDENDUM.md](PAPER_VALIDITY_ADDENDUM.md) before using these results. The rows below are reproducible strict-contract raw-extraction development scores. They must not be presented as validated updated-production-pipeline accuracy or general model superiority. Native parser fidelity and no-op/unknown metric differences were confirmed in the subsequent offline audit.
+
 Read LOCAL_CODEX_HANDOFF.md and ROOT_CAUSE_AUDIT.md first. Corrective result folder: ../current-pipeline-v8-openai-20261027T235235Z-audit-r3-paper/ . The prior failed native-interface run is retained at ../current-pipeline-v8-openai-20261027T224308Z-r2-final/ ; its zero score is not a reliable model-capability headline. The corrective main results are below; both conditions remain public for transparency.
 
 | System | Track | P | R | Exact F1 | JSON | Schema | Raw admitted | Pipeline exact turns | Median s |

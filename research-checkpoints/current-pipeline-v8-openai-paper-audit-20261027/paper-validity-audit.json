@@ -1,0 +1,82 @@
+{
+  "audit_script_sha256": "99cf094c5cbdeb3e6b89bb32f6b971a4bfc176e57136acf74cdadeda4840ae02",
+  "fpy_and_evaluator_source_hashes_verified": true,
+  "fpy_commit": "9bc2bd18c495514efa79a4371be1d706b9fc3824",
+  "groups": {
+    "openai/component": {
+      "counts": {
+        "exact_matches_lost_to_whole_response_rejection": 16,
+        "experimental_parser_accepts": 84,
+        "native_Pydantic_parser_accepts": 101,
+        "native_ignored_status_updates": 81,
+        "unknown_turns_with_only_ignored_nonintent_updates": 14
+      },
+      "unchanged_primary_raw_exact": {
+        "f1": 0.5277777777777778,
+        "fn": 86,
+        "fp": 220,
+        "precision": 0.4373401534526854,
+        "recall": 0.6653696498054474,
+        "tp": 171
+      }
+    },
+    "openai/rollout": {
+      "counts": {
+        "exact_matches_lost_to_whole_response_rejection": 15,
+        "experimental_parser_accepts": 79,
+        "native_Pydantic_parser_accepts": 101,
+        "native_ignored_status_updates": 63,
+        "unknown_turns_with_only_ignored_nonintent_updates": 13
+      },
+      "unchanged_primary_raw_exact": {
+        "f1": 0.4884080370942813,
+        "fn": 99,
+        "fp": 232,
+        "precision": 0.40512820512820513,
+        "recall": 0.6147859922178989,
+        "tp": 158
+      }
+    },
+    "v8/component": {
+      "counts": {
+        "exact_matches_lost_to_whole_response_rejection": 4,
+        "experimental_parser_accepts": 100,
+        "native_Pydantic_parser_accepts": 100,
+        "native_ignored_status_updates": 0,
+        "unknown_turns_with_only_ignored_nonintent_updates": 0
+      },
+      "unchanged_primary_raw_exact": {
+        "f1": 0.9686274509803922,
+        "fn": 10,
+        "fp": 6,
+        "precision": 0.9762845849802372,
+        "recall": 0.9610894941634242,
+        "tp": 247
+      }
+    },
+    "v8/rollout": {
+      "counts": {
+        "exact_matches_lost_to_whole_response_rejection": 4,
+        "experimental_parser_accepts": 100,
+        "native_Pydantic_parser_accepts": 100,
+        "native_ignored_status_updates": 0,
+        "unknown_turns_with_only_ignored_nonintent_updates": 0
+      },
+      "unchanged_primary_raw_exact": {
+        "f1": 0.9568627450980393,
+        "fn": 13,
+        "fp": 9,
+        "precision": 0.9644268774703557,
+        "recall": 0.9494163424124513,
+        "tp": 244
+      }
+    }
+  },
+  "network_disabled": true,
+  "new_model_calls": 0,
+  "original_predictions_gold_and_primary_scores_modified": false,
+  "paid_requests": 0,
+  "primary_record_scores_reproduced": 404,
+  "protocol_sha256": "e10ace1c62360b21e1933e18ccf4935b735efd9ca69a4b167b48c98c6b32ff43",
+  "scope": "Post-hoc saved-output audit, not fresh inference or a replacement primary score"
+}

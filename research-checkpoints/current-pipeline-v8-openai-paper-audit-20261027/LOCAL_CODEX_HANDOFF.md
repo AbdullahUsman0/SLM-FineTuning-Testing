@@ -3,6 +3,8 @@
 Repository: AbdullahUsman0/SLM-FineTuning-Testing
 Branch: experiment/v5-grounded-20260919
 
+**Paper-use qualification:** Read PAPER_VALIDITY_ADDENDUM.md first. The 52.78% OpenAI component F1 is a reproducible strict-contract raw-extraction diagnostic, not validated updated-production-pipeline accuracy. The experimental parser is stricter than the native parser, and the raw metric penalizes statuses the reducer ignores. Hold general pipeline/superiority claims pending provider-fidelity and independent gold/disagreement review. Preserve the original scores and ZIP; do not substitute relaxed post-hoc scores as fresh evaluation.
+
 Use this handoff and the corrective result README for completed status. The frozen evaluator README preserves historical preparation text. Completion receipts were sealed before upload; consult PUBLICATION_VERIFICATION.json for subsequent public-download verification.
 
 Preserve local edits; fetch/fast-forward safely or use a new checkout. Read the publication folder containing this handoff, then the corrective result README, completion.json, protocol.json, ROOT_CAUSE_AUDIT.md, PAPER_TEST_REQUIREMENTS.md, PAPER_UPDATE_TABLE.csv, supplementary-contract-audit.json, billing-usage-analysis.json and automated failure findings. The raw journals and full SDK responses/usage are archived with checksums.
