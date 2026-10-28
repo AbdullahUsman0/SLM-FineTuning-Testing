@@ -1,0 +1,19 @@
+{
+  "status": "published_download_verified",
+  "at_UTC": "2026-10-28T09:58:58.223353+00:00",
+  "evidence_commit": "54f34f78377ab0400f79fd6a7fb3081187bd22f4",
+  "branch": "experiment/v5-grounded-20260919",
+  "download_URL": "https://raw.githubusercontent.com/AbdullahUsman0/SLM-FineTuning-Testing/54f34f78377ab0400f79fd6a7fb3081187bd22f4/research-checkpoints/current-pipeline-v8-openai-r4-20261028/r4-native-comparison-results.zip",
+  "ZIP_sha256": "4d4a33bd6ec4ac1bab28b47d37ee324a315177035826119e36a230cd71c143ae",
+  "bytes": 5097512,
+  "archive_members": 529,
+  "CRC_and_every_member_SHA_verified": true,
+  "fresh_OpenAI_calls": 220,
+  "reused_SLM_calls": 220,
+  "offline_tests_passed": 299,
+  "matched_main_scores_and_states_replayed": 404,
+  "reserved_USD": 0,
+  "uncertain_USD": 0,
+  "independent_human_review_complete": false,
+  "scope": "direct matched corrective DEVELOPMENT under common augmented adapter; fresh hosted versus verified reused SLM; renderer-only continuation disclosed"
+}
