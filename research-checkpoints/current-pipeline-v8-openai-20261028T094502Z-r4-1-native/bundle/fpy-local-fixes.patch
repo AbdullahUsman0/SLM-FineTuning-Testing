@@ -1,0 +1,340 @@
+diff --git a/src/forecasting_assistant/application/orchestrator.py b/src/forecasting_assistant/application/orchestrator.py
+index 224bf84..c81ceb8 100644
+--- a/src/forecasting_assistant/application/orchestrator.py
++++ b/src/forecasting_assistant/application/orchestrator.py
+@@ -36,6 +36,7 @@ from forecasting_assistant.infrastructure.llm.protocol import StructuredLLMClien
+ from forecasting_assistant.infrastructure.persistence.protocol import DialogueRepository
+ from forecasting_assistant.prompts.extractor import safe_provider_value
+ from forecasting_assistant.prompts.llmrei_long import (
++    acknowledge_known_target,
+     static_fallback_question,
+     validate_question,
+ )
+@@ -214,7 +215,7 @@ class ElicitationEngine:
+             for candidate in self._schema.slots
+             if candidate.slot_id != slot_id and is_slot_active(candidate, state)
+         )
+-        return QuestionRequest(
++        request = QuestionRequest(
+             dialogue_id=state.dialogue_id,
+             provider_conversation_id=state.provider_conversation_id,
+             slot_id=slot_id,
+@@ -229,6 +230,15 @@ class ElicitationEngine:
+             available_dataset_columns=tuple(state.dataset_columns),
+             priority_slots=tuple(rank_priority_slots(self._schema, state)),
+         )
++        target = state.slots.get("target_description")
++        if (
++            target is not None
++            and target.status in {SlotStatus.PROVIDED, SlotStatus.CONFIRMED}
++            and not target.validation_errors
++            and isinstance(target.value, str)
++        ):
++            request = acknowledge_known_target(request, target.value)
++        return request
+ 
+     def _sync_provider_context(self, state: DialogueState) -> None:
+         getter = getattr(self._llm, "conversation_id_for", None)
+@@ -686,7 +696,13 @@ class ElicitationEngine:
+             extraction = await self._llm.extract(message, state.model_copy(deep=True))
+             self._sync_provider_context(state)
+             self._trace("state.extraction_received", extraction.model_dump(mode="json"))
+-            recovered = self._recover_selected_slot_answer(state, turn_number, message)
++            # A correction can address a different slot from the pending
++            # question. Do not also turn that instruction into a free-text
++            # answer to the selected slot (for example, the task summary).
++            recovered = (
++                None if extraction.correction_detected
++                else self._recover_selected_slot_answer(state, turn_number, message)
++            )
+             extracted_slot_ids = {update.slot_id for update in extraction.updates}
+             recovery_is_for_pending_slot = (
+                 recovered is not None and recovered[1] not in extracted_slot_ids
+@@ -699,6 +715,20 @@ class ElicitationEngine:
+                 recovery_is_for_pending_slot or bad_intent_for_recovery
+             ):
+                 state, slot_id = recovered
++                # A missing selected slot can be recovered from a multi-fact
++                # message. Keep the extractor's other grounded updates instead
++                # of replacing the entire turn with the one recovered value.
++                if recovery_is_for_pending_slot and extraction.intent not in {
++                    Intent.NOT_FORECASTING,
++                    Intent.UNSUPPORTED,
++                }:
++                    state = apply_extraction(
++                        state,
++                        extraction,
++                        self._schema,
++                        turn_number,
++                        message,
++                    )
+                 self._trace(
+                     "state.recovery_applied",
+                     {"slot_id": slot_id, "state_after": self._trace_state(state)},
+@@ -710,7 +740,13 @@ class ElicitationEngine:
+                         "turn_number": turn_number,
+                         "slot_id": slot_id,
+                         "message": message,
+-                        "reason": "overrode unsupported intent for selected slot answer",
++                        "reason": (
++                            "completed selected slot while retaining extractor updates"
++                            if recovery_is_for_pending_slot and extraction.intent not in {
++                                Intent.NOT_FORECASTING, Intent.UNSUPPORTED
++                            }
++                            else "overrode unsupported intent for selected slot answer"
++                        ),
+                     },
+                 )
+             else:
+diff --git a/src/forecasting_assistant/prompts/llmrei_long.py b/src/forecasting_assistant/prompts/llmrei_long.py
+index 6526e62..529d542 100644
+--- a/src/forecasting_assistant/prompts/llmrei_long.py
++++ b/src/forecasting_assistant/prompts/llmrei_long.py
+@@ -3,7 +3,7 @@ from __future__ import annotations
+ import json
+ import re
+ 
+-from forecasting_assistant.domain.models import QuestionOutput, QuestionRequest
++from forecasting_assistant.domain.models import QuestionOutput, QuestionRequest, SlotStatus
+ from forecasting_assistant.prompts.extractor import safe_provider_value
+ 
+ _ANSWER_EXAMPLES = {
+@@ -34,7 +34,7 @@ _ANSWER_EXAMPLES = {
+     "scope_filters": "asset = BTC-USD",
+     "geography": "Pakistan",
+     "source_mode": "upload a file",
+-    "source_reference": "bitcoin_prices.csv",
++    "source_reference": "your_data.csv",
+     "source_provider": "World Bank",
+     "file_format": "csv",
+     "sheet_or_table": "Sheet1",
+@@ -89,6 +89,26 @@ _ANSWER_EXAMPLES = {
+ }
+ 
+ 
++def acknowledge_known_target(request: QuestionRequest, target: str) -> QuestionRequest:
++    """Adjust missing task wording without treating an example as a user value."""
++    if request.slot_id != "problem_statement" or request.current_state.status != SlotStatus.UNMENTIONED:
++        return request
++    # A target is user text: redact it, keep one question mark, and leave enough
++    # room for both the acknowledgement and example in the 300-character limit.
++    label = " ".join(str(safe_provider_value(target)).replace("?", " ").split())
++    if not label:
++        return request
++    if len(label) > 64:
++        label = label[:61].rstrip() + "..."
++    return request.model_copy(update={
++        "static_question": (
++            f'You mentioned "{label}" as the target. '
++            "How would you summarize the overall forecasting task in one sentence?"
++        ),
++        "example_answer": f"Forecast {label}",
++    })
++
++
+ def example_answer(request: QuestionRequest) -> str:
+     if request.example_answer:
+         return request.example_answer
+@@ -175,6 +195,7 @@ def build_question_instructions() -> str:
+         "Use known_context to make the example consistent with the user's domain, frequency, and dataset type.\n"
+         "Use everyday language for a novice user. Do not use unexplained terms such as slot, schema, hierarchy, panel, point forecast, probabilistic forecast, covariate, or metric. Explain the idea in simple words or add a short parenthetical explanation.\n"
+         "Known context is not automatically confirmed; never silently change it.\n"
++        "If static_question acknowledges an already known target, preserve that acknowledgement and ask for the overall task, rather than asking for the target again.\n"
+         "Probe ambiguity with one clarification question; do not assume, infer, or fill missing details.\n"
+         "Do not ask about any other slot, feature, model, dataset, metric, target, horizon, or value.\n"
+         "Do not propose features, models, datasets, metrics, or user values.\n"
+diff --git a/tests/integration/test_elicitation_flow.py b/tests/integration/test_elicitation_flow.py
+index 7910cb1..2bd8834 100644
+--- a/tests/integration/test_elicitation_flow.py
++++ b/tests/integration/test_elicitation_flow.py
+@@ -12,6 +12,7 @@ from forecasting_assistant.domain.models import (
+ )
+ from forecasting_assistant.domain.schema import load_schema
+ from forecasting_assistant.infrastructure.llm.openai_responses import LLMContractError
++from forecasting_assistant.prompts.llmrei_long import static_fallback_question
+ from tests.fakes import FakeLLMClient, InMemoryDialogueRepository
+ 
+ MESSAGE = "complete forecasting requirements"
+@@ -70,6 +71,62 @@ async def _start(client: FakeLLMClient):
+     return engine, repository, state.dialogue_id
+ 
+ 
++@pytest.mark.parametrize(
++    "target_status",
++    [SlotStatus.PROVIDED, SlotStatus.CONFIRMED, SlotStatus.INVALID, SlotStatus.AMBIGUOUS, SlotStatus.CONFLICTING],
++)
++def test_task_question_only_acknowledges_a_usable_recorded_target(target_status: SlotStatus) -> None:
++    repository = InMemoryDialogueRepository()
++    engine = ElicitationEngine(load_schema(), FakeLLMClient(), repository)
++    state = engine.start_dialogue()
++    target = state.slots["target_description"]
++    target.value = "daily maximum temperature for Lahore"
++    target.status = target_status
++    target.evidence_text = "Forecast daily maximum temperature for Lahore."
++    before = state.model_dump(mode="json")
++
++    request = engine._question_request(state, "problem_statement", "required slot is missing")
++    question = static_fallback_question(request).question
++
++    assert ('You mentioned "daily maximum temperature for Lahore"' in question) == (
++        target_status in {SlotStatus.PROVIDED, SlotStatus.CONFIRMED}
++    )
++    assert state.model_dump(mode="json") == before
++    assert state.slots["problem_statement"].value is None
++
++
++@pytest.mark.asyncio
++async def test_horizon_correction_does_not_fill_pending_task_summary() -> None:
++    message = "Change the forecast horizon to 6 months. Keep everything else unchanged."
++    correction = ExtractorResult(
++        intent=Intent.CREATE_FORECAST,
++        intent_confidence=1.0,
++        correction_detected=True,
++        updates=[_update("forecast_horizon", {"periods": 6, "unit": "month"}, evidence=message)],
++    )
++    engine, repository, dialogue_id = await _start(FakeLLMClient([correction]))
++    state = repository.load_state(dialogue_id)
++    initial = _complete_result(omit={"problem_statement"})
++    for update in initial.updates:
++        slot = state.slots[update.slot_id]
++        slot.value = update.candidate_value
++        slot.status = SlotStatus.PROVIDED
++        slot.evidence_text = "complete"
++    state.intent = Intent.CREATE_FORECAST
++    repository.save_state(state)
++    assert engine._question_request(state, "problem_statement", "missing").current_state.value is None
++
++    result = await engine.handle_user_message(dialogue_id, message)
++
++    assert result.state.slots["forecast_horizon"].value == {"periods": 6, "unit": "month"}
++    assert result.state.slots["problem_statement"].value is None
++    assert result.state.slots["problem_statement"].status == SlotStatus.UNMENTIONED
++    for slot_id, previous in state.slots.items():
++        if slot_id not in {"forecast_horizon", "intent"}:
++            assert result.state.slots[slot_id].value == previous.value
++    assert not any(event_type == "deterministic_recovery_applied" for _, event_type, _ in repository.events)
++
++
+ def test_attaching_uploaded_file_records_source_and_columns() -> None:
+     repository = InMemoryDialogueRepository()
+     engine = ElicitationEngine(load_schema(), FakeLLMClient(), repository)
+@@ -481,6 +538,43 @@ async def test_selected_enum_answer_recovers_when_extractor_fails() -> None:
+     assert "confirm" in result.assistant_message.lower()
+ 
+ 
++@pytest.mark.asyncio
++async def test_source_mode_recovery_preserves_other_extracted_requirements() -> None:
++    message = (
++        "Forecast daily maximum temperature for Lahore. The target is measured in Celsius. "
++        "Each observation covers 1 day. Predict the next 7 days. "
++        "The target column is tmax. I will upload weather.csv in csv format."
++    )
++    values = {
++        "target_description": ("daily maximum temperature for Lahore", "Forecast daily maximum temperature for Lahore."),
++        "target_unit": ("Celsius", "The target is measured in Celsius."),
++        "frequency": ({"periods": 1, "unit": "day"}, "Each observation covers 1 day."),
++        "forecast_horizon": ({"periods": 7, "unit": "day"}, "Predict the next 7 days."),
++        "target_column": ("tmax", "The target column is tmax."),
++        "file_format": ("csv", "I will upload weather.csv in csv format."),
++    }
++    client = FakeLLMClient([
++        ExtractorResult(
++            intent=Intent.CREATE_FORECAST,
++            intent_confidence=0.99,
++            updates=[_update(slot_id, value, evidence=evidence)
++                     for slot_id, (value, evidence) in values.items()],
++        )
++    ])
++    engine, repository, dialogue_id = await _start(client)
++
++    result = await engine.handle_user_message(dialogue_id, message)
++
++    assert result.state.intent == Intent.CREATE_FORECAST
++    assert result.state.slots["source_mode"].value == "upload"
++    for slot_id, (expected, _) in values.items():
++        assert result.state.slots[slot_id].value == expected
++    stored = repository.load_state(dialogue_id)
++    assert stored.slots["target_description"].value == values["target_description"][0]
++    assert stored.slots["source_reference"].value is None
++    assert len(client.extract_requests) == 1
++
++
+ @pytest.mark.asyncio
+ async def test_data_list_phrase_fills_catalog_source_mode_on_first_try() -> None:
+     client = FakeLLMClient(
+diff --git a/tests/unit/test_question_policy.py b/tests/unit/test_question_policy.py
+index 1ea2957..854f5ff 100644
+--- a/tests/unit/test_question_policy.py
++++ b/tests/unit/test_question_policy.py
+@@ -2,8 +2,9 @@ import json
+ 
+ import pytest
+ 
+-from forecasting_assistant.domain.models import QuestionOutput, QuestionRequest, SlotState
++from forecasting_assistant.domain.models import QuestionOutput, QuestionRequest, SlotState, SlotStatus
+ from forecasting_assistant.prompts.llmrei_long import (
++    acknowledge_known_target,
+     build_question_input,
+     build_question_instructions,
+     example_answer,
+@@ -158,6 +159,60 @@ def test_static_fallback_uses_schema_wording() -> None:
+     )
+ 
+ 
++def test_source_filename_example_is_domain_neutral() -> None:
++    request = _request(
++        slot_id="source_reference",
++        current_state=SlotState(slot_id="source_reference"),
++        static_question="Which file should be used?",
++    )
++    assert example_answer(request) == "your_data.csv"
++    assert "Bitcoin" not in static_fallback_question(request).question
++
++
++@pytest.mark.parametrize("target", ["daily maximum temperature for Lahore", "Pakistan inflation"])
++def test_missing_task_acknowledges_target_without_filling_it(target: str) -> None:
++    request = _request(
++        slot_id="problem_statement",
++        current_state=SlotState(slot_id="problem_statement"),
++        static_question="What would you like the system to predict?",
++        allowed_values=(),
++    )
++    updated = acknowledge_known_target(request, target)
++    output = static_fallback_question(updated)
++
++    assert f'You mentioned "{target}" as the target.' in output.question
++    assert "overall forecasting task" in output.question
++    assert f"Example answer: Forecast {target}." in output.question
++    assert "Bitcoin" not in output.question
++    assert validate_question(output, updated)
++    assert updated.current_state.value is None
++    assert updated.current_state.status == SlotStatus.UNMENTIONED
++    assert request.static_question == "What would you like the system to predict?"
++
++
++def test_target_acknowledgement_is_bounded_and_redacts_secrets() -> None:
++    request = _request(
++        slot_id="problem_statement",
++        current_state=SlotState(slot_id="problem_statement"),
++        allowed_values=(),
++    )
++    updated = acknowledge_known_target(request, "api_key=super-secret weather? " + "temperature " * 40)
++    output = static_fallback_question(updated)
++    assert "super-secret" not in output.question
++    assert len(output.question) <= 300
++    assert output.question.count("?") == 1
++    assert validate_question(output, updated)
++
++
++@pytest.mark.parametrize("status", [SlotStatus.INVALID, SlotStatus.AMBIGUOUS, SlotStatus.CONFLICTING])
++def test_task_conflicts_keep_the_existing_clarification(status: SlotStatus) -> None:
++    request = _request(
++        slot_id="problem_statement",
++        current_state=SlotState(slot_id="problem_statement", status=status),
++    )
++    assert acknowledge_known_target(request, "temperature") is request
++
++
+ def test_question_input_contains_the_selected_slot_example() -> None:
+     payload = json.loads(build_question_input(_request()))
+ 

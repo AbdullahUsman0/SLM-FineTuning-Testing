@@ -1,5 +1,7 @@
 # Local Codex: update the existing FYP paper from the corrected evidence
 
+**Latest comparison:** Read [the R4/R4.1 handoff](../current-pipeline-v8-openai-r4-20261028/LOCAL_CODEX_HANDOFF.md) first. Use both rows from its native/actionable scoring protocol, not a new hosted row combined with an older SLM row. This document preserves the earlier R3 strict-contract result and its qualifications.
+
 Repository: AbdullahUsman0/SLM-FineTuning-Testing
 Branch: experiment/v5-grounded-20260919
 

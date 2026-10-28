@@ -1,0 +1,29 @@
+{
+  "passed": false,
+  "returncode": 2,
+  "passed_test_count": 0,
+  "command": [
+    "D:\\SLM\\FYP-environments\\v8-final-20261018T230255Z\\Scripts\\python.exe",
+    "-B",
+    "D:\\SLM\\FYP-evaluation-runs\\current-pipeline-v8-openai-20261028T092127Z-r4-native\\run-offline-tests.py",
+    "-p",
+    "pytest_asyncio.plugin",
+    "-q",
+    "D:\\SLM\\SLM-FineTuning-Testing\\evaluation\\current_pipeline_v8_openai_20261028_r4\\test_r4.py",
+    "D:\\SLM\\FYP-evaluation-runs\\current-pipeline-v8-openai-20261028T092127Z-r4-native\\fpy\\tests",
+    "--override-ini",
+    "asyncio_mode=auto",
+    "--override-ini",
+    "cache_dir=D:\\SLM\\FYP-evaluation-runs\\current-pipeline-v8-openai-20261028T092127Z-r4-native\\pytest-cache"
+  ],
+  "cwd": "D:\\SLM\\FYP-evaluation-runs\\current-pipeline-v8-openai-20261028T092127Z-r4-native\\fpy",
+  "runner_source_sha256": {
+    "controls.py": "118bde782918e6679c339d6cd173dc8920c2d6bc0271b8c503e81a3498f1ed3c",
+    "pipeline.py": "2edbb38c0f57e2605acf906f4d4abb1e436fa8b268b2e0e53d6093a2b5e590b1",
+    "prepare.py": "a246ce7bd1ce2bfddd39eb1a80199b8bedfce7c19e10b66d778edd73ac0e2db2",
+    "runner.py": "b9b530787bcc428556a23a9d5e31312203cd1636d2b5f98f9151686c35730c21",
+    "test_r4.py": "59c8e11b587f35f018c9d2a22bf36d3fd281b49213c19bf90c05f2e7b2185cac"
+  },
+  "API_key_removed": true,
+  "outbound_network_disabled_except_loopback": true
+}

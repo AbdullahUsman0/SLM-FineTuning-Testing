@@ -1,0 +1,15 @@
+{
+  "verified_date": "2026-10-28",
+  "official_sources": [
+    "https://developers.openai.com/api/docs/models/gpt-5-mini",
+    "https://developers.openai.com/api/docs/guides/structured-outputs"
+  ],
+  "snapshot": "gpt-5-mini-2025-08-07",
+  "USD_per_million": {
+    "input": 0.25,
+    "cached_input": 0.025,
+    "output": 2
+  },
+  "generation_availability_verified_by_completed_pilot": true,
+  "pricing_unchanged_from_original_ledger": true
+}

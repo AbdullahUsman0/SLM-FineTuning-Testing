@@ -1,0 +1,5 @@
+model,track,calls,raw_exact_precision,raw_exact_recall,raw_exact_F1,json_valid,schema_valid,raw_contract_admitted,reducer_admitted_without_recovery,extra_slot_flags,forbidden_slot_flags,raw_correction_flag_correct_all_calls,correct_raw_correction_updates,correction_calls,raw_unknown_no_actionable_updates,unknown_wire_empty_nonintent_updates,ignored_status_updates,unknown_turns,pipeline_unknown_preserved,exact_pipeline_state_turns,exact_final_pipeline_state_conversations,conversation_denominator,recovery_calls,median_extraction_seconds
+v8,component,101,0.9762845849802372,0.9610894941634242,0.9686274509803922,101,100,100,100,2,0,100,25,25,20,20,0,20,12,75,13,20,21,8.082210999971721
+v8,rollout,101,0.9644268774703557,0.9494163424124513,0.9568627450980393,101,100,100,100,2,0,100,25,25,20,20,0,20,13,52,9,20,22,8.655898500001058
+openai,component,101,0.6445182724252492,0.754863813229572,0.6953405017921147,101,101,101,100,45,9,96,7,25,18,0,89,20,16,54,16,20,11,2.668862499998795
+openai,rollout,101,0.6363636363636364,0.7626459143968871,0.6938053097345133,101,101,101,99,55,5,97,5,25,15,0,78,20,15,6,1,20,13,2.5532915000003413

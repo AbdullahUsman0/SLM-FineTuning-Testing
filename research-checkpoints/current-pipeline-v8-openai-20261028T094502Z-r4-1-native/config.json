@@ -1,0 +1,12 @@
+{
+  "run": "D:\\SLM\\FYP-evaluation-runs\\current-pipeline-v8-openai-20261028T094502Z-r4-1-native",
+  "code": "D:\\SLM\\SLM-FineTuning-Testing\\evaluation\\current_pipeline_v8_openai_20261028_r4_1",
+  "repo": "D:\\SLM\\SLM-FineTuning-Testing",
+  "prior_run": "D:\\SLM\\FYP-evaluation-runs\\current-pipeline-v8-openai-20261027T235235Z-audit-r3",
+  "fpy": "D:\\SLM\\FYP-evaluation-runs\\current-pipeline-v8-openai-20261027T224308Z-r2\\fpy",
+  "legacy_fpy": "D:\\SLM\\SLM-FineTuning-Testing\\runtime\\fpy-final-pinned",
+  "python": "D:\\SLM\\FYP-environments\\v8-final-20261018T230255Z\\Scripts\\python.exe",
+  "shared_ledger": "D:\\SLM\\FYP-experiment-control\\current-pipeline-v8-openai-20261023\\budget.sqlite3",
+  "scope": "Versioned continuation: only unscored static-question length error bounded; same request namespace/ledger and saved paid calls",
+  "resume_from": "D:\\SLM\\FYP-evaluation-runs\\current-pipeline-v8-openai-20261028T092127Z-r4-native"
+}

@@ -1,0 +1,12 @@
+{
+  "ZIP_SHA256": "07e4c94337183866f46363a219a8192577e68e992737bc560177da4568ccd42f",
+  "adjacent_checksum_matched": true,
+  "ZIP_CRC_checked": true,
+  "new_extraction_directory": "D:\\SLM\\FYP-evaluation-runs\\current-pipeline-v8-openai-20261027T222208Z\\bundle",
+  "verify_bundle_py": {
+    "status": "verified",
+    "files": 12
+  },
+  "fpy_patch_git_apply_check_passed": true,
+  "all_four_working_file_LF_hashes_matched": true
+}

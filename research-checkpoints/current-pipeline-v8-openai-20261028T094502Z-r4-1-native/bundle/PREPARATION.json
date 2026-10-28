@@ -1,0 +1,28 @@
+{
+  "prepared_at_utc": "2026-10-23T19:35:34.005404+00:00",
+  "status": "handoff_prepared_execution_not_started",
+  "research_head": "45fd8bd0edfe4996d961d638c5d5d8de63f488bd",
+  "fpy_head": "9bc2bd18c495514efa79a4371be1d706b9fc3824",
+  "previous_diagnostic_fpy": "04d52c015d1e3ecdefe92b87116f209361509b4b",
+  "working_patch_sha256": "63f5d34a7ac553a9c84f0323f4a5f6955bd6a0948483fb23d69a0627377d8fb9",
+  "working_files": {
+    "src/forecasting_assistant/application/orchestrator.py": "d6129fedba9f6cea835ad8b5153883adbeddfbce74ff0e00cfe4f580488ef6db",
+    "src/forecasting_assistant/prompts/llmrei_long.py": "3a0c4651dab4e19373cc988e19399dc0dfaebf2252ba907a8b4c6ed87a046b2b",
+    "tests/integration/test_elicitation_flow.py": "c96e2c523b2e5cdf556edcc6dc5bfe4b3b1671e7f42e31d2a603dc5ba285dbe5",
+    "tests/unit/test_question_policy.py": "7bc0fc30fbd92561a0d07bf9d67b53dd735e7e60020741f61b11f164e68cbae0"
+  },
+  "new_inference_calls": 0,
+  "paid_API_calls": 0,
+  "sealed_labels_accessed": false,
+  "hosted_budget_approved": true,
+  "evaluation_runner_implemented": false,
+  "total_hosted_budget_usd": 1.0,
+  "authorization_file": "API_BUDGET_AUTHORIZATION.json",
+  "proposed_main_conversations": 20,
+  "working_files_LF_sha256": {
+    "src/forecasting_assistant/application/orchestrator.py": "5f45d74f33432f309a706490a22586f89be85225de91c571948155af5afb3539",
+    "src/forecasting_assistant/prompts/llmrei_long.py": "51f9b2420f881efa8f45d6c49de8bdbf54f123c84116c1c38e1359d79f524285",
+    "tests/integration/test_elicitation_flow.py": "1791cb45612822103c2daab2943d33da00e648082c2937093e359627b1fc8602",
+    "tests/unit/test_question_policy.py": "bf206538874789aa9a072f16d94a0256a472df343c2c3207d20de679caa49b15"
+  }
+}

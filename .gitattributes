@@ -42,3 +42,10 @@
 /research-checkpoints/current-pipeline-v8-openai-20261027T235235Z-audit-r3-paper/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
 /research-checkpoints/current-pipeline-v8-openai-20261027T235235Z-audit-r3-paper/bundle/fpy-local-fixes.patch -diff
 /research-checkpoints/current-pipeline-v8-openai-paper-audit-20261027/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+/evaluation/current_pipeline_v8_openai_20261028_r4/** -text
+/research-checkpoints/current-pipeline-v8-openai-20261028T092127Z-r4-native/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+/research-checkpoints/current-pipeline-v8-openai-20261028T092127Z-r4-native/bundle/fpy-local-fixes.patch -diff
+/research-checkpoints/current-pipeline-v8-openai-r4-20261028/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+/evaluation/current_pipeline_v8_openai_20261028_r4_1/** -text
+/research-checkpoints/current-pipeline-v8-openai-20261028T094502Z-r4-1-native/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+/research-checkpoints/current-pipeline-v8-openai-20261028T094502Z-r4-1-native/bundle/fpy-local-fixes.patch -diff

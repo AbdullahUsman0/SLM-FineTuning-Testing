@@ -1,0 +1,23 @@
+{
+  "receipt": "server-auth-20261028T093035692554Z.json",
+  "at_UTC": "2026-10-28T09:30:35.692554+00:00",
+  "credential_source": "fresh Windows user environment; ignores stale parent process key and .env",
+  "provider": "https://api.openai.com",
+  "checks": [
+    {
+      "method": "GET",
+      "endpoint": "/v1/models",
+      "status": 200,
+      "request_id": "4935505f-cd95-4435-82a0-c5437427b1db"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/v1/models/gpt-5-mini-2025-08-07",
+      "status": 200,
+      "request_id": "466e5883-2c3d-42e9-b462-981b84791bf2"
+    }
+  ],
+  "authentication_passed": true,
+  "generation_readiness_established": false,
+  "generation_requests": 0
+}

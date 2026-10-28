@@ -1,5 +1,7 @@
 # Start here: audited and corrected v8/OpenAI comparison
 
+**Latest rerun:** See [the R4/R4.1 native-admission comparison](../current-pipeline-v8-openai-r4-20261028/README.md) and its handoff. It uses fresh hosted responses and trajectory-verified reused SLM responses, with the same native/actionable metrics applied to both. The results below remain the historical R3 strict-contract condition.
+
 **Paper-use qualification:** Read [PAPER_VALIDITY_ADDENDUM.md](PAPER_VALIDITY_ADDENDUM.md) before using these results. The rows below are reproducible strict-contract raw-extraction development scores. They must not be presented as validated updated-production-pipeline accuracy or general model superiority. Native parser fidelity and no-op/unknown metric differences were confirmed in the subsequent offline audit.
 
 Read LOCAL_CODEX_HANDOFF.md and ROOT_CAUSE_AUDIT.md first. Corrective result folder: ../current-pipeline-v8-openai-20261027T235235Z-audit-r3-paper/ . The prior failed native-interface run is retained at ../current-pipeline-v8-openai-20261027T224308Z-r2-final/ ; its zero score is not a reliable model-capability headline. The corrective main results are below; both conditions remain public for transparency.
