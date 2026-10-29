@@ -1,0 +1,14 @@
+{
+  "stage": "refresh_taxonomy_table.py",
+  "command": [
+    "D:\\SLM\\FYP-environments\\v8-final-20261018T230255Z\\Scripts\\python.exe",
+    "-B",
+    "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\scripts\\offline_guard.py",
+    "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\scripts\\refresh_taxonomy_table.py"
+  ],
+  "log": "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\logs\\refresh_taxonomy_table-20261029T005812902133Z.log",
+  "returncode": 0,
+  "credentials_removed": true,
+  "outbound_network_blocked": true,
+  "shared_ledger_access_blocked": true
+}

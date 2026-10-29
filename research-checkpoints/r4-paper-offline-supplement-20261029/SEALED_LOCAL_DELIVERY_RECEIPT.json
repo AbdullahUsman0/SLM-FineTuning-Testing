@@ -1,0 +1,23 @@
+{
+  "CRC_all_member_hashes_copy_extraction_verified": true,
+  "ZIP": "C:\\Users\\Abdullah\\Downloads\\r4-paper-offline-supplement-20261028-r2.zip",
+  "baseline_tests_passed": 299,
+  "bytes": 6919684,
+  "credential_scan_passed": true,
+  "deliverables": "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\deliverables",
+  "fresh_shipped_layout_reproduction_passed": true,
+  "independent_human_review_complete": false,
+  "main_replays_passed": 404,
+  "members": 246,
+  "new_model_calls": 0,
+  "new_paid_calls": 0,
+  "new_training": 0,
+  "original_evidence_and_ledger_hashes_unchanged": true,
+  "package": "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\delivery-r2\\package",
+  "public_dummy_test_fixture_exceptions_documented": true,
+  "published_or_pushed": false,
+  "sha256": "a09f33e7c36bab427991e0ed30a5916a926e99035d1c661e4cf926425a4ed3f7",
+  "status": "local_offline_supplement_complete_verified",
+  "supplement_tests_passed": 10,
+  "workspace": "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z"
+}

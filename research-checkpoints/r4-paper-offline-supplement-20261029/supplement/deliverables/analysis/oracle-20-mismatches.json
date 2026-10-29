@@ -1,0 +1,4439 @@
+{
+  "findings": [
+    {
+      "changed_slots": [
+        "output_granularity"
+      ],
+      "expected_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 19.0,
+            "unit": "day"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "day"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/commodities/2203"
+        },
+        "target_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "gas_settlement"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "USD per MMBtu"
+        },
+        "time_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "recorded_at"
+        }
+      },
+      "interpretation": "Gold component extraction supplied; application discrepancy remains. No inference or label correction.",
+      "message": "The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at.",
+      "mismatch_exists_before_recovery": false,
+      "post_recovery_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 19.0,
+            "unit": "day"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "day"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "output_granularity": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at."
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/commodities/2203"
+        },
+        "target_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "gas_settlement"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "USD per MMBtu"
+        },
+        "time_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "recorded_at"
+        }
+      },
+      "pre_recovery_mismatches": [],
+      "pre_recovery_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 19.0,
+            "unit": "day"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "day"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/commodities/2203"
+        },
+        "target_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "gas_settlement"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "USD per MMBtu"
+        },
+        "time_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "recorded_at"
+        }
+      },
+      "recovery_slot_ids": [
+        "output_granularity"
+      ],
+      "scenario_id": "v7-20261009-r8-dev/commodities/0032",
+      "turn_id": "t2"
+    },
+    {
+      "changed_slots": [
+        "output_granularity"
+      ],
+      "expected_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 22.0,
+            "unit": "day"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 2.0,
+            "unit": "day"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://revised.example/commodities/32"
+        },
+        "target_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "gas_settlement"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "USD per MMBtu"
+        },
+        "time_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "recorded_at"
+        }
+      },
+      "interpretation": "Gold component extraction supplied; application discrepancy remains. No inference or label correction.",
+      "message": "I cannot supply a timezone, seasonal cycle lengths, prediction interval coverage or authorized access reference at this stage.",
+      "mismatch_exists_before_recovery": false,
+      "post_recovery_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 22.0,
+            "unit": "day"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 2.0,
+            "unit": "day"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "output_granularity": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "I cannot supply a timezone, seasonal cycle lengths, prediction interval coverage or authorized access reference at this stage."
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://revised.example/commodities/32"
+        },
+        "target_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "gas_settlement"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "USD per MMBtu"
+        },
+        "time_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "recorded_at"
+        }
+      },
+      "pre_recovery_mismatches": [],
+      "pre_recovery_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 22.0,
+            "unit": "day"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 2.0,
+            "unit": "day"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://revised.example/commodities/32"
+        },
+        "target_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "gas_settlement"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "USD per MMBtu"
+        },
+        "time_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "recorded_at"
+        }
+      },
+      "recovery_slot_ids": [
+        "output_granularity"
+      ],
+      "scenario_id": "v7-20261009-r8-dev/commodities/0032",
+      "turn_id": "t5"
+    },
+    {
+      "changed_slots": [
+        "output_granularity"
+      ],
+      "expected_state": {
+        "aggregation_level": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "site"
+        },
+        "aggregation_method": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "last"
+        },
+        "calendar_type": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "calendar"
+        },
+        "data_cutoff": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "2026-09-30T00:00:00+00:00"
+        },
+        "dataset_type": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "hierarchical"
+        },
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "csv"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 14.0,
+            "unit": "month"
+          }
+        },
+        "forecast_start": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "2026-10-01T00:00:00+00:00"
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "month"
+          }
+        },
+        "geography": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            "Fictional Pelmar corporate finance site 2711 region"
+          ]
+        },
+        "hierarchy_columns": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            "region_id",
+            "site_id"
+          ]
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "lead_time": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "month"
+          }
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "net operating cash flow for Pelmar corporate finance site 2711"
+        },
+        "scope_filters": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            {
+              "column": "site_id",
+              "operator": "eq",
+              "value": "Pelmar corporate finance site 2711"
+            }
+          ]
+        },
+        "series_id_columns": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            "site_id"
+          ]
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "upload"
+        },
+        "source_provider": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "Synthetic Economic Research Laboratory"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "corporate_finance_archive_2711.csv"
+        },
+        "target_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "operating_cash_flow"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "net operating cash flow for Pelmar corporate finance site 2711"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "thousands of USD"
+        },
+        "time_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "sample_date"
+        }
+      },
+      "interpretation": "Gold component extraction supplied; application discrepancy remains. No inference or label correction.",
+      "message": "Each series is identified by the columns site_id. The ordered hierarchy columns are region_id, site_id. Return results at the level site. Limit the scope using these explicit filters: [{\"column\": \"site_id\", \"operator\": \"eq\", \"value\": \"Pelmar corporate finance site 2711\"}]. Include only these fictional areas: Fictional Pelmar corporate finance site 2711 region. The fictional data provider is Synthetic Economic Research Laboratory.",
+      "mismatch_exists_before_recovery": false,
+      "post_recovery_state": {
+        "aggregation_level": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "site"
+        },
+        "aggregation_method": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "last"
+        },
+        "calendar_type": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "calendar"
+        },
+        "data_cutoff": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "2026-09-30T00:00:00+00:00"
+        },
+        "dataset_type": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "hierarchical"
+        },
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "csv"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 14.0,
+            "unit": "month"
+          }
+        },
+        "forecast_start": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "2026-10-01T00:00:00+00:00"
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "month"
+          }
+        },
+        "geography": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            "Fictional Pelmar corporate finance site 2711 region"
+          ]
+        },
+        "hierarchy_columns": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            "region_id",
+            "site_id"
+          ]
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "lead_time": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "month"
+          }
+        },
+        "output_granularity": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "Each series is identified by the columns site_id. The ordered hierarchy columns are region_id, site_id. Return results at the level site. Limit the scope using these explicit filters: [{\"column\": \"site_id\", \"operator\": \"eq\", \"value\": \"Pelmar corporate finance site 2711\"}]. Include only these fictional areas: Fictional Pelmar corporate finance site 2711 region. The fictional data provider is Synthetic Economic Research Laboratory."
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "net operating cash flow for Pelmar corporate finance site 2711"
+        },
+        "scope_filters": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            {
+              "column": "site_id",
+              "operator": "eq",
+              "value": "Pelmar corporate finance site 2711"
+            }
+          ]
+        },
+        "series_id_columns": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            "site_id"
+          ]
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "upload"
+        },
+        "source_provider": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "Synthetic Economic Research Laboratory"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "corporate_finance_archive_2711.csv"
+        },
+        "target_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "operating_cash_flow"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "net operating cash flow for Pelmar corporate finance site 2711"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "thousands of USD"
+        },
+        "time_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "sample_date"
+        }
+      },
+      "pre_recovery_mismatches": [],
+      "pre_recovery_state": {
+        "aggregation_level": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "site"
+        },
+        "aggregation_method": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "last"
+        },
+        "calendar_type": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "calendar"
+        },
+        "data_cutoff": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "2026-09-30T00:00:00+00:00"
+        },
+        "dataset_type": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "hierarchical"
+        },
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "csv"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 14.0,
+            "unit": "month"
+          }
+        },
+        "forecast_start": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "2026-10-01T00:00:00+00:00"
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "month"
+          }
+        },
+        "geography": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            "Fictional Pelmar corporate finance site 2711 region"
+          ]
+        },
+        "hierarchy_columns": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            "region_id",
+            "site_id"
+          ]
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "lead_time": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "month"
+          }
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "net operating cash flow for Pelmar corporate finance site 2711"
+        },
+        "scope_filters": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            {
+              "column": "site_id",
+              "operator": "eq",
+              "value": "Pelmar corporate finance site 2711"
+            }
+          ]
+        },
+        "series_id_columns": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            "site_id"
+          ]
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "upload"
+        },
+        "source_provider": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "Synthetic Economic Research Laboratory"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "corporate_finance_archive_2711.csv"
+        },
+        "target_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "operating_cash_flow"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "net operating cash flow for Pelmar corporate finance site 2711"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "thousands of USD"
+        },
+        "time_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "sample_date"
+        }
+      },
+      "recovery_slot_ids": [
+        "output_granularity"
+      ],
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0116",
+      "turn_id": "t4"
+    },
+    {
+      "changed_slots": [
+        "output_granularity"
+      ],
+      "expected_state": {
+        "aggregation_level": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "site"
+        },
+        "aggregation_method": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "last"
+        },
+        "calendar_type": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "calendar"
+        },
+        "data_cutoff": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "2026-09-30T00:00:00+00:00"
+        },
+        "dataset_type": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "hierarchical"
+        },
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "csv"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 17.0,
+            "unit": "month"
+          }
+        },
+        "forecast_start": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "2026-10-01T00:00:00+00:00"
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "month"
+          }
+        },
+        "geography": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            "Fictional Pelmar corporate finance site 2711 region"
+          ]
+        },
+        "hierarchy_columns": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            "region_id",
+            "site_id"
+          ]
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "lead_time": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "month"
+          }
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "net operating cash flow for Pelmar corporate finance site 2711"
+        },
+        "scope_filters": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            {
+              "column": "site_id",
+              "operator": "eq",
+              "value": "Pelmar corporate finance site 2711"
+            }
+          ]
+        },
+        "series_id_columns": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            "site_id"
+          ]
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "upload"
+        },
+        "source_provider": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "Synthetic Economic Research Laboratory"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "corporate_finance_archive_2711.csv"
+        },
+        "target_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "operating_cash_flow"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "net operating cash flow for Pelmar corporate finance site 2711"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "thousands of USD"
+        },
+        "time_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "sample_date"
+        }
+      },
+      "interpretation": "Gold component extraction supplied; application discrepancy remains. No inference or label correction.",
+      "message": "Timezone, seasonal cycle lengths, prediction interval levels and access details still need a decision. Keep them unspecified.",
+      "mismatch_exists_before_recovery": false,
+      "post_recovery_state": {
+        "aggregation_level": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "site"
+        },
+        "aggregation_method": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "last"
+        },
+        "calendar_type": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "calendar"
+        },
+        "data_cutoff": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "2026-09-30T00:00:00+00:00"
+        },
+        "dataset_type": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "hierarchical"
+        },
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "csv"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 17.0,
+            "unit": "month"
+          }
+        },
+        "forecast_start": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "2026-10-01T00:00:00+00:00"
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "month"
+          }
+        },
+        "geography": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            "Fictional Pelmar corporate finance site 2711 region"
+          ]
+        },
+        "hierarchy_columns": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            "region_id",
+            "site_id"
+          ]
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "lead_time": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "month"
+          }
+        },
+        "output_granularity": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "Timezone, seasonal cycle lengths, prediction interval levels and access details still need a decision. Keep them unspecified."
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "net operating cash flow for Pelmar corporate finance site 2711"
+        },
+        "scope_filters": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            {
+              "column": "site_id",
+              "operator": "eq",
+              "value": "Pelmar corporate finance site 2711"
+            }
+          ]
+        },
+        "series_id_columns": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            "site_id"
+          ]
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "upload"
+        },
+        "source_provider": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "Synthetic Economic Research Laboratory"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "corporate_finance_archive_2711.csv"
+        },
+        "target_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "operating_cash_flow"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "net operating cash flow for Pelmar corporate finance site 2711"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "thousands of USD"
+        },
+        "time_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "sample_date"
+        }
+      },
+      "pre_recovery_mismatches": [],
+      "pre_recovery_state": {
+        "aggregation_level": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "site"
+        },
+        "aggregation_method": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "last"
+        },
+        "calendar_type": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "calendar"
+        },
+        "data_cutoff": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "2026-09-30T00:00:00+00:00"
+        },
+        "dataset_type": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "hierarchical"
+        },
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "csv"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 17.0,
+            "unit": "month"
+          }
+        },
+        "forecast_start": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "2026-10-01T00:00:00+00:00"
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "month"
+          }
+        },
+        "geography": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            "Fictional Pelmar corporate finance site 2711 region"
+          ]
+        },
+        "hierarchy_columns": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            "region_id",
+            "site_id"
+          ]
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "lead_time": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "month"
+          }
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "net operating cash flow for Pelmar corporate finance site 2711"
+        },
+        "scope_filters": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            {
+              "column": "site_id",
+              "operator": "eq",
+              "value": "Pelmar corporate finance site 2711"
+            }
+          ]
+        },
+        "series_id_columns": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            "site_id"
+          ]
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "upload"
+        },
+        "source_provider": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "Synthetic Economic Research Laboratory"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "corporate_finance_archive_2711.csv"
+        },
+        "target_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "operating_cash_flow"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "net operating cash flow for Pelmar corporate finance site 2711"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "thousands of USD"
+        },
+        "time_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "sample_date"
+        }
+      },
+      "recovery_slot_ids": [
+        "output_granularity"
+      ],
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0116",
+      "turn_id": "t6"
+    },
+    {
+      "changed_slots": [
+        "output_granularity"
+      ],
+      "expected_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 11.0,
+            "unit": "hour"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "hour"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "BTC/USD hourly log return for Weslin crypto spot site 2306"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/crypto_spot/2306"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "BTC/USD hourly log return for Weslin crypto spot site 2306"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "percent"
+        }
+      },
+      "interpretation": "Gold component extraction supplied; application discrepancy remains. No inference or label correction.",
+      "message": "Timezone, seasonal periods and prediction interval levels are undecided, and I have no access reference. Please ask rather than fill them.",
+      "mismatch_exists_before_recovery": false,
+      "post_recovery_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 11.0,
+            "unit": "hour"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "hour"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "output_granularity": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "Timezone, seasonal periods and prediction interval levels are undecided, and I have no access reference. Please ask rather than fill them."
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "BTC/USD hourly log return for Weslin crypto spot site 2306"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/crypto_spot/2306"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "BTC/USD hourly log return for Weslin crypto spot site 2306"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "percent"
+        }
+      },
+      "pre_recovery_mismatches": [],
+      "pre_recovery_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 11.0,
+            "unit": "hour"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "hour"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "BTC/USD hourly log return for Weslin crypto spot site 2306"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/crypto_spot/2306"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "BTC/USD hourly log return for Weslin crypto spot site 2306"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "percent"
+        }
+      },
+      "recovery_slot_ids": [
+        "output_granularity"
+      ],
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0063",
+      "turn_id": "t2"
+    },
+    {
+      "changed_slots": [
+        "output_granularity"
+      ],
+      "expected_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 11.0,
+            "unit": "hour"
+          }
+        },
+        "forecast_type": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "probabilistic"
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "hour"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "known_seasonality": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": false
+        },
+        "prediction_interval_levels": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            80.0,
+            95.0
+          ]
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "BTC/USD hourly log return for Weslin crypto spot site 2306"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/crypto_spot/2306"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "BTC/USD hourly log return for Weslin crypto spot site 2306"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "percent"
+        },
+        "timezone": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "Asia/Karachi"
+        }
+      },
+      "interpretation": "Gold component extraction supplied; application discrepancy remains. No inference or label correction.",
+      "message": "All observed times use the Asia/Karachi timezone. Repeating seasonal pattern expect nahi karta. The requested forecast output type is probabilistic. prediction interval levels ki requirement 80, 95 hai.",
+      "mismatch_exists_before_recovery": false,
+      "post_recovery_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 11.0,
+            "unit": "hour"
+          }
+        },
+        "forecast_type": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "probabilistic"
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "hour"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "known_seasonality": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": false
+        },
+        "output_granularity": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "All observed times use the Asia/Karachi timezone. Repeating seasonal pattern expect nahi karta. The requested forecast output type is probabilistic. prediction interval levels ki requirement 80, 95 hai."
+        },
+        "prediction_interval_levels": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            80.0,
+            95.0
+          ]
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "BTC/USD hourly log return for Weslin crypto spot site 2306"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/crypto_spot/2306"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "BTC/USD hourly log return for Weslin crypto spot site 2306"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "percent"
+        },
+        "timezone": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "Asia/Karachi"
+        }
+      },
+      "pre_recovery_mismatches": [],
+      "pre_recovery_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 11.0,
+            "unit": "hour"
+          }
+        },
+        "forecast_type": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "probabilistic"
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "hour"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "known_seasonality": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": false
+        },
+        "prediction_interval_levels": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            80.0,
+            95.0
+          ]
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "BTC/USD hourly log return for Weslin crypto spot site 2306"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/crypto_spot/2306"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "BTC/USD hourly log return for Weslin crypto spot site 2306"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "percent"
+        },
+        "timezone": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "Asia/Karachi"
+        }
+      },
+      "recovery_slot_ids": [
+        "output_granularity"
+      ],
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0063",
+      "turn_id": "t3"
+    },
+    {
+      "changed_slots": [
+        "output_granularity"
+      ],
+      "expected_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 11.0,
+            "unit": "hour"
+          }
+        },
+        "forecast_type": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "probabilistic"
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "hour"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "known_seasonality": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": false
+        },
+        "prediction_interval_levels": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            80.0,
+            95.0
+          ]
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "BTC/USD hourly log return for Weslin crypto spot site 2306"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/crypto_spot/2306"
+        },
+        "target_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "btc_log_return"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "BTC/USD hourly log return for Weslin crypto spot site 2306"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "percent"
+        },
+        "time_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "recorded_at"
+        },
+        "timezone": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "Asia/Karachi"
+        }
+      },
+      "interpretation": "Gold component extraction supplied; application discrepancy remains. No inference or label correction.",
+      "message": "The response variable is stored in column btc_log_return. Input timestamp identifier recorded_at hai.",
+      "mismatch_exists_before_recovery": false,
+      "post_recovery_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 11.0,
+            "unit": "hour"
+          }
+        },
+        "forecast_type": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "probabilistic"
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "hour"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "known_seasonality": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": false
+        },
+        "output_granularity": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "The response variable is stored in column btc_log_return. Input timestamp identifier recorded_at hai."
+        },
+        "prediction_interval_levels": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            80.0,
+            95.0
+          ]
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "BTC/USD hourly log return for Weslin crypto spot site 2306"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/crypto_spot/2306"
+        },
+        "target_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "btc_log_return"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "BTC/USD hourly log return for Weslin crypto spot site 2306"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "percent"
+        },
+        "time_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "recorded_at"
+        },
+        "timezone": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "Asia/Karachi"
+        }
+      },
+      "pre_recovery_mismatches": [],
+      "pre_recovery_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 11.0,
+            "unit": "hour"
+          }
+        },
+        "forecast_type": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "probabilistic"
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "hour"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "known_seasonality": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": false
+        },
+        "prediction_interval_levels": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            80.0,
+            95.0
+          ]
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "BTC/USD hourly log return for Weslin crypto spot site 2306"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/crypto_spot/2306"
+        },
+        "target_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "btc_log_return"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "BTC/USD hourly log return for Weslin crypto spot site 2306"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "percent"
+        },
+        "time_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "recorded_at"
+        },
+        "timezone": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "Asia/Karachi"
+        }
+      },
+      "recovery_slot_ids": [
+        "output_granularity"
+      ],
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0063",
+      "turn_id": "t4"
+    },
+    {
+      "changed_slots": [
+        "output_granularity"
+      ],
+      "expected_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 8.0,
+            "unit": "day"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "day"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "raw closing share price without corporate-action adjustment for Norelia equities funds site 2009"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/equities_funds/2009"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "raw closing share price without corporate-action adjustment for Norelia equities funds site 2009"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "USD per share"
+        }
+      },
+      "interpretation": "Gold component extraction supplied; application discrepancy remains. No inference or label correction.",
+      "message": "Main pehle se recorded horizon ki tasdeeq karta hoon. Future coverage 8 din chahiye.",
+      "mismatch_exists_before_recovery": false,
+      "post_recovery_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 8.0,
+            "unit": "day"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "day"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "output_granularity": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "Main pehle se recorded horizon ki tasdeeq karta hoon. Future coverage 8 din chahiye."
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "raw closing share price without corporate-action adjustment for Norelia equities funds site 2009"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/equities_funds/2009"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "raw closing share price without corporate-action adjustment for Norelia equities funds site 2009"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "USD per share"
+        }
+      },
+      "pre_recovery_mismatches": [],
+      "pre_recovery_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 8.0,
+            "unit": "day"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "day"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "raw closing share price without corporate-action adjustment for Norelia equities funds site 2009"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/equities_funds/2009"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "raw closing share price without corporate-action adjustment for Norelia equities funds site 2009"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "USD per share"
+        }
+      },
+      "recovery_slot_ids": [
+        "output_granularity"
+      ],
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0094",
+      "turn_id": "t2"
+    },
+    {
+      "changed_slots": [
+        "output_granularity"
+      ],
+      "expected_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 11.0,
+            "unit": "day"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "day"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "raw closing share price without corporate-action adjustment for Norelia equities funds site 2009"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/equities_funds/2009"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "raw closing share price without corporate-action adjustment for Norelia equities funds site 2009"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "USD per share"
+        }
+      },
+      "interpretation": "Gold component extraction supplied; application discrepancy remains. No inference or label correction.",
+      "message": "Main pehle se recorded horizon ki tasdeeq karta hoon. Future coverage 11 din chahiye.",
+      "mismatch_exists_before_recovery": false,
+      "post_recovery_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 11.0,
+            "unit": "day"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "day"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "output_granularity": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "Main pehle se recorded horizon ki tasdeeq karta hoon. Future coverage 11 din chahiye."
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "raw closing share price without corporate-action adjustment for Norelia equities funds site 2009"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/equities_funds/2009"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "raw closing share price without corporate-action adjustment for Norelia equities funds site 2009"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "USD per share"
+        }
+      },
+      "pre_recovery_mismatches": [],
+      "pre_recovery_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 11.0,
+            "unit": "day"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "day"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "raw closing share price without corporate-action adjustment for Norelia equities funds site 2009"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/equities_funds/2009"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "raw closing share price without corporate-action adjustment for Norelia equities funds site 2009"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "USD per share"
+        }
+      },
+      "recovery_slot_ids": [
+        "output_granularity"
+      ],
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0094",
+      "turn_id": "t4"
+    },
+    {
+      "changed_slots": [
+        "output_granularity"
+      ],
+      "expected_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 11.0,
+            "unit": "day"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "day"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "raw closing share price without corporate-action adjustment for Norelia equities funds site 2009"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/equities_funds/2009"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "raw closing share price without corporate-action adjustment for Norelia equities funds site 2009"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "USD per share"
+        }
+      },
+      "interpretation": "Gold component extraction supplied; application discrepancy remains. No inference or label correction.",
+      "message": "Timezone, seasonal periods aur prediction interval levels abhi decide nahi aur access reference bhi nahi hai. Fill karne ke bajaye pooch lein.",
+      "mismatch_exists_before_recovery": false,
+      "post_recovery_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 11.0,
+            "unit": "day"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "day"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "output_granularity": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "Timezone, seasonal periods aur prediction interval levels abhi decide nahi aur access reference bhi nahi hai. Fill karne ke bajaye pooch lein."
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "raw closing share price without corporate-action adjustment for Norelia equities funds site 2009"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/equities_funds/2009"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "raw closing share price without corporate-action adjustment for Norelia equities funds site 2009"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "USD per share"
+        }
+      },
+      "pre_recovery_mismatches": [],
+      "pre_recovery_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 11.0,
+            "unit": "day"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "day"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "raw closing share price without corporate-action adjustment for Norelia equities funds site 2009"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/equities_funds/2009"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "raw closing share price without corporate-action adjustment for Norelia equities funds site 2009"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "USD per share"
+        }
+      },
+      "recovery_slot_ids": [
+        "output_granularity"
+      ],
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0094",
+      "turn_id": "t5"
+    },
+    {
+      "changed_slots": [
+        "target_unit"
+      ],
+      "expected_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 17.0,
+            "unit": "hour"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 3,
+            "unit": "hour"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "relative humidity for Merlow humidity pressure site 1308"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/humidity_pressure/1308"
+        },
+        "target_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "rh_pct"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "relative humidity for Merlow humidity pressure site 1308"
+        },
+        "time_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "recorded_at"
+        }
+      },
+      "interpretation": "Gold component extraction supplied; application discrepancy remains. No inference or label correction.",
+      "message": "The response variable is stored in column rh_pct. The input timestamp identifier is recorded_at.",
+      "mismatch_exists_before_recovery": false,
+      "post_recovery_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 17.0,
+            "unit": "hour"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 3,
+            "unit": "hour"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "relative humidity for Merlow humidity pressure site 1308"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/humidity_pressure/1308"
+        },
+        "target_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "rh_pct"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "relative humidity for Merlow humidity pressure site 1308"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "The response variable is stored in column rh_pct. The input timestamp identifier is recorded_at."
+        },
+        "time_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "recorded_at"
+        }
+      },
+      "pre_recovery_mismatches": [],
+      "pre_recovery_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 17.0,
+            "unit": "hour"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 3,
+            "unit": "hour"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "relative humidity for Merlow humidity pressure site 1308"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/humidity_pressure/1308"
+        },
+        "target_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "rh_pct"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "relative humidity for Merlow humidity pressure site 1308"
+        },
+        "time_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "recorded_at"
+        }
+      },
+      "recovery_slot_ids": [
+        "target_unit"
+      ],
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0085",
+      "turn_id": "t2"
+    },
+    {
+      "changed_slots": [
+        "output_granularity"
+      ],
+      "expected_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 20.0,
+            "unit": "hour"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "hour"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "relative humidity for Merlow humidity pressure site 1308"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/humidity_pressure/1308"
+        },
+        "target_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "rh_pct"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "relative humidity for Merlow humidity pressure site 1308"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "percent"
+        },
+        "time_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "recorded_at"
+        }
+      },
+      "interpretation": "Gold component extraction supplied; application discrepancy remains. No inference or label correction.",
+      "message": "No timezone, seasonal cycle lengths, interval coverage levels or access reference has been agreed. I will provide them later.",
+      "mismatch_exists_before_recovery": false,
+      "post_recovery_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 20.0,
+            "unit": "hour"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "hour"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "output_granularity": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "No timezone, seasonal cycle lengths, interval coverage levels or access reference has been agreed. I will provide them later."
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "relative humidity for Merlow humidity pressure site 1308"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/humidity_pressure/1308"
+        },
+        "target_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "rh_pct"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "relative humidity for Merlow humidity pressure site 1308"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "percent"
+        },
+        "time_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "recorded_at"
+        }
+      },
+      "pre_recovery_mismatches": [],
+      "pre_recovery_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 20.0,
+            "unit": "hour"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "hour"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "relative humidity for Merlow humidity pressure site 1308"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/humidity_pressure/1308"
+        },
+        "target_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "rh_pct"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "relative humidity for Merlow humidity pressure site 1308"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "percent"
+        },
+        "time_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "recorded_at"
+        }
+      },
+      "recovery_slot_ids": [
+        "output_granularity"
+      ],
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0085",
+      "turn_id": "t5"
+    },
+    {
+      "changed_slots": [
+        "source_mode"
+      ],
+      "expected_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "inferred",
+          "value": "parquet"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 11.0,
+            "unit": "hour"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "hour"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "air temperature for Virelo temperature site 1013"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "temperature_archive_1013.PARQUET"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "air temperature for Virelo temperature site 1013"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "degrees Celsius"
+        }
+      },
+      "interpretation": "Gold component extraction supplied; application discrepancy remains. No inference or label correction.",
+      "message": "The analyst request is as follows.  We need an outlook for air temperature for Virelo temperature site 1013. Target measurements use degrees Celsius. Each observed record covers 1 hour. The requested future coverage is 11 hours. The supplied source identifier is temperature_archive_1013.PARQUET.",
+      "mismatch_exists_before_recovery": false,
+      "post_recovery_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "inferred",
+          "value": "parquet"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 11.0,
+            "unit": "hour"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "hour"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "air temperature for Virelo temperature site 1013"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "upload"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "temperature_archive_1013.PARQUET"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "air temperature for Virelo temperature site 1013"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "degrees Celsius"
+        }
+      },
+      "pre_recovery_mismatches": [],
+      "pre_recovery_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "inferred",
+          "value": "parquet"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 11.0,
+            "unit": "hour"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "hour"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "air temperature for Virelo temperature site 1013"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "temperature_archive_1013.PARQUET"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "air temperature for Virelo temperature site 1013"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "degrees Celsius"
+        }
+      },
+      "recovery_slot_ids": [
+        "source_mode"
+      ],
+      "scenario_id": "v7-20261009-r8-dev/temperature/0130",
+      "turn_id": "t1"
+    },
+    {
+      "changed_slots": [
+        "output_granularity"
+      ],
+      "expected_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 10.0,
+            "unit": "week"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "week"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "crop-yield index with soil-moisture covariates for Merlow weather agriculture site 2900"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/weather_agriculture/2900"
+        },
+        "target_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "yield_index"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "crop-yield index with soil-moisture covariates for Merlow weather agriculture site 2900"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "index points, base 2020=100"
+        },
+        "time_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "recorded_at"
+        }
+      },
+      "interpretation": "Gold component extraction supplied; application discrepancy remains. No inference or label correction.",
+      "message": "The response variable is stored in column yield_index. The input timestamp identifier is recorded_at.",
+      "mismatch_exists_before_recovery": false,
+      "post_recovery_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 10.0,
+            "unit": "week"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "week"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "output_granularity": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "The response variable is stored in column yield_index. The input timestamp identifier is recorded_at."
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "crop-yield index with soil-moisture covariates for Merlow weather agriculture site 2900"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/weather_agriculture/2900"
+        },
+        "target_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "yield_index"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "crop-yield index with soil-moisture covariates for Merlow weather agriculture site 2900"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "index points, base 2020=100"
+        },
+        "time_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "recorded_at"
+        }
+      },
+      "pre_recovery_mismatches": [],
+      "pre_recovery_state": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 10.0,
+            "unit": "week"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "week"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "crop-yield index with soil-moisture covariates for Merlow weather agriculture site 2900"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/weather_agriculture/2900"
+        },
+        "target_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "yield_index"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "crop-yield index with soil-moisture covariates for Merlow weather agriculture site 2900"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "index points, base 2020=100"
+        },
+        "time_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "recorded_at"
+        }
+      },
+      "recovery_slot_ids": [
+        "output_granularity"
+      ],
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0000",
+      "turn_id": "t2"
+    },
+    {
+      "changed_slots": [
+        "output_granularity"
+      ],
+      "expected_state": {
+        "business_goal": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "prepare a planning reserve for Merlow weather agriculture site 2900"
+        },
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 13.0,
+            "unit": "week"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "week"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "crop-yield index with soil-moisture covariates for Merlow weather agriculture site 2900"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/weather_agriculture/2900"
+        },
+        "target_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "yield_index"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "crop-yield index with soil-moisture covariates for Merlow weather agriculture site 2900"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "index points, base 2020=100"
+        },
+        "time_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "recorded_at"
+        }
+      },
+      "interpretation": "Gold component extraction supplied; application discrepancy remains. No inference or label correction.",
+      "message": "Our operational goal is to prepare a planning reserve for Merlow weather agriculture site 2900.",
+      "mismatch_exists_before_recovery": false,
+      "post_recovery_state": {
+        "business_goal": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "prepare a planning reserve for Merlow weather agriculture site 2900"
+        },
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 13.0,
+            "unit": "week"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "week"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "output_granularity": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "Our operational goal is to prepare a planning reserve for Merlow weather agriculture site 2900."
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "crop-yield index with soil-moisture covariates for Merlow weather agriculture site 2900"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/weather_agriculture/2900"
+        },
+        "target_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "yield_index"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "crop-yield index with soil-moisture covariates for Merlow weather agriculture site 2900"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "index points, base 2020=100"
+        },
+        "time_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "recorded_at"
+        }
+      },
+      "pre_recovery_mismatches": [],
+      "pre_recovery_state": {
+        "business_goal": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "prepare a planning reserve for Merlow weather agriculture site 2900"
+        },
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 13.0,
+            "unit": "week"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "week"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "crop-yield index with soil-moisture covariates for Merlow weather agriculture site 2900"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/weather_agriculture/2900"
+        },
+        "target_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "yield_index"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "crop-yield index with soil-moisture covariates for Merlow weather agriculture site 2900"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "index points, base 2020=100"
+        },
+        "time_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "recorded_at"
+        }
+      },
+      "recovery_slot_ids": [
+        "output_granularity"
+      ],
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0000",
+      "turn_id": "t4"
+    },
+    {
+      "changed_slots": [
+        "output_granularity"
+      ],
+      "expected_state": {
+        "business_goal": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "prepare a planning reserve for Merlow weather agriculture site 2900"
+        },
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 13.0,
+            "unit": "week"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "week"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "crop-yield index with soil-moisture covariates for Merlow weather agriculture site 2900"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/weather_agriculture/2900"
+        },
+        "target_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "yield_index"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "crop-yield index with soil-moisture covariates for Merlow weather agriculture site 2900"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "index points, base 2020=100"
+        },
+        "time_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "recorded_at"
+        }
+      },
+      "interpretation": "Gold component extraction supplied; application discrepancy remains. No inference or label correction.",
+      "message": "Timezone, seasonal periods and prediction interval levels are undecided, and I have no access reference. Please ask rather than fill them.",
+      "mismatch_exists_before_recovery": false,
+      "post_recovery_state": {
+        "business_goal": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "prepare a planning reserve for Merlow weather agriculture site 2900"
+        },
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 13.0,
+            "unit": "week"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "week"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "output_granularity": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "Timezone, seasonal periods and prediction interval levels are undecided, and I have no access reference. Please ask rather than fill them."
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "crop-yield index with soil-moisture covariates for Merlow weather agriculture site 2900"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/weather_agriculture/2900"
+        },
+        "target_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "yield_index"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "crop-yield index with soil-moisture covariates for Merlow weather agriculture site 2900"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "index points, base 2020=100"
+        },
+        "time_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "recorded_at"
+        }
+      },
+      "pre_recovery_mismatches": [],
+      "pre_recovery_state": {
+        "business_goal": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "prepare a planning reserve for Merlow weather agriculture site 2900"
+        },
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 13.0,
+            "unit": "week"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "week"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "crop-yield index with soil-moisture covariates for Merlow weather agriculture site 2900"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/weather_agriculture/2900"
+        },
+        "target_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "yield_index"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "crop-yield index with soil-moisture covariates for Merlow weather agriculture site 2900"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "index points, base 2020=100"
+        },
+        "time_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "recorded_at"
+        }
+      },
+      "recovery_slot_ids": [
+        "output_granularity"
+      ],
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0000",
+      "turn_id": "t5"
+    },
+    {
+      "changed_slots": [
+        "source_reference"
+      ],
+      "expected_state": {
+        "expected_history_length": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 6.0,
+            "unit": "year"
+          }
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 7.0,
+            "unit": "day"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 2.0,
+            "unit": "hour"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "prediction_frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 2.0,
+            "unit": "day"
+          }
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "headline CPI index level for fictional validation station inflation_prices 7104"
+        },
+        "refresh_frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 5.0,
+            "unit": "hour"
+          }
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "upload"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "headline CPI index level for fictional validation station inflation_prices 7104"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "index points, base 2020=100"
+        }
+      },
+      "interpretation": "Gold component extraction supplied; application discrepancy remains. No inference or label correction.",
+      "message": "The spacing between observations is 2 hours. The forecast issuance interval is 2 days. Source ingestion repeats at 5-hour intervals. There are 6 years of historical observations available.",
+      "mismatch_exists_before_recovery": false,
+      "post_recovery_state": {
+        "expected_history_length": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 6.0,
+            "unit": "year"
+          }
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 7.0,
+            "unit": "day"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 2.0,
+            "unit": "hour"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "prediction_frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 2.0,
+            "unit": "day"
+          }
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "headline CPI index level for fictional validation station inflation_prices 7104"
+        },
+        "refresh_frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 5.0,
+            "unit": "hour"
+          }
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "upload"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "The spacing between observations is 2 hours. The forecast issuance interval is 2 days. Source ingestion repeats at 5-hour intervals. There are 6 years of historical observations available."
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "headline CPI index level for fictional validation station inflation_prices 7104"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "index points, base 2020=100"
+        }
+      },
+      "pre_recovery_mismatches": [],
+      "pre_recovery_state": {
+        "expected_history_length": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 6.0,
+            "unit": "year"
+          }
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 7.0,
+            "unit": "day"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 2.0,
+            "unit": "hour"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "prediction_frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 2.0,
+            "unit": "day"
+          }
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "headline CPI index level for fictional validation station inflation_prices 7104"
+        },
+        "refresh_frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 5.0,
+            "unit": "hour"
+          }
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "upload"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "headline CPI index level for fictional validation station inflation_prices 7104"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "index points, base 2020=100"
+        }
+      },
+      "recovery_slot_ids": [
+        "source_reference"
+      ],
+      "scenario_id": "v8-final-20261018-r1/focused/inflation_prices/validation-004",
+      "turn_id": "t2"
+    },
+    {
+      "changed_slots": [
+        "source_reference"
+      ],
+      "expected_state": {
+        "expected_history_length": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 6.0,
+            "unit": "year"
+          }
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 12.0,
+            "unit": "day"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 2.0,
+            "unit": "hour"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "prediction_frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 2.0,
+            "unit": "day"
+          }
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "headline CPI index level for fictional validation station inflation_prices 7104"
+        },
+        "refresh_frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 5.0,
+            "unit": "hour"
+          }
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "upload"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "headline CPI index level for fictional validation station inflation_prices 7104"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "index points, base 2020=100"
+        }
+      },
+      "interpretation": "Gold component extraction supplied; application discrepancy remains. No inference or label correction.",
+      "message": "No seasonal cycle lengths or authentication reference have been supplied, so I cannot give those values yet.",
+      "mismatch_exists_before_recovery": false,
+      "post_recovery_state": {
+        "expected_history_length": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 6.0,
+            "unit": "year"
+          }
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 12.0,
+            "unit": "day"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 2.0,
+            "unit": "hour"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "prediction_frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 2.0,
+            "unit": "day"
+          }
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "headline CPI index level for fictional validation station inflation_prices 7104"
+        },
+        "refresh_frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 5.0,
+            "unit": "hour"
+          }
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "upload"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "No seasonal cycle lengths or authentication reference have been supplied, so I cannot give those values yet."
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "headline CPI index level for fictional validation station inflation_prices 7104"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "index points, base 2020=100"
+        }
+      },
+      "pre_recovery_mismatches": [],
+      "pre_recovery_state": {
+        "expected_history_length": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 6.0,
+            "unit": "year"
+          }
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 12.0,
+            "unit": "day"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 2.0,
+            "unit": "hour"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "prediction_frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 2.0,
+            "unit": "day"
+          }
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "headline CPI index level for fictional validation station inflation_prices 7104"
+        },
+        "refresh_frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 5.0,
+            "unit": "hour"
+          }
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "upload"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "headline CPI index level for fictional validation station inflation_prices 7104"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "index points, base 2020=100"
+        }
+      },
+      "recovery_slot_ids": [
+        "source_reference"
+      ],
+      "scenario_id": "v8-final-20261018-r1/focused/inflation_prices/validation-004",
+      "turn_id": "t4"
+    },
+    {
+      "changed_slots": [
+        "source_reference"
+      ],
+      "expected_state": {
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 6.0,
+            "unit": "day"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "mortgage interest rate level for fictional validation station rates_fixed_income 7103"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "api"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "mortgage interest rate level for fictional validation station rates_fixed_income 7103"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "percent per year"
+        }
+      },
+      "interpretation": "Gold component extraction supplied; application discrepancy remains. No inference or label correction.",
+      "message": "Nothing in the recorded brief has changed; there are no additional requirements in this message.",
+      "mismatch_exists_before_recovery": false,
+      "post_recovery_state": {
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 6.0,
+            "unit": "day"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "mortgage interest rate level for fictional validation station rates_fixed_income 7103"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "api"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "Nothing in the recorded brief has changed; there are no additional requirements in this message."
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "mortgage interest rate level for fictional validation station rates_fixed_income 7103"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "percent per year"
+        }
+      },
+      "pre_recovery_mismatches": [],
+      "pre_recovery_state": {
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 6.0,
+            "unit": "day"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "mortgage interest rate level for fictional validation station rates_fixed_income 7103"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "api"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "mortgage interest rate level for fictional validation station rates_fixed_income 7103"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "percent per year"
+        }
+      },
+      "recovery_slot_ids": [
+        "source_reference"
+      ],
+      "scenario_id": "v8-final-20261018-r1/focused/rates_fixed_income/validation-003",
+      "turn_id": "t2"
+    },
+    {
+      "changed_slots": [
+        "source_reference"
+      ],
+      "expected_state": {
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 11.0,
+            "unit": "day"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "mortgage interest rate level for fictional validation station rates_fixed_income 7103"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "api"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "mortgage interest rate level for fictional validation station rates_fixed_income 7103"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "percent per year"
+        }
+      },
+      "interpretation": "Gold component extraction supplied; application discrepancy remains. No inference or label correction.",
+      "message": "No seasonal cycle lengths or authentication reference have been supplied, so I cannot give those values yet.",
+      "mismatch_exists_before_recovery": false,
+      "post_recovery_state": {
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 11.0,
+            "unit": "day"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "mortgage interest rate level for fictional validation station rates_fixed_income 7103"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "api"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "No seasonal cycle lengths or authentication reference have been supplied, so I cannot give those values yet."
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "mortgage interest rate level for fictional validation station rates_fixed_income 7103"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "percent per year"
+        }
+      },
+      "pre_recovery_mismatches": [],
+      "pre_recovery_state": {
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 11.0,
+            "unit": "day"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "mortgage interest rate level for fictional validation station rates_fixed_income 7103"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "api"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "mortgage interest rate level for fictional validation station rates_fixed_income 7103"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "percent per year"
+        }
+      },
+      "recovery_slot_ids": [
+        "source_reference"
+      ],
+      "scenario_id": "v8-final-20261018-r1/focused/rates_fixed_income/validation-003",
+      "turn_id": "t4"
+    }
+  ],
+  "mismatch_calls": 20,
+  "mismatch_calls_existing_before_recovery": 0,
+  "oracle_calls": 101,
+  "original_keys_reproduced": true,
+  "recovery_only_mismatch_calls": 20
+}

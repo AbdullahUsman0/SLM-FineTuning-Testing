@@ -1,0 +1,83 @@
+{
+  "application_exact_byte_hashes_verified": 36,
+  "bundled_patch_git_apply_check_passed": true,
+  "line_ending_restorations": [],
+  "evaluator_source_hashes_verified": true,
+  "verifier_byte_identical_to_publication": true,
+  "runtime_config_path_only_changes": {
+    "code": "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\runtime\\evaluator",
+    "repo": "D:\\SLM\\SLM-FineTuning-Testing"
+  },
+  "group_structure": {
+    "category": {
+      "correction_chain": 2,
+      "lifecycle_dense": 2,
+      "ambiguous_then_clarified": 3,
+      "unknown_then_value": 2,
+      "confirmation_status": 2,
+      "explicit_state_repair": 3,
+      "encoding_literal": 2,
+      "core_recall": 2,
+      "cadence_role_isolation": 1,
+      "correction_preserves_state": 1
+    },
+    "template_variant": {
+      "4": 18,
+      "None": 2
+    },
+    "entity_group": {
+      "v7-20261009-r8-dev/commodities/entity-003": 1,
+      "v7-20261009-r8-dev/corporate_finance/entity-011": 1,
+      "v7-20261009-r8-dev/crypto_derivatives/entity-016": 1,
+      "v7-20261009-r8-dev/crypto_spot/entity-006": 1,
+      "v7-20261009-r8-dev/equities_funds/entity-009": 1,
+      "v7-20261009-r8-dev/foreign_exchange/entity-010": 1,
+      "v7-20261009-r8-dev/housing_property/entity-018": 1,
+      "v7-20261009-r8-dev/humidity_pressure/entity-008": 1,
+      "v7-20261009-r8-dev/labor_employment/entity-017": 1,
+      "v7-20261009-r8-dev/output_growth/entity-010": 1,
+      "v7-20261009-r8-dev/precipitation/entity-011": 1,
+      "v7-20261009-r8-dev/solar_cloud/entity-006": 1,
+      "v7-20261009-r8-dev/temperature/entity-013": 1,
+      "v7-20261009-r8-dev/trade_fiscal/entity-013": 1,
+      "v7-20261009-r8-dev/weather_agriculture/entity-000": 1,
+      "v7-20261009-r8-dev/weather_energy/entity-007": 1,
+      "v7-20261009-r8-dev/weather_extremes/entity-011": 1,
+      "v7-20261009-r8-dev/wind/entity-019": 1,
+      "v8-final-20261018-r1/inflation_prices/validation/focused-family-00": 1,
+      "v8-final-20261018-r1/rates_fixed_income/validation/focused-family-00": 1
+    },
+    "cluster_id": {
+      "v7-20261009-r8-dev/commodities/entity-003": 1,
+      "v7-20261009-r8-dev/corporate_finance/entity-011": 1,
+      "v7-20261009-r8-dev/crypto_derivatives/entity-016": 1,
+      "v7-20261009-r8-dev/crypto_spot/entity-006": 1,
+      "v7-20261009-r8-dev/equities_funds/entity-009": 1,
+      "v7-20261009-r8-dev/foreign_exchange/entity-010": 1,
+      "v7-20261009-r8-dev/housing_property/entity-018": 1,
+      "v7-20261009-r8-dev/humidity_pressure/entity-008": 1,
+      "v7-20261009-r8-dev/labor_employment/entity-017": 1,
+      "v7-20261009-r8-dev/output_growth/entity-010": 1,
+      "v7-20261009-r8-dev/precipitation/entity-011": 1,
+      "v7-20261009-r8-dev/solar_cloud/entity-006": 1,
+      "v7-20261009-r8-dev/temperature/entity-013": 1,
+      "v7-20261009-r8-dev/trade_fiscal/entity-013": 1,
+      "v7-20261009-r8-dev/weather_agriculture/entity-000": 1,
+      "v7-20261009-r8-dev/weather_energy/entity-007": 1,
+      "v7-20261009-r8-dev/weather_extremes/entity-011": 1,
+      "v7-20261009-r8-dev/wind/entity-019": 1,
+      "v8-final-20261018-r1/inflation_prices/validation/focused-family-00": 1,
+      "v8-final-20261018-r1/rates_fixed_income/validation/focused-family-00": 1
+    },
+    "domain_family": {
+      "economics": 12,
+      "weather": 6,
+      "combined": 2
+    },
+    "language": {
+      "en": 16,
+      "mixed": 2,
+      "ur": 2
+    }
+  }
+}

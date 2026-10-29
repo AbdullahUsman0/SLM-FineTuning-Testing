@@ -1,0 +1,12 @@
+{
+  "adjudication_rows": 101,
+  "blinded_identity_score_latency_scan_passed": true,
+  "conversations": 20,
+  "gold_rows": 101,
+  "independent_human_review_complete": false,
+  "mapping_is_coordinator_only": true,
+  "paired_rows": 202,
+  "reviewer_decisions_filled": 0,
+  "second_reviewer_rows": 101,
+  "turns": 101
+}

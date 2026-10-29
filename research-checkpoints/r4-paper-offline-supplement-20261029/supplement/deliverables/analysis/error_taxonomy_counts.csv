@@ -1,0 +1,125 @@
+﻿model,track,category,unique_affected_calls,call_denominator,count_unit,individual_update_or_slot_count
+v8,component,admission_denied_readable_exact_matches,1,101,update,4
+v8,component,correct_reducer_state_harmed_by_recovery,18,101,call indicator,
+v8,component,correction_flag_discrepancy,0,101,call indicator,
+v8,component,cross_slot_value_match_candidate,1,101,update,1
+v8,component,duplicate_nonintent_entries,0,101,surplus update,0
+v8,component,exact_raw_extraction_with_recovery_harm,18,101,call indicator,
+v8,component,extra_current_actionable_slot,2,101,update,2
+v8,component,final_turn_state_slot_discrepancy,26,101,slot discrepancy,36
+v8,component,ignored_status_entries_not_actionable_errors,0,101,ignored update,0
+v8,component,inherited_rollout_prior_slot_discrepancy,0,101,slot discrepancy,0
+v8,component,json_valid_failure,0,101,call indicator,
+v8,component,missing_current_slot,5,101,update,6
+v8,component,nonverbatim_evidence_text,2,101,update,4
+v8,component,normalizer_candidate_error,0,101,candidate update,0
+v8,component,other_engine_changes_after_simple_reducer,0,101,slot transition,0
+v8,component,post_reducer_pipeline_changed_slots,21,101,slot transition,21
+v8,component,raw_contract_admitted_failure,1,101,call indicator,
+v8,component,raw_to_normalized_candidate_representation_change,57,101,candidate update,79
+v8,component,recovery_corrected_slot_state,0,101,slot transition,0
+v8,component,recovery_introduced_wrong_slot_state,20,101,slot transition,20
+v8,component,reducer_admitted_failure,1,101,call indicator,
+v8,component,repeated_unchanged_prior_value_candidate,0,101,update,0
+v8,component,same_slot_exact_value_discrepancy,0,101,update,0
+v8,component,same_slot_value_wrong_status,0,101,update,0
+v8,component,schema_valid_failure,1,101,call indicator,
+v8,component,state_confirmation_flag_discrepancy,0,101,slot discrepancy,0
+v8,component,state_status_discrepancy,0,101,slot discrepancy,0
+v8,component,temporal_role_swap_candidate,0,101,update,0
+v8,component,trace_reported_recovery_changed_slots,21,101,slot transition,21
+v8,component,trace_reported_recovery_slots,21,101,trace slot event,21
+v8,component,unsupported_evidence_native_canonicalizer,2,101,update,4
+v8,rollout,admission_denied_readable_exact_matches,1,101,update,4
+v8,rollout,correct_reducer_state_harmed_by_recovery,2,101,call indicator,
+v8,rollout,correction_flag_discrepancy,0,101,call indicator,
+v8,rollout,cross_slot_value_match_candidate,1,101,update,1
+v8,rollout,duplicate_nonintent_entries,0,101,surplus update,0
+v8,rollout,exact_raw_extraction_with_recovery_harm,8,101,call indicator,
+v8,rollout,extra_current_actionable_slot,2,101,update,2
+v8,rollout,final_turn_state_slot_discrepancy,49,101,slot discrepancy,104
+v8,rollout,ignored_status_entries_not_actionable_errors,0,101,ignored update,0
+v8,rollout,inherited_rollout_prior_slot_discrepancy,38,101,slot discrepancy,76
+v8,rollout,json_valid_failure,0,101,call indicator,
+v8,rollout,missing_current_slot,5,101,update,6
+v8,rollout,nonverbatim_evidence_text,2,101,update,4
+v8,rollout,normalizer_candidate_error,0,101,candidate update,0
+v8,rollout,other_engine_changes_after_simple_reducer,0,101,slot transition,0
+v8,rollout,post_reducer_pipeline_changed_slots,22,101,slot transition,22
+v8,rollout,raw_contract_admitted_failure,1,101,call indicator,
+v8,rollout,raw_to_normalized_candidate_representation_change,57,101,candidate update,79
+v8,rollout,recovery_corrected_slot_state,0,101,slot transition,0
+v8,rollout,recovery_introduced_wrong_slot_state,13,101,slot transition,13
+v8,rollout,reducer_admitted_failure,1,101,call indicator,
+v8,rollout,repeated_unchanged_prior_value_candidate,0,101,update,0
+v8,rollout,same_slot_exact_value_discrepancy,3,101,update,3
+v8,rollout,same_slot_value_wrong_status,0,101,update,0
+v8,rollout,schema_valid_failure,1,101,call indicator,
+v8,rollout,state_confirmation_flag_discrepancy,0,101,slot discrepancy,0
+v8,rollout,state_status_discrepancy,0,101,slot discrepancy,0
+v8,rollout,temporal_role_swap_candidate,0,101,update,0
+v8,rollout,trace_reported_recovery_changed_slots,22,101,slot transition,22
+v8,rollout,trace_reported_recovery_slots,22,101,trace slot event,22
+v8,rollout,unsupported_evidence_native_canonicalizer,2,101,update,4
+openai,component,admission_denied_readable_exact_matches,0,101,update,0
+openai,component,correct_reducer_state_harmed_by_recovery,7,101,call indicator,
+openai,component,correction_flag_discrepancy,5,101,call indicator,
+openai,component,cross_slot_value_match_candidate,1,101,update,1
+openai,component,duplicate_nonintent_entries,4,101,surplus update,4
+openai,component,exact_raw_extraction_with_recovery_harm,6,101,call indicator,
+openai,component,extra_current_actionable_slot,31,101,update,45
+openai,component,final_turn_state_slot_discrepancy,47,101,slot discrepancy,92
+openai,component,ignored_status_entries_not_actionable_errors,34,101,ignored update,89
+openai,component,inherited_rollout_prior_slot_discrepancy,0,101,slot discrepancy,0
+openai,component,json_valid_failure,0,101,call indicator,
+openai,component,missing_current_slot,4,101,update,4
+openai,component,nonverbatim_evidence_text,1,101,update,1
+openai,component,normalizer_candidate_error,1,101,candidate update,1
+openai,component,other_engine_changes_after_simple_reducer,0,101,slot transition,0
+openai,component,post_reducer_pipeline_changed_slots,11,101,slot transition,11
+openai,component,raw_contract_admitted_failure,0,101,call indicator,
+openai,component,raw_to_normalized_candidate_representation_change,42,101,candidate update,69
+openai,component,recovery_corrected_slot_state,0,101,slot transition,0
+openai,component,recovery_introduced_wrong_slot_state,10,101,slot transition,10
+openai,component,reducer_admitted_failure,1,101,call indicator,
+openai,component,repeated_unchanged_prior_value_candidate,2,101,update,2
+openai,component,same_slot_exact_value_discrepancy,42,101,update,58
+openai,component,same_slot_value_wrong_status,4,101,update,4
+openai,component,schema_valid_failure,0,101,call indicator,
+openai,component,state_confirmation_flag_discrepancy,0,101,slot discrepancy,0
+openai,component,state_status_discrepancy,3,101,slot discrepancy,3
+openai,component,temporal_role_swap_candidate,0,101,update,0
+openai,component,trace_reported_recovery_changed_slots,11,101,slot transition,11
+openai,component,trace_reported_recovery_slots,11,101,trace slot event,11
+openai,component,unsupported_evidence_native_canonicalizer,1,101,update,1
+openai,rollout,admission_denied_readable_exact_matches,0,101,update,0
+openai,rollout,correct_reducer_state_harmed_by_recovery,1,101,call indicator,
+openai,rollout,correction_flag_discrepancy,4,101,call indicator,
+openai,rollout,cross_slot_value_match_candidate,0,101,update,0
+openai,rollout,duplicate_nonintent_entries,1,101,surplus update,1
+openai,rollout,exact_raw_extraction_with_recovery_harm,5,101,call indicator,
+openai,rollout,extra_current_actionable_slot,38,101,update,55
+openai,rollout,final_turn_state_slot_discrepancy,95,101,slot discrepancy,319
+openai,rollout,ignored_status_entries_not_actionable_errors,27,101,ignored update,78
+openai,rollout,inherited_rollout_prior_slot_discrepancy,76,101,slot discrepancy,248
+openai,rollout,json_valid_failure,0,101,call indicator,
+openai,rollout,missing_current_slot,5,101,update,5
+openai,rollout,nonverbatim_evidence_text,7,101,update,13
+openai,rollout,normalizer_candidate_error,0,101,candidate update,0
+openai,rollout,other_engine_changes_after_simple_reducer,1,101,slot transition,1
+openai,rollout,post_reducer_pipeline_changed_slots,14,101,slot transition,14
+openai,rollout,raw_contract_admitted_failure,0,101,call indicator,
+openai,rollout,raw_to_normalized_candidate_representation_change,37,101,candidate update,70
+openai,rollout,recovery_corrected_slot_state,0,101,slot transition,0
+openai,rollout,recovery_introduced_wrong_slot_state,9,101,slot transition,9
+openai,rollout,reducer_admitted_failure,2,101,call indicator,
+openai,rollout,repeated_unchanged_prior_value_candidate,7,101,update,12
+openai,rollout,same_slot_exact_value_discrepancy,44,101,update,57
+openai,rollout,same_slot_value_wrong_status,0,101,update,0
+openai,rollout,schema_valid_failure,0,101,call indicator,
+openai,rollout,state_confirmation_flag_discrepancy,0,101,slot discrepancy,0
+openai,rollout,state_status_discrepancy,0,101,slot discrepancy,0
+openai,rollout,temporal_role_swap_candidate,0,101,update,0
+openai,rollout,trace_reported_recovery_changed_slots,13,101,slot transition,13
+openai,rollout,trace_reported_recovery_slots,13,101,trace slot event,13
+openai,rollout,unsupported_evidence_native_canonicalizer,7,101,update,13

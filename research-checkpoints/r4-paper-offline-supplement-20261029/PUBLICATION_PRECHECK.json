@@ -1,0 +1,16 @@
+{
+  "CRC_and_all_246_members_verified": true,
+  "archive_sha256": "a09f33e7c36bab427991e0ed30a5916a926e99035d1c661e4cf926425a4ed3f7",
+  "baseline_tests_previously_reproduced": 299,
+  "completed_artifact_publication_authorized_by_user_date": "2026-10-29",
+  "coordinator_mapping_in_full_bundle": true,
+  "human_review_complete": false,
+  "main_saved_scores_inputs_states_previously_reproduced": 404,
+  "new_model_calls": 0,
+  "new_paid_calls": 0,
+  "original_sealed_archive_unchanged": true,
+  "reviewer_only_kits_separate": true,
+  "root_handoff_supersedes_prepublication_local_only_notice_for_completed_artifact_upload_only": true,
+  "supplement_controls_passed": 10,
+  "unpacked_files_match_archive": true
+}

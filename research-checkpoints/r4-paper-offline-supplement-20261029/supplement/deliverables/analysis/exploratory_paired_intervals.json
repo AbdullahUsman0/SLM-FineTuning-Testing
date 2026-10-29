@@ -1,0 +1,98 @@
+{
+  "conversation_draws_sha256": "d7d32147d9c3daf10ffcbff55b94f655790abb3bbf5a84621ec605bd1f56013f",
+  "conversation_units": 20,
+  "distinct_recorded_entity_groups": 20,
+  "intervals": [
+    {
+      "difference_point": 0.27328694918827745,
+      "openai_interval": [
+        0.63671875,
+        0.7475083056478405
+      ],
+      "openai_point": 0.6953405017921147,
+      "paired_difference_interval": [
+        0.21996220227349433,
+        0.3323492576106415
+      ],
+      "scheme": "paired_conversation",
+      "track": "component",
+      "units": 20,
+      "v8_interval": [
+        0.9310327824253554,
+        0.9932209115895556
+      ],
+      "v8_point": 0.9686274509803922
+    },
+    {
+      "difference_point": 0.27328694918827745,
+      "openai_interval": [
+        0.6162790697674418,
+        0.7617556048158842
+      ],
+      "openai_point": 0.6953405017921147,
+      "paired_difference_interval": [
+        0.20205573943428654,
+        0.3519005992390279
+      ],
+      "scheme": "paired_script_family",
+      "track": "component",
+      "units": 10,
+      "v8_interval": [
+        0.925,
+        0.9931740614334471
+      ],
+      "v8_point": 0.9686274509803922
+    },
+    {
+      "difference_point": 0.263057435363526,
+      "openai_interval": [
+        0.6332649855695948,
+        0.7517985611510791
+      ],
+      "openai_point": 0.6938053097345133,
+      "paired_difference_interval": [
+        0.19014020208919477,
+        0.33378310548222867
+      ],
+      "scheme": "paired_conversation",
+      "track": "rollout",
+      "units": 20,
+      "v8_interval": [
+        0.9192818148901206,
+        0.9826589595375722
+      ],
+      "v8_point": 0.9568627450980393
+    },
+    {
+      "difference_point": 0.263057435363526,
+      "openai_interval": [
+        0.6195620836616288,
+        0.7590175425008713
+      ],
+      "openai_point": 0.6938053097345133,
+      "paired_difference_interval": [
+        0.1746414064586446,
+        0.3501167866254827
+      ],
+      "scheme": "paired_script_family",
+      "track": "rollout",
+      "units": 10,
+      "v8_interval": [
+        0.9138755980861244,
+        0.9821437411598302
+      ],
+      "v8_point": 0.9568627450980393
+    }
+  ],
+  "limits": "Exploratory conditional intervals on inspected related synthetic development; paired units preserve outcomes, not population independence. Shared generation dependence may remain between script families; no p-values or universal-superiority conclusion.",
+  "numpy_version": "2.5.2",
+  "percentile_method": "linear 2.5/97.5",
+  "plan_sha256": "2acb636442bd5c8e0c70c31f69e8d138247ddb3e437900f2d9f5b6af812eb7a0",
+  "posthoc": true,
+  "preregistered": false,
+  "resamples": 10000,
+  "rng": "NumPy PCG64",
+  "script_family_units": 10,
+  "seed": 20261028,
+  "template_variant_4_conversations": 18
+}

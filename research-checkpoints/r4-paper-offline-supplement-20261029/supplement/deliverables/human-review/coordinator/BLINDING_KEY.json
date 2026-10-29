@@ -1,0 +1,146 @@
+{
+  "disclosure": "Coordinator only. Do not give this file or the full supplement/source ZIP to blinded reviewers. Allocation is balanced 10/10 and fixed within conversation across both tracks.",
+  "mapping": [
+    {
+      "A_model": "openai",
+      "B_model": "v8",
+      "conversation_id": "C01",
+      "scenario_id": "v7-20261009-r8-dev/commodities/0032",
+      "stable_across_tracks_and_turns": true
+    },
+    {
+      "A_model": "openai",
+      "B_model": "v8",
+      "conversation_id": "C02",
+      "scenario_id": "v7-20261009-r8-dev/corporate_finance/0116",
+      "stable_across_tracks_and_turns": true
+    },
+    {
+      "A_model": "v8",
+      "B_model": "openai",
+      "conversation_id": "C03",
+      "scenario_id": "v7-20261009-r8-dev/crypto_derivatives/0169",
+      "stable_across_tracks_and_turns": true
+    },
+    {
+      "A_model": "openai",
+      "B_model": "v8",
+      "conversation_id": "C04",
+      "scenario_id": "v7-20261009-r8-dev/crypto_spot/0063",
+      "stable_across_tracks_and_turns": true
+    },
+    {
+      "A_model": "openai",
+      "B_model": "v8",
+      "conversation_id": "C05",
+      "scenario_id": "v7-20261009-r8-dev/equities_funds/0094",
+      "stable_across_tracks_and_turns": true
+    },
+    {
+      "A_model": "v8",
+      "B_model": "openai",
+      "conversation_id": "C06",
+      "scenario_id": "v7-20261009-r8-dev/foreign_exchange/0106",
+      "stable_across_tracks_and_turns": true
+    },
+    {
+      "A_model": "openai",
+      "B_model": "v8",
+      "conversation_id": "C07",
+      "scenario_id": "v7-20261009-r8-dev/housing_property/0189",
+      "stable_across_tracks_and_turns": true
+    },
+    {
+      "A_model": "openai",
+      "B_model": "v8",
+      "conversation_id": "C08",
+      "scenario_id": "v7-20261009-r8-dev/humidity_pressure/0085",
+      "stable_across_tracks_and_turns": true
+    },
+    {
+      "A_model": "v8",
+      "B_model": "openai",
+      "conversation_id": "C09",
+      "scenario_id": "v7-20261009-r8-dev/labor_employment/0178",
+      "stable_across_tracks_and_turns": true
+    },
+    {
+      "A_model": "openai",
+      "B_model": "v8",
+      "conversation_id": "C10",
+      "scenario_id": "v7-20261009-r8-dev/output_growth/0103",
+      "stable_across_tracks_and_turns": true
+    },
+    {
+      "A_model": "v8",
+      "B_model": "openai",
+      "conversation_id": "C11",
+      "scenario_id": "v7-20261009-r8-dev/precipitation/0119",
+      "stable_across_tracks_and_turns": true
+    },
+    {
+      "A_model": "v8",
+      "B_model": "openai",
+      "conversation_id": "C12",
+      "scenario_id": "v7-20261009-r8-dev/solar_cloud/0062",
+      "stable_across_tracks_and_turns": true
+    },
+    {
+      "A_model": "v8",
+      "B_model": "openai",
+      "conversation_id": "C13",
+      "scenario_id": "v7-20261009-r8-dev/temperature/0130",
+      "stable_across_tracks_and_turns": true
+    },
+    {
+      "A_model": "v8",
+      "B_model": "openai",
+      "conversation_id": "C14",
+      "scenario_id": "v7-20261009-r8-dev/trade_fiscal/0134",
+      "stable_across_tracks_and_turns": true
+    },
+    {
+      "A_model": "v8",
+      "B_model": "openai",
+      "conversation_id": "C15",
+      "scenario_id": "v7-20261009-r8-dev/weather_agriculture/0000",
+      "stable_across_tracks_and_turns": true
+    },
+    {
+      "A_model": "openai",
+      "B_model": "v8",
+      "conversation_id": "C16",
+      "scenario_id": "v7-20261009-r8-dev/weather_energy/0075",
+      "stable_across_tracks_and_turns": true
+    },
+    {
+      "A_model": "v8",
+      "B_model": "openai",
+      "conversation_id": "C17",
+      "scenario_id": "v7-20261009-r8-dev/weather_extremes/0118",
+      "stable_across_tracks_and_turns": true
+    },
+    {
+      "A_model": "v8",
+      "B_model": "openai",
+      "conversation_id": "C18",
+      "scenario_id": "v7-20261009-r8-dev/wind/0195",
+      "stable_across_tracks_and_turns": true
+    },
+    {
+      "A_model": "openai",
+      "B_model": "v8",
+      "conversation_id": "C19",
+      "scenario_id": "v8-final-20261018-r1/focused/inflation_prices/validation-004",
+      "stable_across_tracks_and_turns": true
+    },
+    {
+      "A_model": "openai",
+      "B_model": "v8",
+      "conversation_id": "C20",
+      "scenario_id": "v8-final-20261018-r1/focused/rates_fixed_income/validation-003",
+      "stable_across_tracks_and_turns": true
+    }
+  ],
+  "seed": 20261028
+}

@@ -1,0 +1,87 @@
+{
+  "exactly_matches_publication": true,
+  "gold_updates_per_track": 257,
+  "macro_definition": "Unweighted mean exact F1 over the fixed 39 gold-positive slots; unsupported-slot and unknown-ID FP retained separately; primary micro still includes them.",
+  "metrics": {
+    "openai": {
+      "component": {
+        "f1": 0.6953405017921147,
+        "fn": 63,
+        "fp": 107,
+        "precision": 0.6445182724252492,
+        "recall": 0.754863813229572,
+        "tp": 194
+      },
+      "rollout": {
+        "f1": 0.6938053097345133,
+        "fn": 61,
+        "fp": 112,
+        "precision": 0.6363636363636364,
+        "recall": 0.7626459143968871,
+        "tp": 196
+      }
+    },
+    "v8": {
+      "component": {
+        "f1": 0.9686274509803922,
+        "fn": 10,
+        "fp": 6,
+        "precision": 0.9762845849802372,
+        "recall": 0.9610894941634242,
+        "tp": 247
+      },
+      "rollout": {
+        "f1": 0.9568627450980393,
+        "fn": 13,
+        "fp": 9,
+        "precision": 0.9644268774703557,
+        "recall": 0.9494163424124513,
+        "tp": 244
+      }
+    }
+  },
+  "slot_count": 78,
+  "supported_count": 39,
+  "supported_nonintent_slots": [
+    "aggregation_level",
+    "aggregation_method",
+    "allow_negative_values",
+    "business_goal",
+    "calendar_type",
+    "contains_sensitive_data",
+    "data_cutoff",
+    "dataset_type",
+    "expected_history_length",
+    "file_format",
+    "forecast_horizon",
+    "forecast_start",
+    "forecast_type",
+    "frequency",
+    "geography",
+    "hierarchy_columns",
+    "history_end",
+    "history_start",
+    "known_regime_changes",
+    "known_seasonality",
+    "lead_time",
+    "minimum_training_points",
+    "missing_target_policy",
+    "missing_timestamp_policy",
+    "prediction_frequency",
+    "prediction_interval_levels",
+    "problem_statement",
+    "refresh_frequency",
+    "scope_filters",
+    "series_id_columns",
+    "sheet_or_table",
+    "source_mode",
+    "source_provider",
+    "source_reference",
+    "target_column",
+    "target_description",
+    "target_unit",
+    "time_column",
+    "timezone"
+  ],
+  "unsupported_count": 39
+}

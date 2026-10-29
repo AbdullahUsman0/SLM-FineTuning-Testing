@@ -1,0 +1,5 @@
+﻿model,track,supported_slot_universe,supported_macro_F1,unsupported_known_slots,unsupported_slot_predictions,unsupported_slot_FP,unknown_ID_FP
+v8,component,39,0.9611686299064209,39,0,0,0
+v8,rollout,39,0.9563609375987286,39,0,0,0
+openai,component,39,0.7406818688461,39,8,8,1
+openai,rollout,39,0.7444921185364015,39,8,8,0

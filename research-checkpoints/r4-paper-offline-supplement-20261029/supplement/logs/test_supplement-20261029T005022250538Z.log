@@ -1,0 +1,15 @@
+test_blank_forms_never_claim_completed_human_review (__main__.SupplementTests.test_blank_forms_never_claim_completed_human_review) ... ok
+test_blinding_is_balanced_conversation_stable_and_has_no_metrics (__main__.SupplementTests.test_blinding_is_balanced_conversation_stable_and_has_no_metrics) ... ok
+test_oracle_and_unknown_state_findings_preserved (__main__.SupplementTests.test_oracle_and_unknown_state_findings_preserved) ... ok
+test_original_primary_and_slot_coverage_reconcile (__main__.SupplementTests.test_original_primary_and_slot_coverage_reconcile) ... ok
+test_paired_resampling_recomputes_micro_from_summed_counts (__main__.SupplementTests.test_paired_resampling_recomputes_micro_from_summed_counts) ... ok
+test_posthoc_plan_bound_to_intervals (__main__.SupplementTests.test_posthoc_plan_bound_to_intervals) ... ok
+test_proposal_rejects_unknown_slot_bad_evidence_and_nonfinite (__main__.SupplementTests.test_proposal_rejects_unknown_slot_bad_evidence_and_nonfinite) ... ok
+test_shared_ledger_and_network_are_blocked (__main__.SupplementTests.test_shared_ledger_and_network_are_blocked) ... ok
+test_toy_import_immutable_rows_duplicates_and_no_auto_application (__main__.SupplementTests.test_toy_import_immutable_rows_duplicates_and_no_auto_application) ... ok
+test_visible_input_values_match_reconstructed_actual_priors (__main__.SupplementTests.test_visible_input_values_match_reconstructed_actual_priors) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.427s
+
+OK

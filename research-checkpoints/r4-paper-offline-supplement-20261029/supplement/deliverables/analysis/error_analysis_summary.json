@@ -1,0 +1,53 @@
+{
+  "all_published_metrics_unchanged": true,
+  "counts_are_not_a_partition_of_FP_FN": true,
+  "independent_human_review_complete": false,
+  "oracle_mismatch_calls": 20,
+  "per_call_diagnostics": 404,
+  "posthoc": true,
+  "renderer_failure_calls": 4,
+  "taxonomy_categories_overlap": true,
+  "unknown_extraction_state": [
+    {
+      "literal_wire_empty_nonintent_updates": 20,
+      "model": "v8",
+      "prior_preserved": 12,
+      "raw_no_actionable_and_preserved": 12,
+      "raw_no_actionable_but_state_changed": 8,
+      "raw_no_actionable_updates": 20,
+      "track": "component",
+      "unknown_turns": 20
+    },
+    {
+      "literal_wire_empty_nonintent_updates": 20,
+      "model": "v8",
+      "prior_preserved": 13,
+      "raw_no_actionable_and_preserved": 13,
+      "raw_no_actionable_but_state_changed": 7,
+      "raw_no_actionable_updates": 20,
+      "track": "rollout",
+      "unknown_turns": 20
+    },
+    {
+      "literal_wire_empty_nonintent_updates": 0,
+      "model": "openai",
+      "prior_preserved": 16,
+      "raw_no_actionable_and_preserved": 16,
+      "raw_no_actionable_but_state_changed": 2,
+      "raw_no_actionable_updates": 18,
+      "track": "component",
+      "unknown_turns": 20
+    },
+    {
+      "literal_wire_empty_nonintent_updates": 0,
+      "model": "openai",
+      "prior_preserved": 15,
+      "raw_no_actionable_and_preserved": 14,
+      "raw_no_actionable_but_state_changed": 1,
+      "raw_no_actionable_updates": 15,
+      "track": "rollout",
+      "unknown_turns": 20
+    }
+  ],
+  "worked_examples": 6
+}

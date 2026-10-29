@@ -1,0 +1,85 @@
+{
+  "baseline_tests_passed": 299,
+  "completed_offline": [
+    "evidence/runtime verification",
+    "299 tests and 404 offline replays",
+    "human-review kit and validated proposal-only importer",
+    "trace-backed taxonomy/oracle/errors",
+    "all-slot/conversation/subgroup/intervention/paired exploratory analysis",
+    "fairness and A-F scope audit",
+    "future protocol and blank forms",
+    "paper paragraphs/tables/six-page allocation"
+  ],
+  "human_decisions_remaining": [
+    "assign independent humans and staged gold-first/A-B review",
+    "adjudicate exact span/value/status and application-state disagreements; proposals do not auto-apply",
+    "supply missing legacy public raw receipts if full A/B/D/E re-verification is desired",
+    "approve prospective writer/reviewer/ethics/privacy/cohort/metric/resource design before any collection or inference",
+    "provide separate explicit publishing authorization if desired"
+  ],
+  "independent_human_review_complete": false,
+  "known_nonintent_slots_reported": 78,
+  "legacy_primary_receipt_gaps": [
+    "historical A",
+    "historical B",
+    "one-conversation D",
+    "full E rule report"
+  ],
+  "main_conversations": 20,
+  "main_scores_inputs_states_reproduced": 404,
+  "main_turns": 101,
+  "new_adapters": 0,
+  "new_model_calls": 0,
+  "new_paid_API_calls": 0,
+  "new_training_runs": 0,
+  "oracle_mismatch_calls_correct_before_recovery": 20,
+  "oracle_mismatches_reproduced": 20,
+  "original_ZIP_sha256": "4d4a33bd6ec4ac1bab28b47d37ee324a315177035826119e36a230cd71c143ae",
+  "original_gold_prompts_parser_scores_modified": false,
+  "paired_bootstrap_resamples": 10000,
+  "paired_conversation_units": 20,
+  "paper_manuscript_modified": false,
+  "positive_support_slots": 39,
+  "prepared_pending_human": [
+    "reviewer independence and identities",
+    "gold-first review and second review",
+    "blinded response review and adjudication",
+    "approval of any proposed label changes"
+  ],
+  "published_or_pushed": false,
+  "replacement_prose_is_proposal_only": true,
+  "required_publication": "6c51ee2c32e16d3237fce78523a07e04cdb29667",
+  "review_forms": {
+    "adjudication_rows": 101,
+    "filled_human_decisions": 0,
+    "gold_rows": 101,
+    "mapping": "coordinator only",
+    "paired_response_rows": 202,
+    "second_reviewer_rows": 101
+  },
+  "scope": "separate versioned POST-HOC supplement to immutable R4/R4.1 evidence",
+  "script_family_sensitivity_units": 10,
+  "sealed_labels_accessed": false,
+  "shared_spending_ledger_modified": false,
+  "status": "offline_supplement_completed_human_review_pending",
+  "supplement_control_tests_passed": 10,
+  "unchanged_R4_F1": {
+    "openai_component": 0.6953405017921147,
+    "openai_rollout": 0.6938053097345133,
+    "v8_component": 0.9686274509803922,
+    "v8_rollout": 0.9568627450980393
+  },
+  "unchanged_final_rollout_conversations": {
+    "denominator": 20,
+    "openai": 1,
+    "v8": 9
+  },
+  "unexecuted_future": [
+    "participant recruitment and collection",
+    "prospective independent labels",
+    "new inference or training",
+    "future paid experiment"
+  ],
+  "whole_research_complete": false,
+  "worked_examples": 6
+}

@@ -1,0 +1,16 @@
+{
+  "all_unchanged": true,
+  "files": {
+    "D:\\SLM\\FYP-experiment-control\\current-pipeline-v8-openai-20261023\\budget.sqlite3": {
+      "after": "8f8c01fc2ef5524ba46d1fc2db65126be4ba4541761dbd968f991a2ebe3669b6",
+      "before": "8f8c01fc2ef5524ba46d1fc2db65126be4ba4541761dbd968f991a2ebe3669b6",
+      "unchanged": true
+    },
+    "D:\\SLM\\FYP-experiment-control\\current-pipeline-v8-openai-20261023\\budget.sqlite3-wal": {
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unchanged": true
+    }
+  },
+  "shared_ledger_opened_by_analysis": false
+}

@@ -1,0 +1,1757 @@
+[
+  {
+    "after_discrepant_slots": [
+      "output_granularity"
+    ],
+    "before_discrepant_slots": [],
+    "changed_slots": [
+      "output_granularity"
+    ],
+    "harmed_slots": [
+      "output_granularity"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/commodities/0032",
+      "t2"
+    ],
+    "reported_recovery_slots": [
+      "output_granularity"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "output_granularity"
+    ],
+    "before_discrepant_slots": [],
+    "changed_slots": [
+      "output_granularity"
+    ],
+    "harmed_slots": [
+      "output_granularity"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/commodities/0032",
+      "t5"
+    ],
+    "reported_recovery_slots": [
+      "output_granularity"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "output_granularity"
+    ],
+    "before_discrepant_slots": [],
+    "changed_slots": [
+      "output_granularity"
+    ],
+    "harmed_slots": [
+      "output_granularity"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/corporate_finance/0116",
+      "t4"
+    ],
+    "reported_recovery_slots": [
+      "output_granularity"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "output_granularity"
+    ],
+    "before_discrepant_slots": [],
+    "changed_slots": [
+      "output_granularity"
+    ],
+    "harmed_slots": [
+      "output_granularity"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/corporate_finance/0116",
+      "t6"
+    ],
+    "reported_recovery_slots": [
+      "output_granularity"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "output_granularity"
+    ],
+    "before_discrepant_slots": [],
+    "changed_slots": [
+      "output_granularity"
+    ],
+    "harmed_slots": [
+      "output_granularity"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/crypto_spot/0063",
+      "t2"
+    ],
+    "reported_recovery_slots": [
+      "output_granularity"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "output_granularity"
+    ],
+    "before_discrepant_slots": [],
+    "changed_slots": [
+      "output_granularity"
+    ],
+    "harmed_slots": [
+      "output_granularity"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/crypto_spot/0063",
+      "t3"
+    ],
+    "reported_recovery_slots": [
+      "output_granularity"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "output_granularity"
+    ],
+    "before_discrepant_slots": [],
+    "changed_slots": [
+      "output_granularity"
+    ],
+    "harmed_slots": [
+      "output_granularity"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/crypto_spot/0063",
+      "t4"
+    ],
+    "reported_recovery_slots": [
+      "output_granularity"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "output_granularity"
+    ],
+    "before_discrepant_slots": [],
+    "changed_slots": [
+      "output_granularity"
+    ],
+    "harmed_slots": [
+      "output_granularity"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/equities_funds/0094",
+      "t2"
+    ],
+    "reported_recovery_slots": [
+      "output_granularity"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "output_granularity"
+    ],
+    "before_discrepant_slots": [],
+    "changed_slots": [
+      "output_granularity"
+    ],
+    "harmed_slots": [
+      "output_granularity"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/equities_funds/0094",
+      "t4"
+    ],
+    "reported_recovery_slots": [
+      "output_granularity"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "output_granularity"
+    ],
+    "before_discrepant_slots": [],
+    "changed_slots": [
+      "output_granularity"
+    ],
+    "harmed_slots": [
+      "output_granularity"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/equities_funds/0094",
+      "t5"
+    ],
+    "reported_recovery_slots": [
+      "output_granularity"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "target_unit"
+    ],
+    "before_discrepant_slots": [],
+    "changed_slots": [
+      "target_unit"
+    ],
+    "harmed_slots": [
+      "target_unit"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/humidity_pressure/0085",
+      "t2"
+    ],
+    "reported_recovery_slots": [
+      "target_unit"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "output_granularity"
+    ],
+    "before_discrepant_slots": [],
+    "changed_slots": [
+      "output_granularity"
+    ],
+    "harmed_slots": [
+      "output_granularity"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/humidity_pressure/0085",
+      "t5"
+    ],
+    "reported_recovery_slots": [
+      "output_granularity"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "file_format",
+      "source_mode"
+    ],
+    "before_discrepant_slots": [
+      "file_format"
+    ],
+    "changed_slots": [
+      "source_mode"
+    ],
+    "harmed_slots": [
+      "source_mode"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/temperature/0130",
+      "t1"
+    ],
+    "reported_recovery_slots": [
+      "source_mode"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "output_granularity"
+    ],
+    "before_discrepant_slots": [],
+    "changed_slots": [
+      "output_granularity"
+    ],
+    "harmed_slots": [
+      "output_granularity"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/weather_agriculture/0000",
+      "t2"
+    ],
+    "reported_recovery_slots": [
+      "output_granularity"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "output_granularity"
+    ],
+    "before_discrepant_slots": [],
+    "changed_slots": [
+      "output_granularity"
+    ],
+    "harmed_slots": [
+      "output_granularity"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/weather_agriculture/0000",
+      "t4"
+    ],
+    "reported_recovery_slots": [
+      "output_granularity"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "output_granularity"
+    ],
+    "before_discrepant_slots": [],
+    "changed_slots": [
+      "output_granularity"
+    ],
+    "harmed_slots": [
+      "output_granularity"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/weather_agriculture/0000",
+      "t5"
+    ],
+    "reported_recovery_slots": [
+      "output_granularity"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "target_column",
+      "target_unit"
+    ],
+    "before_discrepant_slots": [
+      "target_column",
+      "target_unit"
+    ],
+    "changed_slots": [
+      "target_column"
+    ],
+    "harmed_slots": [],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/weather_extremes/0118",
+      "t2"
+    ],
+    "reported_recovery_slots": [
+      "target_column"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "expected_history_length",
+      "frequency",
+      "prediction_frequency",
+      "refresh_frequency",
+      "source_reference"
+    ],
+    "before_discrepant_slots": [
+      "expected_history_length",
+      "frequency",
+      "prediction_frequency",
+      "refresh_frequency"
+    ],
+    "changed_slots": [
+      "source_reference"
+    ],
+    "harmed_slots": [
+      "source_reference"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v8-final-20261018-r1/focused/inflation_prices/validation-004",
+      "t2"
+    ],
+    "reported_recovery_slots": [
+      "source_reference"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "source_reference"
+    ],
+    "before_discrepant_slots": [],
+    "changed_slots": [
+      "source_reference"
+    ],
+    "harmed_slots": [
+      "source_reference"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v8-final-20261018-r1/focused/inflation_prices/validation-004",
+      "t4"
+    ],
+    "reported_recovery_slots": [
+      "source_reference"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "source_reference"
+    ],
+    "before_discrepant_slots": [],
+    "changed_slots": [
+      "source_reference"
+    ],
+    "harmed_slots": [
+      "source_reference"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v8-final-20261018-r1/focused/rates_fixed_income/validation-003",
+      "t2"
+    ],
+    "reported_recovery_slots": [
+      "source_reference"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "source_reference"
+    ],
+    "before_discrepant_slots": [],
+    "changed_slots": [
+      "source_reference"
+    ],
+    "harmed_slots": [
+      "source_reference"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v8-final-20261018-r1/focused/rates_fixed_income/validation-003",
+      "t4"
+    ],
+    "reported_recovery_slots": [
+      "source_reference"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "output_granularity",
+      "time_column"
+    ],
+    "before_discrepant_slots": [
+      "time_column"
+    ],
+    "changed_slots": [
+      "output_granularity"
+    ],
+    "harmed_slots": [
+      "output_granularity"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/commodities/0032",
+      "t2"
+    ],
+    "reported_recovery_slots": [
+      "output_granularity"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "business_goal",
+      "output_granularity",
+      "time_column"
+    ],
+    "before_discrepant_slots": [
+      "output_granularity",
+      "time_column"
+    ],
+    "changed_slots": [
+      "business_goal"
+    ],
+    "harmed_slots": [
+      "business_goal"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/commodities/0032",
+      "t5"
+    ],
+    "reported_recovery_slots": [
+      "business_goal"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "problem_statement",
+      "target_description"
+    ],
+    "before_discrepant_slots": [
+      "problem_statement",
+      "target_description"
+    ],
+    "changed_slots": [
+      "problem_statement"
+    ],
+    "harmed_slots": [],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/corporate_finance/0116",
+      "t3"
+    ],
+    "reported_recovery_slots": [
+      "problem_statement"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "problem_statement",
+      "target_description"
+    ],
+    "before_discrepant_slots": [
+      "problem_statement",
+      "target_description"
+    ],
+    "changed_slots": [
+      "target_description"
+    ],
+    "harmed_slots": [],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/corporate_finance/0116",
+      "t4"
+    ],
+    "reported_recovery_slots": [
+      "target_description"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "output_granularity",
+      "problem_statement",
+      "target_description"
+    ],
+    "before_discrepant_slots": [
+      "problem_statement",
+      "target_description"
+    ],
+    "changed_slots": [
+      "output_granularity"
+    ],
+    "harmed_slots": [
+      "output_granularity"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/corporate_finance/0116",
+      "t6"
+    ],
+    "reported_recovery_slots": [
+      "output_granularity"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "output_granularity"
+    ],
+    "before_discrepant_slots": [],
+    "changed_slots": [
+      "output_granularity"
+    ],
+    "harmed_slots": [
+      "output_granularity"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/crypto_spot/0063",
+      "t2"
+    ],
+    "reported_recovery_slots": [
+      "output_granularity"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "business_goal",
+      "output_granularity"
+    ],
+    "before_discrepant_slots": [
+      "output_granularity"
+    ],
+    "changed_slots": [
+      "business_goal"
+    ],
+    "harmed_slots": [
+      "business_goal"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/crypto_spot/0063",
+      "t3"
+    ],
+    "reported_recovery_slots": [
+      "business_goal"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "problem_statement",
+      "target_description"
+    ],
+    "before_discrepant_slots": [
+      "problem_statement",
+      "target_description"
+    ],
+    "changed_slots": [
+      "problem_statement"
+    ],
+    "harmed_slots": [],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/equities_funds/0094",
+      "t2"
+    ],
+    "reported_recovery_slots": [
+      "problem_statement"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "problem_statement",
+      "target_description"
+    ],
+    "before_discrepant_slots": [
+      "problem_statement",
+      "target_description"
+    ],
+    "changed_slots": [
+      "target_description"
+    ],
+    "harmed_slots": [],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/equities_funds/0094",
+      "t4"
+    ],
+    "reported_recovery_slots": [
+      "target_description"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "output_granularity",
+      "problem_statement",
+      "target_description"
+    ],
+    "before_discrepant_slots": [
+      "problem_statement",
+      "target_description"
+    ],
+    "changed_slots": [
+      "output_granularity"
+    ],
+    "harmed_slots": [
+      "output_granularity"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/equities_funds/0094",
+      "t5"
+    ],
+    "reported_recovery_slots": [
+      "output_granularity"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "target_unit",
+      "time_column"
+    ],
+    "before_discrepant_slots": [
+      "time_column"
+    ],
+    "changed_slots": [
+      "target_unit"
+    ],
+    "harmed_slots": [
+      "target_unit"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/humidity_pressure/0085",
+      "t2"
+    ],
+    "reported_recovery_slots": [
+      "target_unit"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "output_granularity",
+      "time_column"
+    ],
+    "before_discrepant_slots": [
+      "time_column"
+    ],
+    "changed_slots": [
+      "output_granularity"
+    ],
+    "harmed_slots": [
+      "output_granularity"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/humidity_pressure/0085",
+      "t5"
+    ],
+    "reported_recovery_slots": [
+      "output_granularity"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "target_description"
+    ],
+    "before_discrepant_slots": [
+      "target_description"
+    ],
+    "changed_slots": [
+      "target_description"
+    ],
+    "harmed_slots": [],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/labor_employment/0178",
+      "t2"
+    ],
+    "reported_recovery_slots": [
+      "target_description"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "target_description"
+    ],
+    "before_discrepant_slots": [
+      "target_description"
+    ],
+    "changed_slots": [
+      "target_description"
+    ],
+    "harmed_slots": [],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/solar_cloud/0062",
+      "t2"
+    ],
+    "reported_recovery_slots": [
+      "target_description"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "file_format",
+      "source_mode"
+    ],
+    "before_discrepant_slots": [
+      "file_format"
+    ],
+    "changed_slots": [
+      "source_mode"
+    ],
+    "harmed_slots": [
+      "source_mode"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/temperature/0130",
+      "t1"
+    ],
+    "reported_recovery_slots": [
+      "source_mode"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "output_granularity",
+      "time_column"
+    ],
+    "before_discrepant_slots": [
+      "time_column"
+    ],
+    "changed_slots": [
+      "output_granularity"
+    ],
+    "harmed_slots": [
+      "output_granularity"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/weather_agriculture/0000",
+      "t2"
+    ],
+    "reported_recovery_slots": [
+      "output_granularity"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "problem_statement",
+      "target_column",
+      "target_description",
+      "target_unit"
+    ],
+    "before_discrepant_slots": [
+      "problem_statement",
+      "target_column",
+      "target_description",
+      "target_unit"
+    ],
+    "changed_slots": [
+      "target_column"
+    ],
+    "harmed_slots": [],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/weather_extremes/0118",
+      "t2"
+    ],
+    "reported_recovery_slots": [
+      "target_column"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "problem_statement",
+      "target_column",
+      "target_description",
+      "target_unit"
+    ],
+    "before_discrepant_slots": [
+      "problem_statement",
+      "target_column",
+      "target_description",
+      "target_unit"
+    ],
+    "changed_slots": [
+      "problem_statement"
+    ],
+    "harmed_slots": [],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/weather_extremes/0118",
+      "t3"
+    ],
+    "reported_recovery_slots": [
+      "problem_statement"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "problem_statement",
+      "target_column",
+      "target_description",
+      "target_unit"
+    ],
+    "before_discrepant_slots": [
+      "problem_statement",
+      "target_column",
+      "target_description",
+      "target_unit"
+    ],
+    "changed_slots": [
+      "target_description"
+    ],
+    "harmed_slots": [],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/weather_extremes/0118",
+      "t5"
+    ],
+    "reported_recovery_slots": [
+      "target_description"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "expected_history_length",
+      "frequency",
+      "prediction_frequency",
+      "refresh_frequency",
+      "source_reference"
+    ],
+    "before_discrepant_slots": [
+      "expected_history_length",
+      "frequency",
+      "prediction_frequency",
+      "refresh_frequency"
+    ],
+    "changed_slots": [
+      "source_reference"
+    ],
+    "harmed_slots": [
+      "source_reference"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v8-final-20261018-r1/focused/inflation_prices/validation-004",
+      "t2"
+    ],
+    "reported_recovery_slots": [
+      "source_reference"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "expected_history_length",
+      "frequency",
+      "prediction_frequency",
+      "refresh_frequency",
+      "source_reference",
+      "target_column"
+    ],
+    "before_discrepant_slots": [
+      "expected_history_length",
+      "frequency",
+      "prediction_frequency",
+      "refresh_frequency",
+      "source_reference"
+    ],
+    "changed_slots": [
+      "target_column"
+    ],
+    "harmed_slots": [
+      "target_column"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v8-final-20261018-r1/focused/inflation_prices/validation-004",
+      "t4"
+    ],
+    "reported_recovery_slots": [
+      "target_column"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "source_reference"
+    ],
+    "before_discrepant_slots": [],
+    "changed_slots": [
+      "source_reference"
+    ],
+    "harmed_slots": [
+      "source_reference"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v8-final-20261018-r1/focused/rates_fixed_income/validation-003",
+      "t2"
+    ],
+    "reported_recovery_slots": [
+      "source_reference"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "dataset_type",
+      "source_mode",
+      "target_description"
+    ],
+    "before_discrepant_slots": [
+      "dataset_type",
+      "source_mode",
+      "target_description"
+    ],
+    "changed_slots": [
+      "source_mode"
+    ],
+    "harmed_slots": [],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/commodities/0032",
+      "t1"
+    ],
+    "reported_recovery_slots": [
+      "source_mode"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "output_granularity"
+    ],
+    "before_discrepant_slots": [],
+    "changed_slots": [
+      "output_granularity"
+    ],
+    "harmed_slots": [
+      "output_granularity"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/commodities/0032",
+      "t2"
+    ],
+    "reported_recovery_slots": [
+      "output_granularity"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "output_granularity"
+    ],
+    "before_discrepant_slots": [],
+    "changed_slots": [
+      "output_granularity"
+    ],
+    "harmed_slots": [
+      "output_granularity"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/commodities/0032",
+      "t5"
+    ],
+    "reported_recovery_slots": [
+      "output_granularity"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "output_granularity"
+    ],
+    "before_discrepant_slots": [],
+    "changed_slots": [
+      "output_granularity"
+    ],
+    "harmed_slots": [
+      "output_granularity"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/crypto_spot/0063",
+      "t3"
+    ],
+    "reported_recovery_slots": [
+      "output_granularity"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "output_granularity",
+      "problem_statement"
+    ],
+    "before_discrepant_slots": [
+      "problem_statement"
+    ],
+    "changed_slots": [
+      "output_granularity"
+    ],
+    "harmed_slots": [
+      "output_granularity"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/crypto_spot/0063",
+      "t4"
+    ],
+    "reported_recovery_slots": [
+      "output_granularity"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "target_unit"
+    ],
+    "before_discrepant_slots": [],
+    "changed_slots": [
+      "target_unit"
+    ],
+    "harmed_slots": [
+      "target_unit"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/humidity_pressure/0085",
+      "t2"
+    ],
+    "reported_recovery_slots": [
+      "target_unit"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "dataset_type",
+      "source_mode"
+    ],
+    "before_discrepant_slots": [
+      "dataset_type"
+    ],
+    "changed_slots": [
+      "source_mode"
+    ],
+    "harmed_slots": [
+      "source_mode"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/temperature/0130",
+      "t1"
+    ],
+    "reported_recovery_slots": [
+      "source_mode"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "output_granularity"
+    ],
+    "before_discrepant_slots": [],
+    "changed_slots": [
+      "output_granularity"
+    ],
+    "harmed_slots": [
+      "output_granularity"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/weather_agriculture/0000",
+      "t2"
+    ],
+    "reported_recovery_slots": [
+      "output_granularity"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "business_goal",
+      "geography",
+      "output_granularity"
+    ],
+    "before_discrepant_slots": [
+      "business_goal",
+      "geography"
+    ],
+    "changed_slots": [
+      "output_granularity"
+    ],
+    "harmed_slots": [
+      "output_granularity"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/weather_agriculture/0000",
+      "t4"
+    ],
+    "reported_recovery_slots": [
+      "output_granularity"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "source_reference"
+    ],
+    "before_discrepant_slots": [],
+    "changed_slots": [
+      "source_reference"
+    ],
+    "harmed_slots": [
+      "source_reference"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v8-final-20261018-r1/focused/inflation_prices/validation-004",
+      "t2"
+    ],
+    "reported_recovery_slots": [
+      "source_reference"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "source_reference"
+    ],
+    "before_discrepant_slots": [],
+    "changed_slots": [
+      "source_reference"
+    ],
+    "harmed_slots": [
+      "source_reference"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v8-final-20261018-r1/focused/rates_fixed_income/validation-003",
+      "t4"
+    ],
+    "reported_recovery_slots": [
+      "source_reference"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "output_granularity",
+      "target_description"
+    ],
+    "before_discrepant_slots": [
+      "target_description"
+    ],
+    "changed_slots": [
+      "output_granularity"
+    ],
+    "harmed_slots": [
+      "output_granularity"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/commodities/0032",
+      "t2"
+    ],
+    "reported_recovery_slots": [
+      "output_granularity"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "output_granularity",
+      "problem_statement",
+      "source_provider",
+      "target_column",
+      "target_description"
+    ],
+    "before_discrepant_slots": [
+      "problem_statement",
+      "source_provider",
+      "target_column",
+      "target_description"
+    ],
+    "changed_slots": [
+      "output_granularity"
+    ],
+    "harmed_slots": [
+      "output_granularity"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/crypto_spot/0063",
+      "t3"
+    ],
+    "reported_recovery_slots": [
+      "output_granularity"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "business_goal",
+      "output_granularity",
+      "problem_statement",
+      "source_provider",
+      "target_description"
+    ],
+    "before_discrepant_slots": [
+      "output_granularity",
+      "problem_statement",
+      "source_provider",
+      "target_description"
+    ],
+    "changed_slots": [
+      "business_goal"
+    ],
+    "harmed_slots": [
+      "business_goal"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/crypto_spot/0063",
+      "t4"
+    ],
+    "reported_recovery_slots": [
+      "business_goal"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "dataset_type",
+      "output_granularity",
+      "target_description"
+    ],
+    "before_discrepant_slots": [
+      "dataset_type",
+      "target_description"
+    ],
+    "changed_slots": [
+      "output_granularity"
+    ],
+    "harmed_slots": [
+      "output_granularity"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/equities_funds/0094",
+      "t2"
+    ],
+    "reported_recovery_slots": [
+      "output_granularity"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "business_goal",
+      "dataset_type",
+      "forecast_start",
+      "output_granularity",
+      "target_description"
+    ],
+    "before_discrepant_slots": [
+      "dataset_type",
+      "forecast_start",
+      "output_granularity",
+      "target_description"
+    ],
+    "changed_slots": [
+      "business_goal"
+    ],
+    "harmed_slots": [
+      "business_goal"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/equities_funds/0094",
+      "t3"
+    ],
+    "reported_recovery_slots": [
+      "business_goal"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "dataset_type",
+      "output_granularity",
+      "problem_statement",
+      "target_description"
+    ],
+    "before_discrepant_slots": [
+      "dataset_type",
+      "problem_statement",
+      "target_description"
+    ],
+    "changed_slots": [
+      "output_granularity"
+    ],
+    "harmed_slots": [
+      "output_granularity"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/foreign_exchange/0106",
+      "t3"
+    ],
+    "reported_recovery_slots": [
+      "output_granularity"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "source_mode"
+    ],
+    "before_discrepant_slots": [
+      "source_mode"
+    ],
+    "changed_slots": [
+      "source_mode"
+    ],
+    "harmed_slots": [],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/humidity_pressure/0085",
+      "t1"
+    ],
+    "reported_recovery_slots": [
+      "source_mode"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "source_reference",
+      "target_column",
+      "time_column"
+    ],
+    "before_discrepant_slots": [
+      "source_reference",
+      "target_column",
+      "time_column"
+    ],
+    "changed_slots": [
+      "source_reference"
+    ],
+    "harmed_slots": [],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/output_growth/0103",
+      "t3"
+    ],
+    "reported_recovery_slots": [
+      "source_reference"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "problem_statement",
+      "source_mode",
+      "target_description"
+    ],
+    "before_discrepant_slots": [
+      "problem_statement",
+      "target_description"
+    ],
+    "changed_slots": [
+      "source_mode"
+    ],
+    "harmed_slots": [
+      "source_mode"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/temperature/0130",
+      "t1"
+    ],
+    "reported_recovery_slots": [
+      "source_mode"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "dataset_type",
+      "output_granularity",
+      "problem_statement",
+      "target_description"
+    ],
+    "before_discrepant_slots": [
+      "dataset_type",
+      "problem_statement",
+      "target_description"
+    ],
+    "changed_slots": [
+      "output_granularity"
+    ],
+    "harmed_slots": [
+      "output_granularity"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/temperature/0130",
+      "t5"
+    ],
+    "reported_recovery_slots": [
+      "output_granularity"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "geography",
+      "known_future_covariates",
+      "past_covariates",
+      "problem_statement",
+      "target_description"
+    ],
+    "before_discrepant_slots": [
+      "geography",
+      "known_future_covariates",
+      "past_covariates",
+      "problem_statement",
+      "target_description"
+    ],
+    "changed_slots": [
+      "problem_statement"
+    ],
+    "harmed_slots": [],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/weather_agriculture/0000",
+      "t2"
+    ],
+    "reported_recovery_slots": [
+      "problem_statement"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "business_goal",
+      "geography",
+      "known_future_covariates",
+      "output_granularity",
+      "past_covariates",
+      "problem_statement",
+      "target_description"
+    ],
+    "before_discrepant_slots": [
+      "business_goal",
+      "geography",
+      "known_future_covariates",
+      "output_granularity",
+      "past_covariates",
+      "problem_statement",
+      "target_description"
+    ],
+    "changed_slots": [
+      "output_granularity"
+    ],
+    "harmed_slots": [],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/weather_agriculture/0000",
+      "t5"
+    ],
+    "reported_recovery_slots": [
+      "output_granularity"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "source_reference"
+    ],
+    "before_discrepant_slots": [],
+    "changed_slots": [
+      "source_reference"
+    ],
+    "harmed_slots": [
+      "source_reference"
+    ],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v8-final-20261018-r1/focused/inflation_prices/validation-004",
+      "t2"
+    ],
+    "reported_recovery_slots": [
+      "source_reference"
+    ]
+  },
+  {
+    "after_discrepant_slots": [
+      "forecast_horizon",
+      "problem_statement",
+      "source_reference",
+      "target_column",
+      "target_description"
+    ],
+    "before_discrepant_slots": [
+      "forecast_horizon",
+      "problem_statement",
+      "target_column",
+      "target_description"
+    ],
+    "changed_slots": [
+      "source_reference"
+    ],
+    "harmed_slots": [],
+    "helped_slots": [],
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v8-final-20261018-r1/focused/rates_fixed_income/validation-003",
+      "t2"
+    ],
+    "reported_recovery_slots": []
+  }
+]

@@ -1,0 +1,80 @@
+﻿slot_id,description,value_type,allowed_values_json
+intent,Forecasting task intent.,enum,"[""create_forecast""]"
+problem_statement,What must be predicted.,string,[]
+business_goal,Why the forecast is needed.,string,[]
+stakeholder_role,User role in the forecasting process.,string,[]
+decision_supported,Decision informed by the forecast.,string,[]
+success_criteria,Human definition of a useful result.,string,[]
+target_column,Target field name or identifier.,string,[]
+target_description,Domain meaning of the target.,string,[]
+target_unit,Measurement unit of the target.,string,[]
+target_bounds,Known valid minimum and maximum.,object,[]
+allow_negative_values,Whether negative values are valid.,boolean,[]
+aggregation_method,How observations are aggregated.,enum,"[""sum"", ""mean"", ""last"", ""min"", ""max"", ""domain_specific""]"
+time_column,Timestamp or period field.,string,[]
+frequency,Native observation frequency.,duration,[]
+timezone,IANA timezone for timestamps.,timezone,[]
+calendar_type,Calendar governing valid periods.,enum,"[""calendar"", ""business_day"", ""trading"", ""academic"", ""custom""]"
+forecast_horizon,Number of future periods to predict.,duration,[]
+forecast_start,Explicit first forecast period.,datetime,[]
+data_cutoff,Latest observation allowed.,datetime,[]
+lead_time,Delay between forecast creation and use.,duration,[]
+dataset_type,"Whether the data covers one item, several items, or groups of items.",enum,"[""single_series"", ""panel"", ""hierarchical""]"
+series_id_columns,Columns that identify each item or series.,string_list,[]
+hierarchy_columns,Columns showing group levels from broadest to most specific.,string_list,[]
+aggregation_level,Level at which forecasts are required.,string,[]
+scope_filters,Filters limiting the forecasting scope.,object_list,[]
+geography,Geographic scope.,string_list,[]
+source_mode,How the data will be provided.,enum,"[""upload"", ""api"", ""database"", ""catalog""]"
+source_reference,Non-secret source identifier.,string,[]
+source_provider,Source owner or provider.,string,[]
+file_format,Uploaded file format.,enum,"[""csv"", ""xlsx"", ""parquet"", ""json""]"
+sheet_or_table,"Worksheet, table, or API resource.",string,[]
+authentication_reference,Reference to externally managed credentials.,secret_reference,[]
+refresh_frequency,Source update cadence.,duration,[]
+history_start,Earliest available observation.,datetime,[]
+history_end,Latest available observation.,datetime,[]
+expected_history_length,Estimated historical coverage.,duration,[]
+minimum_training_points,Minimum observations before modeling.,integer,[]
+known_regime_changes,Known structural breaks.,object_list,[]
+missing_timestamp_policy,Handling of missing periods.,enum,"[""reject"", ""insert"", ""resample"", ""review""]"
+missing_target_policy,Handling of missing target values.,enum,"[""reject"", ""impute"", ""interpolate"", ""retain""]"
+duplicate_policy,Handling of duplicate timestamp/entity rows.,enum,"[""reject"", ""aggregate"", ""latest"", ""review""]"
+outlier_policy,Handling of outliers.,enum,"[""keep"", ""cap"", ""transform"", ""remove"", ""flag""]"
+invalid_value_policy,Handling of domain-invalid values.,enum,"[""reject"", ""coerce"", ""flag""]"
+minimum_coverage,Minimum non-missing coverage.,percentage,[]
+known_seasonality,Whether seasonality is expected.,boolean,[]
+seasonal_periods,Known cycles in observation periods.,integer_list,[]
+business_days_only,Whether non-business days are excluded.,boolean,[]
+holidays,Relevant holiday calendars.,string_list,[]
+special_events,Known events affecting demand.,object_list,[]
+past_covariates,Regressors observed through cutoff only.,string_list,[]
+known_future_covariates,Regressors available for future periods.,string_list,[]
+static_features,Time-invariant entity attributes.,string_list,[]
+covariate_availability,Availability timing for selected covariates.,object_list,[]
+external_covariate_sources,Source mapping for external regressors.,object_list,[]
+forecast_type,"Whether to return one prediction, an uncertainty range, or both.",enum,"[""point"", ""probabilistic"", ""both""]"
+prediction_interval_levels,Requested interval coverage levels.,percentage_list,[]
+quantiles,Requested forecast quantiles.,probability_list,[]
+scenario_forecasts,Named future scenarios.,object_list,[]
+rounding_rule,Output rounding and precision.,object,[]
+output_granularity,How results are grouped by time and item.,string,[]
+primary_metric,How prediction quality should be compared.,enum,"[""mae"", ""rmse"", ""mase"", ""smape""]"
+secondary_metrics,Additional report metrics.,enum_list,[]
+validation_strategy,Time-series validation method.,enum,"[""rolling_origin"", ""expanding_window""]"
+backtest_folds,Number of historical test windows.,integer,[]
+test_window,Size of each holdout window.,duration,[]
+baseline_model,Required baseline comparison.,enum,"[""naive"", ""seasonal_naive""]"
+acceptable_error,Domain performance threshold.,object,[]
+inference_mode,"Batch, scheduled, or online predictions.",enum,"[""batch"", ""scheduled"", ""online""]"
+prediction_frequency,How often forecasts are requested.,duration,[]
+retraining_frequency,Desired model refresh cadence.,duration,[]
+latency_requirement,Maximum inference latency.,duration,[]
+output_format,Delivery serialization.,enum,"[""json"", ""csv"", ""xlsx""]"
+destination,Destination system or interface.,string,[]
+contains_sensitive_data,Presence of sensitive information.,boolean,[]
+privacy_constraints,Required privacy and access controls.,string_list,[]
+license,Data usage license.,string,[]
+provenance_required,Whether detailed lineage is required.,boolean,[]
+explainability_level,Required forecast explanation detail.,enum,"[""none"", ""basic"", ""feature_level"", ""detailed""]"
+human_approval_required,Human gate before model-building handoff.,boolean,[]

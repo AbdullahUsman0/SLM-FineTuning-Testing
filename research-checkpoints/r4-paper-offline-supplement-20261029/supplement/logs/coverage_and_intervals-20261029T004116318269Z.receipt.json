@@ -1,0 +1,14 @@
+{
+  "stage": "coverage_and_intervals.py",
+  "command": [
+    "D:\\SLM\\FYP-environments\\v8-final-20261018T230255Z\\Scripts\\python.exe",
+    "-B",
+    "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\scripts\\offline_guard.py",
+    "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\scripts\\coverage_and_intervals.py"
+  ],
+  "log": "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\logs\\coverage_and_intervals-20261029T004116318269Z.log",
+  "returncode": 0,
+  "credentials_removed": true,
+  "outbound_network_blocked": true,
+  "shared_ledger_access_blocked": true
+}

@@ -1,0 +1,14 @@
+{
+  "stage": "write_paper_and_future.py",
+  "command": [
+    "D:\\SLM\\FYP-environments\\v8-final-20261018T230255Z\\Scripts\\python.exe",
+    "-B",
+    "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\scripts\\offline_guard.py",
+    "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\scripts\\write_paper_and_future.py"
+  ],
+  "log": "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\logs\\write_paper_and_future-20261029T005301735499Z.log",
+  "returncode": 0,
+  "credentials_removed": true,
+  "outbound_network_blocked": true,
+  "shared_ledger_access_blocked": true
+}

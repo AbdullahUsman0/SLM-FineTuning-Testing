@@ -1,0 +1,241 @@
+{
+  "configured_XGrammar_review": {
+    "all_match": true,
+    "checks": [
+      {
+        "actual_sha256": "21b5eca39e6ab983575b181259efd3204562b770a0cb2e6f3541f2ffa43892a6",
+        "expected_sha256": "21b5eca39e6ab983575b181259efd3204562b770a0cb2e6f3541f2ffa43892a6",
+        "file": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\v6-constraints-20261007\\results\\analysis.json",
+        "matches": true,
+        "present": true
+      },
+      {
+        "actual_sha256": "0a0affd5b3592feaffc9c57f6e91faef811e7c58de3020b533e83bd925518d8c",
+        "expected_sha256": "0a0affd5b3592feaffc9c57f6e91faef811e7c58de3020b533e83bd925518d8c",
+        "file": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\v6-constraints-20261007\\results\\completion.json",
+        "matches": true,
+        "present": true
+      },
+      {
+        "actual_sha256": "4b32e0c75d1bc533d5fb861bd85c98b6d8297b88ffc1f4521711ba09bdc93416",
+        "expected_sha256": "4b32e0c75d1bc533d5fb861bd85c98b6d8297b88ffc1f4521711ba09bdc93416",
+        "file": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\v6-constraints-20261007\\results\\constrained-natural_component.json.gz",
+        "matches": true,
+        "present": true
+      },
+      {
+        "actual_sha256": "06003e6185dc5739dfba5d51add4b504decd3c3487081ac2ec727bc1aee7bfd7",
+        "expected_sha256": "06003e6185dc5739dfba5d51add4b504decd3c3487081ac2ec727bc1aee7bfd7",
+        "file": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\v6-constraints-20261007\\results\\constrained-natural_rollout.json.gz",
+        "matches": true,
+        "present": true
+      },
+      {
+        "actual_sha256": "f97e41d9e0a940c4a8de107d003c729b02aa7b5821951f74343f9bb64ba82432",
+        "expected_sha256": "f97e41d9e0a940c4a8de107d003c729b02aa7b5821951f74343f9bb64ba82432",
+        "file": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\v6-constraints-20261007\\results\\execution-evidence.json",
+        "matches": true,
+        "present": true
+      },
+      {
+        "actual_sha256": "9d2c6db2a4afc5cc44c39006d173dc31f2eecd8b4769f32397387aec12a6ef47",
+        "expected_sha256": "9d2c6db2a4afc5cc44c39006d173dc31f2eecd8b4769f32397387aec12a6ef47",
+        "file": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\v6-constraints-20261007\\results\\original-natural_component.json.gz",
+        "matches": true,
+        "present": true
+      },
+      {
+        "actual_sha256": "a9d6cae9167a99cb703dc728e179360df274593e51a743c4bb80b4c9c5109020",
+        "expected_sha256": "a9d6cae9167a99cb703dc728e179360df274593e51a743c4bb80b4c9c5109020",
+        "file": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\v6-constraints-20261007\\results\\original-natural_rollout.json.gz",
+        "matches": true,
+        "present": true
+      },
+      {
+        "actual_sha256": "9d6481a42df9cce7a8c5f61bd48cfc7a3bdd6c4ec06c96400527d6a049091681",
+        "expected_sha256": "9d6481a42df9cce7a8c5f61bd48cfc7a3bdd6c4ec06c96400527d6a049091681",
+        "file": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\v6-constraints-20261007\\results\\README.md",
+        "matches": true,
+        "present": true
+      },
+      {
+        "actual_sha256": "b8194948ce53f73cec1887be153ac2c8dc4f9e51e1fcbb065728e53689ff8748",
+        "expected_sha256": "b8194948ce53f73cec1887be153ac2c8dc4f9e51e1fcbb065728e53689ff8748",
+        "file": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\v6-constraints-20261007\\results\\run-manifest.json",
+        "matches": true,
+        "present": true
+      },
+      {
+        "actual_sha256": "1b304a31c4732c9359765bfb56ed99a37e2fddf7c1efd888f699c55b0d30a35b",
+        "expected_sha256": "1b304a31c4732c9359765bfb56ed99a37e2fddf7c1efd888f699c55b0d30a35b",
+        "file": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\v6-constraints-20261007\\results\\slot-error-audit.csv",
+        "matches": true,
+        "present": true
+      },
+      {
+        "actual_sha256": "2ec4c763b186091ef1d5b9f7acb81a4fa7484fb6fb0035e5c5071b366da884ae",
+        "expected_sha256": "2ec4c763b186091ef1d5b9f7acb81a4fa7484fb6fb0035e5c5071b366da884ae",
+        "file": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\v6-constraints-20261007\\results\\summary.csv",
+        "matches": true,
+        "present": true
+      }
+    ],
+    "manifest": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\v6-constraints-20261007\\review\\independent-verification.json",
+    "manifest_sha256": "94711f723a07920e80fec5537bea370cb3a323e0e776c8fe6b928bdae553a487"
+  },
+  "document_provenance": [
+    {
+      "interpretation": "Document verified as present; historical performance numbers are not reverified from raw data merely by hashing this prose",
+      "path": "D:\\SLM\\SLM-FineTuning-Testing\\evaluation\\v5-structured-output\\README.md",
+      "sha256": "827af4caadfbbdd979c12c3d9e7bc30b9e14a73667c2c327ea9e37f6c9366cb3"
+    },
+    {
+      "interpretation": "Document verified as present; historical performance numbers are not reverified from raw data merely by hashing this prose",
+      "path": "D:\\SLM\\SLM-FineTuning-Testing\\STRUCTURED_OUTPUT_RESEARCH_CHECKPOINT_2026-09-29.md",
+      "sha256": "b5b874c612c30ceb2a256678406b9ff82d78eacd5b8da33c8bb41a404f175498"
+    },
+    {
+      "interpretation": "Document verified as present; historical performance numbers are not reverified from raw data merely by hashing this prose",
+      "path": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\v7-dataset-preparation-20261008\\DATASETS_AND_SLOT_FILLING_2026-10-08.md",
+      "sha256": "66f28e56d97e1c30ae6ebfedbffaec64eb5d9f2b0ee9fa88f28f40b2d7f18750"
+    },
+    {
+      "interpretation": "Document verified as present; historical performance numbers are not reverified from raw data merely by hashing this prose",
+      "path": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\2026-09-20-v3-validation\\README.md",
+      "sha256": "1abe60d637f8c0f6e0bd7945726ff4b17834eb8c231f9dcda8dc2126994ccd5a"
+    }
+  ],
+  "historical_31_manifest": {
+    "all_match": true,
+    "checks": [
+      {
+        "actual_sha256": "ff19c6ace25790c922c5f641879b3088a72d6e8cf7f01f70afad0c3695ccb244",
+        "expected_sha256": "ff19c6ace25790c922c5f641879b3088a72d6e8cf7f01f70afad0c3695ccb244",
+        "file": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\policy-openai-slm-matched-20261008\\hosted-source\\completion.json",
+        "matches": true,
+        "present": true
+      },
+      {
+        "actual_sha256": "996a58f62e35af5148898af580a261155bf2fcaa0af342e1d15a49b00439b16d",
+        "expected_sha256": "996a58f62e35af5148898af580a261155bf2fcaa0af342e1d15a49b00439b16d",
+        "file": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\policy-openai-slm-matched-20261008\\hosted-source\\component-report.json.gz",
+        "matches": true,
+        "present": true
+      },
+      {
+        "actual_sha256": "c8c09d46ccf254fb9aa59d1777f821feaec829c7f11381d0e0b7d3614d228063",
+        "expected_sha256": "c8c09d46ccf254fb9aa59d1777f821feaec829c7f11381d0e0b7d3614d228063",
+        "file": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\policy-openai-slm-matched-20261008\\hosted-source\\rollout-report.json.gz",
+        "matches": true,
+        "present": true
+      },
+      {
+        "actual_sha256": "ad79bc1b1a0db138517a55177d59db8dce750d61c735d4c86b2120cd0706ffd5",
+        "expected_sha256": "ad79bc1b1a0db138517a55177d59db8dce750d61c735d4c86b2120cd0706ffd5",
+        "file": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\policy-openai-slm-matched-20261008\\hosted-source\\rpc-journal.jsonl.gz",
+        "matches": true,
+        "present": true
+      },
+      {
+        "actual_sha256": "2c22ffeb1763ca81975bff4227329d3fc2512d5211c9e649cf723b1bde2b666d",
+        "expected_sha256": "2c22ffeb1763ca81975bff4227329d3fc2512d5211c9e649cf723b1bde2b666d",
+        "file": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\policy-openai-slm-matched-20261008\\hosted-source\\run-manifest.json",
+        "matches": true,
+        "present": true
+      },
+      {
+        "actual_sha256": "db789cc26a4021781ee08278789f9bfe249e636e66d259be8f10b15b2628be46",
+        "expected_sha256": "db789cc26a4021781ee08278789f9bfe249e636e66d259be8f10b15b2628be46",
+        "file": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\policy-openai-slm-matched-20261008\\hosted-source\\source-sha256.json",
+        "matches": true,
+        "present": true
+      },
+      {
+        "actual_sha256": "ab60cc90c925e1d987cb21f16509b4cd928b0bcf53c9cf5defd7ed705f53db8d",
+        "expected_sha256": "ab60cc90c925e1d987cb21f16509b4cd928b0bcf53c9cf5defd7ed705f53db8d",
+        "file": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\policy-openai-slm-matched-20261008\\human-review-queue.jsonl",
+        "matches": true,
+        "present": true
+      },
+      {
+        "actual_sha256": "a4fbc62cddb2ed83dfcb79d3d992af0cdda5892f39d7c76b4c1c76873749b972",
+        "expected_sha256": "a4fbc62cddb2ed83dfcb79d3d992af0cdda5892f39d7c76b4c1c76873749b972",
+        "file": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\policy-openai-slm-matched-20261008\\human-review-sheet.csv",
+        "matches": true,
+        "present": true
+      },
+      {
+        "actual_sha256": "4628cf7459fe8c1096c3531b5859105404cfc8f878841a7ea13ac99b81792ce9",
+        "expected_sha256": "4628cf7459fe8c1096c3531b5859105404cfc8f878841a7ea13ac99b81792ce9",
+        "file": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\policy-openai-slm-matched-20261008\\intake-verification.json",
+        "matches": true,
+        "present": true
+      },
+      {
+        "actual_sha256": "de64cac1b1bc9399f07636d291830e4bb83497bc1ecf333ea46c1a4eb8508e46",
+        "expected_sha256": "de64cac1b1bc9399f07636d291830e4bb83497bc1ecf333ea46c1a4eb8508e46",
+        "file": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\policy-openai-slm-matched-20261008\\openai-vs-base.json",
+        "matches": true,
+        "present": true
+      },
+      {
+        "actual_sha256": "488855d38170bd9200a4f217ea4581e98fa09ccbbf2ee91ee37a585d42d6c819",
+        "expected_sha256": "488855d38170bd9200a4f217ea4581e98fa09ccbbf2ee91ee37a585d42d6c819",
+        "file": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\policy-openai-slm-matched-20261008\\openai-vs-v5.json",
+        "matches": true,
+        "present": true
+      },
+      {
+        "actual_sha256": "ded8743c1c229a29418076a78716c7e60babf566a4d32a367404a4c3eb6c57e7",
+        "expected_sha256": "ded8743c1c229a29418076a78716c7e60babf566a4d32a367404a4c3eb6c57e7",
+        "file": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\policy-openai-slm-matched-20261008\\openai-vs-v6.json",
+        "matches": true,
+        "present": true
+      },
+      {
+        "actual_sha256": "335cd444f5b067bfbaea585e5c52dffb6d376558d6e451f46a77cb81c2181497",
+        "expected_sha256": "335cd444f5b067bfbaea585e5c52dffb6d376558d6e451f46a77cb81c2181497",
+        "file": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\policy-openai-slm-matched-20261008\\README.md",
+        "matches": true,
+        "present": true
+      },
+      {
+        "actual_sha256": "dff1237911aa0f276b8905a7c324b18ad4c51ed15e4e24544e5abf22bfab9bb9",
+        "expected_sha256": "dff1237911aa0f276b8905a7c324b18ad4c51ed15e4e24544e5abf22bfab9bb9",
+        "file": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\policy-openai-slm-matched-20261008\\reproduction\\analyze-policy-openai-slm.py",
+        "matches": true,
+        "present": true
+      },
+      {
+        "actual_sha256": "7dd3a8b7c470abee6e3c82e993999cab3ce2c528b4adf567ecdf39fecdb511e5",
+        "expected_sha256": "7dd3a8b7c470abee6e3c82e993999cab3ce2c528b4adf567ecdf39fecdb511e5",
+        "file": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\policy-openai-slm-matched-20261008\\reproduction\\compare-openai-output-methods.py",
+        "matches": true,
+        "present": true
+      },
+      {
+        "actual_sha256": "571805bb8476ccb198bb7b3b0155e4fa2e9a66fd68c04717bdcc97a105699c92",
+        "expected_sha256": "571805bb8476ccb198bb7b3b0155e4fa2e9a66fd68c04717bdcc97a105699c92",
+        "file": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\policy-openai-slm-matched-20261008\\reproduction\\compare-policy-comparison.py",
+        "matches": true,
+        "present": true
+      },
+      {
+        "actual_sha256": "4fc5456e932f376073a7a7ecaee74a83a4dd99456a694273ed4a78b480fef810",
+        "expected_sha256": "4fc5456e932f376073a7a7ecaee74a83a4dd99456a694273ed4a78b480fef810",
+        "file": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\policy-openai-slm-matched-20261008\\summary.csv",
+        "matches": true,
+        "present": true
+      },
+      {
+        "actual_sha256": "14745e163de49f73c1577dcff180134e1d098b28c235fe6c7bd749ee62e16538",
+        "expected_sha256": "14745e163de49f73c1577dcff180134e1d098b28c235fe6c7bd749ee62e16538",
+        "file": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\policy-openai-slm-matched-20261008\\summary.json",
+        "matches": true,
+        "present": true
+      }
+    ],
+    "manifest": "D:\\SLM\\SLM-FineTuning-Testing\\research-checkpoints\\policy-openai-slm-matched-20261008\\checkpoint-manifest.json",
+    "manifest_sha256": "5ab4f37d62e1a08b2a9235291ccd16c3404a0cf426cd1a6939b7d643d15554e6"
+  }
+}

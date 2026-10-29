@@ -1,0 +1,23 @@
+{
+  "stage": "import_reviews.py",
+  "command": [
+    "D:\\SLM\\FYP-environments\\v8-final-20261018T230255Z\\Scripts\\python.exe",
+    "-B",
+    "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\scripts\\offline_guard.py",
+    "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\scripts\\import_reviews.py",
+    "--kit",
+    "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\deliverables\\human-review",
+    "--template",
+    "gold_first_review.csv",
+    "--form",
+    "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\deliverables\\human-review\\reviewers\\gold_first_review.csv",
+    "--output",
+    "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\deliverables\\human-review\\coordinator\\blank-import-check",
+    "--allow-partial"
+  ],
+  "log": "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\logs\\import_reviews-20261029T005630803855Z.log",
+  "returncode": 0,
+  "credentials_removed": true,
+  "outbound_network_blocked": true,
+  "shared_ledger_access_blocked": true
+}

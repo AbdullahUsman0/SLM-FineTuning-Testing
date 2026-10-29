@@ -1,0 +1,59 @@
+........................................................................ [ 24%]
+...........................................F............................ [ 48%]
+........................................................................ [ 72%]
+........................................................................ [ 96%]
+...........                                                              [100%]
+================================== FAILURES ===================================
+______ test_nonredistributable_data_is_user_scoped_and_not_cross_tenant _______
+
+tmp_path = WindowsPath('D:/SLM/FYP-offline-supplements/r4-paper-evidence-20261029T002508Z/delivery/portable-smoke/runtime/tmp/pytest-of-Abdullah/pytest-0/test_nonredistributable_data_i0')
+
+    def test_nonredistributable_data_is_user_scoped_and_not_cross_tenant(tmp_path: Path) -> None:
+        candidate = _candidate("private", "temperature", redistribution=False)
+        adapter = FakeAdapter("private", [candidate])
+        service, repository = _service(tmp_path, [adapter])
+        plan_a = service.discover(
+            uuid4(),
+            DatasetSearchQuery(
+                target="temperature",
+                geography=["Pakistan"],
+                frequency="daily",
+                user_id="user-a",
+            ),
+        )
+        selection_a = service.confirm_dataset(
+            plan_a.plan_id, candidate.candidate_id, confirm=True, user_id="user-a"
+        )
+>       version_a = service.fetch_selection(selection_a.selection_id)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\unit\test_dataset_discovery.py:213: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src\forecasting_assistant\application\dataset_discovery.py:199: in fetch_selection
+    digest, path = self._object_store.put(
+src\forecasting_assistant\infrastructure\datasets\object_store.py:27: in put
+    path.write_bytes(content)
+D:\SLM\runtime\python.3.12.10\tools\Lib\pathlib.py:1036: in write_bytes
+    with self.open(mode='wb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('D:/SLM/FYP-offline-supplements/r4-paper-evidence-20261029T002508Z/delivery/portable-smoke/runtime/tmp/pyt...data_i0/objects/users/fc95297aa4f56781f0decb7d/e8/f7/e8f7d7598cd76e2a1c62824a80ae08455758462dcd26a0f12b1187eaed851810')
+mode = 'wb', buffering = -1, encoding = None, errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\delivery\\portable-smoke\\runtime\\tmp\\pytest-of-Abdullah\\pytest-0\\test_nonredistributable_data_i0\\objects\\users\\fc95297aa4f56781f0decb7d\\e8\\f7\\e8f7d7598cd76e2a1c62824a80ae08455758462dcd26a0f12b1187eaed851810'
+
+D:\SLM\runtime\python.3.12.10\tools\Lib\pathlib.py:1013: FileNotFoundError
+=========================== short test summary info ===========================
+FAILED tests/unit/test_dataset_discovery.py::test_nonredistributable_data_is_user_scoped_and_not_cross_tenant
+1 failed, 298 passed in 21.08s

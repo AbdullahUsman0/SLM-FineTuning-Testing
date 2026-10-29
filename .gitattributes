@@ -49,3 +49,6 @@
 /evaluation/current_pipeline_v8_openai_20261028_r4_1/** -text
 /research-checkpoints/current-pipeline-v8-openai-20261028T094502Z-r4-1-native/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
 /research-checkpoints/current-pipeline-v8-openai-20261028T094502Z-r4-1-native/bundle/fpy-local-fixes.patch -diff
+/research-checkpoints/r4-paper-offline-supplement-20261029/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+# Imported, manifest-hashed source and fixtures retain their original bytes.
+/research-checkpoints/r4-paper-offline-supplement-20261029/supplement/** -whitespace

@@ -1,0 +1,4570 @@
+[
+  {
+    "actual_prior": {
+      "assistant_question_context": null,
+      "intent": "create_forecast",
+      "pending_slot": {
+        "reason": "missing required slot",
+        "slot_id": "output_granularity"
+      },
+      "scope": "supplied gold component prior",
+      "slots": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 19.0,
+            "unit": "day"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "day"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/commodities/2203"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "USD per MMBtu"
+        }
+      }
+    },
+    "category_counts": {
+      "correct_reducer_state_harmed_by_recovery": 1,
+      "exact_raw_extraction_with_recovery_harm": 1,
+      "final_turn_state_slot_discrepancy": 1,
+      "post_reducer_pipeline_changed_slots": 1,
+      "recovery_introduced_wrong_slot_state": 1,
+      "trace_reported_recovery_changed_slots": 1,
+      "trace_reported_recovery_slots": 1
+    },
+    "expected_state": {
+      "file_format": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "xlsx"
+      },
+      "forecast_horizon": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 19.0,
+          "unit": "day"
+        }
+      },
+      "frequency": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 1.0,
+          "unit": "day"
+        }
+      },
+      "intent": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "create_forecast"
+      },
+      "problem_statement": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+      },
+      "source_mode": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "catalog"
+      },
+      "source_reference": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "https://inputs.example/commodities/2203"
+      },
+      "target_column": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "gas_settlement"
+      },
+      "target_description": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+      },
+      "target_unit": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "USD per MMBtu"
+      },
+      "time_column": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "recorded_at"
+      }
+    },
+    "gold_extraction": {
+      "correction_detected": false,
+      "intent": "create_forecast",
+      "intent_confidence": 1.0,
+      "unsupported_claims": [],
+      "updates": [
+        {
+          "candidate_value": "\"gas_settlement\"",
+          "confidence": 1.0,
+          "evidence_text": "The response variable is stored in column gas_settlement.",
+          "slot_id": "target_column",
+          "status": "provided"
+        },
+        {
+          "candidate_value": "\"recorded_at\"",
+          "confidence": 1.0,
+          "evidence_text": "The input timestamp identifier is recorded_at.",
+          "slot_id": "time_column",
+          "status": "provided"
+        }
+      ]
+    },
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v7-20261009-r8-dev/commodities/0032",
+      "t2"
+    ],
+    "message": "The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at.",
+    "post_recovery_state": {
+      "file_format": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "xlsx"
+      },
+      "forecast_horizon": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 19.0,
+          "unit": "day"
+        }
+      },
+      "frequency": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 1.0,
+          "unit": "day"
+        }
+      },
+      "intent": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "create_forecast"
+      },
+      "output_granularity": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at."
+      },
+      "problem_statement": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+      },
+      "source_mode": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "catalog"
+      },
+      "source_reference": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "https://inputs.example/commodities/2203"
+      },
+      "target_column": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "gas_settlement"
+      },
+      "target_description": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+      },
+      "target_unit": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "USD per MMBtu"
+      },
+      "time_column": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "recorded_at"
+      }
+    },
+    "pre_recovery_state": {
+      "file_format": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "xlsx"
+      },
+      "forecast_horizon": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 19.0,
+          "unit": "day"
+        }
+      },
+      "frequency": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 1.0,
+          "unit": "day"
+        }
+      },
+      "intent": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "create_forecast"
+      },
+      "problem_statement": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+      },
+      "source_mode": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "catalog"
+      },
+      "source_reference": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "https://inputs.example/commodities/2203"
+      },
+      "target_column": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "gas_settlement"
+      },
+      "target_description": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+      },
+      "target_unit": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "USD per MMBtu"
+      },
+      "time_column": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "recorded_at"
+      }
+    },
+    "prior_discrepant_slots": [],
+    "provenance": {
+      "events": [
+        {
+          "payload": {
+            "message": "The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at.",
+            "turn_number": 2
+          },
+          "type": "user_message"
+        },
+        {
+          "payload": {
+            "message": "The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at.",
+            "reason": "completed selected slot while retaining extractor updates",
+            "slot_id": "output_granularity",
+            "turn_number": 2
+          },
+          "type": "deterministic_recovery_applied"
+        },
+        {
+          "payload": {
+            "issues": []
+          },
+          "type": "validation_completed"
+        },
+        {
+          "payload": {
+            "message": "I understand that the target is natural-gas front-month settlement price for Pelmar commodities site 2203, using our data catalog, every 1 day, for the next 19 days, with values measured in USD per MMBtu, reported as The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at.. Can I confirm these requirements? Example answer: yes.",
+            "ready": true,
+            "turn_number": 2
+          },
+          "type": "assistant_response"
+        }
+      ],
+      "recovered_slot_ids": [
+        "output_granularity"
+      ],
+      "static_question": "I understand that the target is natural-gas front-month settlement price for Pelmar commodities site 2203, using our data catalog, every 1 day, for the next 19 days, with values measured in USD per MMBtu, reported as The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at.. Can I confirm these requirements? Example answer: yes.",
+      "static_question_renderer_failures": [],
+      "trace": [
+        {
+          "payload": {
+            "message": "The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at.",
+            "pending_slot": "output_granularity",
+            "state_before": {
+              "available_dataset_columns": [],
+              "dialogue_id": "f2ac6590-3c42-490f-8288-d7fdb8eb5939",
+              "intent": "create_forecast",
+              "provider_conversation_id": null,
+              "slots": {
+                "file_format": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "xlsx"
+                },
+                "forecast_horizon": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": {
+                    "periods": 19.0,
+                    "unit": "day"
+                  }
+                },
+                "frequency": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": {
+                    "periods": 1.0,
+                    "unit": "day"
+                  }
+                },
+                "intent": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "create_forecast"
+                },
+                "problem_statement": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+                },
+                "source_mode": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "catalog"
+                },
+                "source_reference": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "https://inputs.example/commodities/2203"
+                },
+                "target_description": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+                },
+                "target_unit": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "USD per MMBtu"
+                }
+              }
+            },
+            "turn_number": 2
+          },
+          "stage": "turn.user_message"
+        },
+        {
+          "payload": {
+            "correction_detected": false,
+            "intent": "create_forecast",
+            "intent_confidence": 1.0,
+            "unsupported_claims": [],
+            "updates": [
+              {
+                "candidate_value": "gas_settlement",
+                "confidence": 1.0,
+                "evidence_text": "The response variable is stored in column gas_settlement.",
+                "slot_id": "target_column",
+                "status": "provided"
+              },
+              {
+                "candidate_value": "recorded_at",
+                "confidence": 1.0,
+                "evidence_text": "The input timestamp identifier is recorded_at.",
+                "slot_id": "time_column",
+                "status": "provided"
+              }
+            ]
+          },
+          "stage": "state.extraction_received"
+        },
+        {
+          "payload": {
+            "slot_id": "output_granularity",
+            "state_after": {
+              "available_dataset_columns": [],
+              "dialogue_id": "f2ac6590-3c42-490f-8288-d7fdb8eb5939",
+              "intent": "create_forecast",
+              "provider_conversation_id": null,
+              "slots": {
+                "file_format": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "xlsx"
+                },
+                "forecast_horizon": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": {
+                    "periods": 19.0,
+                    "unit": "day"
+                  }
+                },
+                "frequency": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": {
+                    "periods": 1.0,
+                    "unit": "day"
+                  }
+                },
+                "intent": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "create_forecast"
+                },
+                "output_granularity": {
+                  "evidence_text": "The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at.",
+                  "source_turn": 2,
+                  "status": "provided",
+                  "value": "The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at."
+                },
+                "problem_statement": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+                },
+                "source_mode": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "catalog"
+                },
+                "source_reference": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "https://inputs.example/commodities/2203"
+                },
+                "target_column": {
+                  "evidence_text": "The response variable is stored in column gas_settlement.",
+                  "source_turn": 2,
+                  "status": "provided",
+                  "value": "gas_settlement"
+                },
+                "target_description": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+                },
+                "target_unit": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "USD per MMBtu"
+                },
+                "time_column": {
+                  "evidence_text": "The input timestamp identifier is recorded_at.",
+                  "source_turn": 2,
+                  "status": "provided",
+                  "value": "recorded_at"
+                }
+              }
+            }
+          },
+          "stage": "state.recovery_applied"
+        },
+        {
+          "payload": {
+            "assistant_message": "I understand that the target is natural-gas front-month settlement price for Pelmar commodities site 2203, using our data catalog, every 1 day, for the next 19 days, with values measured in USD per MMBtu, reported as The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at.. Can I confirm these requirements? Example answer: yes.",
+            "dialogue_id": "f2ac6590-3c42-490f-8288-d7fdb8eb5939",
+            "ready": true,
+            "state_after": {
+              "available_dataset_columns": [],
+              "dialogue_id": "f2ac6590-3c42-490f-8288-d7fdb8eb5939",
+              "intent": "create_forecast",
+              "provider_conversation_id": null,
+              "slots": {
+                "file_format": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "xlsx"
+                },
+                "forecast_horizon": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": {
+                    "periods": 19.0,
+                    "unit": "day"
+                  }
+                },
+                "frequency": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": {
+                    "periods": 1.0,
+                    "unit": "day"
+                  }
+                },
+                "intent": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "create_forecast"
+                },
+                "output_granularity": {
+                  "evidence_text": "The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at.",
+                  "source_turn": 2,
+                  "status": "provided",
+                  "value": "The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at."
+                },
+                "problem_statement": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+                },
+                "source_mode": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "catalog"
+                },
+                "source_reference": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "https://inputs.example/commodities/2203"
+                },
+                "target_column": {
+                  "evidence_text": "The response variable is stored in column gas_settlement.",
+                  "source_turn": 2,
+                  "status": "provided",
+                  "value": "gas_settlement"
+                },
+                "target_description": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+                },
+                "target_unit": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "USD per MMBtu"
+                },
+                "time_column": {
+                  "evidence_text": "The input timestamp identifier is recorded_at.",
+                  "source_turn": 2,
+                  "status": "provided",
+                  "value": "recorded_at"
+                }
+              }
+            },
+            "turn_number": 2
+          },
+          "stage": "turn.completed"
+        }
+      ]
+    },
+    "raw_confusion": [
+      2,
+      0,
+      0
+    ],
+    "raw_response": "{\"correction_detected\": false, \"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"unsupported_claims\": [], \"updates\": [{\"candidate_value\": \"\\\"gas_settlement\\\"\", \"confidence\": 1.0, \"evidence_text\": \"The response variable is stored in column gas_settlement.\", \"slot_id\": \"target_column\", \"status\": \"provided\"}, {\"candidate_value\": \"\\\"recorded_at\\\"\", \"confidence\": 1.0, \"evidence_text\": \"The input timestamp identifier is recorded_at.\", \"slot_id\": \"time_column\", \"status\": \"provided\"}]}",
+    "raw_response_sha256": "4ab549e9bc243ee6dcbcb43e1c182dff8ea543634aa91d098d2ec8d24096354d",
+    "recovery_harmed_slots": [
+      "output_granularity"
+    ],
+    "recovery_helped_slots": [],
+    "title": "Correct current extraction harmed by recovery"
+  },
+  {
+    "actual_prior": {
+      "assistant_question_context": null,
+      "intent": "create_forecast",
+      "pending_slot": {
+        "reason": "missing required slot",
+        "slot_id": "business_goal"
+      },
+      "scope": "actual accepted rollout prior after declared intervention",
+      "slots": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 22.0,
+            "unit": "day"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 2.0,
+            "unit": "day"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "output_granularity": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at."
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://revised.example/commodities/32"
+        },
+        "target_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "gas_settlement"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "USD per MMBtu"
+        },
+        "time_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "record_at"
+        }
+      }
+    },
+    "category_counts": {
+      "exact_raw_extraction_with_recovery_harm": 1,
+      "final_turn_state_slot_discrepancy": 3,
+      "inherited_rollout_prior_slot_discrepancy": 2,
+      "post_reducer_pipeline_changed_slots": 1,
+      "recovery_introduced_wrong_slot_state": 1,
+      "trace_reported_recovery_changed_slots": 1,
+      "trace_reported_recovery_slots": 1
+    },
+    "expected_state": {
+      "file_format": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "xlsx"
+      },
+      "forecast_horizon": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 22.0,
+          "unit": "day"
+        }
+      },
+      "frequency": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 2.0,
+          "unit": "day"
+        }
+      },
+      "intent": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "create_forecast"
+      },
+      "problem_statement": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+      },
+      "source_mode": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "catalog"
+      },
+      "source_reference": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "https://revised.example/commodities/32"
+      },
+      "target_column": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "gas_settlement"
+      },
+      "target_description": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+      },
+      "target_unit": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "USD per MMBtu"
+      },
+      "time_column": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "recorded_at"
+      }
+    },
+    "gold_extraction": {
+      "correction_detected": false,
+      "intent": "create_forecast",
+      "intent_confidence": 1.0,
+      "unsupported_claims": [],
+      "updates": []
+    },
+    "key": [
+      "main",
+      "v8",
+      "rollout",
+      "v7-20261009-r8-dev/commodities/0032",
+      "t5"
+    ],
+    "message": "I cannot supply a timezone, seasonal cycle lengths, prediction interval coverage or authorized access reference at this stage.",
+    "post_recovery_state": {
+      "business_goal": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "I cannot supply a timezone, seasonal cycle lengths, prediction interval coverage or authorized access reference at this stage."
+      },
+      "file_format": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "xlsx"
+      },
+      "forecast_horizon": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 22.0,
+          "unit": "day"
+        }
+      },
+      "frequency": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 2.0,
+          "unit": "day"
+        }
+      },
+      "intent": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "create_forecast"
+      },
+      "output_granularity": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at."
+      },
+      "problem_statement": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+      },
+      "source_mode": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "catalog"
+      },
+      "source_reference": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "https://revised.example/commodities/32"
+      },
+      "target_column": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "gas_settlement"
+      },
+      "target_description": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+      },
+      "target_unit": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "USD per MMBtu"
+      },
+      "time_column": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "record_at"
+      }
+    },
+    "pre_recovery_state": {
+      "file_format": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "xlsx"
+      },
+      "forecast_horizon": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 22.0,
+          "unit": "day"
+        }
+      },
+      "frequency": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 2.0,
+          "unit": "day"
+        }
+      },
+      "intent": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "create_forecast"
+      },
+      "output_granularity": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at."
+      },
+      "problem_statement": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+      },
+      "source_mode": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "catalog"
+      },
+      "source_reference": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "https://revised.example/commodities/32"
+      },
+      "target_column": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "gas_settlement"
+      },
+      "target_description": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+      },
+      "target_unit": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "USD per MMBtu"
+      },
+      "time_column": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "record_at"
+      }
+    },
+    "prior_discrepant_slots": [
+      "output_granularity",
+      "time_column"
+    ],
+    "provenance": {
+      "events": [
+        {
+          "payload": {
+            "message": "I cannot supply a timezone, seasonal cycle lengths, prediction interval coverage or authorized access reference at this stage.",
+            "turn_number": 5
+          },
+          "type": "user_message"
+        },
+        {
+          "payload": {
+            "message": "I cannot supply a timezone, seasonal cycle lengths, prediction interval coverage or authorized access reference at this stage.",
+            "reason": "completed selected slot while retaining extractor updates",
+            "slot_id": "business_goal",
+            "turn_number": 5
+          },
+          "type": "deterministic_recovery_applied"
+        },
+        {
+          "payload": {
+            "issues": []
+          },
+          "type": "validation_completed"
+        },
+        {
+          "payload": {
+            "message": "I understand that the target is natural-gas front-month settlement price for Pelmar commodities site 2203, using our data catalog, every 2 days, for the next 22 days, with values measured in USD per MMBtu, reported as The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at.. Can I confirm these requirements? Example answer: yes.",
+            "ready": true,
+            "turn_number": 5
+          },
+          "type": "assistant_response"
+        }
+      ],
+      "recovered_slot_ids": [
+        "business_goal"
+      ],
+      "static_question": "I understand that the target is natural-gas front-month settlement price for Pelmar commodities site 2203, using our data catalog, every 2 days, for the next 22 days, with values measured in USD per MMBtu, reported as The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at.. Can I confirm these requirements? Example answer: yes.",
+      "static_question_renderer_failures": [],
+      "trace": [
+        {
+          "payload": {
+            "message": "I cannot supply a timezone, seasonal cycle lengths, prediction interval coverage or authorized access reference at this stage.",
+            "pending_slot": "business_goal",
+            "state_before": {
+              "available_dataset_columns": [],
+              "dialogue_id": "b4e1693b-b07e-4abe-b73d-0f1dba9b3891",
+              "intent": "create_forecast",
+              "provider_conversation_id": null,
+              "slots": {
+                "file_format": {
+                  "evidence_text": "The input container uses xlsx.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "xlsx"
+                },
+                "forecast_horizon": {
+                  "evidence_text": "The requested future coverage is 22 days.",
+                  "source_turn": 3,
+                  "status": "provided",
+                  "value": {
+                    "periods": 22.0,
+                    "unit": "day"
+                  }
+                },
+                "frequency": {
+                  "evidence_text": "Each observed record covers 2 days.",
+                  "source_turn": 4,
+                  "status": "provided",
+                  "value": {
+                    "periods": 2.0,
+                    "unit": "day"
+                  }
+                },
+                "intent": {
+                  "evidence_text": "The analyst request is as follows.  We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203. Target measurements use USD per MMBtu. Each observed record covers 1 day. The requested future coverage is 19 days. Select the source from the data catalog. The supplied source identifier is https://inputs.example/commodities/2203. The input container uses xlsx.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "create_forecast"
+                },
+                "output_granularity": {
+                  "evidence_text": "The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at.",
+                  "source_turn": 2,
+                  "status": "provided",
+                  "value": "The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at."
+                },
+                "problem_statement": {
+                  "evidence_text": "We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+                },
+                "source_mode": {
+                  "evidence_text": "Select the source from the data catalog.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "catalog"
+                },
+                "source_reference": {
+                  "evidence_text": "The supplied source identifier is https://revised.example/commodities/32.",
+                  "source_turn": 4,
+                  "status": "provided",
+                  "value": "https://revised.example/commodities/32"
+                },
+                "target_column": {
+                  "evidence_text": "The response variable is stored in column gas_settlement.",
+                  "source_turn": 2,
+                  "status": "provided",
+                  "value": "gas_settlement"
+                },
+                "target_description": {
+                  "evidence_text": "We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+                },
+                "target_unit": {
+                  "evidence_text": "Target measurements use USD per MMBtu.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "USD per MMBtu"
+                },
+                "time_column": {
+                  "evidence_text": "The input timestamp identifier is recorded_at.",
+                  "source_turn": 2,
+                  "status": "provided",
+                  "value": "record_at"
+                }
+              }
+            },
+            "turn_number": 5
+          },
+          "stage": "turn.user_message"
+        },
+        {
+          "payload": {
+            "correction_detected": false,
+            "intent": "create_forecast",
+            "intent_confidence": 1.0,
+            "unsupported_claims": [],
+            "updates": []
+          },
+          "stage": "state.extraction_received"
+        },
+        {
+          "payload": {
+            "slot_id": "business_goal",
+            "state_after": {
+              "available_dataset_columns": [],
+              "dialogue_id": "b4e1693b-b07e-4abe-b73d-0f1dba9b3891",
+              "intent": "create_forecast",
+              "provider_conversation_id": null,
+              "slots": {
+                "business_goal": {
+                  "evidence_text": "I cannot supply a timezone, seasonal cycle lengths, prediction interval coverage or authorized access reference at this stage.",
+                  "source_turn": 5,
+                  "status": "provided",
+                  "value": "I cannot supply a timezone, seasonal cycle lengths, prediction interval coverage or authorized access reference at this stage."
+                },
+                "file_format": {
+                  "evidence_text": "The input container uses xlsx.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "xlsx"
+                },
+                "forecast_horizon": {
+                  "evidence_text": "The requested future coverage is 22 days.",
+                  "source_turn": 3,
+                  "status": "provided",
+                  "value": {
+                    "periods": 22.0,
+                    "unit": "day"
+                  }
+                },
+                "frequency": {
+                  "evidence_text": "Each observed record covers 2 days.",
+                  "source_turn": 4,
+                  "status": "provided",
+                  "value": {
+                    "periods": 2.0,
+                    "unit": "day"
+                  }
+                },
+                "intent": {
+                  "evidence_text": "The analyst request is as follows.  We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203. Target measurements use USD per MMBtu. Each observed record covers 1 day. The requested future coverage is 19 days. Select the source from the data catalog. The supplied source identifier is https://inputs.example/commodities/2203. The input container uses xlsx.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "create_forecast"
+                },
+                "output_granularity": {
+                  "evidence_text": "The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at.",
+                  "source_turn": 2,
+                  "status": "provided",
+                  "value": "The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at."
+                },
+                "problem_statement": {
+                  "evidence_text": "We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+                },
+                "source_mode": {
+                  "evidence_text": "Select the source from the data catalog.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "catalog"
+                },
+                "source_reference": {
+                  "evidence_text": "The supplied source identifier is https://revised.example/commodities/32.",
+                  "source_turn": 4,
+                  "status": "provided",
+                  "value": "https://revised.example/commodities/32"
+                },
+                "target_column": {
+                  "evidence_text": "The response variable is stored in column gas_settlement.",
+                  "source_turn": 2,
+                  "status": "provided",
+                  "value": "gas_settlement"
+                },
+                "target_description": {
+                  "evidence_text": "We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+                },
+                "target_unit": {
+                  "evidence_text": "Target measurements use USD per MMBtu.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "USD per MMBtu"
+                },
+                "time_column": {
+                  "evidence_text": "The input timestamp identifier is recorded_at.",
+                  "source_turn": 2,
+                  "status": "provided",
+                  "value": "record_at"
+                }
+              }
+            }
+          },
+          "stage": "state.recovery_applied"
+        },
+        {
+          "payload": {
+            "assistant_message": "I understand that the target is natural-gas front-month settlement price for Pelmar commodities site 2203, using our data catalog, every 2 days, for the next 22 days, with values measured in USD per MMBtu, reported as The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at.. Can I confirm these requirements? Example answer: yes.",
+            "dialogue_id": "b4e1693b-b07e-4abe-b73d-0f1dba9b3891",
+            "ready": true,
+            "state_after": {
+              "available_dataset_columns": [],
+              "dialogue_id": "b4e1693b-b07e-4abe-b73d-0f1dba9b3891",
+              "intent": "create_forecast",
+              "provider_conversation_id": null,
+              "slots": {
+                "business_goal": {
+                  "evidence_text": "I cannot supply a timezone, seasonal cycle lengths, prediction interval coverage or authorized access reference at this stage.",
+                  "source_turn": 5,
+                  "status": "provided",
+                  "value": "I cannot supply a timezone, seasonal cycle lengths, prediction interval coverage or authorized access reference at this stage."
+                },
+                "file_format": {
+                  "evidence_text": "The input container uses xlsx.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "xlsx"
+                },
+                "forecast_horizon": {
+                  "evidence_text": "The requested future coverage is 22 days.",
+                  "source_turn": 3,
+                  "status": "provided",
+                  "value": {
+                    "periods": 22.0,
+                    "unit": "day"
+                  }
+                },
+                "frequency": {
+                  "evidence_text": "Each observed record covers 2 days.",
+                  "source_turn": 4,
+                  "status": "provided",
+                  "value": {
+                    "periods": 2.0,
+                    "unit": "day"
+                  }
+                },
+                "intent": {
+                  "evidence_text": "The analyst request is as follows.  We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203. Target measurements use USD per MMBtu. Each observed record covers 1 day. The requested future coverage is 19 days. Select the source from the data catalog. The supplied source identifier is https://inputs.example/commodities/2203. The input container uses xlsx.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "create_forecast"
+                },
+                "output_granularity": {
+                  "evidence_text": "The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at.",
+                  "source_turn": 2,
+                  "status": "provided",
+                  "value": "The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at."
+                },
+                "problem_statement": {
+                  "evidence_text": "We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+                },
+                "source_mode": {
+                  "evidence_text": "Select the source from the data catalog.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "catalog"
+                },
+                "source_reference": {
+                  "evidence_text": "The supplied source identifier is https://revised.example/commodities/32.",
+                  "source_turn": 4,
+                  "status": "provided",
+                  "value": "https://revised.example/commodities/32"
+                },
+                "target_column": {
+                  "evidence_text": "The response variable is stored in column gas_settlement.",
+                  "source_turn": 2,
+                  "status": "provided",
+                  "value": "gas_settlement"
+                },
+                "target_description": {
+                  "evidence_text": "We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+                },
+                "target_unit": {
+                  "evidence_text": "Target measurements use USD per MMBtu.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "USD per MMBtu"
+                },
+                "time_column": {
+                  "evidence_text": "The input timestamp identifier is recorded_at.",
+                  "source_turn": 2,
+                  "status": "provided",
+                  "value": "record_at"
+                }
+              }
+            },
+            "turn_number": 5
+          },
+          "stage": "turn.completed"
+        }
+      ]
+    },
+    "raw_confusion": [
+      0,
+      0,
+      0
+    ],
+    "raw_response": "{\"correction_detected\": false, \"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"unsupported_claims\": [], \"updates\": []}",
+    "raw_response_sha256": "602e668ba32ab5c0afa2dc8f6873c1872e411849b13801f5ecd842a97e7a81a7",
+    "recovery_harmed_slots": [
+      "business_goal"
+    ],
+    "recovery_helped_slots": [],
+    "title": "Unknown abstention does not ensure state preservation"
+  },
+  {
+    "actual_prior": {
+      "assistant_question_context": null,
+      "intent": "create_forecast",
+      "pending_slot": {
+        "reason": "missing required slot",
+        "slot_id": "output_granularity"
+      },
+      "scope": "supplied gold component prior",
+      "slots": {
+        "aggregation_level": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "site"
+        },
+        "aggregation_method": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "last"
+        },
+        "calendar_type": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "calendar"
+        },
+        "data_cutoff": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "2026-09-30T00:00:00+00:00"
+        },
+        "dataset_type": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "hierarchical"
+        },
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "csv"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 17.0,
+            "unit": "month"
+          }
+        },
+        "forecast_start": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "2026-10-01T00:00:00+00:00"
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "month"
+          }
+        },
+        "geography": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            "Fictional Pelmar corporate finance site 2711 region"
+          ]
+        },
+        "hierarchy_columns": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            "region_id",
+            "site_id"
+          ]
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "lead_time": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "month"
+          }
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "net operating cash flow for Pelmar corporate finance site 2711"
+        },
+        "scope_filters": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            {
+              "column": "site_id",
+              "operator": "eq",
+              "value": "Pelmar corporate finance site 2711"
+            }
+          ]
+        },
+        "series_id_columns": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": [
+            "site_id"
+          ]
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "upload"
+        },
+        "source_provider": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "Synthetic Economic Research Laboratory"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "corporate_finance_archive_2711.csv"
+        },
+        "target_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "operating_cash_flow"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "net operating cash flow for Pelmar corporate finance site 2711"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "thousands of USD"
+        },
+        "time_column": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "sample_date"
+        }
+      }
+    },
+    "category_counts": {
+      "ignored_status_entries_not_actionable_errors": 5
+    },
+    "expected_state": {
+      "aggregation_level": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "site"
+      },
+      "aggregation_method": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "last"
+      },
+      "calendar_type": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "calendar"
+      },
+      "data_cutoff": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "2026-09-30T00:00:00+00:00"
+      },
+      "dataset_type": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "hierarchical"
+      },
+      "file_format": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "csv"
+      },
+      "forecast_horizon": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 17.0,
+          "unit": "month"
+        }
+      },
+      "forecast_start": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "2026-10-01T00:00:00+00:00"
+      },
+      "frequency": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 1.0,
+          "unit": "month"
+        }
+      },
+      "geography": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": [
+          "Fictional Pelmar corporate finance site 2711 region"
+        ]
+      },
+      "hierarchy_columns": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": [
+          "region_id",
+          "site_id"
+        ]
+      },
+      "intent": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "create_forecast"
+      },
+      "lead_time": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 1.0,
+          "unit": "month"
+        }
+      },
+      "problem_statement": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "net operating cash flow for Pelmar corporate finance site 2711"
+      },
+      "scope_filters": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": [
+          {
+            "column": "site_id",
+            "operator": "eq",
+            "value": "Pelmar corporate finance site 2711"
+          }
+        ]
+      },
+      "series_id_columns": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": [
+          "site_id"
+        ]
+      },
+      "source_mode": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "upload"
+      },
+      "source_provider": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "Synthetic Economic Research Laboratory"
+      },
+      "source_reference": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "corporate_finance_archive_2711.csv"
+      },
+      "target_column": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "operating_cash_flow"
+      },
+      "target_description": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "net operating cash flow for Pelmar corporate finance site 2711"
+      },
+      "target_unit": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "thousands of USD"
+      },
+      "time_column": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "sample_date"
+      }
+    },
+    "gold_extraction": {
+      "correction_detected": false,
+      "intent": "create_forecast",
+      "intent_confidence": 1.0,
+      "unsupported_claims": [],
+      "updates": []
+    },
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/corporate_finance/0116",
+      "t6"
+    ],
+    "message": "Timezone, seasonal cycle lengths, prediction interval levels and access details still need a decision. Keep them unspecified.",
+    "post_recovery_state": {
+      "aggregation_level": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "site"
+      },
+      "aggregation_method": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "last"
+      },
+      "calendar_type": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "calendar"
+      },
+      "data_cutoff": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "2026-09-30T00:00:00+00:00"
+      },
+      "dataset_type": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "hierarchical"
+      },
+      "file_format": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "csv"
+      },
+      "forecast_horizon": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 17.0,
+          "unit": "month"
+        }
+      },
+      "forecast_start": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "2026-10-01T00:00:00+00:00"
+      },
+      "frequency": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 1.0,
+          "unit": "month"
+        }
+      },
+      "geography": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": [
+          "Fictional Pelmar corporate finance site 2711 region"
+        ]
+      },
+      "hierarchy_columns": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": [
+          "region_id",
+          "site_id"
+        ]
+      },
+      "intent": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "create_forecast"
+      },
+      "lead_time": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 1.0,
+          "unit": "month"
+        }
+      },
+      "problem_statement": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "net operating cash flow for Pelmar corporate finance site 2711"
+      },
+      "scope_filters": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": [
+          {
+            "column": "site_id",
+            "operator": "eq",
+            "value": "Pelmar corporate finance site 2711"
+          }
+        ]
+      },
+      "series_id_columns": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": [
+          "site_id"
+        ]
+      },
+      "source_mode": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "upload"
+      },
+      "source_provider": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "Synthetic Economic Research Laboratory"
+      },
+      "source_reference": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "corporate_finance_archive_2711.csv"
+      },
+      "target_column": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "operating_cash_flow"
+      },
+      "target_description": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "net operating cash flow for Pelmar corporate finance site 2711"
+      },
+      "target_unit": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "thousands of USD"
+      },
+      "time_column": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "sample_date"
+      }
+    },
+    "pre_recovery_state": {
+      "aggregation_level": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "site"
+      },
+      "aggregation_method": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "last"
+      },
+      "calendar_type": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "calendar"
+      },
+      "data_cutoff": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "2026-09-30T00:00:00+00:00"
+      },
+      "dataset_type": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "hierarchical"
+      },
+      "file_format": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "csv"
+      },
+      "forecast_horizon": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 17.0,
+          "unit": "month"
+        }
+      },
+      "forecast_start": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "2026-10-01T00:00:00+00:00"
+      },
+      "frequency": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 1.0,
+          "unit": "month"
+        }
+      },
+      "geography": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": [
+          "Fictional Pelmar corporate finance site 2711 region"
+        ]
+      },
+      "hierarchy_columns": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": [
+          "region_id",
+          "site_id"
+        ]
+      },
+      "intent": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "create_forecast"
+      },
+      "lead_time": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 1.0,
+          "unit": "month"
+        }
+      },
+      "problem_statement": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "net operating cash flow for Pelmar corporate finance site 2711"
+      },
+      "scope_filters": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": [
+          {
+            "column": "site_id",
+            "operator": "eq",
+            "value": "Pelmar corporate finance site 2711"
+          }
+        ]
+      },
+      "series_id_columns": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": [
+          "site_id"
+        ]
+      },
+      "source_mode": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "upload"
+      },
+      "source_provider": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "Synthetic Economic Research Laboratory"
+      },
+      "source_reference": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "corporate_finance_archive_2711.csv"
+      },
+      "target_column": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "operating_cash_flow"
+      },
+      "target_description": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "net operating cash flow for Pelmar corporate finance site 2711"
+      },
+      "target_unit": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "thousands of USD"
+      },
+      "time_column": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "sample_date"
+      }
+    },
+    "prior_discrepant_slots": [],
+    "provenance": {
+      "events": [
+        {
+          "payload": {
+            "message": "Timezone, seasonal cycle lengths, prediction interval levels and access details still need a decision. Keep them unspecified.",
+            "turn_number": 6
+          },
+          "type": "user_message"
+        },
+        {
+          "payload": {
+            "correction_detected": false,
+            "intent": "create_forecast",
+            "intent_confidence": 0.9,
+            "unsupported_claims": [],
+            "updates": [
+              {
+                "candidate_value": "Timezone, seasonal cycle lengths, prediction interval levels and access details still need a decision. Keep them unspecified.",
+                "confidence": 0.9,
+                "evidence_text": "Timezone, seasonal cycle lengths, prediction interval levels and access details still need a decision. Keep them unspecified.",
+                "slot_id": "timezone",
+                "status": "unmentioned"
+              },
+              {
+                "candidate_value": "Timezone, seasonal cycle lengths, prediction interval levels and access details still need a decision. Keep them unspecified.",
+                "confidence": 0.9,
+                "evidence_text": "Timezone, seasonal cycle lengths, prediction interval levels and access details still need a decision. Keep them unspecified.",
+                "slot_id": "seasonal_periods",
+                "status": "unmentioned"
+              },
+              {
+                "candidate_value": "Timezone, seasonal cycle lengths, prediction interval levels and access details still need a decision. Keep them unspecified.",
+                "confidence": 0.9,
+                "evidence_text": "Timezone, seasonal cycle lengths, prediction interval levels and access details still need a decision. Keep them unspecified.",
+                "slot_id": "prediction_interval_levels",
+                "status": "unmentioned"
+              },
+              {
+                "candidate_value": "Timezone, seasonal cycle lengths, prediction interval levels and access details still need a decision. Keep them unspecified.",
+                "confidence": 0.9,
+                "evidence_text": "Timezone, seasonal cycle lengths, prediction interval levels and access details still need a decision. Keep them unspecified.",
+                "slot_id": "authentication_reference",
+                "status": "unmentioned"
+              },
+              {
+                "candidate_value": "output_granularity",
+                "confidence": 0.9,
+                "evidence_text": "missing required slot",
+                "slot_id": "output_granularity",
+                "status": "unmentioned"
+              }
+            ]
+          },
+          "type": "extraction_applied"
+        },
+        {
+          "payload": {
+            "issues": []
+          },
+          "type": "validation_completed"
+        },
+        {
+          "payload": {
+            "message": "How should results be grouped by time and item? Example answer: monthly.",
+            "ready": false,
+            "turn_number": 6
+          },
+          "type": "assistant_response"
+        }
+      ],
+      "recovered_slot_ids": [],
+      "static_question": "How should results be grouped by time and item? Example answer: monthly.",
+      "static_question_renderer_failures": [],
+      "trace": [
+        {
+          "payload": {
+            "message": "Timezone, seasonal cycle lengths, prediction interval levels and access details still need a decision. Keep them unspecified.",
+            "pending_slot": "output_granularity",
+            "state_before": {
+              "available_dataset_columns": [],
+              "dialogue_id": "f0542e1d-6889-45ae-9b50-dd084ad6b552",
+              "intent": "create_forecast",
+              "provider_conversation_id": null,
+              "slots": {
+                "aggregation_level": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "site"
+                },
+                "aggregation_method": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "last"
+                },
+                "calendar_type": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "calendar"
+                },
+                "data_cutoff": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "2026-09-30T00:00:00+00:00"
+                },
+                "dataset_type": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "hierarchical"
+                },
+                "file_format": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "csv"
+                },
+                "forecast_horizon": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": {
+                    "periods": 17.0,
+                    "unit": "month"
+                  }
+                },
+                "forecast_start": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "2026-10-01T00:00:00+00:00"
+                },
+                "frequency": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": {
+                    "periods": 1.0,
+                    "unit": "month"
+                  }
+                },
+                "geography": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": [
+                    "Fictional Pelmar corporate finance site 2711 region"
+                  ]
+                },
+                "hierarchy_columns": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": [
+                    "region_id",
+                    "site_id"
+                  ]
+                },
+                "intent": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "create_forecast"
+                },
+                "lead_time": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": {
+                    "periods": 1.0,
+                    "unit": "month"
+                  }
+                },
+                "problem_statement": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "net operating cash flow for Pelmar corporate finance site 2711"
+                },
+                "scope_filters": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": [
+                    {
+                      "column": "site_id",
+                      "operator": "eq",
+                      "value": "Pelmar corporate finance site 2711"
+                    }
+                  ]
+                },
+                "series_id_columns": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": [
+                    "site_id"
+                  ]
+                },
+                "source_mode": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "upload"
+                },
+                "source_provider": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "Synthetic Economic Research Laboratory"
+                },
+                "source_reference": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "corporate_finance_archive_2711.csv"
+                },
+                "target_column": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "operating_cash_flow"
+                },
+                "target_description": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "net operating cash flow for Pelmar corporate finance site 2711"
+                },
+                "target_unit": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "thousands of USD"
+                },
+                "time_column": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "sample_date"
+                }
+              }
+            },
+            "turn_number": 6
+          },
+          "stage": "turn.user_message"
+        },
+        {
+          "payload": {
+            "correction_detected": false,
+            "intent": "create_forecast",
+            "intent_confidence": 0.9,
+            "unsupported_claims": [],
+            "updates": [
+              {
+                "candidate_value": "Timezone, seasonal cycle lengths, prediction interval levels and access details still need a decision. Keep them unspecified.",
+                "confidence": 0.9,
+                "evidence_text": "Timezone, seasonal cycle lengths, prediction interval levels and access details still need a decision. Keep them unspecified.",
+                "slot_id": "timezone",
+                "status": "unmentioned"
+              },
+              {
+                "candidate_value": "Timezone, seasonal cycle lengths, prediction interval levels and access details still need a decision. Keep them unspecified.",
+                "confidence": 0.9,
+                "evidence_text": "Timezone, seasonal cycle lengths, prediction interval levels and access details still need a decision. Keep them unspecified.",
+                "slot_id": "seasonal_periods",
+                "status": "unmentioned"
+              },
+              {
+                "candidate_value": "Timezone, seasonal cycle lengths, prediction interval levels and access details still need a decision. Keep them unspecified.",
+                "confidence": 0.9,
+                "evidence_text": "Timezone, seasonal cycle lengths, prediction interval levels and access details still need a decision. Keep them unspecified.",
+                "slot_id": "prediction_interval_levels",
+                "status": "unmentioned"
+              },
+              {
+                "candidate_value": "Timezone, seasonal cycle lengths, prediction interval levels and access details still need a decision. Keep them unspecified.",
+                "confidence": 0.9,
+                "evidence_text": "Timezone, seasonal cycle lengths, prediction interval levels and access details still need a decision. Keep them unspecified.",
+                "slot_id": "authentication_reference",
+                "status": "unmentioned"
+              },
+              {
+                "candidate_value": "output_granularity",
+                "confidence": 0.9,
+                "evidence_text": "missing required slot",
+                "slot_id": "output_granularity",
+                "status": "unmentioned"
+              }
+            ]
+          },
+          "stage": "state.extraction_received"
+        },
+        {
+          "payload": {
+            "state_after": {
+              "available_dataset_columns": [],
+              "dialogue_id": "f0542e1d-6889-45ae-9b50-dd084ad6b552",
+              "intent": "create_forecast",
+              "provider_conversation_id": null,
+              "slots": {
+                "aggregation_level": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "site"
+                },
+                "aggregation_method": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "last"
+                },
+                "calendar_type": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "calendar"
+                },
+                "data_cutoff": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "2026-09-30T00:00:00+00:00"
+                },
+                "dataset_type": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "hierarchical"
+                },
+                "file_format": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "csv"
+                },
+                "forecast_horizon": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": {
+                    "periods": 17.0,
+                    "unit": "month"
+                  }
+                },
+                "forecast_start": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "2026-10-01T00:00:00+00:00"
+                },
+                "frequency": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": {
+                    "periods": 1.0,
+                    "unit": "month"
+                  }
+                },
+                "geography": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": [
+                    "Fictional Pelmar corporate finance site 2711 region"
+                  ]
+                },
+                "hierarchy_columns": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": [
+                    "region_id",
+                    "site_id"
+                  ]
+                },
+                "intent": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "create_forecast"
+                },
+                "lead_time": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": {
+                    "periods": 1.0,
+                    "unit": "month"
+                  }
+                },
+                "problem_statement": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "net operating cash flow for Pelmar corporate finance site 2711"
+                },
+                "scope_filters": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": [
+                    {
+                      "column": "site_id",
+                      "operator": "eq",
+                      "value": "Pelmar corporate finance site 2711"
+                    }
+                  ]
+                },
+                "series_id_columns": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": [
+                    "site_id"
+                  ]
+                },
+                "source_mode": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "upload"
+                },
+                "source_provider": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "Synthetic Economic Research Laboratory"
+                },
+                "source_reference": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "corporate_finance_archive_2711.csv"
+                },
+                "target_column": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "operating_cash_flow"
+                },
+                "target_description": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "net operating cash flow for Pelmar corporate finance site 2711"
+                },
+                "target_unit": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "thousands of USD"
+                },
+                "time_column": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "sample_date"
+                }
+              }
+            }
+          },
+          "stage": "state.extraction_applied"
+        },
+        {
+          "payload": {
+            "reason": "missing required slot",
+            "slot_id": "output_granularity",
+            "state_before_question": {
+              "available_dataset_columns": [],
+              "dialogue_id": "f0542e1d-6889-45ae-9b50-dd084ad6b552",
+              "intent": "create_forecast",
+              "provider_conversation_id": null,
+              "slots": {
+                "aggregation_level": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "site"
+                },
+                "aggregation_method": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "last"
+                },
+                "calendar_type": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "calendar"
+                },
+                "data_cutoff": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "2026-09-30T00:00:00+00:00"
+                },
+                "dataset_type": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "hierarchical"
+                },
+                "file_format": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "csv"
+                },
+                "forecast_horizon": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": {
+                    "periods": 17.0,
+                    "unit": "month"
+                  }
+                },
+                "forecast_start": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "2026-10-01T00:00:00+00:00"
+                },
+                "frequency": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": {
+                    "periods": 1.0,
+                    "unit": "month"
+                  }
+                },
+                "geography": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": [
+                    "Fictional Pelmar corporate finance site 2711 region"
+                  ]
+                },
+                "hierarchy_columns": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": [
+                    "region_id",
+                    "site_id"
+                  ]
+                },
+                "intent": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "create_forecast"
+                },
+                "lead_time": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": {
+                    "periods": 1.0,
+                    "unit": "month"
+                  }
+                },
+                "problem_statement": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "net operating cash flow for Pelmar corporate finance site 2711"
+                },
+                "scope_filters": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": [
+                    {
+                      "column": "site_id",
+                      "operator": "eq",
+                      "value": "Pelmar corporate finance site 2711"
+                    }
+                  ]
+                },
+                "series_id_columns": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": [
+                    "site_id"
+                  ]
+                },
+                "source_mode": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "upload"
+                },
+                "source_provider": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "Synthetic Economic Research Laboratory"
+                },
+                "source_reference": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "corporate_finance_archive_2711.csv"
+                },
+                "target_column": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "operating_cash_flow"
+                },
+                "target_description": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "net operating cash flow for Pelmar corporate finance site 2711"
+                },
+                "target_unit": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "thousands of USD"
+                },
+                "time_column": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "sample_date"
+                }
+              }
+            }
+          },
+          "stage": "state.next_slot"
+        },
+        {
+          "payload": {
+            "question": "How should results be grouped by time and item? Example answer: monthly.",
+            "slot_id": "output_granularity"
+          },
+          "stage": "question.accepted"
+        },
+        {
+          "payload": {
+            "assistant_message": "How should results be grouped by time and item? Example answer: monthly.",
+            "dialogue_id": "f0542e1d-6889-45ae-9b50-dd084ad6b552",
+            "ready": false,
+            "state_after": {
+              "available_dataset_columns": [],
+              "dialogue_id": "f0542e1d-6889-45ae-9b50-dd084ad6b552",
+              "intent": "create_forecast",
+              "provider_conversation_id": null,
+              "slots": {
+                "aggregation_level": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "site"
+                },
+                "aggregation_method": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "last"
+                },
+                "calendar_type": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "calendar"
+                },
+                "data_cutoff": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "2026-09-30T00:00:00+00:00"
+                },
+                "dataset_type": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "hierarchical"
+                },
+                "file_format": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "csv"
+                },
+                "forecast_horizon": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": {
+                    "periods": 17.0,
+                    "unit": "month"
+                  }
+                },
+                "forecast_start": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "2026-10-01T00:00:00+00:00"
+                },
+                "frequency": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": {
+                    "periods": 1.0,
+                    "unit": "month"
+                  }
+                },
+                "geography": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": [
+                    "Fictional Pelmar corporate finance site 2711 region"
+                  ]
+                },
+                "hierarchy_columns": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": [
+                    "region_id",
+                    "site_id"
+                  ]
+                },
+                "intent": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "create_forecast"
+                },
+                "lead_time": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": {
+                    "periods": 1.0,
+                    "unit": "month"
+                  }
+                },
+                "problem_statement": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "net operating cash flow for Pelmar corporate finance site 2711"
+                },
+                "scope_filters": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": [
+                    {
+                      "column": "site_id",
+                      "operator": "eq",
+                      "value": "Pelmar corporate finance site 2711"
+                    }
+                  ]
+                },
+                "series_id_columns": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": [
+                    "site_id"
+                  ]
+                },
+                "source_mode": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "upload"
+                },
+                "source_provider": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "Synthetic Economic Research Laboratory"
+                },
+                "source_reference": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "corporate_finance_archive_2711.csv"
+                },
+                "target_column": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "operating_cash_flow"
+                },
+                "target_description": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "net operating cash flow for Pelmar corporate finance site 2711"
+                },
+                "target_unit": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "thousands of USD"
+                },
+                "time_column": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "sample_date"
+                }
+              }
+            },
+            "turn_number": 6
+          },
+          "stage": "turn.completed"
+        }
+      ]
+    },
+    "raw_confusion": [
+      0,
+      0,
+      0
+    ],
+    "raw_response": "{\"correction_detected\":false,\"intent\":\"create_forecast\",\"intent_confidence\":0.9,\"unsupported_claims\":[],\"updates\":[{\"candidate_value\":\"Timezone, seasonal cycle lengths, prediction interval levels and access details still need a decision. Keep them unspecified.\",\"confidence\":0.9,\"evidence_text\":\"Timezone, seasonal cycle lengths, prediction interval levels and access details still need a decision. Keep them unspecified.\",\"slot_id\":\"timezone\",\"status\":\"unmentioned\"},{\"candidate_value\":\"Timezone, seasonal cycle lengths, prediction interval levels and access details still need a decision. Keep them unspecified.\",\"confidence\":0.9,\"evidence_text\":\"Timezone, seasonal cycle lengths, prediction interval levels and access details still need a decision. Keep them unspecified.\",\"slot_id\":\"seasonal_periods\",\"status\":\"unmentioned\"},{\"candidate_value\":\"Timezone, seasonal cycle lengths, prediction interval levels and access details still need a decision. Keep them unspecified.\",\"confidence\":0.9,\"evidence_text\":\"Timezone, seasonal cycle lengths, prediction interval levels and access details still need a decision. Keep them unspecified.\",\"slot_id\":\"prediction_interval_levels\",\"status\":\"unmentioned\"},{\"candidate_value\":\"Timezone, seasonal cycle lengths, prediction interval levels and access details still need a decision. Keep them unspecified.\",\"confidence\":0.9,\"evidence_text\":\"Timezone, seasonal cycle lengths, prediction interval levels and access details still need a decision. Keep them unspecified.\",\"slot_id\":\"authentication_reference\",\"status\":\"unmentioned\"},{\"candidate_value\":\"output_granularity\",\"confidence\":0.9,\"evidence_text\":\"missing required slot\",\"slot_id\":\"output_granularity\",\"status\":\"unmentioned\"}]}",
+    "raw_response_sha256": "2b4f2ec6fa64ee9a777a5c933c7ea6cea1fb2fd2e5d72aa073b2c92cfd5607f8",
+    "recovery_harmed_slots": [],
+    "recovery_helped_slots": [],
+    "title": "Ignored unknown markers are distinct from actionable facts"
+  },
+  {
+    "actual_prior": {
+      "assistant_question_context": null,
+      "intent": "ambiguous",
+      "pending_slot": {
+        "reason": "missing required slot",
+        "slot_id": "source_mode"
+      },
+      "scope": "supplied gold component prior",
+      "slots": {}
+    },
+    "category_counts": {
+      "extra_current_actionable_slot": 1,
+      "final_turn_state_slot_discrepancy": 3,
+      "missing_current_slot": 1,
+      "post_reducer_pipeline_changed_slots": 1,
+      "raw_to_normalized_candidate_representation_change": 2,
+      "same_slot_exact_value_discrepancy": 1,
+      "trace_reported_recovery_changed_slots": 1,
+      "trace_reported_recovery_slots": 1
+    },
+    "expected_state": {
+      "file_format": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "xlsx"
+      },
+      "forecast_horizon": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 19.0,
+          "unit": "day"
+        }
+      },
+      "frequency": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 1.0,
+          "unit": "day"
+        }
+      },
+      "intent": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "create_forecast"
+      },
+      "problem_statement": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+      },
+      "source_mode": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "catalog"
+      },
+      "source_reference": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "https://inputs.example/commodities/2203"
+      },
+      "target_description": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+      },
+      "target_unit": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "USD per MMBtu"
+      }
+    },
+    "gold_extraction": {
+      "correction_detected": false,
+      "intent": "create_forecast",
+      "intent_confidence": 1.0,
+      "unsupported_claims": [],
+      "updates": [
+        {
+          "candidate_value": "\"natural-gas front-month settlement price for Pelmar commodities site 2203\"",
+          "confidence": 1.0,
+          "evidence_text": "We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+          "slot_id": "target_description",
+          "status": "provided"
+        },
+        {
+          "candidate_value": "\"natural-gas front-month settlement price for Pelmar commodities site 2203\"",
+          "confidence": 1.0,
+          "evidence_text": "We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+          "slot_id": "problem_statement",
+          "status": "provided"
+        },
+        {
+          "candidate_value": "\"USD per MMBtu\"",
+          "confidence": 1.0,
+          "evidence_text": "Target measurements use USD per MMBtu.",
+          "slot_id": "target_unit",
+          "status": "provided"
+        },
+        {
+          "candidate_value": "{\"periods\": 1, \"unit\": \"day\"}",
+          "confidence": 1.0,
+          "evidence_text": "Each observed record covers 1 day.",
+          "slot_id": "frequency",
+          "status": "provided"
+        },
+        {
+          "candidate_value": "{\"periods\": 19, \"unit\": \"day\"}",
+          "confidence": 1.0,
+          "evidence_text": "The requested future coverage is 19 days.",
+          "slot_id": "forecast_horizon",
+          "status": "provided"
+        },
+        {
+          "candidate_value": "\"catalog\"",
+          "confidence": 1.0,
+          "evidence_text": "Select the source from the data catalog.",
+          "slot_id": "source_mode",
+          "status": "provided"
+        },
+        {
+          "candidate_value": "\"https://inputs.example/commodities/2203\"",
+          "confidence": 1.0,
+          "evidence_text": "The supplied source identifier is https://inputs.example/commodities/2203.",
+          "slot_id": "source_reference",
+          "status": "provided"
+        },
+        {
+          "candidate_value": "\"xlsx\"",
+          "confidence": 1.0,
+          "evidence_text": "The input container uses xlsx.",
+          "slot_id": "file_format",
+          "status": "provided"
+        }
+      ]
+    },
+    "key": [
+      "main",
+      "openai",
+      "component",
+      "v7-20261009-r8-dev/commodities/0032",
+      "t1"
+    ],
+    "message": "The analyst request is as follows.  We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203. Target measurements use USD per MMBtu. Each observed record covers 1 day. The requested future coverage is 19 days. Select the source from the data catalog. The supplied source identifier is https://inputs.example/commodities/2203. The input container uses xlsx.",
+    "post_recovery_state": {
+      "dataset_type": {
+        "confirmed_by_user": false,
+        "status": "inferred",
+        "value": "single_series"
+      },
+      "file_format": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "xlsx"
+      },
+      "forecast_horizon": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 19.0,
+          "unit": "day"
+        }
+      },
+      "frequency": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 1.0,
+          "unit": "day"
+        }
+      },
+      "intent": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "create_forecast"
+      },
+      "problem_statement": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+      },
+      "source_mode": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "upload"
+      },
+      "source_reference": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "https://inputs.example/commodities/2203"
+      },
+      "target_description": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "front-month settlement price"
+      },
+      "target_unit": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "USD per MMBtu"
+      }
+    },
+    "pre_recovery_state": {
+      "dataset_type": {
+        "confirmed_by_user": false,
+        "status": "inferred",
+        "value": "single_series"
+      },
+      "file_format": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "xlsx"
+      },
+      "forecast_horizon": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 19.0,
+          "unit": "day"
+        }
+      },
+      "frequency": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 1.0,
+          "unit": "day"
+        }
+      },
+      "intent": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "create_forecast"
+      },
+      "problem_statement": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+      },
+      "source_reference": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "https://inputs.example/commodities/2203"
+      },
+      "target_description": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "front-month settlement price"
+      },
+      "target_unit": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "USD per MMBtu"
+      }
+    },
+    "prior_discrepant_slots": [],
+    "provenance": {
+      "events": [
+        {
+          "payload": {
+            "message": "The analyst request is as follows.  We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203. Target measurements use USD per MMBtu. Each observed record covers 1 day. The requested future coverage is 19 days. Select the source from the data catalog. The supplied source identifier is https://inputs.example/commodities/2203. The input container uses xlsx.",
+            "turn_number": 1
+          },
+          "type": "user_message"
+        },
+        {
+          "payload": {
+            "message": "The analyst request is as follows.  We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203. Target measurements use USD per MMBtu. Each observed record covers 1 day. The requested future coverage is 19 days. Select the source from the data catalog. The supplied source identifier is https://inputs.example/commodities/2203. The input container uses xlsx.",
+            "reason": "completed selected slot while retaining extractor updates",
+            "slot_id": "source_mode",
+            "turn_number": 1
+          },
+          "type": "deterministic_recovery_applied"
+        },
+        {
+          "payload": {
+            "issues": []
+          },
+          "type": "validation_completed"
+        },
+        {
+          "payload": {
+            "message": "Which column contains the value you want to predict? Example answer: btc_usd_close.",
+            "ready": false,
+            "turn_number": 1
+          },
+          "type": "assistant_response"
+        }
+      ],
+      "recovered_slot_ids": [
+        "source_mode"
+      ],
+      "static_question": "Which column contains the value you want to predict? Example answer: btc_usd_close.",
+      "static_question_renderer_failures": [],
+      "trace": [
+        {
+          "payload": {
+            "message": "The analyst request is as follows.  We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203. Target measurements use USD per MMBtu. Each observed record covers 1 day. The requested future coverage is 19 days. Select the source from the data catalog. The supplied source identifier is https://inputs.example/commodities/2203. The input container uses xlsx.",
+            "pending_slot": "source_mode",
+            "state_before": {
+              "available_dataset_columns": [],
+              "dialogue_id": "6d45928d-d57e-4a96-9776-ad3af636f8ef",
+              "intent": "ambiguous",
+              "provider_conversation_id": null,
+              "slots": {}
+            },
+            "turn_number": 1
+          },
+          "stage": "turn.user_message"
+        },
+        {
+          "payload": {
+            "correction_detected": false,
+            "intent": "create_forecast",
+            "intent_confidence": 0.9,
+            "unsupported_claims": [],
+            "updates": [
+              {
+                "candidate_value": "https://inputs.example/commodities/2203",
+                "confidence": 0.9,
+                "evidence_text": "The supplied source identifier is https://inputs.example/commodities/2203.",
+                "slot_id": "source_reference",
+                "status": "provided"
+              },
+              {
+                "candidate_value": "xlsx",
+                "confidence": 0.95,
+                "evidence_text": "The input container uses xlsx.",
+                "slot_id": "file_format",
+                "status": "provided"
+              },
+              {
+                "candidate_value": {
+                  "periods": 19,
+                  "unit": "day"
+                },
+                "confidence": 0.95,
+                "evidence_text": "The requested future coverage is 19 days.",
+                "slot_id": "forecast_horizon",
+                "status": "provided"
+              },
+              {
+                "candidate_value": {
+                  "periods": 1,
+                  "unit": "day"
+                },
+                "confidence": 0.95,
+                "evidence_text": "Each observed record covers 1 day.",
+                "slot_id": "frequency",
+                "status": "provided"
+              },
+              {
+                "candidate_value": "natural-gas front-month settlement price for Pelmar commodities site 2203",
+                "confidence": 0.95,
+                "evidence_text": "We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+                "slot_id": "problem_statement",
+                "status": "provided"
+              },
+              {
+                "candidate_value": "USD per MMBtu",
+                "confidence": 0.95,
+                "evidence_text": "Target measurements use USD per MMBtu.",
+                "slot_id": "target_unit",
+                "status": "provided"
+              },
+              {
+                "candidate_value": "front-month settlement price",
+                "confidence": 0.9,
+                "evidence_text": "We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+                "slot_id": "target_description",
+                "status": "provided"
+              },
+              {
+                "candidate_value": "single_series",
+                "confidence": 0.7,
+                "evidence_text": "We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+                "slot_id": "dataset_type",
+                "status": "inferred"
+              },
+              {
+                "candidate_value": "create_forecast",
+                "confidence": 0.9,
+                "evidence_text": "We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+                "slot_id": "intent",
+                "status": "provided"
+              }
+            ]
+          },
+          "stage": "state.extraction_received"
+        },
+        {
+          "payload": {
+            "slot_id": "source_mode",
+            "state_after": {
+              "available_dataset_columns": [],
+              "dialogue_id": "6d45928d-d57e-4a96-9776-ad3af636f8ef",
+              "intent": "create_forecast",
+              "provider_conversation_id": null,
+              "slots": {
+                "dataset_type": {
+                  "evidence_text": "We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+                  "source_turn": 1,
+                  "status": "inferred",
+                  "value": "single_series"
+                },
+                "file_format": {
+                  "evidence_text": "The input container uses xlsx.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "xlsx"
+                },
+                "forecast_horizon": {
+                  "evidence_text": "The requested future coverage is 19 days.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": {
+                    "periods": 19.0,
+                    "unit": "day"
+                  }
+                },
+                "frequency": {
+                  "evidence_text": "Each observed record covers 1 day.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": {
+                    "periods": 1.0,
+                    "unit": "day"
+                  }
+                },
+                "intent": {
+                  "evidence_text": "We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "create_forecast"
+                },
+                "problem_statement": {
+                  "evidence_text": "We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+                },
+                "source_mode": {
+                  "evidence_text": "The analyst request is as follows.  We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203. Target measurements use USD per MMBtu. Each observed record covers 1 day. The requested future coverage is 19 days. Select the source from the data catalog. The supplied source identifier is https://inputs.example/commodities/2203. The input container uses xlsx.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "upload"
+                },
+                "source_reference": {
+                  "evidence_text": "The supplied source identifier is https://inputs.example/commodities/2203.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "https://inputs.example/commodities/2203"
+                },
+                "target_description": {
+                  "evidence_text": "We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "front-month settlement price"
+                },
+                "target_unit": {
+                  "evidence_text": "Target measurements use USD per MMBtu.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "USD per MMBtu"
+                }
+              }
+            }
+          },
+          "stage": "state.recovery_applied"
+        },
+        {
+          "payload": {
+            "reason": "missing required slot",
+            "slot_id": "target_column",
+            "state_before_question": {
+              "available_dataset_columns": [],
+              "dialogue_id": "6d45928d-d57e-4a96-9776-ad3af636f8ef",
+              "intent": "create_forecast",
+              "provider_conversation_id": null,
+              "slots": {
+                "dataset_type": {
+                  "evidence_text": "We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+                  "source_turn": 1,
+                  "status": "inferred",
+                  "value": "single_series"
+                },
+                "file_format": {
+                  "evidence_text": "The input container uses xlsx.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "xlsx"
+                },
+                "forecast_horizon": {
+                  "evidence_text": "The requested future coverage is 19 days.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": {
+                    "periods": 19.0,
+                    "unit": "day"
+                  }
+                },
+                "frequency": {
+                  "evidence_text": "Each observed record covers 1 day.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": {
+                    "periods": 1.0,
+                    "unit": "day"
+                  }
+                },
+                "intent": {
+                  "evidence_text": "We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "create_forecast"
+                },
+                "problem_statement": {
+                  "evidence_text": "We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+                },
+                "source_mode": {
+                  "evidence_text": "The analyst request is as follows.  We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203. Target measurements use USD per MMBtu. Each observed record covers 1 day. The requested future coverage is 19 days. Select the source from the data catalog. The supplied source identifier is https://inputs.example/commodities/2203. The input container uses xlsx.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "upload"
+                },
+                "source_reference": {
+                  "evidence_text": "The supplied source identifier is https://inputs.example/commodities/2203.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "https://inputs.example/commodities/2203"
+                },
+                "target_description": {
+                  "evidence_text": "We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "front-month settlement price"
+                },
+                "target_unit": {
+                  "evidence_text": "Target measurements use USD per MMBtu.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "USD per MMBtu"
+                }
+              }
+            }
+          },
+          "stage": "state.next_slot"
+        },
+        {
+          "payload": {
+            "question": "Which column contains the value you want to predict? Example answer: btc_usd_close.",
+            "slot_id": "target_column"
+          },
+          "stage": "question.accepted"
+        },
+        {
+          "payload": {
+            "assistant_message": "Which column contains the value you want to predict? Example answer: btc_usd_close.",
+            "dialogue_id": "6d45928d-d57e-4a96-9776-ad3af636f8ef",
+            "ready": false,
+            "state_after": {
+              "available_dataset_columns": [],
+              "dialogue_id": "6d45928d-d57e-4a96-9776-ad3af636f8ef",
+              "intent": "create_forecast",
+              "provider_conversation_id": null,
+              "slots": {
+                "dataset_type": {
+                  "evidence_text": "We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+                  "source_turn": 1,
+                  "status": "inferred",
+                  "value": "single_series"
+                },
+                "file_format": {
+                  "evidence_text": "The input container uses xlsx.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "xlsx"
+                },
+                "forecast_horizon": {
+                  "evidence_text": "The requested future coverage is 19 days.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": {
+                    "periods": 19.0,
+                    "unit": "day"
+                  }
+                },
+                "frequency": {
+                  "evidence_text": "Each observed record covers 1 day.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": {
+                    "periods": 1.0,
+                    "unit": "day"
+                  }
+                },
+                "intent": {
+                  "evidence_text": "We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "create_forecast"
+                },
+                "problem_statement": {
+                  "evidence_text": "We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+                },
+                "source_mode": {
+                  "evidence_text": "The analyst request is as follows.  We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203. Target measurements use USD per MMBtu. Each observed record covers 1 day. The requested future coverage is 19 days. Select the source from the data catalog. The supplied source identifier is https://inputs.example/commodities/2203. The input container uses xlsx.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "upload"
+                },
+                "source_reference": {
+                  "evidence_text": "The supplied source identifier is https://inputs.example/commodities/2203.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "https://inputs.example/commodities/2203"
+                },
+                "target_description": {
+                  "evidence_text": "We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "front-month settlement price"
+                },
+                "target_unit": {
+                  "evidence_text": "Target measurements use USD per MMBtu.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "USD per MMBtu"
+                }
+              }
+            },
+            "turn_number": 1
+          },
+          "stage": "turn.completed"
+        }
+      ]
+    },
+    "raw_confusion": [
+      6,
+      2,
+      2
+    ],
+    "raw_response": "{\"correction_detected\":false,\"intent\":\"create_forecast\",\"intent_confidence\":0.9,\"unsupported_claims\":[],\"updates\":[{\"candidate_value\":\"\\\"https://inputs.example/commodities/2203\\\"\",\"confidence\":0.9,\"evidence_text\":\"The supplied source identifier is https://inputs.example/commodities/2203.\",\"slot_id\":\"source_reference\",\"status\":\"provided\"},{\"candidate_value\":\"\\\"xlsx\\\"\",\"confidence\":0.95,\"evidence_text\":\"The input container uses xlsx.\",\"slot_id\":\"file_format\",\"status\":\"provided\"},{\"candidate_value\":\"{\\\"periods\\\":19,\\\"unit\\\":\\\"day\\\"}\",\"confidence\":0.95,\"evidence_text\":\"The requested future coverage is 19 days.\",\"slot_id\":\"forecast_horizon\",\"status\":\"provided\"},{\"candidate_value\":\"{\\\"periods\\\":1,\\\"unit\\\":\\\"day\\\"}\",\"confidence\":0.95,\"evidence_text\":\"Each observed record covers 1 day.\",\"slot_id\":\"frequency\",\"status\":\"provided\"},{\"candidate_value\":\"\\\"natural-gas front-month settlement price for Pelmar commodities site 2203\\\"\",\"confidence\":0.95,\"evidence_text\":\"We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.\",\"slot_id\":\"problem_statement\",\"status\":\"provided\"},{\"candidate_value\":\"\\\"USD per MMBtu\\\"\",\"confidence\":0.95,\"evidence_text\":\"Target measurements use USD per MMBtu.\",\"slot_id\":\"target_unit\",\"status\":\"provided\"},{\"candidate_value\":\"\\\"front-month settlement price\\\"\",\"confidence\":0.9,\"evidence_text\":\"We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.\",\"slot_id\":\"target_description\",\"status\":\"provided\"},{\"candidate_value\":\"\\\"single_series\\\"\",\"confidence\":0.7,\"evidence_text\":\"We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.\",\"slot_id\":\"dataset_type\",\"status\":\"inferred\"},{\"candidate_value\":\"\\\"create_forecast\\\"\",\"confidence\":0.9,\"evidence_text\":\"We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.\",\"slot_id\":\"intent\",\"status\":\"provided\"}]}",
+    "raw_response_sha256": "0f78d8db4d3f55022e0d2b6c708782cf6063c7cad14cbc821b700fb2fc508e52",
+    "recovery_harmed_slots": [],
+    "recovery_helped_slots": [],
+    "title": "Exact extraction discrepancy requiring human semantic review"
+  },
+  {
+    "actual_prior": {
+      "assistant_question_context": null,
+      "intent": "create_forecast",
+      "pending_slot": {
+        "reason": "missing required slot",
+        "slot_id": "output_granularity"
+      },
+      "scope": "actual accepted rollout prior after declared intervention",
+      "slots": {
+        "file_format": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "xlsx"
+        },
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 19.0,
+            "unit": "day"
+          }
+        },
+        "frequency": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 1.0,
+            "unit": "day"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "catalog"
+        },
+        "source_reference": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "https://inputs.example/commodities/2203"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "natural-gas front-month settlement price"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "USD per MMBtu"
+        }
+      }
+    },
+    "category_counts": {
+      "exact_raw_extraction_with_recovery_harm": 1,
+      "final_turn_state_slot_discrepancy": 2,
+      "inherited_rollout_prior_slot_discrepancy": 1,
+      "post_reducer_pipeline_changed_slots": 1,
+      "recovery_introduced_wrong_slot_state": 1,
+      "trace_reported_recovery_changed_slots": 1,
+      "trace_reported_recovery_slots": 1
+    },
+    "expected_state": {
+      "file_format": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "xlsx"
+      },
+      "forecast_horizon": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 19.0,
+          "unit": "day"
+        }
+      },
+      "frequency": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 1.0,
+          "unit": "day"
+        }
+      },
+      "intent": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "create_forecast"
+      },
+      "problem_statement": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+      },
+      "source_mode": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "catalog"
+      },
+      "source_reference": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "https://inputs.example/commodities/2203"
+      },
+      "target_column": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "gas_settlement"
+      },
+      "target_description": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+      },
+      "target_unit": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "USD per MMBtu"
+      },
+      "time_column": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "recorded_at"
+      }
+    },
+    "gold_extraction": {
+      "correction_detected": false,
+      "intent": "create_forecast",
+      "intent_confidence": 1.0,
+      "unsupported_claims": [],
+      "updates": [
+        {
+          "candidate_value": "\"gas_settlement\"",
+          "confidence": 1.0,
+          "evidence_text": "The response variable is stored in column gas_settlement.",
+          "slot_id": "target_column",
+          "status": "provided"
+        },
+        {
+          "candidate_value": "\"recorded_at\"",
+          "confidence": 1.0,
+          "evidence_text": "The input timestamp identifier is recorded_at.",
+          "slot_id": "time_column",
+          "status": "provided"
+        }
+      ]
+    },
+    "key": [
+      "main",
+      "openai",
+      "rollout",
+      "v7-20261009-r8-dev/commodities/0032",
+      "t2"
+    ],
+    "message": "The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at.",
+    "post_recovery_state": {
+      "file_format": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "xlsx"
+      },
+      "forecast_horizon": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 19.0,
+          "unit": "day"
+        }
+      },
+      "frequency": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 1.0,
+          "unit": "day"
+        }
+      },
+      "intent": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "create_forecast"
+      },
+      "output_granularity": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at."
+      },
+      "problem_statement": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+      },
+      "source_mode": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "catalog"
+      },
+      "source_reference": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "https://inputs.example/commodities/2203"
+      },
+      "target_column": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "gas_settlement"
+      },
+      "target_description": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "natural-gas front-month settlement price"
+      },
+      "target_unit": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "USD per MMBtu"
+      },
+      "time_column": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "recorded_at"
+      }
+    },
+    "pre_recovery_state": {
+      "file_format": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "xlsx"
+      },
+      "forecast_horizon": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 19.0,
+          "unit": "day"
+        }
+      },
+      "frequency": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 1.0,
+          "unit": "day"
+        }
+      },
+      "intent": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "create_forecast"
+      },
+      "problem_statement": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+      },
+      "source_mode": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "catalog"
+      },
+      "source_reference": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "https://inputs.example/commodities/2203"
+      },
+      "target_column": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "gas_settlement"
+      },
+      "target_description": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "natural-gas front-month settlement price"
+      },
+      "target_unit": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "USD per MMBtu"
+      },
+      "time_column": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "recorded_at"
+      }
+    },
+    "prior_discrepant_slots": [
+      "target_description"
+    ],
+    "provenance": {
+      "events": [
+        {
+          "payload": {
+            "message": "The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at.",
+            "turn_number": 2
+          },
+          "type": "user_message"
+        },
+        {
+          "payload": {
+            "message": "The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at.",
+            "reason": "completed selected slot while retaining extractor updates",
+            "slot_id": "output_granularity",
+            "turn_number": 2
+          },
+          "type": "deterministic_recovery_applied"
+        },
+        {
+          "payload": {
+            "issues": []
+          },
+          "type": "validation_completed"
+        },
+        {
+          "payload": {
+            "message": "I understand that the target is natural-gas front-month settlement price, using our data catalog, every 1 day, for the next 19 days, with values measured in USD per MMBtu, reported as The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at.. Can I confirm these requirements? Example answer: yes.",
+            "ready": true,
+            "turn_number": 2
+          },
+          "type": "assistant_response"
+        }
+      ],
+      "recovered_slot_ids": [
+        "output_granularity"
+      ],
+      "static_question": "I understand that the target is natural-gas front-month settlement price, using our data catalog, every 1 day, for the next 19 days, with values measured in USD per MMBtu, reported as The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at.. Can I confirm these requirements? Example answer: yes.",
+      "static_question_renderer_failures": [],
+      "trace": [
+        {
+          "payload": {
+            "message": "The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at.",
+            "pending_slot": "output_granularity",
+            "state_before": {
+              "available_dataset_columns": [],
+              "dialogue_id": "706e61ea-98f2-4c38-95f2-4a4da59a0075",
+              "intent": "create_forecast",
+              "provider_conversation_id": null,
+              "slots": {
+                "file_format": {
+                  "evidence_text": "The input container uses xlsx.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "xlsx"
+                },
+                "forecast_horizon": {
+                  "evidence_text": "The requested future coverage is 19 days.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": {
+                    "periods": 19.0,
+                    "unit": "day"
+                  }
+                },
+                "frequency": {
+                  "evidence_text": "Each observed record covers 1 day.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": {
+                    "periods": 1.0,
+                    "unit": "day"
+                  }
+                },
+                "intent": {
+                  "evidence_text": "The analyst request is as follows.  We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "create_forecast"
+                },
+                "problem_statement": {
+                  "evidence_text": "We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+                },
+                "source_mode": {
+                  "evidence_text": "Select the source from the data catalog.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "catalog"
+                },
+                "source_reference": {
+                  "evidence_text": "The supplied source identifier is https://inputs.example/commodities/2203.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "https://inputs.example/commodities/2203"
+                },
+                "target_description": {
+                  "evidence_text": "We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "natural-gas front-month settlement price"
+                },
+                "target_unit": {
+                  "evidence_text": "Target measurements use USD per MMBtu.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "USD per MMBtu"
+                }
+              }
+            },
+            "turn_number": 2
+          },
+          "stage": "turn.user_message"
+        },
+        {
+          "payload": {
+            "correction_detected": false,
+            "intent": "create_forecast",
+            "intent_confidence": 0.9,
+            "unsupported_claims": [],
+            "updates": [
+              {
+                "candidate_value": "gas_settlement",
+                "confidence": 0.9,
+                "evidence_text": "The response variable is stored in column gas_settlement.",
+                "slot_id": "target_column",
+                "status": "provided"
+              },
+              {
+                "candidate_value": "recorded_at",
+                "confidence": 0.9,
+                "evidence_text": "The input timestamp identifier is recorded_at.",
+                "slot_id": "time_column",
+                "status": "provided"
+              }
+            ]
+          },
+          "stage": "state.extraction_received"
+        },
+        {
+          "payload": {
+            "slot_id": "output_granularity",
+            "state_after": {
+              "available_dataset_columns": [],
+              "dialogue_id": "706e61ea-98f2-4c38-95f2-4a4da59a0075",
+              "intent": "create_forecast",
+              "provider_conversation_id": null,
+              "slots": {
+                "file_format": {
+                  "evidence_text": "The input container uses xlsx.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "xlsx"
+                },
+                "forecast_horizon": {
+                  "evidence_text": "The requested future coverage is 19 days.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": {
+                    "periods": 19.0,
+                    "unit": "day"
+                  }
+                },
+                "frequency": {
+                  "evidence_text": "Each observed record covers 1 day.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": {
+                    "periods": 1.0,
+                    "unit": "day"
+                  }
+                },
+                "intent": {
+                  "evidence_text": "The analyst request is as follows.  We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "create_forecast"
+                },
+                "output_granularity": {
+                  "evidence_text": "The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at.",
+                  "source_turn": 2,
+                  "status": "provided",
+                  "value": "The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at."
+                },
+                "problem_statement": {
+                  "evidence_text": "We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+                },
+                "source_mode": {
+                  "evidence_text": "Select the source from the data catalog.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "catalog"
+                },
+                "source_reference": {
+                  "evidence_text": "The supplied source identifier is https://inputs.example/commodities/2203.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "https://inputs.example/commodities/2203"
+                },
+                "target_column": {
+                  "evidence_text": "The response variable is stored in column gas_settlement.",
+                  "source_turn": 2,
+                  "status": "provided",
+                  "value": "gas_settlement"
+                },
+                "target_description": {
+                  "evidence_text": "We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "natural-gas front-month settlement price"
+                },
+                "target_unit": {
+                  "evidence_text": "Target measurements use USD per MMBtu.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "USD per MMBtu"
+                },
+                "time_column": {
+                  "evidence_text": "The input timestamp identifier is recorded_at.",
+                  "source_turn": 2,
+                  "status": "provided",
+                  "value": "recorded_at"
+                }
+              }
+            }
+          },
+          "stage": "state.recovery_applied"
+        },
+        {
+          "payload": {
+            "assistant_message": "I understand that the target is natural-gas front-month settlement price, using our data catalog, every 1 day, for the next 19 days, with values measured in USD per MMBtu, reported as The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at.. Can I confirm these requirements? Example answer: yes.",
+            "dialogue_id": "706e61ea-98f2-4c38-95f2-4a4da59a0075",
+            "ready": true,
+            "state_after": {
+              "available_dataset_columns": [],
+              "dialogue_id": "706e61ea-98f2-4c38-95f2-4a4da59a0075",
+              "intent": "create_forecast",
+              "provider_conversation_id": null,
+              "slots": {
+                "file_format": {
+                  "evidence_text": "The input container uses xlsx.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "xlsx"
+                },
+                "forecast_horizon": {
+                  "evidence_text": "The requested future coverage is 19 days.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": {
+                    "periods": 19.0,
+                    "unit": "day"
+                  }
+                },
+                "frequency": {
+                  "evidence_text": "Each observed record covers 1 day.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": {
+                    "periods": 1.0,
+                    "unit": "day"
+                  }
+                },
+                "intent": {
+                  "evidence_text": "The analyst request is as follows.  We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "create_forecast"
+                },
+                "output_granularity": {
+                  "evidence_text": "The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at.",
+                  "source_turn": 2,
+                  "status": "provided",
+                  "value": "The response variable is stored in column gas_settlement. The input timestamp identifier is recorded_at."
+                },
+                "problem_statement": {
+                  "evidence_text": "We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "natural-gas front-month settlement price for Pelmar commodities site 2203"
+                },
+                "source_mode": {
+                  "evidence_text": "Select the source from the data catalog.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "catalog"
+                },
+                "source_reference": {
+                  "evidence_text": "The supplied source identifier is https://inputs.example/commodities/2203.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "https://inputs.example/commodities/2203"
+                },
+                "target_column": {
+                  "evidence_text": "The response variable is stored in column gas_settlement.",
+                  "source_turn": 2,
+                  "status": "provided",
+                  "value": "gas_settlement"
+                },
+                "target_description": {
+                  "evidence_text": "We need an outlook for natural-gas front-month settlement price for Pelmar commodities site 2203.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "natural-gas front-month settlement price"
+                },
+                "target_unit": {
+                  "evidence_text": "Target measurements use USD per MMBtu.",
+                  "source_turn": 1,
+                  "status": "provided",
+                  "value": "USD per MMBtu"
+                },
+                "time_column": {
+                  "evidence_text": "The input timestamp identifier is recorded_at.",
+                  "source_turn": 2,
+                  "status": "provided",
+                  "value": "recorded_at"
+                }
+              }
+            },
+            "turn_number": 2
+          },
+          "stage": "turn.completed"
+        }
+      ]
+    },
+    "raw_confusion": [
+      2,
+      0,
+      0
+    ],
+    "raw_response": "{\"correction_detected\":false,\"intent\":\"create_forecast\",\"intent_confidence\":0.9,\"unsupported_claims\":[],\"updates\":[{\"candidate_value\":\"\\\"gas_settlement\\\"\",\"confidence\":0.9,\"evidence_text\":\"The response variable is stored in column gas_settlement.\",\"slot_id\":\"target_column\",\"status\":\"provided\"},{\"candidate_value\":\"\\\"recorded_at\\\"\",\"confidence\":0.9,\"evidence_text\":\"The input timestamp identifier is recorded_at.\",\"slot_id\":\"time_column\",\"status\":\"provided\"}]}",
+    "raw_response_sha256": "f3263d81b013eab3214bcaef9904516b02386fe9c3d88b586572e0c7d21a73c0",
+    "recovery_harmed_slots": [
+      "output_granularity"
+    ],
+    "recovery_helped_slots": [],
+    "title": "Locally correct extraction inherits earlier rollout errors"
+  },
+  {
+    "actual_prior": {
+      "assistant_question_context": null,
+      "intent": "create_forecast",
+      "pending_slot": {
+        "reason": "missing conditional slot",
+        "slot_id": "source_reference"
+      },
+      "scope": "supplied gold component prior",
+      "slots": {
+        "forecast_horizon": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": {
+            "periods": 7.0,
+            "unit": "day"
+          }
+        },
+        "intent": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "create_forecast"
+        },
+        "problem_statement": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "headline CPI index level for fictional validation station inflation_prices 7104"
+        },
+        "source_mode": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "upload"
+        },
+        "target_description": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "headline CPI index level for fictional validation station inflation_prices 7104"
+        },
+        "target_unit": {
+          "confirmed_by_user": false,
+          "status": "provided",
+          "value": "index points, base 2020=100"
+        }
+      }
+    },
+    "category_counts": {
+      "admission_denied_readable_exact_matches": 4,
+      "final_turn_state_slot_discrepancy": 5,
+      "post_reducer_pipeline_changed_slots": 1,
+      "raw_contract_admitted_failure": 1,
+      "recovery_introduced_wrong_slot_state": 1,
+      "reducer_admitted_failure": 1,
+      "schema_valid_failure": 1,
+      "trace_reported_recovery_changed_slots": 1,
+      "trace_reported_recovery_slots": 1
+    },
+    "expected_state": {
+      "expected_history_length": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 6.0,
+          "unit": "year"
+        }
+      },
+      "forecast_horizon": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 7.0,
+          "unit": "day"
+        }
+      },
+      "frequency": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 2.0,
+          "unit": "hour"
+        }
+      },
+      "intent": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "create_forecast"
+      },
+      "prediction_frequency": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 2.0,
+          "unit": "day"
+        }
+      },
+      "problem_statement": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "headline CPI index level for fictional validation station inflation_prices 7104"
+      },
+      "refresh_frequency": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 5.0,
+          "unit": "hour"
+        }
+      },
+      "source_mode": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "upload"
+      },
+      "target_description": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "headline CPI index level for fictional validation station inflation_prices 7104"
+      },
+      "target_unit": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "index points, base 2020=100"
+      }
+    },
+    "gold_extraction": {
+      "correction_detected": false,
+      "intent": "create_forecast",
+      "intent_confidence": 1.0,
+      "unsupported_claims": [],
+      "updates": [
+        {
+          "candidate_value": "{\"periods\": 2, \"unit\": \"hour\"}",
+          "confidence": 1.0,
+          "evidence_text": "The spacing between observations is 2 hours.",
+          "slot_id": "frequency",
+          "status": "provided"
+        },
+        {
+          "candidate_value": "{\"periods\": 2, \"unit\": \"day\"}",
+          "confidence": 1.0,
+          "evidence_text": "The forecast issuance interval is 2 days.",
+          "slot_id": "prediction_frequency",
+          "status": "provided"
+        },
+        {
+          "candidate_value": "{\"periods\": 5, \"unit\": \"hour\"}",
+          "confidence": 1.0,
+          "evidence_text": "Source ingestion repeats at 5-hour intervals.",
+          "slot_id": "refresh_frequency",
+          "status": "provided"
+        },
+        {
+          "candidate_value": "{\"periods\": 6, \"unit\": \"year\"}",
+          "confidence": 1.0,
+          "evidence_text": "There are 6 years of historical observations available.",
+          "slot_id": "expected_history_length",
+          "status": "provided"
+        }
+      ]
+    },
+    "key": [
+      "main",
+      "v8",
+      "component",
+      "v8-final-20261018-r1/focused/inflation_prices/validation-004",
+      "t2"
+    ],
+    "message": "The spacing between observations is 2 hours. The forecast issuance interval is 2 days. Source ingestion repeats at 5-hour intervals. There are 6 years of historical observations available.",
+    "post_recovery_state": {
+      "forecast_horizon": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 7.0,
+          "unit": "day"
+        }
+      },
+      "intent": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "create_forecast"
+      },
+      "problem_statement": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "headline CPI index level for fictional validation station inflation_prices 7104"
+      },
+      "source_mode": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "upload"
+      },
+      "source_reference": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "The spacing between observations is 2 hours. The forecast issuance interval is 2 days. Source ingestion repeats at 5-hour intervals. There are 6 years of historical observations available."
+      },
+      "target_description": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "headline CPI index level for fictional validation station inflation_prices 7104"
+      },
+      "target_unit": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "index points, base 2020=100"
+      }
+    },
+    "pre_recovery_state": {
+      "forecast_horizon": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": {
+          "periods": 7.0,
+          "unit": "day"
+        }
+      },
+      "intent": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "create_forecast"
+      },
+      "problem_statement": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "headline CPI index level for fictional validation station inflation_prices 7104"
+      },
+      "source_mode": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "upload"
+      },
+      "target_description": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "headline CPI index level for fictional validation station inflation_prices 7104"
+      },
+      "target_unit": {
+        "confirmed_by_user": false,
+        "status": "provided",
+        "value": "index points, base 2020=100"
+      }
+    },
+    "prior_discrepant_slots": [],
+    "provenance": {
+      "events": [
+        {
+          "payload": {
+            "message": "The spacing between observations is 2 hours. The forecast issuance interval is 2 days. Source ingestion repeats at 5-hour intervals. There are 6 years of historical observations available.",
+            "turn_number": 2
+          },
+          "type": "user_message"
+        },
+        {
+          "payload": {
+            "message": "The spacing between observations is 2 hours. The forecast issuance interval is 2 days. Source ingestion repeats at 5-hour intervals. There are 6 years of historical observations available.",
+            "slot_id": "source_reference",
+            "turn_number": 2
+          },
+          "type": "deterministic_recovery_applied"
+        },
+        {
+          "payload": {
+            "issues": []
+          },
+          "type": "validation_completed"
+        },
+        {
+          "payload": {
+            "message": "Which column contains the value you want to predict? Example answer: btc_usd_close.",
+            "ready": false,
+            "turn_number": 2
+          },
+          "type": "assistant_response"
+        }
+      ],
+      "recovered_slot_ids": [
+        "source_reference"
+      ],
+      "static_question": "Which column contains the value you want to predict? Example answer: btc_usd_close.",
+      "static_question_renderer_failures": [],
+      "trace": [
+        {
+          "payload": {
+            "message": "The spacing between observations is 2 hours. The forecast issuance interval is 2 days. Source ingestion repeats at 5-hour intervals. There are 6 years of historical observations available.",
+            "pending_slot": "source_reference",
+            "state_before": {
+              "available_dataset_columns": [],
+              "dialogue_id": "4f696a81-5c2f-494b-9332-119c80add606",
+              "intent": "create_forecast",
+              "provider_conversation_id": null,
+              "slots": {
+                "forecast_horizon": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": {
+                    "periods": 7.0,
+                    "unit": "day"
+                  }
+                },
+                "intent": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "create_forecast"
+                },
+                "problem_statement": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "headline CPI index level for fictional validation station inflation_prices 7104"
+                },
+                "source_mode": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "upload"
+                },
+                "target_description": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "headline CPI index level for fictional validation station inflation_prices 7104"
+                },
+                "target_unit": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "index points, base 2020=100"
+                }
+              }
+            },
+            "turn_number": 2
+          },
+          "stage": "turn.user_message"
+        },
+        {
+          "payload": {
+            "slot_id": "source_reference",
+            "state_after": {
+              "available_dataset_columns": [],
+              "dialogue_id": "4f696a81-5c2f-494b-9332-119c80add606",
+              "intent": "create_forecast",
+              "provider_conversation_id": null,
+              "slots": {
+                "forecast_horizon": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": {
+                    "periods": 7.0,
+                    "unit": "day"
+                  }
+                },
+                "intent": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "create_forecast"
+                },
+                "problem_statement": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "headline CPI index level for fictional validation station inflation_prices 7104"
+                },
+                "source_mode": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "upload"
+                },
+                "source_reference": {
+                  "evidence_text": "The spacing between observations is 2 hours. The forecast issuance interval is 2 days. Source ingestion repeats at 5-hour intervals. There are 6 years of historical observations available.",
+                  "source_turn": 2,
+                  "status": "provided",
+                  "value": "The spacing between observations is 2 hours. The forecast issuance interval is 2 days. Source ingestion repeats at 5-hour intervals. There are 6 years of historical observations available."
+                },
+                "target_description": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "headline CPI index level for fictional validation station inflation_prices 7104"
+                },
+                "target_unit": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "index points, base 2020=100"
+                }
+              }
+            }
+          },
+          "stage": "state.recovery_applied"
+        },
+        {
+          "payload": {
+            "reason": "missing required slot",
+            "slot_id": "target_column",
+            "state_before_question": {
+              "available_dataset_columns": [],
+              "dialogue_id": "4f696a81-5c2f-494b-9332-119c80add606",
+              "intent": "create_forecast",
+              "provider_conversation_id": null,
+              "slots": {
+                "forecast_horizon": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": {
+                    "periods": 7.0,
+                    "unit": "day"
+                  }
+                },
+                "intent": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "create_forecast"
+                },
+                "problem_statement": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "headline CPI index level for fictional validation station inflation_prices 7104"
+                },
+                "source_mode": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "upload"
+                },
+                "source_reference": {
+                  "evidence_text": "The spacing between observations is 2 hours. The forecast issuance interval is 2 days. Source ingestion repeats at 5-hour intervals. There are 6 years of historical observations available.",
+                  "source_turn": 2,
+                  "status": "provided",
+                  "value": "The spacing between observations is 2 hours. The forecast issuance interval is 2 days. Source ingestion repeats at 5-hour intervals. There are 6 years of historical observations available."
+                },
+                "target_description": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "headline CPI index level for fictional validation station inflation_prices 7104"
+                },
+                "target_unit": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "index points, base 2020=100"
+                }
+              }
+            }
+          },
+          "stage": "state.next_slot"
+        },
+        {
+          "payload": {
+            "question": "Which column contains the value you want to predict? Example answer: btc_usd_close.",
+            "slot_id": "target_column"
+          },
+          "stage": "question.accepted"
+        },
+        {
+          "payload": {
+            "assistant_message": "Which column contains the value you want to predict? Example answer: btc_usd_close.",
+            "dialogue_id": "4f696a81-5c2f-494b-9332-119c80add606",
+            "ready": false,
+            "state_after": {
+              "available_dataset_columns": [],
+              "dialogue_id": "4f696a81-5c2f-494b-9332-119c80add606",
+              "intent": "create_forecast",
+              "provider_conversation_id": null,
+              "slots": {
+                "forecast_horizon": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": {
+                    "periods": 7.0,
+                    "unit": "day"
+                  }
+                },
+                "intent": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "create_forecast"
+                },
+                "problem_statement": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "headline CPI index level for fictional validation station inflation_prices 7104"
+                },
+                "source_mode": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "upload"
+                },
+                "source_reference": {
+                  "evidence_text": "The spacing between observations is 2 hours. The forecast issuance interval is 2 days. Source ingestion repeats at 5-hour intervals. There are 6 years of historical observations available.",
+                  "source_turn": 2,
+                  "status": "provided",
+                  "value": "The spacing between observations is 2 hours. The forecast issuance interval is 2 days. Source ingestion repeats at 5-hour intervals. There are 6 years of historical observations available."
+                },
+                "target_description": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "headline CPI index level for fictional validation station inflation_prices 7104"
+                },
+                "target_unit": {
+                  "evidence_text": "Recorded synthetic prior",
+                  "source_turn": null,
+                  "status": "provided",
+                  "value": "index points, base 2020=100"
+                }
+              }
+            },
+            "turn_number": 2
+          },
+          "stage": "turn.completed"
+        }
+      ]
+    },
+    "raw_confusion": [
+      0,
+      4,
+      4
+    ],
+    "raw_response": "{\"correction_detected\": false, \"intent\": \"create_forecast\", \"intent_confidence\": 1.0, \"unsupported_claims\": [], \"updates\": [{\"candidate_value\": \"{\\\"periods\\\": 2, \\\"unit\\\": \\\"hour\\\"}\", \"evidence_text\": \"The spacing between observations is 2 hours.\", \"slot_id\": \"frequency\", \"status\": \"provided\"}, {\"candidate_value\": \"{\\\"periods\\\": 2, \\\"unit\\\": \\\"day\\\"}\", \"evidence_text\": \"The forecast issuance interval is 2 days.\", \"slot_id\": \"prediction_frequency\", \"status\": \"provided\"}, {\"candidate_value\": \"{\\\"periods\\\": 5, \\\"unit\\\": \\\"hour\\\"}\", \"evidence_text\": \"Source ingestion repeats at 5-hour intervals.\", \"slot_id\": \"refresh_frequency\", \"status\": \"provided\"}, {\"candidate_value\": \"{\\\"periods\\\": 6, \\\"unit\\\": \\\"year\\\"}\", \"evidence_text\": \"There are 6 years of historical observations available.\", \"slot_id\": \"expected_history_length\", \"status\": \"provided\"}]}",
+    "raw_response_sha256": "21ca73dea08d4a03e90453608bfd3ce1828b4a4d77336edb9fa3667313a5ee32",
+    "recovery_harmed_slots": [
+      "source_reference"
+    ],
+    "recovery_helped_slots": [],
+    "title": "Structural admission is separate from readable facts"
+  }
+]

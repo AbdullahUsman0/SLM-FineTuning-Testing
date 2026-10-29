@@ -1,0 +1,70 @@
+{
+  "affected_main_calls": 4,
+  "calls": [
+    {
+      "failures": [
+        {
+          "error": "static_question_exceeded_300_characters",
+          "scope": "unscored renderer only; assistant question is removed before next input",
+          "slot_id": "source_mode"
+        }
+      ],
+      "key": [
+        "main",
+        "openai",
+        "rollout",
+        "v7-20261009-r8-dev/crypto_derivatives/0169",
+        "t2"
+      ]
+    },
+    {
+      "failures": [
+        {
+          "error": "static_question_exceeded_300_characters",
+          "scope": "unscored renderer only; assistant question is removed before next input",
+          "slot_id": "source_mode"
+        }
+      ],
+      "key": [
+        "main",
+        "openai",
+        "rollout",
+        "v7-20261009-r8-dev/crypto_derivatives/0169",
+        "t3"
+      ]
+    },
+    {
+      "failures": [
+        {
+          "error": "static_question_exceeded_300_characters",
+          "scope": "unscored renderer only; assistant question is removed before next input",
+          "slot_id": "source_mode"
+        }
+      ],
+      "key": [
+        "main",
+        "openai",
+        "rollout",
+        "v7-20261009-r8-dev/crypto_derivatives/0169",
+        "t4"
+      ]
+    },
+    {
+      "failures": [
+        {
+          "error": "static_question_exceeded_300_characters",
+          "scope": "unscored renderer only; assistant question is removed before next input",
+          "slot_id": "source_mode"
+        }
+      ],
+      "key": [
+        "main",
+        "openai",
+        "rollout",
+        "v7-20261009-r8-dev/crypto_derivatives/0169",
+        "t5"
+      ]
+    }
+  ],
+  "versioned_wrapper_fix": "R4.1 bounded only static-question length validation; inputs/scoring unchanged; question text removed before next input"
+}

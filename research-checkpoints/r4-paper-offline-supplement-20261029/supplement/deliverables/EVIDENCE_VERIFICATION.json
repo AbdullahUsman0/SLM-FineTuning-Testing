@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "ZIP_sha256": "4d4a33bd6ec4ac1bab28b47d37ee324a315177035826119e36a230cd71c143ae",
+  "CRC_and_529_members_verified": true,
+  "manifest_file_count": 528,
+  "extracted_member_roundtrip_verified": true,
+  "evidence_commit": "6c51ee2c32e16d3237fce78523a07e04cdb29667",
+  "original_evidence_immutable": true
+}

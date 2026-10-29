@@ -1,0 +1,17 @@
+﻿model,track,subset,calls,conversations,tp,fp,fn,precision,recall,f1,interpretation
+v8,component,all_recorded_turns,101,20,247,6,10,0.9762845849802372,0.9610894941634242,0.9686274509803922,subset of recorded trajectories; not a new no-intervention rollout
+v8,component,exclude_published_intervention_category,85,17,208,6,10,0.9719626168224299,0.9541284403669725,0.9629629629629629,subset of recorded trajectories; not a new no-intervention rollout
+v8,component,exclude_whole_declared_intervention_conversations,85,17,208,6,10,0.9719626168224299,0.9541284403669725,0.9629629629629629,subset of recorded trajectories; not a new no-intervention rollout
+v8,component,declared_mutation_turns_only,3,3,6,0,0,1.0,1.0,1.0,subset of recorded trajectories; not a new no-intervention rollout
+v8,rollout,all_recorded_turns,101,20,244,9,13,0.9644268774703557,0.9494163424124513,0.9568627450980393,subset of recorded trajectories; not a new no-intervention rollout
+v8,rollout,exclude_published_intervention_category,85,17,206,8,12,0.9626168224299065,0.944954128440367,0.9537037037037037,subset of recorded trajectories; not a new no-intervention rollout
+v8,rollout,exclude_whole_declared_intervention_conversations,85,17,206,8,12,0.9626168224299065,0.944954128440367,0.9537037037037037,subset of recorded trajectories; not a new no-intervention rollout
+v8,rollout,declared_mutation_turns_only,3,3,5,1,1,0.8333333333333334,0.8333333333333334,0.8333333333333334,subset of recorded trajectories; not a new no-intervention rollout
+openai,component,all_recorded_turns,101,20,194,107,63,0.6445182724252492,0.754863813229572,0.6953405017921147,subset of recorded trajectories; not a new no-intervention rollout
+openai,component,exclude_published_intervention_category,85,17,164,93,54,0.6381322957198443,0.7522935779816514,0.6905263157894737,subset of recorded trajectories; not a new no-intervention rollout
+openai,component,exclude_whole_declared_intervention_conversations,85,17,164,93,54,0.6381322957198443,0.7522935779816514,0.6905263157894737,subset of recorded trajectories; not a new no-intervention rollout
+openai,component,declared_mutation_turns_only,3,3,6,1,0,0.8571428571428571,1.0,0.9230769230769231,subset of recorded trajectories; not a new no-intervention rollout
+openai,rollout,all_recorded_turns,101,20,196,112,61,0.6363636363636364,0.7626459143968871,0.6938053097345133,subset of recorded trajectories; not a new no-intervention rollout
+openai,rollout,exclude_published_intervention_category,85,17,162,100,56,0.6183206106870229,0.7431192660550459,0.675,subset of recorded trajectories; not a new no-intervention rollout
+openai,rollout,exclude_whole_declared_intervention_conversations,85,17,162,100,56,0.6183206106870229,0.7431192660550459,0.675,subset of recorded trajectories; not a new no-intervention rollout
+openai,rollout,declared_mutation_turns_only,3,3,6,0,0,1.0,1.0,1.0,subset of recorded trajectories; not a new no-intervention rollout

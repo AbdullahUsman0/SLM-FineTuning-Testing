@@ -1,0 +1,14 @@
+{
+  "form_template": "gold_first_review.csv",
+  "form_sha256": "93221f52fb187456bd0dad81752fb97910a3da3f297bf978b0fe8d64b1f3f2c0",
+  "reference_manifest_sha256": "039d8820b17e82598f205c22695fdfc9295affdb311e7c243cd373e937691d5c",
+  "completed_rows": 0,
+  "pending_rows": 101,
+  "all_rows_completed": false,
+  "independent_human_review_complete": false,
+  "human_identity_and_independence_verified": false,
+  "original_labels_modified": false,
+  "changes_applied": false,
+  "reviews": [],
+  "imported_at_UTC": "2026-10-29T00:56:30.882272+00:00"
+}

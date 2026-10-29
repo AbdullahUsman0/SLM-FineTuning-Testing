@@ -1,0 +1,22 @@
+{
+  "baseline_tests": 299,
+  "main_replays": 404,
+  "no_model_calls": true,
+  "no_network_calls": true,
+  "passed": true,
+  "same_shipped_source_layout": true,
+  "setup_command": [
+    "D:\\SLM\\FYP-environments\\v8-final-20261018T230255Z\\Scripts\\python.exe",
+    "-B",
+    "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\scripts\\offline_guard.py",
+    "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\delivery-r2\\package\\code\\prepare_analysis_workspace.py",
+    "--package",
+    "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\delivery-r2\\package",
+    "--output",
+    "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\delivery-r2\\portable-smoke",
+    "--repo",
+    "D:\\SLM\\SLM-FineTuning-Testing",
+    "--offline-deps",
+    "D:\\SLM\\FYP-evaluation-runs\\current-pipeline-v8-openai-20261028T094502Z-r4-1-native\\offline-deps"
+  ]
+}

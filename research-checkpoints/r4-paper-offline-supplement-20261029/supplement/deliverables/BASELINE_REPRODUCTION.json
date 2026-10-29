@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "stages": [
+    {
+      "stage": "baseline-tests",
+      "command": [
+        "D:\\SLM\\FYP-environments\\v8-final-20261018T230255Z\\Scripts\\python.exe",
+        "-B",
+        "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\scripts\\offline_guard.py",
+        "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\runtime\\run-offline-tests.py",
+        "-p",
+        "pytest_asyncio.plugin",
+        "-q",
+        "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\runtime\\evaluator\\test_r4.py",
+        "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\runtime\\fpy\\tests",
+        "--override-ini",
+        "asyncio_mode=auto",
+        "--override-ini",
+        "cache_dir=D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\runtime\\pytest-cache"
+      ],
+      "cwd": "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\runtime\\fpy",
+      "returncode": 0,
+      "log": "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\logs\\baseline-tests.log",
+      "process_credentials_removed": true,
+      "outbound_network_blocked": true,
+      "shared_ledger_access_blocked": true
+    },
+    {
+      "stage": "baseline-replay",
+      "command": [
+        "D:\\SLM\\FYP-environments\\v8-final-20261018T230255Z\\Scripts\\python.exe",
+        "-B",
+        "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\scripts\\offline_guard.py",
+        "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\runtime\\verify_recorded_main.py"
+      ],
+      "cwd": "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\runtime",
+      "returncode": 0,
+      "log": "D:\\SLM\\FYP-offline-supplements\\r4-paper-evidence-20261029T002508Z\\logs\\baseline-replay.log",
+      "process_credentials_removed": true,
+      "outbound_network_blocked": true,
+      "shared_ledger_access_blocked": true
+    }
+  ],
+  "new_model_calls": 0,
+  "new_paid_calls": 0,
+  "shared_ledger_changed": false,
+  "plan_sha256": "2acb636442bd5c8e0c70c31f69e8d138247ddb3e437900f2d9f5b6af812eb7a0"
+}
