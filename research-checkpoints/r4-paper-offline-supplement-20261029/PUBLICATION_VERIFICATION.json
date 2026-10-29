@@ -1,0 +1,63 @@
+{
+  "branch": "experiment/v5-grounded-20260919",
+  "coordinator_mapping_in_full_public_bundle": true,
+  "full_archive": {
+    "CRC_and_all_manifest_hashes_verified": true,
+    "bytes": 6919684,
+    "downloaded_sha256_matches": true,
+    "members": 246,
+    "sha256": "a09f33e7c36bab427991e0ed30a5916a926e99035d1c661e4cf926425a4ed3f7",
+    "url": "https://raw.githubusercontent.com/AbdullahUsman0/SLM-FineTuning-Testing/b383a3b3367ac8c424a0325fcd992610d298c98e/research-checkpoints/r4-paper-offline-supplement-20261029/r4-paper-offline-supplement-20261028-r2.zip"
+  },
+  "historical_sealed_delivery_unpublished_flags_preserved": true,
+  "immutable_artifact_commit": "b383a3b3367ac8c424a0325fcd992610d298c98e",
+  "independent_human_review_complete": false,
+  "local_Codex_handoff": {
+    "bytes": 8672,
+    "downloaded_sha256_matches": true,
+    "sha256": "286b53a6594dd5e2ba0a3744967f9f10c13a2eb224faf8ccdf7d98d35dadb21c",
+    "url": "https://raw.githubusercontent.com/AbdullahUsman0/SLM-FineTuning-Testing/b383a3b3367ac8c424a0325fcd992610d298c98e/research-checkpoints/r4-paper-offline-supplement-20261029/LOCAL_CODEX_HANDOFF.md"
+  },
+  "nested_original_evidence": {
+    "CRC_and_all_manifest_hashes_verified": true,
+    "members": 529,
+    "sha256": "4d4a33bd6ec4ac1bab28b47d37ee324a315177035826119e36a230cd71c143ae"
+  },
+  "new_model_calls": 0,
+  "new_paid_calls": 0,
+  "new_training_runs": 0,
+  "original_evidence_publication_baseline_commit": "6c51ee2c32e16d3237fce78523a07e04cdb29667",
+  "precommit_audit": {
+    "Git_blobs_verified_exact_bytes": 258,
+    "ZIP_sha256": "a09f33e7c36bab427991e0ed30a5916a926e99035d1c661e4cf926425a4ed3f7",
+    "no_unrelated_paths_staged": true,
+    "scanned_payloads": 1616,
+    "source_archive_and_original_published_evidence_unchanged": true,
+    "status": "credential_scanned_staged_bytes_verified"
+  },
+  "publication_payload_manifest_all_local_hashes_verified": true,
+  "repository": "AbdullahUsman0/SLM-FineTuning-Testing",
+  "reviewer_distribution_instruction": "Distribute staged reviewer-only ZIPs in order; withhold coordinator mapping and full results, and record prior exposure. Public mapping means masking is procedural.",
+  "reviewer_kits": [
+    {
+      "CRC_verified": true,
+      "bytes": 50890,
+      "downloaded_sha256_matches": true,
+      "members": 5,
+      "sha256": "ab36d9e754ae0d5ad8cc6f2a3ee021386c9606c0f48dd54a7c95c9950056d086",
+      "url": "https://raw.githubusercontent.com/AbdullahUsman0/SLM-FineTuning-Testing/b383a3b3367ac8c424a0325fcd992610d298c98e/research-checkpoints/r4-paper-offline-supplement-20261029/reviewer-kits/01-gold-first-review-kit.zip"
+    },
+    {
+      "CRC_verified": true,
+      "bytes": 42937,
+      "downloaded_sha256_matches": true,
+      "members": 3,
+      "sha256": "b2c2be2abf616fb933c623c37f7ca81945ad0e309cc9cf5df3584cfb92b87ca8",
+      "url": "https://raw.githubusercontent.com/AbdullahUsman0/SLM-FineTuning-Testing/b383a3b3367ac8c424a0325fcd992610d298c98e/research-checkpoints/r4-paper-offline-supplement-20261029/reviewer-kits/02-blinded-response-review-kit.zip"
+    }
+  ],
+  "status": "published_and_GitHub_download_roundtrip_verified",
+  "user_authorized_completed_artifact_publication_date": "2026-10-29",
+  "verification_receipt_published_in_followup_commit_to_avoid_self_reference": true,
+  "verified_at_UTC": "2026-10-29T23:48:41.348927+00:00"
+}
