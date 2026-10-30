@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-30",
+  "standard_library_extractor_passed": true,
+  "zip_sha_crc_and_member_hashes_passed": true,
+  "existing_output_rejected": true,
+  "corrupt_zip_rejected_before_extraction": true,
+  "bounded_secret_scan_passed": true,
+  "secret_scan_limits": "Pattern scan is not a guarantee of absence of every possible sensitive string; bounded publication files inspected. No environment or key values read.",
+  "primary_conversations": 44,
+  "primary_turns": 205,
+  "challenge_conversations": 3,
+  "new_api_calls": 0,
+  "ready_for_inference": false
+}

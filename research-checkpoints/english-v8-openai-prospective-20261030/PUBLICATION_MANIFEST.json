@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-30",
+  "kind": "preparation_not_evaluation_results",
+  "hash_policy": "Directory .gitattributes disables text conversion to preserve hashed bytes across Windows/Linux checkouts",
+  "files_sha256": {
+    ".gitattributes": "ed52ccb3541226d583cf18fa3a3c271a8fbf1c66fbc6d0ddc761f8034f25fff9",
+    "english-protocol-r1.zip": "310f27c64afba23342310fad9742b90032f4fc63a8bc4ae3ae79b5b84a539b95",
+    "english-protocol-r1.zip.sha256": "45ae1fe45afbf4e15fc4d9834f4dd591d2fef2ec7c7e3bd366e7cdf457d7f12e",
+    "LOCAL_CODEX_HANDOFF.md": "be7e035ec0a525e5438bf518ca68ed4f0bb748dba7f134e5b566eb3e523b9556",
+    "OFFLINE_PUBLICATION_CHECKS.json": "adebe2e7951deec281285993964a463f96750e4984bf9de2c93129375a3613dc",
+    "README.md": "d0e756c8aeecc3194c07596e8a55342d81d72c4db2962f5b916c28d86fd9b36f",
+    "verify_extract.py": "9d216bc048fed695ad04f6d11b978341a5623c7746a983fa9c3415b31ec3fdd1"
+  }
+}
